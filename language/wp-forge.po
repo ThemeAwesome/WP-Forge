@@ -1,0 +1,331 @@
+# Copyright (C) 2013 ThemeAwesome.com
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Forge 1.0.0\n"
+"POT-Creation-Date: 2013-08-17 20:32-0700\n"
+"PO-Revision-Date: 2013-08-17 20:33-0700\n"
+"Last-Translator: Thomas Vasquez <tsquez@gmail.com>\n"
+"Language-Team: Thomas Vasquez <tsquez@gmail.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../404.php:18
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: ../404.php:22
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../archive.php:30
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../archive.php:32
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../archive.php:32
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: ../archive.php:34
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../archive.php:34
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: ../archive.php:36
+msgid "Archives"
+msgstr ""
+
+#: ../author.php:33
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: ../author.php:52 ../content.php:53
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: ../category.php:22
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: ../comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:42
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:43
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:44
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:53
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-aside.php:13 ../content-aside.php:20 ../content-image.php:17
+#: ../content-link.php:18 ../content-quote.php:17 ../content-status.php:15
+#: ../content.php:23 ../functions.php:653
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: ../content-aside.php:15 ../content-image.php:13 ../content-link.php:14
+#: ../content-quote.php:13 ../content-status.php:21
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../content-aside.php:23 ../content-image.php:23 ../content-link.php:21
+#: ../content-quote.php:20 ../content-status.php:27 ../content.php:28
+msgid "Leave a reply"
+msgstr ""
+
+#: ../content-aside.php:23 ../content-image.php:23 ../content-link.php:21
+#: ../content-quote.php:20 ../content-status.php:27 ../content.php:28
+msgid "1 Reply"
+msgstr ""
+
+#: ../content-aside.php:23 ../content-image.php:23 ../content-link.php:21
+#: ../content-quote.php:20 ../content-status.php:27 ../content.php:28
+msgid "% Replies"
+msgstr ""
+
+#: ../content-aside.php:26 ../content-image.php:26 ../content-link.php:24
+#: ../content-page.php:21 ../content-quote.php:23 ../content-status.php:30
+#: ../content.php:46 ../functions.php:589
+msgid "Edit"
+msgstr ""
+
+#: ../content-link.php:12
+msgid "Link"
+msgstr ""
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:17
+msgid ""
+"Apologies, but no results were found. Perhaps another search will help you "
+"find what you&#39;re looking for."
+msgstr ""
+
+#: ../content-page.php:18 ../content.php:40 ../image.php:94
+msgid "Pages:"
+msgstr ""
+
+#: ../content.php:14
+msgid "Featured post"
+msgstr ""
+
+#: ../content.php:39
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: ../content.php:57
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../footer.php:35
+msgid "http://themeawesome.com/"
+msgstr ""
+
+#: ../footer.php:37
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: ../functions.php:89
+msgid "Primary Navigation"
+msgstr ""
+
+#: ../functions.php:90
+msgid "Secondary Navigation"
+msgstr ""
+
+#: ../functions.php:169
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: ../functions.php:234
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions.php:247
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr ""
+
+#: ../functions.php:248
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr ""
+
+#: ../functions.php:251
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr ""
+
+#: ../functions.php:393
+msgid "Main Sidebar"
+msgstr ""
+
+#: ../functions.php:395
+msgid "Displays widgets in the blog area as well as pages."
+msgstr ""
+
+#: ../functions.php:402
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: ../functions.php:404 ../functions.php:413 ../functions.php:422
+msgid ""
+"Appears when using the optional Front Page template with a page set as "
+"Static Front Page"
+msgstr ""
+
+#: ../functions.php:411
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: ../functions.php:420
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: ../functions.php:531
+msgid "Post navigation"
+msgstr ""
+
+#: ../functions.php:532
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: ../functions.php:533
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../functions.php:557
+msgid "Pingback:"
+msgstr ""
+
+#: ../functions.php:557
+msgid "(Edit)"
+msgstr ""
+
+#: ../functions.php:572
+msgid "Post Author"
+msgstr ""
+
+#: ../functions.php:578
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../functions.php:584
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../functions.php:593
+msgid "Reply"
+msgstr ""
+
+#: ../functions.php:611
+msgid "Sticky"
+msgstr ""
+
+#: ../functions.php:617 ../functions.php:623
+msgid ", "
+msgstr ""
+
+#: ../functions.php:632
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../functions.php:649
+#, php-format
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: ../image.php:28
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\"><i class=\"icon-time\"></i> </"
+"span> <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class=\"icon-camera\"></i> <a href="
+"\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a>&nbsp;&nbsp;"
+"&nbsp;<i class=\"icon-folder-open\"></i> <a href=\"%6$s\" title=\"Return to "
+"%7$s\" rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: ../image.php:39
+msgid " Edit"
+msgstr ""
+
+#: ../image.php:43
+msgid "&laquo; Previous Image"
+msgstr ""
+
+#: ../image.php:44
+msgid "Next Image &raquo;"
+msgstr ""
+
+#: ../index.php:38
+msgid "No posts to display"
+msgstr ""
+
+#: ../index.php:42
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: ../search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../single.php:21
+msgctxt "Previous post link"
+msgid "&laquo;"
+msgstr ""
+
+#: ../single.php:22
+msgctxt "Next post link"
+msgid "&raquo;"
+msgstr ""
+
+#: ../tag.php:22
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
