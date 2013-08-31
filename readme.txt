@@ -7,3 +7,4 @@ WP-Forge homepage:
 http://themeawesome.com/wpforge
 
 WP-Forge on Github:
+https://github.com/tsquez/WP-Forge
