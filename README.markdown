@@ -11,6 +11,9 @@ You can of course use WP-Forge right out of the box for your projects, but I rec
 ###WP-Forge Demo###
 You can see a demo of WP-Forge here: http://themeawesome.com/wpforge
 
+###Font Awesome###
+Includes the best icon font in the world Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
+
 ###PressTrends###
 A quick note to users, WP-Forge uses the [PressTrends](http://www.presstrends.io/) a service that provides analytics for WordPress users and developers. This helps track the usage of the theme in order to assist with theme improvements. You can of course disable this by modifyng the functions.php file (you will see the appropriate area to comment out).
 
