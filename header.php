@@ -21,10 +21,10 @@
           
             <header id="header" class="row" role="banner"> 
             	<div class="site-header large-12 columns">
-                	<div class="large-4 columns header-logo">
+                	<div class="header-logo">
                     	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
                     </div><!-- /.header-logo --> 
-                    <div class="large-8 columns header-info">
+                    <div class="header-info">
                         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>         				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>                    
                     </div><!-- /.header-info -->
                  </div><!-- .site-header -->

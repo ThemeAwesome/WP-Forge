@@ -292,24 +292,27 @@ a:hover, a:focus {
 }
 
 /* Header */
-.header-logo {
-	float:right;
+.header-logo, .header-info {
+	position:relative;
+	float:left;
+	display:block;
 }
 .header-info {
-	float:left;
 	margin-bottom:24px;
 }
 .site-header h1 a {
 	color: #515151;
 	display: block;
 	margin-top:30px;
+	font-weight:normal!important;	
 	text-decoration: none;
 }
 .site-header a:hover {
 	color: #21759b!important;
 }
 .site-header h1 {
-	font-size: 22px;
+	font-size: 2.625em; /* equals 42px */
+	font-weight:normal!important;
 	line-height: 1.285714286;
 	margin:0!important;
 }

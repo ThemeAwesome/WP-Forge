@@ -32,9 +32,8 @@
              
 		<div class="site-info large-5 columns">
         
-            <a href="<?php echo esc_url(__('http://themeawesome.com/','wpforge')); ?>" title="<?php esc_attr_e('A mixin by ThemeAwesome.com', 'wpforge'); ?>">
-            <?php printf('WP-Forge'); ?></a>
-            <?php esc_attr_e('powered by', 'wpforge'); ?> <a href="<?php echo esc_url(__('http://wordpress.org/','wpforge')); ?>" title="<?php esc_attr_e('WordPress', 'wpforge'); ?>">
+            <?php esc_attr_e('Powered by', 'wpforge'); ?><a href="<?php echo esc_url(__('http://themeawesome.com/','wpforge')); ?>" rel="follow" target="_blank" title="<?php esc_attr_e('A mixin by ThemeAwesome.com', 'wpforge'); ?>">
+            <?php printf('WP-Forge'); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wpforge')); ?>" target="_blank" title="<?php esc_attr_e('WordPress', 'wpforge'); ?>">
             <?php printf('WordPress'); ?></a>
             
 		</div><!-- .site-info -->
