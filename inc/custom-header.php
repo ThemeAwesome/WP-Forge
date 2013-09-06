@@ -21,7 +21,7 @@
 function wpforge_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
-		'default-text-color'     => '444',
+		'default-text-color'     => '444444',
 		'default-image'          => '',
 
 		// Set height and width, with a maximum value for the width.
@@ -49,7 +49,7 @@ add_action( 'after_setup_theme', 'wpforge_custom_header_setup' );
 /**
  * Loads our special font CSS file.
  *
- * @since WP-Forge 1.2
+ * @since WP-Forge 1.0
  *
  * @return void
  */
@@ -114,33 +114,34 @@ function wpforge_admin_header_style() {
 	}
 	#headimg h1,
 	#headimg h2 {
-		line-height: 1.6;
+		line-height: 1.285714286;
 		margin: 0;
 		padding: 0;
 	}
-	#headimg h1 {
-		font-size: 22px;
-		padding-top:40px;
-	}
 	#headimg h1 a {
-		color: #444;
+		color: #515151;
 		text-decoration: none;
+		font-size: 38px;
+		font-weight:normal!important;		
 	}
 	#headimg h1 a:hover {
 		color: #21759b !important; /* Has to override custom inline style. */
 	}
 	#headimg h2 {
-		color: #444;
-		font-size: 14px;
-		margin-bottom: 24px;
+		color: #757575;
+		font-size: 13px;
 	}
 	#headimg img {
 		max-width: <?php echo get_theme_support( 'custom-header', 'max-width' ); ?>px;
 	}
-	.appearance_page_custom-header #headimg	{
-		width:960px;
-		height:125px!important;
-	}
+	.header-logo, .header-info {
+		position:relative;
+		float:left;
+		display:block;
+	}	
+	.header-info {
+		margin-top:30px;
+	}		
 	</style>
 <?php
 }
@@ -153,9 +154,14 @@ function wpforge_admin_header_style() {
  */
 function wpforge_admin_header_image() {
 	?>
-	<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>    
-	<div id="headimg" style="background: url(<?php echo esc_url( $header_image ); ?>) right center no-repeat;">
+	<div id="headimg">
+    <div class="header-logo">
+		<?php $header_image = get_header_image();
+		if ( ! empty( $header_image ) ) : ?>
+			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+		<?php endif; ?>  
+    </div>
+    <div class="header-info">  
 		<?php
 		if ( ! display_header_text() )
 			$style = ' style="display:none;"';
@@ -164,20 +170,6 @@ function wpforge_admin_header_image() {
 		?>
 		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 		<h2 id="desc" class="displaying-header-text"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></h2>
-
+        </div>
 	</div>
-    
-    <?php else : ?>
-    
-    	<div id="headimg">
-		<?php
-		if ( ! display_header_text() )
-			$style = ' style="display:none;"';
-		else
-			$style = ' style="color:#' . get_header_textcolor() . ';"';
-		?>
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 id="desc" class="displaying-header-text"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></h2>
-	</div>
-    <?php endif; ?>
 <?php }
