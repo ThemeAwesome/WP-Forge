@@ -70,13 +70,6 @@ img {
 	color: #636363;
 }
 
-/* Shared Post Format styling */
-article.format-quote footer.entry-meta,
-article.format-link footer.entry-meta,
-article.format-status footer.entry-meta {
-	font-size: 11px;
-	line-height: 2.181818182;
-}
 select { /* Make sure select elements fit in widgets */
 	cursor:pointer;
 	max-width: 100%;
@@ -684,14 +677,14 @@ body.page article {
 }
 footer.entry-meta {
 	margin-top: 24px;
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 1.846153846;
 	color: #757575;
 }
 .single-author .entry-meta .by-author {
 	display: none;
 }
-span.sticky-post, span.date, span.categories-links, span.tags-links {
+span.sticky-post, span.date, span.categories-links, span.tags-links, span.pfont {
 	margin-right:10px;
 }
 
@@ -780,13 +773,16 @@ article.format-image footer a h2 {
 }
 
 /* Link posts */
+.pformat {
+	float: left;
+	font-size: 26px;
+	margin-right:5px;
+	color:#888!important;
+}
 article.format-link header {
-	padding: 0 10px;
+	padding: 5px 10px;
 	float: right;
-	font-size: 11px;
-	line-height: 2.181818182;
-	font-weight: bold;
-	font-style: italic;
+	font-size: 20px;
 	text-transform: uppercase;
 	color: #848484;
 	background-color: #ebebeb;
@@ -815,10 +811,11 @@ article.format-quote .entry-content blockquote {
 
 /* Status posts */
 .format-status .entry-header {
-	margin-bottom: 24px;
+	margin-bottom: 30px;
 }
 .format-status .entry-header header {
 	display: inline-block;
+	margin-top:12px;	
 }
 .format-status .entry-header h1 {
 	font-size: 15px;
@@ -901,6 +898,7 @@ article.format-quote .entry-content blockquote {
 	font-style: normal;
 	font-size: 15px;
 	line-height: 1.42857143;
+	margin-top:8px;
 }
 .comments-area article header time {
 	line-height: 1.714285714;

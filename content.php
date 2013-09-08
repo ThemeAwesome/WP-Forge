@@ -9,11 +9,6 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-		<div class="featured-post">
-			<?php _e( 'Featured post', 'wpforge' ); ?>
-		</div>
-		<?php endif; ?>
 		<header class="entry-header">
 			<?php the_post_thumbnail(); ?>
 			<?php if ( is_single() ) : ?>

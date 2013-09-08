@@ -645,7 +645,43 @@ if ( ! function_exists( 'wpforge_entry_meta' ) ) :
 
 function wpforge_entry_meta() {
 	if ( is_sticky() && is_home() && ! is_paged() )
-		echo '<i class="icon-pushpin"></i> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';		
+		echo '<i class="icon-pushpin"></i> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';
+		
+	if ( has_post_format( 'aside' )) {
+	  echo '<i class="icon-lightbulb"></i> <span class="pfont">' . __( 'Aside', 'wpforge' ) . '</span>';
+	}
+	
+	if ( has_post_format( 'audio' )) {
+	  echo '<i class="icon-volume-up"></i> <span class="pfont">' . __( 'Audio', 'wpforge' ) . '</span>';
+	}	
+	
+	if ( has_post_format( 'chat' )) {
+	  echo '<i class="icon-comments"></i> <span class="pfont">' . __( 'Chat', 'wpforge' ) . '</span>';
+	}	
+	
+	if ( has_post_format( 'gallery' )) {
+	  echo '<i class="icon-camera-retro"></i> <span class="pfont">' . __( 'Gallery', 'wpforge' ) . '</span>';
+	}
+	
+	if ( has_post_format( 'image' )) {
+	  echo '<i class="icon-picture"></i> <span class="pfont">' . __( 'Image', 'wpforge' ) . '</span>';
+	}	
+	
+	if ( has_post_format( 'link' )) {
+	  echo '<i class="icon-link"></i> <span class="pfont">' . __( 'Link', 'wpforge' ) . '</span>';
+	}	
+	
+	if ( has_post_format( 'quote' )) {
+	  echo '<i class="icon-quote-left"></i> <span class="pfont">' . __( 'Quote', 'wpforge' ) . '</span>';
+	}	
+	
+	if ( has_post_format( 'status' )) {
+	  echo '<i class="icon-bullhorn"></i> <span class="pfont">' . __( 'Status', 'wpforge' ) . '</span>';
+	}	
+	
+	if ( has_post_format( 'video' )) {
+	  echo '<i class="icon-facetime-video"></i> <span class="pfont">' . __( 'Video', 'wpforge' ) . '</span>';
+	}				
 
 	if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
 		wpforge_entry_date();
@@ -683,7 +719,7 @@ endif;
 if ( ! function_exists( 'wpforge_entry_date' ) ) :
 
 function wpforge_entry_date( $echo = true ) {
-	$format_prefix = ( has_post_format( 'chat' ) || has_post_format( 'status' ) ) ? _x( '%1$s on %2$s', '1: post format name. 2: date', 'wpforge' ): '%2$s';
+	$format_prefix = ( has_post_format( 'link' ) ) ? _x( '%1$s on %2$s', '1: post format name. 2: date', 'wpforge' ): '%2$s';
 
 	$date = sprintf( '<i class="icon-time"></i> <span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
 		esc_url( get_permalink() ),
