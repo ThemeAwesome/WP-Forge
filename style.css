@@ -240,12 +240,14 @@ img.wp-smiley,
 	border-bottom: 1px solid #ededed;
 	padding:10px 0;		
 }
-.author.archive .author-avatar {
+.author.archive .author-avatar img {
 	margin-top: 0;
+	border-radius:50%;
 }
-.author-avatar {
+.author-avatar img {
 	float: left;
 	margin-top: 8px;
+	border-radius:50%;
 }
 .author-description {
 	float: right;
