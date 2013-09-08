@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying posts in the Status post format
+ * The template for displaying posts in the Status post format on index and archive pages.
  *
  * @package WordPress
  * @subpackage WP_Forge

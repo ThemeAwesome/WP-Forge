@@ -1,15 +1,6 @@
 <?php
 /**
- * The template for displaying posts in the Chat post format
- *
- * @package WordPress
- * @subpackage WP_Forge
- * @since WP-Forge 1.0
- */
-?>
-<?php
-/**
- * The template for displaying posts in the Chat post format.
+ * The template for displaying posts in the Chat post format on index and archive pages.
  *
  * @package WordPress
  * @subpackage WP_Forge
