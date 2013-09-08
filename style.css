@@ -227,7 +227,7 @@ img.wp-smiley,
 	border-top: 1px solid #ededed;
 	margin: 24px 0;
 	overflow: hidden;
-	padding:10px 0;
+	padding:20px 0;
 }
 .author-description p {
 	color: #757575;
@@ -237,6 +237,8 @@ img.wp-smiley,
 .author.archive .author-info {
 	border-top: 0;
 	margin: 0 0 48px;
+	border-bottom: 1px solid #ededed;
+	padding:10px 0;		
 }
 .author.archive .author-avatar {
 	margin-top: 0;
@@ -247,7 +249,10 @@ img.wp-smiley,
 }
 .author-description {
 	float: right;
-	width: 80%;
+	width: 87%;
+}
+.author-description h2 {
+	margin-top:0!important;
 }
 
 
