@@ -1,6 +1,6 @@
 <?php
 /**
- * The default template for displaying content. Used for both single and index/archive/search.
+ * The template for displaying posts in the Audio post format on index and archive pages
  *
  * @package WordPress
  * @subpackage WP_Forge
