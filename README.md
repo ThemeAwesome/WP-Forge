@@ -29,8 +29,9 @@ If you need help with implementation or if you run into issues, you can post you
 
 License
 =============
-WordPress is GPLv2 - http://www.gnu.org/licenses/gpl-2.0.html
-Foundation by ZURB is MIT - http://opensource.org/licenses/MIT
+WP-Forge is licensed as follows:
+* WordPress is GPLv2 - http://www.gnu.org/licenses/gpl-2.0.html
+* Foundation by ZURB is MIT - http://opensource.org/licenses/MIT
 
 This means WP-Forge is completely free to use and modify as you see fit. I hope you use it to learn something new, make something cool, have fun, and share what you've learned with others.
 
