@@ -4,21 +4,15 @@ Default Template For bbPress
 */
 get_header(); ?>
 
-<!-- Row for main content area -->
-	<div class="large-12 columns" role="main">
-	
-	<?php /* Start loop */ ?>
-	<?php while (have_posts()) : the_post(); ?>
-		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header>
-			<div class="entry-content">
-				<?php the_content(); ?>
-			</div>
-		</article>
-	<?php endwhile; // End the loop ?>
+		<div id="content" class="large-12 columns" role="main">
+        
+        	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 
-	</div>
-		
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', 'page' ); ?>
+				<?php comments_template( '', true ); ?>
+			<?php endwhile; // end of the loop. ?>
+
+		</div><!-- #content -->
+
 <?php get_footer(); ?>

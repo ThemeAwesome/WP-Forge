@@ -43,11 +43,5 @@
 	</div><!-- #wrapper -->    
 
 <?php wp_footer(); ?>
-<script>
-(function($) {
-jQuery(document).foundation()
-	.foundation('joyride', 'start');
-})(jQuery);
-</script>
 </body>
 </html>

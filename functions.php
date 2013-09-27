@@ -132,13 +132,8 @@ function wpforge_scripts_styles() {
 	}
 	add_action( 'comment_form_before', 'my_enqueue_comments_reply' );
 
-    // Deregister local version of jQuery and then register and enqueue Google hosted jQuery in footer
-	wp_deregister_script('jquery');
-    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2', true);
-    wp_enqueue_script('jquery');
-
     // Register Foundation scripts file in the footer
-    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array(), '', true );
+    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '', true );
 	
     // Register JavaScript file with functionality specific to WP-Forge.
     wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array(), '', true );
@@ -181,19 +176,16 @@ function wpforge_fonts_url() {
 
 /**
  * Loads our special font CSS file.
- *
  * To disable in a child theme, use wp_dequeue_style()
  * function mytheme_dequeue_fonts() {
  *     wp_dequeue_style( 'wpforge-fonts' );
  * }
  * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
- *
  * Also used in the Appearance > Header admin panel:
  * @see wpforge_custom_header_setup()
  *
  * @since WP-Forge 1.0
  *
- * @return void
  */
 function wpforge_fonts() {
 	$fonts_url = wpforge_fonts_url();
@@ -205,12 +197,11 @@ add_action( 'wp_enqueue_scripts', 'wpforge_fonts' );
 /**
  * Creates a nicely formatted and more specific title element text for output
  * in head of document, based on current view.
- *
- * @since WP-Forge 1.0
- *
  * @param string $title Default title text for current view.
  * @param string $sep Optional separator.
  * @return string The filtered title.
+ *
+  * @since WP-Forge 1.0
  */
 function wpforge_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -237,6 +228,8 @@ add_filter( 'wp_title', 'wpforge_wp_title', 10, 2 );
 /**
  * A fallback when no navigation is selected by default, otherwise it throws some nasty errors in your face.
  * From required+ Foundation http://themes.required.ch
+ *
+ * @since WP-Forge 1.0 
  */
 function wpforge_menu_fallback() {
 	echo '<div class="alert-box secondary"><p>';
@@ -264,6 +257,8 @@ add_filter( 'nav_menu_css_class', 'wpforge_active_nav_class', 10, 2 );
 /**
  * Use the active class of ZURB Foundation on wp_list_pages output.
  * From required+ Foundation http://themes.required.ch
+ *
+ * @since WP-Forge 1.0 
  */
 function wpforge_active_list_pages_class( $input ) {
 
@@ -281,6 +276,8 @@ add_filter( 'wp_list_pages', 'wpforge_active_list_pages_class', 10, 2 );
  * Custom output to enable the the ZURB Navigation style.
  * Courtesy of Kriesi.at. http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output
  * From required+ Foundation http://themes.required.ch
+ *
+ * @since WP-Forge 1.0 
  */
 class wpforge_walker extends Walker_Nav_Menu {
 
@@ -639,6 +636,7 @@ endif;
 /**
  * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
  * Create your own wpforge_entry_meta() to override in a child theme.
+ *
  * @since WP-Forge 1.0
  */
 if ( ! function_exists( 'wpforge_entry_meta' ) ) :
@@ -712,9 +710,10 @@ endif;
 /**
  * Prints HTML with date information for current post.
  * Create your own wpforge_entry_date() to override in a child theme.
- * @since WP-Forge 1.0
  * @param boolean $echo Whether to echo the date. Default true.
  * @return string
+ *
+ * @since WP-Forge 1.0
  */
 if ( ! function_exists( 'wpforge_entry_date' ) ) :
 
@@ -744,11 +743,10 @@ endif;
  * 3. White or empty background color to change the layout and spacing.
  * 4. Custom fonts enabled.
  * 5. Single or multiple authors.
- *
- * @since WP-Forge 1.0
- *
  * @param array Existing class values.
  * @return array Filtered class values.
+ *
+ * @since WP-Forge 1.0
  */
 function wpforge_body_class( $classes ) {
 	$background_color = get_background_color();
@@ -796,11 +794,9 @@ add_action( 'template_redirect', 'wpforge_content_width' );
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
- *
- * @since WP-Forge 1.0
- *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- * @return void
+ * 
+ * @since WP-Forge 1.0
  */
 function wpforge_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
@@ -839,22 +835,34 @@ function remove_thumbnail_dimensions( $html ) {
     return $html;
 }
 
-// Load Gravity Forms jQuery in the footer
+/**
+ * Load Gravity Forms jQuery in the footer
+ *
+ * @since WP-Forge 1.0
+ */
 add_filter("gform_init_scripts_footer", "init_scripts");
 function init_scripts() {
 return true;
 } 
 
-// remove wp version param from any enqueued scripts
-function vc_remove_wp_ver_css_js( $src ) {
+/**
+ * Remove wp version param from any enqueued scripts
+ *
+ * @since WP-Forge 1.0
+ */
+function wpforge_remove_wp_ver_css_js( $src ) {
     if ( strpos( $src, 'ver=' ) )
         $src = remove_query_arg( 'ver', $src );
     return $src;
 }
-add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
-add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+add_filter( 'style_loader_src', 'wpforge_remove_wp_ver_css_js', 9999 );
+add_filter( 'script_loader_src', 'wpforge_remove_wp_ver_css_js', 9999 );
 
-// Remove .sticky from the post_class array (Thanks to required+ foundation)
+/**
+ * Remove .sticky from the post_class array (Thanks to required+ foundation)
+ *
+ * @since WP-Forge 1.0
+ */
 function wpforge_filter_post_class( $classes ) {
     if ( ( $key = array_search( 'sticky', $classes ) ) !== false ) {
         unset( $classes[$key] );
@@ -866,13 +874,10 @@ add_filter( 'post_class', 'wpforge_filter_post_class', 20 );
 
 /**
  * Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
- * 
  * @see https://gist.github.com/Narga/2887406
  *
  * @since WP-Forge 1.0
- *
  */
-// Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
 function wpforge_remove_recent_comments_style() {  
         global $wp_widget_factory;  
         remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
@@ -880,120 +885,10 @@ function wpforge_remove_recent_comments_style() {
 add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
 
 /**
- * Callback for WordPress 'init' action.
- * 
- * Remove the 'the_content' filter callback added by sharedaddy to prevent the sharing links from being appended to the posts content.
- * This will allow you to add the sharedaddy buttons anywhere you like.
- * 
- * @see https://gist.github.com/rfmeier/5672435
- * 
- * @author Ryan Meier <rfmeier@gmail.com>
- *
- * @since WP-Forge 1.0
- * 
- * @param - Place the following where you want the share buttons to display 
- * <?php if ( function_exists( 'sharing_display' ) ) echo sharing_display(); ?>
- *
- */
-
-add_action( 'init', 'custom_init', 11 );
-
-function custom_init(){
-	// if sharing_display() function does not exist, return
-	if( ! function_exists( 'sharing_display' ) )
-		return;
-	// remove the callback sharing_display() for the 'the_content' filter.
-	remove_filter( 'the_content', 'sharing_display', 19 );
-}
-
-/**
- * Remove Jetpack open graph tags
- * 
- * This will remove the open grapgh tags in the header if you are using Yoasts SEO plugin
- * Uncomment to allow the tags to appear in the header if you are NOT using Yoasts SEO Plugin
- * 
- * @see http://yoast.com/jetpack-and-wordpress-seo/
- * @ see http://antesarkkinen.com/blog/how-to-disable-jetpack-open-graph-tags/
- * 
- * @since WP-Forge 1.0
- *
- */
-remove_action('wp_head','jetpack_og_tags');
-
-/**
- * PressTrends Theme API - Thanks to George Ortiz
- * This is to track the usage of Wp-Forge. You can delete this function if you do not wish to be tracked.
- *
- * @see http://www.presstrends.io/
- *
- * @since WP-Forge 1.0
- *
- */
-function presstrends_theme() {
-    // PressTrends Account API Key
-    $api_key = 'etyilzsksnrzcnce6gw7p82evmpd416wwgv1';
-    $auth = 'ryp88nc9lhbcj01hf9szfxcbc45ayf1wp';
-    // Start of Metrics
-    global $wpdb;
-    $data = get_transient( 'presstrends_theme_cache_data' );
-    if ( !$data || $data == '' ) {
-        $api_base = 'http://api.presstrends.io/index.php/api/sites/add/auth/';
-        $url      = $api_base . $auth . '/api/' . $api_key . '/';
-        $count_posts    = wp_count_posts();
-        $count_pages    = wp_count_posts( 'page' );
-        $comments_count = wp_count_comments();
-        if ( function_exists( 'wp_get_theme' ) ) {
-            $theme_data    = wp_get_theme();
-            $theme_name    = urlencode( $theme_data->Name );
-            $theme_version = $theme_data->Version;
-        } else {
-            $theme_data = wp_get_theme( get_stylesheet_directory() . '/style.css' );
-            $theme_name = $theme_data['Name'];
-            $theme_version = $theme_data['Version'];
-        }
-        $all_plugins = get_plugins();
-        $plugin_name = '';
-        foreach ( $all_plugins as $plugin_file => $plugin_data ) {
-            $plugin_name .= $plugin_data['Name'];
-            $plugin_name .= '&';
-        }
-        $posts_with_comments = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type='post' AND comment_count > 0" );
-        $avg_time_btw_posts = $wpdb->get_var("SELECT TIMESTAMPDIFF(SECOND, MIN(post_date), MAX(post_date)) / (COUNT(*)-1) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post'");
-        $avg_time_btw_comments = $wpdb->get_var("SELECT TIMESTAMPDIFF(SECOND, MIN(comment_date), MAX(comment_date)) / (COUNT(*)-1) FROM $wpdb->comments WHERE comment_approved = '1'");
-        $data                	= array(
-            'url'             	=> stripslashes( str_replace( array( 'http://', '/', ':' ), '', site_url() ) ),
-            'posts'           	=> $count_posts->publish,
-            'pages'           	=> $count_pages->publish,
-            'comments'        	=> $comments_count->total_comments,
-            'approved'        	=> $comments_count->approved,
-            'spam'            	=> $comments_count->spam,
-            'between_posts'   	=> $avg_time_btw_posts,
-            'between_comments'	=> $avg_time_btw_comments,
-            'pingbacks'       	=> $wpdb->get_var( "SELECT COUNT(comment_ID) FROM $wpdb->comments WHERE comment_type = 'pingback'" ),
-            'post_conversion' 	=> ( $count_posts->publish > 0 && $posts_with_comments > 0 ) ? number_format( ( $posts_with_comments / $count_posts->publish ) * 100, 0, '.', '' ) : 0,
-            'theme_version'   	=> $theme_version,
-            'theme_name'      	=> $theme_name,
-            'site_name'       	=> str_replace( ' ', '', get_bloginfo( 'name' ) ),
-            'plugins'         	=> count( get_option( 'active_plugins' ) ),
-            'plugin'          	=> urlencode( $plugin_name ),
-            'wpversion'       	=> get_bloginfo( 'version' ),
-            'api_version'	  	=> '2.4',
-        );
-        foreach ( $data as $k => $v ) {
-            $url .= $k . '/' . $v . '/';
-        }
-        wp_remote_get( $url );
-        set_transient( 'presstrends_theme_cache_data', $data, 60 * 60 * 24 );
-    }
-}
-add_action('admin_init', 'presstrends_theme');
-
-/**
  * Custom admin footer. Displays in the admin section of WordPress
- *
  * You can change this to reflect anything you want.
- *
- * @see http://themeawesome.com
+ * 
+ * @since WP-Forge 1.0
  */
 function wpforge_custom_admin_footer() {
 	$mysite = "http://themeawesome.com"; /* change this to your site name */

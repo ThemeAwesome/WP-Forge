@@ -1295,7 +1295,7 @@ blockquote p {
 
   .show-for-print {
     display: inherit !important; } }
-button, .button, input[type="submit"] {
+button, .button {
   cursor: pointer;
   font-family: inherit;
   line-height: 1;
@@ -1312,9 +1312,9 @@ button, .button, input[type="submit"] {
   background-color: #2ba6cb;
   color: white;
   border:0!important; }
-  button:hover, button:focus, .button:hover, .button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+  button:hover, button:focus, .button:hover, .button:focus {
     background-color: #2284a1; }
-  button:hover, button:focus, .button:hover, .button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+  button:hover, button:focus, .button:hover, .button:focus {
     color: white; }
   button.secondary, .button.secondary {
     background-color: #e9e9e9;
@@ -1440,7 +1440,7 @@ button, .button {
     -webkit-appearance: none; }
 
 @media only screen {
-  button, .button, input[type="submit"] {
+  button, .button {
     -webkit-transition: background-color 300ms ease-out;
     -moz-transition: background-color 300ms ease-out;
     transition: background-color 300ms ease-out; }
