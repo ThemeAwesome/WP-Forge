@@ -904,7 +904,7 @@ article.format-quote .entry-content blockquote {
 .comments-area article header cite,
 .comments-area article header time {
 	display: block;
-	margin-left: 65px;
+	margin-left: 80px;
 }
 .comments-area article header cite {
 	font-style: normal;

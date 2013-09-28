@@ -13,7 +13,8 @@
 			<header>
 				<h1><?php the_author(); ?></h1>
 			</header>
-			<?php echo get_avatar( get_the_author_meta( 'ID' ), apply_filters( 'wpforge_status_avatar', '48' ) ); ?>
+			<?php echo get_avatar( get_the_author_meta( 'ID' ), apply_filters( 'wpforge_status_avatar', '68' ) ); ?><br />
+            <small><?php echo get_the_date(); ?> at <?php echo get_the_time(); ?></small>
 		</div><!-- .entry-header -->
 		<div class="entry-content">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wpforge' ) ); ?>
