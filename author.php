@@ -46,7 +46,7 @@ get_header(); ?>
 			if ( get_the_author_meta( 'description' ) ) : ?>
 			<div class="author-info">
 				<div class="author-avatar">
-					<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 60 ) ); ?>
+					<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 68 ) ); ?>
 				</div><!-- .author-avatar -->
 				<div class="author-description">
 					<h2><?php printf( __( 'About %s', 'wpforge' ), get_the_author() ); ?></h2>
