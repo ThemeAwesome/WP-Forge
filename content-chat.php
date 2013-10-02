@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since Twenty Thirteen 1.0
+ * @since WP-Forge 1.0
  */
 ?>
 

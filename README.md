@@ -16,7 +16,7 @@ WP-Forge is based off of the Twenty Twelve theme and is a combination of two pow
 Previously, WP-Forge deregistered the local version of jQuery and used Google's version instead. Unfortunately this is not up to WordPress standards and now WP-Forge uses the version of jQuery bundled with WordPress. You can however do a search and find the information you need to use Google's version.
 
 ###Child Theme###
-You can of course use WP-Forge right out of the box for your projects, but I recommend that you create a Child Theme when using WP-Forge for client work. The reason behind this is that Foundation will soon be pushing out Foundation 5 and WP-Forge will be updated accordingly. Using a child theme will allow you to update WP-Forge without losing any edits in your child theme. I will be releasing a child theme for WP-Forge soon. In the mean time you can check the WordPress codex on how to do this: http://codex.wordpress.org/Child_Themes
+I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
 
 ###WP-Forge Demo###
 You can see a demo of WP-Forge here: http://themeawesome.com/wpforge
