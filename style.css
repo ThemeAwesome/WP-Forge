@@ -666,6 +666,12 @@ img.alignnone {
 	border-top: 1px solid #ededed;
 	padding: 6px 10px;
 }
+.entry-content th,
+.comment-content th,
+.entry-content td,
+.comment-content td {
+	text-align: left;
+}
 article {
 	border-bottom: 1px solid #ededed;
 	margin-bottom: 35px;
