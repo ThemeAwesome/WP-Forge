@@ -1,8 +1,11 @@
 (function($) {
 jQuery(document).foundation()
 
-	// Add java script to footer so all Foundation scripts will work
+	// Joyride: Add java script to footer so all Foundation scripts will work
 	.foundation('joyride', 'start');
+	
+	// Reaveal: Move content of the reveal-modal class to just above the closing body tag
+	jQuery( ".reveal-modal" ).appendTo( 'body' );
 
 	// Add button class to all submit buttons
 	jQuery('input[type="submit"]').addClass('button');
@@ -16,4 +19,4 @@ jQuery(document).foundation()
 	
 // end loading all functions   
    
-})(jQuery); 
+})(jQuery);

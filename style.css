@@ -267,9 +267,9 @@ body {
 	font-size: 0.875em; /* equals 14px */
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
 	color: #444;
 	padding:48px 0;
+	-webkit-font-smoothing: antialiased;
 }
 #wrapper {
   box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
@@ -582,6 +582,7 @@ article .featured-post {
 	font-family: Consolas, Monaco, Lucida Console, monospace;
 	font-size: 12px;
 	line-height: 2;
+	padding:2px 4px;
 }
 .entry-content pre,
 .comment-content pre {
