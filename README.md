@@ -19,7 +19,7 @@ Previously, WP-Forge deregistered the local version of jQuery and used Google's 
 I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
 
 ###WP-Forge Demo###
-You can see a demo of WP-Forge here: http://themeawesome.com/wpforge
+You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/
 
 ###Font Awesome###
 Includes what I consider the best free icon font in the world Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
