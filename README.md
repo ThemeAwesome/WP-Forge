@@ -42,9 +42,9 @@ This means WP-Forge is completely free to use and modify as you see fit. I hope 
 Additional Credits
 =============
 As I developed WP-Forge, I discovered and used various functions from different themes that were also built with WordPress and Foundation.
-*Zhen Huang - [Reverie Theme] (http://themefortress.com/reverie/)
-*320Press - [WordPress Foundation] (https://github.com/320press/wordpress-foundation)
-*required+ - [Required-Foundation] (https://github.com/wearerequired/required-foundation)
+* Zhen Huang - [Reverie Theme] (http://themefortress.com/reverie/)
+* 320Press - [WordPress Foundation] (https://github.com/320press/wordpress-foundation)
+* required+ - [Required-Foundation] (https://github.com/wearerequired/required-foundation)
 
 ThemeAwesome.com
 =============
