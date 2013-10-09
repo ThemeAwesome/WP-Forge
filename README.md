@@ -39,6 +39,13 @@ WP-Forge is licensed as follows:
 
 This means WP-Forge is completely free to use and modify as you see fit. I hope you use it to learn something new, make something cool, have fun, and share what you've learned with others.
 
+Additional Credits
+=============
+As I developed WP-Forge, I discovered and used various functions from different themes that were also built with WordPress and Foundation.
+*Zhen Huang - [Reverie Theme] (http://themefortress.com/reverie/)
+*320Press - [WordPress Foundation] (https://github.com/320press/wordpress-foundation)
+*required+ - [Required-Foundation] (https://github.com/wearerequired/required-foundation)
+
 ThemeAwesome.com
 =============
 WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on WordPress Theme Support and PSD to WordPress conversions.
