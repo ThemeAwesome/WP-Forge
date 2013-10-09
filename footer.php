@@ -40,7 +40,9 @@
 
 	</footer><!-- .row -->
     
-	</div><!-- #wrapper -->    
+	</div><!-- #wrapper -->  
+    
+    <div id="backtotop"><i class="icon-chevron-sign-up icon-4x"></i></div>  
 
 <?php wp_footer(); ?>
 </body>
