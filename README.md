@@ -10,6 +10,7 @@ WP-Forge is based off of the Twenty Twelve theme and is a combination of two pow
 * [Log Depreceated Notices](http://wordpress.org/plugins/log-deprecated-notices/) - a plugin that helps you identify old WordPress API functions a theme or plugin is currently using so you can update to the newer methods.
 * [Theme Check](http://wordpress.org/plugins/theme-check/) - a simple and easy way to test your theme for all the latest WordPress standards and practices.
 * [Theme Mentor](http://wordpress.org/plugins/theme-mentor/) - the cousin of Theme-Check plugin. It does deeper code analysis to ensure best practices, like checking for the dequeueing of jQuery.
+* [Monster Widget] (http://wordpress.org/plugins/monster-widget/) - A widget that provides a quick and easy method of adding all core widgets to a sidebar for testing purposes.
 * [Viewport Resizer](http://lab.maltewassermann.com/viewport-resizer/) - a handy bookmarklet that will load your site in a viewport the size of common devices. This is helpful in testing responsive design.
 
 ###jQuery###
