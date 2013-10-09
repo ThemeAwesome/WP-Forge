@@ -42,7 +42,14 @@
     
 	</div><!-- #wrapper -->  
     
-    <div id="backtotop"><i class="icon-chevron-sign-up icon-4x"></i></div>  
+    <div id="backtotop">
+    
+        <span class="icon-stack">
+          <i class="icon-sign-blank icon-stack-base"></i>
+          <i class="icon-double-angle-up icon-light"></i>
+        </span>    
+    
+    </div><!-- #backtotop --> 
 
 <?php wp_footer(); ?>
 </body>
