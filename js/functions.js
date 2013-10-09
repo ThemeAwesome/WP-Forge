@@ -30,7 +30,7 @@ jQuery(document).foundation()
 	jQuery('#backtotop').click(function(){
 		jQuery('html, body').animate({
 		scrollTop: jQuery("#header").offset().top
-		}, 2000);				   
+		}, 1000);				   
 	});	
 	
 // end loading all functions   
