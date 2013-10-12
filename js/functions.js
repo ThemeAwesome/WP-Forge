@@ -11,7 +11,9 @@ jQuery(document).foundation()
 	jQuery('input[type="submit"]').addClass('button');
 	
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
-	jQuery('iframe').wrap('<div class="flex-video" />');	
+    jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video />');
+	jQuery('iframe[src*="dailymotion.com"]').wrap('<div class="flex-video widescreen" />');
+    jQuery('iframe[src*="youtube.com"]').wrap('<div class="flex-video widescreen" />');
 	
 	// BackToTop: make it fades in
 	jQuery(window).load(function() {
