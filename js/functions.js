@@ -15,7 +15,7 @@ jQuery(document).foundation()
 	jQuery('iframe[src*="dailymotion.com"]').wrap('<div class="flex-video widescreen" />');
     jQuery('iframe[src*="youtube.com"]').wrap('<div class="flex-video widescreen" />');
 	
-	// BackToTop: make it fades in
+	// BackToTop: Change the speed of the scroll below
 	jQuery(window).load(function() {
 		jQuery("#topofpage").hide().removeAttr("href");
 		if (jQuery(window).scrollTop() != "0")
@@ -31,7 +31,7 @@ jQuery(document).foundation()
 	// BacktoTop
 	jQuery('#backtotop').click(function(){
 		jQuery('html, body').animate({
-		scrollTop: jQuery("#header").offset().top
+		scrollTop: jQuery("#wrapper").offset().top
 		}, 1000);				   
 	});	
 	
