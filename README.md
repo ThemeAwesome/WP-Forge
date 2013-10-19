@@ -26,7 +26,7 @@ You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/
 Includes what I consider the best free icon font in the world Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
 
 ###Yoast SEO Plugin###
-Has built in support for the Yoast SEO plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
+Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
 
 ###WP-Forge Forums###
 If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the forums: http://themeawesome.com/forums
