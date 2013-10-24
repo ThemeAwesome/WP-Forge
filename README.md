@@ -20,9 +20,9 @@ Previously, WP-Forge deregistered the local version of jQuery and used Google's 
 I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
 
 ###WP-Forge Demo###
-You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/
+You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The Viewport Resizer is available on the home page of the demo site. Simply click the button that states "Test WP-Forge Responsiveness" and the Viewport Resizer bar will appear at the top of the site allowing to test the theme against various device sizes.
 
-###Font Awesome###
+###Font Awesome 4.0###
 Includes what I consider the best free icon font in the world Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
 
 ###Yoast SEO Plugin###
