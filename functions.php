@@ -73,13 +73,16 @@ function wpforge_setup() {
 	 */
 	load_theme_textdomain( 'wpforge', get_template_directory() . '/language' );
 	
-	//This theme styles the visual editor to resemble the theme style
+	// This theme styles the visual editor to resemble the theme style
 	add_editor_style( array( 'css/foundation.css','style.css','fonts/font-awesome.css', wpforge_fonts_url() ) );
 
 	// Adds RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
+	
+	// Makes our theme support WooCommerce
+	add_theme_support( 'woocommerce' );	
 
-	//This theme supports all available post formats by default. See http://codex.wordpress.org/Post_Formats
+	// This theme supports all available post formats by default. See http://codex.wordpress.org/Post_Formats
 	add_theme_support( 'post-formats', array(
 		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
 	) );
@@ -138,7 +141,7 @@ function wpforge_scripts_styles() {
     // Register JavaScript file with functionality specific to WP-Forge.
     wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array(), '', true );
 
-	//Load all of our stylesheets 
+	// Load all of our stylesheets 
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
 	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
 	wp_enqueue_style( 'wpforge', get_stylesheet_uri() );
@@ -588,7 +591,7 @@ function wpforge_comment( $comment, $args, $depth ) {
 		// Display trackbacks differently than normal comments.
 	?>
 	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		<p><?php _e( 'Pingback:', 'wpforge' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'wpforge' ), '<span class="edit-link"><i class="icon-pencil"></i> ', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'wpforge' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'wpforge' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -620,7 +623,7 @@ function wpforge_comment( $comment, $args, $depth ) {
 
 			<section class="comment-content comment">
 				<?php comment_text(); ?>
-				<?php edit_comment_link( __( 'Edit', 'wpforge' ), '<p class="edit-link"><i class="icon-pencil"></i> ', '</p>' ); ?>
+				<?php edit_comment_link( __( 'Edit', 'wpforge' ), '<p class="edit-link"><i class="fa fa-pencil"></i> ', '</p>' ); ?>
 			</section><!-- .comment-content -->
 
 			<div class="reply">
@@ -643,42 +646,42 @@ if ( ! function_exists( 'wpforge_entry_meta' ) ) :
 
 function wpforge_entry_meta() {
 	if ( is_sticky() && is_home() && ! is_paged() )
-		echo '<i class="icon-pushpin"></i> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';
+		echo '<i class="fa fa-thumb-tack"></i> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';
 		
 	if ( has_post_format( 'aside' )) {
-	  echo '<i class="icon-lightbulb"></i> <span class="pfont">' . __( 'Aside', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-lightbulb-o"></i> <span class="pfont">' . __( 'Aside', 'wpforge' ) . '</span>';
 	}
 	
 	if ( has_post_format( 'audio' )) {
-	  echo '<i class="icon-volume-up"></i> <span class="pfont">' . __( 'Audio', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-volume-up"></i> <span class="pfont">' . __( 'Audio', 'wpforge' ) . '</span>';
 	}	
 	
 	if ( has_post_format( 'chat' )) {
-	  echo '<i class="icon-comments"></i> <span class="pfont">' . __( 'Chat', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-comments"></i> <span class="pfont">' . __( 'Chat', 'wpforge' ) . '</span>';
 	}	
 	
 	if ( has_post_format( 'gallery' )) {
-	  echo '<i class="icon-camera-retro"></i> <span class="pfont">' . __( 'Gallery', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-camera"></i> <span class="pfont">' . __( 'Gallery', 'wpforge' ) . '</span>';
 	}
 	
 	if ( has_post_format( 'image' )) {
-	  echo '<i class="icon-picture"></i> <span class="pfont">' . __( 'Image', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-picture-o"></i> <span class="pfont">' . __( 'Image', 'wpforge' ) . '</span>';
 	}	
 	
 	if ( has_post_format( 'link' )) {
-	  echo '<i class="icon-link"></i> <span class="pfont">' . __( 'Link', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-link"></i> <span class="pfont">' . __( 'Link', 'wpforge' ) . '</span>';
 	}	
 	
 	if ( has_post_format( 'quote' )) {
-	  echo '<i class="icon-quote-left"></i> <span class="pfont">' . __( 'Quote', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-quote-left"></i> <span class="pfont">' . __( 'Quote', 'wpforge' ) . '</span>';
 	}	
 	
 	if ( has_post_format( 'status' )) {
-	  echo '<i class="icon-bullhorn"></i> <span class="pfont">' . __( 'Status', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-bullhorn"></i> <span class="pfont">' . __( 'Status', 'wpforge' ) . '</span>';
 	}	
 	
 	if ( has_post_format( 'video' )) {
-	  echo '<i class="icon-facetime-video"></i> <span class="pfont">' . __( 'Video', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-video-camera"></i> <span class="pfont">' . __( 'Video', 'wpforge' ) . '</span>';
 	}				
 
 	if ( ! has_post_format( '' ) && 'post' == get_post_type() )
@@ -687,18 +690,18 @@ function wpforge_entry_meta() {
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'wpforge' ) );
 	if ( $categories_list ) {
-		echo '<i class="icon-folder-open"></i> <span class="categories-links">' . $categories_list . '</span>';
+		echo '<i class="fa fa-folder-open"></i> <span class="categories-links">' . $categories_list . '</span>';
 	}
 
 	// Translators: used between list items, there is a space after the comma.
 	$tag_list = get_the_tag_list( '', __( ', ', 'wpforge' ) );
 	if ( $tag_list ) {
-		echo '<i class="icon-tag icon-flip-horizontal"></i> <span class="tags-links">' . $tag_list . '</span>';
+		echo '<i class="fa fa-tag"></i> <span class="tags-links">' . $tag_list . '</span>';
 	}
 
 	// Post author
 	if ( 'post' == get_post_type() ) {
-		printf( '<i class="icon-user"></i> <span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+		printf( '<i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', 'wpforge' ), get_the_author() ) ),
 			get_the_author()
@@ -720,7 +723,7 @@ if ( ! function_exists( 'wpforge_entry_date' ) ) :
 function wpforge_entry_date( $echo = true ) {
 	$format_prefix = ( has_post_format( '' ) ) ? _x( '%1$s on %2$s', '1: post format name. 2: date', 'wpforge' ): '%2$s';
 
-	$date = sprintf( '<i class="icon-calendar-empty"></i> <span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
+	$date = sprintf( '<i class="fa fa-calendar-o"></i> <span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
 		esc_url( get_permalink() ),
 		esc_attr( sprintf( __( 'Permalink to %s', 'wpforge' ), the_title_attribute( 'echo=0' ) ) ),
 		esc_attr( get_the_date( 'c' ) ),

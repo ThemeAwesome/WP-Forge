@@ -25,7 +25,7 @@ get_header(); ?>
 						<footer class="entry-meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								printf( __( '<span class="meta-prep meta-prep-entry-date"><i class="icon-time"></i> </span> <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class="icon-camera"></i> <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a>&nbsp;&nbsp;&nbsp;<i class="icon-folder-open"></i> <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'wpforge' ),
+								printf( __( '<span class="meta-prep meta-prep-entry-date"><i class="fa fa-calendar-o"></i> </span> <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class="fa fa-camera-retro"></i> <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a>&nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i> <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'wpforge' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
 									esc_url( wp_get_attachment_url() ),
@@ -36,7 +36,7 @@ get_header(); ?>
 									get_the_title( $post->post_parent )
 								);
 							?>
-							<?php edit_post_link( __( ' Edit', 'wpforge' ), '<span class="edit-link"><i class="icon-pencil"></i>', '</span>' ); ?>
+							<?php edit_post_link( __( ' Edit', 'wpforge' ), '<span class="edit-link"><i class="fa fa-pencil"></i>', '</span>' ); ?>
 						</footer><!-- .entry-meta -->
 
 						<nav id="image-navigation" class="navigation" role="navigation">

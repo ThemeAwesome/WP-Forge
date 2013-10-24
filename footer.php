@@ -44,12 +44,9 @@
     
     <div id="backtotop">
     
-        <span class="icon-stack">
-          <i class="icon-sign-blank icon-stack-base"></i>
-          <i class="icon-double-angle-up icon-light"></i>
-        </span>    
+        <i class="fa fa-chevron-circle-up fa-3x"></i>   
     
-    </div><!-- #backtotop --> 
+    </div><!-- #backtotop -->
 
 <?php wp_footer(); ?>
 </body>

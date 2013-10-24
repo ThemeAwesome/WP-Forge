@@ -18,6 +18,6 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wpforge' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<footer class="entry-meta">
-			<?php edit_post_link( __( 'Edit', 'wpforge' ), '<span class="edit-link"><i class="icon-pencil"></i> ', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'wpforge' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
