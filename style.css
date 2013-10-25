@@ -1243,11 +1243,7 @@ html .mceContentBody ul, html .mceContentBody ol {
 ----------------------------------------------- */
 @media (max-width: 645px) {
 	#wrapper {
-		padding:1em 1em 0 1em
-	}
-	.columns {
-		padding-left:0;
-		padding-right:0;
+		padding:0
 	}
 	.site-header h1 a {
 		margin-top:0!important;}
