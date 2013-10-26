@@ -31,13 +31,10 @@ Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. Th
 ###WP-Forge Forums###
 If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the forums: http://themeawesome.com/forums
 
-License
+Contributors
 =============
-WP-Forge is licensed as follows:
-* WordPress is GPLv2 - http://www.gnu.org/licenses/gpl-2.0.html
-* Foundation by ZURB is MIT - http://opensource.org/licenses/MIT
 
-This means WP-Forge is completely free to use and modify as you see fit. I hope you use it to learn something new, make something cool, have fun, and share what you've learned with others.
+[Christopher Anderton] (https://github.com/Deluxive) for Swedish localization
 
 Additional Credits
 =============
@@ -45,6 +42,14 @@ As I developed WP-Forge, I discovered and used various functions from different 
 * Zhen Huang - [Reverie Theme] (http://themefortress.com/reverie/)
 * 320Press - [WordPress Foundation] (https://github.com/320press/wordpress-foundation)
 * required+ - [Required-Foundation] (https://github.com/wearerequired/required-foundation)
+
+License
+=============
+WP-Forge is licensed as follows:
+* WordPress is GPLv2 - http://www.gnu.org/licenses/gpl-2.0.html
+* Foundation by ZURB is MIT - http://opensource.org/licenses/MIT
+
+This means WP-Forge is completely free to use and modify as you see fit. I hope you use it to learn something new, make something cool, have fun, and share what you've learned with others.
 
 ThemeAwesome.com
 =============
