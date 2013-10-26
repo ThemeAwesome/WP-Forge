@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP-Forge vv1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-10-26 01:06:23+0000\n"
+"PO-Revision-Date: 2013-10-26 01:10:57+0000\n"
 "Last-Translator: Christopher Anderton <christopher@deluxive.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -299,7 +299,7 @@ msgstr "Visar widgets i bloggområden men även på sidor."
 #: functions.php:399
 #@ wpforge
 msgid "First Front Page Widget Area"
-msgstr "Första Startsidans widget-område"
+msgstr "Första widgetområdet för startsidan"
 
 #: functions.php:401
 #: functions.php:410
@@ -310,19 +310,19 @@ msgstr "Visas när du använder mallen ”Startsida” (ej obligatorisk) med en 
 #: functions.php:408
 #@ wpforge
 msgid "Second Front Page Widget Area"
-msgstr "Andra widgetområdet för Startsida"
+msgstr "Andra widgetområdet för startsidan"
 
 #: functions.php:417
 #@ wpforge
 msgid "First Footer Widget Area"
-msgstr "Första widgetområdet för Sidfoten"
+msgstr "Första widgetområdet för sidfoten"
 
 #: functions.php:419
 #: functions.php:428
 #: functions.php:437
 #@ wpforge
 msgid "An optional widget area for your site footer"
-msgstr "Ett valfritt widgetområde för din sidfot"
+msgstr "Ett valfritt widgetområde för din sajts sidfot"
 
 #: functions.php:426
 #@ wpforge
