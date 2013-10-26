@@ -263,12 +263,20 @@ body {
 	font-size: 0.875em; /* equals 14px */
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	text-rendering: optimizeLegibility;
-	color: #444;
-	padding:48px 0;
-	-webkit-font-smoothing: antialiased;
+	/* CSS Standard replicating non standard optimizeLegibility. 
+	Commented out due to rendering bug in Blink browsers. Temporary Note  */
+	/* -moz-font-feature-settings:"kern" 1, "liga" 1; 
+    -moz-font-feature-settings:"kern=1, liga=1"; 
+    -ms-font-feature-settings:"kern" 1, "liga" 1; 
+    -o-font-feature-settings:"kern" 1, "liga" 1; 
+    -webkit-font-feature-settings:"kern" 1, "liga" 1; 
+    font-feature-settings:"kern" 1, "liga" 1; */
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;		
+	color: #444;
+	padding:48px 0;
 }
+
 #wrapper {
   box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
   background:#fff;
