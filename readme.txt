@@ -4,7 +4,7 @@ Based off of Twenty Twelve, WP-Forge is a mixin' of two powerful platforms: Word
 
 Demo
 =======================================
-http://themeawesome.com/wpforge
+http://wpforge.themeawesome.com/
 
 Github
 =======================================
