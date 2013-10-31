@@ -2,6 +2,9 @@ Welcome to WP-Forge
 ====================
 WP-Forge is based off of the Twenty Twelve theme and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v4.3.1), the most advanced responsive front-end framework.
 
+###WP-Forge Demo###
+You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The Viewport Resizer is available on the home page of the demo site. Simply click the button that states "Test WP-Forge Responsiveness" and the Viewport Resizer bar will appear at the top of the site allowing to test the theme against various device sizes.
+
 ###Built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
 * [WP-Test](http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integioty of themes and plugins. Developed by [Michael Novotny](http://manovotny.com/)
@@ -18,9 +21,6 @@ Previously, WP-Forge deregistered the local version of jQuery and used Google's 
 
 ###Child Theme###
 I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
-
-###WP-Forge Demo###
-You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The Viewport Resizer is available on the home page of the demo site. Simply click the button that states "Test WP-Forge Responsiveness" and the Viewport Resizer bar will appear at the top of the site allowing to test the theme against various device sizes.
 
 ###Font Awesome 4.0###
 Includes what I consider the best free icon font in the world Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
