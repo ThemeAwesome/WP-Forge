@@ -117,6 +117,15 @@ add_action( 'after_setup_theme', 'wpforge_setup' );
 require( get_template_directory() . '/inc/custom-header.php' );
 
 /**
+ * load PressTrends to track the usage of WP-Forge across the web, You can comment this line if you don't want to be tracked
+ *
+ * @see http://presstrends.io/
+ *
+ * @since WP-Forge 1.0
+ */
+require( get_template_directory() . '/inc/press-trends.php' );
+
+/**
  * Enqueues scripts and styles for front-end.
  *
  * @since WP-Forge 1.0
@@ -895,7 +904,7 @@ add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
  */
 function wpforge_custom_admin_footer() {
 	$mysite = "http://themeawesome.com"; /* change this to your site name */
-	echo 'Built with WP-Forge, a responsive WordPress theme. Mixology by <a href="' . $mysite . '" target="_blank">Themeawesome.com</a>.';
+	echo 'Built with WP-Forge, a responsive WordPress theme. Mixology by <a href="' . $mysite . '" target="_blank">ThemeAwesome.com</a>.';
 }
 
 add_filter('admin_footer_text', 'wpforge_custom_admin_footer');

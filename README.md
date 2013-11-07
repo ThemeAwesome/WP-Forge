@@ -28,6 +28,9 @@ Includes what I consider the best free icon font in the world Font Awesome: http
 ###Yoast SEO Plugin###
 Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
 
+###PressTrends###
+Added [PressTrends] (http://presstrends.io/) analytics service to track the usage of WP-Forge. The sole purpose of including this in WP-Forge is to help me improve the theme overall. If you do not wish to be tracked you can comment line 126 of the functions.php file.
+
 ###WP-Forge Forums###
 If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the forums: http://themeawesome.com/forums
 
