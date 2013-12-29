@@ -14,18 +14,18 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 1.0
+ * @since WP-Forge 5.0
  */
 
 get_header(); ?>
 
-	<div id="content" class="large-9 columns" role="main">
+	<div id="content" class="small-12 large-8 columns" role="main">
     
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
-				<h1 class="archive-title"><?php
+				<h4><?php
 					if ( is_day() ) :
 						printf( __( 'Daily Archives: %s', 'wpforge' ), '<span>' . get_the_date() . '</span>' );
 					elseif ( is_month() ) :
@@ -35,7 +35,7 @@ get_header(); ?>
 					else :
 						_e( 'Archives', 'wpforge' );
 					endif;
-				?></h1>
+				?></h4>
 			</header><!-- .archive-header -->
 
 			<?php

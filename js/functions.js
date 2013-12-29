@@ -8,10 +8,10 @@ jQuery(document).foundation()
 	jQuery( ".reveal-modal" ).appendTo( 'body' );
 
 	// Add button class to all submit buttons
-	jQuery('input[type="submit"]').addClass('button');
+	jQuery('input[type="submit"]').addClass('tiny radius button');
 	
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
-    jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video />');
+    jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo />');
 	jQuery('iframe[src*="dailymotion.com"]').wrap('<div class="flex-video widescreen" />');
     jQuery('iframe[src*="youtube.com"]').wrap('<div class="flex-video widescreen" />');
 	
@@ -31,7 +31,7 @@ jQuery(document).foundation()
 	// BacktoTop
 	jQuery('#backtotop').click(function(){
 		jQuery('html, body').animate({
-		scrollTop: jQuery("body").offset().top
+		scrollTop: jQuery('body').offset().top
 		}, 1000);				   
 	});	
 	

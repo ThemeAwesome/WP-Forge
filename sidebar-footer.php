@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 1.0
+ * @since WP-Forge 5.0
  */
 
 /*
@@ -26,7 +26,7 @@ if ( ! is_active_sidebar( 'sidebar-4' )
 ?>
 <div id="secondary-sidebar" class="row widget-area" role="complementary">
 
-	<div class="large-12 columns">
+	<div class="small-12 large-12 columns">
 
 		<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
         <div class="<?php wpforge_footer_sidebar_class(); ?> columns">

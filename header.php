@@ -9,29 +9,37 @@
 <title><?php wp_title('&#124;', true, 'right'); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link rel="shortcut icon" href="<?php echo esc_url( home_url( '/' ) ); ?>favicon.ico" />
+<link rel="icon" href="<?php echo esc_url( home_url( '/' ) ); ?>favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo esc_url( home_url( '/' ) ); ?>favicon.ico" type="image/x-icon" />
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
+	<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?>
+    	<?php get_template_part( 'content', 'nav' ); ?>
+    <?php } // end if ?>
+
 	<div id="wrapper"> 
           
             <header id="header" class="row" role="banner"> 
-            	<div class="site-header large-12 columns">
-                
-				<?php $header_image = get_header_image();
-                if ( ! empty( $header_image ) ) : ?>
+            	<div class="site-header small-12 large-12 columns">
+                <?php if( get_theme_mod( 'wpforge_logo' ) ) { ?>
                     <div class="header-logo">
-                    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                            <img src="<?php echo get_theme_mod('wpforge_logo'); ?>" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
+                        </a>
                     </div><!-- /.header-logo -->
-                <?php endif; ?>
+                <?php } // end if ?>
                     <div class="header-info">
-                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>         				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>                    
+                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                        <h2 class="site-description"><small><?php bloginfo( 'description' ); ?></small></h2>                    
                     </div><!-- /.header-info -->
                  </div><!-- .site-header -->
             </header><!-- #header -->
-        
-        <?php get_template_part('nav', 'top-bar'); ?>
+            
+            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
+            	<?php get_template_part( 'content', 'nav' ); ?>
+    		<?php } // end if ?>
     
         <section class="container row" role="document">

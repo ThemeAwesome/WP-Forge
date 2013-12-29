@@ -9,7 +9,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 1.0
+ * @since WP-Forge 5.0
  */
 
 get_header(); ?>
@@ -35,7 +35,9 @@ get_header(); ?>
 				<?php endif; ?>
 
 			<?php endwhile; // end of the loop. ?>
+            
+            <?php get_sidebar( 'front' ); ?>
 
 		</div><!-- #content -->
-<?php get_sidebar( 'front' ); ?>        
+        
 <?php get_footer(); ?>

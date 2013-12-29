@@ -1,6 +1,6 @@
 WP-Forge
 =======================================
-Based off of Twenty Twelve, WP-Forge is a mixin' of two powerful platforms: WordPress, the universes leading open source blogging tool and content management system in the universe and Foundation 4.3.1, the most advanced responsive front-end framework in the multiverse.
+Based off Twenty Twelve, WP-Forge is a mixin' of two powerful platforms: WordPress, the universes leading open source blogging tool and content management system in the universe and Foundation 5.0.2, the most advanced responsive front-end framework in the multiverse.
 
 Demo
 =======================================
@@ -27,3 +27,5 @@ License
 =======================================
 GPLv2 - http://www.gnu.org/licenses/gpl-2.0.html
 Foundation by ZURB is MIT - http://opensource.org/licenses/MIT
+
+I hope you utilize WP-Forge to learn something new, create something awesome, have fun and, more importantly, I hope you share what you have learned with others.

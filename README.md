@@ -1,9 +1,6 @@
 Welcome to WP-Forge
 ====================
-WP-Forge is based off of the Twenty Twelve theme and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v4.3.1), the most advanced responsive front-end framework.
-
-###WP-Forge Demo###
-You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The Viewport Resizer is available on the home page of the demo site. Simply click the button that states "Test WP-Forge Responsiveness" and the Viewport Resizer bar will appear at the top of the site allowing to test the theme against various device sizes.
+WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.2), the most advanced responsive front-end framework.
 
 ###Built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
@@ -16,23 +13,34 @@ You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The View
 * [Monster Widget] (http://wordpress.org/plugins/monster-widget/) - A widget that provides a quick and easy method of adding all core widgets to a sidebar for testing purposes.
 * [Viewport Resizer](http://lab.maltewassermann.com/viewport-resizer/) - a handy bookmarklet that will load your site in a viewport the size of common devices. This is helpful in testing responsive design.
 
+###Theme Customizer###
+When 3.4 was released, WordPress introduced the [Theme Customizer] (https://codex.wordpress.org/Theme_Customization_API). The customizer allows you modify certain areas of a theme and preview those changes in real time. WP-Forge comes with its own custom Theme Customizer.
+
 ###jQuery###
-Previously, WP-Forge deregistered the local version of jQuery and used Google's version instead. Unfortunately this is not up to WordPress standards and now WP-Forge uses the version of jQuery bundled with WordPress. You can however do a search and find the information you need to use Google's version.
+WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in the header. This practice falls within the [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development). You can do a search and find the information you need to use Google's version and load it in the footer if you wish.
 
 ###Child Theme###
 I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
 
-###Font Awesome 4.0###
+###Font Awesome 4.0.3###
 Includes what I consider the best free icon font in the world Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
 
 ###Yoast SEO Plugin###
 Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
 
-###PressTrends###
-Added [PressTrends] (http://presstrends.io/) analytics service to track the usage of WP-Forge. The sole purpose of including this in WP-Forge is to help me improve the theme overall. If you do not wish to be tracked you can comment line 126 of the functions.php file.
+###WP-Forge Demo###
+You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The Viewport Resizer is available on the home page of the demo site. Simply click the button that states "Test WP-Forge Responsiveness" and the Viewport Resizer bar will appear at the top of the site allowing to test the theme against various device sizes.
 
 ###WP-Forge Forums###
 If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the forums: http://themeawesome.com/forums
+
+###CONFIGURATION###
+* Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
+* Click on the Navigation section
+* Select the position of the main menu. You can have it display within the theme or you can have it display above of the theme.
+* If you select to display the menu above the theme, you can choose to have the menu scroll with the page or give it a fixed position so it always stays at the top of the browser window.
+* You can select to display the site name for the home link or if you prefer you can change the text to whatever you wish.
+* Once you are done, click Save and Publish.
 
 Contributors
 =============
@@ -42,6 +50,7 @@ Contributors
 Additional Credits
 =============
 As I developed WP-Forge, I discovered and used various functions from different themes that were also built with WordPress and Foundation.
+* Anthony Wilhelm - [Reactor] (https://github.com/awtheme/reactor)
 * Zhen Huang - [Reverie Theme] (http://themefortress.com/reverie/)
 * 320Press - [WordPress Foundation] (https://github.com/320press/wordpress-foundation)
 * required+ - [Required-Foundation] (https://github.com/wearerequired/required-foundation)
@@ -56,5 +65,5 @@ This means WP-Forge is completely free to use and modify as you see fit. I hope 
 
 ThemeAwesome.com
 =============
-WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on WordPress Theme Support and PSD to WordPress conversions.
+WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on Responsive PSD to WordPress conversions and WordPress Theme Support
 

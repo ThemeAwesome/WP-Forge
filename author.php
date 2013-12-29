@@ -8,12 +8,12 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 1.0
+ * @since WP-Forge 5.0
  */
 
 get_header(); ?>
 
-	<div id="content" class="large-9 columns" role="main">
+	<div id="content" class="small-12 large-8 columns" role="main">
     
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 
@@ -46,7 +46,7 @@ get_header(); ?>
 			if ( get_the_author_meta( 'description' ) ) : ?>
 			<div class="author-info">
 				<div class="author-avatar">
-					<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 68 ) ); ?>
+					<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 72 ) ); ?>
 				</div><!-- .author-avatar -->
 				<div class="author-description">
 					<h2><?php printf( __( 'About %s', 'wpforge' ), get_the_author() ); ?></h2>
