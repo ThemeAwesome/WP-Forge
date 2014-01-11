@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Forge\n"
-"POT-Creation-Date: 2013-12-28 08:28-0700\n"
-"PO-Revision-Date: 2013-12-28 08:29-0700\n"
+"POT-Creation-Date: 2014-01-11 09:22-0700\n"
+"PO-Revision-Date: 2014-01-11 09:24-0700\n"
 "Last-Translator: Thomas Vasquez <tsquez@gmail.com>\n"
 "Language-Team: Thomas Vasquez <tsquez@gmail.com>\n"
 "Language: en\n"
@@ -407,146 +407,162 @@ msgstr ""
 msgid "Tag Archives: %s"
 msgstr ""
 
-#: inc/customizer/customizer.php:37
+#: inc/customizer/customizer.php:35
 msgid "Set up a front page of WP-Forge."
 msgstr ""
 
-#: inc/customizer/customizer.php:45
+#: inc/customizer/customizer.php:43
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/customizer.php:55
+#: inc/customizer/customizer.php:44
+msgid "Modify the header portion of WP-Forge"
+msgstr ""
+
+#: inc/customizer/customizer.php:53
 msgid "Site Logo"
 msgstr ""
 
-#: inc/customizer/customizer.php:68
+#: inc/customizer/customizer.php:66
 msgid "Site Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:80
+#: inc/customizer/customizer.php:78
 msgid "Tagline"
 msgstr ""
 
-#: inc/customizer/customizer.php:93
+#: inc/customizer/customizer.php:91
 msgid "Show Title &amp; Tagline"
 msgstr ""
 
-#: inc/customizer/customizer.php:101
-msgid "Navigation"
-msgstr ""
-
-#: inc/customizer/customizer.php:114
+#: inc/customizer/customizer.php:107
 msgid "Main Menu Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:130
+#: inc/customizer/customizer.php:123
 msgid "If Top, Scroll or Fixed Menu?"
 msgstr ""
 
-#: inc/customizer/customizer.php:146
+#: inc/customizer/customizer.php:139 inc/customizer/customizer.php:148
 msgid "Change text for Home Link?"
 msgstr ""
 
-#: inc/customizer/customizer.php:160
+#: inc/customizer/customizer.php:161
 msgid "If Yes, Add New Anchor Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:168
+#: inc/customizer/customizer.php:169
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer/customizer.php:180
+#: inc/customizer/customizer.php:170
+msgid "Modify how posts appear in WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:182
 msgid "Display Full Post or Excerpt?"
 msgstr ""
 
-#: inc/customizer/customizer.php:196
+#: inc/customizer/customizer.php:198
 msgid "Display Post Thumbnails?"
 msgstr ""
 
-#: inc/customizer/customizer.php:206
+#: inc/customizer/customizer.php:208
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/customizer.php:216
+#: inc/customizer/customizer.php:209
+msgid "Modify the footer text of WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:218
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:224
+#: inc/customizer/customizer.php:226
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:238
+#: inc/customizer/customizer.php:227
+msgid "Modify the background of WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:241
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:252
+#: inc/customizer/customizer.php:255
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:267
+#: inc/customizer/customizer.php:270
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/customizer/customizer.php:271
+#: inc/customizer/customizer.php:274
 msgid "No Repeat"
 msgstr ""
 
-#: inc/customizer/customizer.php:272
+#: inc/customizer/customizer.php:275
 msgid "Tile"
 msgstr ""
 
-#: inc/customizer/customizer.php:273
+#: inc/customizer/customizer.php:276
 msgid "Tile Horizontally"
 msgstr ""
 
-#: inc/customizer/customizer.php:274
+#: inc/customizer/customizer.php:277
 msgid "Tile Vertically"
 msgstr ""
 
-#: inc/customizer/customizer.php:288
+#: inc/customizer/customizer.php:291
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:292
+#: inc/customizer/customizer.php:295
 msgid "Left"
 msgstr ""
 
-#: inc/customizer/customizer.php:293
+#: inc/customizer/customizer.php:296
 msgid "Center"
 msgstr ""
 
-#: inc/customizer/customizer.php:294
+#: inc/customizer/customizer.php:297
 msgid "Right"
 msgstr ""
 
-#: inc/customizer/customizer.php:308
+#: inc/customizer/customizer.php:311
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer/customizer.php:312
+#: inc/customizer/customizer.php:315
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer/customizer.php:313
+#: inc/customizer/customizer.php:316
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer/customizer.php:319
+#: inc/customizer/customizer.php:322
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:332
+#: inc/customizer/customizer.php:323
+msgid "Change some default colors of WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:336
 msgid "Title Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:346
+#: inc/customizer/customizer.php:350
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:360
+#: inc/customizer/customizer.php:364
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:374
+#: inc/customizer/customizer.php:378
 msgid "Hover Color"
 msgstr ""

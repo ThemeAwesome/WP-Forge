@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="small-12 large-12 medium-12 columns site-content">
+	<div id="primary" class="large-12 medium-12 columns site-content">
 		<div id="content" role="main">
         
         <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>

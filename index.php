@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-	<div class="small-12 large-8 columns" role="main">
+	<div class="large-8 columns" role="main">
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 		<?php if ( have_posts() ) : ?>
 

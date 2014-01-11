@@ -48,7 +48,7 @@
 <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
 
     <div class="row">
-        <div class="navcontainer small-12 large-12 columns">
+        <div class="navcontainer large-12 columns">
             <nav class="top-bar" data-topbar>
                 <ul class="title-area">
             	<?php if( get_theme_mod( 'wpforge_nav_title' ) == 'yes') { ?>

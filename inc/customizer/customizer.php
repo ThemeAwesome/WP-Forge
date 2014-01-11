@@ -26,14 +26,12 @@ function wpforge_customizer( $wp_customize ) { // Begin WP-Forge Theme Customize
 // Remove the default sections because we are going to create our own
 $wp_customize->remove_section('title_tagline');
 $wp_customize->remove_section('colors');
-$wp_customize->remove_section('nav');
 $wp_customize->remove_section('header_image');
 $wp_customize->remove_section('background_image');
-$wp_customize->remove_section('static_front_page');
 
 // Change some of the defaults
 $wp_customize->get_section('nav')->priority = 20; // Changed priority so it shows after the Header section
-$wp_customize->get_section('static_front_page')->priority = 30; // Changed priority so it shows before the Posts section
+$wp_customize->get_section('static_front_page')->priority = 70; // Changed priority so it shows at the end of the Theme Customizer
 $wp_customize->get_section('static_front_page')->description = __( 'Set up a front page of WP-Forge.', 'wpforge' );
  
 /*
@@ -43,7 +41,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 // Header Section
     $wp_customize->add_section('wpforge_header', array(
 		'title' => __('Header', 'wpforge'),
-		'description' => 'Modify the header portion of WP-Forge',
+		'description' => __('Modify the header portion of WP-Forge', 'wpforge'),
 		'priority' => 10,
 	));
 	// Add Site Logo
@@ -97,22 +95,17 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	 ));
 	 
 // Navigation Section
-    $wp_customize->add_section('wpforge_nav', array(
-		'title' => __('Navigation', 'wpforge'),
-		'description' => 'Modify the Menu Section of WP-Forge',
-		'priority' => 20,
-	));
 	// Main Menu Position
 	$wp_customize->add_setting('wpforge_nav_position',array(
 		'default' => 'normal',
 		'type'    => 'theme_mod',
 		'capability' => 'manage_options',
-		'priority' => 1,	
+		'priority' => 110,	
 	));
 	$wp_customize->add_control('wpforge_nav_position',array(
 		'type' => 'select',
 		'label' => __('Main Menu Position', 'wpforge'),
-		'section' => 'wpforge_nav',
+		'section' => 'nav',
 		'choices' => array(
 			'normal' => 'Normal',
 			'top'    => 'Top',
@@ -123,12 +116,12 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'default' => 'scroll',
 		'type'    => 'theme_mod',
 		'capability' => 'manage_options',
-			'priority' => 2,		
+			'priority' => 120,		
 	));
 	$wp_customize->add_control('wpforge_nav_display',array(
 		'type' => 'select',
 		'label' => __('If Top, Scroll or Fixed Menu?', 'wpforge'),
-		'section' => 'wpforge_nav',
+		'section' => 'nav',
 		'choices' => array(
 			'scroll' => 'Scroll',
 			'fixed'  => 'Fixed',
@@ -139,12 +132,21 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'default' => 'no',
 		'type'    => 'theme_mod',
 		'capability' => 'manage_options',
-		'priority' => 3,		
+		'priority' => 130,		
 	));
 	$wp_customize->add_control('wpforge_nav_title',array(
 		'type' => 'select',
 		'label' => __('Change text for Home Link?', 'wpforge'),
-		'section' => 'wpforge_nav',
+		'section' => 'nav',
+		'choices' => array(
+			'no' => 'No',
+			'yes'  => 'Yes',
+		),
+	));
+	$wp_customize->add_control('wpforge_nav_title',array(
+		'type' => 'select',
+		'label' => __('Change text for Home Link?', 'wpforge'),
+		'section' => 'nav',
 		'choices' => array(
 			'no' => 'No',
 			'yes'  => 'Yes',
@@ -153,19 +155,19 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	// Main Menu Main Link Text
 	$wp_customize->add_setting('wpforge_nav_text',array(
 		'default' => '',
-		'type' => 'theme_mod',
-		'priority' => 4,
+		'priority' => 140,
 	));
 	$wp_customize->add_control('wpforge_nav_text',array(
 		'label' => __('If Yes, Add New Anchor Text','wpforge'),
-		'section' => 'wpforge_nav',
+		'section' => 'nav',
 		'type' => 'text',
 		'sanitize_callback' => 'wpforge_sanitize_navtxt',
-	));					 						
+	));	 						
 	
 //The Post Section 
     $wp_customize->add_section('wpforge_posts',array(
 		'title' => __('Posts', 'wpforge'),
+		'description' => __('Modify how posts appear in WP-Forge.', 'wpforge'),
 		'priority' => 30,
     ));
 	$wp_customize->add_setting('wpforge_post_display',array(
@@ -204,7 +206,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 //The Footer Section
     $wp_customize->add_section('wpforge_footer',array(
 		'title' => __('Footer','wpforge'),
-		'description' => 'Modify the footer text of WP-Forge.',
+		'description' => __('Modify the footer text of WP-Forge.', 'wpforge'),
 		'priority' => 40,
     ));
 	$wp_customize->add_setting('wpforge_footer_text',array(
@@ -222,6 +224,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 // Background Section
     $wp_customize->add_section('wpforge_background', array(
 		'title' => __('Background', 'wpforge'),
+		'description' => __('Modify the background of WP-Forge.', 'wpforge'),
 		'priority' => 50,
      ));
 	// Background Color	 
@@ -317,6 +320,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 // Colors Section
     $wp_customize->add_section('wpforge_colors', array(
 		'title' => __('Colors', 'wpforge'),
+		'description' => __('Change some default colors of WP-Forge.', 'wpforge'),
 		'priority' => 60,
      )); 	 	 
 	// Title Color	 

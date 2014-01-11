@@ -23,7 +23,7 @@
 	<div id="wrapper"> 
           
             <header id="header" class="row" role="banner"> 
-            	<div class="site-header small-12 large-12 columns">
+            	<div class="site-header large-12 columns">
                 <?php if( get_theme_mod( 'wpforge_logo' ) ) { ?>
                     <div class="header-logo">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

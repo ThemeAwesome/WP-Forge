@@ -4,7 +4,7 @@ Default Template For bbPress
 */
 get_header(); ?>
 
-		<div id="content" class="small-12 large-12 columns" role="main">
+		<div id="content" class="large-12 columns" role="main">
         
         	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 

@@ -656,7 +656,7 @@ function wpforge_entry_meta() {
 		echo '<i class="fa fa-thumb-tack"></i> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';
 		
 	if ( has_post_format( 'aside' )) {
-	  echo '<i class="fa fa-lightbulb-o"></i> <span class="pfont">' . __( 'Aside', 'wpforge' ) . '</span>';
+	  echo '<i class="fa fa-lightbulb-o"></i> <span class="pfont">' . __( 'Aside', 'wpforge' ) . '</span></a>';
 	}
 	
 	if ( has_post_format( 'audio' )) {
