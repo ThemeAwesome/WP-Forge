@@ -1,7 +1,11 @@
 <?php
 /*
-Default Template For bbPress
-*/
+ * Default Template for bbPress
+ *
+ * @package WordPress
+ * @subpackage WP_Forge
+ * @since WP-Forge 5.0.3
+ */
 get_header(); ?>
 
 		<div id="content" class="large-12 columns" role="main">

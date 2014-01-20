@@ -22,24 +22,28 @@
 
 	<div id="wrapper"> 
           
-            <header id="header" class="row" role="banner"> 
-            	<div class="site-header large-12 columns">
-                <?php if( get_theme_mod( 'wpforge_logo' ) ) { ?>
-                    <div class="header-logo">
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                            <img src="<?php echo get_theme_mod('wpforge_logo'); ?>" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
-                        </a>
-                    </div><!-- /.header-logo -->
-                <?php } // end if ?>
-                    <div class="header-info">
-                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                        <h2 class="site-description"><small><?php bloginfo( 'description' ); ?></small></h2>                    
-                    </div><!-- /.header-info -->
-                 </div><!-- .site-header -->
-            </header><!-- #header -->
+        <header id="header" class="row" role="banner"> 
+            <div class="site-header large-12 columns">
+            <?php if( get_theme_mod( 'wpforge_logo' ) ) { ?>
+                <div class="header-logo">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                        <img src="<?php echo get_theme_mod('wpforge_logo'); ?>" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
+                    </a>
+                </div><!-- /.header-logo -->
+            <?php } // end if ?>
+                <div class="header-info">
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <h2 class="site-description"><small><?php bloginfo( 'description' ); ?></small></h2>                    
+                </div><!-- /.header-info -->
+             </div><!-- .site-header -->
+        </header><!-- #header -->
             
-            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
-            	<?php get_template_part( 'content', 'nav' ); ?>
-    		<?php } // end if ?>
+		<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
+            <?php get_template_part( 'content', 'nav' ); ?>
+        <?php } // end if ?>
+        
+        <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
+            <?php get_template_part( 'content', 'nav' ); ?>
+        <?php } // end if ?>            
     
         <section class="container row" role="document">

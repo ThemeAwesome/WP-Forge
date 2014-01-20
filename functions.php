@@ -19,7 +19,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 
 /**
@@ -61,7 +61,7 @@ if ( ! isset( $content_width ) )
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since WP-Forge 5.0.2
+ * @since WP-Forge 5.0.3
  */
 function wpforge_setup() {
 	/*
@@ -114,13 +114,13 @@ require( get_template_directory() . '/inc/customizer/customizer.php' );
 /**
  * Enqueues scripts and styles for front-end.
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_scripts_styles() {
 	global $wp_styles;
 	
 	// modernizr (without media query polyfill)
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js', array(), '2.6.2', false );	
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '2.7.1', false );	
 
 	// Enque threaded comments script in footer
 	function my_enqueue_comments_reply() {
@@ -147,7 +147,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_scripts_styles' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_fonts_url() {
 	$fonts_url = '';
@@ -182,7 +182,7 @@ function wpforge_fonts_url() {
  * Also used in the Appearance > Header admin panel:
  * @see wpforge_custom_header_setup()
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  *
  */
 function wpforge_fonts() {
@@ -199,7 +199,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_fonts' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -227,7 +227,7 @@ add_filter( 'wp_title', 'wpforge_wp_title', 10, 2 );
  * A fallback when no navigation is selected by default, otherwise it throws some nasty errors in your face.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.0 
+ * @since WP-Forge 5.0.3 
  */
 function wpforge_menu_fallback() {
 	echo '<div class="alert-box secondary"><p>';
@@ -256,7 +256,7 @@ add_filter( 'nav_menu_css_class', 'wpforge_active_nav_class', 10, 2 );
  * Use the active class of ZURB Foundation on wp_list_pages output.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.0 
+ * @since WP-Forge 5.0.3 
  */
 function wpforge_active_list_pages_class( $input ) {
 
@@ -275,7 +275,7 @@ add_filter( 'wp_list_pages', 'wpforge_active_list_pages_class', 10, 2 );
  * Courtesy of Kriesi.at. http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.0 
+ * @since WP-Forge 5.0.3 
  */
 class wpforge_walker extends Walker_Nav_Menu {
 
@@ -390,7 +390,7 @@ class wpforge_walker extends Walker_Nav_Menu {
 /**
  * Registers our main, front page and footer widget areas.
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_widgets_init() {
 	register_sidebar( array(
@@ -560,7 +560,7 @@ if ( ! function_exists( 'wpforge_content_nav' ) ) :
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_content_nav( $html_id ) {
 	global $wp_query;
@@ -653,43 +653,7 @@ if ( ! function_exists( 'wpforge_entry_meta' ) ) :
 
 function wpforge_entry_meta() {
 	if ( is_sticky() && is_home() && ! is_paged() )
-		echo '<i class="fa fa-thumb-tack"></i> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';
-		
-	if ( has_post_format( 'aside' )) {
-	  echo '<i class="fa fa-lightbulb-o"></i> <span class="pfont">' . __( 'Aside', 'wpforge' ) . '</span></a>';
-	}
-	
-	if ( has_post_format( 'audio' )) {
-	  echo '<i class="fa fa-volume-up"></i> <span class="pfont">' . __( 'Audio', 'wpforge' ) . '</span>';
-	}	
-	
-	if ( has_post_format( 'chat' )) {
-	  echo '<i class="fa fa-comments"></i> <span class="pfont">' . __( 'Chat', 'wpforge' ) . '</span>';
-	}	
-	
-	if ( has_post_format( 'gallery' )) {
-	  echo '<i class="fa fa-camera"></i> <span class="pfont">' . __( 'Gallery', 'wpforge' ) . '</span>';
-	}
-	
-	if ( has_post_format( 'image' )) {
-	  echo '<i class="fa fa-picture-o"></i> <span class="pfont">' . __( 'Image', 'wpforge' ) . '</span>';
-	}	
-	
-	if ( has_post_format( 'link' )) {
-	  echo '<i class="fa fa-link"></i> <span class="pfont">' . __( 'Link', 'wpforge' ) . '</span>';
-	}	
-	
-	if ( has_post_format( 'quote' )) {
-	  echo '<i class="fa fa-quote-left"></i> <span class="pfont">' . __( 'Quote', 'wpforge' ) . '</span>';
-	}	
-	
-	if ( has_post_format( 'status' )) {
-	  echo '<i class="fa fa-bullhorn"></i> <span class="pfont">' . __( 'Status', 'wpforge' ) . '</span>';
-	}	
-	
-	if ( has_post_format( 'video' )) {
-	  echo '<i class="fa fa-video-camera"></i> <span class="pfont">' . __( 'Video', 'wpforge' ) . '</span>';
-	}				
+		echo '<i class="fa fa-thumb-tack"></i> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';				
 
 	if ( ! has_post_format( '' ) && 'post' == get_post_type() )
 		wpforge_entry_date();
@@ -756,7 +720,7 @@ endif;
  * @param array Existing class values.
  * @return array Filtered class values.
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_body_class( $classes ) {
 	$background_color = get_background_color();
@@ -792,7 +756,7 @@ add_filter( 'body_class', 'wpforge_body_class' );
  * Adjusts content_width value for full-width and single image attachment
  * templates, and when there are no active widgets in the sidebar.
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_content_width() {
 	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -837,7 +801,7 @@ function remove_thumbnail_dimensions( $html ) {
 /**
  * Load Gravity Forms jQuery in the footer
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 add_filter("gform_init_scripts_footer", "init_scripts");
 function init_scripts() {
@@ -847,20 +811,20 @@ return true;
 /**
  * Remove wp version param from any enqueued scripts
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
-function wpforge_remove_wp_ver_css_js( $src ) {
-    if ( strpos( $src, 'ver=' ) )
-        $src = remove_query_arg( 'ver', $src );
-    return $src;
+
+function _remove_script_version( $src ){
+    $parts = explode( '?ver', $src );
+        return $parts[0];
 }
-add_filter( 'style_loader_src', 'wpforge_remove_wp_ver_css_js', 9999 );
-add_filter( 'script_loader_src', 'wpforge_remove_wp_ver_css_js', 9999 );
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 
 /**
  * Remove .sticky from the post_class array (Thanks to required+ foundation)
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_filter_post_class( $classes ) {
     if ( ( $key = array_search( 'sticky', $classes ) ) !== false ) {
@@ -875,7 +839,7 @@ add_filter( 'post_class', 'wpforge_filter_post_class', 20 );
  * Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
  * @see https://gist.github.com/Narga/2887406
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_remove_recent_comments_style() {  
         global $wp_widget_factory;  
@@ -886,7 +850,7 @@ add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
 /**
  * Changes the URL of the admin login from WordPress to the sites URL
  *
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function change_wp_login_url() {
 	return esc_url( home_url() );
@@ -901,7 +865,7 @@ add_filter('login_headertitle', 'change_wp_login_title');
  * Custom admin footer. Displays in the admin section of WordPress
  * You can change this to reflect anything you want.
  * 
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 function wpforge_custom_admin_footer() {
 	$mysite = "http://themeawesome.com"; /* change this to your site name */

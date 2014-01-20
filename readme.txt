@@ -1,6 +1,6 @@
 WP-Forge
 =======================================
-Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.2), the most advanced responsive front-end framework.
+Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.3), the most advanced responsive front-end framework.
 
 Demo
 =======================================
@@ -20,13 +20,15 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 1. Click on the Navigation section
 2. Select the menu you want to use in the Footer.
 3. Select the menu you want to use in Main menu area
-4. Select the position of the main menu. You can have it display within the theme or you can have it display above of the theme.
-5. If you select to display the menu above the theme, you can choose to have the menu scroll with the page or give it a fixed position so it always stays at the top of the browser window.
-6. You can select to display the site name for the home link or if you prefer you can change the text to whatever you wish.
+4. Select the position of the main menu, Normal Position, Top of Browser and Contain-ToGrid Sticky.
+	1. Normal Position - Navigation displays just below the header. This is default.
+	2. Top of Browser - Navigation will appear outside of the theme at the top of the browser. Can set a fixed position or have navigation scroll with the theme.
+	3. Contain-To-Grid Sticky - Navigation will remain in defaukt position until the user scrolls. Navigation will then take on a fixed position and move to the top of the browser.
+5. You can select to display the site name for the home link in the navigation or if you prefer you can change the text to whatever you wish.
 
 = Posts Section
 1. Select to display the full version of posts or an excerpt of posts
-2. Select whether or not to display post thumbnails.
+2. Select whether or not to display post thumbnails. Default is set to NO. Change to Yes to display post thumbnails.
 
 = Footer Section
 1. Allows you to change the Copyright text in the footer. 

@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template for displaying the search form.
+ *
+ * @package WordPress
+ * @subpackage WP_Forge
+ * @since WP-Forge 5.0.3
+ */
+?>
+
 <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
 	<div class="row collapse">
 		<div class="large-9 columns">

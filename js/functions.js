@@ -3,9 +3,6 @@ jQuery(document).foundation()
 
 	// Joyride: Add java script to footer so all Foundation scripts will work
 	.foundation('joyride', 'start');
-	
-	// Reaveal: Move content of the reveal-modal class to just above the closing body tag
-	jQuery( ".reveal-modal" ).appendTo( 'body' );
 
 	// Add button class to all submit buttons
 	jQuery('input[type="submit"]').addClass('tiny radius button');
@@ -33,7 +30,7 @@ jQuery(document).foundation()
 		jQuery('html, body').animate({
 		scrollTop: jQuery('body').offset().top
 		}, 1000);				   
-	});	
+	});		
 	
 // end loading all functions   
    

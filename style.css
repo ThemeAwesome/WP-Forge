@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: http://wpforge.themeawesome.com/
 Author: Thomas E. Vasquez
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.2), the most advanced responsive front-end framework.
-Version: v5.0.2
+Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.3), the most advanced responsive front-end framework.
+Version: v5.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -12,14 +12,11 @@ Text Domain: wpforge
 
 This theme, like WordPress, is licensed under the GPL. I hope you utilize WP-Forge to learn something new, create something awesome, have fun and, more importantly, I hope you share what you have learned with others.
 
-Use this style sheet to modify anything related to WordPress - To modify anything regarding Foundation, you need to modify foundation.css: /css/foundation.css
+Use style.css to modify anything related to WordPress - To modify anything regarding Foundation, you need to modify foundation.css: /css/foundation.css
 */
 
 /* =Reset
 -------------------------------------------------------------- */
-del {
-	color: #333;
-}
 ins {
 	background: #fff9c0!important;
 	text-decoration: none;
@@ -274,7 +271,7 @@ body {
 #wrapper {
 	width:100%;
 	max-width: 62.5rem;
-	margin:3rem auto;
+	margin:0 auto;
 	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 	background:#fff;
 	padding:1.5625rem 0.625rem 0;
@@ -428,7 +425,6 @@ article .featured-post {
 .entry-content ul.pricing-table {
 	margin-left:0!important;
 }
-.entry-content ol.orbit-bullets {}
 .entry-content .f-dropdown {
 	margin-bottom:0!important;
 	margin-left:0!important;
@@ -444,19 +440,10 @@ article .featured-post {
 .comment-content blockquote p:last-child {
 	margin-bottom: 0;
 }
-.entry-content code,
-.comment-content code {
-	font-family: Consolas, Monaco, Lucida Console, monospace;
-	font-size: 12px;
-	line-height: 2;
-	padding:2px 4px;
-}
 .entry-content pre,
 .comment-content pre {
 	background: #f5f5f5;
 	color: #666;
-	font-family: monospace;
-	font-size: 14px;
 	margin: 20px 0;
 	overflow: auto;
 	padding: 20px;
@@ -466,15 +453,6 @@ article .featured-post {
 .entry-content pre code,
 .comment-content pre code {
 	display: block;
-}
-.entry-content abbr,
-.comment-content abbr,
-.entry-content dfn,
-.comment-content dfn,
-.entry-content acronym,
-.comment-content acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
 }
 .entry-content address,
 .comment-content address {
@@ -649,6 +627,7 @@ article.format-aside p:last-child {
 article.format-image footer h1 {
 	font-size: 0.875rem;
 	line-height: 1.846153846;
+
 	font-weight: normal;
 }
 article.format-image footer h2 {
@@ -1092,8 +1071,14 @@ html .mceContentBody ul, html .mceContentBody ol {
 	color: white;
 	display: block;
 	padding: 0 15px; }
-	
+.top-bar .toggle-topbar a {
+	font-weight:normal!important;
+}
 /* Orbit */
+.orbit-bullets li {
+	cursor:pointer!important;
+	display:inline-block!important;
+}
 .orbit-container {
 	margin-bottom:1.714em!important;
 }
@@ -1104,6 +1089,11 @@ html .mceContentBody ul, html .mceContentBody ol {
 }
 .entry-content dl.sub-nav {
 	margin:0!important;
+}
+
+/* bbPress */
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content {
+	background:#fafafa;
 }
 
 /* Back to Top */
@@ -1139,7 +1129,8 @@ html .mceContentBody ul, html .mceContentBody ol {
 		padding-top:0.9375rem;
 	}
 	footer > .site-info {
-		text-align:center;
+		text-align:center!important;
+		font-size:0.75rem!important;
 	}
 	#backtotop {
 		background:#008cba;

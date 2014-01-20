@@ -18,7 +18,7 @@
 * @author Devin Price (@devinsays)
 * @see http://wptheming.com/2012/06/add-options-to-theme-customizer-default-sections/
 *
-* @since WP-Forge 5.0.2
+* @since WP-Forge 5.0.3
 */
 
 function wpforge_customizer( $wp_customize ) { // Begin WP-Forge Theme Customizer
@@ -107,8 +107,9 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'label' => __('Main Menu Position', 'wpforge'),
 		'section' => 'nav',
 		'choices' => array(
-			'normal' => 'Normal',
-			'top'    => 'Top',
+			'normal' => 'Normal Position',
+			'top'    => 'Top of Browser',
+			'sticky'   => 'Contain-To-Grid Sticky',
 		),
 	));
 	// Main Menu Display Type
@@ -120,7 +121,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('wpforge_nav_display',array(
 		'type' => 'select',
-		'label' => __('If Top, Scroll or Fixed Menu?', 'wpforge'),
+		'label' => __('If Top of Browser, scroll or fixed?', 'wpforge'),
 		'section' => 'nav',
 		'choices' => array(
 			'scroll' => 'Scroll',
@@ -187,7 +188,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		),
 	));
 	$wp_customize->add_setting('wpforge_thumb_display',array(
-		'default' => 'yes',
+		'default' => 'no',
 		'type' => 'theme_mod',
 		'capability' => 'manage_options',		
 		'sanitize_callback' => 'wpforge_sanitize_thumb_display',
@@ -198,8 +199,8 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'label' => __('Display Post Thumbnails?', 'wpforge'),
 		'section' => 'wpforge_posts',
 		'choices' => array(
-			'yes' => 'Yes',
 			'no' => 'No',
+			'yes' => 'Yes',
 		),
 	));	
 				
@@ -384,7 +385,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
  * Sanitize - Add a sanitation functions section for text inputs, check boxes, radio buttons and select lists
  * I like to keep them all in one area for organization.
  * 
- * @since WP-Forge 5.0.2
+ * @since WP-Forge 5.0.3
  */
  
  // Header Sanitation
@@ -477,7 +478,7 @@ function wpforge_sanitize_background_attachment( $input ) {
  * Add postMessage support for some sections of our Theme Customizer.
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  * 
- * @since WP-Forge 5.0.2
+ * @since WP-Forge 5.0.3
  */
 $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -501,7 +502,7 @@ add_action( 'customize_register', 'wpforge_customizer' ); // End WP-Forge Theme 
  * @author Anthony Wilhelm (@awshout)
  * @see https://github.com/awtheme/reactor
  *
- * @since WP-Forge 5.0.2
+ * @since WP-Forge 5.0.3
  */
 function wpforge_customizer_css() {
 	do_action('wpforge_customizer_css');
@@ -549,7 +550,7 @@ add_action('wp_head', 'wpforge_customizer_css');
 /**
  * Registers WP-Forge Theme Customizer Preview with WordPress.
  *
- * @since WP-Forge 5.0.2
+ * @since WP-Forge 5.0.3
  */
 function wpforge_customize_preview_js() {
 	wp_enqueue_script('wpforge-customizer', get_template_directory_uri() . '/inc/customizer/js/theme-customizer.js', array('jquery', 'customize-preview' ),'1.0.0', true);

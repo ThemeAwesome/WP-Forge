@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.0
+ * @since WP-Forge 5.0.3
  */
 ?>
 
@@ -16,10 +16,10 @@
 			<h2>
 				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpforge' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h2>
-            <?php if( get_theme_mod( 'wpforge_thumb_display' ) == 'yes') { ?>
-            	<?php the_post_thumbnail(); ?>
-            <?php } // end if ?>
 			<?php endif; // is_single() ?>
+			<?php if( get_theme_mod( 'wpforge_thumb_display' ) == 'yes') { ?>
+            	<?php the_post_thumbnail(); ?>
+            <?php } // end if ?>            
 			<?php if ( comments_open() ) : ?>
 				<div class="comments-link">
 					<i class="fa fa-comment"></i> <?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'wpforge' ) . '</span>', __( '1 Reply', 'wpforge' ), __( '% Replies', 'wpforge' ) ); ?>
