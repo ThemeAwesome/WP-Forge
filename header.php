@@ -9,8 +9,6 @@
 <title><?php wp_title('&#124;', true, 'right'); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link rel="icon" href="<?php echo esc_url( home_url( '/' ) ); ?>favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="<?php echo esc_url( home_url( '/' ) ); ?>favicon.ico" type="image/x-icon" />
 <?php wp_head(); ?>
 </head>
 

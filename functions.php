@@ -81,6 +81,9 @@ function wpforge_setup() {
 	
 	// Makes our theme support WooCommerce
 	add_theme_support( 'woocommerce' );	
+	
+	//Switches default core markup for search form, comment form, and comments to output valid HTML5.
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );	
 
 	// This theme supports all available post formats by default. See http://codex.wordpress.org/Post_Formats
 	add_theme_support( 'post-formats', array(
@@ -91,13 +94,7 @@ function wpforge_setup() {
 	register_nav_menus(array(
 		'primary' => __( 'Main Navigation', 'wpforge' ), 
 		'secondary' => __( 'Footer Navigation', 'wpforge' ) 
-	));
-	
-	// Add support for Infinite Scroll feature of Jetpack plugin - Find out more http://jetpack.me/support/infinite-scroll/
-	add_theme_support( 'infinite-scroll', array(
-		'container'  => 'content',
-		'footer'     => 'page',
-	) );	
+	));	
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
@@ -799,16 +796,6 @@ function remove_thumbnail_dimensions( $html ) {
 }
 
 /**
- * Load Gravity Forms jQuery in the footer
- *
- * @since WP-Forge 5.0.3
- */
-add_filter("gform_init_scripts_footer", "init_scripts");
-function init_scripts() {
-return true;
-} 
-
-/**
  * Remove wp version param from any enqueued scripts
  *
  * @since WP-Forge 5.0.3
@@ -848,30 +835,13 @@ function wpforge_remove_recent_comments_style() {
 add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
 
 /**
- * Changes the URL of the admin login from WordPress to the sites URL
- *
- * @since WP-Forge 5.0.3
- */
-function change_wp_login_url() {
-	return esc_url( home_url() );
-}
-function change_wp_login_title() {
-	return get_option('blogname');
-}
-add_filter('login_headerurl', 'change_wp_login_url');
-add_filter('login_headertitle', 'change_wp_login_title');
-
-/**
- * Custom admin footer. Displays in the admin section of WordPress
- * You can change this to reflect anything you want.
+ * Add favicon to header
  * 
  * @since WP-Forge 5.0.3
  */
-function wpforge_custom_admin_footer() {
-	$mysite = "http://themeawesome.com"; /* change this to your site name */
-	echo 'Built with WP-Forge, a responsive WordPress theme developed by <a href="' . $mysite . '" target="_blank">ThemeAwesome.com</a>.';
+function wpforge_favicon() {
+echo '<link rel="shortcut icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">'."\n". '<link rel="icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">';
 }
-
-add_filter('admin_footer_text', 'wpforge_custom_admin_footer');
+add_action('wp_head', 'wpforge_favicon');
 
 ?>

@@ -45,6 +45,9 @@ img {
 .top-bar-section > .alert-box.secondary p {
 	margin:0.5em 0!important;
 }
+textarea {
+	min-height:250px!important;
+}
 .sticky {}
 
 /* =Repeatable patterns
@@ -952,6 +955,7 @@ html .mceContentBody {
 	max-width: 920px!important;
 	margin:15px 0 0 15px!important;
 	padding:0!important;
+	background:#fff!important;
 }
 cite {
 	border-bottom:0!important;
