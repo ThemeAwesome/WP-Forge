@@ -1,3 +1,22 @@
+<!-- Changelog as of 01/27/2014 -->
+
+Functions.php
+1.) Changed the priority of enque scripts as well as the favicon function to "0". This makes the sripts and styles for WP-Forge load first. (lines 142, 190 and 845)
+
+customizer.php
+1.) Removed an extra occurance of the "Change text for Home link?" in the navigation section
+2.) Added Off-Canvas section under navigation section, which will aloow user to select if they want to use off-canvas menu for mobile view
+
+style.css
+1.) added new style settings for off-canvas (line 1065)
+2.) removed margin from top-bar in style.css (line 315)
+
+Files
+1.) created content-off_canvas.php and added this to header.php. Also added horizontal line just under the top-bar section 
+2.) added closing divs and other coding for off-canvas to footer.php (starting at line 47)
+3.) added statements to content-nav.php in support of off-canvas
+4.) wp-forge.po file has been updated
+
 <!-- Changelog as of 01/22/2014 -->
 
 Functions.php

@@ -7,9 +7,14 @@
  * @since WP-Forge 5.0.3
  */
 ?>
+    
 <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
 
+	<?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
+    <div class="row hide-for-small-only">
+    <?php } else { ?>
     <div class="row">
+    <?php } // end if ?>
         <div class="navcontainer large-12 columns">
             <nav class="top-bar" data-topbar>
                 <ul class="title-area">
@@ -48,7 +53,12 @@
 <?php } // end if ?>
 
 <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?>
+	
+    <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
+    <div class="<?php echo get_theme_mod( 'wpforge_nav_display' ); ?> hide-for-small-only">
+    <?php } else { ?>
     <div class="<?php echo get_theme_mod( 'wpforge_nav_display' ); ?>">
+    <?php } // end if ?>
         <nav class="top-bar" data-topbar>
             <ul class="title-area">
             	<?php if( get_theme_mod( 'wpforge_nav_title' ) == 'yes') { ?>
@@ -86,7 +96,11 @@
 
 <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
 
+	<?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
+    <div class="row hide-for-small-only">
+    <?php } else { ?>
     <div class="row">
+    <?php } // end if ?>
         <div class="navcontainer large-12 columns">
         	<div class="contain-to-grid sticky">
                 <nav class="top-bar" data-topbar>
@@ -124,4 +138,4 @@
         </div><!-- .columns -->    
     </div><!-- .row -->
 
-<?php } // end if ?>
+<?php } // end if ?>  

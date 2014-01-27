@@ -44,6 +44,16 @@
     
     </div><!-- #wrapper -->
     
+<?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>    
+    
+	  <a class="exit-off-canvas"></a>
+      
+	</div><!-- .inner-wrap -->
+    
+</div><!-- #off-canvas-wrap -->
+
+<?php } // end if ?>
+    
     <div id="backtotop">Top</div><!-- #backtotop -->
 
 <?php wp_footer(); ?>

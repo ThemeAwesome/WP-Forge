@@ -93,7 +93,7 @@ function wpforge_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(array(
 		'primary' => __( 'Main Navigation', 'wpforge' ), 
-		'secondary' => __( 'Footer Navigation', 'wpforge' ) 
+		'secondary' => __( 'Footer Navigation', 'wpforge' ),
 	));	
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
@@ -107,39 +107,6 @@ add_action( 'after_setup_theme', 'wpforge_setup' );
 
 // Our custom Theme Optimizer.
 require( get_template_directory() . '/inc/customizer/customizer.php' );
-
-/**
- * Enqueues scripts and styles for front-end.
- *
- * @since WP-Forge 5.0.3
- */
-function wpforge_scripts_styles() {
-	global $wp_styles;
-	
-	// modernizr (without media query polyfill)
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '2.7.1', false );	
-
-	// Enque threaded comments script in footer
-	function my_enqueue_comments_reply() {
-		if( get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-		}
-	}
-	add_action( 'comment_form_before', 'my_enqueue_comments_reply' );
-
-    // Register Foundation scripts file in the footer
-    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '', true );
-	
-    // Register JavaScript file with functionality specific to WP-Forge.
-    wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '', true );
-
-	// Load all of our stylesheets 
-	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
-	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
-	wp_enqueue_style( 'wpforge', get_stylesheet_uri() );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.css' );
-}
-add_action( 'wp_enqueue_scripts', 'wpforge_scripts_styles' );
 
 /**
  * Returns the Google font stylesheet URL, if available.
@@ -187,7 +154,40 @@ function wpforge_fonts() {
 	if ( ! empty( $fonts_url ) )
 		wp_enqueue_style( 'wpforge-fonts', esc_url_raw( $fonts_url ), array(), null );
 }
-add_action( 'wp_enqueue_scripts', 'wpforge_fonts' );
+add_action( 'wp_enqueue_scripts', 'wpforge_fonts', 0 );
+
+/**
+ * Enqueues scripts and styles for front-end.
+ *
+ * @since WP-Forge 5.0.3
+ */
+function wpforge_scripts_styles() {
+	global $wp_styles;
+	
+	// modernizr (without media query polyfill)
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '2.7.1', false );	
+
+	// Enque threaded comments script in footer
+	function my_enqueue_comments_reply() {
+		if( get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+		}
+	}
+	add_action( 'comment_form_before', 'my_enqueue_comments_reply' );
+
+    // Register Foundation scripts file in the footer
+    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '', true );
+	
+    // Register JavaScript file with functionality specific to WP-Forge.
+    wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '', true );
+
+	// Load all of our stylesheets
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.css' );	
+	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
+	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
+	wp_enqueue_style( 'wpforge', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'wpforge_scripts_styles', 0 );
 
 /**
  * Creates a nicely formatted and more specific title element text for output
@@ -842,6 +842,6 @@ add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
 function wpforge_favicon() {
 echo '<link rel="shortcut icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">'."\n". '<link rel="icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">';
 }
-add_action('wp_head', 'wpforge_favicon');
+add_action('wp_head', 'wpforge_favicon', 0);
 
 ?>

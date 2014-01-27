@@ -312,11 +312,6 @@ img.header-image {/* Remove fancy borders */
 	box-shadow:none!important;
 }
 
-/* Navigation */
-.navcontainer {
-	margin-bottom:1.875em;
-}
-
 /* Sidebar */
 .widget-area .widget {
 	-webkit-hyphens: auto;
@@ -1067,6 +1062,22 @@ html .mceContentBody ul, html .mceContentBody ol {
 
 /* =Misc
 ----------------------------------------------- */
+/* Off-Canvas */
+ul.off-canvas-list li, 
+ul.off-canvas-list li li, 
+ul.off-canvas-list li li li, 
+ul.off-canvas-list li li li li,
+ul.off-canvas-list li li li li li,
+ul.off-canvas-list li li li li li li {
+	list-style-type:none!important;
+}
+section.tab-bar-section.go-left{
+	text-align:left!important;
+}
+section.tab-bar-section.go-right {
+	text-align:right!important;
+}
+
 /* Top-Bar */
 .top-bar .name a {
 	line-height: 45px;
@@ -1107,7 +1118,7 @@ html .mceContentBody ul, html .mceContentBody ol {
 	position: fixed;
 	right: 1rem;
 	bottom:1rem;
-	z-index: 999;
+	z-index: 99999;
 	cursor: pointer;
 	display: none;
 	color:#f9f9f9;

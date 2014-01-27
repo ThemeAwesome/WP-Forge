@@ -14,9 +14,11 @@
 
 <body <?php body_class(); ?>>
 
+	<?php get_template_part( 'content', 'off_canvas' ); ?>
+
 	<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?>
     	<?php get_template_part( 'content', 'nav' ); ?>
-    <?php } // end if ?>
+    <?php } // end if ?>   
 
 	<div id="wrapper"> 
           
@@ -42,6 +44,8 @@
         
         <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
             <?php get_template_part( 'content', 'nav' ); ?>
-        <?php } // end if ?>            
+        <?php } // end if ?> 
+        
+        <hr />         
     
         <section class="container row" role="document">

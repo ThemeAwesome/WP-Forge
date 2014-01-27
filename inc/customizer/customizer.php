@@ -31,7 +31,7 @@ $wp_customize->remove_section('background_image');
 
 // Change some of the defaults
 $wp_customize->get_section('nav')->priority = 20; // Changed priority so it shows after the Header section
-$wp_customize->get_section('static_front_page')->priority = 70; // Changed priority so it shows at the end of the Theme Customizer
+$wp_customize->get_section('static_front_page')->priority = 80; // Changed priority so it shows at the end of the Theme Customizer
 $wp_customize->get_section('static_front_page')->description = __( 'Set up a front page of WP-Forge.', 'wpforge' );
  
 /*
@@ -144,15 +144,6 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 			'yes'  => 'Yes',
 		),
 	));
-	$wp_customize->add_control('wpforge_nav_title',array(
-		'type' => 'select',
-		'label' => __('Change text for Home Link?', 'wpforge'),
-		'section' => 'nav',
-		'choices' => array(
-			'no' => 'No',
-			'yes'  => 'Yes',
-		),
-	));
 	// Main Menu Main Link Text
 	$wp_customize->add_setting('wpforge_nav_text',array(
 		'default' => '',
@@ -164,12 +155,51 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'type' => 'text',
 		'sanitize_callback' => 'wpforge_sanitize_navtxt',
 	));	 						
-	
+
+// Off-Canvas Section
+    $wp_customize->add_section('wpforge_off_canvas', array(
+		'title' => __('Off-Canvas', 'wpforge'),
+		'description' => __('Configure Off-Canvas mobile menu.', 'wpforge'),
+		'priority' => 30,
+	));
+	// Use Off-Canvas for Mobile?
+	$wp_customize->add_setting('wpforge_mobile_display',array(
+		'default' => 'no',
+		'type'    => 'theme_mod',
+		'capability' => 'manage_options',
+		'priority' => 10,	
+	));
+	$wp_customize->add_control('wpforge_mobile_display',array(
+		'type' => 'select',
+		'label' => __('Use Off-Canvas for Mobile?', 'wpforge'),
+		'section' => 'wpforge_off_canvas',
+		'choices' => array(
+			'no'	=> 'No',
+			'yes'	=> 'Yes',
+		),
+	));
+	// Off-Canvas Position	
+	$wp_customize->add_setting('wpforge_mobile_position',array(
+		'default' => 'left',
+		'type'    => 'theme_mod',
+		'capability' => 'manage_options',
+		'priority' => 20,	
+	));
+	$wp_customize->add_control('wpforge_mobile_position',array(
+		'type' => 'select',
+		'label' => __('Display Off-Canvas Left or Right?', 'wpforge'),
+		'section' => 'wpforge_off_canvas',
+		'choices' => array(
+			'left'	=> 'Left',
+			'right'	=> 'Right',
+		),
+	));	
+		
 //The Post Section 
     $wp_customize->add_section('wpforge_posts',array(
 		'title' => __('Posts', 'wpforge'),
 		'description' => __('Modify how posts appear in WP-Forge.', 'wpforge'),
-		'priority' => 30,
+		'priority' => 40,
     ));
 	$wp_customize->add_setting('wpforge_post_display',array(
 		'default' => 'full',
@@ -208,7 +238,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
     $wp_customize->add_section('wpforge_footer',array(
 		'title' => __('Footer','wpforge'),
 		'description' => __('Modify the footer text of WP-Forge.', 'wpforge'),
-		'priority' => 40,
+		'priority' => 50,
     ));
 	$wp_customize->add_setting('wpforge_footer_text',array(
 		'default' => '',
@@ -226,7 +256,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
     $wp_customize->add_section('wpforge_background', array(
 		'title' => __('Background', 'wpforge'),
 		'description' => __('Modify the background of WP-Forge.', 'wpforge'),
-		'priority' => 50,
+		'priority' => 60,
      ));
 	// Background Color	 
 	$wp_customize->add_setting('wpforge_background_color', array(
@@ -322,7 +352,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
     $wp_customize->add_section('wpforge_colors', array(
 		'title' => __('Colors', 'wpforge'),
 		'description' => __('Change some default colors of WP-Forge.', 'wpforge'),
-		'priority' => 60,
+		'priority' => 70,
      )); 	 	 
 	// Title Color	 
 	$wp_customize->add_setting('wpforge_title_color', array(

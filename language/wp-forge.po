@@ -1,10 +1,10 @@
-# Copyright (C) 2013 ThemeAwesome.com
+# Copyright (C) 2014 ThemeAwesome.com
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Forge\n"
-"POT-Creation-Date: 2014-01-11 09:22-0700\n"
-"PO-Revision-Date: 2014-01-11 09:24-0700\n"
+"POT-Creation-Date: 2014-01-27 12:50-0700\n"
+"PO-Revision-Date: 2014-01-27 12:51-0700\n"
 "Last-Translator: Thomas Vasquez <tsquez@gmail.com>\n"
 "Language-Team: Thomas Vasquez <tsquez@gmail.com>\n"
 "Language: en\n"
@@ -48,6 +48,42 @@ msgid "Y"
 msgstr ""
 
 #: archive.php:36
+msgid "Asides"
+msgstr ""
+
+#: archive.php:39
+msgid "Audio"
+msgstr ""
+
+#: archive.php:42
+msgid "Chats"
+msgstr ""
+
+#: archive.php:45
+msgid "Galleries"
+msgstr ""
+
+#: archive.php:48
+msgid "Images"
+msgstr ""
+
+#: archive.php:51
+msgid "Links"
+msgstr ""
+
+#: archive.php:54
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:57
+msgid "Status"
+msgstr ""
+
+#: archive.php:60
+msgid "Videos"
+msgstr ""
+
+#: archive.php:63
 msgid "Archives"
 msgstr ""
 
@@ -56,10 +92,7 @@ msgstr ""
 msgid "Author Archives: %s"
 msgstr ""
 
-#: author.php:52 content-aside.php:28 content-audio.php:43 content-chat.php:36
-#: content-gallery.php:42 content-image.php:25 content-link.php:25
-#: content-quote.php:25 content-status.php:32 content-video.php:42
-#: content.php:49
+#: author.php:52 content-author.php:17 content.php:49
 #, php-format
 msgid "About %s"
 msgstr ""
@@ -93,7 +126,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #: content-aside.php:13 content-audio.php:18 content-gallery.php:17
-#: content-video.php:17 content.php:17 functions.php:735
+#: content-video.php:17 content.php:17 functions.php:696
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
@@ -103,18 +136,11 @@ msgstr ""
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content-aside.php:21 content-audio.php:36 content-chat.php:29
-#: content-gallery.php:35 content-image.php:18 content-link.php:18
-#: content-quote.php:18 content-status.php:25 content-video.php:35
-#: content.php:42 functions.php:633
+#: content-aside.php:22 content-audio.php:37 content-chat.php:30
+#: content-gallery.php:36 content-image.php:19 content-link.php:19
+#: content-quote.php:19 content-status.php:26 content-video.php:36
+#: content.php:42 functions.php:630
 msgid "Edit"
-msgstr ""
-
-#: content-aside.php:32 content-audio.php:47 content-chat.php:40
-#: content-gallery.php:46 content-image.php:29 content-link.php:29
-#: content-quote.php:29 content-status.php:36 content-video.php:46
-#, php-format
-msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: content-audio.php:29 content-gallery.php:28 content-video.php:28
@@ -127,8 +153,9 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: content-nav.php:25 content-nav.php:64
-msgid "Menu"
+#: content-author.php:21
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: content-none.php:13
@@ -186,166 +213,130 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:95
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:96
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:123
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:220
+#: functions.php:217
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:232
 #, php-format
 msgid ""
 "Please assign a menu to the primary menu location under %1$s or %2$s the "
 "design."
 msgstr ""
 
-#: functions.php:236
+#: functions.php:233
 #, php-format
 msgid "<a href=\"%s\">Menus</a>"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:236
 #, php-format
 msgid "<a href=\"%s\">Customize</a>"
 msgstr ""
 
-#: functions.php:397
+#: functions.php:394
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:399
+#: functions.php:396
 msgid "Displays widgets in the blog area as well as pages."
 msgstr ""
 
-#: functions.php:406
+#: functions.php:403
 msgid "First Front Page Widget Area"
 msgstr ""
 
-#: functions.php:408 functions.php:417
+#: functions.php:405 functions.php:414
 msgid ""
 "Appears when using the optional Front Page template with a page set as "
 "Static Front Page"
 msgstr ""
 
-#: functions.php:415
+#: functions.php:412
 msgid "Second Front Page Widget Area"
 msgstr ""
 
-#: functions.php:424
+#: functions.php:421
 msgid "First Footer Widget Area"
 msgstr ""
 
-#: functions.php:426 functions.php:435 functions.php:444
+#: functions.php:423 functions.php:432 functions.php:441
 msgid "An optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:433
+#: functions.php:430
 msgid "Second Footer Widget Area"
 msgstr ""
 
-#: functions.php:442
+#: functions.php:439
 msgid "Third Footer Widget Area"
 msgstr ""
 
-#: functions.php:575
+#: functions.php:572
 msgid "Post navigation"
 msgstr ""
 
-#: functions.php:576
+#: functions.php:573
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: functions.php:577
+#: functions.php:574
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: functions.php:601
+#: functions.php:598
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:601
+#: functions.php:598
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:616
+#: functions.php:613
 msgid "Post Author"
 msgstr ""
 
-#: functions.php:622
+#: functions.php:619
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:628
+#: functions.php:625
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:637
+#: functions.php:634
 msgid "Reply &raquo;"
 msgstr ""
 
-#: functions.php:656
+#: functions.php:653
 msgid "Sticky"
 msgstr ""
 
-#: functions.php:659
-msgid "Aside"
-msgstr ""
-
-#: functions.php:663
-msgid "Audio"
-msgstr ""
-
-#: functions.php:667
-msgid "Chat"
-msgstr ""
-
-#: functions.php:671
-msgid "Gallery"
-msgstr ""
-
-#: functions.php:675
-msgid "Image"
-msgstr ""
-
-#: functions.php:679
-msgid "Link"
-msgstr ""
-
-#: functions.php:683
-msgid "Quote"
-msgstr ""
-
-#: functions.php:687
-msgid "Status"
-msgstr ""
-
-#: functions.php:691
-msgid "Video"
-msgstr ""
-
-#: functions.php:698 functions.php:704
+#: functions.php:659 functions.php:665
 msgid ", "
 msgstr ""
 
-#: functions.php:713
+#: functions.php:674
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: functions.php:731
+#: functions.php:692
 #, php-format
 msgctxt "1: post format name. 2: date"
 msgid "%1$s on %2$s"
@@ -388,7 +379,7 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:4 searchform.php:7
+#: searchform.php:14 searchform.php:17
 msgid "Search"
 msgstr ""
 
@@ -439,130 +430,146 @@ msgstr ""
 msgid "Main Menu Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:123
-msgid "If Top, Scroll or Fixed Menu?"
+#: inc/customizer/customizer.php:124
+msgid "If Top of Browser, scroll or fixed?"
 msgstr ""
 
-#: inc/customizer/customizer.php:139 inc/customizer/customizer.php:148
+#: inc/customizer/customizer.php:140
 msgid "Change text for Home Link?"
 msgstr ""
 
-#: inc/customizer/customizer.php:161
+#: inc/customizer/customizer.php:153
 msgid "If Yes, Add New Anchor Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:169
+#: inc/customizer/customizer.php:161
+msgid "Off-Canvas"
+msgstr ""
+
+#: inc/customizer/customizer.php:162
+msgid "Configure Off-Canvas mobile menu."
+msgstr ""
+
+#: inc/customizer/customizer.php:174
+msgid "Use Off-Canvas for Mobile?"
+msgstr ""
+
+#: inc/customizer/customizer.php:190
+msgid "Display Off-Canvas Left or Right?"
+msgstr ""
+
+#: inc/customizer/customizer.php:200
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer/customizer.php:170
+#: inc/customizer/customizer.php:201
 msgid "Modify how posts appear in WP-Forge."
 msgstr ""
 
-#: inc/customizer/customizer.php:182
+#: inc/customizer/customizer.php:213
 msgid "Display Full Post or Excerpt?"
 msgstr ""
 
-#: inc/customizer/customizer.php:198
+#: inc/customizer/customizer.php:229
 msgid "Display Post Thumbnails?"
 msgstr ""
 
-#: inc/customizer/customizer.php:208
+#: inc/customizer/customizer.php:239
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/customizer.php:209
+#: inc/customizer/customizer.php:240
 msgid "Modify the footer text of WP-Forge."
 msgstr ""
 
-#: inc/customizer/customizer.php:218
+#: inc/customizer/customizer.php:249
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:226
+#: inc/customizer/customizer.php:257
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:227
+#: inc/customizer/customizer.php:258
 msgid "Modify the background of WP-Forge."
 msgstr ""
 
-#: inc/customizer/customizer.php:241
+#: inc/customizer/customizer.php:272
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:255
+#: inc/customizer/customizer.php:286
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:270
+#: inc/customizer/customizer.php:301
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/customizer/customizer.php:274
+#: inc/customizer/customizer.php:305
 msgid "No Repeat"
 msgstr ""
 
-#: inc/customizer/customizer.php:275
+#: inc/customizer/customizer.php:306
 msgid "Tile"
 msgstr ""
 
-#: inc/customizer/customizer.php:276
+#: inc/customizer/customizer.php:307
 msgid "Tile Horizontally"
 msgstr ""
 
-#: inc/customizer/customizer.php:277
+#: inc/customizer/customizer.php:308
 msgid "Tile Vertically"
 msgstr ""
 
-#: inc/customizer/customizer.php:291
+#: inc/customizer/customizer.php:322
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:295
+#: inc/customizer/customizer.php:326
 msgid "Left"
 msgstr ""
 
-#: inc/customizer/customizer.php:296
+#: inc/customizer/customizer.php:327
 msgid "Center"
 msgstr ""
 
-#: inc/customizer/customizer.php:297
+#: inc/customizer/customizer.php:328
 msgid "Right"
 msgstr ""
 
-#: inc/customizer/customizer.php:311
+#: inc/customizer/customizer.php:342
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer/customizer.php:315
+#: inc/customizer/customizer.php:346
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer/customizer.php:316
+#: inc/customizer/customizer.php:347
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer/customizer.php:322
+#: inc/customizer/customizer.php:353
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:323
+#: inc/customizer/customizer.php:354
 msgid "Change some default colors of WP-Forge."
 msgstr ""
 
-#: inc/customizer/customizer.php:336
+#: inc/customizer/customizer.php:367
 msgid "Title Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:350
+#: inc/customizer/customizer.php:381
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:364
+#: inc/customizer/customizer.php:395
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:378
+#: inc/customizer/customizer.php:409
 msgid "Hover Color"
 msgstr ""

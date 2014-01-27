@@ -16,6 +16,9 @@ WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve)
 ###Theme Customizer###
 When 3.4 was released, WordPress introduced the [Theme Customizer] (https://codex.wordpress.org/Theme_Customization_API). The customizer allows you modify certain areas of a theme and preview those changes in real time. WP-Forge now comes with its own custom Theme Customizer. For more information regarding the Theme Customizer please read the information under Configuration in the readme.txt file.
 
+###Off-Canvas Support###
+WP-Forge now offers support for Off-Canvas menu. For more information regarding Off-Canvas please read the information under Configuration in the readme.txt file.
+
 ###jQuery###
 WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in the header. This practice falls within the [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development). You can do a search and find the information you need to use Google's version and load it in the footer if you wish.
 

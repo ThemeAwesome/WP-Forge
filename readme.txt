@@ -26,6 +26,10 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 	3. Contain-To-Grid Sticky - Navigation will remain in defaukt position until the user scrolls. Navigation will then take on a fixed position and move to the top of the browser.
 5. You can select to display the site name for the home link in the navigation or if you prefer you can change the text to whatever you wish.
 
+= Off-Canvas
+1. Display Off-Canvas for Mobile - Choose Yes to use Off-Canvas when your site is viewd on mobile devices. The regular menu will not display. The default is set to NO. This means the regular navigation will display according to the options you have configured in the Navigation section.
+2. Display Off-Canvas Left or Right - Default is Left. This will display the Off-Canvas menu to the left. If set to Right, Off-Canvas will display to the right.
+
 = Posts Section
 1. Select to display the full version of posts or an excerpt of posts
 2. Select whether or not to display post thumbnails. Default is set to NO. Change to Yes to display post thumbnails.
