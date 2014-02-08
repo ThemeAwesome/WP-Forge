@@ -1,3 +1,10 @@
+<!-- Changelog as of 02/05/2014 -->
+
+1.) Updated WP-Forge to the latest version of Foundation, currently v5.1.0, released on 02/05/2014.
+2.) Added new menu location called social to functions.php (line 97)
+3.) Added styles for the new social menu to style sheet. (starting at line 1136)
+
+
 <!-- Changelog as of 01/27/2014 -->
 
 Functions.php

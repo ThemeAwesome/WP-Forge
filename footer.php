@@ -7,7 +7,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.0.3
+ * @since WP-Forge 5.1
  */
 ?>
 	</section><!-- #main .wrapper -->
@@ -39,6 +39,12 @@
             <?php endif; ?>
             
 		</div><!-- .site-info -->
+        
+        <div class="large-12 columns">
+        
+        	<?php get_template_part( 'menu', 'social' ); ?>
+        
+        </div>
 
 	</footer><!-- .row -->
     

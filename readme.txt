@@ -1,6 +1,6 @@
-WP-Forge
+WP-Forge v5.1.0
 =======================================
-Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.3), the most advanced responsive front-end framework.
+Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation, the most advanced responsive front-end framework.
 
 Demo
 =======================================

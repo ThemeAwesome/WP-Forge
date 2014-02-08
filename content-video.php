@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.0.3
+ * @since WP-Forge 5.1
  */
 ?>
 
@@ -31,7 +31,7 @@
 		<?php endif; ?>
 
 		<footer class="entry-meta">
-        	<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>"><i class="fa fa-video-camera"></i> <?php echo get_post_format_string( 'video' ); ?></a>
+        	<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" title="View all Video Posts"><i class="fa fa-video-camera"></i> <?php echo get_post_format_string( 'video' ); ?></a>
 			<?php wpforge_entry_meta(); ?>
 			<?php edit_post_link( __( 'Edit', 'wpforge' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?>
 			<?php get_template_part( 'content', 'author' ); ?>

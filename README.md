@@ -1,6 +1,6 @@
-Welcome to WP-Forge
+Welcome to WP-Forge v5.1.0
 ====================
-WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.3), the most advanced responsive front-end framework.
+WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation, the most advanced responsive front-end framework.
 
 ###Built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.

@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: http://wpforge.themeawesome.com/
 Author: Thomas E. Vasquez
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.3), the most advanced responsive front-end framework.
-Version: v5.0.3
+Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.1.0), the most advanced responsive front-end framework.
+Version: v5.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -13,6 +13,8 @@ Text Domain: wpforge
 This theme, like WordPress, is licensed under the GPL. I hope you utilize WP-Forge to learn something new, create something awesome, have fun and, more importantly, I hope you share what you have learned with others.
 
 Use style.css to modify anything related to WordPress - To modify anything regarding Foundation, you need to modify foundation.css: /css/foundation.css
+
+I highly recommend using my child theme WP-Starter with WP-Forge, as I update WP-Forge on a regualr basis and if you update WP-Forge, you may lose any edits.
 */
 
 /* =Reset
@@ -1131,6 +1133,79 @@ section.tab-bar-section.go-right {
 	border-radius:3.125rem;
 }
 
+/* =Social Media menu
+----------------------------------------------- */
+.screen-reader-text {
+	position: absolute;
+	top:      -9999em;
+	left:     -9999em;
+}
+
+#menu-social { text-align:center}
+
+#menu-social ul {
+	display:block;
+	list-style: none;
+	margin:     0;
+}
+#menu-social ul li {
+	display:  inline-block;
+	position: relative;
+}
+#menu-social li a {
+position: relative;
+display: inline-block;
+text-decoration: none;
+}
+#menu-social li a::before {
+	content:        '/';
+	display:        inline-block;
+	padding:        0 3px;
+	font-family:    'FontAwesome';
+	font-size:      32px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+}
+#menu-social li a[href*="facebook.com"]::before {
+	content: "\f082";
+}
+#menu-social li a[href*="twitter.com"]::before {
+	content: "\f081";
+}
+#menu-social li a[href*="dribbble.com"]::before {
+	content: "\f17d";
+}
+#menu-social li a[href*="plus.google.com"]::before {
+	content: "\f0d4";
+}
+#menu-social li a[href*="pinterest.com"]::before {
+	content: "\f0d3";
+}
+#menu-social li a[href*="github.com"]::before {
+	content: "\f092";
+}
+#menu-social li a[href*="tumblr.com"]::before {
+	content: "\f174";
+}
+#menu-social li a[href*="youtube.com"]::before {
+	content: "\f166";
+}
+#menu-social li a[href*="flickr.com"]::before {
+	content: "\f16e";
+}
+#menu-social li a[href*="vimeo.com"]::before {
+	content: "\f194";
+}
+#menu-social li a[href*="instagram.com"]::before {
+	content: "\f16d";
+}
+#menu-social li a[href*="foursquare.com"]::before {
+	content: "\f180";
+}
+#menu-social li a[href*="linkedin.com"]::before {
+	content: "\f08c";
+}
+
 /* =Media Queries
 ----------------------------------------------- */
 @media only screen and (max-width: 40em) {
@@ -1155,4 +1230,11 @@ section.tab-bar-section.go-right {
 		line-height:2.125rem;
 		
 	}
+	#wpadminbar {
+		top: -2.875rem;
+	}	
+	#menu-social li a::before {
+		padding:        0 1px;
+		font-size:      28px;
+	}	
 }
