@@ -1,10 +1,16 @@
-WP-Forge v5.1.1
+WP-Forge v5.2.0
 =======================================
 Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation, the most advanced responsive front-end framework.
 
 Demo
 =======================================
 http://wpforge.themeawesome.com/
+
+Installation
+=======================================
+1. Add the "wp-forge" folder to your sites theme folder (wp-content/themes) either via the Admin dashboard or FTP.
+2. Go to "Appearance>Themes" and click "Activate" under WP-Forge.
+3. This is more of a reminder, if you have a favicon, make sure you upload it to your site root folder.
 
 Configuration
 =======================================
@@ -20,11 +26,12 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 1. Click on the Navigation section
 2. Select the menu you want to use in the Footer.
 3. Select the menu you want to use in Main menu area
-4. Select the position of the main menu, Normal Position, Top of Browser and Contain-ToGrid Sticky.
+4. Select the menu you want to use for the Social menu area.
+5. Select the position of the main menu, Normal Position, Top of Browser and Contain-ToGrid Sticky.
 	1. Normal Position - Navigation displays just below the header. This is default.
 	2. Top of Browser - Navigation will appear outside of the theme at the top of the browser. Can set a fixed position or have navigation scroll with the theme.
 	3. Contain-To-Grid Sticky - Navigation will remain in defaukt position until the user scrolls. Navigation will then take on a fixed position and move to the top of the browser.
-5. You can select to display the site name for the home link in the navigation or if you prefer you can change the text to whatever you wish.
+6. You can select to display the site name for the home link in the navigation or if you prefer you can change the text to whatever you wish.
 
 = Off-Canvas
 1. Display Off-Canvas for Mobile - Choose Yes to use Off-Canvas when your site is viewd on mobile devices. The regular menu will not display. The default is set to NO. This means the regular navigation will display according to the options you have configured in the Navigation section.
@@ -46,8 +53,8 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 
 = Colors
 1. Change the color of page titles
-2. Change the color of text
-3. Change the color of Links
+2. Change the color of site text
+3. Change the color of site links
 4. Change the color of links on hover.
 
 = Static Front Page
@@ -55,6 +62,21 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 2. Use a page on the front of your site.
 
 Click on Save and Publish once you have made all changes.
+
+Create your Social Menu
+=======================================
+1. Go to "Appearance>Menus" and click "create new menu"
+2. Give your menu a name and click "Create Menu"
+3. On the left hand side, click on the "Links" tab and add links to your social profiles. Currently the following sites are supported: Facebook, Twitter, LinkedIn, Google+, Flickr, YouTube,
+GitHub, FourSquare, Instagram, Pinterest, Tumblr, Vimeo and Dribbble
+4. Once you have added links to your social profiles, scroll down and check the box next to "Social" in the Theme Locations section.
+5. Click "Save Menu".
+
+Change the location of the Social Menu
+=======================================
+You can change the location of the Social Menu to anywhere you want. Open up footer.php and copy and paste line 43, 44 and 45 anywhere in the theme you want.
+
+You do not have to use line 43 or line 45. You can always just copy and past line 44 and paste it anywhere you want as well.
 
 Github
 =======================================

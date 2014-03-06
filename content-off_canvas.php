@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template that supplies Off-Canvas support to WP-Forge
+ *
+ * @package WordPress
+ * @subpackage WP_Forge
+ * @since WP-Forge 5.2.0
+ */
+?>
+
 <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
 
   <div class="off-canvas-wrap">

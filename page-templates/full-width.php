@@ -8,12 +8,12 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 
 get_header(); ?>
 
-		<div id="content" class="large-12 columns" role="main">
+		<div id="content" class="medium-12 large-12 columns" role="main">
         
         	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 

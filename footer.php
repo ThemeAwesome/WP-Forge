@@ -7,7 +7,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 ?>
 	</section><!-- #main .wrapper -->
@@ -19,7 +19,7 @@
         
 	<footer id="footer" class="row" role="contentinfo">
 
-        <div class="large-7 columns">
+        <div class="medium-7 large-7 columns">
         
         	<?php wp_nav_menu( array(
             	'theme_location' => 'secondary',
@@ -30,7 +30,7 @@
                 
        	</div><!-- .seven columns -->
              
-		<div id="ftxt" class="site-info large-5 columns">
+		<div id="ftxt" class="site-info medium-5 large-5 columns">
         
 			<?php if ( get_theme_mod('wpforge_footer_text') ) : echo get_theme_mod( 'wpforge_footer_text'); else : ?>
             
@@ -40,11 +40,9 @@
             
 		</div><!-- .site-info -->
         
-        <div class="large-12 columns">
-        
+        <div class="medium-12 large-12 columns">
         	<?php get_template_part( 'menu', 'social' ); ?>
-        
-        </div>
+        </div><!-- social-menu -->
 
 	</footer><!-- .row -->
     

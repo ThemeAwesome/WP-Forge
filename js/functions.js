@@ -5,7 +5,7 @@ jQuery(document).foundation()
 	.foundation('joyride', 'start');
 
 	// Add button class to all submit buttons
-	jQuery('input[type="submit"]').addClass('tiny radius button');
+	jQuery('input[type="submit"]').addClass('tiny button');
 	
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
     jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo />');

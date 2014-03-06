@@ -19,7 +19,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 
 /**
@@ -61,7 +61,7 @@ if ( ! isset( $content_width ) )
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_setup() {
 	/*
@@ -99,7 +99,7 @@ function wpforge_setup() {
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
+	set_post_thumbnail_size( 623, 9999 ); // Unlimited height, soft crop
 	
 	add_theme_support('wpforge-backgrounds');
 	add_theme_support('wpforge-fonts');
@@ -112,7 +112,7 @@ require( get_template_directory() . '/inc/customizer/customizer.php' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_fonts_url() {
 	$fonts_url = '';
@@ -147,7 +147,7 @@ function wpforge_fonts_url() {
  * Also used in the Appearance > Header admin panel:
  * @see wpforge_custom_header_setup()
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  *
  */
 function wpforge_fonts() {
@@ -160,7 +160,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_fonts', 0 );
 /**
  * Enqueues scripts and styles for front-end.
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_scripts_styles() {
 	global $wp_styles;
@@ -197,7 +197,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_scripts_styles', 0 );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -225,7 +225,7 @@ add_filter( 'wp_title', 'wpforge_wp_title', 10, 2 );
  * A fallback when no navigation is selected by default, otherwise it throws some nasty errors in your face.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.1.1 
+ * @since WP-Forge 5.2.0 
  */
 function wpforge_menu_fallback() {
 	echo '<div class="alert-box secondary"><p>';
@@ -254,7 +254,7 @@ add_filter( 'nav_menu_css_class', 'wpforge_active_nav_class', 10, 2 );
  * Use the active class of ZURB Foundation on wp_list_pages output.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.1.1 
+ * @since WP-Forge 5.2.0 
  */
 function wpforge_active_list_pages_class( $input ) {
 
@@ -273,7 +273,7 @@ add_filter( 'wp_list_pages', 'wpforge_active_list_pages_class', 10, 2 );
  * Courtesy of Kriesi.at. http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.1.1 
+ * @since WP-Forge 5.2.0 
  */
 class wpforge_walker extends Walker_Nav_Menu {
 
@@ -388,7 +388,7 @@ class wpforge_walker extends Walker_Nav_Menu {
 /**
  * Registers our main, front page and footer widget areas.
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_widgets_init() {
 	register_sidebar( array(
@@ -462,10 +462,10 @@ function wpforge_front_sidebar_class() {
 
 	switch ( $count ) {
 		case '1':
-			$class = 'large-12';
+			$class = 'medium-12 large-12';
 			break;
 		case '2':
-			$class = 'large-6';
+			$class = 'medium-12 large-6';
 			break;			
 	}
 
@@ -490,13 +490,13 @@ function wpforge_footer_sidebar_class() {
 
 	switch ( $count ) {
 		case '1':
-			$class = 'large-12';
+			$class = 'medium-12 large-12';
 			break;
 		case '2':
-			$class = 'large-6';
+			$class = 'medium-12 large-6';
 			break;
 		case '3':
-			$class = 'large-4';
+			$class = 'medium-12 large-4';
 			break;			
 	}
 
@@ -554,12 +554,13 @@ function page_navi($before = '', $after = '') {
 	echo '</ul>'.$after."";
 }
 
-if ( ! function_exists( 'wpforge_content_nav' ) ) :
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
+if ( ! function_exists( 'wpforge_content_nav' ) ) :
+
 function wpforge_content_nav( $html_id ) {
 	global $wp_query;
 
@@ -579,7 +580,6 @@ function wpforge_content_nav( $html_id ) {
 }
 endif;
 
-if ( ! function_exists( 'wpforge_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  * To override this walker in a child theme without modifying the comments template
@@ -588,6 +588,8 @@ if ( ! function_exists( 'wpforge_comment' ) ) :
  *
  * @since WP-Forge 1.0
  */
+if ( ! function_exists( 'wpforge_comment' ) ) :
+
 function wpforge_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
@@ -718,7 +720,7 @@ endif;
  * @param array Existing class values.
  * @return array Filtered class values.
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_body_class( $classes ) {
 	$background_color = get_background_color();
@@ -754,7 +756,7 @@ add_filter( 'body_class', 'wpforge_body_class' );
  * Adjusts content_width value for full-width and single image attachment
  * templates, and when there are no active widgets in the sidebar.
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_content_width() {
 	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -799,7 +801,7 @@ function remove_thumbnail_dimensions( $html ) {
 /**
  * Remove wp version param from any enqueued scripts
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 
 function _remove_script_version( $src ){
@@ -812,7 +814,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 /**
  * Remove .sticky from the post_class array (Thanks to required+ foundation)
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_filter_post_class( $classes ) {
     if ( ( $key = array_search( 'sticky', $classes ) ) !== false ) {
@@ -827,7 +829,7 @@ add_filter( 'post_class', 'wpforge_filter_post_class', 20 );
  * Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
  * @see https://gist.github.com/Narga/2887406
  *
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_remove_recent_comments_style() {  
         global $wp_widget_factory;  
@@ -838,7 +840,7 @@ add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
 /**
  * Add favicon to header
  * 
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 function wpforge_favicon() {
 echo '<link rel="shortcut icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">'."\n". '<link rel="icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">';

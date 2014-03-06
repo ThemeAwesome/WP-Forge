@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: http://wpforge.themeawesome.com/
 Author: Thomas E. Vasquez
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.1.1), the most advanced responsive front-end framework.
-Version: v5.1.1
+Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.2.0), the most advanced responsive front-end framework.
+Version: v5.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -54,7 +54,6 @@ textarea {
 
 /* =Repeatable patterns
 -------------------------------------------------------------- */
-
 /* Small headers */
 .archive-title,
 .page-title,
@@ -71,7 +70,6 @@ textarea {
 	text-transform: uppercase;
 	font-size:0.875rem	
 }
-
 select { /* Make sure select elements fit in widgets */
 	cursor:pointer;
 	max-width: 100%;
@@ -259,10 +257,8 @@ img.wp-smiley,
 	margin-top:0!important;
 }
 
-
 /* =Basic structure
 -------------------------------------------------------------- */
-
 /* Body, links, basics */
 body {
 	background-color:#e6e6e6;
@@ -278,7 +274,7 @@ body {
 	max-width: 62.5rem;
 	margin:0 auto;
 	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
-	background:#fff;
+	background-color:#fff;
 	padding:1.5625rem 0.625rem 0;
 }
 
@@ -289,13 +285,18 @@ body {
 .header-logo, .header-info {
 	display:block;
 	float:left;
+	max-width:100%;
 }
 .site-header {
 	width:100%;
 }
-.site-title a {
+.site-header p {
+	margin:0!important;
+}
+p.site-title a {
 	color: #515151;
 	display: block;	
+	font-size: 2.75rem;
 	text-decoration: none;
 }
 .site-title a:hover {
@@ -304,8 +305,9 @@ body {
 .site-header h1 {
 	margin:0!important;
 }
-.site-header h2 {
+p.site-description {
 	color: #757575;
+	font-size: 1.6875rem;
 	margin:0!important;
 	line-height:1	
 }
@@ -381,7 +383,6 @@ footer[role="contentinfo"] a:hover {
 
 /* =Main content and comment content
 -------------------------------------------------------------- */
-
 .entry-meta {
 	clear: both;
 }
@@ -479,10 +480,6 @@ img.alignnone {
 .entry-content video {
 	margin-bottom: 1.5rem;
 }
-.entry-content dl,
-.comment-content dl {
-	margin: 0 1.5rem;
-}
 .entry-content dt,
 .comment-content dt {
 	font-weight: bold;
@@ -549,13 +546,16 @@ footer.entry-meta {
 .single-author .entry-meta .by-author {
 	display: none;
 }
-span.sticky-post, span.date, span.categories-links, span.tags-links, span.pfont {
+span.sticky-post, 
+span.date, 
+span.categories-links, 
+span.tags-links, 
+span.pfont {
 	margin-right:10px;
 }
 
 /* =Archives
 -------------------------------------------------------------- */
-
 .archive-header,
 .page-header {
 	margin-bottom: 3rem;
@@ -571,7 +571,6 @@ span.sticky-post, span.date, span.categories-links, span.tags-links, span.pfont 
 
 /* =Single image attachment view
 -------------------------------------------------------------- */
-
 .article.attachment {
 	overflow: hidden;
 }
@@ -593,7 +592,6 @@ span.sticky-post, span.date, span.categories-links, span.tags-links, span.pfont 
 
 /* =Aside post format
 -------------------------------------------------------------- */
-
 article.format-aside h1 {
 	margin-bottom: 1.5rem;
 }
@@ -608,7 +606,6 @@ article.format-aside .aside {
 	padding: 1.5rem;
 	background: #d2e0f9;
 	border-left: 22px solid #a8bfe8;
-
 }
 article.format-aside p {
 	font-size: 0.875rem;
@@ -622,7 +619,6 @@ article.format-aside p:last-child {
 
 /* =Post formats
 -------------------------------------------------------------- */
-
 /* Image posts */
 article.format-image footer h1 {
 	font-size: 0.875rem;
@@ -733,7 +729,6 @@ article.format-quote .entry-content blockquote {
 
 /* =Comments
 -------------------------------------------------------------- */
-
 .comments-title {
 	margin-bottom: 3rem;
 	font-size: 16px;
@@ -807,7 +802,6 @@ article.format-quote .entry-content blockquote {
 	margin-left: 5px;
 	padding: 2px 5px;
 	font-size: 10px;
-
 }
 a.comment-reply-link,
 a.comment-edit-link {
@@ -816,7 +810,8 @@ a.comment-edit-link {
 }
 .commentlist .pingback {
 	line-height: 1.714285714;
-	margin-bottom: 1.5rem;
+	margin:1rem 0;
+	list-style:none!important;
 }
 
 /* Comment form */
@@ -858,7 +853,6 @@ a.comment-edit-link {
 #respond form textarea.blog-textarea {
 	width: 79.666666667%;
 }
-
 #respond form p.form-allowed-tags {
 	margin: 0;
 	font-size: 11px;
@@ -870,7 +864,6 @@ a.comment-edit-link {
 
 /* =Front page template
 -------------------------------------------------------------- */
-
 .front-image {
 	float: right;
 }
@@ -891,7 +884,6 @@ a.comment-edit-link {
 
 /* =Widgets
 -------------------------------------------------------------- */
-
 .widget-area .widget ul ul {
 	margin-left: 12px;
 }
@@ -943,11 +935,14 @@ img#wpstats {
 .comments-area { /* Jetpack comments */
 	margin-bottom:1.5rem!important;
 }
-.recentcomments a{ display:inline !important;padding:0 !important;margin:0 !important;}
+.recentcomments a { 
+	display:inline !important;
+	padding:0 !important;
+	margin:0 !important;
+}
 
 /* =TinyMCE Editor
 ----------------------------------------------- */
-
 html .mceContentBody {
 	max-width: 920px!important;
 	margin:15px 0 0 15px!important;
@@ -957,7 +952,8 @@ html .mceContentBody {
 cite {
 	border-bottom:0!important;
 }
-html .mceContentBody ul, html .mceContentBody ol {
+html .mceContentBody ul, 
+html .mceContentBody ol {
 	margin-left:25px!important;
 }
 .mceContentBody code {
@@ -990,10 +986,12 @@ html .mceContentBody ul, html .mceContentBody ol {
 	line-height: 1.714285714;
 	margin: 0 0 1.5rem;
 }
-.mceContentBody img.alignleft, .mceContentBody .wp-caption.alignleft {
+.mceContentBody img.alignleft, 
+.mceContentBody .wp-caption.alignleft {
 	margin: 12px 1.5rem 12px 0!important;
 }
-.mceContentBody img.alignright, .mceContentBody .wp-caption.alignright {
+.mceContentBody img.alignright, 
+.mceContentBody .wp-caption.alignright {
 	margin: 12px 0 12px 1.5rem!important;
 }
 .mceContentBody img.aligncenter {
@@ -1079,6 +1077,10 @@ section.tab-bar-section.go-left{
 section.tab-bar-section.go-right {
 	text-align:right!important;
 }
+section.tab-bar-section.middle a {
+	color:#fff!important;
+	font-weight:normal!important;
+}
 
 /* Top-Bar */
 .top-bar .name a {
@@ -1133,16 +1135,14 @@ section.tab-bar-section.go-right {
 	border-radius:3.125rem;
 }
 
-/* =Social Media menu
+/* =WordPress Social Menu
 ----------------------------------------------- */
-.screen-reader-text {
-	position: absolute;
-	top:      -9999em;
-	left:     -9999em;
+span.screen-reader-text {
+	display:none;
 }
-
-#menu-social { text-align:center}
-
+#menu-social { 
+	text-align:left;
+}
 #menu-social ul {
 	display:block;
 	list-style: none;
@@ -1153,9 +1153,9 @@ section.tab-bar-section.go-right {
 	position: relative;
 }
 #menu-social li a {
-position: relative;
-display: inline-block;
-text-decoration: none;
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
 }
 #menu-social li a::before {
 	content:        '/';
@@ -1223,12 +1223,15 @@ text-decoration: none;
 		font-size:0.75rem!important;
 	}
 	#backtotop {
-		background:#008cba;
+		background: rgb(0, 0, 0) ; opacity: 0.4;
+		bottom:2.5rem;
 		width:2.125rem;
 		height:2.125rem;
 		font-size:0.625rem;
 		line-height:2.125rem;
-		
+	}
+	#backtotop:hover {
+		background: rgb(0, 140, 186) ; opacity: 1;
 	}
 	#wpadminbar {
 		top: -2.875rem;
@@ -1236,5 +1239,9 @@ text-decoration: none;
 	#menu-social li a::before {
 		padding:        0 1px;
 		font-size:      28px;
+	}
+	section.tab-bar-section.middle a {
+		color:#fff!important;
+		font-weight:normal!important;
 	}	
 }

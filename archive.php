@@ -14,12 +14,12 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.1.1
+ * @since WP-Forge 5.2.0
  */
 
 get_header(); ?>
 
-	<div id="content" class="large-8 columns" role="main">
+	<div id="content" class="medium-8 large-8 columns" role="main">
     
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 
@@ -70,7 +70,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 
 				/* Include the post format-specific template for the content. If you want to
-				 * this in a child theme then include a file called called content-___.php
+				 * this in a child theme then include a file called content-___.php
 				 * (where ___ is the post format) and that will be used instead.
 				 */
 				get_template_part( 'content', get_post_format() );

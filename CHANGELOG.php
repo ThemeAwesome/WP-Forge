@@ -1,10 +1,16 @@
 <!-- Changelog as of 02/09/2014 -->
 
 1.) Updated WP-Forge to the latest version of Foundation, currently v5.1.1, released on 02/06/2014.
+2.) Added medium column class to layout.
+3.) Changed post thumbnail size from 624 to 623
+4.) Fixed issue with theme customizer - site title and description were not working properly. Corrected. Now when you change the site title or site description in the customizer those changes reflect in the actual title and decription.
+5.) Removed the h1 and h2 tags from the site title and site description this allows for better SEO - If you prefer to have h1 and h2 tags for site title and description, you can change it back in header.php
+
+*for other changes to various files, please refer to the latest commit.
 
 <!-- Changelog as of 02/08/2014 -->
 
-1.) Updated WP-Forge to the latest version of Foundation, currently v5.1.1, released on 02/05/2014.
+1.) Updated WP-Forge to the latest version of Foundation, currently v5.1.0, released on 02/05/2014.
 2.) Added new menu location called social to functions.php (line 97)
 3.) Added styles for the new social menu to style sheet. (starting at line 1136)
 
