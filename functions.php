@@ -19,7 +19,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 
 /**
@@ -61,7 +61,7 @@ if ( ! isset( $content_width ) )
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_setup() {
 	/*
@@ -74,7 +74,7 @@ function wpforge_setup() {
 	load_theme_textdomain( 'wpforge', get_template_directory() . '/language' );
 	
 	// This theme styles the visual editor to resemble the theme style
-	add_editor_style( array( 'css/foundation.css','style.css','fonts/font-awesome.css', wpforge_fonts_url() ) );
+	add_editor_style( array( 'css/foundation.css','style.css','fonts/open-sans.css','fonts/font-awesome.css' ) );
 
 	// Adds RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
@@ -89,20 +89,23 @@ function wpforge_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
 	) );
+	
+	// Adds support for Jetpack's Infinite Scroll
+	add_theme_support( 'infinite-scroll', array(
+		'container' => 'content',
+		'footer' => 'page',
+	) );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(array(
-		'primary' => __( 'Main Menu', 'wpforge' ), 
+		'primary' 	=> __( 'Main Menu', 'wpforge' ), 
 		'secondary' => __( 'Footer Menu', 'wpforge' ),
-		'social' => __( 'Social Menu', 'wpforge' ),		
+		'social' 	=> __( 'Social Menu', 'wpforge' ),		
 	));	
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 623, 9999 ); // Unlimited height, soft crop
-	
-	add_theme_support('wpforge-backgrounds');
-	add_theme_support('wpforge-fonts');
 }
 add_action( 'after_setup_theme', 'wpforge_setup' );
 
@@ -110,57 +113,9 @@ add_action( 'after_setup_theme', 'wpforge_setup' );
 require( get_template_directory() . '/inc/customizer/customizer.php' );
 
 /**
- * Returns the Google font stylesheet URL, if available.
- *
- * @since WP-Forge 5.2.0
- */
-function wpforge_fonts_url() {
-	$fonts_url = '';
-
-	/* Translators: If there are characters in your language that are not
-	 * supported by Source Sans Pro, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$open_sans_pro = _x( 'on', 'Open Sans font: on or off', 'wpforge' );
-
-	if ( 'off' !== $open_sans_pro ) {
-			$font_families[] = 'Open+Sans:300italic,300';
-
-		$protocol = is_ssl() ? 'https' : 'http';
-		$query_args = array(
-			'family' => implode( '|', $font_families ),
-			'subset' => 'latin,latin-ext',
-		);
-		$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
-	}
-
-	return $fonts_url;
-}
-
-/**
- * Loads our special font CSS file.
- * To disable in a child theme, use wp_dequeue_style()
- * function mytheme_dequeue_fonts() {
- *     wp_dequeue_style( 'wpforge-fonts' );
- * }
- * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
- * Also used in the Appearance > Header admin panel:
- * @see wpforge_custom_header_setup()
- *
- * @since WP-Forge 5.2.0
- *
- */
-function wpforge_fonts() {
-	$fonts_url = wpforge_fonts_url();
-	if ( ! empty( $fonts_url ) )
-		wp_enqueue_style( 'wpforge-fonts', esc_url_raw( $fonts_url ), array(), null );
-}
-add_action( 'wp_enqueue_scripts', 'wpforge_fonts', 0 );
-
-/**
  * Enqueues scripts and styles for front-end.
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_scripts_styles() {
 	global $wp_styles;
@@ -175,6 +130,9 @@ function wpforge_scripts_styles() {
 		}
 	}
 	add_action( 'comment_form_before', 'my_enqueue_comments_reply' );
+	
+	//Register our font
+	wp_register_style('wpforge-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300');	
 
     // Register Foundation scripts file in the footer
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '', true );
@@ -183,6 +141,7 @@ function wpforge_scripts_styles() {
     wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '', true );
 
 	// Load all of our stylesheets
+	wp_enqueue_style( 'wpforge-fonts' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.css' );	
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
 	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
@@ -197,7 +156,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_scripts_styles', 0 );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -225,7 +184,7 @@ add_filter( 'wp_title', 'wpforge_wp_title', 10, 2 );
  * A fallback when no navigation is selected by default, otherwise it throws some nasty errors in your face.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.0 
+ * @since WP-Forge 5.2.1 
  */
 function wpforge_menu_fallback() {
 	echo '<div class="alert-box secondary"><p>';
@@ -254,7 +213,7 @@ add_filter( 'nav_menu_css_class', 'wpforge_active_nav_class', 10, 2 );
  * Use the active class of ZURB Foundation on wp_list_pages output.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.0 
+ * @since WP-Forge 5.2.1 
  */
 function wpforge_active_list_pages_class( $input ) {
 
@@ -273,7 +232,7 @@ add_filter( 'wp_list_pages', 'wpforge_active_list_pages_class', 10, 2 );
  * Courtesy of Kriesi.at. http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.0 
+ * @since WP-Forge 5.2.1 
  */
 class wpforge_walker extends Walker_Nav_Menu {
 
@@ -388,7 +347,7 @@ class wpforge_walker extends Walker_Nav_Menu {
 /**
  * Registers our main, front page and footer widget areas.
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_widgets_init() {
 	register_sidebar( array(
@@ -444,7 +403,7 @@ function wpforge_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<h6 class="widget-title">',
 		'after_title' => '</h6>',
-	) );			
+	) );
 }
 add_action( 'widgets_init', 'wpforge_widgets_init' );
 
@@ -497,7 +456,7 @@ function wpforge_footer_sidebar_class() {
 			break;
 		case '3':
 			$class = 'medium-12 large-4';
-			break;			
+			break;		
 	}
 
 	if ( $class )
@@ -557,7 +516,7 @@ function page_navi($before = '', $after = '') {
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 if ( ! function_exists( 'wpforge_content_nav' ) ) :
 
@@ -720,7 +679,7 @@ endif;
  * @param array Existing class values.
  * @return array Filtered class values.
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_body_class( $classes ) {
 	$background_color = get_background_color();
@@ -756,7 +715,7 @@ add_filter( 'body_class', 'wpforge_body_class' );
  * Adjusts content_width value for full-width and single image attachment
  * templates, and when there are no active widgets in the sidebar.
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_content_width() {
 	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -801,7 +760,7 @@ function remove_thumbnail_dimensions( $html ) {
 /**
  * Remove wp version param from any enqueued scripts
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 
 function _remove_script_version( $src ){
@@ -814,7 +773,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 /**
  * Remove .sticky from the post_class array (Thanks to required+ foundation)
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_filter_post_class( $classes ) {
     if ( ( $key = array_search( 'sticky', $classes ) ) !== false ) {
@@ -829,7 +788,7 @@ add_filter( 'post_class', 'wpforge_filter_post_class', 20 );
  * Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
  * @see https://gist.github.com/Narga/2887406
  *
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_remove_recent_comments_style() {  
         global $wp_widget_factory;  
@@ -840,7 +799,7 @@ add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
 /**
  * Add favicon to header
  * 
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 function wpforge_favicon() {
 echo '<link rel="shortcut icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">'."\n". '<link rel="icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">';

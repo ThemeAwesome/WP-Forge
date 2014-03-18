@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 
 get_header(); ?>
@@ -20,7 +20,16 @@ get_header(); ?>
 
 				<div class="entry-content">
 					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wpforge' ); ?></p>
-					<?php get_search_form(); ?>
+					<form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
+						<div class="row collapse">
+							<div class="medium-10 large-10 columns">
+								<input type="text" value="" name="s" id="s" placeholder="<?php esc_attr_e('Search', 'wpforge'); ?>">
+							</div>
+							<div class="medium-2 large-2 columns">
+								<input type="submit" id="searchsubmit" value="<?php esc_attr_e('Search', 'wpforge'); ?>" class="button postfix">
+							</div>
+						</div>
+					</form>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
 

@@ -1,3 +1,10 @@
+<!-- Changelog as of 03/18/2014 -->
+
+1.) Updated to latest version of Foundation, currently 5.2.1
+2.) Changed the way Open-Sans is included into the theme. This will make it easier for anyone to remove the font or add their own if necessary.
+3.) Added support for Jetpack's infinite scroll
+4.) Added the actual search form to 404.php (I think it look better this way)
+
 <!-- Changelog as of 02/09/2014 -->
 
 1.) Updated WP-Forge to the latest version of Foundation, currently v5.1.1, released on 02/06/2014.

@@ -6,18 +6,17 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 
 /*
- * The footer widget area is triggered if any of the areas
- * have widgets. So let's check that first.
+ * The footer widget area is triggered if any of the areas have widgets. So let's check that first.
  *
  * If none of the sidebars have widgets, we wont see anything.
  */
 if ( ! is_active_sidebar( 'sidebar-4' )
 	&& ! is_active_sidebar( 'sidebar-5' )
-	&& ! is_active_sidebar( 'sidebar-6' )
+	&& ! is_active_sidebar( 'sidebar-6' )	
 	
 	)
 	return;
@@ -44,7 +43,7 @@ if ( ! is_active_sidebar( 'sidebar-4' )
         <div class="<?php wpforge_footer_sidebar_class(); ?> columns">
             <?php dynamic_sidebar( 'sidebar-6' ); ?>
         </div><!-- .third -->
-        <?php endif; ?>
+        <?php endif; ?>	
     
 	</div><!-- /columns -->    
             

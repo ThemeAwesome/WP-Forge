@@ -8,7 +8,7 @@ jQuery(document).foundation()
 	jQuery('input[type="submit"]').addClass('tiny button');
 	
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
-    jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo />');
+    jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo" />');
 	jQuery('iframe[src*="dailymotion.com"]').wrap('<div class="flex-video widescreen" />');
     jQuery('iframe[src*="youtube.com"]').wrap('<div class="flex-video widescreen" />');
 	

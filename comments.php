@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * The template for displaying Comments.
  *
@@ -9,7 +9,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.0
+ * @since WP-Forge 5.2.1
  */
 
 /*
