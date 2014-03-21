@@ -106,6 +106,8 @@ function wpforge_setup() {
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 623, 9999 ); // Unlimited height, soft crop
+
+	add_theme_support('wpforge-backgrounds');	
 }
 add_action( 'after_setup_theme', 'wpforge_setup' );
 
