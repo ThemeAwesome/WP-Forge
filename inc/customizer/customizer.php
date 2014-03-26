@@ -212,7 +212,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('wpforge_post_display',array(
 		'type' => 'select',
-		'label' => __('Display Full Post or Excerpt?', 'wpforge'),
+		'label' => __('Show Full Post or Excerpt?', 'wpforge'),
 		'section' => 'wpforge_posts',
 		'choices' => array(
 			'full' => 'Full Post',
@@ -228,7 +228,23 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('wpforge_thumb_display',array(
 		'type' => 'select',
-		'label' => __('Display Post Thumbnails?', 'wpforge'),
+		'label' => __('Show Post Thumbnail on Index?', 'wpforge'),
+		'section' => 'wpforge_posts',
+		'choices' => array(
+			'no' => 'No',
+			'yes' => 'Yes',
+		),
+	));	
+	$wp_customize->add_setting('wpforge_single_thumb_display',array(
+		'default' => 'no',
+		'type' => 'theme_mod',
+		'capability' => 'manage_options',		
+		'sanitize_callback' => 'wpforge_sanitize_single_thumb_display',
+		'priority' => 3,		
+	));
+	$wp_customize->add_control('wpforge_single_thumb_display',array(
+		'type' => 'select',
+		'label' => __('Show Post Thumbnail on Single Post?', 'wpforge'),
 		'section' => 'wpforge_posts',
 		'choices' => array(
 			'no' => 'No',
@@ -465,7 +481,18 @@ function wpforge_sanitize_thumb_display( $input ) {
         return '';
     }
 }
-
+function wpforge_sanitize_single_thumb_display( $input ) {
+    $valid = array(
+        'yes' => 'Yes',
+		'no' => 'No',
+    );
+	
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
 // Footer Sanitation
 function wpforge_sanitize_footer_text( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );

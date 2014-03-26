@@ -20,7 +20,7 @@ get_header(); ?>
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php get_template_part( 'content', 'loop' ); ?>
 			<?php endwhile; ?>
 
 			<?php wpforge_content_nav( 'nav-below' ); ?>

@@ -9,8 +9,9 @@ http://wpforge.themeawesome.com/
 Installation
 =======================================
 1. Add the "wp-forge" folder to your sites theme folder (wp-content/themes) either via the Admin dashboard or FTP.
-2. Go to "Appearance>Themes" and click "Activate" under WP-Forge.
+2. Go to "Appearance > Themes" and click "Activate" under WP-Forge.
 3. This is more of a reminder, if you have a favicon, make sure you upload it to your site root folder.
+4. Go to "Appearance > Menus" If you have not done so, create and assign menus. If you have already created menus, make sure you assign them to the appropriate areas.
 
 Configuration
 =======================================
@@ -21,28 +22,35 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 2. Change the title of your site
 3. Change the tagline of your site
 4. You can hide the site title and tagline
+5. Click "Save and Publish" once you are done
 
 = Navigation Section
+*Make sure you follow step #4 above before you continue
 1. Click on the Navigation section
 2. Select the menu you want to use in the Footer.
 3. Select the menu you want to use in Main menu area
-4. Select the menu you want to use for the Social menu area.
+4. Select the menu you want to use for the Social menu area *Make sure to read the "Create Social Menu" section below.
 5. Select the position of the main menu, Normal Position, Top of Browser and Contain-ToGrid Sticky.
 	1. Normal Position - Navigation displays just below the header. This is default.
 	2. Top of Browser - Navigation will appear outside of the theme at the top of the browser. Can set a fixed position or have navigation scroll with the theme.
 	3. Contain-To-Grid Sticky - Navigation will remain in defaukt position until the user scrolls. Navigation will then take on a fixed position and move to the top of the browser.
 6. You can select to display the site name for the home link in the navigation or if you prefer you can change the text to whatever you wish.
+7. Click "Save and Publish" once you are done.
 
 = Off-Canvas
 1. Display Off-Canvas for Mobile - Choose Yes to use Off-Canvas when your site is viewd on mobile devices. The regular menu will not display. The default is set to NO. This means the regular navigation will display according to the options you have configured in the Navigation section.
 2. Display Off-Canvas Left or Right - Default is Left. This will display the Off-Canvas menu to the left. If set to Right, Off-Canvas will display to the right.
+3. Click "Save and Publish" once you are done
 
 = Posts Section
 1. Select to display the full version of posts or an excerpt of posts
-2. Select whether or not to display post thumbnails. Default is set to NO. Change to Yes to display post thumbnails.
+2. Select whether or not to display post thumbnails on the index page. Default is set to NO. Change to Yes to display post thumbnails.
+3. Select whether or not to display post thumbnails when viewing a single post. Default is set to NO. Change to YES to display post thumbnails in single view.
+4. Click "Save and Publish" once you are done
 
 = Footer Section
-1. Allows you to change the Copyright text in the footer. 
+1. Allows you to change the Copyright text in the footer.
+2. Click "Save and Publish" once you are done
 
 = Background Section
 1. Change the background color of your site
@@ -50,18 +58,19 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 3. Set how the background image repeats
 4. Ste the position of the background image
 5. Choose a fixed or scrolling background
+6. Click "Save and Publish" once you are done
 
 = Colors
 1. Change the color of page titles
 2. Change the color of site text
 3. Change the color of site links
 4. Change the color of links on hover.
+5. Click "Save and Publish" once you are done
 
 = Static Front Page
 1. Show your latest posts on the front of your site
 2. Use a page on the front of your site.
-
-Click on Save and Publish once you have made all changes.
+3. Click "Save and Publish" once you are done
 
 Create your Social Menu
 =======================================
@@ -76,7 +85,7 @@ Change the location of the Social Menu
 =======================================
 You can change the location of the Social Menu to anywhere you want. Open up footer.php and copy and paste line 43, 44 and 45 anywhere in the theme you want.
 
-You do not have to use line 43 or line 45. You can always just copy and past line 44 and paste it anywhere you want as well.
+You do not have to use line 43 or line 45. You can always just copy line 44 and paste it anywhere you want as well.
 
 Github
 =======================================

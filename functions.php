@@ -74,7 +74,7 @@ function wpforge_setup() {
 	load_theme_textdomain( 'wpforge', get_template_directory() . '/language' );
 	
 	// This theme styles the visual editor to resemble the theme style
-	add_editor_style( array( 'css/foundation.css','style.css','fonts/open-sans.css','fonts/font-awesome.css' ) );
+	add_editor_style( array( 'css/foundation.css','style.css','fonts/wpforge-fonts.css','fonts/font-awesome.css' ) );
 
 	// Adds RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
@@ -107,6 +107,7 @@ function wpforge_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 623, 9999 ); // Unlimited height, soft crop
 
+	// Adds support for our background area in the customizer
 	add_theme_support('wpforge-backgrounds');	
 }
 add_action( 'after_setup_theme', 'wpforge_setup' );
@@ -131,10 +132,7 @@ function wpforge_scripts_styles() {
 		wp_enqueue_script( 'comment-reply' );
 		}
 	}
-	add_action( 'comment_form_before', 'my_enqueue_comments_reply' );
-	
-	//Register our font
-	wp_register_style('wpforge-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300');	
+	add_action( 'comment_form_before', 'my_enqueue_comments_reply' );	
 
     // Register Foundation scripts file in the footer
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '', true );
@@ -143,7 +141,7 @@ function wpforge_scripts_styles() {
     wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '', true );
 
 	// Load all of our stylesheets
-	wp_enqueue_style( 'wpforge-fonts' );
+	wp_enqueue_style( 'wpforge-fonts', get_template_directory_uri() . '/fonts/wpforge-fonts.css' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.css' );	
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
 	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
