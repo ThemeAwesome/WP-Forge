@@ -19,26 +19,42 @@
         
 	<footer id="footer" class="row" role="contentinfo">
 
-        <div class="medium-7 large-7 columns">
-        
-        	<?php wp_nav_menu( array(
-            	'theme_location' => 'secondary',
-                'container' => false,
-                'menu_class' => 'inline-list left',
-                'fallback_cb' => false
-            ) ); ?>
+    <?php if ( has_nav_menu('secondary')  ) : // Only display menu in the footer if one is assigned ?>
+
+            <div class="medium-7 large-7 columns">
                 
-       	</div><!-- .seven columns -->
-             
-		<div id="ftxt" class="site-info medium-5 large-5 columns">
-        
-			<?php if ( get_theme_mod('wpforge_footer_text') ) : echo get_theme_mod( 'wpforge_footer_text'); else : ?>
-            
-				<p><?php _e( 'Powered by', 'wpforge' ); ?> <a href="<?php echo esc_url(__('http://themeawesome.com/responsive-wordpress-theme/','wpforge')); ?>" rel="nofollow" target="_blank" title="<?php _e( 'Responsive WordPress Theme by ThemeAwesome.com', 'wpforge' ); ?>"><?php _e( 'WP-Forge', 'wpforge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wpforge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wpforge' ); ?>"><?php _e( 'WordPress', 'wpforge' ); ?></a></p>
+                <?php wp_nav_menu( array(
+                    'theme_location' => 'secondary',
+                    'container' => false,
+                    'menu_class' => 'inline-list left',
+                    'fallback_cb' => false
+                ) ); ?>
+                        
+            </div><!-- .seven columns -->
+                     
+            <div id="ftxt" class="site-info medium-5 large-5 columns">
                 
-            <?php endif; ?>
-            
-		</div><!-- .site-info -->
+                <?php if ( get_theme_mod('wpforge_footer_text') ) : echo get_theme_mod( 'wpforge_footer_text'); else : ?>
+                    
+                    <p><?php _e( 'Powered by', 'wpforge' ); ?> <a href="<?php echo esc_url(__('http://themeawesome.com/responsive-wordpress-theme/','wpforge')); ?>" rel="nofollow" target="_blank" title="<?php _e( 'Responsive WordPress Theme by ThemeAwesome.com', 'wpforge' ); ?>"><?php _e( 'WP-Forge', 'wpforge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wpforge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wpforge' ); ?>"><?php _e( 'WordPress', 'wpforge' ); ?></a></p>
+                        
+                <?php endif; ?>
+                    
+            </div><!-- .site-info -->
+
+        <?php else : ?>
+
+            <div id="ftxt" class="site-info medium-12 large-12 columns">
+                
+                <?php if ( get_theme_mod('wpforge_footer_text') ) : echo get_theme_mod( 'wpforge_footer_text'); else : ?>
+                    
+                    <p><?php _e( 'Powered by', 'wpforge' ); ?> <a href="<?php echo esc_url(__('http://themeawesome.com/responsive-wordpress-theme/','wpforge')); ?>" rel="nofollow" target="_blank" title="<?php _e( 'Responsive WordPress Theme by ThemeAwesome.com', 'wpforge' ); ?>"><?php _e( 'WP-Forge', 'wpforge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wpforge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wpforge' ); ?>"><?php _e( 'WordPress', 'wpforge' ); ?></a></p>
+                        
+                <?php endif; ?>
+                    
+            </div><!-- .site-info -->
+
+        <?php endif; ?>
         
         <div class="medium-12 large-12 columns">
         	<?php get_template_part( 'menu', 'social' ); ?>

@@ -1,3 +1,6 @@
+<!-- Changelog as of 03/27/2014 -->
+1.) Added fix for the footer menu, if there is no menu added to the footer, the copyright text will now properly align to the right as it should
+
 <!-- Changelog as of 03/26/2014 -->
 1.) Removed the query string from font-awesome.css
 2.) Created content-loop.php to handle an issue that was causing the excerpt to be displayed in single post view when the display option of Posts in the 
