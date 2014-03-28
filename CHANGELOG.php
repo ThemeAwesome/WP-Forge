@@ -1,3 +1,6 @@
+<!-- Changelog as of 03/28/2014 -->
+1.) Added Portuguese localization file compliments of Felipe Trombini (fmtrede@gmail.com)
+
 <!-- Changelog as of 03/27/2014 -->
 1.) Added fix for the footer menu, if there is no menu added to the footer, the copyright text will now properly align to the right as it should
 

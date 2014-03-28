@@ -41,6 +41,7 @@ Contributors
 =============
 
 [Christopher Anderton] (https://github.com/Deluxive) for Swedish localization
+[Felipe Trombini] (fmtrede@gmail.com) for Portuguese localization 
 
 Additional Credits
 =============
