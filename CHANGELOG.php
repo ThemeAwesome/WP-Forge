@@ -1,3 +1,7 @@
+<!-- Changelog as of 03/29/2014 -->
+1.) Removed the font size from footer elements. Thanks to Patrick for bringing this to my attention. View the thread: http://themeawesome.com/forums/topic/customizefootercopyright-text-firefox-shows-smaller-font-v-5-2-1/
+2.) Modified comments.php - Now users can easily modify the comments form. Thanks to Joseph for giving me the inspiration. View the thread: http://themeawesome.com/forums/topic/editing-comment-form/
+
 <!-- Changelog as of 03/28/2014 -->
 1.) Added Portuguese localization file compliments of Felipe Trombini (fmtrede@gmail.com)
 

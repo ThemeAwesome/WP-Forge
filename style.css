@@ -357,14 +357,12 @@ label > .screen-reader-text {
 footer[role="contentinfo"] {
 	border-top: 4px double #ededed;
 	clear: both;
-	font-size: 0.875rem!important;
 	line-height: 2;
 	padding: 1.5rem 0;
 }
 footer > .site-info {
 	text-align:right!important;
 	margin-bottom:0!important;
-	font-size:1rem;
 }
 footer[role="contentinfo"] a {
 	color: #686868;
@@ -847,8 +845,10 @@ a.comment-edit-link {
 	line-height: 1.714285714;
 	width: 100%;
 }
-#respond form input[type="text"] {
-	width: 46.333333333%;
+#respond form input[type="text"],
+#respond form input[type="email"],
+#respond form input[type="url"] {
+	width: 100%;
 }
 #respond form textarea.blog-textarea {
 	width: 79.666666667%;
@@ -860,6 +860,15 @@ a.comment-edit-link {
 }
 .required {
 	color: red;
+}
+p.comment-notes {
+	font-size: 0.75rem!important;
+}
+p.comment-form-author, p.comment-form-email {
+	padding-left: 0!important;
+}
+p.comment-form-email {
+	padding-right: 0!important;
 }
 
 /* =Front page template
@@ -1244,4 +1253,8 @@ span.screen-reader-text {
 		color:#fff!important;
 		font-weight:normal!important;
 	}	
+	p.comment-form-author, p.comment-form-email {
+		padding-left: 0!important;
+		padding-right: 0!important;
+	}
 }
