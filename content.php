@@ -10,20 +10,34 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<h1><?php the_title(); ?></h1>
-			<?php if( get_theme_mod( 'wpforge_single_thumb_display' ) == 'yes') { ?>
+			<?php if ( is_single() && get_theme_mod( 'wpforge_single_thumb_display' ) == 'yes' ) : // Display post thumbnail in single post view if theme customizer option is set to yes ?>
+				<h1><?php the_title(); ?></h1>
+            	<?php the_post_thumbnail(); ?>			
+			<?php else : ?>
+				<h1>
+					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpforge' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+				</h1>
+			<?php endif; // is_single() ?>
+			<?php if ( is_home() && get_theme_mod( 'wpforge_thumb_display' ) == 'yes' ) : // Display post thumbnail on home page if theme customizer option is set to yes ?>
             	<?php the_post_thumbnail(); ?>
-            <?php } // end if ?>            
+            <?php endif; // end if ?>            
 			<?php if ( comments_open() ) : ?>
 				<div class="comments-link">
 					<i class="fa fa-comment"></i> <?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'wpforge' ) . '</span>', __( '1 Reply', 'wpforge' ), __( '% Replies', 'wpforge' ) ); ?>
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
+
+		<?php if ( is_home() && get_theme_mod( 'wpforge_post_display' ) == 'excerpt' ) : // Only display Excerpts if theme customizer option is set to excerpt ?>
+            <div class="entry-summary">
+                <?php the_excerpt(); ?>
+            </div><!-- .entry-summary -->
+		<?php else : ?>
             <div class="entry-content">
                 <?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'wpforge' ) ); ?>
                 <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wpforge' ), 'after' => '</div>' ) ); ?>
             </div><!-- .entry-content -->
+		<?php endif; // end if ?>
 
 		<footer class="entry-meta">
 			<?php wpforge_entry_meta(); ?>

@@ -89,12 +89,12 @@ function wpforge_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
 	) );
-	
+
 	// Adds support for Jetpack's Infinite Scroll
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'content',
 		'footer' => 'page',
-	) );
+	) );	
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(array(

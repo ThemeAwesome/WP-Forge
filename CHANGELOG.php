@@ -1,3 +1,9 @@
+<!-- Changelog as of 03/31/2014 -->
+1.) Removed content-loop.php - This file was causing post formats to display incorrectly when "Show Full Post or Excerpt?" in the theme customizer was set to excerpt. I coded it
+in an inefficient manner when I should have used the proper conditionals. Every thing is working properly.
+2.) Removed an image file from the images folder that was not supposed to be there.
+3.) Added <p></p> to the copyright text in the footer.
+
 <!-- Changelog as of 03/29/2014 -->
 1.) Removed the font size from footer elements. Thanks to Patrick for bringing this to my attention. View the thread: http://themeawesome.com/forums/topic/customizefootercopyright-text-firefox-shows-smaller-font-v-5-2-1/
 2.) Modified comments.php - Now users can easily modify the comments form. Thanks to Joseph for giving me the inspiration. View the thread: http://themeawesome.com/forums/topic/editing-comment-form/
