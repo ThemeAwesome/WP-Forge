@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-FOrge 5.2.1
+ * @since WP-FOrge 5.2.2
  */
 
 /*

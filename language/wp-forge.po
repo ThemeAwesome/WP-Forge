@@ -1,11 +1,8 @@
-# Copyright (C) 2014 ThemeAwesome.com
-# This file is distributed under the GNU General Public License v2 or later.
-# @since v5.2.1
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Forge\n"
-"POT-Creation-Date: 2014-03-26 12:51-0700\n"
-"PO-Revision-Date: 2014-03-26 12:52-0700\n"
+"POT-Creation-Date: 2014-04-06 07:36-0700\n"
+"PO-Revision-Date: 2014-04-06 07:37-0700\n"
 "Last-Translator: Thomas Vasquez <tsquez@gmail.com>\n"
 "Language-Team: Thomas Vasquez <tsquez@gmail.com>\n"
 "Language: en\n"
@@ -105,7 +102,7 @@ msgstr ""
 msgid "Author Archives: %s"
 msgstr ""
 
-#: author.php:48 content-author.php:17 content-loop.php:45 content.php:37
+#: author.php:48 content-author.php:17 content.php:51
 #, php-format
 msgid "About %s"
 msgstr ""
@@ -138,8 +135,56 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: comments.php:67
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:68
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:69
+msgid "Cancel Reply"
+msgstr ""
+
+#: comments.php:70
+msgid "Post Comment"
+msgstr ""
+
+#: comments.php:72
+msgid "Comment"
+msgstr ""
+
+#: comments.php:78
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:84
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: comments.php:91
+msgid "Your email address will not be published."
+msgstr ""
+
+#: comments.php:94
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: comments.php:111
+msgid "Your Website"
+msgstr ""
+
 #: content-aside.php:13 content-audio.php:18 content-gallery.php:17
-#: content-loop.php:14 content-video.php:17 functions.php:658
+#: content-video.php:17 content.php:18 functions.php:658
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
@@ -151,42 +196,24 @@ msgstr ""
 
 #: content-aside.php:22 content-audio.php:37 content-chat.php:30
 #: content-gallery.php:36 content-image.php:19 content-link.php:19
-#: content-loop.php:38 content-quote.php:19 content-status.php:26
-#: content-video.php:36 content.php:30 functions.php:592
+#: content-quote.php:19 content-status.php:26 content-video.php:36
+#: content.php:44 functions.php:592
 msgid "Edit"
 msgstr ""
 
-#: content-audio.php:29 content-gallery.php:28 content-loop.php:31
-#: content-video.php:28 content.php:24
+#: content-audio.php:29 content-gallery.php:28 content-video.php:28
+#: content.php:37
 msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
 #: content-audio.php:30 content-chat.php:24 content-gallery.php:29
-#: content-loop.php:32 content-page.php:18 content-video.php:29 content.php:25
-#: image.php:94
+#: content-page.php:18 content-video.php:29 content.php:38 image.php:94
 msgid "Pages:"
 msgstr ""
 
 #: content-author.php:21
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content-loop.php:21 content.php:19
-msgid "Leave a reply"
-msgstr ""
-
-#: content-loop.php:21 content.php:19
-msgid "1 Reply"
-msgstr ""
-
-#: content-loop.php:21 content.php:19
-msgid "% Replies"
-msgstr ""
-
-#: content-loop.php:49 content.php:41
-#, php-format
-msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
 #: content-none.php:13
@@ -212,27 +239,44 @@ msgstr ""
 msgid "Edit Page"
 msgstr ""
 
-#: footer.php:37
+#: content.php:26
+msgid "Leave a reply"
+msgstr ""
+
+#: content.php:26
+msgid "1 Reply"
+msgstr ""
+
+#: content.php:26
+msgid "% Replies"
+msgstr ""
+
+#: content.php:55
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: footer.php:40 footer.php:52
 msgid "Powered by"
 msgstr ""
 
-#: footer.php:37
+#: footer.php:40 footer.php:52
 msgid "http://themeawesome.com/responsive-wordpress-theme/"
 msgstr ""
 
-#: footer.php:37
+#: footer.php:40 footer.php:52
 msgid "Responsive WordPress Theme by ThemeAwesome.com"
 msgstr ""
 
-#: footer.php:37
+#: footer.php:40 footer.php:52
 msgid "WP-Forge"
 msgstr ""
 
-#: footer.php:37
+#: footer.php:40 footer.php:52
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: footer.php:37
+#: footer.php:40 footer.php:52
 msgid "WordPress"
 msgstr ""
 
@@ -388,7 +432,7 @@ msgid "Next Image &raquo;"
 msgstr ""
 
 #: inc/customizer/customizer.php:35
-msgid "Set up a front page of WP-Forge."
+msgid "Set up a front page for your theme."
 msgstr ""
 
 #: inc/customizer/customizer.php:43
@@ -396,7 +440,7 @@ msgid "Header"
 msgstr ""
 
 #: inc/customizer/customizer.php:44
-msgid "Modify the header portion of WP-Forge"
+msgid "Modify the header portion of your theme."
 msgstr ""
 
 #: inc/customizer/customizer.php:53
@@ -452,7 +496,7 @@ msgid "Posts"
 msgstr ""
 
 #: inc/customizer/customizer.php:203
-msgid "Modify how posts appear in WP-Forge."
+msgid "Modify how posts appear in your theme."
 msgstr ""
 
 #: inc/customizer/customizer.php:215
@@ -472,7 +516,7 @@ msgid "Footer"
 msgstr ""
 
 #: inc/customizer/customizer.php:258
-msgid "Modify the footer text of WP-Forge."
+msgid "Modify the footer text of your theme."
 msgstr ""
 
 #: inc/customizer/customizer.php:267
@@ -484,7 +528,7 @@ msgid "Background"
 msgstr ""
 
 #: inc/customizer/customizer.php:276
-msgid "Modify the background of WP-Forge."
+msgid "Modify the background of your theme."
 msgstr ""
 
 #: inc/customizer/customizer.php:290
@@ -516,54 +560,62 @@ msgid "Tile Vertically"
 msgstr ""
 
 #: inc/customizer/customizer.php:340
-msgid "Background Position"
+msgid "Background Size"
 msgstr ""
 
 #: inc/customizer/customizer.php:344
+msgid "Cover"
+msgstr ""
+
+#: inc/customizer/customizer.php:358
+msgid "Background Position"
+msgstr ""
+
+#: inc/customizer/customizer.php:362
 msgid "Left"
 msgstr ""
 
-#: inc/customizer/customizer.php:345
+#: inc/customizer/customizer.php:363
 msgid "Center"
 msgstr ""
 
-#: inc/customizer/customizer.php:346
+#: inc/customizer/customizer.php:364
 msgid "Right"
 msgstr ""
 
-#: inc/customizer/customizer.php:360
+#: inc/customizer/customizer.php:378
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer/customizer.php:364
+#: inc/customizer/customizer.php:382
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer/customizer.php:365
+#: inc/customizer/customizer.php:383
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer/customizer.php:371
+#: inc/customizer/customizer.php:389
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:372
-msgid "Change some default colors of WP-Forge."
+#: inc/customizer/customizer.php:390
+msgid "Change some default colors of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:385
+#: inc/customizer/customizer.php:403
 msgid "Title Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:399
+#: inc/customizer/customizer.php:417
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:413
+#: inc/customizer/customizer.php:431
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:427
+#: inc/customizer/customizer.php:445
 msgid "Hover Color"
 msgstr ""
 

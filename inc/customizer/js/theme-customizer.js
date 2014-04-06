@@ -59,6 +59,14 @@
 			}
 		});
 	});
+	wp.customize('wpforge_background_size', function(value) {
+		value.bind(function(to) {
+			$('body').css('background-size', to);
+			if( to == '' ){
+				$('body').css('background-size', '');
+			}
+		});
+	});	
 	wp.customize('wpforge_background_position', function(value) {
 		value.bind(function(to) {
 			$('body').css('background-position', to);

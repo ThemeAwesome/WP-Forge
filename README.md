@@ -1,4 +1,4 @@
-Welcome to WP-Forge v5.2.1
+Welcome to WP-Forge v5.2.2 (updated 04/06/2014)
 ====================
 WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation, the most advanced responsive front-end framework.
 
@@ -62,4 +62,3 @@ This means WP-Forge is completely free to use and modify as you see fit. I hope 
 ThemeAwesome.com
 =============
 WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on Responsive PSD to WordPress conversions and WordPress Theme Support
-

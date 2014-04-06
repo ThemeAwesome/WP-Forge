@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: http://wpforge.themeawesome.com/
 Author: Thomas E. Vasquez
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.2.1), the most advanced responsive front-end framework.
-Version: v5.2.1
+Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.2.2), the most advanced responsive front-end framework.
+Version: v5.2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -261,12 +261,11 @@ img.wp-smiley,
 -------------------------------------------------------------- */
 /* Body, links, basics */
 body {
-	background-color:#e6e6e6;
 	text-rendering: optimizeLegibility;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
-.row {
+#wrapper, .row {
 	background-color:#fff;
 }
 #wrapper {
@@ -274,7 +273,6 @@ body {
 	max-width: 62.5rem;
 	margin:0 auto;
 	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
-	background-color:#fff;
 	padding:1.5625rem 0.625rem 0;
 }
 
@@ -1217,7 +1215,7 @@ span.screen-reader-text {
 
 /* =Media Queries
 ----------------------------------------------- */
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 40em) { /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 	.site-header h1 {
 		font-size:1.875rem!important;
 	}
@@ -1258,3 +1256,11 @@ span.screen-reader-text {
 		padding-right: 0!important;
 	}
 }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+	}
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+	}
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+	}
+@media only screen and (min-width: 120.063em) { /* min-width 1921px, xlarge screens */
+	}

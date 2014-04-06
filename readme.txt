@@ -1,4 +1,4 @@
-WP-Forge v5.2.1
+WP-Forge v5.2.2
 =======================================
 Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation, the most advanced responsive front-end framework.
 
@@ -53,11 +53,12 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 2. Click "Save and Publish" once you are done
 
 = Background Section
-1. Change the background color of your site
+1. Change the background color of your site. The defaults have been removed, so you may want to set a background color.
 2. Use a background image for your site
+3. Background-Size: If you want to use a large image as the background of your site, set this to cover.
 3. Set how the background image repeats
-4. Ste the position of the background image
-5. Choose a fixed or scrolling background
+4. Ste the position of the background image (if you use a background image and choose cover, set this to center)
+5. Choose a fixed or scrolling background 
 6. Click "Save and Publish" once you are done
 
 = Colors
