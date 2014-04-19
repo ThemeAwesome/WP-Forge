@@ -105,7 +105,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem;
+  max-width: 100%;
   *zoom: 1; }
   .row:before, .row:after {
     content: " ";

@@ -18,7 +18,7 @@
 * @author Devin Price (@devinsays)
 * @see http://wptheming.com/2012/06/add-options-to-theme-customizer-default-sections/
 *
-* @since WP-Forge 5.2.2
+* @since WP-Forge 5.2.2.1
 */
 
 function wpforge_customizer( $wp_customize ) { // Begin WP-Forge Theme Customizer
@@ -47,7 +47,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	// Add Site Logo
 	$wp_customize->add_setting('wpforge_logo',array(
 		'default' => '',
-		'type'           => 'theme_mod',
+		'type'    => 'theme_mod',
 	));	 
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'wpforge_logo',array(
 		'label' => __('Site Logo', 'wpforge'),
@@ -203,6 +203,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'description' => __('Modify how posts appear in your theme.', 'wpforge'),
 		'priority' => 40,
     ));
+    // Show full posts or excerpts
 	$wp_customize->add_setting('wpforge_post_display',array(
 		'default' => 'full',
 		'type' => 'theme_mod',
@@ -212,13 +213,14 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('wpforge_post_display',array(
 		'type' => 'select',
-		'label' => __('Show Full Post or Excerpt?', 'wpforge'),
+		'label' => __('Show full post or excerpt?', 'wpforge'),
 		'section' => 'wpforge_posts',
 		'choices' => array(
 			'full' => 'Full Post',
 			'excerpt' => 'Excerpt',
 		),
 	));
+	// Show thumbnails on index page
 	$wp_customize->add_setting('wpforge_thumb_display',array(
 		'default' => 'no',
 		'type' => 'theme_mod',
@@ -228,13 +230,14 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('wpforge_thumb_display',array(
 		'type' => 'select',
-		'label' => __('Show Post Thumbnail on Index?', 'wpforge'),
+		'label' => __('Display post thumbnails?', 'wpforge'),
 		'section' => 'wpforge_posts',
 		'choices' => array(
 			'no' => 'No',
 			'yes' => 'Yes',
 		),
-	));	
+	));
+	// Show thumbnails on single post view
 	$wp_customize->add_setting('wpforge_single_thumb_display',array(
 		'default' => 'no',
 		'type' => 'theme_mod',
@@ -244,13 +247,13 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('wpforge_single_thumb_display',array(
 		'type' => 'select',
-		'label' => __('Show Post Thumbnail on Single Post?', 'wpforge'),
+		'label' => __('Show single post view thumbnail?', 'wpforge'),
 		'section' => 'wpforge_posts',
 		'choices' => array(
 			'no' => 'No',
 			'yes' => 'Yes',
 		),
-	));	
+	)); 
 				
 //The Footer Section
     $wp_customize->add_section('wpforge_footer',array(
@@ -327,7 +330,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		),
 	));
 	// Background Size
-			$wp_customize->add_setting( 'wpforge_background_size', array(
+	$wp_customize->add_setting( 'wpforge_background_size', array(
 		'default' => '',
 		'type' => 'theme_mod',
 		'transport' => 'postMessage',
@@ -442,19 +445,19 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 7,		
     ));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_hover_color',array(
-		'label' => __('Hover Color','wpforge'),
+		'label' => __('Link Hover Color','wpforge'),
 		'section' => 'wpforge_colors',
 		'settings' => 'wpforge_hover_color',
 	)));			 
 		
 /*
- * Sanitize - Add a sanitation functions section for text inputs, check boxes, radio buttons and select lists
+ * Sanitation Section - This is where we add our sanitation functions for text inputs, check boxes, radio buttons and select lists
  * I like to keep them all in one area for organization.
  * 
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
  
- // Header Sanitation
+ // Header Sanitation Section
 function wpforge_sanitize_site_title( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }
@@ -469,12 +472,12 @@ function wpforge_sanitize_headtxt( $input ) {
     }
 }
 
-// Navigation Sanitation
+// Navigation Sanitation Section
 function wpforge_sanitize_navtxt( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }
 
-// Post Sanitation
+// Post Sanitation Section
 function wpforge_sanitize_post_display( $input ) {
     $valid = array(
         'full' => 'Full Post',
@@ -511,12 +514,13 @@ function wpforge_sanitize_single_thumb_display( $input ) {
         return '';
     }
 }
-// Footer Sanitation
+
+// Footer Sanitation Section
 function wpforge_sanitize_footer_text( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }
 
-// Background Sanitation
+// Background Sanitation Section
 function wpforge_sanitize_background_repeat( $input ) {
     $valid = array(
         'no-repeat' => 'No Repeat',
@@ -544,9 +548,9 @@ function wpforge_sanitize_background_size( $input ) {
 }
 function wpforge_sanitize_background_position( $input ) {
     $valid = array(
-        'left' => 'Left',
+        'left' 	 => 'Left',
         'center' => 'Center',
-		'right' => 'Right',
+		'right'  => 'Right',
     );
  
     if ( array_key_exists( $input, $valid ) ) {
@@ -572,7 +576,7 @@ function wpforge_sanitize_background_attachment( $input ) {
  * Add postMessage support for some sections of our Theme Customizer.
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  * 
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -597,7 +601,7 @@ add_action( 'customize_register', 'wpforge_customizer' ); // End WP-Forge Theme 
  * @author Anthony Wilhelm (@awshout)
  * @see https://github.com/awtheme/reactor
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_customizer_css() {
 	do_action('wpforge_customizer_css');
@@ -646,9 +650,9 @@ function wpforge_customizer_css() {
 add_action('wp_head', 'wpforge_customizer_css');
 
 /**
- * Registers WP-Forge Theme Customizer Preview with WordPress.
+ * Registers our theme customizer preview with WordPress.
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_customize_preview_js() {
 	wp_enqueue_script('wpforge-customizer', get_template_directory_uri() . '/inc/customizer/js/theme-customizer.js', array('jquery', 'customize-preview' ),'1.0.0', true);

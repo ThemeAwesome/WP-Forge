@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 ?>
     
@@ -15,8 +15,7 @@
     <?php } else { ?>
     <div class="row">
     <?php } // end if ?>
-        <div class="navcontainer medium-12 large-12 columns">
-            <nav class="top-bar" data-topbar>
+            <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true">
                 <ul class="title-area">
             	<?php if( get_theme_mod( 'wpforge_nav_title' ) == 'yes') { ?>
                     <li class="name">
@@ -46,8 +45,7 @@
                     ) );
                     ?>
                 </section>
-            </nav>
-        </div><!-- .columns -->    
+            </nav>   
     </div><!-- .row -->
 
 <?php } // end if ?>
@@ -59,7 +57,7 @@
     <?php } else { ?>
     <div class="<?php echo get_theme_mod( 'wpforge_nav_display' ); ?>">
     <?php } // end if ?>
-        <nav class="top-bar" data-topbar>
+        <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true">
             <ul class="title-area">
             	<?php if( get_theme_mod( 'wpforge_nav_title' ) == 'yes') { ?>
                     <li class="name">
@@ -101,9 +99,8 @@
     <?php } else { ?>
     <div class="row">
     <?php } // end if ?>
-        <div class="navcontainer medium-12 large-12 columns">
         	<div class="contain-to-grid sticky">
-                <nav class="top-bar" data-topbar>
+                <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: true">
                     <ul class="title-area">
                     <?php if( get_theme_mod( 'wpforge_nav_title' ) == 'yes') { ?>
                         <li class="name">
@@ -135,7 +132,6 @@
                     </section>
                 </nav>
             </div><!-- contain-to-grid sticky -->
-        </div><!-- .columns -->    
     </div><!-- .row -->
 
 <?php } // end if ?>
