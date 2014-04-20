@@ -19,7 +19,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 
 /**
@@ -56,12 +56,11 @@ if ( ! isset( $content_width ) )
  *
  * @uses load_theme_textdomain() For translation/localization support.
  * @uses add_editor_style() To add a Visual Editor stylesheet.
- * @uses add_theme_support() To add support for post thumbnails, automatic feed links,
- * 	custom background, and post formats.
+ * @uses add_theme_support() To add support for post thumbnails, automatic feed links, custom background, and post formats.
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_setup() {
 	/*
@@ -96,7 +95,7 @@ function wpforge_setup() {
 		'footer' => 'page',
 	) );	
 
-	// This theme uses wp_nav_menu() in two locations.
+	// This theme uses wp_nav_menu() in three locations.
 	register_nav_menus(array(
 		'primary' 	=> __( 'Main Menu', 'wpforge' ), 
 		'secondary' => __( 'Footer Menu', 'wpforge' ),
@@ -112,35 +111,23 @@ function wpforge_setup() {
 }
 add_action( 'after_setup_theme', 'wpforge_setup' );
 
-// Our custom Theme Optimizer.
+// Loads our theme customizer.
 require( get_template_directory() . '/inc/customizer/customizer.php' );
 
 /**
- * Enqueues scripts and styles for front-end.
+ * Enqueue our scripts and styles
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_scripts_styles() {
-	global $wp_styles;
-	
-	// modernizr (without media query polyfill)
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '2.7.1', false );	
+	global $wp_styles;	
 
-	// Enque threaded comments script in footer
-	function my_enqueue_comments_reply() {
-		if( get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-		}
-	}
-	add_action( 'comment_form_before', 'my_enqueue_comments_reply' );	
-
-    // Register Foundation scripts file in the footer
+	// Enqueue our scripts
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array('jquery'), '2.7.2', false );	
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '', true );
-	
-    // Register JavaScript file with functionality specific to WP-Forge.
-    wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '', true );
+    wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '5.2.2.1', true );
 
-	// Load all of our stylesheets
+	// Enqueue our stylesheets
 	wp_enqueue_style( 'wpforge-fonts', get_template_directory_uri() . '/fonts/wpforge-fonts.css' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.css' );	
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
@@ -149,6 +136,14 @@ function wpforge_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'wpforge_scripts_styles', 0 );
 
+// Enque threaded comments script in footer
+function my_enqueue_comments_reply() {
+	if( get_option( 'thread_comments' ) ) {
+	wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'comment_form_before', 'my_enqueue_comments_reply' );
+
 /**
  * Creates a nicely formatted and more specific title element text for output
  * in head of document, based on current view.
@@ -156,7 +151,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_scripts_styles', 0 );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -184,7 +179,7 @@ add_filter( 'wp_title', 'wpforge_wp_title', 10, 2 );
  * A fallback when no navigation is selected by default, otherwise it throws some nasty errors in your face.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.2 
+ * @since WP-Forge 5.2.2.1 
  */
 function wpforge_menu_fallback() {
 	echo '<div class="alert-box secondary"><p>';
@@ -213,7 +208,7 @@ add_filter( 'nav_menu_css_class', 'wpforge_active_nav_class', 10, 2 );
  * Use the active class of ZURB Foundation on wp_list_pages output.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.2 
+ * @since WP-Forge 5.2.2.1 
  */
 function wpforge_active_list_pages_class( $input ) {
 
@@ -232,7 +227,7 @@ add_filter( 'wp_list_pages', 'wpforge_active_list_pages_class', 10, 2 );
  * Courtesy of Kriesi.at. http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.2 
+ * @since WP-Forge 5.2.2.1 
  */
 class wpforge_walker extends Walker_Nav_Menu {
 
@@ -347,7 +342,7 @@ class wpforge_walker extends Walker_Nav_Menu {
 /**
  * Registers our main, front page and footer widget areas.
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_widgets_init() {
 	register_sidebar( array(
@@ -516,7 +511,7 @@ function page_navi($before = '', $after = '') {
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 if ( ! function_exists( 'wpforge_content_nav' ) ) :
 
@@ -679,7 +674,7 @@ endif;
  * @param array Existing class values.
  * @return array Filtered class values.
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_body_class( $classes ) {
 	$background_color = get_background_color();
@@ -715,7 +710,7 @@ add_filter( 'body_class', 'wpforge_body_class' );
  * Adjusts content_width value for full-width and single image attachment
  * templates, and when there are no active widgets in the sidebar.
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_content_width() {
 	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -742,7 +737,7 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
 // Allows shortcodes to be used in text widgets
 add_filter('widget_text', 'do_shortcode');
 
-// remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
+// remove the <p> from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
@@ -760,7 +755,7 @@ function remove_thumbnail_dimensions( $html ) {
 /**
  * Remove wp version param from any enqueued scripts
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 
 function _remove_script_version( $src ){
@@ -773,7 +768,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 /**
  * Remove .sticky from the post_class array (Thanks to required+ foundation)
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_filter_post_class( $classes ) {
     if ( ( $key = array_search( 'sticky', $classes ) ) !== false ) {
@@ -788,22 +783,55 @@ add_filter( 'post_class', 'wpforge_filter_post_class', 20 );
  * Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
  * @see https://gist.github.com/Narga/2887406
  *
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_remove_recent_comments_style() {  
-        global $wp_widget_factory;  
-        remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
-    }  
+	global $wp_widget_factory;  
+	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
+}  
 add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
 
 /**
  * Add favicon to header
  * 
- * @since WP-Forge 5.2.2
+ * @since WP-Forge 5.2.2.1
  */
 function wpforge_favicon() {
-echo '<link rel="shortcut icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">'."\n". '<link rel="icon" href="' . site_url() . '/favicon.ico" type="image/x-icon">';
+echo '<link rel="shortcut icon" type="image/x-icon" href="' . site_url() . '/favicon.ico" />'."\n";
 }
 add_action('wp_head', 'wpforge_favicon', 0);
+
+/**
+ * Link all post thumbnials to the post permalink
+ * @see http://codex.wordpress.org/Function_Reference/the_post_thumbnail
+ * 
+ * @since WP-Forge 5.2.2.1.1
+ */
+function my_post_image_html( $html, $post_id, $post_image_id ) {
+  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_the_title( $post_id ) ) . '">' . $html . '</a>';
+  return $html;
+}
+add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+
+/**
+ * Insert Images with Figure/Figcaption
+ * @see http://css-tricks.com/snippets/wordpress/insert-images-with-figurefigcaption/
+ * 
+ * Thanks to Tommie Landstrom https://github.com/tommielandstrom
+ * 
+ * @since WP-Forge 5.2.2.1.1
+ */
+function html5_insert_image($html, $id, $caption, $title, $align, $url, $size, $alt) {
+	$url = wp_get_attachment_url($id);
+	$src = wp_get_attachment_image_src( $id, $size, false );
+	$html5 = "<figure class='align$align'><a href='$url'>";
+	$html5 .= "<img src='$src[0]' alt='$alt' />";
+	if ($caption) {
+	$html5 .= "<figcaption>$caption</figcaption>";
+	}
+	$html5 .= "</a></figure>";
+	return $html5;
+	}
+add_filter( 'image_send_to_editor', 'html5_insert_image', 10, 9 );
 
 ?>
