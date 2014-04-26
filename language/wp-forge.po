@@ -1,0 +1,640 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Forge\n"
+"POT-Creation-Date: 2014-04-06 07:36-0700\n"
+"PO-Revision-Date: 2014-04-06 07:37-0700\n"
+"Last-Translator: Thomas Vasquez <tsquez@gmail.com>\n"
+"Language-Team: Thomas Vasquez <tsquez@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: 404.php:22
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: 404.php:26 404.php:29 searchform.php:14 searchform.php:17
+msgid "Search"
+msgstr ""
+
+#: archive.php:30
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:32
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:32
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:34
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:34
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:36
+msgid "Asides"
+msgstr ""
+
+#: archive.php:39
+msgid "Audio"
+msgstr ""
+
+#: archive.php:42
+msgid "Chats"
+msgstr ""
+
+#: archive.php:45
+msgid "Galleries"
+msgstr ""
+
+#: archive.php:48
+msgid "Images"
+msgstr ""
+
+#: archive.php:51
+msgid "Links"
+msgstr ""
+
+#: archive.php:54
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:57
+msgid "Status"
+msgstr ""
+
+#: archive.php:60
+msgid "Videos"
+msgstr ""
+
+#: archive.php:63
+msgid "Archives"
+msgstr ""
+
+#: author.php:30
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: author.php:48 content-author.php:17 content.php:51
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: category.php:22
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: comments.php:27
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:44
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:45
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:46
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:51
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:67
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:68
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:69
+msgid "Cancel Reply"
+msgstr ""
+
+#: comments.php:70
+msgid "Post Comment"
+msgstr ""
+
+#: comments.php:72
+msgid "Comment"
+msgstr ""
+
+#: comments.php:78
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:84
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: comments.php:91
+msgid "Your email address will not be published."
+msgstr ""
+
+#: comments.php:94
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: comments.php:111
+msgid "Your Website"
+msgstr ""
+
+#: content-aside.php:13 content-audio.php:18 content-gallery.php:17
+#: content-video.php:17 content.php:18 functions.php:658
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-aside.php:15 content-image.php:13 content-link.php:13
+#: content-quote.php:13 content-status.php:20
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-aside.php:22 content-audio.php:37 content-chat.php:30
+#: content-gallery.php:36 content-image.php:19 content-link.php:19
+#: content-quote.php:19 content-status.php:26 content-video.php:36
+#: content.php:44 functions.php:592
+msgid "Edit"
+msgstr ""
+
+#: content-audio.php:29 content-gallery.php:28 content-video.php:28
+#: content.php:37
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: content-audio.php:30 content-chat.php:24 content-gallery.php:29
+#: content-page.php:18 content-video.php:29 content.php:38 image.php:94
+msgid "Pages:"
+msgstr ""
+
+#: content-author.php:21
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-none.php:13
+msgid "No posts to display"
+msgstr ""
+
+#: content-none.php:16
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:20
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:23
+msgid ""
+"Apologies, but no results were found. Perhaps another search will help you "
+"find what you&#39;re looking for."
+msgstr ""
+
+#: content-page.php:21
+msgid "Edit Page"
+msgstr ""
+
+#: content.php:26
+msgid "Leave a reply"
+msgstr ""
+
+#: content.php:26
+msgid "1 Reply"
+msgstr ""
+
+#: content.php:26
+msgid "% Replies"
+msgstr ""
+
+#: content.php:55
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "Powered by"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "http://themeawesome.com/responsive-wordpress-theme/"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "Responsive WordPress Theme by ThemeAwesome.com"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "WP-Forge"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "WordPress"
+msgstr ""
+
+#: functions.php:101
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:102
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:103
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:177
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:192
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr ""
+
+#: functions.php:193
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr ""
+
+#: functions.php:196
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr ""
+
+#: functions.php:354
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:356
+msgid "Displays widgets in the blog area as well as pages."
+msgstr ""
+
+#: functions.php:363
+msgid "First Front Page Widget Area"
+msgstr ""
+
+#: functions.php:365 functions.php:374
+msgid ""
+"Appears when using the optional Front Page template with a page set as "
+"Static Front Page"
+msgstr ""
+
+#: functions.php:372
+msgid "Second Front Page Widget Area"
+msgstr ""
+
+#: functions.php:381
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: functions.php:383 functions.php:392 functions.php:401
+msgid "An optional widget area for your site footer"
+msgstr ""
+
+#: functions.php:390
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: functions.php:399
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: functions.php:533
+msgid "Post navigation"
+msgstr ""
+
+#: functions.php:534
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: functions.php:535
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: functions.php:560
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:560
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:575
+msgid "Post Author"
+msgstr ""
+
+#: functions.php:581
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:587
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:596
+msgid "Reply &raquo;"
+msgstr ""
+
+#: functions.php:615
+msgid "Sticky"
+msgstr ""
+
+#: functions.php:621 functions.php:627
+msgid ", "
+msgstr ""
+
+#: functions.php:636
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: functions.php:654
+#, php-format
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: image.php:28
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\"><i class=\"fa fa-calendar-o"
+"\"></i> </span> <span class=\"entry-date\"><time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-"
+"camera-retro\"></i> <a href=\"%3$s\" title=\"Link to full-size image\">%4$s "
+"&times; %5$s</a>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-folder-open\"></i> <a "
+"href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: image.php:39
+msgid " Edit"
+msgstr ""
+
+#: image.php:43
+msgid "&laquo; Previous Image"
+msgstr ""
+
+#: image.php:44
+msgid "Next Image &raquo;"
+msgstr ""
+
+#: inc/customizer/customizer.php:35
+msgid "Set up a front page for your theme."
+msgstr ""
+
+#: inc/customizer/customizer.php:43
+msgid "Header"
+msgstr ""
+
+#: inc/customizer/customizer.php:44
+msgid "Modify the header portion of your theme."
+msgstr ""
+
+#: inc/customizer/customizer.php:53
+msgid "Site Logo"
+msgstr ""
+
+#: inc/customizer/customizer.php:67
+msgid "Site Title"
+msgstr ""
+
+#: inc/customizer/customizer.php:80
+msgid "Tagline"
+msgstr ""
+
+#: inc/customizer/customizer.php:93
+msgid "Show Title &amp; Tagline"
+msgstr ""
+
+#: inc/customizer/customizer.php:109
+msgid "Main Menu Position"
+msgstr ""
+
+#: inc/customizer/customizer.php:126
+msgid "If Top of Browser, scroll or fixed?"
+msgstr ""
+
+#: inc/customizer/customizer.php:142
+msgid "Change text for Home Link?"
+msgstr ""
+
+#: inc/customizer/customizer.php:155
+msgid "If Yes, Add New Anchor Text"
+msgstr ""
+
+#: inc/customizer/customizer.php:163
+msgid "Off-Canvas"
+msgstr ""
+
+#: inc/customizer/customizer.php:164
+msgid "Configure Off-Canvas mobile menu."
+msgstr ""
+
+#: inc/customizer/customizer.php:176
+msgid "Use Off-Canvas for Mobile?"
+msgstr ""
+
+#: inc/customizer/customizer.php:192
+msgid "Display Off-Canvas Left or Right?"
+msgstr ""
+
+#: inc/customizer/customizer.php:202
+msgid "Posts"
+msgstr ""
+
+#: inc/customizer/customizer.php:203
+msgid "Modify how posts appear in your theme."
+msgstr ""
+
+#: inc/customizer/customizer.php:215
+msgid "Show Full Post or Excerpt?"
+msgstr ""
+
+#: inc/customizer/customizer.php:231
+msgid "Show Post Thumbnail on Index?"
+msgstr ""
+
+#: inc/customizer/customizer.php:247
+msgid "Show Post Thumbnail on Single Post?"
+msgstr ""
+
+#: inc/customizer/customizer.php:257
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/customizer.php:258
+msgid "Modify the footer text of your theme."
+msgstr ""
+
+#: inc/customizer/customizer.php:267
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/customizer.php:275
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/customizer.php:276
+msgid "Modify the background of your theme."
+msgstr ""
+
+#: inc/customizer/customizer.php:290
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:304
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer/customizer.php:319
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/customizer/customizer.php:323
+msgid "No Repeat"
+msgstr ""
+
+#: inc/customizer/customizer.php:324
+msgid "Tile"
+msgstr ""
+
+#: inc/customizer/customizer.php:325
+msgid "Tile Horizontally"
+msgstr ""
+
+#: inc/customizer/customizer.php:326
+msgid "Tile Vertically"
+msgstr ""
+
+#: inc/customizer/customizer.php:340
+msgid "Background Size"
+msgstr ""
+
+#: inc/customizer/customizer.php:344
+msgid "Cover"
+msgstr ""
+
+#: inc/customizer/customizer.php:358
+msgid "Background Position"
+msgstr ""
+
+#: inc/customizer/customizer.php:362
+msgid "Left"
+msgstr ""
+
+#: inc/customizer/customizer.php:363
+msgid "Center"
+msgstr ""
+
+#: inc/customizer/customizer.php:364
+msgid "Right"
+msgstr ""
+
+#: inc/customizer/customizer.php:378
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/customizer/customizer.php:382
+msgid "Scroll"
+msgstr ""
+
+#: inc/customizer/customizer.php:383
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/customizer.php:389
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/customizer.php:390
+msgid "Change some default colors of your theme."
+msgstr ""
+
+#: inc/customizer/customizer.php:403
+msgid "Title Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:417
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:431
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:445
+msgid "Hover Color"
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:21
+msgctxt "Previous post link"
+msgid "&laquo;"
+msgstr ""
+
+#: single.php:22
+msgctxt "Next post link"
+msgid "&raquo;"
+msgstr ""
+
+#: tag.php:22
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""

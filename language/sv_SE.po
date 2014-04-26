@@ -1,0 +1,508 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Forge vv1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-10-26 01:10:57+0000\n"
+"Last-Translator: Christopher Anderton <christopher@deluxive.se>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:18
+#@ wpforge
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Det här var ju lite pinsamt, inte sant?"
+
+#: 404.php:22
+#@ wpforge
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Det verkar inte som om vi kan hitta det du letar efter. En sökning kanske kan hjälpa."
+
+#: archive.php:30
+#, php-format
+#@ wpforge
+msgid "Daily Archives: %s"
+msgstr "Dagsarkiv: %s"
+
+#: archive.php:32
+#, php-format
+#@ wpforge
+msgid "Monthly Archives: %s"
+msgstr "Månadsarkiv: %s"
+
+#: archive.php:32
+#@ wpforge
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:34
+#, php-format
+#@ wpforge
+msgid "Yearly Archives: %s"
+msgstr "Årsarkiv: %s"
+
+#: archive.php:34
+#@ wpforge
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:36
+#@ wpforge
+msgid "Archives"
+msgstr "Arkiv"
+
+#: author.php:33
+#, php-format
+#@ wpforge
+msgid "Author Archives: %s"
+msgstr "Författararkiv: %s"
+
+#: author.php:52
+#: content-aside.php:28
+#: content-audio.php:43
+#: content-chat.php:36
+#: content-gallery.php:42
+#: content-image.php:25
+#: content-link.php:25
+#: content-quote.php:25
+#: content-status.php:32
+#: content-video.php:42
+#: content.php:48
+#, php-format
+#@ wpforge
+msgid "About %s"
+msgstr "Om %s"
+
+#: category.php:22
+#, php-format
+#@ wpforge
+msgid "Category Archives: %s"
+msgstr "Kategoriarkiv: %s"
+
+#: comments.php:31
+#, php-format
+#@ wpforge
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "En reaktion på &rdquo;%2$s&rdquo;"
+msgstr[1] "%1$s reaktioner på &rdquo;%2$s&rdquo;"
+
+#: comments.php:42
+#@ wpforge
+msgid "Comment navigation"
+msgstr "Kommentarsnavigering"
+
+#: comments.php:43
+#@ wpforge
+msgid "&larr; Older Comments"
+msgstr "&larr; Äldre kommentarer"
+
+#: comments.php:44
+#@ wpforge
+msgid "Newer Comments &rarr;"
+msgstr "Nyare kommentarer &rarr;"
+
+#: comments.php:53
+#@ wpforge
+msgid "Comments are closed."
+msgstr "Kommentarsfunktionen är inaktiverad."
+
+#: content-aside.php:13
+#: content-audio.php:18
+#: content-gallery.php:17
+#: content-video.php:17
+#: content.php:18
+#: functions.php:728
+#, php-format
+#@ wpforge
+msgid "Permalink to %s"
+msgstr "Permalänk till %s"
+
+#: content-aside.php:15
+#: content-image.php:13
+#: content-link.php:13
+#: content-quote.php:13
+#: content-status.php:20
+#@ wpforge
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Läs mer <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-aside.php:21
+#: content-audio.php:36
+#: content-chat.php:29
+#: content-gallery.php:35
+#: content-image.php:18
+#: content-link.php:18
+#: content-page.php:21
+#: content-quote.php:18
+#: content-status.php:25
+#: content-video.php:35
+#: content.php:41
+#: functions.php:626
+#@ wpforge
+msgid "Edit"
+msgstr "Redigera"
+
+#: content-aside.php:32
+#: content-audio.php:47
+#: content-chat.php:40
+#: content-gallery.php:46
+#: content-image.php:29
+#: content-link.php:29
+#: content-quote.php:29
+#: content-status.php:36
+#: content-video.php:46
+#, php-format
+#@ wpforge
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Visa alla inlägg av %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-audio.php:29
+#: content-gallery.php:28
+#: content-video.php:28
+#: content.php:34
+#@ wpforge
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Läs mer <span class=\"meta-nav\">&raquo;</span>"
+
+#: content-audio.php:30
+#: content-chat.php:24
+#: content-gallery.php:29
+#: content-page.php:18
+#: content-video.php:29
+#: content.php:35
+#: image.php:94
+#@ wpforge
+msgid "Pages:"
+msgstr "Sidor:"
+
+#: content-none.php:13
+#@ wpforge
+msgid "Nothing Found"
+msgstr "Inget funnet"
+
+#: content-none.php:17
+#@ wpforge
+msgid "Apologies, but no results were found. Perhaps another search will help you find what you&#39;re looking for."
+msgstr "Tyvärr så hittades inga resultat. Kanske en ny sökning hjälper dig att hitta det du letar efter."
+
+#: content.php:23
+#@ wpforge
+msgid "Leave a reply"
+msgstr "Lämna ett svar"
+
+#: content.php:23
+#@ wpforge
+msgid "1 Reply"
+msgstr "Ett svar"
+
+#: content.php:23
+#@ wpforge
+msgid "% Replies"
+msgstr "% svar"
+
+#: content.php:52
+#, php-format
+#@ wpforge
+msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Visa alla inlägg av %s <span class=\"meta-nav\">&raquo;</span>"
+
+#: footer.php:35
+#@ wpforge
+msgid "Powered by"
+msgstr "Drivs med"
+
+#: footer.php:35
+#@ wpforge
+msgid "http://themeawesome.com/wpforge"
+msgstr "http://themeawesome.com/wpforge"
+
+#: footer.php:35
+#@ wpforge
+msgid "A mixin by ThemeAwesome.com"
+msgstr "En mixin av ThemeAwesome.com"
+
+#: footer.php:36
+#@ wpforge
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:36
+#@ wpforge
+msgid "WordPress"
+msgstr "WordPress"
+
+#: functions.php:92
+#@ wpforge
+msgid "Primary Navigation"
+msgstr "Primär navigation"
+
+#: functions.php:93
+#@ wpforge
+msgid "Secondary Navigation"
+msgstr "Sekundär navigation"
+
+#: functions.php:164
+#@ wpforge
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "på"
+
+#: functions.php:225
+#, php-format
+#@ wpforge
+msgid "Page %s"
+msgstr "Sida %s"
+
+#: functions.php:240
+#, php-format
+#@ wpforge
+msgid "Please assign a menu to the primary menu location under %1$s or %2$s the design."
+msgstr "Var god tilldela en meny till den primära menyplatsen under %1$s eller %2$s designen."
+
+#: functions.php:241
+#, php-format
+#@ wpforge
+msgid "<a href=\"%s\">Menus</a>"
+msgstr "<a href=\"%s\">Menyer</a>"
+
+#: functions.php:244
+#, php-format
+#@ wpforge
+msgid "<a href=\"%s\">Customize</a>"
+msgstr "<a href=\"%s\">Anpassa</a>"
+
+#: functions.php:390
+#@ wpforge
+msgid "Main Sidebar"
+msgstr "Primärt sidofält"
+
+#: functions.php:392
+#@ wpforge
+msgid "Displays widgets in the blog area as well as pages."
+msgstr "Visar widgets i bloggområden men även på sidor."
+
+#: functions.php:399
+#@ wpforge
+msgid "First Front Page Widget Area"
+msgstr "Första widgetområdet för startsidan"
+
+#: functions.php:401
+#: functions.php:410
+#@ wpforge
+msgid "Appears when using the optional Front Page template with a page set as Static Front Page"
+msgstr "Visas när du använder mallen ”Startsida” (ej obligatorisk) med en sida vald som statisk förstasida."
+
+#: functions.php:408
+#@ wpforge
+msgid "Second Front Page Widget Area"
+msgstr "Andra widgetområdet för startsidan"
+
+#: functions.php:417
+#@ wpforge
+msgid "First Footer Widget Area"
+msgstr "Första widgetområdet för sidfoten"
+
+#: functions.php:419
+#: functions.php:428
+#: functions.php:437
+#@ wpforge
+msgid "An optional widget area for your site footer"
+msgstr "Ett valfritt widgetområde för din sajts sidfot"
+
+#: functions.php:426
+#@ wpforge
+msgid "Second Footer Widget Area"
+msgstr "Andra widgetområdet"
+
+#: functions.php:435
+#@ wpforge
+msgid "Third Footer Widget Area"
+msgstr "Tredje widgetområdet"
+
+#: functions.php:568
+#@ wpforge
+msgid "Post navigation"
+msgstr "Inläggsnavigering"
+
+#: functions.php:569
+#@ wpforge
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Äldre inlägg"
+
+#: functions.php:570
+#@ wpforge
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyare inlägg <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:594
+#@ wpforge
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:594
+#@ wpforge
+msgid "(Edit)"
+msgstr "(Redigera)"
+
+#: functions.php:609
+#@ wpforge
+msgid "Post Author"
+msgstr "Inläggsförfattare"
+
+#. translators: 1: date, 2: time
+#: functions.php:615
+#, php-format
+#@ wpforge
+msgid "%1$s at %2$s"
+msgstr "%1$s kl. %2$s"
+
+#: functions.php:621
+#@ wpforge
+msgid "Your comment is awaiting moderation."
+msgstr "Din kommentar inväntar moderering."
+
+#: functions.php:630
+#@ wpforge
+msgid "Reply &raquo;"
+msgstr "Svara &raquo;"
+
+#: functions.php:649
+#@ wpforge
+msgid "Sticky"
+msgstr "Klistrad"
+
+#: functions.php:652
+#@ wpforge
+msgid "Aside"
+msgstr "Anteckning"
+
+#: functions.php:656
+#@ wpforge
+msgid "Audio"
+msgstr "Ljud"
+
+#: functions.php:660
+#@ wpforge
+msgid "Chat"
+msgstr "Chatt"
+
+#: functions.php:664
+#@ wpforge
+msgid "Gallery"
+msgstr "Galleri"
+
+#: functions.php:668
+#@ wpforge
+msgid "Image"
+msgstr "Bild"
+
+#: functions.php:672
+#@ wpforge
+msgid "Link"
+msgstr "Länk"
+
+#: functions.php:676
+#@ wpforge
+msgid "Quote"
+msgstr "Citat"
+
+#: functions.php:680
+#@ wpforge
+msgid "Status"
+msgstr "Status"
+
+#: functions.php:684
+#@ wpforge
+msgid "Video"
+msgstr "Video"
+
+#: functions.php:691
+#: functions.php:697
+#@ wpforge
+msgid ", "
+msgstr ", "
+
+#: functions.php:706
+#, php-format
+#@ wpforge
+msgid "View all posts by %s"
+msgstr "Visa all inlägg av %s"
+
+#: functions.php:724
+#, php-format
+#@ wpforge
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr "%1$s kl. %2$s"
+
+#: image.php:28
+#, php-format
+#@ wpforge
+msgid "<span class=\"meta-prep meta-prep-entry-date\"><i class=\"fa fa-calendar-o\"></i> </span> <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-camera-retro\"></i> <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-folder-open\"></i> <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr "<span class=\"meta-prep meta-prep-entry-date\"><i class=\"fa fa-calendar-o\"></i> </span> <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-camera-retro\"></i> <a href=\"%3$s\" title=\"Länk till bild i fullstorlek\">%4$s &times; %5$s</a>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-folder-open\"></i> <a href=\"%6$s\" title=\"Återvänd till %7$s\" rel=\"gallery\">%8$s</a>"
+
+#: image.php:39
+#@ wpforge
+msgid " Edit"
+msgstr "Redigera"
+
+#: image.php:43
+#@ wpforge
+msgid "&laquo; Previous Image"
+msgstr "&laquo; Föregående bild"
+
+#: image.php:44
+#@ wpforge
+msgid "Next Image &raquo;"
+msgstr "Nästa bild &raquo;"
+
+#: index.php:38
+#@ wpforge
+msgid "No posts to display"
+msgstr "Inga inlägg att visa"
+
+#: index.php:42
+#, php-format
+#@ wpforge
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr "Redo att publicera ditt första inlägg? <a href=\"%s\">Starta här</a>."
+
+#: search.php:19
+#, php-format
+#@ wpforge
+msgid "Search Results for: %s"
+msgstr "Sökresultat för: %s"
+
+#: single.php:21
+#@ wpforge
+msgctxt "Previous post link"
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: single.php:22
+#@ wpforge
+msgctxt "Next post link"
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: tag.php:22
+#, php-format
+#@ wpforge
+msgid "Tag Archives: %s"
+msgstr "Etikettarkiv: %s"
+
