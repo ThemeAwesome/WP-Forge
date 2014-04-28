@@ -1,5 +1,8 @@
-Welcome to WP-Forge v5.2.2.1 (updated 04/19/2014)
+Welcome to WP-Forge v5.2.2.2
 ====================
+
+###Updated 4-26-2014###
+
 WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation, the most advanced responsive front-end framework.
 
 ###Built with the following tools###
@@ -30,6 +33,9 @@ Includes what I consider the best free icon font in the world Font Awesome: http
 
 ###Yoast SEO Plugin###
 Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
+
+###Github Updater###
+Added support for Andy Fragen's [Github Updater] (https://github.com/afragen/github-updater) - Now you will can update WP-Forge from within WordPress itself. Make sure you download and install the plugin.
 
 ###WP-Forge Demo###
 You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The Viewport Resizer is available on the home page of the demo site. Simply click the button that states "Test WP-Forge Responsiveness" and the Viewport Resizer bar will appear at the top of the site allowing to test the theme against various device sizes.

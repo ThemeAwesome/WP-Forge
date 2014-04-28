@@ -1,18 +1,18 @@
-(function($) {
+(function($) { // Add java script to footer so all Foundation scripts will work
 jQuery(document).foundation()
 
-	// Joyride: Add java script to footer so all Foundation scripts will work
+	// Joyride
 	.foundation('joyride', 'start');
 
 	// Add button class to all submit buttons
 	jQuery('input[type="submit"]').addClass('tiny button');
 	
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
-    jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo" />');
+	jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo" />');
 	jQuery('iframe[src*="dailymotion.com"]').wrap('<div class="flex-video widescreen" />');
-    jQuery('iframe[src*="youtube.com"]').wrap('<div class="flex-video widescreen" />');
+	jQuery('iframe[src*="youtube.com"]').wrap('<div class="flex-video widescreen" />');
 	
-	// BackToTop: you can change the speed of the scroll below
+	// BackToTop Button: Controls the fade in of the BacktoTop Button
 	jQuery(window).load(function() {
 		jQuery("#topofpage").hide().removeAttr("href");
 		if (jQuery(window).scrollTop() != "0")
@@ -29,7 +29,7 @@ jQuery(document).foundation()
 	jQuery('#backtotop').click(function(){
 		jQuery('html, body').animate({
 		scrollTop: jQuery('body').offset().top
-		}, 1000);				   
+		}, 1000); // Change this value to control the speed of the scroll back to the top of the page.		   
 	});		
 	
 // end loading all functions   
