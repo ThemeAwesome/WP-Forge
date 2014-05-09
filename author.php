@@ -8,14 +8,14 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 
 get_header(); ?>
 
 	<div id="content" class="medium-8 large-8 columns" role="main">
     
-    	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
+    	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -40,15 +40,15 @@ get_header(); ?>
 			<?php
 			// If a user has filled out their description, show a bio on their entries.
 			if ( get_the_author_meta( 'description' ) ) : ?>
-			<div class="author-info">
-				<div class="author-avatar">
-					<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 72 ) ); ?>
-				</div><!-- .author-avatar -->
-				<div class="author-description">
-					<h2><?php printf( __( 'About %s', 'wpforge' ), get_the_author() ); ?></h2>
-					<p><?php the_author_meta( 'description' ); ?></p>
-				</div><!-- .author-description	-->
-			</div><!-- .author-info -->
+				<div class="author-info small-12 medium-12 large-12 columns">
+					<div class="author-avatar small-12 medium-12 large-12 columns">
+						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 96 ) ); ?>
+					</div><!-- .author-avatar -->
+					<div class="author-description small-12 medium-12 large-12 columns">
+						<h3><?php printf( __( 'About %s', 'wpforge' ), get_the_author() ); ?></h3>
+						<p><?php the_author_meta( 'description' ); ?></p>
+					</div><!-- .author-description -->
+				</div><!-- .author-info -->
 			<?php endif; ?>
 
 			<?php /* Start the Loop */ ?>

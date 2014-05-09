@@ -19,7 +19,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 
 /**
@@ -60,7 +60,7 @@ if ( ! isset( $content_width ) )
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_setup() {
 	/*
@@ -117,7 +117,7 @@ require( get_template_directory() . '/inc/customizer/customizer.php' );
 /**
  * Enqueue our scripts and styles
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_scripts_styles() {
 	global $wp_styles;	
@@ -125,13 +125,13 @@ function wpforge_scripts_styles() {
 	// Enqueue our scripts
     wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array('jquery'), '2.7.2', false );	
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '', true );
-    wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '5.2.2.2', true );
+    wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '5.2.2.3', true );
 
 	// Enqueue our stylesheets
-	wp_enqueue_style( 'wpforge-fonts', get_template_directory_uri() . '/fonts/wpforge-fonts.css' );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.css' );	
-	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
-	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
+	//wp_enqueue_style( 'wpforge-fonts', get_template_directory_uri() . '/fonts/wpforge-fonts.css' );
+	//wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons.css' );	
+	//wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
+	//wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
 	wp_enqueue_style( 'wpforge', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'wpforge_scripts_styles', 0 );
@@ -151,7 +151,7 @@ add_action( 'comment_form_before', 'my_enqueue_comments_reply' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -179,7 +179,7 @@ add_filter( 'wp_title', 'wpforge_wp_title', 10, 2 );
  * A fallback when no navigation is selected by default, otherwise it throws some nasty errors in your face.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.2.2 
+ * @since WP-Forge 5.2.2.3 
  */
 function wpforge_menu_fallback() {
 	echo '<div class="alert-box secondary"><p>';
@@ -208,7 +208,7 @@ add_filter( 'nav_menu_css_class', 'wpforge_active_nav_class', 10, 2 );
  * Use the active class of ZURB Foundation on wp_list_pages output.
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.2.2 
+ * @since WP-Forge 5.2.2.3 
  */
 function wpforge_active_list_pages_class( $input ) {
 
@@ -227,7 +227,7 @@ add_filter( 'wp_list_pages', 'wpforge_active_list_pages_class', 10, 2 );
  * Courtesy of Kriesi.at. http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output
  * From required+ Foundation http://themes.required.ch
  *
- * @since WP-Forge 5.2.2.2 
+ * @since WP-Forge 5.2.2.3 
  */
 class wpforge_walker extends Walker_Nav_Menu {
 
@@ -342,7 +342,7 @@ class wpforge_walker extends Walker_Nav_Menu {
 /**
  * Registers our main, front page and footer widget areas.
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_widgets_init() {
 	register_sidebar( array(
@@ -511,7 +511,7 @@ function page_navi($before = '', $after = '') {
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 if ( ! function_exists( 'wpforge_content_nav' ) ) :
 
@@ -584,12 +584,12 @@ function wpforge_comment( $comment, $args, $depth ) {
 
 			<section class="comment-content comment">
 				<?php comment_text(); ?>
-				<?php edit_comment_link( __( 'Edit', 'wpforge' ), '<p class="edit-link"><i class="fa fa-pencil"></i> ', '</p>' ); ?>
 			</section><!-- .comment-content -->
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply &raquo;', 'wpforge' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<span class="genericon genericon-reply"></span> Reply', 'wpforge' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
+			<?php edit_comment_link( __( 'Edit', 'wpforge' ), '<p class="edit-link"><span class="genericon genericon-edit"></span>', '</p>' ); ?>
 		</article><!-- #comment-## -->
 	<?php
 		break;
@@ -598,67 +598,61 @@ function wpforge_comment( $comment, $args, $depth ) {
 endif;
 
 /**
- * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
- * Create your own wpforge_entry_meta() to override in a child theme.
+ * Prints HTML with meta information for current post in home and single post view: categories
+ * Create your own wpforge_entry_meta_categories() to override in a child theme.
  *
- * @since WP-Forge 1.0
+ * @since WP-Forge 5.2.2.3
  */
-if ( ! function_exists( 'wpforge_entry_meta' ) ) :
+if ( ! function_exists( 'wpforge_entry_meta_categories' ) ) :
 
-function wpforge_entry_meta() {
-	if ( is_sticky() && is_home() && ! is_paged() )
-		echo '<i class="fa fa-thumb-tack"></i> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';				
-
-	if ( ! has_post_format( '' ) && 'post' == get_post_type() )
-		wpforge_entry_date();
-
+function wpforge_entry_meta_categories() {
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'wpforge' ) );
 	if ( $categories_list ) {
-		echo '<i class="fa fa-folder-open"></i> <span class="categories-links">' . $categories_list . '</span>';
-	}
-
-	// Translators: used between list items, there is a space after the comma.
-	$tag_list = get_the_tag_list( '', __( ', ', 'wpforge' ) );
-	if ( $tag_list ) {
-		echo '<i class="fa fa-tag"></i> <span class="tags-links">' . $tag_list . '</span>';
-	}
-
-	// Post author
-	if ( 'post' == get_post_type() ) {
-		printf( '<i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'wpforge' ), get_the_author() ) ),
-			get_the_author()
-		);
+		echo '<div class="entry-meta-categories"><span class="categories-links">' . $categories_list . '</span></div>';
 	}
 }
 endif;
 
 /**
- * Prints HTML with date information for current post.
- * Create your own wpforge_entry_date() to override in a child theme.
- * @param boolean $echo Whether to echo the date. Default true.
- * @return string
+ * Print HTML with meta information for the current post-date/time and author.
  *
- * @since WP-Forge 1.0
+ * @since WP-Forge 5.2.2.3
+ *
+ * @return void
  */
-if ( ! function_exists( 'wpforge_entry_date' ) ) :
+if ( ! function_exists( 'wpforge_entry_meta_header' ) ) :
 
-function wpforge_entry_date( $echo = true ) {
-	$format_prefix = ( has_post_format( '' ) ) ? _x( '%1$s on %2$s', '1: post format name. 2: date', 'wpforge' ): '%2$s';
+function wpforge_entry_meta_header() {
+	if ( is_sticky() && is_home() && ! is_paged() ) {
+		echo '<span class="genericon genericon-pinned"></span> <span class="sticky-post">' . __( 'Sticky', 'wpforge' ) . '</span>';
+	}
 
-	$date = sprintf( '<i class="fa fa-calendar-o"></i> <span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
+	// Set up and print post meta information.
+	printf( '<span class="entry-date"><span class="genericon genericon-time"></span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="genericon genericon-user"></span><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
 		esc_url( get_permalink() ),
-		esc_attr( sprintf( __( 'Permalink to %s', 'wpforge' ), the_title_attribute( 'echo=0' ) ) ),
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( sprintf( $format_prefix, get_post_format_string( get_post_format() ), get_the_date() ) )
+		esc_html( get_the_date() ),
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		get_the_author()
 	);
+}
+endif;
 
-	if ( $echo )
-		echo $date;
+/**
+ * Prints HTML with meta information in the footer for current post in home and single post view: tags.
+ * Create your own wpforge_entry_meta_footer() to override in a child theme.
+ *
+ * @since WP-Forge 5.2.2.3
+ */
+if ( ! function_exists( 'wpforge_entry_meta_footer' ) ) :
 
-	return $date;
+function wpforge_entry_meta_footer() {
+	// Translators: used between list items, there is a space after the comma.
+	$tag_list = get_the_tag_list( '', __( ', ', 'wpforge' ) );
+	if ( $tag_list ) {
+		echo '<div class="entry-meta-tags"><span class="genericon genericon-tag"></span> <span class="tags-links">' . $tag_list . '</span></div>';
+	}
 }
 endif;
 
@@ -674,7 +668,7 @@ endif;
  * @param array Existing class values.
  * @return array Filtered class values.
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_body_class( $classes ) {
 	$background_color = get_background_color();
@@ -710,7 +704,7 @@ add_filter( 'body_class', 'wpforge_body_class' );
  * Adjusts content_width value for full-width and single image attachment
  * templates, and when there are no active widgets in the sidebar.
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_content_width() {
 	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -755,7 +749,7 @@ function remove_thumbnail_dimensions( $html ) {
 /**
  * Remove wp version param from any enqueued scripts
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 
 function _remove_script_version( $src ){
@@ -768,7 +762,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 /**
  * Remove .sticky from the post_class array (Thanks to required+ foundation)
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_filter_post_class( $classes ) {
     if ( ( $key = array_search( 'sticky', $classes ) ) !== false ) {
@@ -783,7 +777,7 @@ add_filter( 'post_class', 'wpforge_filter_post_class', 20 );
  * Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
  * @see https://gist.github.com/Narga/2887406
  *
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_remove_recent_comments_style() {  
 	global $wp_widget_factory;  
@@ -794,7 +788,7 @@ add_action( 'widgets_init', 'wpforge_remove_recent_comments_style' );
 /**
  * Add favicon to header
  * 
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 function wpforge_favicon() {
 echo '<link rel="shortcut icon" type="image/x-icon" href="' . site_url() . '/favicon.ico" />'."\n";
@@ -805,7 +799,7 @@ add_action('wp_head', 'wpforge_favicon', 0);
  * Link all post thumbnials to the post permalink
  * @see http://codex.wordpress.org/Function_Reference/the_post_thumbnail
  * 
- * @since WP-Forge 5.2.2.2.1
+ * @since WP-Forge 5.2.2.3.1
  */
 function my_post_image_html( $html, $post_id, $post_image_id ) {
   $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_the_title( $post_id ) ) . '">' . $html . '</a>';
@@ -819,7 +813,7 @@ add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
  * 
  * Thanks to Tommie Landstrom https://github.com/tommielandstrom
  * 
- * @since WP-Forge 5.2.2.2.1
+ * @since WP-Forge 5.2.2.3
  */
 function html5_insert_image($html, $id, $caption, $title, $align, $url, $size, $alt) {
 	$url = wp_get_attachment_url($id);

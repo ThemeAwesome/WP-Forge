@@ -8,14 +8,14 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.3
  */
 
 get_header(); ?>
 
 	<div id="content" class="medium-8 large-8 columns" role="main">
     
-    <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
+    <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
