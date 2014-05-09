@@ -1,5 +1,5 @@
 <!-- Changelog v5.2.2.3 -->
-1.) Moved all css files to style.css and minified
+1.) Moved all css files to style.css
 2.) Removed Fontawesome icon set and added the Genericons font http://genericons.com/#wordpress
 3.) Changed the way the information for posts is displayed. Moved categories a post is assigned to above the title. Moved the post date, author and comments directly under the title. Tags are still listed after the post as well as the edit button that appears when the admin is logged in.
 4.) Adjusted the social menu css to reflect the Genericons font.
