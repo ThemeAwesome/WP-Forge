@@ -1,3 +1,6 @@
+<!-- Changelog v5.2.2.4 -->
+1.) Removed all styles back to their own style sheets and called them appropriately through functions.php - Apparently this was causing WP-Forge to display incorrectly in IE and FF.
+
 <!-- Changelog v5.2.2.3 -->
 1.) Moved all css files to style.css
 2.) Removed Fontawesome icon set and added the Genericons font http://genericons.com/#wordpress
@@ -22,7 +25,7 @@
 8.) Moved Modernizr to load after jQuery
 
 <!-- Changelog as of 04/06/2014 -->
-1.) Updated to Foundation v5.2.2.3 (released on Friday 04/04/2014) - View changes made by Foundation via commit https://github.com/zurb/foundation/commit/520ea11dfe818691dd70cdb5c5ed5907e5e64168
+1.) Updated to Foundation v5.2.2.4 (released on Friday 04/04/2014) - View changes made by Foundation via commit https://github.com/zurb/foundation/commit/520ea11dfe818691dd70cdb5c5ed5907e5e64168
 2.) Removed the default values in the Background Section of the theme customizer.
 3.) Added "background-size" section to Background Section of the theme customizer. This will allow users to set a full width image as the background of the site without a plugin. Read more about the "background-size" attribute http://www.w3schools.com/cssref/css3_pr_background-size.asp
 4.) Removed background color from style.css and foundation.css - The default color will now be white. This will allow the user to set the initial color from within the theme customizer.
@@ -59,7 +62,7 @@ theme customizer was set to "Excerpt".
 
 <!-- Changelog as of 03/18/2014 -->
 
-1.) Updated to latest version of Foundation, currently 5.2.2.3
+1.) Updated to latest version of Foundation, currently 5.2.2.4
 2.) Changed the way Open-Sans is included into the theme. This will make it easier for anyone to remove the font or add their own if necessary.
 3.) Added support for Jetpack's infinite scroll
 4.) Added the actual search form to 404.php (I think it look better this way)

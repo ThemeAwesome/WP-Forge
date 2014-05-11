@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2.3
+ * @since WP-Forge 5.2.2.4
  */
 ?>
 
@@ -18,6 +18,6 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wpforge' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<footer class="entry-meta">
-			<?php edit_post_link( __( 'Edit Page', 'wpforge' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit Page', 'wpforge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->

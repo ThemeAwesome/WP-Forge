@@ -1,7 +1,7 @@
-Welcome to WP-Forge v5.2.2.3
+Welcome to WP-Forge v5.2.2.4
 ====================
 
-###Updated 5-9-2014###
+###Updated 5-10-2014###
 
 WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.2.2), the most advanced responsive front-end framework.
 
