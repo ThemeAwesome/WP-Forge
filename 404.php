@@ -4,14 +4,14 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2.2
+ * @since WP-Forge 5.2.2.4
  */
 
 get_header(); ?>
 
 		<div id="content" class="medium-12 large-12 columns" role="main">
         
-        <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
+        <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
 
 			<article id="post-0" class="post error404 no-results not-found">
 				<header class="entry-header">
