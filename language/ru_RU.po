@@ -1,0 +1,654 @@
+# AG <helirexi@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Forge\n"
+"POT-Creation-Date: 2014-04-06 07:36-0700\n"
+"PO-Revision-Date: 2014-05-25 15:12+0400\n"
+"Last-Translator: AG <helirexi@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;es"
+"c_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_n"
+"x_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Это не совсем то, что вам нужно?"
+
+#: 404.php:22
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Похоже, здесь нет того, что вы искали. Воспользуйтесь поиском по сайту."
+
+#: 404.php:26 404.php:29 searchform.php:14 searchform.php:17
+msgid "Search"
+msgstr "Поиск"
+
+#: archive.php:30
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Архивы по дням: %s"
+
+#: archive.php:32
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Архивы по месяцам: %s"
+
+#: archive.php:32
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "м г"
+
+#: archive.php:34
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Архивы по годам: %s"
+
+#: archive.php:34
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "г"
+
+#: archive.php:36
+msgid "Asides"
+msgstr "Заметки"
+
+#: archive.php:39
+msgid "Audio"
+msgstr "Аудио"
+
+#: archive.php:42
+msgid "Chats"
+msgstr "Чаты"
+
+#: archive.php:45
+msgid "Galleries"
+msgstr "Галереи"
+
+#: archive.php:48
+msgid "Images"
+msgstr "Изображения"
+
+#: archive.php:51
+msgid "Links"
+msgstr "Ссылки"
+
+#: archive.php:54
+msgid "Quotes"
+msgstr "Цитаты"
+
+#: archive.php:57
+msgid "Status"
+msgstr "Статус"
+
+#: archive.php:60
+msgid "Videos"
+msgstr "Видео"
+
+#: archive.php:63
+msgid "Archives"
+msgstr "Архивы"
+
+#: author.php:30
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Архивы по авторам: %s"
+
+#: author.php:48 content-author.php:17 content.php:51
+#, php-format
+msgid "About %s"
+msgstr "О %s"
+
+#: category.php:22
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Архивы по категориям: %s"
+
+#: comments.php:27
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Одно мнение на &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s мнений на &ldquo;%2$s&rdquo;"
+
+#: comments.php:44
+msgid "Comment navigation"
+msgstr "Навигация (комментарий)"
+
+#: comments.php:45
+msgid "&larr; Older Comments"
+msgstr "&larr; Предыдущие комментарии"
+
+#: comments.php:46
+msgid "Newer Comments &rarr;"
+msgstr "Свежие комментарии &rarr;"
+
+#: comments.php:51
+msgid "Comments are closed."
+msgstr "Комментирование закрыто"
+
+#: comments.php:67
+msgid "Leave a Reply"
+msgstr "Оставьте ответ"
+
+#: comments.php:68
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Ответить на %s"
+
+#: comments.php:69
+msgid "Cancel Reply"
+msgstr "Отменить ответ"
+
+#: comments.php:70
+msgid "Post Comment"
+msgstr "Оставить комментарий"
+
+#: comments.php:72
+msgid "Comment"
+msgstr "Комментарий"
+
+#: comments.php:78
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Вы должны быть <a href=\"%s\">залогинены</a> для комментирования."
+
+#: comments.php:84
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Вы вошли как <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Выйти из "
+"аккаунта\">Выйти?</a>"
+
+#: comments.php:91
+msgid "Your email address will not be published."
+msgstr "Ваш e-mail адрес не будет показан."
+
+#: comments.php:94
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Вы можете использовать эти <abbr title=\"Гипертекстовая разметка\""
+">HTML</abbr> тэги и атрибуты: %s"
+
+#: comments.php:111
+msgid "Your Website"
+msgstr "Ваш вебсайт"
+
+#: content-aside.php:13 content-audio.php:18 content-gallery.php:17
+#: content-video.php:17 content.php:18 functions.php:658
+#, php-format
+msgid "Permalink to %s"
+msgstr "Постоянная ссылка на %s"
+
+#: content-aside.php:15 content-image.php:13 content-link.php:13
+#: content-quote.php:13 content-status.php:20
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Продолжить <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-aside.php:22 content-audio.php:37 content-chat.php:30
+#: content-gallery.php:36 content-image.php:19 content-link.php:19
+#: content-quote.php:19 content-status.php:26 content-video.php:36
+#: content.php:44 functions.php:592
+msgid "Edit"
+msgstr "Редактировать"
+
+#: content-audio.php:29 content-gallery.php:28 content-video.php:28
+#: content.php:37
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Прожолжить <span class=\"meta-nav\">&raquo;</span>"
+
+#: content-audio.php:30 content-chat.php:24 content-gallery.php:29
+#: content-page.php:18 content-video.php:29 content.php:38 image.php:94
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: content-author.php:21
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Смотреть все статьи по %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-none.php:13
+msgid "No posts to display"
+msgstr "Нет статей для отображения"
+
+#: content-none.php:16
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать вашу первую статью? <a href=\"%s\">Начните здесь</a>."
+
+#: content-none.php:20
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: content-none.php:23
+msgid ""
+"Apologies, but no results were found. Perhaps another search will help you "
+"find what you&#39;re looking for."
+msgstr "Ничего не найдено. Возможно поиск по сайту вам будет полезен."
+
+#: content-page.php:21
+msgid "Edit Page"
+msgstr "Редактировать"
+
+#: content.php:26
+msgid "Leave a reply"
+msgstr "Оставьте ответ"
+
+#: content.php:26
+msgid "1 Reply"
+msgstr "1 Ответ"
+
+#: content.php:26
+msgid "% Replies"
+msgstr "% Ответов"
+
+#: content.php:55
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Смотреть все статьи по %s <span class=\"meta-nav\">&raquo;</span>"
+
+#: footer.php:40 footer.php:52
+msgid "Powered by"
+msgstr "Сайт работает на"
+
+#: footer.php:40 footer.php:52
+msgid "http://themeawesome.com/responsive-wordpress-theme/"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "Responsive WordPress Theme by ThemeAwesome.com"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "WP-Forge"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:40 footer.php:52
+msgid "WordPress"
+msgstr ""
+
+#: functions.php:101
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: functions.php:102
+msgid "Footer Menu"
+msgstr "Меню футера"
+
+#: functions.php:103
+msgid "Social Menu"
+msgstr "Меню соц.сетей"
+
+#: functions.php:177
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: functions.php:192
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr "Задайте первичное расположение меню в %1$s или %2$s дизайн."
+
+#: functions.php:193
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr "<a href=\"%s\">Меню</a>"
+
+#: functions.php:196
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr "<a href=\"%s\">Настроить</a>"
+
+#: functions.php:354
+msgid "Main Sidebar"
+msgstr "Основной сайдбар"
+
+#: functions.php:356
+msgid "Displays widgets in the blog area as well as pages."
+msgstr "Отображает виджеты в блоге также, как и страницы."
+
+#: functions.php:363
+msgid "First Front Page Widget Area"
+msgstr "Первый блок виджетов Домашней Страницы"
+
+#: functions.php:365 functions.php:374
+msgid ""
+"Appears when using the optional Front Page template with a page set as "
+"Static Front Page"
+msgstr ""
+"Будет отображаться при использовании опционального шаблона Домашней Страницы "
+"как статической домашней страницы"
+
+#: functions.php:372
+msgid "Second Front Page Widget Area"
+msgstr "Второй блок виджетов Домашней Страницы"
+
+#: functions.php:381
+msgid "First Footer Widget Area"
+msgstr "Первый блок виджетов в Футере"
+
+#: functions.php:383 functions.php:392 functions.php:401
+msgid "An optional widget area for your site footer"
+msgstr "Опциональный блок виджетов в Футере"
+
+#: functions.php:390
+msgid "Second Footer Widget Area"
+msgstr "Второй блок виджетов в Футере"
+
+#: functions.php:399
+msgid "Third Footer Widget Area"
+msgstr "Третий блок виджетов в Футере"
+
+#: functions.php:533
+msgid "Post navigation"
+msgstr "Навигация (публикация)"
+
+#: functions.php:534
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущие статьи"
+
+#: functions.php:535
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Свежие статьи <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:560
+msgid "Pingback:"
+msgstr "Обатная ссылка:"
+
+#: functions.php:560
+msgid "(Edit)"
+msgstr "(Редактировать)"
+
+#: functions.php:575
+msgid "Post Author"
+msgstr "Автор статьи"
+
+#: functions.php:581
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s на %2$s"
+
+#: functions.php:587
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации. "
+
+#: functions.php:596
+msgid "Reply &raquo;"
+msgstr "Ответить &raquo;"
+
+#: functions.php:615
+msgid "Sticky"
+msgstr "Закреплено"
+
+#: functions.php:621 functions.php:627
+msgid ", "
+msgstr ""
+
+#: functions.php:636
+#, php-format
+msgid "View all posts by %s"
+msgstr "Смотреть все статьи по %s"
+
+#: functions.php:654
+#, php-format
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr "%1$s на %2$s"
+
+#: image.php:28
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\"><i class=\"fa fa-calendar-o"
+"\"></i> </span> <span class=\"entry-date\"><time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-"
+"camera-retro\"></i> <a href=\"%3$s\" title=\"Link to full-size image\">%4$s "
+"&times; %5$s</a>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-folder-open\"></i> <a "
+"href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr ""
+"<span class=\"meta-prep meta-prep-entry-date\"><i class=\"fa fa-calendar-o\""
+"></i> </span> <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-camera-retro\""
+"></i> <a href=\"%3$s\" title=\"Ссылка на полноразмерное изображение>%4$s "
+"&times; %5$s</a>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-folder-open\"></i> <a "
+"href=\"%6$s\" title=\"Вернуться %7$s\" rel=\"gallery\">%8$s</a>"
+
+#: image.php:39
+msgid " Edit"
+msgstr " Редактировать"
+
+#: image.php:43
+msgid "&laquo; Previous Image"
+msgstr "&laquo; Предыдущее изображение"
+
+#: image.php:44
+msgid "Next Image &raquo;"
+msgstr "Следующее изображение &raquo;"
+
+#: inc/customizer/customizer.php:35
+msgid "Set up a front page for your theme."
+msgstr "Настройка Домашней Страницы вашей темы."
+
+#: inc/customizer/customizer.php:43
+msgid "Header"
+msgstr "Хедер"
+
+#: inc/customizer/customizer.php:44
+msgid "Modify the header portion of your theme."
+msgstr "Изменение положения хедера темы."
+
+#: inc/customizer/customizer.php:53
+msgid "Site Logo"
+msgstr "Логтип сайта"
+
+#: inc/customizer/customizer.php:67
+msgid "Site Title"
+msgstr "Заголовок сайта"
+
+#: inc/customizer/customizer.php:80
+msgid "Tagline"
+msgstr "Слоган"
+
+#: inc/customizer/customizer.php:93
+msgid "Show Title &amp; Tagline"
+msgstr "Показывать Заголовок и Слоган"
+
+#: inc/customizer/customizer.php:109
+msgid "Main Menu Position"
+msgstr "Положение Главного меню"
+
+#: inc/customizer/customizer.php:126
+msgid "If Top of Browser, scroll or fixed?"
+msgstr "Если верхнее расположение, фиксировать или нет?"
+
+#: inc/customizer/customizer.php:142
+msgid "Change text for Home Link?"
+msgstr "Изменить текст для Домашней Страницы?"
+
+#: inc/customizer/customizer.php:155
+msgid "If Yes, Add New Anchor Text"
+msgstr "Если Да, добавьте Якорь (текст)"
+
+#: inc/customizer/customizer.php:163
+msgid "Off-Canvas"
+msgstr ""
+
+#: inc/customizer/customizer.php:164
+msgid "Configure Off-Canvas mobile menu."
+msgstr "Настройка Off-Canvas мобильного меню."
+
+#: inc/customizer/customizer.php:176
+msgid "Use Off-Canvas for Mobile?"
+msgstr "Использовать Off-Canvas для мобильных устройств?"
+
+#: inc/customizer/customizer.php:192
+msgid "Display Off-Canvas Left or Right?"
+msgstr "Отображать Off-Canvas слева или справа?"
+
+#: inc/customizer/customizer.php:202
+msgid "Posts"
+msgstr "Статьи"
+
+#: inc/customizer/customizer.php:203
+msgid "Modify how posts appear in your theme."
+msgstr "Изменение порядка отображения в вашей теме."
+
+#: inc/customizer/customizer.php:215
+msgid "Show Full Post or Excerpt?"
+msgstr "Показать всю статью или выдержку?"
+
+#: inc/customizer/customizer.php:231
+msgid "Show Post Thumbnail on Index?"
+msgstr "Показать миниатюру или заголовок статьи?"
+
+#: inc/customizer/customizer.php:247
+msgid "Show Post Thumbnail on Single Post?"
+msgstr "Показать миниатюру или статью?"
+
+#: inc/customizer/customizer.php:257
+msgid "Footer"
+msgstr "Футер"
+
+#: inc/customizer/customizer.php:258
+msgid "Modify the footer text of your theme."
+msgstr "Изменение текста футера темы."
+
+#: inc/customizer/customizer.php:267
+msgid "Copyright Text"
+msgstr "Копирайт"
+
+#: inc/customizer/customizer.php:275
+msgid "Background"
+msgstr "Фон"
+
+#: inc/customizer/customizer.php:276
+msgid "Modify the background of your theme."
+msgstr "Изменение фона темы."
+
+#: inc/customizer/customizer.php:290
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: inc/customizer/customizer.php:304
+msgid "Background Image"
+msgstr "Фоновое изображение"
+
+#: inc/customizer/customizer.php:319
+msgid "Background Repeat"
+msgstr "Фон повторить"
+
+#: inc/customizer/customizer.php:323
+msgid "No Repeat"
+msgstr "Без повтора"
+
+#: inc/customizer/customizer.php:324
+msgid "Tile"
+msgstr "Заголовок"
+
+#: inc/customizer/customizer.php:325
+msgid "Tile Horizontally"
+msgstr "Заголовок горизонтальный"
+
+#: inc/customizer/customizer.php:326
+msgid "Tile Vertically"
+msgstr "Заголовок вертикальный"
+
+#: inc/customizer/customizer.php:340
+msgid "Background Size"
+msgstr "Размер фона"
+
+#: inc/customizer/customizer.php:344
+msgid "Cover"
+msgstr "Обложка"
+
+#: inc/customizer/customizer.php:358
+msgid "Background Position"
+msgstr "Положение фона"
+
+#: inc/customizer/customizer.php:362
+msgid "Left"
+msgstr "Слева"
+
+#: inc/customizer/customizer.php:363
+msgid "Center"
+msgstr "По центру"
+
+#: inc/customizer/customizer.php:364
+msgid "Right"
+msgstr "Справа"
+
+#: inc/customizer/customizer.php:378
+msgid "Background Attachment"
+msgstr "Фон вложение"
+
+#: inc/customizer/customizer.php:382
+msgid "Scroll"
+msgstr "Прокрутка"
+
+#: inc/customizer/customizer.php:383
+msgid "Fixed"
+msgstr "Фиксированное"
+
+#: inc/customizer/customizer.php:389
+msgid "Colors"
+msgstr "Цвета"
+
+#: inc/customizer/customizer.php:390
+msgid "Change some default colors of your theme."
+msgstr "Изменение некоторых цветовых умолчаний вашей темы."
+
+#: inc/customizer/customizer.php:403
+msgid "Title Color"
+msgstr "Цвет Заголовка"
+
+#: inc/customizer/customizer.php:417
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#: inc/customizer/customizer.php:431
+msgid "Link Color"
+msgstr "Цвет ссылок"
+
+#: inc/customizer/customizer.php:445
+msgid "Hover Color"
+msgstr "Цвет при наведении курсора"
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска: %s"
+
+#: single.php:21
+msgctxt "Previous post link"
+msgid "&laquo;"
+msgstr ""
+
+#: single.php:22
+msgctxt "Next post link"
+msgid "&raquo;"
+msgstr ""
+
+#: tag.php:22
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Метка (Архивы): %s"
