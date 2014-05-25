@@ -3,14 +3,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Forge\n"
 "POT-Creation-Date: 2014-04-06 07:36-0700\n"
-"PO-Revision-Date: 2014-05-25 18:41+0400\n"
+"PO-Revision-Date: 2014-05-26 01:28+0400\n"
 "Last-Translator: AG <helirexi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.6.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -115,11 +116,12 @@ msgid "Category Archives: %s"
 msgstr "Архивы по категориям: %s"
 
 #: comments.php:27
-#, php-format
+#, fuzzy, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Одно мнение на &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s мнений на &ldquo;%2$s&rdquo;"
+msgstr[0] "Один комментарий на &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s комментариев на &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s комментариев на &ldquo;%2$s&rdquo;"
 
 #: comments.php:44
 msgid "Comment navigation"
@@ -139,7 +141,7 @@ msgstr "Комментирование закрыто"
 
 #: comments.php:67
 msgid "Leave a Reply"
-msgstr "Оставьте ответ"
+msgstr "Ответить"
 
 #: comments.php:68
 #, php-format
@@ -248,7 +250,7 @@ msgstr "Редактировать"
 
 #: content.php:26
 msgid "Leave a reply"
-msgstr "Оставьте ответ"
+msgstr "Ответить"
 
 #: content.php:26
 msgid "1 Reply"
@@ -269,23 +271,23 @@ msgstr "Сайт работает на"
 
 #: footer.php:40 footer.php:52
 msgid "http://themeawesome.com/responsive-wordpress-theme/"
-msgstr ""
+msgstr "http://themeawesome.com/responsive-wordpress-theme/"
 
 #: footer.php:40 footer.php:52
 msgid "Responsive WordPress Theme by ThemeAwesome.com"
-msgstr ""
+msgstr "Responsive WordPress Theme by ThemeAwesome.com"
 
 #: footer.php:40 footer.php:52
 msgid "WP-Forge"
-msgstr ""
+msgstr "WP-Forge"
 
 #: footer.php:40 footer.php:52
 msgid "http://wordpress.org/"
-msgstr ""
+msgstr "http://wordpress.org/"
 
 #: footer.php:40 footer.php:52
 msgid "WordPress"
-msgstr ""
+msgstr "WordPress"
 
 #: functions.php:101
 msgid "Main Menu"
@@ -327,23 +329,23 @@ msgstr "Основной сайдбар"
 
 #: functions.php:356
 msgid "Displays widgets in the blog area as well as pages."
-msgstr "Отображает виджеты в блоге также, как и страницы."
+msgstr "Отображает виджеты в блоге, а также на страницах."
 
 #: functions.php:363
 msgid "First Front Page Widget Area"
-msgstr "Первый блок виджетов Домашней Страницы"
+msgstr "Первый блок виджетов Главной Страницы"
 
 #: functions.php:365 functions.php:374
 msgid ""
 "Appears when using the optional Front Page template with a page set as "
 "Static Front Page"
 msgstr ""
-"Будет отображаться при использовании опционального шаблона Домашней Страницы "
-"как статической домашней страницы"
+"Будет отображаться при использовании шаблона Front Page template как "
+"статической домашней страницы"
 
 #: functions.php:372
 msgid "Second Front Page Widget Area"
-msgstr "Второй блок виджетов Домашней Страницы"
+msgstr "Второй блок виджетов Главной Страницы"
 
 #: functions.php:381
 msgid "First Footer Widget Area"
@@ -404,7 +406,7 @@ msgstr "Закреплено"
 
 #: functions.php:621 functions.php:627
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: functions.php:636
 #, php-format
@@ -449,19 +451,19 @@ msgstr "Следующее изображение &raquo;"
 
 #: inc/customizer/customizer.php:35
 msgid "Set up a front page for your theme."
-msgstr "Настройка Домашней Страницы вашей темы."
+msgstr "Настройка домашней страницы вашей темы."
 
 #: inc/customizer/customizer.php:43
 msgid "Header"
-msgstr "Хедер"
+msgstr "Хэдер"
 
 #: inc/customizer/customizer.php:44
 msgid "Modify the header portion of your theme."
-msgstr "Изменение положения хедера темы."
+msgstr "Изменение части Хэдера вашей темы."
 
 #: inc/customizer/customizer.php:53
 msgid "Site Logo"
-msgstr "Логтип сайта"
+msgstr "Логотип сайта"
 
 #: inc/customizer/customizer.php:67
 msgid "Site Title"
@@ -493,11 +495,11 @@ msgstr "Если Да, добавьте Якорь (текст)"
 
 #: inc/customizer/customizer.php:163
 msgid "Off-Canvas"
-msgstr ""
+msgstr "Off-Canvas"
 
 #: inc/customizer/customizer.php:164
 msgid "Configure Off-Canvas mobile menu."
-msgstr "Настройка Off-Canvas мобильного меню."
+msgstr "Настройка Off-Canvas для мобильного меню."
 
 #: inc/customizer/customizer.php:176
 msgid "Use Off-Canvas for Mobile?"
@@ -513,7 +515,7 @@ msgstr "Статьи"
 
 #: inc/customizer/customizer.php:203
 msgid "Modify how posts appear in your theme."
-msgstr "Изменение порядка отображения в вашей теме."
+msgstr "Изменение отображения публикаций в вашей теме."
 
 #: inc/customizer/customizer.php:215
 msgid "Show Full Post or Excerpt?"
@@ -557,11 +559,11 @@ msgstr "Фоновое изображение"
 
 #: inc/customizer/customizer.php:319
 msgid "Background Repeat"
-msgstr "Фон повторить"
+msgstr "Фон замостить"
 
 #: inc/customizer/customizer.php:323
 msgid "No Repeat"
-msgstr "Без повтора"
+msgstr "Не замостить"
 
 #: inc/customizer/customizer.php:324
 msgid "Tile"
@@ -617,7 +619,7 @@ msgstr "Цвета"
 
 #: inc/customizer/customizer.php:390
 msgid "Change some default colors of your theme."
-msgstr "Изменение некоторых цветовых умолчаний вашей темы."
+msgstr "Изменение базовых цветов вашей темы."
 
 #: inc/customizer/customizer.php:403
 msgid "Title Color"
@@ -643,12 +645,12 @@ msgstr "Результаты поиска: %s"
 #: single.php:21
 msgctxt "Previous post link"
 msgid "&laquo;"
-msgstr ""
+msgstr "&laquo;"
 
 #: single.php:22
 msgctxt "Next post link"
 msgid "&raquo;"
-msgstr ""
+msgstr "&raquo;"
 
 #: tag.php:22
 #, php-format
