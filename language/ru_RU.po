@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Forge\n"
 "POT-Creation-Date: 2014-04-06 07:36-0700\n"
-"PO-Revision-Date: 2014-05-26 01:28+0400\n"
+"PO-Revision-Date: 2014-05-30 16:13+0400\n"
 "Last-Translator: AG <helirexi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -38,22 +38,22 @@ msgstr "Поиск"
 #: archive.php:30
 #, php-format
 msgid "Daily Archives: %s"
-msgstr "Архивы по дням: %s"
+msgstr "Статьи по дням: %s"
 
 #: archive.php:32
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr "Архивы по месяцам: %s"
+msgstr "Статьи по месяцам: %s"
 
 #: archive.php:32
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "м г"
+msgstr "F Y"
 
 #: archive.php:34
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr "Архивы по годам: %s"
+msgstr "Статьи по годам: %s"
 
 #: archive.php:34
 msgctxt "yearly archives date format"
@@ -98,12 +98,12 @@ msgstr "Видео"
 
 #: archive.php:63
 msgid "Archives"
-msgstr "Архивы"
+msgstr "Статьи"
 
 #: author.php:30
 #, php-format
 msgid "Author Archives: %s"
-msgstr "Архивы по авторам: %s"
+msgstr "Статьи автора: %s"
 
 #: author.php:48 content-author.php:17 content.php:51
 #, php-format
@@ -113,7 +113,7 @@ msgstr "О %s"
 #: category.php:22
 #, php-format
 msgid "Category Archives: %s"
-msgstr "Архивы по категориям: %s"
+msgstr "Статьи по разделам: %s"
 
 #: comments.php:27
 #, fuzzy, php-format
@@ -163,7 +163,7 @@ msgstr "Комментарий"
 #: comments.php:78
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr "Вы должны быть <a href=\"%s\">залогинены</a> для комментирования."
+msgstr "Вы должны <a href=\"%s\">войти</a> для комментирования."
 
 #: comments.php:84
 #, php-format
@@ -291,7 +291,7 @@ msgstr "WordPress"
 
 #: functions.php:101
 msgid "Main Menu"
-msgstr "Главное меню"
+msgstr "Основное меню"
 
 #: functions.php:102
 msgid "Footer Menu"
@@ -655,4 +655,4 @@ msgstr "&raquo;"
 #: tag.php:22
 #, php-format
 msgid "Tag Archives: %s"
-msgstr "Метка (Архивы): %s"
+msgstr "Метки: %s"
