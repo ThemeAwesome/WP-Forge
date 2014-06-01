@@ -58,7 +58,7 @@ msgstr "Статьи по годам: %s"
 #: archive.php:34
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr "г"
+msgstr "Y"
 
 #: archive.php:36
 msgid "Asides"
