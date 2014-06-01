@@ -1,9 +1,9 @@
-Welcome to WP-Forge v5.2.2.4
+Welcome to WP-Forge v5.2.3
 ====================
 
-###Updated 5-10-2014###
+###Updated 5-31-2014###
 
-WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.2.2), the most advanced responsive front-end framework.
+WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.2.3), the most advanced responsive front-end framework.
 
 ###Built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
@@ -18,7 +18,7 @@ WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve)
 * [Screenfly](http://quirktools.com/screenfly/) – Responsive screen testing for monitors, tablets, smart phones, and more (personally one of my favorites).
 
 ###Theme Customizer###
-When 3.4 was released, WordPress introduced the [Theme Customizer] (https://codex.wordpress.org/Theme_Customization_API). The customizer allows you modify certain areas of a theme and preview those changes in real time. WP-Forge now comes with its own custom Theme Customizer. For more information regarding the Theme Customizer please read the information under Configuration in the readme.txt file.
+When 3.4 was released, WordPress introduced the [Theme Customizer] (https://codex.wordpress.org/Theme_Customization_API). The customizer allows you to modify certain areas of a theme and preview those changes in real time before publishing. WP-Forge now comes with its own custom Theme Customizer. For more information regarding the Theme Customizer please read the information under Configuration in the README.txt file.
 
 ###Off-Canvas Support###
 WP-Forge now offers support for Off-Canvas menu. For more information regarding Off-Canvas please read the information under Configuration in the readme.txt file.
@@ -28,6 +28,9 @@ WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in t
 
 ###Child Theme###
 I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
+
+###Font-Awesome 4.1.0###
+Includes all 439 free icons from [Font-Awesome] (http://fontawesome.io/)
 
 ###Genericons 3.0.3###
 Includes the free WordPress icon set [Genericons] (http://genericons.com/#wordpress)
@@ -44,11 +47,15 @@ You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The View
 ###WP-Forge Forums###
 If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the forums: http://themeawesome.com/forums
 
+###Additional Information###
+WP-Forge validates at 97% over at [ThemeCheck.org] (http://themecheck.org/score/wordpress_theme_wp-forge.html)
+
 Contributors
 =============
-
-[Christopher Anderton] (https://github.com/Deluxive) for Swedish localization
-[Felipe Trombini] (fmtrede@gmail.com) for Portuguese localization 
+The following individuals have contributed to WP-Forge
+* [Christopher Anderton] (https://github.com/Deluxive) for Swedish localization
+* [Felipe Trombini] (fmtrede@gmail.com) for Portuguese localization
+* [Andriy] (https://github.com/helirexi) for Russian localization
 
 Additional Credits
 =============
@@ -68,4 +75,4 @@ This means WP-Forge is completely free to use and modify as you see fit. I hope 
 
 ThemeAwesome.com
 =============
-WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on Responsive WordPress theme development.
+WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://www.themeawesome.com), a site focused on Responsive WordPress theme development.

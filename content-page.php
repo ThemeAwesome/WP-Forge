@@ -4,19 +4,19 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2.4
+ * @since WP-Forge 5.2.3
  */
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<h1><?php the_title(); ?></h1>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wpforge' ), 'after' => '</div>' ) ); ?>
-		</div><!-- .entry-content -->
+		</div><!-- .entry-content -->	
 		<footer class="entry-meta">
 			<?php edit_post_link( __( 'Edit Page', 'wpforge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
