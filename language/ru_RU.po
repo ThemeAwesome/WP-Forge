@@ -333,7 +333,11 @@ msgstr "Отображает виджеты в блоге, а также на с
 
 #: functions.php:363
 msgid "First Front Page Widget Area"
+<<<<<<< HEAD
 msgstr "Первый блок виджетов FrontPage"
+=======
+msgstr "Первый блок виджетов Главной Страницы"
+>>>>>>> upstream/master
 
 #: functions.php:365 functions.php:374
 msgid ""

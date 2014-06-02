@@ -4,13 +4,13 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.2.2.4
+ * @since WP-Forge 5.2.3.1a
  */
 ?>
 
 <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
 
-  <div class="off-canvas-wrap">
+  <div class="off-canvas-wrap" data-offcanvas>
   
   	<div class="inner-wrap">
 

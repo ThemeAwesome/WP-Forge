@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: http://wpforge.themeawesome.com/
 Author: Thomas E. Vasquez
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.2.2), the most advanced responsive front-end framework.
-Version: 5.2.2.4
+Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation (v5.2.3.1a), the most advanced responsive front-end framework in the world.
+Version: 5.2.3.1a
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -21,7 +21,7 @@ I update WP-Forge on a regular basis. I highly recommend joining my mailing list
 ins {
 	background: #fff9c0!important;
 	text-decoration: none;
-	padding:0 3px;	
+	padding:0 3px;
 }
 sub,
 sup {
@@ -232,11 +232,13 @@ img.wp-smiley,
 	margin-bottom: 1.5rem;
 }
 .author-info {
-  border-bottom: 1px solid #ededed;
-	border-top: 1px solid #ededed;
+  	border-bottom: 1px solid #ededed;
+  	display: block;
 	margin: 1.5rem 0;
 	overflow: hidden;
 	padding:20px 0;
+	position: relative;
+	float: left;
 }
 .author-description p {
 	color: #757575;
@@ -245,16 +247,23 @@ img.wp-smiley,
 }
 .author.archive .author-info {
 	border-top: 0;
+	display: block;
+	float: none;
 	margin: 0 0 3rem;
 	border-bottom: 1px solid #ededed;
-	padding:10px 0;		
+	padding:10px 0;
+	position: relative;
+}
+.author.archive .author-avatar {
+	margin-top: 0!important;
 }
 .author.archive .author-avatar img {
 	margin-top: 0;
 	border-radius:50%;
 }
 .author-avatar {
-  text-align: center;
+	margin-top: 1.5rem;
+  	text-align: center;
 }
 .author-avatar img {
 	border-radius:50%;
@@ -275,13 +284,13 @@ body {
 	word-wrap: break-word;
 }
 #wrapper {
-  background-color: #ffffff;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 64rem;
+  	background-color: #ffffff;
+  	width: 100%;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: 0;
+  	margin-bottom: 0;
+  	max-width: 64rem;
 	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 	padding:1.5625rem 0.625rem 0;
 }
@@ -402,11 +411,20 @@ footer[role="contentinfo"] a:hover {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
 }
+.entry-meta-header .genericon,
+.entry-meta-categories .genericon {
+    line-height:1;
+    font-size: 1rem;
+}
 .entry-header .entry-title a {
 	text-decoration: none;
 }
 span.edit-link {
 	font-size: 0.75rem!important;
+}
+span.edit-link .genericon {
+	font-size: 1rem!important;
+	line-height: 1;
 }
 .attachment span.edit-link {
   margin-left: 1rem;
@@ -522,19 +540,21 @@ img.alignnone {
 }
 article {
 	border-bottom: 1px solid #ededed;
+	display: block;
 	margin-bottom: 35px;
 	padding-bottom: 1.5rem;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+	position: relative;
+	float: none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word!important;
 }
 body.page article {
 	border-bottom:none!important;
 	margin-bottom:0!important;
 	padding-bottom:0!important;
-}
-body.page footer.entry-meta {
-	margin-bottom:1.5rem;
 }
 .error404 article {
 	border-bottom:none;
@@ -544,6 +564,7 @@ body.page footer.entry-meta {
 	line-height: 1.714285714;
 }
 footer.entry-meta {
+	margin-bottom: 1.5rem;
 	margin-top: 1.5rem;
 	color: #757575;
 }
@@ -551,6 +572,10 @@ footer.entry-meta {
     color: #757575;
     font-size: 0.75rem!important;
     line-height: normal;
+}
+.entry-meta-tags .genericon {
+    font-size: 1rem!important;
+    line-height:1;
 }
 footer .entry-meta-footer .the-cats {
     margin-bottom: 5px;
@@ -830,7 +855,8 @@ p.edit-link {
 }
 .reply span.genericon,
 p.edit-link .genericon {
-  line-height:1.5!important;
+	font-size: 1rem;
+  	line-height:1.5!important;
 }
 .commentlist .pingback {
 	line-height: 1.714285714;
@@ -974,6 +1000,10 @@ img#wpstats {
 	display:inline !important;
 	padding:0 !important;
 	margin:0 !important;
+}
+div.jetpack-likes-widget-wrapper { /* Jetpack Likes Widget Wrapper */
+	height: auto!important;
+	display: block!important;
 }
 
 /* =TinyMCE Editor
@@ -1170,8 +1200,7 @@ section.tab-bar-section.middle a {
 	border-radius:3.125rem;
 }
 
-/* =WordPress Social Menu
------------------------------------------------ */
+/* WordPress Social Menu */
 #menu-social {
     text-align: left;
 }
@@ -1190,43 +1219,56 @@ section.tab-bar-section.middle a {
     text-decoration: none;
 }
 #menu-social li a::before {
-    content: '/f408';
+    content: '/';
     display: inline-block;
     padding: 0 3px;
-    font-family: Genericons;
+    font-family: 'FontAwesome';
     font-size: 2rem;
     vertical-align: top;
     -webkit-font-smoothing: antialiased;
 }
+#menu-social li a[href*="facebook.com"]::before {
+	content: "\f082";
+}
+#menu-social li a[href*="twitter.com"]::before {
+	content: "\f081";
+}
+#menu-social li a[href*="dribbble.com"]::before {
+	content: "\f17d";
+}
+#menu-social li a[href*="plus.google.com"]::before {
+	content: "\f0d4";
+}
+#menu-social li a[href*="pinterest.com"]::before {
+	content: "\f0d3";
+}
+#menu-social li a[href*="github.com"]::before {
+	content: "\f092";
+}
+#menu-social li a[href*="tumblr.com"]::before {
+	content: "\f174";
+}
+#menu-social li a[href*="youtube.com"]::before {
+	content: "\f166";
+}
+#menu-social li a[href*="flickr.com"]::before {
+	content: "\f16e";
+}
+#menu-social li a[href*="vimeo.com"]::before {
+	content: "\f194";
+}
+#menu-social li a[href*="instagram.com"]::before {
+	content: "\f16d";
+}
+#menu-social li a[href*="foursquare.com"]::before {
+	content: "\f180";
+}
+#menu-social li a[href*="linkedin.com"]::before {
+	content: "\f08c";
+}   
 #menu-social li a[href*="wordpress.org"]::before, 
 #menu-social li a[href*="wordpress.com"]::before {
-    content: '\f205'}
-#menu-social li a[href*="facebook.com"]::before {
-    content: '\f203'}
-#menu-social li a[href*="twitter.com"]::before {
-    content: '\f202'}
-#menu-social li a[href*="dribbble.com"]::before {
-    content: '\f201'}
-#menu-social li a[href*="plus.google.com"]::before {
-    content: '\f206'}
-#menu-social li a[href*="pinterest.com"]::before {
-    content: '\f210'}
-#menu-social li a[href*="github.com"]::before {
-    content: '\f200'}
-#menu-social li a[href*="tumblr.com"]::before {
-    content: '\f214'}
-#menu-social li a[href*="youtube.com"]::before {
-    content: '\f213'}
-#menu-social li a[href*="flickr.com"]::before {
-    content: '\f211'}
-#menu-social li a[href*="vimeo.com"]::before {
-    content: '\f212'}
-#menu-social li a[href*="instagram.com"]::before {
-    content: '\f215'}
-#menu-social li a[href*="codepen.io"]::before {
-    content: '\f216'}
-#menu-social li a[href*="linkedin.com"]::before {
-    content: '\f208'}
+    content: '\f19a'}    
 
 /* =Media Queries
 ----------------------------------------------- */

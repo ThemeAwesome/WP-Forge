@@ -18,7 +18,7 @@
 * @author Devin Price (@devinsays)
 * @see http://wptheming.com/2012/06/add-options-to-theme-customizer-default-sections/
 *
-* @since WP-Forge 5.2.2.4
+* @since WP-Forge 5.2.3.1a
 */
 
 function wpforge_customizer( $wp_customize ) { // Begin WP-Forge Theme Customizer
@@ -345,6 +345,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'type'       => 'select',
 		'choices'    => array(
 			'cover'  => __('Cover', 'wpforge'),
+			'contain'  => __('Contain', 'wpforge'),
 		),
 	));
 	// Background Image Position	
@@ -365,6 +366,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 			'left'       => __('Left', 'wpforge'),
 			'center'     => __('Center', 'wpforge'),
 			'right'      => __('Right', 'wpforge'),
+			'none'      => __('None', 'wpforge'),
 		),
 	));
 	// Background Image Attachment	
@@ -454,7 +456,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
  * Sanitation Section - This is where we add our sanitation functions for text inputs, check boxes, radio buttons and select lists
  * I like to keep them all in one area for organization.
  * 
- * @since WP-Forge 5.2.2.4
+ * @since WP-Forge 5.2.3.1a
  */
  
  // Header Sanitation Section
@@ -576,7 +578,7 @@ function wpforge_sanitize_background_attachment( $input ) {
  * Add postMessage support for some sections of our Theme Customizer.
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  * 
- * @since WP-Forge 5.2.2.4
+ * @since WP-Forge 5.2.3.1a
  */
 $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -601,7 +603,7 @@ add_action( 'customize_register', 'wpforge_customizer' ); // End WP-Forge Theme 
  * @author Anthony Wilhelm (@awshout)
  * @see https://github.com/awtheme/reactor
  *
- * @since WP-Forge 5.2.2.4
+ * @since WP-Forge 5.2.3.1a
  */
 function wpforge_customizer_css() {
 	do_action('wpforge_customizer_css');
@@ -652,7 +654,7 @@ add_action('wp_head', 'wpforge_customizer_css');
 /**
  * Registers our theme customizer preview with WordPress.
  *
- * @since WP-Forge 5.2.2.4
+ * @since WP-Forge 5.2.3.1a
  */
 function wpforge_customize_preview_js() {
 	wp_enqueue_script('wpforge-customizer', get_template_directory_uri() . '/inc/customizer/js/theme-customizer.js', array('jquery', 'customize-preview' ),'1.0.0', true);

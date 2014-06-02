@@ -1,3 +1,20 @@
+<!-- Changelog v5.2.3.1a -->
+1.) Seems in my haste to push out a fix for the Off Canvas issue, I forgot to change the version number in all of the files of WP-Forge. My apologies.
+
+<!-- Changelog v5.2.3.1 -->
+1.) Added "data-offcanvas" to line 13 of content-off_canvas.php - Seems this is needed by Off Canvas
+
+<!-- Changelog v5.2.3.1a -->
+1.) Updated to latest version of Foundation 5.2.3.1a
+2.) Added 'none' to the options for Background Position in the theme customizer.
+3.) Changed the default text of the menu fallback function
+4.) Updated normalize.css to 3.0.1 http://necolas.github.io/normalize.css/
+5.) Added 'contain' to the Background Size option in customizer.
+6.) Added Font-Awesome back into the mix. The shortcode plugin I am working on will use this font as well.
+7.) Combined all font css into one file.
+8.) Social menu icons are now handled by Font-Awesome. Font-Awesome provides a larger array of social icons.
+9.) Added Russion Translation - Thanks to Andriy https://github.com/helirexi
+
 <!-- Changelog v5.2.2.4 -->
 1.) Removed all styles back to their own style sheets and called them appropriately through functions.php - Apparently this was causing WP-Forge to display incorrectly in IE and FF.
 
@@ -8,7 +25,7 @@
 4.) Adjusted the social menu css to reflect the Genericons font.
 5.) Moved the fonts folder into the inc folder
 6.) Github versions of WP-Forge are now be tagged. This will allow end users to revert to previous releases of WP-Forge.
-7.) Changed the appearance of the author information area - This will provide a more consitent look across different platforms. I didn't like the way it was appearing on smaller screens.
+7.) Changed the appearance of the author information area - This will provide a more consistent look across different platforms. I didn't like the way it was appearing on smaller screens.
 8.) Fixed issue with the post title being displayed as a link in single post view.
 
 <!-- Changelog v5.2.2.2 -->
@@ -25,7 +42,7 @@
 8.) Moved Modernizr to load after jQuery
 
 <!-- Changelog as of 04/06/2014 -->
-1.) Updated to Foundation v5.2.2.4 (released on Friday 04/04/2014) - View changes made by Foundation via commit https://github.com/zurb/foundation/commit/520ea11dfe818691dd70cdb5c5ed5907e5e64168
+1.) Updated to Foundation v5.2.3.1a (released on Friday 04/04/2014) - View changes made by Foundation via commit https://github.com/zurb/foundation/commit/520ea11dfe818691dd70cdb5c5ed5907e5e64168
 2.) Removed the default values in the Background Section of the theme customizer.
 3.) Added "background-size" section to Background Section of the theme customizer. This will allow users to set a full width image as the background of the site without a plugin. Read more about the "background-size" attribute http://www.w3schools.com/cssref/css3_pr_background-size.asp
 4.) Removed background color from style.css and foundation.css - The default color will now be white. This will allow the user to set the initial color from within the theme customizer.
@@ -62,7 +79,7 @@ theme customizer was set to "Excerpt".
 
 <!-- Changelog as of 03/18/2014 -->
 
-1.) Updated to latest version of Foundation, currently 5.2.2.4
+1.) Updated to latest version of Foundation, currently 5.2.3.1a
 2.) Changed the way Open-Sans is included into the theme. This will make it easier for anyone to remove the font or add their own if necessary.
 3.) Added support for Jetpack's infinite scroll
 4.) Added the actual search form to 404.php (I think it look better this way)
