@@ -1,5 +1,8 @@
 ###Changelog for WP-Forge###
 
+###v5.2.3.1a
+* Seems in my haste to push out a fix for the Off Canvas issue, I forgot to change the version number in all of the files of WP-Forge. My apologies.
+
 ###v5.2.3.1###
 * Added data-offcanvas attribute to line 13 of content-off_canvas.php - Seems Foundation added this to Off Canvas in 5.2.3
 
