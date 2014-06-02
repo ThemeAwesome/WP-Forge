@@ -1,3 +1,6 @@
+<!-- Changelog v5.2.3.1 -->
+1.) Added "data-offcanvas" to line 13 of content-off_canvas.php - Seems this is needed by Off Canvas
+
 <!-- Changelog v5.2.3 -->
 1.) Updated to latest version of Foundation 5.2.3
 2.) Added 'none' to the options for Background Position in the theme customizer.
