@@ -10,7 +10,7 @@
 
 <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
 
-  <div class="off-canvas-wrap">
+  <div class="off-canvas-wrap" data-offcanvas>
   
   	<div class="inner-wrap">
 
