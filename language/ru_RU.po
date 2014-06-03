@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Forge\n"
 "POT-Creation-Date: 2014-04-06 07:36-0700\n"
-"PO-Revision-Date: 2014-05-26 01:28+0400\n"
+"PO-Revision-Date: 2014-06-02 14:50+0400\n"
 "Last-Translator: AG <helirexi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -38,27 +38,27 @@ msgstr "Поиск"
 #: archive.php:30
 #, php-format
 msgid "Daily Archives: %s"
-msgstr "Архивы по дням: %s"
+msgstr "Статьи по дням: %s"
 
 #: archive.php:32
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr "Архивы по месяцам: %s"
+msgstr "Статьи по месяцам: %s"
 
 #: archive.php:32
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "м г"
+msgstr "F Y"
 
 #: archive.php:34
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr "Архивы по годам: %s"
+msgstr "Статьи по годам: %s"
 
 #: archive.php:34
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr "г"
+msgstr "Y"
 
 #: archive.php:36
 msgid "Asides"
@@ -98,12 +98,12 @@ msgstr "Видео"
 
 #: archive.php:63
 msgid "Archives"
-msgstr "Архивы"
+msgstr "Статьи"
 
 #: author.php:30
 #, php-format
 msgid "Author Archives: %s"
-msgstr "Архивы по авторам: %s"
+msgstr "Статьи автора: %s"
 
 #: author.php:48 content-author.php:17 content.php:51
 #, php-format
@@ -113,15 +113,15 @@ msgstr "О %s"
 #: category.php:22
 #, php-format
 msgid "Category Archives: %s"
-msgstr "Архивы по категориям: %s"
+msgstr "Статьи по разделам: %s"
 
 #: comments.php:27
 #, fuzzy, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Один комментарий на &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s комментариев на &ldquo;%2$s&rdquo;"
-msgstr[2] "%1$s комментариев на &ldquo;%2$s&rdquo;"
+msgstr[0] "Один комментарий к &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s комментариев к &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s комментариев к &ldquo;%2$s&rdquo;"
 
 #: comments.php:44
 msgid "Comment navigation"
@@ -163,7 +163,7 @@ msgstr "Комментарий"
 #: comments.php:78
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr "Вы должны быть <a href=\"%s\">залогинены</a> для комментирования."
+msgstr "Вы должны <a href=\"%s\">войти</a> для комментирования."
 
 #: comments.php:84
 #, php-format
@@ -200,7 +200,7 @@ msgstr "Постоянная ссылка на %s"
 #: content-aside.php:15 content-image.php:13 content-link.php:13
 #: content-quote.php:13 content-status.php:20
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Продолжить <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
 
 #: content-aside.php:22 content-audio.php:37 content-chat.php:30
 #: content-gallery.php:36 content-image.php:19 content-link.php:19
@@ -212,7 +212,7 @@ msgstr "Редактировать"
 #: content-audio.php:29 content-gallery.php:28 content-video.php:28
 #: content.php:37
 msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Прожолжить <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&raquo;</span>"
 
 #: content-audio.php:30 content-chat.php:24 content-gallery.php:29
 #: content-page.php:18 content-video.php:29 content.php:38 image.php:94
@@ -291,7 +291,7 @@ msgstr "WordPress"
 
 #: functions.php:101
 msgid "Main Menu"
-msgstr "Главное меню"
+msgstr "Основное меню"
 
 #: functions.php:102
 msgid "Footer Menu"
@@ -333,19 +333,19 @@ msgstr "Отображает виджеты в блоге, а также на с
 
 #: functions.php:363
 msgid "First Front Page Widget Area"
-msgstr "Первый блок виджетов Главной Страницы"
+msgstr "Первый блок виджетов FrontPage"
 
 #: functions.php:365 functions.php:374
 msgid ""
 "Appears when using the optional Front Page template with a page set as "
 "Static Front Page"
 msgstr ""
-"Будет отображаться при использовании шаблона Front Page template как "
+"Будет отображаться при использовании шаблона FrontPage template как "
 "статической домашней страницы"
 
 #: functions.php:372
 msgid "Second Front Page Widget Area"
-msgstr "Второй блок виджетов Главной Страницы"
+msgstr "Второй блок виджетов FrontPage"
 
 #: functions.php:381
 msgid "First Footer Widget Area"
@@ -535,7 +535,7 @@ msgstr "Футер"
 
 #: inc/customizer/customizer.php:258
 msgid "Modify the footer text of your theme."
-msgstr "Изменение текста футера темы."
+msgstr "Изменение текста в Футере темы."
 
 #: inc/customizer/customizer.php:267
 msgid "Copyright Text"
@@ -655,4 +655,4 @@ msgstr "&raquo;"
 #: tag.php:22
 #, php-format
 msgid "Tag Archives: %s"
-msgstr "Метка (Архивы): %s"
+msgstr "Метки: %s"
