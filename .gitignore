@@ -19,6 +19,9 @@ local.properties
 # External tool builders
 .externalToolBuilders/
 
+# Espresso
+.esproj
+
 # Locally stored "Eclipse launch configurations"
 *.launch
 
