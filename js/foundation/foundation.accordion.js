@@ -1,10 +1,13 @@
+/*
+@since WP-Forge 5.3.0
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.accordion = {
     name : 'accordion',
 
-    version : '5.2.3.1a',
+    version : '5.3.0',
 
     settings : {
       active_class: 'active',
@@ -39,7 +42,11 @@
 
         if (settings.toggleable && target.is(active_content)) {
           target.parent('dd').toggleClass(settings.active_class, false);
-          return target.toggleClass(settings.active_class, false);
+          target.toggleClass(settings.active_class, false);
+          settings.callback(target);
+          target.triggerHandler('toggled', [accordion]);
+          accordion.triggerHandler('toggled', [target]);
+          return;
         }
 
         if (!settings.multi_expand) {
@@ -49,6 +56,8 @@
 
         target.addClass(settings.active_class).parent().addClass(settings.active_class);
         settings.callback(target);
+        target.triggerHandler('toggled', [accordion]);
+        accordion.triggerHandler('toggled', [target]);
       });
     },
 

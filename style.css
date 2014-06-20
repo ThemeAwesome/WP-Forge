@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: http://wpforge.themeawesome.com/
 Author: Thomas E. Vasquez
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation (v5.2.3.1a), the most advanced responsive front-end framework in the world.
-Version: 5.2.3.1a
+Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation (v5.2.3), the most advanced responsive front-end framework in the world.
+Version: 5.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -57,7 +57,7 @@ textarea {
 /* =Repeatable patterns
 -------------------------------------------------------------- */
 /* Small headers */
-.archive-title,`
+.archive-title,
 .page-title,
 .entry-content th,
 .comment-content th {
@@ -540,14 +540,11 @@ img.alignnone {
 }
 article {
 	border-bottom: 1px solid #ededed;
-	display: block;
 	margin-bottom: 35px;
 	padding-bottom: 1.5rem;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
-	position: relative;
-	float: none;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word!important;
 }

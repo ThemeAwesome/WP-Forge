@@ -1,10 +1,13 @@
+/*
+@since WP-Forge 5.3.0
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.tooltip = {
     name : 'tooltip',
 
-    version : '5.2.3.1a',
+    version : '5.3.0',
 
     settings : {
       additional_inheritable_classes : [],

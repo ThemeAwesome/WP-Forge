@@ -1,9 +1,9 @@
-Welcome to WP-Forge v5.2.3
+Welcome to WP-Forge v5.3.0
 ====================
 
-###Updated 5-31-2014###
+###Updated 6-20-2014###
 
-WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.2.3), the most advanced responsive front-end framework.
+WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.3.0), the most advanced responsive front-end framework.
 
 ###Built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
@@ -48,14 +48,17 @@ You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The View
 If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the forums: http://themeawesome.com/forums
 
 ###Additional Information###
-WP-Forge validates at 97% over at [ThemeCheck.org] (http://themecheck.org/score/wordpress_theme_wp-forge.html)
+WP-Forge validates at 98% over at [ThemeCheck.org] (http://themecheck.org/score/wordpress_theme_wp-forge.html)
 
 Contributors
 =============
 The following individuals have contributed to WP-Forge
+* [Felipe Trombini] (http://www.felipetrombini.com.br/) for Portuguese localization
 * [Christopher Anderton] (https://github.com/Deluxive) for Swedish localization
-* [Felipe Trombini] (fmtrede@gmail.com) for Portuguese localization
 * [Andriy] (https://github.com/helirexi) for Russian localization
+* [Alfonso Correas] (http://www.cor-ser.com/) for Spanish localization
+
+#####If you would like to provide a language translation for WP-Forge, please contact me via ThemeAwesome.com#####
 
 Additional Credits
 =============

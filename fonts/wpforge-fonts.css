@@ -1,14 +1,7 @@
-@font-face {
-    font-family: 'open_sanslight';
-    src: url('OpenSans-Light-webfont.eot');
-    src: url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('OpenSans-Light-webfont.woff') format('woff'),
-         url('OpenSans-Light-webfont.ttf') format('truetype'),
-         url('OpenSans-Light-webfont.svg#open_sanslight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
+/*
+@since WP-Forge 5.3.0
+*/
+@font-face{font-family:open_sanslight;src:url(OpenSans-Light-webfont.eot);src:url(OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(OpenSans-Light-webfont.woff) format('woff'),url(OpenSans-Light-webfont.ttf) format('truetype'),url(OpenSans-Light-webfont.svg#open_sanslight) format('svg');font-weight:400;font-style:normal}
 
 /* =Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
 ----------------------------------------------- */
@@ -23,20 +16,4 @@
 ----------------------------------------------- */
 
 /* Genericons Additional Styles - Inspired by Font-Awesome */
-.gen-lg {
-  font-size: 1.33333333em;
-  line-height: 0.75em;
-  vertical-align: -15%;
-}
-.gen-2x {
-  font-size: 2em;
-}
-.gen-3x {
-  font-size: 3em;
-}
-.gen-4x {
-  font-size: 4em;
-}
-.gen-5x {
-  font-size: 5em;
-} 
+.gen-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.gen-2x{font-size:2em}.gen-3x{font-size:3em}.gen-4x{font-size:4em}.gen-5x{font-size:5em} 

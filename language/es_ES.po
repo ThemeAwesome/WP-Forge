@@ -1,0 +1,274 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Forge v5.3.0\n"
+"POT-Creation-Date: 2014-06-09 10:46+0100\n"
+"PO-Revision-Date: 2014-06-09 16:38+0100\n"
+"Last-Translator: Alfonso Correas <alfonso.correasserrat@gmail.com>\n"
+"Language-Team: ThemeAwesome.com <tsquez@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: content-audio.php:17
+msgid "Comment"
+msgstr "Comentario"
+
+#: content-audio.php:17
+msgid "1 Comment"
+msgstr "1 comentario"
+
+#: content-audio.php:17
+msgid "% Comments"
+msgstr "% comentarios"
+
+#: content-audio.php:19
+msgid "Edit"
+msgstr "Editar"
+
+#: content-audio.php:26
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink a %s"
+
+#: content-audio.php:37
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Continuar leyendo <span class=\"meta-nav\">&raquo;</span>"
+
+#: content-audio.php:38
+msgid "Pages:"
+msgstr "P&aacute;ginas:"
+
+#~ msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+#~ msgstr "Bueno... Esto es algo embarazoso, no?"
+
+#~ msgid ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching can help."
+#~ msgstr ""
+#~ "Parece que no encontramos lo que buscaba. Quiz&aacute;s b&uacute;scando "
+#~ "podamos encontrarlo"
+
+#~ msgid "Search"
+#~ msgstr "Buscar"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Archivos diarios: %s"
+
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Archivos mensuales: %s"
+
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#~ msgid "Chats"
+#~ msgstr "Chats"
+
+#~ msgid "Galleries"
+#~ msgstr "Galer&iacute;s"
+
+#~ msgid "Images"
+#~ msgstr "Im&aacute;genes"
+
+#~ msgid "Links"
+#~ msgstr "Enlaces"
+
+#, fuzzy
+#~ msgid "Quotes"
+#~ msgstr "Quotes"
+
+#~ msgid "Status"
+#~ msgstr "Estado"
+
+#~ msgid "Videos"
+#~ msgstr "Videos"
+
+#~ msgid "Archives"
+#~ msgstr "Archivos"
+
+#~ msgid "Author Archives: %s"
+#~ msgstr "Archivos del autor: %s"
+
+#~ msgid "About %s"
+#~ msgstr "Acerca de: %s"
+
+#, fuzzy
+#~ msgid "Category Archives: %s"
+#~ msgstr "Categoria archivos: %s"
+
+#, fuzzy
+#~ msgid "Comment navigation"
+#~ msgstr "Navegaci&oacute;n por los comentarios"
+
+#~ msgid "&larr; Older Comments"
+#~ msgstr "Comentarios antiguos &larr;"
+
+#~ msgid "Newer Comments &rarr;"
+#~ msgstr "Comentarios nuevos &rarr;"
+
+#~ msgid "Comments are closed."
+#~ msgstr "Los comentarios est&aacute;n cerrados"
+
+#~ msgid "Leave a Reply"
+#~ msgstr "Dejar una respuesta"
+
+#~ msgid "Leave a Reply to %s"
+#~ msgstr "Dejar una respuesta a %s"
+
+#~ msgid "Cancel Reply"
+#~ msgstr "Cancelar respuesta"
+
+#~ msgid "Post Comment"
+#~ msgstr "Publicar comentario"
+
+#~ msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+#~ msgstr ""
+#~ "Debes de estar <a href=\"%s\"> identificado</a> para publicar un comentario."
+
+#~ msgid "Your email address will not be published."
+#~ msgstr "Su direcci&oacute;n de correo no ser&aacute; publicada."
+
+#~ msgid "Your Website"
+#~ msgstr "Su website"
+
+#~ msgid "No posts to display"
+#~ msgstr "No hay respuestas que mostrar"
+
+#~ msgid "Nothing Found"
+#~ msgstr "No se ha encontrado nada"
+
+#~ msgid "Edit Page"
+#~ msgstr "Editar p&aacute;gina"
+
+#~ msgid "Leave a reply"
+#~ msgstr "Dejar una respuesta"
+
+#~ msgid "1 Reply"
+#~ msgstr "1 respuesta"
+
+#~ msgid "% Replies"
+#~ msgstr "% respuestas"
+
+#~ msgid "Powered by"
+#~ msgstr "Animado por"
+
+#~ msgid "http://themeawesome.com/responsive-wordpress-theme/"
+#~ msgstr "http://themeawesome.com/responsive-wordpress-theme/"
+
+#~ msgid "Responsive WordPress Theme by ThemeAwesome.com"
+#~ msgstr "Responsive WordPress Theme by ThemeAwesome.com"
+
+#~ msgid "WP-Forge"
+#~ msgstr "WP-Forge"
+
+#~ msgid "http://wordpress.org/"
+#~ msgstr "http://wordpress.org"
+
+#~ msgid "WordPress"
+#~ msgstr "WordPress"
+
+#~ msgid "Main Menu"
+#~ msgstr "Men&uacute; principal"
+
+#~ msgid "Footer Menu"
+#~ msgstr "Men&uacute; al pie"
+
+#~ msgid "Social Menu"
+#~ msgstr "Men&uacute; social"
+
+#~ msgid "Page %s"
+#~ msgstr "P&aacute;gina %s"
+
+#~ msgid "<a href=\"%s\">Menus</a>"
+#~ msgstr "<a href=\"%s\">Men&uacute;s</a>"
+
+#~ msgid "Main Sidebar"
+#~ msgstr "Barra lateral"
+
+#~ msgid "Pingback:"
+#~ msgstr "Pingback:"
+
+#~ msgid "(Edit)"
+#~ msgstr "(Editar)"
+
+#~ msgid "Post Author"
+#~ msgstr "Autor"
+
+#, fuzzy
+#~ msgid "%1$s at %2$s"
+#~ msgstr "%1$s en %2$s"
+
+#~ msgid "Your comment is awaiting moderation."
+#~ msgstr "Su comentario est&aacute; a la espera de moderaci&oacute;n."
+
+#~ msgid "Reply &raquo;"
+#~ msgstr "Contestar &raquo;"
+
+#~ msgid ", "
+#~ msgstr ","
+
+#~ msgid "View all posts by %s"
+#~ msgstr "Ver todos los comentarios de %s"
+
+#~ msgid " Edit"
+#~ msgstr "Editar"
+
+#~ msgid "Header"
+#~ msgstr "Cabecera"
+
+#~ msgid "Site Logo"
+#~ msgstr "Logo del sitio"
+
+#~ msgid "Site Title"
+#~ msgstr "T%uacute;tulo del sitio"
+
+#~ msgid "Tagline"
+#~ msgstr "Tagline"
+
+#~ msgid "Posts"
+#~ msgstr "Comentarios"
+
+#~ msgid "Modify how posts appear in your theme."
+#~ msgstr "Modificar como aparecer&aacute;n los comentarios en su tema."
+
+#~ msgid "Show Full Post or Excerpt?"
+#~ msgstr "Mostrar comentario completo o un extracto?"
+
+#~ msgid "Footer"
+#~ msgstr "P&iacute;e de p&aacute;gina"
+
+#, fuzzy
+#~ msgid "Modify the footer text of your theme."
+#~ msgstr "Modificar el texto del pie de pagina de su tema."
+
+#~ msgid "Copyright Text"
+#~ msgstr "Texto Copyright"
+
+#~ msgid "Background"
+#~ msgstr "Fondo"
+
+#~ msgid "Background Color"
+#~ msgstr "Color de fondo"
+
+#~ msgid "Left"
+#~ msgstr "Izquierda"
+
+#~ msgid "Center"
+#~ msgstr "Centro"
+
+#~ msgid "Right"
+#~ msgstr "Derecha"
+
+#~ msgid "Fixed"
+#~ msgstr "Fijo"
+
+#~ msgid "Colors"
+#~ msgstr "Colores"

@@ -1,10 +1,13 @@
+/*
+@since WP-Forge 5.3.0
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.alert = {
     name : 'alert',
 
-    version : '5.2.3.1a',
+    version : '5.3.0',
 
     settings : {
       callback: function (){}
@@ -23,15 +26,15 @@
               settings = alertBox.data(self.attr_name(true) + '-init') || self.settings;
 
         e.preventDefault();
-        if ('transitionend' in window || 'webkitTransitionEnd' in window || 'oTransitionEnd' in window) {
+        if (Modernizr.csstransitions) {
           alertBox.addClass("alert-close");
           alertBox.on('transitionend webkitTransitionEnd oTransitionEnd', function(e) {
-            S(this).trigger('close').remove();
+            S(this).trigger('close').trigger('close.fndtn.alert').remove();
             settings.callback();
           });
         } else {
           alertBox.fadeOut(300, function () {
-            S(this).trigger('close').remove();
+            S(this).trigger('close').trigger('close.fndtn.alert').remove();
             settings.callback();
           });
         }

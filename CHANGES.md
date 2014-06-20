@@ -1,6 +1,14 @@
 ###Changelog for WP-Forge###
 
-###v5.2.3.1a
+###v5.3.0###
+* Updated to the latest version of Foundation v5.3.0
+* Minimized font css a little more
+* Added Spanish Spanish Translation - Thanks to Alfonso Correas
+
+###v5.2.3.2###
+* Added Spanish Spanish Translation - Thanks to Alfonso Correas
+
+###v5.2.3.1a###
 * Seems in my haste to push out a fix for the Off Canvas issue, I forgot to change the version number in all of the files of WP-Forge. My apologies.
 
 ###v5.2.3.1###
