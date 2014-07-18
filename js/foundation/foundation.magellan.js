@@ -1,13 +1,12 @@
-/*
-@since WP-Forge 5.3.0
-*/
+/*WP-Forge v5.3.1*/
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs['magellan-expedition'] = {
     name : 'magellan-expedition',
 
-    version : '5.3.0',
+    version : '5.3.1',
 
     settings : {
       active_class: 'active',
@@ -41,10 +40,12 @@
           
           if (target.length === 0) {
             target = $('#'+hash);
+            
           }
 
+
           // Account for expedition height if fixed position
-          var scroll_top = target.offset().top - settings.destination_threshold;
+          var scroll_top = target.offset().top - settings.destination_threshold + 1;
           scroll_top = scroll_top - expedition.outerHeight();
 
           $('html, body').stop().animate({

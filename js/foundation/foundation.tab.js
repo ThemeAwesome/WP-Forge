@@ -1,13 +1,12 @@
-/*
-@since WP-Forge 5.3.0
-*/
+/*WP-Forge v5.3.1*/
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.tab = {
     name : 'tab',
 
-    version : '5.3.0',
+    version : '5.3.1',
 
     settings : {
       active_class: 'active',

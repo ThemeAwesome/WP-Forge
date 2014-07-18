@@ -1,6 +1,4 @@
-/*
-@since WP-Forge 5.3.0
-*/
+/*WP-Forge v5.3.1*/
 
 ;(function ($, window, document, undefined) {
   'use strict';
@@ -8,7 +6,7 @@
   Foundation.libs.abide = {
     name : 'abide',
 
-    version : '5.3.0',
+    version : '5.3.1',
 
     settings : {
       live_validate : true,
