@@ -114,9 +114,6 @@ add_action( 'after_setup_theme', 'wpforge_setup' );
 // Loads our theme customizer.
 require( get_template_directory() . '/inc/customizer/customizer.php' );
 
-// Loads our shortcodes
-require( get_template_directory() . '/inc/shortcodes/functions.php' );
-
 /**
  * Enqueue our scripts and styles
  *
