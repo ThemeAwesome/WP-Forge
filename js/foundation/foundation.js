@@ -4,7 +4,7 @@
  * Copyright 2014, ZURB
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * WP-Forge v5.3.1
+ * WP-Forge v5.3.1.1
 */
 
 (function ($, window, document, undefined) {
@@ -279,7 +279,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.3.1',
+    version : '5.3.1.1',
 
     media_queries : {
       small : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),

@@ -1,4 +1,4 @@
-/*WP-Forge v5.3.1*/
+/*WP-Forge v5.3.1.1*/
 
 ;(function ($, window, document, undefined) {
   'use strict';
@@ -6,7 +6,7 @@
   Foundation.libs.alert = {
     name : 'alert',
 
-    version : '5.3.1',
+    version : '5.3.1.1',
 
     settings : {
       callback: function (){}
