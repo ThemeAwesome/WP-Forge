@@ -1,5 +1,8 @@
 ###Changelog for WP-Forge###
 
+####v5.3.2####
+* Updated to the latest version of Foundation, v5.3.2
+
 ####v5.3.1 ####
 * Updated to the latest version of Foundation v5.3.1
 * removed unnecessary declaration from lines 393 and 394 of style.css - Thanks Hash Varsani

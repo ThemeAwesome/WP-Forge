@@ -1,16 +1,17 @@
-/*WP-Forge v5.3.1.1*/
-
+/**
+ * @since WP-Forge 5.3.2
+ */
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.offcanvas = {
     name : 'offcanvas',
 
-    version : '5.3.1.1',
+    version : '5.3.2',
 
     settings : {
       open_method: 'move',
-      close_on_click: true
+      close_on_click: false
     },
 
     init : function (scope, method, options) {

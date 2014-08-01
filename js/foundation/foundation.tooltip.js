@@ -1,12 +1,13 @@
-/*WP-Forge v5.3.1.1*/
-
+/**
+ * @since WP-Forge 5.3.2
+ */
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.tooltip = {
     name : 'tooltip',
 
-    version : '5.3.1.1',
+    version : '5.3.2',
 
     settings : {
       additional_inheritable_classes : [],
@@ -282,7 +283,7 @@
 
       $tip.fadeOut(150, function() {
         $tip.find('.tap-to-close').remove();
-        $tip.off('click.fndtn.tooltip.tapclose touchstart.fndtn.tooltip.tapclose MSPointerDown.fndtn.tapclose');
+        $tip.off('click.fndtn.tooltip.tapclose MSPointerDown.fndtn.tapclose');
         $target.removeClass('open');
       });
     },
