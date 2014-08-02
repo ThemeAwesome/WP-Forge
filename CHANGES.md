@@ -1,5 +1,8 @@
 ###Changelog for WP-Forge###
 
+####v5.3.3####
+* No changes to the actual theme itself. v5.3.3 is another Foundation release which fixes the Reveal modal z-index issue.
+
 ####v5.3.2####
 * Updated to the latest version of Foundation, v5.3.2
 

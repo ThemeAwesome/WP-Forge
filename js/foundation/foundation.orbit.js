@@ -1,5 +1,5 @@
 /**
- * @since WP-Forge 5.3.2
+ * @since WP-Forge 5.3.3
  */
 ;(function ($, window, document, undefined) {
   'use strict';

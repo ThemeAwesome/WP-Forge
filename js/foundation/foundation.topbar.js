@@ -1,5 +1,5 @@
 /**
- * @since WP-Forge 5.3.2
+ * @since WP-Forge 5.3.3
  */
 ;(function ($, window, document, undefined) {
   'use strict';
@@ -7,7 +7,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '5.3.2',
+    version: '5.3.3',
 
     settings : {
       index : 0,

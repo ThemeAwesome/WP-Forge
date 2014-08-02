@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.2
+ * @since WP-Forge 5.3.3
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>

@@ -4,7 +4,7 @@
  * Copyright 2014, ZURB
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * @since WP-Forge 5.3.2 
+ * @since WP-Forge 5.3.3 
 */
 
 (function ($, window, document, undefined) {

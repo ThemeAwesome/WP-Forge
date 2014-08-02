@@ -1,5 +1,5 @@
 /**
- * @since WP-Forge 5.3.2
+ * @since WP-Forge 5.3.3
  */
 ;(function ($, window, document, undefined) {
   'use strict';
@@ -7,7 +7,7 @@
   Foundation.libs.accordion = {
     name : 'accordion',
 
-    version : '5.3.2',
+    version : '5.3.3',
 
     settings : {
       active_class: 'active',

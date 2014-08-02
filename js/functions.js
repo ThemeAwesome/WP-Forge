@@ -1,4 +1,4 @@
-(function($) { // Add java script to footer so all Foundation scripts will work - @since WP-Forge 5.3.2
+(function($) { // Add java script to footer so all Foundation scripts will work - @since WP-Forge 5.3.3
 jQuery(document).foundation()
 
 	// Joyride

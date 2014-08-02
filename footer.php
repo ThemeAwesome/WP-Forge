@@ -7,7 +7,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.2
+ * @since WP-Forge 5.3.3
  */
 ?>
 	</section><!-- #main .wrapper -->
