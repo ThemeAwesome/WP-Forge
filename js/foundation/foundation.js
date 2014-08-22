@@ -4,7 +4,8 @@
  * Copyright 2014, ZURB
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * @since WP-Forge 5.3.3 
+ *
+ * @since WP-Forge 5.3.4
 */
 
 (function ($, window, document, undefined) {
@@ -117,7 +118,7 @@
         }
       });
     }
-    // # Patch to fix #5043 to move this *after* the if/else clause in order for Backbone and similar frameworks to have improved control over event binding and data-options updating. 
+    // # Patch to fix #5043 to move this *after* the if/else clause in order for Backbone and similar frameworks to have improved control over event binding and data-options updating.
     if (typeof method === 'string') {
       return this[method].call(this, options);
     }
@@ -279,7 +280,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.3.1',
+    version : '5.3.3',
 
     media_queries : {
       small : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
@@ -316,6 +317,18 @@
           responses.push(this.init_lib(lib, libraries));
         }
       }
+
+      S(window).load(function(){
+        S(window)
+          .trigger('resize.fndtn.clearing')
+          .trigger('resize.fndtn.dropdown')
+          .trigger('resize.fndtn.equalizer')
+          .trigger('resize.fndtn.interchange')
+          .trigger('resize.fndtn.joyride')
+          .trigger('resize.fndtn.magellan')
+          .trigger('resize.fndtn.topbar')
+          .trigger('resize.fndtn.slider');
+      });
 
       return scope;
     },

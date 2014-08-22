@@ -9,7 +9,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.3
+ * @since WP-Forge 5.3.4
  */
 
 get_header(); ?>

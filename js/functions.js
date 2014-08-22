@@ -1,4 +1,4 @@
-(function($) { // Add java script to footer so all Foundation scripts will work - @since WP-Forge 5.3.3
+(function($) { // Add java script to footer so all Foundation scripts will work - @since WP-Forge 5.3.4
 jQuery(document).foundation()
 
 	// Joyride
@@ -30,7 +30,7 @@ jQuery(document).foundation()
 		jQuery('html, body').animate({
 		scrollTop: jQuery('body').offset().top
 		}, 1000); // Change this value to control the speed of the scroll back to the top of the page.		   
-	});		
+	});
 	
 // end loading all functions   
    

@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.3
+ * @since WP-Forge 5.3.4
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -36,7 +36,12 @@
 
 	<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?>
     	<?php get_template_part( 'content', 'nav' ); ?>
-    <?php } // end if ?>   
+    <?php } // end if ?>
+
+    <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
+        <?php get_template_part( 'content', 'nav' ); ?>
+    <?php } // end if ?>    
+
 
 	<div id="wrapper"> 
           

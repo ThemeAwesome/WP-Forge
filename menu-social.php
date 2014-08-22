@@ -2,12 +2,12 @@
 /**
  * The template that supplies our WordPress Social Menu
  *
- * Justin Tadlock
+ * @author Justin Tadlock
  * @see http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.3
+ * @since WP-Forge 5.3.4
  */
 ?>
 

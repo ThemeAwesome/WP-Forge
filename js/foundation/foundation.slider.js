@@ -1,5 +1,5 @@
 /**
- * @since WP-Forge 5.3.3
+ * @since WP-Forge 5.3.4
  */
 ;(function ($, window, document, undefined) {
   'use strict';
@@ -144,7 +144,7 @@
     },
 
     normalized_percentage : function(val, start, end) {
-      return (val - start)/(end - start);
+      return Math.min(1, (val - start)/(end - start));
     },
 
     normalized_value : function(val, start, end, step) {

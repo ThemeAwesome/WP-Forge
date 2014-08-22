@@ -8,7 +8,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.3
+ * @since WP-Forge 5.3.4
  */
 
 get_header(); ?>
@@ -42,7 +42,7 @@ get_header(); ?>
 			if ( get_the_author_meta( 'description' ) ) : ?>
 				<div class="author-info small-12 medium-12 large-12 columns">
 					<div class="author-avatar small-12 medium-12 large-12 columns">
-						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 96 ) ); ?>
+						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 200 ) ); ?>
 					</div><!-- .author-avatar -->
 					<div class="author-description small-12 medium-12 large-12 columns">
 						<h3><?php printf( __( 'About %s', 'wpforge' ), get_the_author() ); ?></h3>

@@ -1,5 +1,5 @@
 /**
- * @since WP-Forge 5.3.3
+ * @since WP-Forge 5.3.4
  */
 ;(function ($, window, document, undefined) {
   'use strict';
@@ -114,7 +114,7 @@
             placeholder.attr(self.add_namespace('data-magellan-expedition-clone'),'');
             expedition.before(placeholder);
           }
-          expedition.css({position:'fixed', top: settings.fixed_top});
+          expedition.css({position:'fixed', top: settings.fixed_top}).addClass('fixed');
         } else {
           expedition.prev('[' + self.add_namespace('data-magellan-expedition-clone') + ']').remove();
           expedition.attr('style',styles).css('position','').css('top','').removeClass('fixed');

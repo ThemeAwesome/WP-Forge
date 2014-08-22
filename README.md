@@ -1,11 +1,17 @@
-Welcome to WP-Forge v5.3.3
+Welcome to WP-Forge v5.3.4 - A [Responsive WordPress Theme] (http://themeawesome.com/responsive-wordpress-theme)
 ====================
 
-###Updated 8-1-2014###
+###Updated 8-22-2014### 
 
-WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.3.3), the most advanced responsive front-end framework.
+WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.3.4), the most advanced responsive front-end framework.
 
-###Built with the following tools###
+##WP-Forge Demo##
+You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - You will notice that the [Viewport Resizer] (http://lab.maltewassermann.com/viewport-resizer/) from Malte Wassermann automatically loads at the top of the browser. This will allow you to test the theme against various device sizes.
+
+##WP-Forge Forums##
+If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the [Support Forums:] (http://themeawesome.com/support)
+
+###WP-Forge was built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
 * [WP-Test](http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integioty of themes and plugins. Developed by [Michael Novotny](http://manovotny.com/)
 * [Theme Unit Test] (http://codex.wordpress.org/Theme_Unit_Test) - Similar to WP-Test. A set of test data created by the WordPress Theme Review Team
@@ -17,11 +23,13 @@ WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve)
 * [Viewport Resizer](http://lab.maltewassermann.com/viewport-resizer/) - a handy bookmarklet that will load your site in a viewport the size of common devices. This is helpful in testing responsive design.
 * [Screenfly](http://quirktools.com/screenfly/) – Responsive screen testing for monitors, tablets, smart phones, and more (personally one of my favorites).
 
+##Features##
+
 ###Theme Customizer###
 When 3.4 was released, WordPress introduced the [Theme Customizer] (https://codex.wordpress.org/Theme_Customization_API). The customizer allows you to modify certain areas of a theme and preview those changes in real time before publishing. WP-Forge now comes with its own custom Theme Customizer. For more information regarding the Theme Customizer please read the information under Configuration in the README.txt file.
 
 ###Off-Canvas Support###
-WP-Forge now offers support for Off-Canvas menu. For more information regarding Off-Canvas please read the information under Configuration in the readme.txt file.
+WP-Forge now offers support for `Off-Canvas menu`. For more information regarding Off-Canvas please read the information under Configuration in the readme.txt file.
 
 ###jQuery###
 WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in the header. This practice falls within the [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development). You can do a search and find the information you need to use Google's version and load it in the footer if you wish.
@@ -40,12 +48,6 @@ Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. Th
 
 ###Github Updater###
 Added support for Andy Fragen's [Github Updater] (https://github.com/afragen/github-updater) - Now you can update WP-Forge from within the WordPress dashboard itself. Make sure you download and install the plugin.
-
-###WP-Forge Demo###
-You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - The Viewport Resizer is available on the home page of the demo site. Simply click the button that states "Test WP-Forge Responsiveness" and the Viewport Resizer bar will appear at the top of the site allowing to test the theme against various device sizes.
-
-###WP-Forge Forums###
-If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the forums: http://themeawesome.com/forums
 
 ###Additional Information###
 WP-Forge validates at 98% over at [ThemeCheck.org] (http://themecheck.org/score/wordpress_theme_wp-forge.html)
@@ -78,8 +80,8 @@ This means WP-Forge is completely free to use and modify as you see fit. I hope 
 
 ThemeAwesome.com
 =============
-WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://www.themeawesome.com), a site focused on Responsive WordPress theme development.
+WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on Responsive WordPress theme development.
 
 FoundationThemes.co
 =============
-[FoundationThemes.co](http://foundationthemes.co/) is a website focused on developing Responsive WordPress themes built with WordPress and Zurb’s Foundation - Make sure you enter your email address to be notified when launches.
+[FoundationThemes.co](http://foundationthemes.co/) is a website focused on developing Responsive WordPress child themes for WP-Forge - Currently still in development but make sure to visit and enter your email address to be notified when the site launches.

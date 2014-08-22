@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.3
+ * @since WP-Forge 5.3.4
  */
 ?>
 
@@ -25,7 +25,8 @@
 				<?php wpforge_entry_meta_header(); ?>
 				<?php if ( comments_open() ) : ?>			
 					<span class="genericon genericon-comment"></span> <?php comments_popup_link( '<span class="leave-reply">' . __( 'Comment', 'wpforge' ) . '</span>', __( '1 Comment', 'wpforge' ), __( '% Comments', 'wpforge' ) ); ?>
-				<?php endif; // comments_open() ?>		
+				<?php endif; // comments_open() ?>
+				<?php edit_post_link( __( 'Edit', 'wpforge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' ); ?>	
 			</div><!-- end .entry-meta-header -->
 			<?php if ( is_home() && get_theme_mod( 'wpforge_thumb_display' ) == 'yes' ) : // Display thumbnail on home page if theme customizer option is set to yes ?>
             	<?php the_post_thumbnail(); ?>
@@ -46,8 +47,6 @@
 
 		<footer class="entry-meta">
 			<div class="entry-meta-footer">
-				<?php wpforge_entry_meta_footer(); ?><br />
-				<?php edit_post_link( __( 'Edit', 'wpforge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' ); ?>
 			</div><!-- end .entry-meta-footer -->
 				<?php get_template_part( 'content', 'author' ); ?>
 		</footer><!-- .entry-meta -->

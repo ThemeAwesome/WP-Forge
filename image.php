@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.3
+ * @since WP-Forge 5.3.4
  */
 
 get_header(); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 
-						<footer class="entry-meta">
+						<div class="entry-meta-header">
 							<?php
 								$metadata = wp_get_attachment_metadata();
 								printf( __( '<span class="meta-prep meta-prep-entry-date"><span class="genericon genericon-time"></span></span><span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span>&nbsp;&nbsp;&nbsp;<span class="genericon genericon-picture"></span><a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a>&nbsp;&nbsp;&nbsp;<span class="genericon genericon-category"></span><a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'wpforge' ),
@@ -37,7 +37,7 @@ get_header(); ?>
 								);
 							?>
 							<?php edit_post_link( __( 'Edit Image', 'wpforge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' ); ?>
-						</footer><!-- .entry-meta -->
+						</div><!-- end .entry-meta-header -->
 
 					</header><!-- .entry-header -->
 

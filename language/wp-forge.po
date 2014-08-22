@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 5.3.3\n"
-"POT-Creation-Date: 2014-07-12 09:24-0700\n"
-"PO-Revision-Date: 2014-07-12 09:26-0700\n"
+"Project-Id-Version: WP-Forge 5.3.4\n"
+"POT-Creation-Date: 2014-08-22 06:04-0700\n"
+"PO-Revision-Date: 2014-08-22 06:05-0700\n"
 "Last-Translator: Thomas Vasquez <tsquez@gmail.com>\n"
 "Language-Team: Thomas Vasquez <tsquez@gmail.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
+"X-Generator: Poedit 1.6.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -200,37 +200,67 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: content-aside.php:21 content-audio.php:26 content-gallery.php:18
+#: content-aside.php:19 content-audio.php:19 content-chat.php:27
+#: content-gallery.php:27 content-image.php:18 content-link.php:18
+#: content-quote.php:18 content-status.php:18 content-video.php:19
+#: content.php:29 functions.php:591
+msgid "Edit"
+msgstr ""
+
+#: content-aside.php:22 content-audio.php:26 content-gallery.php:18
 #: content-video.php:25 content.php:21 page-templates/sitemap.php:34
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: content-aside.php:23 content-image.php:21 content-link.php:21
+#: content-aside.php:24 content-image.php:21 content-link.php:21
 #: content-quote.php:21 content-status.php:27
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content-aside.php:30 content-audio.php:19 content-chat.php:27
-#: content-gallery.php:27 content-image.php:18 content-link.php:18
-#: content-quote.php:18 content-status.php:18 content-video.php:19
-#: content.php:50 functions.php:591
-msgid "Edit"
-msgstr ""
-
 #: content-audio.php:37 content-gallery.php:37 content-video.php:36
-#: content.php:41
+#: content.php:42
 msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
 #: content-audio.php:38 content-chat.php:33 content-gallery.php:38
-#: content-page.php:18 content-video.php:37 content.php:42 image.php:90
+#: content-page.php:18 content-video.php:37 content.php:43 image.php:90
 msgid "Pages:"
 msgstr ""
 
 #: content-author.php:21
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: content-footer.php:31 content-footer.php:43 content-footer.php:73
+#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+msgid "Powered by"
+msgstr ""
+
+#: content-footer.php:31 content-footer.php:43 content-footer.php:73
+#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+msgid "http://themeawesome.com/responsive-wordpress-theme/"
+msgstr ""
+
+#: content-footer.php:31 content-footer.php:43 content-footer.php:73
+#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+msgid "Responsive WordPress Theme by ThemeAwesome.com"
+msgstr ""
+
+#: content-footer.php:31 content-footer.php:43 content-footer.php:73
+#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+msgid "WP-Forge"
+msgstr ""
+
+#: content-footer.php:31 content-footer.php:43 content-footer.php:73
+#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: content-footer.php:31 content-footer.php:43 content-footer.php:73
+#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+msgid "WordPress"
 msgstr ""
 
 #: content-none.php:13
@@ -254,30 +284,6 @@ msgstr ""
 
 #: content-page.php:21 page-templates/sitemap.php:80
 msgid "Edit Page"
-msgstr ""
-
-#: footer.php:40 footer.php:52
-msgid "Powered by"
-msgstr ""
-
-#: footer.php:40 footer.php:52
-msgid "http://themeawesome.com/responsive-wordpress-theme/"
-msgstr ""
-
-#: footer.php:40 footer.php:52
-msgid "Responsive WordPress Theme by ThemeAwesome.com"
-msgstr ""
-
-#: footer.php:40 footer.php:52
-msgid "WP-Forge"
-msgstr ""
-
-#: footer.php:40 footer.php:52
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: footer.php:40 footer.php:52
-msgid "WordPress"
 msgstr ""
 
 #: functions.php:100
@@ -420,200 +426,264 @@ msgstr ""
 msgid "Next Image &raquo;"
 msgstr ""
 
-#: inc/customizer/customizer.php:35
+#: inc/customizer/customizer.php:34
 msgid "Set up a front page for your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:43
+#: inc/customizer/customizer.php:42
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/customizer.php:44
+#: inc/customizer/customizer.php:43
 msgid "Modify the header portion of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:53
+#: inc/customizer/customizer.php:52
 msgid "Site Logo"
 msgstr ""
 
-#: inc/customizer/customizer.php:67
+#: inc/customizer/customizer.php:66
 msgid "Site Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:80
+#: inc/customizer/customizer.php:79
 msgid "Tagline"
 msgstr ""
 
-#: inc/customizer/customizer.php:93
+#: inc/customizer/customizer.php:92
 msgid "Show Title &amp; Tagline"
 msgstr ""
 
-#: inc/customizer/customizer.php:109
+#: inc/customizer/customizer.php:100
+msgid "Top-Bar &amp; Off-Canvas"
+msgstr ""
+
+#: inc/customizer/customizer.php:101
+msgid "Configure Top-Bar Navigation and Off-Canvas mobile menu."
+msgstr ""
+
+#: inc/customizer/customizer.php:113
 msgid "Main Menu Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:126
-msgid "If Top of Browser, scroll or fixed?"
+#: inc/customizer/customizer.php:116
+msgid "Nomral Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:142
+#: inc/customizer/customizer.php:117
+msgid "Top of Browser - Scroll"
+msgstr ""
+
+#: inc/customizer/customizer.php:118
+msgid "Top of Browser - Fixed"
+msgstr ""
+
+#: inc/customizer/customizer.php:119
+msgid "Contain-To-Grid-Sticky"
+msgstr ""
+
+#: inc/customizer/customizer.php:131
 msgid "Change text for Home Link?"
 msgstr ""
 
-#: inc/customizer/customizer.php:155
+#: inc/customizer/customizer.php:134 inc/customizer/customizer.php:161
+#: inc/customizer/customizer.php:247 inc/customizer/customizer.php:264
+msgid "No"
+msgstr ""
+
+#: inc/customizer/customizer.php:135 inc/customizer/customizer.php:162
+#: inc/customizer/customizer.php:248 inc/customizer/customizer.php:265
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer/customizer.php:144
 msgid "If Yes, Add New Anchor Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:163
-msgid "Off-Canvas"
-msgstr ""
-
-#: inc/customizer/customizer.php:164
-msgid "Configure Off-Canvas mobile menu."
-msgstr ""
-
-#: inc/customizer/customizer.php:176
+#: inc/customizer/customizer.php:158
 msgid "Use Off-Canvas for Mobile?"
 msgstr ""
 
-#: inc/customizer/customizer.php:192
+#: inc/customizer/customizer.php:174
 msgid "Display Off-Canvas Left or Right?"
 msgstr ""
 
-#: inc/customizer/customizer.php:202 page-templates/sitemap.php:23
-msgid "Posts"
-msgstr ""
-
-#: inc/customizer/customizer.php:203
-msgid "Modify how posts appear in your theme."
-msgstr ""
-
-#: inc/customizer/customizer.php:216
-msgid "Show full post or excerpt?"
-msgstr ""
-
-#: inc/customizer/customizer.php:233
-msgid "Display post thumbnails?"
-msgstr ""
-
-#: inc/customizer/customizer.php:250
-msgid "Show single post view thumbnail?"
-msgstr ""
-
-#: inc/customizer/customizer.php:260
-msgid "Footer"
-msgstr ""
-
-#: inc/customizer/customizer.php:261
-msgid "Modify the footer text of your theme."
-msgstr ""
-
-#: inc/customizer/customizer.php:270
-msgid "Copyright Text"
-msgstr ""
-
-#: inc/customizer/customizer.php:278
-msgid "Background"
-msgstr ""
-
-#: inc/customizer/customizer.php:279
-msgid "Modify the background of your theme."
-msgstr ""
-
-#: inc/customizer/customizer.php:293
-msgid "Background Color"
-msgstr ""
-
-#: inc/customizer/customizer.php:307
-msgid "Background Image"
-msgstr ""
-
-#: inc/customizer/customizer.php:322
-msgid "Background Repeat"
-msgstr ""
-
-#: inc/customizer/customizer.php:326
-msgid "No Repeat"
-msgstr ""
-
-#: inc/customizer/customizer.php:327
-msgid "Tile"
-msgstr ""
-
-#: inc/customizer/customizer.php:328
-msgid "Tile Horizontally"
-msgstr ""
-
-#: inc/customizer/customizer.php:329
-msgid "Tile Vertically"
-msgstr ""
-
-#: inc/customizer/customizer.php:343
-msgid "Background Size"
-msgstr ""
-
-#: inc/customizer/customizer.php:347
-msgid "Cover"
-msgstr ""
-
-#: inc/customizer/customizer.php:348
-msgid "Contain"
-msgstr ""
-
-#: inc/customizer/customizer.php:362
-msgid "Background Position"
-msgstr ""
-
-#: inc/customizer/customizer.php:366
+#: inc/customizer/customizer.php:177 inc/customizer/customizer.php:214
+#: inc/customizer/customizer.php:406
 msgid "Left"
 msgstr ""
 
-#: inc/customizer/customizer.php:367
-msgid "Center"
-msgstr ""
-
-#: inc/customizer/customizer.php:368
+#: inc/customizer/customizer.php:178 inc/customizer/customizer.php:213
+#: inc/customizer/customizer.php:408
 msgid "Right"
 msgstr ""
 
+#: inc/customizer/customizer.php:184
+msgid "Theme Layout"
+msgstr ""
+
+#: inc/customizer/customizer.php:185
+msgid "Modify how certain aspects of your theme are displayed."
+msgstr ""
+
+#: inc/customizer/customizer.php:194
+msgid "Theme Width"
+msgstr ""
+
+#: inc/customizer/customizer.php:210
+msgid "Sidebar Position"
+msgstr ""
+
+#: inc/customizer/customizer.php:227
+msgid "Show full post or excerpt?"
+msgstr ""
+
+#: inc/customizer/customizer.php:230
+msgid "Full Post"
+msgstr ""
+
+#: inc/customizer/customizer.php:231
+msgid "Excerpt"
+msgstr ""
+
+#: inc/customizer/customizer.php:244
+msgid "Display post thumbnails?"
+msgstr ""
+
+#: inc/customizer/customizer.php:261
+msgid "Show single post view thumbnail?"
+msgstr ""
+
+#: inc/customizer/customizer.php:274
+msgid "Site Map Page: Number of Posts to Display"
+msgstr ""
+
+#: inc/customizer/customizer.php:282
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/customizer.php:283
+msgid "Modify the footer text of your theme."
+msgstr ""
+
+#: inc/customizer/customizer.php:293
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/customizer.php:307
+msgid "Copyright Position"
+msgstr ""
+
+#: inc/customizer/customizer.php:310
+msgid "Text Right - Nav Left"
+msgstr ""
+
+#: inc/customizer/customizer.php:311
+msgid "Text &amp; Nav Centered"
+msgstr ""
+
+#: inc/customizer/customizer.php:312
+msgid "Text Left - Nav Right"
+msgstr ""
+
+#: inc/customizer/customizer.php:318
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/customizer.php:319
+msgid "Modify the background of your theme."
+msgstr ""
+
+#: inc/customizer/customizer.php:333
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:347
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer/customizer.php:362
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/customizer/customizer.php:366
+msgid "No Repeat"
+msgstr ""
+
+#: inc/customizer/customizer.php:367
+msgid "Tile"
+msgstr ""
+
+#: inc/customizer/customizer.php:368
+msgid "Tile Horizontally"
+msgstr ""
+
 #: inc/customizer/customizer.php:369
-msgid "None"
+msgid "Tile Vertically"
 msgstr ""
 
 #: inc/customizer/customizer.php:383
-msgid "Background Attachment"
+msgid "Background Size"
 msgstr ""
 
 #: inc/customizer/customizer.php:387
-msgid "Scroll"
+msgid "Cover"
 msgstr ""
 
 #: inc/customizer/customizer.php:388
+msgid "Contain"
+msgstr ""
+
+#: inc/customizer/customizer.php:402
+msgid "Background Position"
+msgstr ""
+
+#: inc/customizer/customizer.php:407
+msgid "Center"
+msgstr ""
+
+#: inc/customizer/customizer.php:409
+msgid "None"
+msgstr ""
+
+#: inc/customizer/customizer.php:423
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/customizer/customizer.php:427
+msgid "Scroll"
+msgstr ""
+
+#: inc/customizer/customizer.php:428
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer/customizer.php:394
+#: inc/customizer/customizer.php:434
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:395
+#: inc/customizer/customizer.php:435
 msgid "Change some default colors of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:408
+#: inc/customizer/customizer.php:448
 msgid "Title Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:422
+#: inc/customizer/customizer.php:462
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:436
+#: inc/customizer/customizer.php:476
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:450
+#: inc/customizer/customizer.php:490
 msgid "Link Hover Color"
+msgstr ""
+
+#: page-templates/sitemap.php:23
+msgid "Posts"
 msgstr ""
 
 #: page-templates/sitemap.php:53

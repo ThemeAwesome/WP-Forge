@@ -1,5 +1,18 @@
 ###Changelog for WP-Forge###
 
+####v5.3.4####
+* Updated to the latest version of Foundation 5.3.4
+* Renamed the Off-Canvas section in theme customizer to Top-Bar & Off-Canvas.
+* Moved the Top-Bar settings from the Navigation section to the Off-Canvas section. I felt it was better to have these settings in the same place
+* Changed name of Posts section in theme customizer to Theme Layout.
+* Added "Theme Width" to theme customizer. Now users can set the width of the theme in the theme customizer instead of editing the css.
+* Added "Sidebar Position" to theme customizer. Now users can have the main sidebar display on the left or the right of the content.
+* Removed all of the "!important" declarations from the WP-Forge style sheet, with the exception of one on line 393, this is needed for the positioning of the footer menu when "Text & Nav Centered" is selected in the theme customizer.
+* Adjust the border radius of the "BackToTop" button in mobile view and changed the hover color.
+* Increased the size of the author Gravatar on the author page.
+* Removed the html5 function that wrapped images in the figure tag.
+* Corrected issue with image.php - Changed line 25 to refelect <div class="entry-meta-header"> instead of <footer class="entry-meta">.
+
 ####v5.3.3####
 * No changes to the actual theme itself. v5.3.3 is another Foundation release which fixes the Reveal modal z-index issue.
 
@@ -9,7 +22,7 @@
 ####v5.3.1 ####
 * Updated to the latest version of Foundation v5.3.1
 * removed unnecessary declaration from lines 393 and 394 of style.css - Thanks Hash Varsani
-* Added new sitemap.php file - users can now create a sitemap page.
+* Added new sitemap.php page template file - users can now create a sitemap page.
 * Users can control how many posts are displayed on the sitemap page in the theme customizer, under the "Posts" section
 * Updated wp-forge.po file, also removed es_ES.po file. The author of that language files stated there were issues and asked for it to be removed and he will replace.
 
