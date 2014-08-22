@@ -1,7 +1,7 @@
 ###Changelog for WP-Forge###
 
-####v5.3.4####
-* Updated to the latest version of Foundation 5.3.4
+####v5.4####
+* Updated to the latest version of Foundation 5.4
 * Renamed the Off-Canvas section in theme customizer to Top-Bar & Off-Canvas.
 * Moved the Top-Bar settings from the Navigation section to the Off-Canvas section. I felt it was better to have these settings in the same place
 * Changed name of Posts section in theme customizer to Theme Layout.

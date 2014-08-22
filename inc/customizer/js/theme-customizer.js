@@ -3,7 +3,7 @@
  *
  * Contains handlers to make the WP-Forge Theme Customizer preview reload changes asynchronously.
  * Things like site title, description, and background color changes.
- * @since WP-Forge 5.3.4
+ * @since WP-Forge 5.4
  */
 
 ( function( $ ) {

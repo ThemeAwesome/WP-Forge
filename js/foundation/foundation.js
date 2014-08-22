@@ -5,7 +5,7 @@
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * @since WP-Forge 5.3.4
+ * @since WP-Forge 5.4
 */
 
 (function ($, window, document, undefined) {
