@@ -11,7 +11,7 @@
 * Adjust the border radius of the "BackToTop" button in mobile view and changed the hover color.
 * Increased the size of the author Gravatar on the author page.
 * Removed the html5 function that wrapped images in the figure tag.
-* Corrected issue with image.php - Changed line 25 to refelect <div class="entry-meta-header"> instead of <footer class="entry-meta">.
+* Corrected issue with image.php - Changed line 25 to refelect `<div class="entry-meta-header">` instead of `<footer class="entry-meta">`.
 
 ####v5.3.3####
 * No changes to the actual theme itself. v5.3.3 is another Foundation release which fixes the Reveal modal z-index issue.
