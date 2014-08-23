@@ -84,4 +84,4 @@ WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://
 
 FoundationThemes.co
 =============
-[FoundationThemes.co](http://foundationthemes.co/) is a website focused on developing Responsive WordPress child themes for WP-Forge - Currently still in development but make sure to visit and enter your email address to be notified when the site launches.
+[FoundationThemes.co](http://foundationthemes.co/) is a website focused on developing Responsive WordPress child themes for WP-Forge - Currently still in development. Make sure to visit and enter your email address to be notified when the site launches.
