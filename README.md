@@ -1,4 +1,4 @@
-Welcome to WP-Forge v5.4 - A [Responsive WordPress Theme] (http://themeawesome.com/responsive-wordpress-theme)
+Welcome to WP-Forge v5.4
 ====================
 
 ###Updated 8-22-2014
