@@ -467,7 +467,7 @@ msgid "Main Menu Position"
 msgstr ""
 
 #: inc/customizer/customizer.php:116
-msgid "Nomral Position"
+msgid "Normal Position"
 msgstr ""
 
 #: inc/customizer/customizer.php:117
