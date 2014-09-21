@@ -18,11 +18,11 @@
         
         	<?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>  
                 <section class="right-small">
-                    <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
                 </section>
             <?php } else { ?>
                 <section class="left-small">
-                    <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
                 </section>            
 			<?php } // end if ?>
             
