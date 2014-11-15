@@ -1,13 +1,13 @@
-/**
- * @since WP-Forge 5.4
- */
+/*
+ * @since WP-Forge 5.4.7
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '5.3.3',
+    version: '5.4.7',
 
     settings : {
       index : 0,
@@ -280,6 +280,15 @@
           $movedLi.removeClass('moved');
         }, 300);
       });
+
+      // Show dropdown menus when their items are focused
+      S(this.scope).find('.dropdown a')
+        .focus(function() {
+          $(this).parents('.has-dropdown').addClass('hover');
+        })
+        .blur(function() {
+          $(this).parents('.has-dropdown').removeClass('hover');
+        });
     },
 
     resize : function () {

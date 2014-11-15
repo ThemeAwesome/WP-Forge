@@ -1,12 +1,15 @@
-Welcome to WP-Forge v5.4
+Welcome to WP-Forge v5.4.7
 ====================
 
-###Updated 8-22-2014
+###Updated 11-15-2014
 
-WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.4), the most advanced responsive front-end framework.
+WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.4.7), the most advanced responsive front-end framework.
 
 ##WP-Forge Demo##
 You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - You will notice that the [Viewport Resizer] (http://lab.maltewassermann.com/viewport-resizer/) from Malte Wassermann automatically loads at the top of the browser. This will allow you to test the theme against various device sizes.
+
+###Github Updater###
+Added support for Andy Fragen's [Github Updater] (https://github.com/afragen/github-updater) - Now you can update WP-Forge from within the WordPress dashboard itself. `Make sure you download and install the plugin`.
 
 ##WP-Forge Forums##
 If you need help with implementation or if you run into issues, you can post your questions/issues here or visit the [Support Forums:] (http://themeawesome.com/support)
@@ -37,20 +40,17 @@ WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in t
 ###Child Theme###
 I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
 
-###Font-Awesome 4.1.0###
+###Font-Awesome 4.2###
 Includes all 439 free icons from [Font-Awesome] (http://fontawesome.io/)
 
-###Genericons 3.0.3###
+###Genericons 3.2###
 Includes the free WordPress icon set [Genericons] (http://genericons.com/#wordpress)
 
 ###Yoast SEO Plugin###
 Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
 
-###Github Updater###
-Added support for Andy Fragen's [Github Updater] (https://github.com/afragen/github-updater) - Now you can update WP-Forge from within the WordPress dashboard itself. Make sure you download and install the plugin.
-
 ###Additional Information###
-WP-Forge validates at 98% over at [ThemeCheck.org] (http://themecheck.org/score/wordpress_theme_wp-forge.html)
+WP-Forge validates at 100% over at [ThemeCheck.org] (http://themecheck.org/score/wordpress_theme_wp-forge.html)
 
 Contributors
 =============

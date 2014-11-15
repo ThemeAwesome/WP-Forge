@@ -1,13 +1,13 @@
-/**
- * @since WP-Forge 5.4
- */
+/*
+ * @since WP-Forge 5.4.7
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.slider = {
     name : 'slider',
 
-    version : '5.3.3',
+    version : '5.4.7',
 
     settings: {
       start: 0,
@@ -131,7 +131,15 @@
 
       $handle.parent().children('input[type=hidden]').val(value);
 
-      if (settings.input_id != '') {
+      if (!$handle[0].hasAttribute('aria-valuemin')) {
+        $handle.attr({
+          'aria-valuemin': settings.start,
+          'aria-valuemax': settings.end,
+        });
+      }
+      $handle.attr('aria-valuenow', value);
+
+      if (settings.display_selector != '') {
         $(settings.display_selector).each(function(){
           if (this.hasOwnProperty('value')) {
             $(this).val(value);

@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.4
+ * @since WP-Forge 5.4.7
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -24,42 +24,29 @@
 <title><?php wp_title('&ndash;', true, 'right'); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <!--[if lt IE 9]>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-    <![endif]-->
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>    
+<body <?php body_class(); ?>><?php get_template_part( 'content', 'off_canvas' ); ?><?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?><?php get_template_part( 'content', 'nav' ); ?><?php } // end if ?><?php if( get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
+        <?php get_template_part( 'content', 'nav' ); ?><?php } // end if ?>
 
-	<?php get_template_part( 'content', 'off_canvas' ); ?>
+        <div class="header_container">
 
-	<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?>
-    	<?php get_template_part( 'content', 'nav' ); ?>
-    <?php } // end if ?>
-
-    <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
-        <?php get_template_part( 'content', 'nav' ); ?>
-    <?php } // end if ?>    
-
-
-	<div id="wrapper"> 
-          
-        <header id="header" class="row" role="banner"> 
+        <header id="header" class="header_wrap row" role="banner"> 
             <div class="site-header medium-12 large-12 columns">
-            <?php if( get_theme_mod( 'wpforge_logo' ) ) { ?>
+                <?php if ( get_header_image() ) : ?>
                 <div class="header-logo">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                        <img src="<?php echo get_theme_mod('wpforge_logo'); ?>" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>">
-                    </a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>" /></a>
                 </div><!-- /.header-logo -->
-            <?php } // end if ?>
+                <?php endif; ?>
                 <div class="header-info">
-                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                    <p class="site-description"><?php bloginfo( 'description' ); ?></p>                    
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>                    
                 </div><!-- /.header-info -->
              </div><!-- .site-header -->
         </header><!-- #header -->
+
+        </div><!-- end .header_container -->
             
 		<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
             <?php get_template_part( 'content', 'nav' ); ?>
@@ -67,8 +54,8 @@
         
         <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
             <?php get_template_part( 'content', 'nav' ); ?>
-        <?php } // end if ?> 
-        
-        <hr />         
+        <?php } // end if ?>
+
+        <div class="content_container">
     
-        <section class="container row" role="document">
+            <section class="content_wrap row" role="document">

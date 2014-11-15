@@ -1,5 +1,18 @@
 ###Changelog for WP-Forge###
 
+####v5.4.7####
+* Updated to the version of Foundation, version 5.4.7
+* Added default custom header and background to customizer.
+* Wrapped the site title and site description in the proper `H1 and H2 tags`. Previously they were wrapped in a `<p>` tag
+* Properly registered and enqueued scripts and style sheets. This will allow child themes to properly dequeue in order to use custom scripts and styles.
+* Made WP-Forge pluggable, meaning all functions in functions.php are wrapped in the appropriate `if function exists` - this will allow child themes to easily overwite parent theme functionality.
+* Added Panels to the Customizer. This is a new feature released in WP 4.0 - https://make.wordpress.org/core/2014/07/08/customizer-improvements-in-4-0/
+* Added a 100% width container, which also has a transparent background, around the following sections: header area, content area, footer sidebar area and footer area.
+* Users can now control the width of the following areas: header, content and footers.
+* Users can now modify the various color options associated with the theme. These include: Top-Bar, content, sidebar, footer sidebar, footer and buttons.
+* Changed `screenshot.png` - According to WordPress standards, the screenshot must be an actual representation of the theme itself.
+* A few other minor changes I can't remember as I lost track.
+
 ####v5.4####
 * Updated to the latest version of Foundation 5.4
 * Renamed the Off-Canvas section in theme customizer to Top-Bar & Off-Canvas.

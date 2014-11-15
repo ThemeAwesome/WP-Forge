@@ -1,13 +1,13 @@
-/**
- * @since WP-Forge 5.4
- */
+/*
+ * @since WP-Forge 5.4.7
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.tooltip = {
     name : 'tooltip',
 
-    version : '5.3.3',
+    version : '5.4.7',
 
     settings : {
       additional_inheritable_classes : [],
@@ -18,9 +18,9 @@
       hover_delay: 200,
       show_on : 'all',
       tip_template : function (selector, content) {
-        return '<span data-selector="' + selector + '" class="'
+        return '<span data-selector="' + selector + '" id="' + selector + '" class="'
           + Foundation.libs.tooltip.settings.tooltip_class.substring(1)
-          + '">' + content + '<span class="nub"></span></span>';
+          + '" role="tooltip">' + content + '<span class="nub"></span></span>';
       }
     },
 
@@ -146,7 +146,9 @@
 
       if ((id && id.length < 1 || !id) && typeof dataSelector != 'string') {
         dataSelector = this.random_str(6);
-        $target.attr('data-selector', dataSelector);
+        $target
+          .attr('data-selector', dataSelector)
+          .attr('aria-describedby', dataSelector);
       }
 
       return (id && id.length > 0) ? id : dataSelector;

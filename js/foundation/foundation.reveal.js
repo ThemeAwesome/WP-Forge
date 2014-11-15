@@ -1,13 +1,13 @@
-/**
- * @since WP-Forge 5.4
- */
+5/*
+ * @since WP-Forge 5.4.7
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.reveal = {
     name : 'reveal',
 
-    version : '5.3.3',
+    version : '5.4.7',
 
     locked : false,
 
@@ -74,7 +74,7 @@
           e.preventDefault();
 
           if (!self.locked) {
-            var settings = S('[' + self.attr_name() + '].open').data(self.attr_name(true) + '-init'),
+            var settings = S('[' + self.attr_name() + '].open').data(self.attr_name(true) + '-init') || self.settings,
                 bg_clicked = S(e.target)[0] === S('.' + settings.bg_class)[0];
 
             if (bg_clicked) {
@@ -213,6 +213,7 @@
           $.ajax(ajax_settings);
         }
       }
+      self.S(window).trigger('resize');
     },
 
     close : function (modal) {

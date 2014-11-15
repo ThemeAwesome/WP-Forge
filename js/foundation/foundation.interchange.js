@@ -1,13 +1,13 @@
-/**
- * @since WP-Forge 5.4
- */
+/*
+ * @since WP-Forge 5.4.7
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.interchange = {
     name : 'interchange',
 
-    version : '5.3.3',
+    version : '5.4.7',
 
     cache : {},
 

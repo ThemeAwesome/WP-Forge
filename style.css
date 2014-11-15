@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: http://wpforge.themeawesome.com/
 Author: Thomas E. Vasquez
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation (v5.4), the most advanced responsive front-end framework in the world.
-Version: 5.4
+Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation (v5.4.7), the most advanced responsive front-end framework in the world.
+Version: 5.4.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -277,57 +277,54 @@ img.wp-smiley,
 -------------------------------------------------------------- */
 /* Body, links, basics */
 body {
+	color: #444444;
+	background-color: #e6e6e6;
 	text-rendering: optimizeLegibility;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
-#wrapper {
-  	background-color: #ffffff;
-  	width: 100%;
-  	margin-left: auto;
-  	margin-right: auto;
-  	margin-top: 0;
-  	margin-bottom: 0;
-	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
-	padding:1.5625rem 0.625rem 0;
+.header_container,
+.nav_container,
+.content_container,
+.footer_sidebar-container,
+.footer_container {
+	background-color: transparent!important;
+	max-width: 100%;
+	width: 100%;
 }
-
+.content_wrap {
+	padding-top: 1.5rem;
+}
 /* Header */
 #header {
-	margin-bottom:1.5rem;
+	padding:1.5rem 0;
 }
 .header-logo, .header-info {
 	display:block;
 	float:left;
 	max-width:100%;
 }
-.site-header {
-	width:100%;
+.header-info h1, .header-info h2 {
+	margin: 0
 }
-.site-header p {
-	margin:0;
-}
-p.site-title a {
-	color: #515151;
+.header-info h1 a {
+	color: #444444;
 	display: block;	
 	font-size: 2.75rem;
 	text-decoration: none;
 }
-.site-title a:hover {
+.header-info a:hover {
 	color: #21759b;
 }
-.site-header h1 {
-	margin:0;
-}
-p.site-description {
-	color: #757575;
+.header-info h2 {
+	color: #444444;
 	font-size: 1.6875rem;
-	margin:0;
 	line-height:1	
 }
 img.header-image {/* Remove fancy borders */
 	border-radius: 0;
 	box-shadow:none;
+	margin-bottom: 1.5rem;
 }
 
 /* Sidebar */
@@ -362,6 +359,7 @@ img.header-image {/* Remove fancy borders */
 .widget-area .textwidget li {
 	margin-left: 36px;
 }
+
 
 /* Footer */
 footer[role="contentinfo"] {
@@ -410,7 +408,6 @@ footer[role="contentinfo"] p, footer[role="contentinfo"] a  {
 	padding-top: 1.5rem;
 	border-top: 1px solid #ededed;
 }
-
 
 /* =Main content and comment content
 -------------------------------------------------------------- */
@@ -1171,6 +1168,7 @@ section.tab-bar-section.middle a {
 .top-bar .toggle-topbar a {
 	font-weight:normal;
 }
+
 /* Orbit */
 .orbit-bullets li {
 	cursor:pointer;
@@ -1195,7 +1193,7 @@ section.tab-bar-section.middle a {
 
 /* Back to Top */
 #backtotop {
-	background:#444;
+	background:#333;
 	display: block;
 	position: fixed;
 	right: 1rem;
@@ -1353,4 +1351,4 @@ div.sitemap-left h5 a {
 @media only screen and (min-width: 90.063em) and (max-width: 120em) { /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 	}
 @media only screen and (min-width: 120.063em) { /* min-width 1921px, xlarge screens */
-	}
+	}	

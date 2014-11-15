@@ -1,6 +1,7 @@
-WP-Forge v5.4
+WP-Forge v5.4.7
 =======================================
-Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.4), the most advanced responsive front-end framework.
+Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content 
+management system. The second being Foundation (v5.4.7), the most advanced responsive front-end framework.
 
 Demo
 =======================================
@@ -106,7 +107,7 @@ Christopher Anderton - https://github.com/Deluxive - for Swedish localization
 Andriy - https://github.com/helirexi - for Russian localization
 Alfonso Correas - http://www.cor-ser.com/ - for Spanish localization
 
-If you would like to contribute a language translation for WP-Forge, please feel free to email me @ tsquez[at]gmail.com
+If you would like to contribute a language translation for WP-Forge, please feel free to email me: tsquez[at]gmail.com
 
 Additional Credits - I used various functions from different themes built with WordPress and Foundation
 =======================================
@@ -121,3 +122,8 @@ GPLv2 - http://www.gnu.org/licenses/gpl-2.0.html
 Foundation by ZURB is MIT - http://opensource.org/licenses/MIT
 
 I hope you utilize WP-Forge to learn something new, create something awesome, have fun and, more importantly, I hope you share what you have learned with others.
+
+FoundationThemes.co
+=======================================
+FoundationThemes.co(http://foundationthemes.co/) is a website focused on developing Responsive WordPress child themes for WP-Forge.
+Currently still in development. Make sure to visit and enter your email address to be notified when the site launches.

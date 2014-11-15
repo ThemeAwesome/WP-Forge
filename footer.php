@@ -7,24 +7,26 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.4
+ * @since WP-Forge 5.4.7
  */
 ?>
-	</section><!-- #main .wrapper -->
+	   </section><!-- end .content-wrap -->
+
+    </div><!-- end .content_container -->
     
 	<?php
         if ( ! is_404() )
         get_sidebar( 'footer' );
     ?>    
-        
-	<footer id="footer" class="row" role="contentinfo">
-        <?php get_template_part( 'content', 'footer' ); ?>
-		<div class="medium-12 large-12 columns">
-        	<?php get_template_part( 'menu', 'social' ); ?>
-        </div><!-- social-menu -->        
-	</footer><!-- .row -->
     
-    </div><!-- #wrapper -->
+    <div class="footer_container">
+    	<footer id="footer" class="footer_wrap row" role="contentinfo">
+            <?php get_template_part( 'content', 'footer' ); ?>
+    		<div class="medium-12 large-12 columns">
+            	<?php get_template_part( 'menu', 'social' ); ?>
+            </div><!-- social-menu -->        
+    	</footer><!-- .row -->
+    </div><!-- end #footer_container -->        
     
 <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>    
     

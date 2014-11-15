@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.4
+ * @since WP-Forge 5.4.7
  */
 ?>
 
@@ -12,19 +12,19 @@
 
   <div class="off-canvas-wrap" data-offcanvas>
   
-  	<div class="inner-wrap">
+    <div class="inner-wrap">
 
-  		<nav class="tab-bar show-for-small-only">
+      <nav class="tab-bar show-for-small-only">
         
-        	<?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>  
+          <?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>  
                 <section class="right-small">
-                    <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
                 </section>
             <?php } else { ?>
                 <section class="left-small">
-                    <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
                 </section>            
-			<?php } // end if ?>
+      <?php } // end if ?>
             
             <?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?> 
             

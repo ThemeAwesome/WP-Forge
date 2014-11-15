@@ -1,13 +1,16 @@
-/**
- * @since WP-Forge 5.4
- */
+/*
+ * @since WP-Forge 5.4.7
+*/
 ;(function ($, window, document, undefined) {
   'use strict';
+/*
+ * @since WP-Forge 5.4.7
+*/
 
   Foundation.libs.alert = {
     name : 'alert',
 
-    version : '5.3.3',
+    version : '5.4.7',
 
     settings : {
       callback: function (){}
@@ -21,7 +24,7 @@
       var self = this,
           S = this.S;
 
-      $(this.scope).off('.alert').on('click.fndtn.alert', '[' + this.attr_name() + '] a.close', function (e) {
+      $(this.scope).off('.alert').on('click.fndtn.alert', '[' + this.attr_name() + '] .close', function (e) {
           var alertBox = S(this).closest('[' + self.attr_name() + ']'),
               settings = alertBox.data(self.attr_name(true) + '-init') || self.settings;
 
