@@ -154,6 +154,8 @@ img.wp-smiley,
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
+	width: auto;
+	height: auto;
 }
 .entry-content dl.gallery-item {
 	margin: 0;
@@ -776,6 +778,9 @@ article.format-quote .entry-content blockquote {
 
 /* =Comments
 -------------------------------------------------------------- */
+#comments ol {
+	list-style: none;
+}
 .comments-title {
 	margin-bottom: 3rem;
 	font-size: 16px;
