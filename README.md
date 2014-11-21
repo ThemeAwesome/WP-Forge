@@ -11,8 +11,8 @@ You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - You will
 ###Github Updater###
 Added support for Andy Fragen's [Github Updater] (https://github.com/afragen/github-updater) - Now you can update WP-Forge from within the WordPress dashboard itself. `Make sure you download and install the plugin`.
 
-##WP-Forge Forums##
-If you need help with implementation or if you run into issues, you can post your questions/issues here [WP-Forge Issues:] (https://github.com/tsquez/wp-forge/issues)
+##WP-Forge Support##
+If you need help with implementation or if you run into issues, you can post your questions/issues here [WP-Forge Issues] (https://github.com/tsquez/wp-forge/issues)
 
 ###WP-Forge was built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
