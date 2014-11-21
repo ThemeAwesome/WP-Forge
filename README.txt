@@ -77,6 +77,7 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 
 Create your Social Menu
 =======================================
+* Please keep in mind the Social Menu will only accept links. Do not assign pages to the Social Menu as you will only see a /
 1. Go to "Appearance>Menus" and click "create new menu"
 2. Give your menu a name and click "Create Menu"
 3. On the left hand side, click on the "Links" tab and add links to your social profiles. Currently the following sites are supported: Facebook, Twitter, LinkedIn, Google+, Flickr, YouTube,
