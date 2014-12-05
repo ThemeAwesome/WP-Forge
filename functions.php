@@ -831,20 +831,6 @@ if ( ! function_exists( 'filter_ptags_on_images' ) ) {
 }
 
 /**
- * Remove height/width attributes on images so they can be responsive
- *
- * @since WP-Forge 5.4.7
- */
-if ( ! function_exists( 'remove_thumbnail_dimensions' ) ) {
-	function remove_thumbnail_dimensions( $html ) {
-	    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-	    return $html;
-	}
-	add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
-	add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
-}
-
-/**
  * Remove wp version param from any enqueued scripts
  *
  * @since WP-Forge 5.4.7
