@@ -17,7 +17,7 @@
 * @author Devin Price (@devinsays)
 * @see http://wptheming.com/2012/06/add-options-to-theme-customizer-default-sections/
 *
-* @since WP-Forge 5.4.7
+* @since WP-Forge 5.5.0
 */
 
 function wpforge_customize_register( $wp_customize ) {
@@ -40,13 +40,13 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 
 
 // Header Panel
-	$wp_customize->add_panel( 'header', array(
-	   'priority'       => 10,
-	   'capability'     => 'edit_theme_options',
-	   'theme_supports' => '',
-	   'title'          => __('Header Section', 'wpforge'),
-	   'description'    => __('In this section you can modify different aspects of the Header portion of your theme.', 'wpforge'),
-  ));
+$wp_customize->add_panel( 'header', array(
+   'priority'       => 10,
+   'capability'     => 'edit_theme_options',
+   'theme_supports' => '',
+   'title'          => __('Header Section', 'wpforge'),
+   'description'    => __('In this section you can modify different aspects of the Header portion of your theme.', 'wpforge'),
+));
 	// Header Content Section
   $wp_customize->add_section('header_content', array(
 		'title' => __('Header Wrapper', 'wpforge'),
@@ -82,22 +82,22 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	)));
 
 // Background Image Panel
-	$wp_customize->add_panel( 'background', array(
-    'priority'       => 20,
-	  'capability'     => 'edit_theme_options',
-	  'theme_supports' => '',
-	  'title'          => __('Background Section', 'wpforge'),
-	  'description'    => __( 'This is the default section of the customizer where you can upload an image to use for your themes background image. This section is also available via Appearance - Background. This section is standard in the customizer (part of WordPress core).', 'wpforge' ),
-	));
+$wp_customize->add_panel( 'background', array(
+  'priority'       => 20,
+  'capability'     => 'edit_theme_options',
+  'theme_supports' => '',
+  'title'          => __('Background Section', 'wpforge'),
+  'description'    => __( 'This is the default section of the customizer where you can upload an image to use for your themes background image. This section is also available via Appearance - Background. This section is standard in the customizer (part of WordPress core).', 'wpforge' ),
+));
 
 // Navigation Panel
-	$wp_customize->add_panel( 'navigation', array(
-    'priority'       => 30,
-	  'capability'     => 'edit_theme_options',
-	  'theme_supports' => '',
-	  'title'          => __('Navigation Section', 'wpforge'),
-	  'description'    => __('The default Navigation section of the WordPress Customizer.', 'wpforge'),
-	));
+$wp_customize->add_panel( 'navigation', array(
+  'priority'       => 30,
+  'capability'     => 'edit_theme_options',
+  'theme_supports' => '',
+  'title'          => __('Navigation Section', 'wpforge'),
+  'description'    => __('The default Navigation section of the WordPress Customizer.', 'wpforge'),
+));
   // Nav Wrapper Section
     $wp_customize->add_section('nav_content', array(
     'title' => __('Nav Wrapper', 'wpforge'),
@@ -118,6 +118,19 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
     'description' => __('Change the width of the navigation area of your theme.', 'wpforge'),
     'priority' => 10,
   ));
+  // Nav Background Color  
+  $wp_customize->add_setting('nav_wrap_main_color', array(
+    'default' => '#333333',
+    'type' => 'theme_mod',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 5,    
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_wrap_main_color',array(
+    'label' => __('Select Background Color', 'wpforge'),
+    'section' => 'nav_content',
+    'settings' => 'nav_wrap_main_color',
+  )));
   // Top-Bar Section
   $wp_customize->add_section('top_bar', array(
     'title' => __('Top-Bar Settings', 'wpforge'),
@@ -320,7 +333,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
   )));
   // Content Link Color  
   $wp_customize->add_setting('content_link_color', array(
-    'default' => '#008cba',
+    'default' => '#0079a1',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'manage_options',
@@ -334,7 +347,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
   )));
   // Content Link Hover Color  
   $wp_customize->add_setting('content_hover_color', array(
-    'default' => '#0079a1',
+    'default' => '#008cba',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -379,7 +392,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
     'section' => 'pagination_colors',
     'settings' => 'pagination_current_font_color',
   )));
-    // Pagination Link Color  
+  // Pagination Link Color  
   $wp_customize->add_setting('pagination_link_color', array(
     'default' => '#999999',
     'type' => 'theme_mod',    
@@ -392,7 +405,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
     'section' => 'pagination_colors',
     'settings' => 'pagination_link_color',
   )));
-    // Pagination Background Hover Color  
+  // Pagination Background Hover Color  
   $wp_customize->add_setting('pagination_hover_color', array(
     'default' => '#e6e6e6',
     'type' => 'theme_mod',
@@ -405,7 +418,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
     'section' => 'pagination_colors',
     'settings' => 'pagination_hover_color',
   )));
-    // Pagination Link Hover Color  
+  // Pagination Link Hover Color  
   $wp_customize->add_setting('pagination_link_hover_color', array(
     'default' => '#999999',
     'type' => 'theme_mod',
@@ -435,114 +448,114 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
     'sanitize_callback' => 'sanitize_hex_color',
     'priority' => 10,    
   ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widget_title_color',array(
-      'label' => __('Sidebar Widget Title Color', 'wpforge'),
-      'section' => 'sidebar_colors',
-      'settings' => 'widget_title_color',
-    )));
-    // Widget Text Color  
-    $wp_customize->add_setting('widget_text_color', array(
-      'default' => '#444444',
-      'type' => 'theme_mod',
-      'transport' => 'postMessage',
-      'capability' => 'manage_options',
-      'sanitize_callback' => 'sanitize_hex_color',
-      'priority' => 20,    
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widget_text_color',array(
-      'label' => __('Sidebar Text Color', 'wpforge'),
-      'section' => 'sidebar_colors',
-      'settings' => 'widget_text_color',
-    )));
-    // Widget Link Color   
-    $wp_customize->add_setting('widget_link_color', array(
-      'default' => '#008cba',
-      'type' => 'theme_mod',
-      'transport' => 'postMessage',
-      'capability' => 'manage_options',
-      'sanitize_callback' => 'sanitize_hex_color',
-      'priority' => 30,    
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widget_link_color',array(
-      'label' => __('Sidebar Link Color', 'wpforge'),
-      'section' => 'sidebar_colors',
-      'settings' => 'widget_link_color',
-    )));
-    // Widget Link Hover Color   
-    $wp_customize->add_setting('widget_link_hover_color', array(
-      'default' => '#0078a0',
-      'type' => 'theme_mod',
-      'capability' => 'manage_options',
-      'sanitize_callback' => 'sanitize_hex_color',
-      'priority' => 40,    
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widget_link_hover_color',array(
-      'label' => __('Sidebar Link Hover Color', 'wpforge'),
-      'section' => 'sidebar_colors',
-      'settings' => 'widget_link_hover_color',
-    )));
-    // Footer Sidebar Colors Section   
-    $wp_customize->add_section('footer_sidebar_colors', array(
-      'title' => __('Footer Sidebar Colors', 'wpforge'),
-      'description' => __('Change widget title, link and hover colors in the Footer sidebar area of your theme.', 'wpforge'),
-      'priority' => 90,
-      'panel' => 'colors_panel',
-    ));
-    // Footer Sidebar Widget Title Color  
-    $wp_customize->add_setting('footer_widget_title_color', array(
-      'default' => '#444444',
-      'type' => 'theme_mod',
-      'transport' => 'postMessage',
-      'capability' => 'manage_options',
-      'sanitize_callback' => 'sanitize_hex_color',
-      'priority' => 10,       
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_title_color',array(
-      'label' => __('Footer Sidebar Widget Title Color', 'wpforge'),
-      'section' => 'footer_sidebar_colors',
-      'settings' => 'footer_widget_title_color',
-    )));
-    // Footer Sidebar Text Color  
-    $wp_customize->add_setting('footer_widget_text_color', array(
-      'default' => '#444444',
-      'type' => 'theme_mod',
-      'transport' => 'postMessage',
-      'capability' => 'manage_options',
-      'sanitize_callback' => 'sanitize_hex_color',
-      'priority' => 20,       
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_text_color',array(
-      'label' => __('Footer Sidebar Text Color', 'wpforge'),
-      'section' => 'footer_sidebar_colors',
-      'settings' => 'footer_widget_text_color',
-    )));
-    // Footer Sidebar Widget Link Color   
-    $wp_customize->add_setting('footer_widget_link_color', array(
-      'default' => '#008cba',
-      'type' => 'theme_mod',
-      'transport' => 'postMessage',
-      'capability' => 'manage_options',
-      'sanitize_callback' => 'sanitize_hex_color',
-      'priority' => 30,       
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_link_color',array(
-      'label' => __('Footer Sidebar Link Color', 'wpforge'),
-      'section' => 'footer_sidebar_colors',
-      'settings' => 'footer_widget_link_color',
-    )));
-    // Footer Sidebar Widget Link Hover Color   
-    $wp_customize->add_setting('footer_widget_link_hover_color', array(
-      'default' => '#0078a0',
-      'type' => 'theme_mod',
-      'capability' => 'manage_options',
-      'sanitize_callback' => 'sanitize_hex_color',
-      'priority' => 40,        
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_link_hover_color',array(
-      'label' => __('Footer Sidebar Link Hover Color', 'wpforge'),
-      'section' => 'footer_sidebar_colors',
-      'settings' => 'footer_widget_link_hover_color',
-    )));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widget_title_color',array(
+    'label' => __('Sidebar Widget Title Color', 'wpforge'),
+    'section' => 'sidebar_colors',
+    'settings' => 'widget_title_color',
+  )));
+  // Widget Text Color  
+  $wp_customize->add_setting('widget_text_color', array(
+    'default' => '#444444',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 20,    
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widget_text_color',array(
+    'label' => __('Sidebar Text Color', 'wpforge'),
+    'section' => 'sidebar_colors',
+    'settings' => 'widget_text_color',
+  )));
+  // Widget Link Color   
+  $wp_customize->add_setting('widget_link_color', array(
+    'default' => '#008cba',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 30,    
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widget_link_color',array(
+    'label' => __('Sidebar Link Color', 'wpforge'),
+    'section' => 'sidebar_colors',
+    'settings' => 'widget_link_color',
+  )));
+  // Widget Link Hover Color   
+  $wp_customize->add_setting('widget_link_hover_color', array(
+    'default' => '#0078a0',
+    'type' => 'theme_mod',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 40,    
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'widget_link_hover_color',array(
+    'label' => __('Sidebar Link Hover Color', 'wpforge'),
+    'section' => 'sidebar_colors',
+    'settings' => 'widget_link_hover_color',
+  )));
+  // Footer Sidebar Colors Section   
+  $wp_customize->add_section('footer_sidebar_colors', array(
+    'title' => __('Footer Sidebar Colors', 'wpforge'),
+    'description' => __('Change widget title, link and hover colors in the Footer sidebar area of your theme.', 'wpforge'),
+    'priority' => 90,
+    'panel' => 'colors_panel',
+  ));
+  // Footer Sidebar Widget Title Color  
+  $wp_customize->add_setting('footer_widget_title_color', array(
+    'default' => '#444444',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 10,       
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_title_color',array(
+    'label' => __('Footer Sidebar Widget Title Color', 'wpforge'),
+    'section' => 'footer_sidebar_colors',
+    'settings' => 'footer_widget_title_color',
+  )));
+  // Footer Sidebar Text Color  
+  $wp_customize->add_setting('footer_widget_text_color', array(
+    'default' => '#444444',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 20,       
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_text_color',array(
+    'label' => __('Footer Sidebar Text Color', 'wpforge'),
+    'section' => 'footer_sidebar_colors',
+    'settings' => 'footer_widget_text_color',
+  )));
+  // Footer Sidebar Widget Link Color   
+  $wp_customize->add_setting('footer_widget_link_color', array(
+    'default' => '#008cba',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 30,       
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_link_color',array(
+    'label' => __('Footer Sidebar Link Color', 'wpforge'),
+    'section' => 'footer_sidebar_colors',
+    'settings' => 'footer_widget_link_color',
+  )));
+  // Footer Sidebar Widget Link Hover Color   
+  $wp_customize->add_setting('footer_widget_link_hover_color', array(
+    'default' => '#0078a0',
+    'type' => 'theme_mod',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 40,        
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_link_hover_color',array(
+    'label' => __('Footer Sidebar Link Hover Color', 'wpforge'),
+    'section' => 'footer_sidebar_colors',
+    'settings' => 'footer_widget_link_hover_color',
+  )));
 
   // Footer Colors Section   
   $wp_customize->add_section('footer_colors', array(
@@ -601,7 +614,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
   ));
   // Button Color   
   $wp_customize->add_setting('button_color', array(
-    'default' => '#007095',
+    'default' => '#008cba',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -614,7 +627,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
   )));
     // Button Border Color   
   $wp_customize->add_setting('button_border_color', array(
-    'default' => '#007095',
+    'default' => '#008cba',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -627,7 +640,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
   )));
   // Button Hover Color   
   $wp_customize->add_setting('button_hover_color', array(
-    'default' => '#008cba',
+    'default' => '#007095',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -666,22 +679,22 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
   )));  
 
 // Front Page Panel
-	$wp_customize->add_panel( 'front', array(
-	    'priority'       => 50,
-	    'capability'     => 'edit_theme_options',
-	    'theme_supports' => '',
-	    'title'          => __('Front Page Section', 'wpforge'),
-	    'description'    => __('The default Front Page section of the WordPress Customizer.', 'wpforge'),
-	));
+$wp_customize->add_panel( 'front', array(
+    'priority'       => 50,
+    'capability'     => 'edit_theme_options',
+    'theme_supports' => '',
+    'title'          => __('Front Page Section', 'wpforge'),
+    'description'    => __('The default Front Page section of the WordPress Customizer.', 'wpforge'),
+));
 
 // Layout Panel
-	$wp_customize->add_panel( 'layout_panel', array(
-	    'priority'       => 70,
-	    'capability'     => 'edit_theme_options',
-	    'theme_supports' => '',
-	    'title'          => __('Content Section', 'wpforge'),
-	    'description'    => __('In this section you can modify different aspects of the cont portion of your theme.', 'wpforge'),
-	));
+$wp_customize->add_panel( 'layout_panel', array(
+    'priority'       => 70,
+    'capability'     => 'edit_theme_options',
+    'theme_supports' => '',
+    'title'          => __('Content Section', 'wpforge'),
+    'description'    => __('In this section you can modify different aspects of the cont portion of your theme.', 'wpforge'),
+));
 	// Content Section
     $wp_customize->add_section('content_layout', array(
 		'title' => __('Content Wrapper', 'wpforge'),
@@ -689,7 +702,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 20,
 		'panel' => 'layout_panel',
 	));    
-    // Content Width
+  // Content Width
 	$wp_customize->add_setting('content_width',array(
 		'default' => '64rem',
 		'type' => 'theme_mod',
@@ -703,11 +716,11 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	// Content Background Color	 
 	$wp_customize->add_setting('content_color', array(
-        'default' => '#ffffff',
+    'default' => '#ffffff',
 		'type' => 'theme_mod',
 		'transport' => 'postMessage',
 		'capability' => 'manage_options',
-        'sanitize_callback' => 'sanitize_hex_color',
+    'sanitize_callback' => 'sanitize_hex_color',
 		'priority' => 15,		
     ));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'content_color',array(
@@ -818,20 +831,20 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 
 // Footer Sidebar Panel
-	$wp_customize->add_panel( 'footer_sidebar_panel', array(
-	    'priority'       => 80,
-	    'capability'     => 'edit_theme_options',
-	    'theme_supports' => '',
-	    'title'          => __('Footer Sidebar Section', 'wpforge'),
-	    'description'    => __('In this section you can modify different aspects of the footer sidebar portion of your theme. This includes changing widget title colors as well as link and hover colors.', 'wpforge'),
-	));	
-    $wp_customize->add_section('sidebar_content', array(
+$wp_customize->add_panel( 'footer_sidebar_panel', array(
+    'priority'       => 80,
+    'capability'     => 'edit_theme_options',
+    'theme_supports' => '',
+    'title'          => __('Footer Sidebar Section', 'wpforge'),
+    'description'    => __('In this section you can modify different aspects of the footer sidebar portion of your theme. This includes changing widget title colors as well as link and hover colors.', 'wpforge'),
+));	
+  $wp_customize->add_section('sidebar_content', array(
 		'title' => __('Footer Sidebar Wrapper', 'wpforge'),
 		'description' => __('Change the width and the background color of the Footer Sidebar content area.', 'wpforge'),
 		'priority' => 20,
 		'panel' => 'footer_sidebar_panel',
 	));		
-    // Footer Sidebar Content Width
+  // Footer Sidebar Content Width
 	$wp_customize->add_setting('footer_sidebar_width',array(
 		'default' => '64rem',
 		'type' => 'theme_mod',
@@ -859,13 +872,13 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'settings' => 'footer_sidebar_color',
 	)));
 // Footer Panel
-	$wp_customize->add_panel( 'footer', array(
-	    'priority'       => 90,
-	    'capability'     => 'edit_theme_options',
-	    'theme_supports' => '',
-	    'title'          => __('Footer Section', 'wpforge'),
-	    'description'    => __('Modify different aspects of the Footer portion of your theme. This section deals with the Footer Sidebar area as well as the main Footer area of your theme.', 'wpforge'),
-	));
+$wp_customize->add_panel( 'footer', array(
+    'priority'       => 90,
+    'capability'     => 'edit_theme_options',
+    'theme_supports' => '',
+    'title'          => __('Footer Section', 'wpforge'),
+    'description'    => __('Modify different aspects of the Footer portion of your theme. This section deals with the Footer Sidebar area as well as the main Footer area of your theme.', 'wpforge'),
+));
 	// Footer Content Section	 
     $wp_customize->add_section('footer_content', array(
 		'title' => __('Footer Wrapper', 'wpforge'),
@@ -901,12 +914,12 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'settings' => 'footer_content_color',
 	)));		
 	// Footer Content Section
-    $wp_customize->add_section('wpforge_footer',array(
-		'title' => __('Footer Content','wpforge'),
-		'description' => __('Change the footer text of your theme and select the position in which you want it to appear. ', 'wpforge'),
-		'priority' => 50,
-		'panel' => 'footer',
-    ));
+  $wp_customize->add_section('wpforge_footer',array(
+  	'title' => __('Footer Content','wpforge'),
+  	'description' => __('Change the footer text of your theme and select the position in which you want it to appear. ', 'wpforge'),
+  	'priority' => 50,
+  	'panel' => 'footer',
+  ));
 	$wp_customize->add_setting('wpforge_footer_text',array(
 		'default' => '',
 		'type' => 'theme_mod',
@@ -919,6 +932,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'section' => 'wpforge_footer',
 		'type' => 'textarea',
 	));
+  //Footer Text Position
 	$wp_customize->add_setting('wpforge_footer_position',array(
 		'default' => 'center',
 		'type'    => 'theme_mod',
@@ -942,7 +956,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
  * Sanitation Section - This is where we add our sanitation functions for text inputs, check boxes, radio buttons and select lists
  * I like to keep them all in one area for organization.
  * 
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 
 // Sanitize the the text input
@@ -1065,7 +1079,7 @@ function wpforge_sanitize_footer_position( $input ) { // Footer Position
  * Add postMessage support for some sections of our Theme Customizer.
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  * 
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 $wp_customize->get_setting( 'header_color' )->transport = 'postMessage';
 $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -1090,10 +1104,11 @@ add_action( 'customize_register', 'wpforge_customize_register' );
 
 /**
  * Modifies our styles and writes them in the <head> element of the page based on the WP-Forge Theme Customizer options
+ *
  * @author Anthony Wilhelm (@awshout)
  * @see https://github.com/awtheme/reactor
  *
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 function wpforge_customizer_css() {
 	do_action('wpforge_customizer_css');
@@ -1103,9 +1118,9 @@ function wpforge_customizer_css() {
 	if ( get_theme_mod('header_width') || get_theme_mod('header_color') ) {
 	    $output .=  '.header_wrap {max-width: ' . get_theme_mod('header_width') . '; background-color: ' . get_theme_mod('header_color') . '; width:100%;}';
 	}
-	if ( get_theme_mod('nav_width') ) {
-	    $output .=  '.nav_wrap {max-width: ' . get_theme_mod('nav_width') . '; width:100%;}';
-	}
+  if ( get_theme_mod('nav_width') || get_theme_mod('nav_wrap_main_color') ) {
+      $output .=  '.nav_wrap {max-width: ' . get_theme_mod('nav_width') . '; background-color: ' . get_theme_mod('nav_wrap_main_color') . '; width:100%;}';
+  }
   if ( get_theme_mod('top_bar_main_color') ) {
       $output .=  '.top-bar, .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li:hover:not(.has-form) > a, .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {background-color: ' . get_theme_mod('top_bar_main_color') . ';}';
   }
@@ -1215,10 +1230,10 @@ add_action('wp_head', 'wpforge_customizer_css', 100);
 /**
  * Registers our theme customizer preview with WordPress.
  *
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 function wpforge_customize_preview_js() {
-	wp_enqueue_script( 'wpforge-customizer', get_template_directory_uri() . '/inc/customizer/js/theme-customizer.js', array( 'customize-preview' ), '5.4.7', true );
+	wp_enqueue_script( 'wpforge-customizer', get_template_directory_uri() . '/inc/customizer/js/theme-customizer.js', array( 'customize-preview' ), '5.5.0', true );
 }
 add_action( 'customize_preview_init', 'wpforge_customize_preview_js' );
 

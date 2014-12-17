@@ -1,7 +1,7 @@
-WP-Forge v5.4.7
+WP-Forge v5.5.0
 =======================================
 Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content 
-management system. The second being Foundation (v5.4.7), the most advanced responsive front-end framework.
+management system. The second being Foundation, the most advanced responsive front-end framework.
 
 Demo
 =======================================
@@ -77,7 +77,6 @@ Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
 
 Create your Social Menu
 =======================================
-* Please keep in mind the Social Menu will only accept links. Do not assign pages to the Social Menu as you will only see a /
 1. Go to "Appearance>Menus" and click "create new menu"
 2. Give your menu a name and click "Create Menu"
 3. On the left hand side, click on the "Links" tab and add links to your social profiles. Currently the following sites are supported: Facebook, Twitter, LinkedIn, Google+, Flickr, YouTube,

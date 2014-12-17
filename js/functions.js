@@ -1,11 +1,11 @@
-(function($) { // Add java script to footer so all Foundation scripts will work - @since WP-Forge 5.4.7
+(function($) { // Add java script to footer so all Foundation scripts will work - @since WP-Forge 5.5.0
 jQuery(document).foundation()
 
 	// Joyride
 	.foundation('joyride', 'start');
 
 	// Add button class to all submit buttons
-	jQuery('input[type="submit"]').addClass('tiny button');
+	jQuery('input[type="submit"]').addClass('tiny radius button');
 	
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
 	jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo" />');

@@ -1,13 +1,12 @@
-/*
- * @since WP-Forge 5.4.7
-*/
+/* @since WP-Forge 5.5.0 */
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '5.4.7',
+    version: '5.5.0',
 
     settings : {
       index : 0,
@@ -232,11 +231,11 @@
           }
         });
 
-      S(window).off(".topbar").on("resize.fndtn.topbar", self.throttle(function() {
+      S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function() {
           self.resize.call(self);
-      }, 50)).trigger("resize").trigger("resize.fndtn.topbar").load(function(){
+      }, 50)).trigger('resize').trigger('resize.fndtn.topbar').load(function(){
           // Ensure that the offset is calculated after all of the pages resources have loaded
-          S(this).trigger("resize.fndtn.topbar");
+          S(this).trigger('resize.fndtn.topbar');
       });
 
       S('body').off('.topbar').on('click.fndtn.topbar', function (e) {
@@ -368,7 +367,7 @@
         if (!$dropdown.find('.title.back').length) {
 
           if (settings.mobile_show_parent_link == true && url) {
-            $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5></li><li class="parent-link show-for-small"><a class="parent-link js-generated" href="' + url + '">' + $link.html() +'</a></li>');
+            $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5></li><li class="parent-link show-for-small-only"><a class="parent-link js-generated" href="' + url + '">' + $link.html() +'</a></li>');
           } else {
             $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5>');
           }

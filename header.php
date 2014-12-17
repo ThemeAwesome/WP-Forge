@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -27,8 +27,17 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>><?php get_template_part( 'content', 'off_canvas' ); ?><?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?><?php get_template_part( 'content', 'nav' ); ?><?php } // end if ?><?php if( get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
-        <?php get_template_part( 'content', 'nav' ); ?><?php } // end if ?>
+<body <?php body_class(); ?>>
+
+    <?php get_template_part( 'content', 'off_canvas' ); ?>
+
+    <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?>
+        <?php get_template_part( 'content', 'nav' ); ?>
+    <?php } // end if ?>
+
+    <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
+        <?php get_template_part( 'content', 'nav' ); ?>
+    <?php } // end if ?>
 
         <div class="header_container">
 
@@ -47,14 +56,18 @@
         </header><!-- #header -->
 
         </div><!-- end .header_container -->
+
+            <?php if( get_theme_mod( 'wpforge_nav_position' ) == '') { ?>
+                <?php get_template_part( 'content', 'nav' ); ?>
+            <?php } // end if ?>       
             
-		<?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
-            <?php get_template_part( 'content', 'nav' ); ?>
-        <?php } // end if ?>
-        
-        <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
-            <?php get_template_part( 'content', 'nav' ); ?>
-        <?php } // end if ?>
+            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
+                <?php get_template_part( 'content', 'nav' ); ?>
+            <?php } // end if ?>
+
+            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
+                <?php get_template_part( 'content', 'nav' ); ?>
+            <?php } // end if ?>            
 
         <div class="content_container">
     

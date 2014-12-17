@@ -1,13 +1,12 @@
-/*
- * @since WP-Forge 5.4.7
-*/
+/* @since WP-Forge 5.5.0 */
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.clearing = {
     name : 'clearing',
 
-    version: '5.4.7',
+    version: '5.5.0',
 
     settings : {
       templates : {
@@ -392,10 +391,10 @@
     load : function ($image) {
       var href;
 
-      if ($image[0].nodeName === "A") {
+      if ($image[0].nodeName === 'A') {
         href = $image.attr('href');
       } else {
-        href = $image.parent().attr('href');
+        href = $image.closest('a').attr('href');
       }
 
       this.preload($image);

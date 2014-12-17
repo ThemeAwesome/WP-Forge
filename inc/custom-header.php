@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 
 /**
@@ -17,7 +17,7 @@
  * @uses wpforge_admin_header_style() to style wp-admin form.
  * @uses wpforge_admin_header_image() to add custom markup to wp-admin form.
  *
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 function wpforge_custom_header_setup() {
 	$args = array(
@@ -52,7 +52,7 @@ add_action( 'after_setup_theme', 'wpforge_custom_header_setup' );
  *
  * get_header_textcolor() options: 515151 is default, hide text (returns 'blank'), or any hex value.
  *
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 function wpforge_header_style() {
 	$text_color = get_header_textcolor();
@@ -79,7 +79,7 @@ function wpforge_header_style() {
 /**
  * Style the header image displayed on the Appearance > Header admin panel.
  *
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 function wpforge_admin_header_style() {
 ?>
@@ -121,7 +121,7 @@ function wpforge_admin_header_style() {
  *
  * This callback overrides the default markup displayed there.
  *
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 function wpforge_admin_header_image() {
 	?>

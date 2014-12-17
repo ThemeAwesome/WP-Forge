@@ -7,39 +7,29 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 ?>
-	   </section><!-- end .content-wrap -->
-
+	</section><!-- end .content-wrap -->
     </div><!-- end .content_container -->
-    
 	<?php
         if ( ! is_404() )
         get_sidebar( 'footer' );
-    ?>    
-    
+    ?>
     <div class="footer_container">
     	<footer id="footer" class="footer_wrap row" role="contentinfo">
-            <?php get_template_part( 'content', 'footer' ); ?>
+                <?php get_template_part( 'content', 'footer' ); ?>
     		<div class="medium-12 large-12 columns">
             	<?php get_template_part( 'menu', 'social' ); ?>
-            </div><!-- social-menu -->        
+            </div><!-- social-menu -->   
     	</footer><!-- .row -->
-    </div><!-- end #footer_container -->        
-    
+    </div><!-- end #footer_container -->
 <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>    
-    
 	  <a class="exit-off-canvas"></a>
-      
 	</div><!-- .inner-wrap -->
-    
 </div><!-- #off-canvas-wrap -->
-
 <?php } // end if ?>
-    
     <div id="backtotop">Top</div><!-- #backtotop -->
-
 <?php wp_footer(); ?>
 </body>
 </html>

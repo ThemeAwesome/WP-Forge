@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.4.7
+ * @since WP-Forge 5.5.0
  */
 ?>
 
@@ -47,6 +47,7 @@
 
 		<footer class="entry-meta">
 			<div class="entry-meta-footer">
+				<?php wpforge_entry_meta_footer(); ?>
 			</div><!-- end .entry-meta-footer -->
 				<?php get_template_part( 'content', 'author' ); ?>
 		</footer><!-- .entry-meta -->

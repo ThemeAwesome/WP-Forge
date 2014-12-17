@@ -1,13 +1,12 @@
-/*
- * @since WP-Forge 5.4.7
-*/
+/* @since WP-Forge 5.5.0 */
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.equalizer = {
     name : 'equalizer',
 
-    version : '5.4.7',
+    version : '5.5.0',
 
     settings : {
       use_tallest: true,
@@ -74,4 +73,3 @@
     }
   };
 })(jQuery, window, window.document);
-

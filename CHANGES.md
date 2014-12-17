@@ -1,5 +1,11 @@
 ###Changelog for WP-Forge###
 
+####v5.5.0####
+* Updated to latest version of Foundation, 5.5.0
+* Modified the 404.php file. The 404 error page is more useful and privides better options to the end user.
+* Adjusted some styles. This allows the theme to look the way it is supposed to before having to change any options in Customizer.
+* Cleaned up a few files, meaning I delteted theme, i.e. bbpress.php.
+
 ####v5.4.7####
 * Updated to the version of Foundation, version 5.4.7
 * Added default custom header and background to customizer.

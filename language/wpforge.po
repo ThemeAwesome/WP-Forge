@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 5.4.7\n"
+"Project-Id-Version: WP-Forge 5.5.0\n"
 "POT-Creation-Date: 2014-11-14 18:11-0700\n"
 "PO-Revision-Date: 2014-11-14 18:11-0700\n"
 "Last-Translator: ThemeAwesome <tsquez@gmail.com>\n"

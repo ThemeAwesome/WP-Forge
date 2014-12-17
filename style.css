@@ -1,10 +1,10 @@
 /*
 Theme Name: WP-Forge
-Theme URI: http://wpforge.themeawesome.com/
+Theme URI: http://themeawesome.com/responsive-wordpress-theme
 Author: Thomas E. Vasquez
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation (v5.4.7), the most advanced responsive front-end framework in the world.
-Version: 5.4.7
+Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
+Version: 5.5.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -292,6 +292,25 @@ body {
 	max-width: 100%;
 	width: 100%;
 }
+.header_wrap,
+.content_wrap,
+.footer_wrap { /* Sets default values so when the theme is activated it looks the way it is supposed to*/
+	max-width: 64rem;
+	background-color: #ffffff;
+	width: 100%;
+}
+.the_front.nav_wrap,
+body.wp-customizer .nav_wrap {
+	background: #ffffff;
+}
+.the_front .alert-box,
+.back_end .alert-box {
+	margin-bottom: 0;
+}
+.nav_wrap {
+	background: #333333;
+	max-width: 64rem;
+}
 .content_wrap {
 	padding-top: 1.5rem;
 }
@@ -311,6 +330,8 @@ body {
 	color: #444444;
 	display: block;	
 	font-size: 2.75rem;
+	line-height: 1.2;
+	margin-bottom: 1rem;
 	text-decoration: none;
 }
 .header-info a:hover {
@@ -319,7 +340,7 @@ body {
 .header-info h2 {
 	color: #444444;
 	font-size: 1.6875rem;
-	line-height:1	
+	line-height:1.3;	
 }
 img.header-image {/* Remove fancy borders */
 	border-radius: 0;
@@ -1166,11 +1187,12 @@ section.tab-bar-section.middle a {
 /* Top-Bar */
 .top-bar .name a {
 	line-height: 45px;
-	font-size: 0.875rem; 
+	font-size: 0.8125rem; 
 	font-weight: normal;
 	color: white;
 	display: block;
-	padding: 0 15px; }
+	padding: 0 15px; 
+}
 .top-bar .toggle-topbar a {
 	font-weight:normal;
 }
