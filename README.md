@@ -3,7 +3,7 @@ Welcome to WP-Forge v5.5.0.1
 
 ###Updated 12-20-2014
 
-WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation, the most advanced responsive front-end framework.
+WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
 
 ##WP-Forge Demo##
 You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - You will notice that the [Viewport Resizer] (http://lab.maltewassermann.com/viewport-resizer/) from Malte Wassermann automatically loads at the top of the browser. This will allow you to test the theme against various device sizes.
