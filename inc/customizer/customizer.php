@@ -17,15 +17,15 @@
 * @author Devin Price (@devinsays)
 * @see http://wptheming.com/2012/06/add-options-to-theme-customizer-default-sections/
 *
-* @since WP-Forge 5.5.0
+* @since WP-Forge 5.5.0.1
 */
 
 function wpforge_customize_register( $wp_customize ) {
 
 // Change some of the defaults
 $wp_customize->get_section('header_image')->panel = 'header'; // Add to Header Panel
-$wp_customize->get_section('header_image')->priority = 40; // Changed priority so it shows before site title and tagline
-$wp_customize->get_section('title_tagline')->priority = 50; // Changed priority so it shows after the Header image section
+$wp_customize->get_section('header_image')->priority = 40; // Shows before site title and tagline
+$wp_customize->get_section('title_tagline')->priority = 50; // Shows after the Header image section
 $wp_customize->get_section('title_tagline')->panel = 'header'; // Add to Header Panel
 $wp_customize->get_section('background_image')->panel = 'background'; // Add to Background Panel
 $wp_customize->get_section('nav')->panel = 'navigation'; // Add to Navigation Panel
@@ -792,25 +792,25 @@ $wp_customize->add_panel( 'layout_panel', array(
 		'description' => __('Adjust the position of the main sidebar.', 'wpforge'),
 		'priority' => 70,
 		'panel' => 'layout_panel',
-	));    
-	// Sidebar Position
-	$wp_customize->add_setting('wpforge_sidebar_position',array(
-		'default' => 'right',
-		'type' => 'theme_mod',
-		'capability' => 'manage_options',		
-		'sanitize_callback' => 'wpforge_sanitize_sidebar_position',		
 	));
-	$wp_customize->add_control('wpforge_sidebar_position',array(
-		'type' => 'select',
-		'label' => __('Sidebar Position', 'wpforge'),
-		'section' => 'sidebar_layout',
-		'choices' => array(
-			'right' => __('Right', 'wpforge'),
-			'left' 	=> __('Left', 'wpforge'),
-		),
-	));
+  // Content Position
+  $wp_customize->add_setting('wpforge_content_position',array(
+    'default' => 'left',
+    'type' => 'theme_mod',
+    'capability' => 'manage_options',   
+    'sanitize_callback' => 'wpforge_sanitize_content_position',   
+  ));
+  $wp_customize->add_control('wpforge_content_position',array(
+    'type' => 'select',
+    'label' => __('Content Position', 'wpforge'),
+    'section' => 'sidebar_layout',
+    'choices' => array(
+      'left' => __('Left', 'wpforge'),
+      'right'  => __('Right', 'wpforge'),
+    ),
+  ));
 
-	// Site Map Section
+  // Site Map Section
     $wp_customize->add_section('site_map', array(
 		'title' => __('Site Map', 'wpforge'),
 		'description' => __('Select how many posts you want displayed on your Site Map page.', 'wpforge'),
@@ -956,7 +956,7 @@ $wp_customize->add_panel( 'footer', array(
  * Sanitation Section - This is where we add our sanitation functions for text inputs, check boxes, radio buttons and select lists
  * I like to keep them all in one area for organization.
  * 
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 
 // Sanitize the the text input
@@ -1013,12 +1013,12 @@ function wpforge_sanitize_mobile_position( $input ) { // Mobile Position
         return '';
     }
 }
-function wpforge_sanitize_sidebar_position( $input ) { //sidebar position
+function wpforge_sanitize_content_position( $input ) { //sidebar position
     $valid = array(
-        'right' => 'Right',
-		'left' 	=> 'Left',
+    'left' => 'Left',
+    'right'  => 'Right',
     );
-	
+  
     if ( array_key_exists( $input, $valid ) ) {
         return $input;
     } else {
@@ -1079,7 +1079,7 @@ function wpforge_sanitize_footer_position( $input ) { // Footer Position
  * Add postMessage support for some sections of our Theme Customizer.
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  * 
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 $wp_customize->get_setting( 'header_color' )->transport = 'postMessage';
 $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -1108,132 +1108,25 @@ add_action( 'customize_register', 'wpforge_customize_register' );
  * @author Anthony Wilhelm (@awshout)
  * @see https://github.com/awtheme/reactor
  *
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
-function wpforge_customizer_css() {
-	do_action('wpforge_customizer_css');
-		
-	$output = '';
-
-	if ( get_theme_mod('header_width') || get_theme_mod('header_color') ) {
-	    $output .=  '.header_wrap {max-width: ' . get_theme_mod('header_width') . '; background-color: ' . get_theme_mod('header_color') . '; width:100%;}';
-	}
-  if ( get_theme_mod('nav_width') || get_theme_mod('nav_wrap_main_color') ) {
-      $output .=  '.nav_wrap {max-width: ' . get_theme_mod('nav_width') . '; background-color: ' . get_theme_mod('nav_wrap_main_color') . '; width:100%;}';
-  }
-  if ( get_theme_mod('top_bar_main_color') ) {
-      $output .=  '.top-bar, .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li:hover:not(.has-form) > a, .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {background-color: ' . get_theme_mod('top_bar_main_color') . ';}';
-  }
-  if ( get_theme_mod('top_bar_divider_color') ) {
-      $output .=  '.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {border-right: solid 1px ' . get_theme_mod('top_bar_divider_color') . ';}';
-  }  
-  if ( get_theme_mod('top_bar_hover_color') ) {
-      $output .=  '.top-bar-section li:not(.has-form) a:not(.button):hover, .top-bar .name:hover, .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {background-color: ' . get_theme_mod('top_bar_hover_color') . ';}';
-  }
-  if ( get_theme_mod('top_bar_active_color') ) {
-      $output .=  '.top-bar-section li.active:not(.has-form) a:not(.button) {background-color: ' . get_theme_mod('top_bar_active_color') . ';}';
-  }
-  if ( get_theme_mod('top_bar_active_hover_color') ) {
-      $output .=  '.top-bar-section li.active:not(.has-form) a:not(.button):hover {background-color: ' . get_theme_mod('top_bar_active_hover_color') . ';}';
-  }
-	if ( get_theme_mod('content_width') || get_theme_mod('content_color') ) {
-	    $output .=  '.content_wrap {max-width: ' . get_theme_mod('content_width') . '; background-color: ' . get_theme_mod('content_color') . '; width:100%;}';
-	}
-  if ( get_theme_mod('content_font_color') ) {
-      $output .=  '#content, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {color: ' . get_theme_mod('content_font_color') . ';}';
-  }   
-  if ( get_theme_mod('content_link_color') ) {
-      $output .=  '#content a {color: ' . get_theme_mod('content_link_color') . ';}';
-  } 
-      if ( get_theme_mod('content_hover_color') ) {
-      $output .=  '#content a:hover {color: ' . get_theme_mod('content_hover_color') . ';}';
-  }
-  if ( get_theme_mod('pagination_current_color') || get_theme_mod('pagination_current_font_color') ) {
-      $output .=  '#content ul.pagination li.current a, #content ul.pagination li.current button, #content ul.pagination li.current a:hover, #content ul.pagination li.current a:focus, #content ul.pagination li.current button:hover, #content ul.pagination li.current button:focus, #content .page-links a {background-color: ' . get_theme_mod('pagination_current_color') . '; color: ' . get_theme_mod('pagination_current_font_color') . ';}';
-  }
-  if ( get_theme_mod('pagination_link_color') ) {
-      $output .=  '#content ul.pagination li a, #content ul.pagination li button {color: ' . get_theme_mod('pagination_link_color') . ';}';
-  }  
-  if ( get_theme_mod('pagination_link_hover_color') || get_theme_mod('pagination_hover_color') ) {
-      $output .=  '#content ul.pagination li:hover a, #content ul.pagination li a:focus, #content ul.pagination li:hover button, #content ul.pagination li button:focus {color: ' . get_theme_mod('pagination_link_hover_color') . ';background-color: ' . get_theme_mod('pagination_hover_color') . ';}';
-  }
-	if ( get_theme_mod('footer_sidebar_width') || get_theme_mod('footer_sidebar_color') ) {
-	    $output .=  '.sidebar_wrap {max-width: ' . get_theme_mod('footer_sidebar_width') . '; background-color: ' . get_theme_mod('footer_sidebar_color') . '; width:100%;}';
-	}
-	if ( get_theme_mod('wpforge_sidebar_position') == 'left') {
-	    $output .=  '#content.columns {float: right!important;} #secondary.columns {float: left!important;}';
-	}
-  if ( get_theme_mod('widget_text_color') ) {
-      $output .=  '#secondary {color: ' . get_theme_mod('widget_text_color') . ';}';
-  }
-  if ( get_theme_mod('widget_title_color') ) {
-      $output .=  '#secondary .widget-title {color: ' . get_theme_mod('widget_title_color') . ';}';
-  }
-  if ( get_theme_mod('widget_link_color') ) {
-      $output .=  '#secondary a {color: ' . get_theme_mod('widget_link_color') . ';}';
-  }
-  if ( get_theme_mod('widget_link_hover_color') ) {
-      $output .=  '#secondary a:hover {color: ' . get_theme_mod('widget_link_hover_color') . ';}';
-  }
-	if ( get_theme_mod('footer_content_width') || get_theme_mod('footer_content_color') ) {
-	    $output .=  '.footer_wrap {max-width: ' . get_theme_mod('footer_content_width') . '; background-color: ' . get_theme_mod('footer_content_color') . '; width:100%}';
-	}	
-	if ( get_theme_mod('wpforge_title_color') ) {
-	    $output .=  'h1,h2,h3,h4,h5,h6 {color: ' . get_theme_mod('wpforge_title_color') . ';}';
-	}		
-	if ( get_theme_mod('wpforge_link_color') ) {
-	    $output .=  'a {color: ' . get_theme_mod('wpforge_link_color') . ';}';
-	}
-	if ( get_theme_mod('wpforge_hover_color') ) {
-	    $output .=  'a:hover {color: ' . get_theme_mod('wpforge_hover_color') . ';}';
-	}
-	if ( get_theme_mod('footer_widget_title_color') ) {
-	    $output .=  '#secondary-sidebar .widget-title {color: ' . get_theme_mod('footer_widget_title_color') . ';}';
-	}
-  if ( get_theme_mod('footer_widget_text_color') ) {
-      $output .=  '#secondary-sidebar {color: ' . get_theme_mod('footer_widget_text_color') . ';}';
-  }  
-	if ( get_theme_mod('footer_widget_link_color') ) {
-	    $output .=  '#secondary-sidebar a {color: ' . get_theme_mod('footer_widget_link_color') . ';}';
-	}
-	if ( get_theme_mod('footer_widget_link_hover_color') ) {
-	    $output .=  '#secondary-sidebar a:hover {color: ' . get_theme_mod('footer_widget_link_hover_color') . ';}';
-	}
-	if ( get_theme_mod('footer_text_color') ) {
-	    $output .=  'footer[role="contentinfo"] p {color: ' . get_theme_mod('footer_text_color') . ';}';
-	}
-	if ( get_theme_mod('footer_link_color') ) {
-	    $output .=  'footer[role="contentinfo"] a {color: ' . get_theme_mod('footer_link_color') . ';}';
-	}
-	if ( get_theme_mod('footer_hover_color') ) {
-	    $output .=  'footer[role="contentinfo"] a:hover {color: ' . get_theme_mod('footer_hover_color') . ';}';
-	}
-  if ( get_theme_mod('button_color') ) {
-      $output .=  'button, .button {background-color: ' . get_theme_mod('button_color') . ';}';
-  }
-  if ( get_theme_mod('button_border_color') ) {
-      $output .=  'button, .button, #content a.button {border-color: ' . get_theme_mod('button_border_color') . ';}';
-  }
-  if ( get_theme_mod('button_font_color') ) {
-      $output .=  'button, .button, #content a.button {color: ' . get_theme_mod('button_font_color') . ';}';
-  }   
-  if ( get_theme_mod('button_hover_color') ) {
-      $output .=  'button:hover, button:focus, .button:hover, .button:focus {background-color: ' . get_theme_mod('button_hover_color') . ';}';
-  }
-  if ( get_theme_mod('button_font_hover_color') ) {
-      $output .=  'button:hover, button:focus, .button:hover, .button:focus {color: ' . get_theme_mod('button_font_hover_color') . ';}';
-  }  
-	echo ( $output ) ? '<style type="text/css" id="wpforge-customizer-css">' . apply_filters('wpforge_customizer_css', $output) .  '</style>' . "\n" : '';
+function wpforge_customize_css()
+{
+    ?>
+<style type="text/css" id="wpforge-customizer-css">
+  .header_wrap {max-width:<?php echo get_theme_mod('header_width','64rem'); ?>;background-color:<?php echo get_theme_mod('header_color','#ffffff'); ?>;width:100%;}.nav_wrap {max-width:<?php echo get_theme_mod('nav_width','64rem'); ?>;background-color:<?php echo get_theme_mod('nav_wrap_main_color','#333333'); ?>;width:100%;}.top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button),.top-bar-section ul li:hover:not(.has-form) > a,.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_main_color','#333333'); ?>;}.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {border-right: solid 1px <?php echo get_theme_mod('top_bar_divider_color','#4e4e4e'); ?>;}.top-bar-section li:not(.has-form) a:not(.button):hover,.top-bar .name:hover,.top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_hover_color','#272727'); ?>;}.top-bar-section li.active:not(.has-form) a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_active_color','#008cba'); ?>;}.top-bar-section li.active:not(.has-form) a:not(.button):hover {background-color:<?php echo get_theme_mod('top_bar_active_hover_color','#0078a0'); ?>;}.content_wrap {max-width:<?php echo get_theme_mod('content_width','64rem'); ?>; background-color:<?php echo get_theme_mod('content_color','#ffffff'); ?>;width:100%;}#content,#content h1,#content h2,#content h3,#content h4,#content h5,#content h6 {color:<?php echo get_theme_mod('content_font_color','#444444'); ?>;}#content a {color:<?php echo get_theme_mod('content_link_color','#444444'); ?>;}#content a:hover {color:<?php echo get_theme_mod('content_hover_color','#008cba'); ?>;}#content ul.pagination li.current a,#content ul.pagination li.current button,#content ul.pagination li.current a:hover,#content ul.pagination li.current a:focus,#content ul.pagination li.current button:hover,#content ul.pagination li.current button:focus,#content .page-links a {background-color:<?php echo get_theme_mod('pagination_current_color','#444444'); ?>;color:<?php echo get_theme_mod('pagination_current_font_color','#ffffff'); ?>;}#content ul.pagination li a, #content ul.pagination li button {color:<?php echo get_theme_mod('pagination_link_color','#999999'); ?>;}#content ul.pagination li:hover a,#content ul.pagination li a:focus,#content ul.pagination li:hover button,#content ul.pagination li button:focus {color:<?php echo get_theme_mod('pagination_link_hover_color','#999999'); ?>;background-color:<?php echo get_theme_mod('pagination_hover_color','#e6e6e6'); ?>;}.sidebar_wrap {max-width:<?php echo get_theme_mod('footer_sidebar_width','64rem'); ?>;background-color:<?php echo get_theme_mod('footer_sidebar_color','#ffffff'); ?>;width:100%;}#content.columns {float:<?php echo get_theme_mod('wpforge_content_position','left'); ?>!important;}#secondary .widget-title {color:<?php echo get_theme_mod('widget_title_color','#444444'); ?>;}#secondary {color:<?php echo get_theme_mod('widget_text_color','#444444'); ?>}#secondary a {color:<?php echo get_theme_mod('widget_link_color','#444444'); ?>;}#secondary a:hover {color:<?php echo get_theme_mod('widget_link_hover_color','#0078a0'); ?>;}.footer_wrap {max-width:<?php echo get_theme_mod('footer_content_width','64rem'); ?>; background-color:<?php echo get_theme_mod('footer_content_color','#ffffff'); ?>;width:100%}#secondary-sidebar .widget-title {color:<?php echo get_theme_mod('footer_widget_title_color','#444444'); ?>;}#secondary-sidebar {color:<?php echo get_theme_mod('footer_widget_text_color','#444444'); ?>;}#secondary-sidebar a {color:<?php echo get_theme_mod('footer_widget_link_color','#444444'); ?>;}#secondary-sidebar a:hover {color:<?php echo get_theme_mod('footer_widget_link_hover_color','#0078a0'); ?>;}footer[role="contentinfo"] p {color:<?php echo get_theme_mod('footer_text_color','$444444'); ?>;}footer[role="contentinfo"] a {color:<?php echo get_theme_mod('footer_link_color','#444444'); ?>;}footer[role="contentinfo"] a:hover {color:<?php echo get_theme_mod('footer_hover_color','#0078a0'); ?>;}button, .button {background-color:<?php echo get_theme_mod('button_color','#333333'); ?>;}button,.button,#content a.button {border-color:<?php echo get_theme_mod('button_border_color','#333333'); ?>;}button,.button,#content a.button {color:<?php echo get_theme_mod('button_font_color','#ffffff'); ?>;}button:hover,button:focus,.button:hover,.button:focus {background-color:<?php echo get_theme_mod('button_hover_color','#272727'); ?>;}button:hover,button:focus,.button:hover,.button:focus {color:<?php echo get_theme_mod('button_font_hover_color','#ffffff'); ?>;}
+</style>
+    <?php
 }
-add_action('wp_head', 'wpforge_customizer_css', 100);
+add_action( 'wp_head', 'wpforge_customize_css', 100);
 
 /**
  * Registers our theme customizer preview with WordPress.
  *
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 function wpforge_customize_preview_js() {
-	wp_enqueue_script( 'wpforge-customizer', get_template_directory_uri() . '/inc/customizer/js/theme-customizer.js', array( 'customize-preview' ), '5.5.0', true );
+	wp_enqueue_script( 'wpforge-customizer', get_template_directory_uri() . '/inc/customizer/js/theme-customizer.js', array( 'customize-preview' ), '5.5.0.1', true );
 }
 add_action( 'customize_preview_init', 'wpforge_customize_preview_js' );
 

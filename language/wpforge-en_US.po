@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 5.5.0\n"
-"POT-Creation-Date: 2014-11-14 18:11-0700\n"
-"PO-Revision-Date: 2014-11-14 18:11-0700\n"
+"Project-Id-Version: WP-Forge 5.5.0.1\n"
+"POT-Creation-Date: 2014-12-20 07:32-0700\n"
+"PO-Revision-Date: 2014-12-20 07:33-0700\n"
 "Last-Translator: ThemeAwesome <tsquez@gmail.com>\n"
 "Language-Team: ThemeAwesome <tsquez@gmail.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -24,12 +24,36 @@ msgstr ""
 
 #: 404.php:22
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"The post, page or whatever it was you were looking for might not be here. It "
+"could have been moved, deleted or maybe the URL you typed or the link you "
+"clicked was incorrect in some way."
 msgstr ""
 
-#: 404.php:26 404.php:29 searchform.php:14 searchform.php:17
-msgid "Search"
+#: 404.php:23
+msgid "Try Again?"
+msgstr ""
+
+#: 404.php:24
+msgid ""
+"I know this didn&rsquo;t work before but you may want to try searching "
+"again, only this time keep your fingers crossed!"
+msgstr ""
+
+#: 404.php:33
+msgid ""
+"If you are absolutely, positivly certain it was supposed to be here and just "
+"can&rsquo;t seem to find it,"
+msgstr ""
+
+#: 404.php:34
+msgid "Why not try something new?"
+msgstr ""
+
+#: 404.php:35
+msgid ""
+"Even though you couldn&rsquo;t find a particular item on our site, we do "
+"have other great stuff to look at. Maybe we can interest you in some of our "
+"other exciting content. Below is a list of our newest posts. "
 msgstr ""
 
 #: archive.php:30
@@ -124,11 +148,11 @@ msgid "Comment navigation"
 msgstr ""
 
 #: comments.php:45
-msgid "&larr; Older Comments"
+msgid "&laquo; Older Comments"
 msgstr ""
 
 #: comments.php:46
-msgid "Newer Comments &rarr;"
+msgid "Newer Comments &raquo;"
 msgstr ""
 
 #: comments.php:51
@@ -203,7 +227,7 @@ msgstr ""
 #: content-aside.php:19 content-audio.php:19 content-chat.php:27
 #: content-gallery.php:27 content-image.php:18 content-link.php:18
 #: content-quote.php:18 content-status.php:18 content-video.php:19
-#: content.php:29 functions.php:608
+#: content.php:29 functions.php:638
 msgid "Edit"
 msgstr ""
 
@@ -233,29 +257,44 @@ msgstr ""
 msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
-#: content-footer.php:31 content-footer.php:43 content-footer.php:73
-#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+#: content-footer.php:15 content-footer.php:41 content-footer.php:53
+#: content-footer.php:83 content-footer.php:95 content-footer.php:113
+#: content-footer.php:136
 msgid "Powered by"
 msgstr ""
 
-#: content-footer.php:31 content-footer.php:43 content-footer.php:73
-#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+#: content-footer.php:15 content-footer.php:41 content-footer.php:53
+#: content-footer.php:83 content-footer.php:95 content-footer.php:113
+#: content-footer.php:136
 msgid "http://themeawesome.com/responsive-wordpress-theme/"
 msgstr ""
 
-#: content-footer.php:31 content-footer.php:43 content-footer.php:73
-#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+#: content-footer.php:15 content-footer.php:41 content-footer.php:53
+#: content-footer.php:83 content-footer.php:95 content-footer.php:113
+#: content-footer.php:136
+msgid "A Responsive WordPress Theme"
+msgstr ""
+
+#: content-footer.php:15 content-footer.php:41 content-footer.php:53
+#: content-footer.php:83 content-footer.php:95 content-footer.php:113
+#: content-footer.php:136
 msgid "WP-Forge"
 msgstr ""
 
-#: content-footer.php:31 content-footer.php:43 content-footer.php:73
-#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+#: content-footer.php:15 content-footer.php:41 content-footer.php:53
+#: content-footer.php:83 content-footer.php:95 content-footer.php:113
+#: content-footer.php:136
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: content-footer.php:31 content-footer.php:43 content-footer.php:73
-#: content-footer.php:85 content-footer.php:103 content-footer.php:126
+#: content-footer.php:15 content-footer.php:41 content-footer.php:53
+#: content-footer.php:83 content-footer.php:95 content-footer.php:113
+#: content-footer.php:136
 msgid "WordPress"
+msgstr ""
+
+#: content-nav.php:13
+msgid "Skip to content"
 msgstr ""
 
 #: content-none.php:13
@@ -281,120 +320,104 @@ msgstr ""
 msgid "Edit Page"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:103
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:101
+#: functions.php:104
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:105
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:188
+#: functions.php:208
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:203
-#, php-format
-msgid ""
-"Please assign a menu to the primary menu location under %1$s or the %2$s."
-msgstr ""
-
-#: functions.php:204
-#, php-format
-msgid "<a href=\"%s\">Menus</a>"
-msgstr ""
-
-#: functions.php:207
-#, php-format
-msgid "<a href=\"%s\">Theme Customizer</a>"
-msgstr ""
-
-#: functions.php:365
+#: functions.php:375
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:367
+#: functions.php:377
 msgid "Displays widgets in the blog area as well as pages."
 msgstr ""
 
-#: functions.php:374
+#: functions.php:384
 msgid "First Front Page Widget Area"
 msgstr ""
 
-#: functions.php:376 functions.php:385
+#: functions.php:386 functions.php:395
 msgid ""
 "Appears when using the optional Front Page template with a page set as "
 "Static Front Page"
 msgstr ""
 
-#: functions.php:383
+#: functions.php:393
 msgid "Second Front Page Widget Area"
 msgstr ""
 
-#: functions.php:392
+#: functions.php:402
 msgid "First Footer Widget Area"
 msgstr ""
 
-#: functions.php:394 functions.php:403 functions.php:412
+#: functions.php:404 functions.php:413 functions.php:422
 msgid "An optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:401
+#: functions.php:411
 msgid "Second Footer Widget Area"
 msgstr ""
 
-#: functions.php:410
+#: functions.php:420
 msgid "Third Footer Widget Area"
 msgstr ""
 
-#: functions.php:544
+#: functions.php:574
 msgid "Post navigation"
 msgstr ""
 
-#: functions.php:545
+#: functions.php:575
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: functions.php:546
+#: functions.php:576
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: functions.php:571
+#: functions.php:601
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:571
+#: functions.php:601
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:586
+#: functions.php:616
 msgid "Post Author"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: functions.php:592
+#: functions.php:622
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:598
+#: functions.php:628
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:606
+#: functions.php:636
 msgid "<span class=\"genericon genericon-reply\"></span> Reply"
 msgstr ""
 
-#: functions.php:626 functions.php:668
+#: functions.php:656 functions.php:698
 msgid ", "
 msgstr ""
 
-#: functions.php:644
+#: functions.php:674
 msgid "Sticky"
 msgstr ""
 
@@ -451,32 +474,31 @@ msgid ""
 "your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:51 inc/customizer/customizer.php:84
-#: inc/customizer/customizer.php:846 inc/customizer/customizer.php:879
-#: inc/customizer/customizer.php:928
-msgid "Set background color"
-msgstr ""
-
-#: inc/customizer/customizer.php:57
+#: inc/customizer/customizer.php:52
 msgid "Header Wrapper"
 msgstr ""
 
-#: inc/customizer/customizer.php:58
+#: inc/customizer/customizer.php:53
 msgid ""
 "This is the main content area of your header. It is the area that contains "
 "the site title, site description and logo.You can change the width and "
 "background color of this area."
 msgstr ""
 
-#: inc/customizer/customizer.php:69 inc/customizer/customizer.php:863
+#: inc/customizer/customizer.php:64 inc/customizer/customizer.php:854
 msgid "Set width"
 msgstr ""
 
-#: inc/customizer/customizer.php:94
+#: inc/customizer/customizer.php:79 inc/customizer/customizer.php:870
+#: inc/customizer/customizer.php:912
+msgid "Set background color"
+msgstr ""
+
+#: inc/customizer/customizer.php:89
 msgid "Background Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:95
+#: inc/customizer/customizer.php:90
 msgid ""
 "This is the default section of the customizer where you can upload an image "
 "to use for your themes background image. This section is also available via "
@@ -484,468 +506,448 @@ msgid ""
 "WordPress core)."
 msgstr ""
 
-#: inc/customizer/customizer.php:103
+#: inc/customizer/customizer.php:98
 msgid "Navigation Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:104
+#: inc/customizer/customizer.php:99
 msgid "The default Navigation section of the WordPress Customizer."
 msgstr ""
 
-#: inc/customizer/customizer.php:107
-msgid "Select Color"
-msgstr ""
-
-#: inc/customizer/customizer.php:113
+#: inc/customizer/customizer.php:103
 msgid "Nav Wrapper"
 msgstr ""
 
-#: inc/customizer/customizer.php:124
+#: inc/customizer/customizer.php:114
 msgid "Nav Width"
 msgstr ""
 
-#: inc/customizer/customizer.php:128
+#: inc/customizer/customizer.php:118
 msgid "Change the width of the navigation area of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:133
+#: inc/customizer/customizer.php:130
+msgid "Select Background Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:136
 msgid "Top-Bar Settings"
 msgstr ""
 
-#: inc/customizer/customizer.php:134
+#: inc/customizer/customizer.php:137
 msgid "Configure the Top-Bar Navigation area of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:148
+#: inc/customizer/customizer.php:151
 msgid "Main Menu Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:151
+#: inc/customizer/customizer.php:154
 msgid "Normal Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:152
+#: inc/customizer/customizer.php:155
 msgid "Top of Browser - Scroll"
 msgstr ""
 
-#: inc/customizer/customizer.php:153
+#: inc/customizer/customizer.php:156
 msgid "Top of Browser - Fixed"
 msgstr ""
 
-#: inc/customizer/customizer.php:154
+#: inc/customizer/customizer.php:157
 msgid "Contain-To-Grid-Sticky"
 msgstr ""
 
-#: inc/customizer/customizer.php:167
+#: inc/customizer/customizer.php:170
 msgid "Change text for Home Link?"
 msgstr ""
 
-#: inc/customizer/customizer.php:170 inc/customizer/customizer.php:206
-#: inc/customizer/customizer.php:772 inc/customizer/customizer.php:789
+#: inc/customizer/customizer.php:173 inc/customizer/customizer.php:209
+#: inc/customizer/customizer.php:768 inc/customizer/customizer.php:785
 msgid "No"
 msgstr ""
 
-#: inc/customizer/customizer.php:171 inc/customizer/customizer.php:207
-#: inc/customizer/customizer.php:773 inc/customizer/customizer.php:790
+#: inc/customizer/customizer.php:174 inc/customizer/customizer.php:210
+#: inc/customizer/customizer.php:769 inc/customizer/customizer.php:786
 msgid "Yes"
 msgstr ""
 
-#: inc/customizer/customizer.php:182
+#: inc/customizer/customizer.php:185
 msgid "If Yes, Add New Anchor Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:188
+#: inc/customizer/customizer.php:191
 msgid "Off-Canvas Settings"
 msgstr ""
 
-#: inc/customizer/customizer.php:189
+#: inc/customizer/customizer.php:192
 msgid "Configure Off-Canvas Navigation area of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:203
+#: inc/customizer/customizer.php:206
 msgid "Use Off-Canvas for Mobile?"
 msgstr ""
 
-#: inc/customizer/customizer.php:220
+#: inc/customizer/customizer.php:223
 msgid "Display Off-Canvas Left or Right?"
 msgstr ""
 
-#: inc/customizer/customizer.php:223 inc/customizer/customizer.php:813
+#: inc/customizer/customizer.php:226 inc/customizer/customizer.php:808
 msgid "Left"
 msgstr ""
 
-#: inc/customizer/customizer.php:224 inc/customizer/customizer.php:812
+#: inc/customizer/customizer.php:227 inc/customizer/customizer.php:809
 msgid "Right"
 msgstr ""
 
-#: inc/customizer/customizer.php:233
+#: inc/customizer/customizer.php:236
 msgid "Colors Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:234
+#: inc/customizer/customizer.php:237
 msgid "The default Colors section of the WordPress Customizer."
 msgstr ""
 
-#: inc/customizer/customizer.php:238
+#: inc/customizer/customizer.php:241
 msgid "Top-Bar Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:239
+#: inc/customizer/customizer.php:242
 msgid ""
 "Change the overall color, link, hover and active colors in the Top-Bar "
 "portion of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:253
+#: inc/customizer/customizer.php:256
 msgid "Select Main Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:266
+#: inc/customizer/customizer.php:269
 msgid "Select Divider Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:279
+#: inc/customizer/customizer.php:282
 msgid "Select Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:292
+#: inc/customizer/customizer.php:295
 msgid "Select Active Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:305
+#: inc/customizer/customizer.php:308
 msgid "Select Active Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:312
+#: inc/customizer/customizer.php:315
 msgid "Content Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:313
+#: inc/customizer/customizer.php:316
 msgid ""
 "Change text, link and hover colors in the Content section of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:327
+#: inc/customizer/customizer.php:330
 msgid "Select Text Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:341
+#: inc/customizer/customizer.php:344
 msgid "Select Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:354
+#: inc/customizer/customizer.php:357
 msgid "Select Link Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:361
+#: inc/customizer/customizer.php:364
 msgid "Pagination Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:362
+#: inc/customizer/customizer.php:365
 msgid ""
 "Change the current, link and hover colors of the pagination area of your "
 "theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:375
+#: inc/customizer/customizer.php:378
 msgid "Current Background Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:388
+#: inc/customizer/customizer.php:391
 msgid "Current Font Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:401
+#: inc/customizer/customizer.php:404
 msgid "Pagination Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:414
+#: inc/customizer/customizer.php:417
 msgid "Pagination Background Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:427
+#: inc/customizer/customizer.php:430
 msgid "Pagination Link Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:434
+#: inc/customizer/customizer.php:437
 msgid "Sidebar Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:435
+#: inc/customizer/customizer.php:438
 msgid ""
 "Change widget title, link and hover colors in the main sidebar area of your "
 "theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:449
+#: inc/customizer/customizer.php:452
 msgid "Sidebar Widget Title Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:463
+#: inc/customizer/customizer.php:466
 msgid "Sidebar Text Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:477
+#: inc/customizer/customizer.php:480
 msgid "Sidebar Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:490
+#: inc/customizer/customizer.php:493
 msgid "Sidebar Link Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:496
+#: inc/customizer/customizer.php:499
 msgid "Footer Sidebar Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:497
+#: inc/customizer/customizer.php:500
 msgid ""
 "Change widget title, link and hover colors in the Footer sidebar area of "
 "your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:511
+#: inc/customizer/customizer.php:514
 msgid "Footer Sidebar Widget Title Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:525
+#: inc/customizer/customizer.php:528
 msgid "Footer Sidebar Text Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:539
+#: inc/customizer/customizer.php:542
 msgid "Footer Sidebar Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:552
+#: inc/customizer/customizer.php:555
 msgid "Footer Sidebar Link Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:559
+#: inc/customizer/customizer.php:562
 msgid "Footer Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:560
+#: inc/customizer/customizer.php:563
 msgid ""
 "Change normal text, link and hover colors in the Footer section of your "
 "theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:574
+#: inc/customizer/customizer.php:577
 msgid "Footer Text Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:588
+#: inc/customizer/customizer.php:591
 msgid "Footer Link Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:601
+#: inc/customizer/customizer.php:604
 msgid "Footer Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:607
+#: inc/customizer/customizer.php:610
 msgid "Button Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:608
+#: inc/customizer/customizer.php:611
 msgid "Change the color and hover colors of submit buttons of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:621
+#: inc/customizer/customizer.php:624
 msgid "Button Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:634
+#: inc/customizer/customizer.php:637
 msgid "Button Border Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:647
+#: inc/customizer/customizer.php:650
 msgid "Button Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:660
+#: inc/customizer/customizer.php:663
 msgid "Button Font Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:673
+#: inc/customizer/customizer.php:676
 msgid "Button Font Hover Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:683
+#: inc/customizer/customizer.php:686
 msgid "Front Page Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:684
+#: inc/customizer/customizer.php:687
 msgid "The default Front Page section of the WordPress Customizer."
 msgstr ""
 
-#: inc/customizer/customizer.php:692
+#: inc/customizer/customizer.php:695
 msgid "Content Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:693
+#: inc/customizer/customizer.php:696
 msgid ""
 "In this section you can modify different aspects of the cont portion of your "
 "theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:697
-msgid "Content Container"
-msgstr ""
-
-#: inc/customizer/customizer.php:698
-msgid ""
-"This container is 100% width and wraps around the main content area of your "
-"theme."
-msgstr ""
-
-#: inc/customizer/customizer.php:704
+#: inc/customizer/customizer.php:700
 msgid "Content Wrapper"
 msgstr ""
 
-#: inc/customizer/customizer.php:705
+#: inc/customizer/customizer.php:701
 msgid ""
 "Change the width and the background color of the content area of your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:716
+#: inc/customizer/customizer.php:712
 msgid "Content Width"
 msgstr ""
 
-#: inc/customizer/customizer.php:731
+#: inc/customizer/customizer.php:727
 msgid "Content Background Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:737 page-templates/sitemap.php:23
+#: inc/customizer/customizer.php:733 page-templates/sitemap.php:23
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer/customizer.php:738
+#: inc/customizer/customizer.php:734
 msgid "Adjust certain aspects of posts in your theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:752
+#: inc/customizer/customizer.php:748
 msgid "Show full post or excerpt?"
 msgstr ""
 
-#: inc/customizer/customizer.php:755
+#: inc/customizer/customizer.php:751
 msgid "Full Post"
 msgstr ""
 
-#: inc/customizer/customizer.php:756
+#: inc/customizer/customizer.php:752
 msgid "Excerpt"
 msgstr ""
 
-#: inc/customizer/customizer.php:769
+#: inc/customizer/customizer.php:765
 msgid "Display post thumbnails?"
 msgstr ""
 
-#: inc/customizer/customizer.php:786
+#: inc/customizer/customizer.php:782
 msgid "Show single post view thumbnail?"
 msgstr ""
 
-#: inc/customizer/customizer.php:795
+#: inc/customizer/customizer.php:791
 msgid "Sidebar"
 msgstr ""
 
-#: inc/customizer/customizer.php:796
+#: inc/customizer/customizer.php:792
 msgid "Adjust the position of the main sidebar."
 msgstr ""
 
-#: inc/customizer/customizer.php:809
-msgid "Sidebar Position"
+#: inc/customizer/customizer.php:805
+msgid "Content Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:819
+#: inc/customizer/customizer.php:815
 msgid "Site Map"
 msgstr ""
 
-#: inc/customizer/customizer.php:820
+#: inc/customizer/customizer.php:816
 msgid "Select how many posts you want displayed on your Site Map page."
 msgstr ""
 
-#: inc/customizer/customizer.php:832
+#: inc/customizer/customizer.php:828
 msgid "Number of posts to display?"
 msgstr ""
 
-#: inc/customizer/customizer.php:842
-msgid "Footer Sidbar Section"
+#: inc/customizer/customizer.php:838
+msgid "Footer Sidebar Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:843
+#: inc/customizer/customizer.php:839
 msgid ""
 "In this section you can modify different aspects of the footer sidebar "
 "portion of your theme. This includes changing widget title colors as well as "
 "link and hover colors."
 msgstr ""
 
-#: inc/customizer/customizer.php:851
+#: inc/customizer/customizer.php:842
 msgid "Footer Sidebar Wrapper"
 msgstr ""
 
-#: inc/customizer/customizer.php:852
+#: inc/customizer/customizer.php:843
 msgid ""
 "Change the width and the background color of the Footer Sidebar content area."
 msgstr ""
 
-#: inc/customizer/customizer.php:888
+#: inc/customizer/customizer.php:879
 msgid "Footer Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:889
+#: inc/customizer/customizer.php:880
 msgid ""
 "Modify different aspects of the Footer portion of your theme. This section "
 "deals with the Footer Sidebar area as well as the main Footer area of your "
 "theme."
 msgstr ""
 
-#: inc/customizer/customizer.php:893
-msgid "Footer Container"
-msgstr ""
-
-#: inc/customizer/customizer.php:894
-msgid ""
-"This container is 100% width and wraps around or holds the Footer area of "
-"your theme."
-msgstr ""
-
-#: inc/customizer/customizer.php:900
+#: inc/customizer/customizer.php:884
 msgid "Footer Wrapper"
 msgstr ""
 
-#: inc/customizer/customizer.php:901
+#: inc/customizer/customizer.php:885
 msgid "Change the width and the background color of the Footer content area."
 msgstr ""
 
-#: inc/customizer/customizer.php:912
+#: inc/customizer/customizer.php:896
 msgid "Set Width"
 msgstr ""
 
-#: inc/customizer/customizer.php:934
+#: inc/customizer/customizer.php:918
 msgid "Footer Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:935
+#: inc/customizer/customizer.php:919
 msgid ""
 "Change the footer text of your theme and select the position in which you "
 "want it to appear. "
 msgstr ""
 
-#: inc/customizer/customizer.php:947
+#: inc/customizer/customizer.php:931
 msgid "Footer Text"
 msgstr ""
 
-#: inc/customizer/customizer.php:961
+#: inc/customizer/customizer.php:946
 msgid "Select position"
 msgstr ""
 
-#: inc/customizer/customizer.php:964
+#: inc/customizer/customizer.php:949
 msgid "Text Right - Nav Left"
 msgstr ""
 
-#: inc/customizer/customizer.php:965
+#: inc/customizer/customizer.php:950
 msgid "Text &amp; Nav Centered"
 msgstr ""
 
-#: inc/customizer/customizer.php:966
+#: inc/customizer/customizer.php:951
 msgid "Text Left - Nav Right"
 msgstr ""
 
@@ -980,6 +982,10 @@ msgstr ""
 #: search.php:19
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:14 searchform.php:17
+msgid "Search"
 msgstr ""
 
 #: single.php:21

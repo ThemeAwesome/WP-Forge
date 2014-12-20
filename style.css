@@ -1,13 +1,13 @@
 /*
 Theme Name: WP-Forge
 Theme URI: http://themeawesome.com/responsive-wordpress-theme
-Author: Thomas E. Vasquez
+Author: ThemeAwesome.com
 Author URI: http://themeawesome.com
-Description: Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
-Version: 5.5.0
+Description: WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
+Version: 5.5.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: light, gray, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Tags: light, black, white, gray, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
 Text Domain: wpforge
 GitHub Theme URI: https://github.com/tsquez/wp-forge
 GitHub Branch: master
@@ -17,8 +17,10 @@ This theme, like WordPress, is licensed under the GPL. I hope you utilize WP-For
 I update WP-Forge on a regular basis. I highly recommend joining my mailing list as well as using my child theme WP-Starter so you do not lose any edits.
 */
 
-/* =Begin WordPress styles starting with Reset
--------------------------------------------------------------- */
+
+/**
+ * 1.0 - Reset
+ */
 ins {
 	background: #fff9c0;
 	text-decoration: none;
@@ -48,12 +50,47 @@ img {
 	margin:0.5em 0;
 }
 .sticky {}
+
+/**
+ * 2.0 - Accessibility
+ */
+.says,
 .screen-reader-text {
-  display: none;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+.site .skip-link {
+	background-color: #f1f1f1;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+	color: #21759b;
+	display: block;
+	font: bold 14px/normal "Noto Sans", sans-serif;
+	left: -9999em;
+	outline: none;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	text-transform: none;
+	top: -9999em;
+}
+.logged-in .site .skip-link {
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	font: bold 14px/normal "Open Sans", sans-serif;
+}
+.site .skip-link:focus {
+	clip: auto;
+	height: auto;
+	left: 6px;
+	top: 7px;
+	width: auto;
+	z-index: 100000;
 }
 
-/* =Repeatable patterns
--------------------------------------------------------------- */
+/**
+ * 3.0 - Repeatable Patterns
+ */
 /* Small headers */
 .archive-title,
 .page-title,
@@ -75,15 +112,6 @@ select { /* Make sure select elements fit in widgets */
 	max-width: 100%;
 	padding:0.3em;
 	border:1px solid #ccc;
-}
-li.bypostauthor cite span {
-	color: #fff;
-	background-color: #21759b;
-	background-image: none;
-	border: 1px solid #1f6f93;
-	border-radius: 2px;
-	box-shadow: none;
-	padding: 0;
 }
 
 /* Responsive images */
@@ -217,6 +245,10 @@ img.wp-smiley,
 	text-align: right;
 	width: 50%;
 }
+#comment-nav-below.columns {
+	margin: 0 0 1.5rem;
+	padding: 0;
+}
 .nav-single + .comments-area,
 #comment-nav-above {
 	margin: 3rem 0;
@@ -273,9 +305,9 @@ img.wp-smiley,
 	margin-top:0;
 }
 
-/* =Basic structure
--------------------------------------------------------------- */
-/* Body, links, basics */
+/**
+ * 3.0 - Basic Structure
+ */
 body {
 	color: #444444;
 	background-color: #e6e6e6;
@@ -292,29 +324,9 @@ body {
 	max-width: 100%;
 	width: 100%;
 }
-.header_wrap,
-.content_wrap,
-.footer_wrap { /* Sets default values so when the theme is activated it looks the way it is supposed to*/
-	max-width: 64rem;
-	background-color: #ffffff;
-	width: 100%;
-}
-.the_front.nav_wrap,
-body.wp-customizer .nav_wrap {
-	background: #ffffff;
-}
-.the_front .alert-box,
-.back_end .alert-box {
-	margin-bottom: 0;
-}
-.nav_wrap {
-	background: #333333;
-	max-width: 64rem;
-}
 .content_wrap {
 	padding-top: 1.5rem;
 }
-/* Header */
 #header {
 	padding:1.5rem 0;
 }
@@ -347,8 +359,6 @@ img.header-image {/* Remove fancy borders */
 	box-shadow:none;
 	margin-bottom: 1.5rem;
 }
-
-/* Sidebar */
 .widget-area .widget {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -380,9 +390,6 @@ img.header-image {/* Remove fancy borders */
 .widget-area .textwidget li {
 	margin-left: 36px;
 }
-
-
-/* Footer */
 footer[role="contentinfo"] {
 	border-top: 4px double #ededed;
 	clear: both;
@@ -424,14 +431,14 @@ footer[role="contentinfo"] a:hover {
 footer[role="contentinfo"] p, footer[role="contentinfo"] a  {
 	font-size: 1rem;
 }
-/* Footer Sidebar */
 #secondary-sidebar {
 	padding-top: 1.5rem;
 	border-top: 1px solid #ededed;
 }
 
-/* =Main content and comment content
--------------------------------------------------------------- */
+/**
+ * 4.0 - Main content and comment content
+ */
 .entry-meta {
 	clear: both;
 }
@@ -622,8 +629,9 @@ span.pfont,
 	margin-right:0.3125rem; /* 5px */
 }
 
-/* =Archives
--------------------------------------------------------------- */
+/**
+ * 5.0 - Archives
+ */
 .archive-header,
 .page-header {
 	margin-bottom: 3rem;
@@ -637,8 +645,9 @@ span.pfont,
 	margin-top: 22px;
 }
 
-/* =Single image attachment view
--------------------------------------------------------------- */
+/**
+ * 6.0 - Single image attachment view
+ */
 .article.attachment {
 	overflow: hidden;
 }
@@ -658,8 +667,9 @@ span.pfont,
 	margin-top: 8px;
 }
 
-/* =Aside post format
--------------------------------------------------------------- */
+/**
+ * 7.0 - Post Formats
+ */
 article.format-aside h1 {
 	margin-bottom: 1.5rem;
 }
@@ -684,10 +694,6 @@ article.format-aside blockquote:last-child,
 article.format-aside p:last-child {
 	margin-bottom: 0;
 }
-
-/* =Post formats
--------------------------------------------------------------- */
-/* Image posts */
 article.format-image footer h1 {
 	font-size: 0.875rem;
 	line-height: 1.846153846;
@@ -701,8 +707,6 @@ article.format-image footer h2 {
 article.format-image footer a h2 {
 	font-weight: normal;
 }
-
-/* Link posts */
 .pformat {
 	float: left;
 	font-size: 26px;
@@ -723,8 +727,6 @@ article.format-link .entry-content a {
 	line-height: 1.090909091;
 	text-decoration: none;
 }
-
-/* Quote posts */
 article.format-quote .entry-content p {
 	margin: 0;
 	padding-bottom: 1.5rem;
@@ -737,8 +739,6 @@ article.format-quote .entry-content blockquote {
 	color: #6a6a6a;
 	background: #efefef;
 }
-
-/* Status posts */
 .format-status .entry-header {
 	margin-bottom: 2.813rem
 }
@@ -770,7 +770,9 @@ article.format-quote .entry-content blockquote {
 	border-radius: 50%;
 }
 
-/* Page links */
+/**
+ * 8.0 - Page Links
+ */
 .page-links {
 	clear: both;
 	font-weight: normal;
@@ -795,8 +797,9 @@ article.format-quote .entry-content blockquote {
 	color:#555;
 }
 
-/* =Comments
--------------------------------------------------------------- */
+/**
+ * 9.0 - Comments
+ */
 #comments ol {
 	list-style: none;
 }
@@ -869,9 +872,14 @@ article.format-quote .entry-content blockquote {
 	border: 1px solid #007cbd;
 }
 .comments-area li.bypostauthor cite span {
+	background-color: #444444;
+	background-image: none;
+	border-radius: 2px;
+	box-shadow: none;	
+	color: #ffffff;
 	position: absolute;
-	margin-left: 5px;
-	padding: 2px 5px;
+	margin:3px 0 0 5px;
+	padding: 2px 5px 1px;
 	font-size: 10px;
 }
 .reply {
@@ -897,8 +905,6 @@ p.edit-link .genericon {
 	margin:1rem 0;
 	list-style:none;
 }
-
-/* Comment form */
 #respond {
 	margin-top: 3rem;
 }
@@ -957,8 +963,9 @@ p.comment-form-email {
 	padding-right: 0;
 }
 
-/* =Front page template
--------------------------------------------------------------- */
+/**
+ * 10.0 - Front page template
+ */
 .front-image {
 	float: right;
 }
@@ -977,8 +984,9 @@ p.comment-form-email {
 	border-top: 1px solid #ededed;
 }
 
-/* =Widgets
--------------------------------------------------------------- */
+/**
+ * 11.0 - Widgets
+ */
 .widget-area .widget ul ul {
 	margin-left: 12px;
 }
@@ -1019,32 +1027,9 @@ p.comment-form-email {
 	text-align: right;
 }
 
-/* =Plugins
------------------------------------------------ */
-img#wpstats {
-	display:none;
-}
-.tiled-gallery {
-	margin-bottom:1.5rem;
-}
-.comments-area { /* Jetpack comments */
-	margin-bottom:1.5rem;
-}
-.recentcomments a { 
-	display:inline ;
-	padding:0 ;
-	margin:0 ;
-}
-div.jetpack-likes-widget-wrapper { /* Jetpack Likes Widget Wrapper */
-	height: auto;
-	display: block;
-}
-.clearing-thumbs, [data-clearing] {
-	margin-bottom: 1rem;
-}
-
-/* =TinyMCE Editor
------------------------------------------------ */
+/**
+ * 12.0 - TinyMCE Editor
+ */
 html .mceContentBody {
 	max-width: 920px;
 	margin:15px 0 0 15px;
@@ -1162,9 +1147,9 @@ html .mceContentBody ol {
 	font-size: smaller;
 }
 
-/* =Misc
------------------------------------------------ */
-/* Off-Canvas */
+/**
+ * 14.0 - Misc
+ */
 ul.off-canvas-list li, 
 ul.off-canvas-list li li, 
 ul.off-canvas-list li li li, 
@@ -1183,8 +1168,6 @@ section.tab-bar-section.middle a {
 	color:#fff;
 	font-weight:normal;
 }
-
-/* Top-Bar */
 .top-bar .name a {
 	line-height: 45px;
 	font-size: 0.8125rem; 
@@ -1196,8 +1179,6 @@ section.tab-bar-section.middle a {
 .top-bar .toggle-topbar a {
 	font-weight:normal;
 }
-
-/* Orbit */
 .orbit-bullets li {
 	cursor:pointer;
 	display:inline-block;
@@ -1205,23 +1186,14 @@ section.tab-bar-section.middle a {
 .orbit-container {
 	margin-bottom:1.714em;
 }
-
-/* Magellan */
 .entry-content > [data-magellan-expedition] {
 	margin:0 0 1.714em;
 }
 .entry-content dl.sub-nav {
 	margin:0;
 }
-
-/* bbPress */
-#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content {
-	background:#fafafa;
-}
-
-/* Back to Top */
 #backtotop {
-	background:#333;
+	background:#333333;
 	display: block;
 	position: fixed;
 	right: 1rem;
@@ -1237,82 +1209,142 @@ section.tab-bar-section.middle a {
 	text-align:center;	
 	text-transform:uppercase;
 	border-radius:3.125rem;
+	transition: color 300ms ease-out;
 }
-
-/* WordPress Social Menu */
-#menu-social {
-    text-align: left;
+#backtotop:hover {
+	background:#272727;
 }
-#menu-social ul {
-    display: block;
-    list-style: none;
-    margin: 0;
-}
-#menu-social ul li {
-    display: inline-block;
-    position: relative;
-}
-#menu-social li a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-}
-#menu-social li a::before {
-    content: '/';
-    display: inline-block;
-    padding: 0 3px;
-    font-family: 'FontAwesome';
-    font-size: 2rem;
-    vertical-align: top;
-    -webkit-font-smoothing: antialiased;
-}
-#menu-social li a[href*="facebook.com"]::before {
-	content: "\f082";
-}
-#menu-social li a[href*="twitter.com"]::before {
-	content: "\f081";
-}
-#menu-social li a[href*="dribbble.com"]::before {
-	content: "\f17d";
-}
-#menu-social li a[href*="plus.google.com"]::before {
-	content: "\f0d4";
-}
-#menu-social li a[href*="pinterest.com"]::before {
-	content: "\f0d3";
-}
-#menu-social li a[href*="github.com"]::before {
-	content: "\f092";
-}
-#menu-social li a[href*="tumblr.com"]::before {
-	content: "\f174";
-}
-#menu-social li a[href*="youtube.com"]::before {
-	content: "\f166";
-}
-#menu-social li a[href*="flickr.com"]::before {
-	content: "\f16e";
-}
-#menu-social li a[href*="vimeo.com"]::before {
-	content: "\f194";
-}
-#menu-social li a[href*="instagram.com"]::before {
-	content: "\f16d";
-}
-#menu-social li a[href*="foursquare.com"]::before {
-	content: "\f180";
-}
-#menu-social li a[href*="linkedin.com"]::before {
-	content: "\f08c";
-}   
-#menu-social li a[href*="wordpress.org"]::before, 
-#menu-social li a[href*="wordpress.com"]::before {
-    content: '\f19a'}
-
-/* =Sitemap
------------------------------------------------ */
 div.sitemap-left h5 a {
 	font-weight: bold;
+}
+
+/**
+ * 13.0 - Social Menu
+ */
+ .social_wrap {
+ 	margin: 1.5rem 0 0;
+ 	padding: 0;
+ }
+ .social-navigation a:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-family: "Genericons";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	speak: none;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	vertical-align: top;
+}
+.social-navigation {
+	position: relative;
+}
+.social-navigation ul:before,
+.social-navigation ul:after {
+	content: "";
+	display: table;
+}
+.social-navigation ul {
+	list-style: none;
+	margin: 0;
+	text-align: center;
+}
+.social-navigation li {
+	display: inline-block;
+}
+.social-navigation a {
+	display: block;
+	height: 1.5rem;
+	position: relative;
+	width: 1.8rem;
+}
+.social-navigation a:before {
+	content: "\f415";
+	font-size: 24px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.social-navigation a[href$="/feed/"]:before {
+	content: "\f413";
+}
+.social-navigation a[href*="codepen.io"]:before {
+	content: "\f216";
+}
+.social-navigation a[href*="digg.com"]:before {
+	content: "\f221";
+}
+.social-navigation a[href*="dribbble.com"]:before {
+	content: "\f201";
+}
+.social-navigation a[href*="dropbox.com"]:before {
+	content: "\f225";
+}
+.social-navigation a[href*="facebook.com"]:before {
+	content: "\f203";
+}
+.social-navigation a[href*="flickr.com"]:before {
+	content: "\f211";
+}
+.social-navigation a[href*="foursquare.com"]:before {
+	content: "\f226";
+}
+.social-navigation a[href*="plus.google.com"]:before {
+	content: "\f206";
+}
+.social-navigation a[href*="github.com"]:before {
+	content: "\f200";
+}
+.social-navigation a[href*="instagram.com"]:before {
+	content: "\f215";
+}
+.social-navigation a[href*="linkedin.com"]:before {
+	content: "\f208";
+}
+.social-navigation a[href*="pinterest.com"]:before {
+	content: "\f210";
+}
+.social-navigation a[href*="getpocket.com"]:before {
+	content: "\f224";
+}
+.social-navigation a[href*="polldaddy.com"]:before {
+	content: "\f217";
+}
+.social-navigation a[href*="reddit.com"]:before {
+	content: "\f222";
+}
+.social-navigation a[href*="stumbleupon.com"]:before {
+	content: "\f223";
+}
+.social-navigation a[href*="tumblr.com"]:before {
+	content: "\f214";
+}
+.social-navigation a[href*="twitter.com"]:before {
+	content: "\f202";
+}
+.social-navigation a[href*="vimeo.com"]:before {
+	content: "\f212";
+}
+.social-navigation a[href*="wordpress.com"]:before,
+.social-navigation a[href*="wordpress.org"]:before {
+	content: "\f205";
+}
+.social-navigation a[href*="youtube.com"]:before {
+	content: "\f213";
+}
+.social-navigation a[href*="mailto:"]:before {
+	content: "\f410";
+}
+.social-navigation a[href*="spotify.com"]:before {
+	content: "\f515";
+}
+.social-navigation a[href*="twitch.tv"]:before {
+	content: "\f516";
 }
 
 /* =Media Queries

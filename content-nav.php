@@ -4,11 +4,13 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 ?>
 
 <div class="nav_container">
+
+<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wpforge' ); ?></a>
 
     <?php if( get_theme_mod( 'wpforge_nav_position' ) == '') { ?>
         <div class="nav_wrap row">

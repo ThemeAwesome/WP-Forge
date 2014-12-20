@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 
 /*
@@ -40,10 +40,10 @@ if (post_password_required()) {
 	</ol>
 
 	<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
-	<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+	<nav id="comment-nav-below" class="large-12 medium-12 columns navigation comment-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e('Comment navigation','wpforge'); ?></h1>
-		<div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments','wpforge')); ?></div>
-		<div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;','wpforge')); ?></div>
+		<div class="nav-previous"><?php previous_comments_link(__('&laquo; Older Comments','wpforge')); ?></div>
+		<div class="nav-next"><?php next_comments_link(__('Newer Comments &raquo;','wpforge')); ?></div>
 	</nav>
 	<?php endif; // Check for comment navigation. ?>
 

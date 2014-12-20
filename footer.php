@@ -7,7 +7,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 ?>
 	</section><!-- end .content-wrap -->
@@ -18,10 +18,8 @@
     ?>
     <div class="footer_container">
     	<footer id="footer" class="footer_wrap row" role="contentinfo">
-                <?php get_template_part( 'content', 'footer' ); ?>
-    		<div class="medium-12 large-12 columns">
-            	<?php get_template_part( 'menu', 'social' ); ?>
-            </div><!-- social-menu -->   
+            <?php get_template_part( 'content', 'footer' ); ?>
+        	<?php get_template_part( 'menu', 'social' ); ?>   
     	</footer><!-- .row -->
     </div><!-- end #footer_container -->
 <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>    

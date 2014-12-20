@@ -7,25 +7,22 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 ?>
 
-<?php if ( has_nav_menu( 'social' ) ) {
-
-	wp_nav_menu(
-		array(
-			'theme_location'  => 'social',
-			'container'       => 'div',
-			'container_id'    => 'menu-social',
-			'container_class' => 'menu',
-			'menu_id'         => 'menu-social-items',
-			'menu_class'      => 'menu-items clearfix',
-			'depth'           => 1,
-			'link_before'     => '<span class="screen-reader-text">',
-			'link_after'      => '</span>',
-			'fallback_cb'     => '',
-		)
-	);
-
-} ?>
+<div class="social_wrap medium-12 large-12 columns">
+	<?php if ( has_nav_menu( 'social' ) ) : ?>
+		<nav id="social-navigation" class="social-navigation" role="navigation">
+			<?php
+				// Social links navigation menu.
+				wp_nav_menu( array(
+					'theme_location' => 'social',
+					'depth'          => 1,
+					'link_before'    => '<span class="screen-reader-text">',
+					'link_after'     => '</span>',
+				) );
+			?>
+		</nav><!-- .social-navigation -->
+	<?php endif; ?>
+</div><!-- social-menu -->

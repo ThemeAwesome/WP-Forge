@@ -1,4 +1,4 @@
-/* @since WP-Forge 5.5.0 */
+/* @since WP-Forge 5.5.0.1 */
 
 /*
  * Foundation Responsive Library
@@ -283,7 +283,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.5.0',
+    version : '5.5.0.1',
 
     media_queries : {
       'small'       : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),

@@ -1,4 +1,4 @@
-/* @since WP-Forge 5.5.0 */
+/* @since WP-Forge 5.5.0.1 */
 
 ;(function ($, window, document, undefined) {
   'use strict';
@@ -404,7 +404,7 @@
   Foundation.libs.orbit = {
     name: 'orbit',
 
-    version: '5.5.0',
+    version: '5.5.0.1',
 
     settings: {
       animation: 'slide',

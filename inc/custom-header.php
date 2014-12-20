@@ -1,12 +1,12 @@
 <?php
 /**
- * Implement an optional custom header for Twenty Twelve
+ * Implement an optional custom header for WP-Forge
  *
  * See http://codex.wordpress.org/Custom_Headers
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 
 /**
@@ -17,7 +17,7 @@
  * @uses wpforge_admin_header_style() to style wp-admin form.
  * @uses wpforge_admin_header_image() to add custom markup to wp-admin form.
  *
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 function wpforge_custom_header_setup() {
 	$args = array(
@@ -52,7 +52,7 @@ add_action( 'after_setup_theme', 'wpforge_custom_header_setup' );
  *
  * get_header_textcolor() options: 515151 is default, hide text (returns 'blank'), or any hex value.
  *
- * @since WP-Forge 5.5.0
+ * @since WP-Forge 5.5.0.1
  */
 function wpforge_header_style() {
 	$text_color = get_header_textcolor();
@@ -75,68 +75,3 @@ function wpforge_header_style() {
 </style>
 <?php
 }
-
-/**
- * Style the header image displayed on the Appearance > Header admin panel.
- *
- * @since WP-Forge 5.5.0
- */
-function wpforge_admin_header_style() {
-?>
-	<style type="text/css" id="wpforge-admin-header-css">
-	.appearance_page_custom-header #headimg {
-		border: none;
-		font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	}
-	#headimg h1, #headimg h2 {
-		margin: 0;
-	}
-	#headimg h1 {
-		font-size: 2.75rem;
-		font-weight: normal!important;
-	}
-	#headimg h1 a {
-		color: #515151;
-		text-decoration: none;
-	}
-	#headimg h1 a:hover {
-		color: #21759b !important; /* Has to override custom inline style. */
-	}
-	#headimg h2 {
-		color: #757575;
-		font-size: 1.6875rem;
-		font-weight: normal!important;
-		line-height:1;
-		margin-bottom: 24px;
-	}
-	#headimg img {
-		margin-bottom: 1.5rem;
-	}
-	</style>
-<?php
-}
-
-/**
- * Output markup to be displayed on the Appearance > Header admin panel.
- *
- * This callback overrides the default markup displayed there.
- *
- * @since WP-Forge 5.5.0
- */
-function wpforge_admin_header_image() {
-	?>
-	<div id="headimg">
-		<?php
-		if ( ! display_header_text() )
-			$style = ' style="display:none;"';
-		else
-			$style = ' style="color:#' . get_header_textcolor() . ';"';
-		?>
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-		<?php endif; ?>
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 id="desc" class="displaying-header-text"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></h2>		
-	</div>
-<?php }
