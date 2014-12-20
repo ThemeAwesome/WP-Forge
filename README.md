@@ -9,7 +9,6 @@ WP-Forge is a combination of two powerful platforms. The first being WordPress, 
 You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - You will notice that the [Viewport Resizer] (http://lab.maltewassermann.com/viewport-resizer/) from Malte Wassermann automatically loads at the top of the browser. This will allow you to test the theme against various device sizes.
 
 ###Sites Using WP-Forge###
-=============
 The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/)
 * [SixxamMusic.com] (http://sixxammusic.com/)
 * [BashoCafe.com] (http://bashocafe.com/)
