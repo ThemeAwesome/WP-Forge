@@ -1,12 +1,24 @@
-Welcome to WP-Forge v5.5.0
+Welcome to WP-Forge v5.5.0.1
 ====================
 
-###Updated 12-16-2014
+###Updated 12-20-2014
 
 WP-Forge is based off [Twenty Twelve] (http://wordpress.org/themes/twentytwelve) and is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation, the most advanced responsive front-end framework.
 
 ##WP-Forge Demo##
 You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - You will notice that the [Viewport Resizer] (http://lab.maltewassermann.com/viewport-resizer/) from Malte Wassermann automatically loads at the top of the browser. This will allow you to test the theme against various device sizes.
+
+Sites Using WP-Forge
+=============
+The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/)
+* [SixxamMusic.com] (http://sixxammusic.com/)
+* [BashoCafe.com] (http://bashocafe.com/)
+* [JamesandTillaWaters.co.uk] (http://www.jamesandtillawaters.co.uk/)
+* [Metal1.info] (http://www.metal1.info/)
+* [LiquidPlanner.com] (http://www.liquidplanner.com/home-page/)
+* [MorningCoach.com] (http://www.morningcoach.com/)
+* [UrbanPutt.com] (http://www.urbanputt.com/)
+* [RetroMetroHome.co.uk] (http://retrometrohome.co.uk/)
 
 ###Github Updater###
 Added support for Andy Fragen's [Github Updater] (https://github.com/afragen/github-updater) - Now you can update WP-Forge from within the WordPress dashboard itself. `Make sure you download and install the plugin`.
@@ -43,7 +55,7 @@ I have created a child theme for WP-Forge called [WP-Starter] (https://github.co
 ###Font-Awesome 4.2###
 Includes all 439 free icons from [Font-Awesome] (http://fontawesome.io/)
 
-###Genericons 3.2###
+###Genericons 3.3###
 Includes the free WordPress icon set [Genericons] (http://genericons.com/#wordpress)
 
 ###Yoast SEO Plugin###
@@ -51,18 +63,6 @@ Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. Th
 
 ###Additional Information###
 WP-Forge validates at 100% over at [ThemeCheck.org] (http://themecheck.org/score/wordpress_theme_wp-forge.html)
-
-Sites Using WP-Forge
-=============
-The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/)
-* [SixxamMusic.com] (http://sixxammusic.com/)
-* [BashoCafe.com] (http://bashocafe.com/)
-* [JamesandTillaWaters.co.uk] (http://www.jamesandtillawaters.co.uk/)
-* [Metal1.info] (http://www.metal1.info/)
-* [LiquidPlanner.com] (http://www.liquidplanner.com/home-page/)
-* [MorningCoach.com] (http://www.morningcoach.com/)
-* [UrbanPutt.com] (http://www.urbanputt.com/)
-* [RetroMetroHome.co.uk] (http://retrometrohome.co.uk/)
 
 Contributors
 =============
