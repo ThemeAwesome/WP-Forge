@@ -27,15 +27,15 @@ get_header(); ?>
 						<div class="large-5 medium-5 small-12 columns">
 						<input type="text" value="<?php echo esc_attr($s); ?>" id="s" name="s"/> 
 						</div>
-						<input type="submit" value="<?php esc_attr_e('Search', 'wpforge'); ?>“/>
+						<input type="submit" value="Search"/>
 						</form>
-					<h5><b><?php _e( 'Contact Us', 'wpforge' ); ?></b></h5>
-					<p><?php _e( 'If you are absolutely, positivly certain it was supposed to be here and just can&rsquo;t seem to find it,', 'wpforge' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><?php _e( 'please let us know.', 'wpforge' ); ?></a> <?php _e( 'We would be more than happy to look into the matter for you and let you know what happened.', 'wpforge' ); ?></p>
+					<h5><b>Contact Us</b></h5>
+					<p><?php _e( 'If you are absolutely, positivly certain it was supposed to be here and just can&rsquo;t seem to find it,', 'wpforge' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact">please let us know.</a> We would be more than happy to look into the matter for you and let you know what happened.</p>
 					<h5><b><?php _e( 'Why not try something new?', 'wpforge' ); ?></b></h5>
 					<p><?php _e( 'Even though you couldn&rsquo;t find a particular item on our site, we do have other great stuff to look at. Maybe we can interest you in some of our other exciting content. Below is a list of our newest posts. ', 'wpforge' ); ?></p>
   					<ul>
 						<?php
-							$recent_posts = wp_get_recent_posts(array('post_status' => 'publish'));
+							$recent_posts = wp_get_recent_posts();
 							foreach( $recent_posts as $recent ){
 								echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
 							}

@@ -3943,7 +3943,7 @@ blockquote p {
     border-top-right-radius: 1000px; }
 
 .reveal-modal-bg {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge v5.5.0.1\n"
-"POT-Creation-Date: 2014-12-21 16:02-0700\n"
-"PO-Revision-Date: 2014-12-21 16:03-0700\n"
+"Project-Id-Version: WP-Forge 5.5.0.1\n"
+"POT-Creation-Date: 2014-12-20 07:32-0700\n"
+"PO-Revision-Date: 2014-12-20 07:33-0700\n"
 "Last-Translator: ThemeAwesome <tsquez@gmail.com>\n"
 "Language-Team: ThemeAwesome <tsquez@gmail.com>\n"
 "Language: en_US\n"
@@ -39,28 +39,10 @@ msgid ""
 "again, only this time keep your fingers crossed!"
 msgstr ""
 
-#: 404.php:30 searchform.php:14 searchform.php:17
-msgid "Search"
-msgstr ""
-
-#: 404.php:32
-msgid "Contact Us"
-msgstr ""
-
 #: 404.php:33
 msgid ""
 "If you are absolutely, positivly certain it was supposed to be here and just "
 "can&rsquo;t seem to find it,"
-msgstr ""
-
-#: 404.php:33
-msgid "please let us know."
-msgstr ""
-
-#: 404.php:33
-msgid ""
-"We would be more than happy to look into the matter for you and let you know "
-"what happened."
 msgstr ""
 
 #: 404.php:34
@@ -245,7 +227,7 @@ msgstr ""
 #: content-aside.php:19 content-audio.php:19 content-chat.php:27
 #: content-gallery.php:27 content-image.php:18 content-link.php:18
 #: content-quote.php:18 content-status.php:18 content-video.php:19
-#: content.php:29 functions.php:608
+#: content.php:29 functions.php:638
 msgid "Edit"
 msgstr ""
 
@@ -338,99 +320,104 @@ msgstr ""
 msgid "Edit Page"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:103
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:104
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:105
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:345
+#: functions.php:208
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:375
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:347
+#: functions.php:377
 msgid "Displays widgets in the blog area as well as pages."
 msgstr ""
 
-#: functions.php:354
+#: functions.php:384
 msgid "First Front Page Widget Area"
 msgstr ""
 
-#: functions.php:356 functions.php:365
+#: functions.php:386 functions.php:395
 msgid ""
 "Appears when using the optional Front Page template with a page set as "
 "Static Front Page"
 msgstr ""
 
-#: functions.php:363
+#: functions.php:393
 msgid "Second Front Page Widget Area"
 msgstr ""
 
-#: functions.php:372
+#: functions.php:402
 msgid "First Footer Widget Area"
 msgstr ""
 
-#: functions.php:374 functions.php:383 functions.php:392
+#: functions.php:404 functions.php:413 functions.php:422
 msgid "An optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:381
+#: functions.php:411
 msgid "Second Footer Widget Area"
 msgstr ""
 
-#: functions.php:390
+#: functions.php:420
 msgid "Third Footer Widget Area"
 msgstr ""
 
-#: functions.php:544
+#: functions.php:574
 msgid "Post navigation"
 msgstr ""
 
-#: functions.php:545
+#: functions.php:575
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: functions.php:546
+#: functions.php:576
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: functions.php:571
+#: functions.php:601
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:571
+#: functions.php:601
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:586
+#: functions.php:616
 msgid "Post Author"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: functions.php:592
+#: functions.php:622
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:598
+#: functions.php:628
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:606
+#: functions.php:636
 msgid "<span class=\"genericon genericon-reply\"></span> Reply"
 msgstr ""
 
-#: functions.php:626 functions.php:668
+#: functions.php:656 functions.php:698
 msgid ", "
 msgstr ""
 
-#: functions.php:644
+#: functions.php:674
 msgid "Sticky"
 msgstr ""
 
@@ -995,6 +982,10 @@ msgstr ""
 #: search.php:19
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:14 searchform.php:17
+msgid "Search"
 msgstr ""
 
 #: single.php:21
