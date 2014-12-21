@@ -25,9 +25,9 @@ get_header(); ?>
 						<form style="display:inline;" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<div class="row collapse">
 						<div class="large-5 medium-5 small-12 columns">
-						<input type="text" value="<?php echo esc_attr($s); ?>" id="s" name="s"/> 
+						<input type="text" value="<?php echo esc_attr($s); ?>" id="s" name="s" /> 
 						</div>
-						<input type="submit" value="<?php esc_attr_e('Search', 'wpforge'); ?>“/>
+						<input type="submit" value="<?php esc_attr_e('Search', 'wpforge'); ?>" />
 						</form>
 					<h5><b><?php _e( 'Contact Us', 'wpforge' ); ?></b></h5>
 					<p><?php _e( 'If you are absolutely, positivly certain it was supposed to be here and just can&rsquo;t seem to find it,', 'wpforge' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><?php _e( 'please let us know.', 'wpforge' ); ?></a> <?php _e( 'We would be more than happy to look into the matter for you and let you know what happened.', 'wpforge' ); ?></p>
