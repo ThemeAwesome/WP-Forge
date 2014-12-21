@@ -25,7 +25,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
-				<h4><?php
+				<h4 class="archive-title"><?php
 					if ( is_day() ) :
 						printf( __( 'Daily Archives: %s', 'wpforge' ), '<span>' . get_the_date() . '</span>' );
 					elseif ( is_month() ) :

@@ -19,7 +19,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
-				<h4><?php printf( __( 'Category Archives: %s', 'wpforge' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h4>
+				<h4 class="archive-title"><?php printf( __( 'Category Archives: %s', 'wpforge' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h4>
 
 			<?php if ( category_description() ) : // Show an optional category description ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
