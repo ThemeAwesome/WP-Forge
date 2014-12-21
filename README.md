@@ -66,10 +66,11 @@ WP-Forge validates at 100% over at [ThemeCheck.org] (http://themecheck.org/score
 Contributors
 =============
 The following individuals have contributed to WP-Forge
-* [Felipe Trombini] (http://www.felipetrombini.com.br/) for Portuguese localization
-* [Christopher Anderton] (https://github.com/Deluxive) for Swedish localization
-* [Andriy] (https://github.com/helirexi) for Russian localization
-* [Alfonso Correas] (http://www.cor-ser.com/) for Spanish localization
+* [Thomas Meyer] (http://www.dreihochzwo.de/) for German translation files
+* [Felipe Trombini] (http://www.felipetrombini.com.br/) for Portuguese translation files
+* [Christopher Anderton] (https://github.com/Deluxive) for Swedish translation files
+* [Andriy] (https://github.com/helirexi) for Russian translation files
+* [Alfonso Correas] (http://www.cor-ser.com/) for Spanish translation files
 
 #####If you would like to provide a language translation for WP-Forge, please contact me via ThemeAwesome.com#####
 
