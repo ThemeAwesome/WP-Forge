@@ -81,6 +81,7 @@ $wp_customize->add_panel( 'header', array(
 		'settings' => 'header_color',
 	)));
 
+
 // Background Image Panel
 $wp_customize->add_panel( 'background', array(
   'priority'       => 20,
@@ -236,11 +237,45 @@ $wp_customize->add_panel( 'navigation', array(
 	    'title'          => __('Colors Section', 'wpforge'),
 	    'description'    => __('The default Colors section of the WordPress Customizer.', 'wpforge'),
 	));
+  // Header Link Colors Section
+  $wp_customize->add_section('site_title_colors', array(
+    'title' => __('Header Link Colors', 'wpforge'),
+    'description' => __('Change the link and hover colors of the Site Title section of your theme.', 'wpforge'),
+    'priority' => 50,
+    'panel' => 'colors_panel',
+  ));
+  // Site Title Link Color  
+  $wp_customize->add_setting('site_title_link_color', array(
+    'default' => '#444444',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 55,    
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'site_title_link_color',array(
+    'label' => __('Site Title Link Color', 'wpforge'),
+    'section' => 'site_title_colors',
+    'settings' => 'site_title_link_color',
+  )));
+  // Site Title Hover Color  
+  $wp_customize->add_setting('site_title_hover_color', array(
+    'default' => '#0078a0',
+    'type' => 'theme_mod',
+    'capability' => 'manage_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 60,    
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'site_title_hover_color',array(
+    'label' => __('Site Title Hover Color', 'wpforge'),
+    'section' => 'site_title_colors',
+    'settings' => 'site_title_hover_color',
+  )));
     // Top-Bar Colors Section
   $wp_customize->add_section('top_bar_colors', array(
     'title' => __('Top-Bar Colors', 'wpforge'),
     'description' => __('Change the overall color, link, hover and active colors in the Top-Bar portion of your theme.', 'wpforge'),
-    'priority' => 50,
+    'priority' => 55,
     'panel' => 'colors_panel',
   ));
   // Top-Bar Main Color  
@@ -333,7 +368,7 @@ $wp_customize->add_panel( 'navigation', array(
   )));
   // Content Link Color  
   $wp_customize->add_setting('content_link_color', array(
-    'default' => '#0079a1',
+    'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'manage_options',
@@ -347,7 +382,7 @@ $wp_customize->add_panel( 'navigation', array(
   )));
   // Content Link Hover Color  
   $wp_customize->add_setting('content_hover_color', array(
-    'default' => '#008cba',
+    'default' => '#272727',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -368,7 +403,7 @@ $wp_customize->add_panel( 'navigation', array(
   ));
   // Pagination Current Color  
   $wp_customize->add_setting('pagination_current_color', array(
-    'default' => '#008cba',
+    'default' => '#272727',
     'type' => 'theme_mod',   
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -469,7 +504,7 @@ $wp_customize->add_panel( 'navigation', array(
   )));
   // Widget Link Color   
   $wp_customize->add_setting('widget_link_color', array(
-    'default' => '#008cba',
+    'default' => '#272727',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'manage_options',
@@ -483,7 +518,7 @@ $wp_customize->add_panel( 'navigation', array(
   )));
   // Widget Link Hover Color   
   $wp_customize->add_setting('widget_link_hover_color', array(
-    'default' => '#0078a0',
+    'default' => '#272727',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -531,7 +566,7 @@ $wp_customize->add_panel( 'navigation', array(
   )));
   // Footer Sidebar Widget Link Color   
   $wp_customize->add_setting('footer_widget_link_color', array(
-    'default' => '#008cba',
+    'default' => '#272727',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'manage_options',
@@ -545,7 +580,7 @@ $wp_customize->add_panel( 'navigation', array(
   )));
   // Footer Sidebar Widget Link Hover Color   
   $wp_customize->add_setting('footer_widget_link_hover_color', array(
-    'default' => '#0078a0',
+    'default' => '#272727',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -594,7 +629,7 @@ $wp_customize->add_panel( 'navigation', array(
   )));
   // Footer Hover Color   
   $wp_customize->add_setting('footer_hover_color', array(
-    'default' => '#0078a0',
+    'default' => '#272727',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -614,8 +649,9 @@ $wp_customize->add_panel( 'navigation', array(
   ));
   // Button Color   
   $wp_customize->add_setting('button_color', array(
-    'default' => '#008cba',
+    'default' => '#272727',
     'type' => 'theme_mod',
+    'transport' => 'postMessage',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
     'priority' => 10,   
@@ -627,8 +663,9 @@ $wp_customize->add_panel( 'navigation', array(
   )));
     // Button Border Color   
   $wp_customize->add_setting('button_border_color', array(
-    'default' => '#008cba',
+    'default' => '#272727',
     'type' => 'theme_mod',
+    'transport' => 'postMessage',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
     'priority' => 20,   
@@ -640,7 +677,7 @@ $wp_customize->add_panel( 'navigation', array(
   )));
   // Button Hover Color   
   $wp_customize->add_setting('button_hover_color', array(
-    'default' => '#007095',
+    'default' => '#272727',
     'type' => 'theme_mod',
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
@@ -655,6 +692,7 @@ $wp_customize->add_panel( 'navigation', array(
   $wp_customize->add_setting('button_font_color', array(
     'default' => '#ffffff',
     'type' => 'theme_mod',
+    'transport' => 'postMessage',    
     'capability' => 'manage_options',
     'sanitize_callback' => 'sanitize_hex_color',
     'priority' => 40,   
@@ -1086,6 +1124,7 @@ $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 $wp_customize->get_setting( 'wpforge_nav_text' )->transport = 'postMessage';
+$wp_customize->get_setting( 'site_title_link_color' )->transport = 'postMessage';
 $wp_customize->get_setting( 'top_bar_main_color' )->transport = 'postMessage';
 $wp_customize->get_setting( 'content_color' )->transport = 'postMessage';
 $wp_customize->get_setting( 'content_font_color' )->transport = 'postMessage';
@@ -1099,6 +1138,9 @@ $wp_customize->get_setting( 'footer_widget_title_color' )->transport = 'postMess
 $wp_customize->get_setting( 'footer_widget_link_color' )->transport = 'postMessage';
 $wp_customize->get_setting( 'footer_text_color' )->transport = 'postMessage';
 $wp_customize->get_setting( 'footer_link_color' )->transport = 'postMessage';
+$wp_customize->get_setting( 'button_color' )->transport = 'postMessage';
+$wp_customize->get_setting( 'button_border_color' )->transport = 'postMessage';
+$wp_customize->get_setting( 'button_font_color' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'wpforge_customize_register' );
 
@@ -1114,7 +1156,7 @@ function wpforge_customize_css()
 {
     ?>
 <style type="text/css" id="wpforge-customizer-css">
-  .header_wrap {max-width:<?php echo get_theme_mod('header_width','64rem'); ?>;background-color:<?php echo get_theme_mod('header_color','#ffffff'); ?>;width:100%;}.nav_wrap {max-width:<?php echo get_theme_mod('nav_width','64rem'); ?>;background-color:<?php echo get_theme_mod('nav_wrap_main_color','#333333'); ?>;width:100%;}.top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button),.top-bar-section ul li:hover:not(.has-form) > a,.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_main_color','#333333'); ?>;}.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {border-right: solid 1px <?php echo get_theme_mod('top_bar_divider_color','#4e4e4e'); ?>;}.top-bar-section li:not(.has-form) a:not(.button):hover,.top-bar .name:hover,.top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_hover_color','#272727'); ?>;}.top-bar-section li.active:not(.has-form) a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_active_color','#008cba'); ?>;}.top-bar-section li.active:not(.has-form) a:not(.button):hover {background-color:<?php echo get_theme_mod('top_bar_active_hover_color','#0078a0'); ?>;}.content_wrap {max-width:<?php echo get_theme_mod('content_width','64rem'); ?>; background-color:<?php echo get_theme_mod('content_color','#ffffff'); ?>;width:100%;}#content,#content h1,#content h2,#content h3,#content h4,#content h5,#content h6 {color:<?php echo get_theme_mod('content_font_color','#444444'); ?>;}#content a {color:<?php echo get_theme_mod('content_link_color','#444444'); ?>;}#content a:hover {color:<?php echo get_theme_mod('content_hover_color','#008cba'); ?>;}#content ul.pagination li.current a,#content ul.pagination li.current button,#content ul.pagination li.current a:hover,#content ul.pagination li.current a:focus,#content ul.pagination li.current button:hover,#content ul.pagination li.current button:focus,#content .page-links a {background-color:<?php echo get_theme_mod('pagination_current_color','#444444'); ?>;color:<?php echo get_theme_mod('pagination_current_font_color','#ffffff'); ?>;}#content ul.pagination li a, #content ul.pagination li button {color:<?php echo get_theme_mod('pagination_link_color','#999999'); ?>;}#content ul.pagination li:hover a,#content ul.pagination li a:focus,#content ul.pagination li:hover button,#content ul.pagination li button:focus {color:<?php echo get_theme_mod('pagination_link_hover_color','#999999'); ?>;background-color:<?php echo get_theme_mod('pagination_hover_color','#e6e6e6'); ?>;}.sidebar_wrap {max-width:<?php echo get_theme_mod('footer_sidebar_width','64rem'); ?>;background-color:<?php echo get_theme_mod('footer_sidebar_color','#ffffff'); ?>;width:100%;}#content.columns {float:<?php echo get_theme_mod('wpforge_content_position','left'); ?>!important;}#secondary .widget-title {color:<?php echo get_theme_mod('widget_title_color','#444444'); ?>;}#secondary {color:<?php echo get_theme_mod('widget_text_color','#444444'); ?>}#secondary a {color:<?php echo get_theme_mod('widget_link_color','#444444'); ?>;}#secondary a:hover {color:<?php echo get_theme_mod('widget_link_hover_color','#0078a0'); ?>;}.footer_wrap {max-width:<?php echo get_theme_mod('footer_content_width','64rem'); ?>; background-color:<?php echo get_theme_mod('footer_content_color','#ffffff'); ?>;width:100%}#secondary-sidebar .widget-title {color:<?php echo get_theme_mod('footer_widget_title_color','#444444'); ?>;}#secondary-sidebar {color:<?php echo get_theme_mod('footer_widget_text_color','#444444'); ?>;}#secondary-sidebar a {color:<?php echo get_theme_mod('footer_widget_link_color','#444444'); ?>;}#secondary-sidebar a:hover {color:<?php echo get_theme_mod('footer_widget_link_hover_color','#0078a0'); ?>;}footer[role="contentinfo"] p {color:<?php echo get_theme_mod('footer_text_color','#444444'); ?>;}footer[role="contentinfo"] a {color:<?php echo get_theme_mod('footer_link_color','#444444'); ?>;}footer[role="contentinfo"] a:hover {color:<?php echo get_theme_mod('footer_hover_color','#0078a0'); ?>;}button, .button {background-color:<?php echo get_theme_mod('button_color','#333333'); ?>;}button,.button,#content a.button {border-color:<?php echo get_theme_mod('button_border_color','#333333'); ?>;}button,.button,#content a.button {color:<?php echo get_theme_mod('button_font_color','#ffffff'); ?>;}button:hover,button:focus,.button:hover,.button:focus {background-color:<?php echo get_theme_mod('button_hover_color','#272727'); ?>;}button:hover,button:focus,.button:hover,.button:focus {color:<?php echo get_theme_mod('button_font_hover_color','#ffffff'); ?>;}
+  .header_wrap {max-width:<?php echo get_theme_mod('header_width','64rem'); ?>;background-color:<?php echo get_theme_mod('header_color','#ffffff'); ?>;width:100%;}.header-info h1 a {color:<?php echo get_theme_mod('site_title_link_color','#444444'); ?>;}.header-info a:hover {color:<?php echo get_theme_mod('site_title_hover_color','#0078a0'); ?>;}.nav_wrap {max-width:<?php echo get_theme_mod('nav_width','64rem'); ?>;background-color:<?php echo get_theme_mod('nav_wrap_main_color','#333333'); ?>;width:100%;}.top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button),.top-bar-section ul li:hover:not(.has-form) > a,.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_main_color','#333333'); ?>;}.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {border-right: solid 1px <?php echo get_theme_mod('top_bar_divider_color','#4e4e4e'); ?>;}.top-bar-section li:not(.has-form) a:not(.button):hover,.top-bar .name:hover,.top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_hover_color','#272727'); ?>;}.top-bar-section li.active:not(.has-form) a:not(.button) {background-color:<?php echo get_theme_mod('top_bar_active_color','#008cba'); ?>;}.top-bar-section li.active:not(.has-form) a:not(.button):hover {background-color:<?php echo get_theme_mod('top_bar_active_hover_color','#0078a0'); ?>;}.content_wrap {max-width:<?php echo get_theme_mod('content_width','64rem'); ?>; background-color:<?php echo get_theme_mod('content_color','#ffffff'); ?>;width:100%;}#content,#content h1,#content h2,#content h3,#content h4,#content h5,#content h6 {color:<?php echo get_theme_mod('content_font_color','#444444'); ?>;}#content a {color:<?php echo get_theme_mod('content_link_color','#444444'); ?>;}#content a:hover {color:<?php echo get_theme_mod('content_hover_color','#272727'); ?>;}#content ul.pagination li.current a,#content ul.pagination li.current button,#content ul.pagination li.current a:hover,#content ul.pagination li.current a:focus,#content ul.pagination li.current button:hover,#content ul.pagination li.current button:focus,#content .page-links a {background-color:<?php echo get_theme_mod('pagination_current_color','#444444'); ?>;color:<?php echo get_theme_mod('pagination_current_font_color','#ffffff'); ?>;}#content ul.pagination li a, #content ul.pagination li button {color:<?php echo get_theme_mod('pagination_link_color','#999999'); ?>;}#content ul.pagination li:hover a,#content ul.pagination li a:focus,#content ul.pagination li:hover button,#content ul.pagination li button:focus {color:<?php echo get_theme_mod('pagination_link_hover_color','#999999'); ?>;background-color:<?php echo get_theme_mod('pagination_hover_color','#e6e6e6'); ?>;}.sidebar_wrap {max-width:<?php echo get_theme_mod('footer_sidebar_width','64rem'); ?>;background-color:<?php echo get_theme_mod('footer_sidebar_color','#ffffff'); ?>;width:100%;}#content.columns {float:<?php echo get_theme_mod('wpforge_content_position','left'); ?>!important;}#secondary .widget-title {color:<?php echo get_theme_mod('widget_title_color','#444444'); ?>;}#secondary {color:<?php echo get_theme_mod('widget_text_color','#444444'); ?>}#secondary a {color:<?php echo get_theme_mod('widget_link_color','#444444'); ?>;}#secondary a:hover {color:<?php echo get_theme_mod('widget_link_hover_color','#272727'); ?>;}.footer_wrap {max-width:<?php echo get_theme_mod('footer_content_width','64rem'); ?>; background-color:<?php echo get_theme_mod('footer_content_color','#ffffff'); ?>;width:100%}#secondary-sidebar .widget-title {color:<?php echo get_theme_mod('footer_widget_title_color','#444444'); ?>;}#secondary-sidebar {color:<?php echo get_theme_mod('footer_widget_text_color','#444444'); ?>;}#secondary-sidebar a {color:<?php echo get_theme_mod('footer_widget_link_color','#444444'); ?>;}#secondary-sidebar a:hover {color:<?php echo get_theme_mod('footer_widget_link_hover_color','#272727'); ?>;}footer[role="contentinfo"] p {color:<?php echo get_theme_mod('footer_text_color','#444444'); ?>;}footer[role="contentinfo"] a {color:<?php echo get_theme_mod('footer_link_color','#444444'); ?>;}footer[role="contentinfo"] a:hover {color:<?php echo get_theme_mod('footer_hover_color','#272727'); ?>;}button, .button {background-color:<?php echo get_theme_mod('button_color','#333333'); ?>;}button,.button,#content a.button {border-color:<?php echo get_theme_mod('button_border_color','#333333'); ?>;}button,.button,#content a.button {color:<?php echo get_theme_mod('button_font_color','#ffffff'); ?>;}button:hover,button:focus,.button:hover,.button:focus {background-color:<?php echo get_theme_mod('button_hover_color','#272727'); ?>;}button:hover,button:focus,.button:hover,.button:focus {color:<?php echo get_theme_mod('button_font_hover_color','#ffffff'); ?>;}
 </style>
     <?php
 }
