@@ -148,6 +148,13 @@ if ( ! function_exists( 'wpforge_scripts_styles' ) ) {
 		wp_register_script ( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '5.4', true );
 		wp_register_script ( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '5.4', true );
 		
+		/**
+		 * Make the "Back" string in Foudation mobile menu translatable 
+		 * @see http://codex.wordpress.org/Function_Reference/wp_localize_script
+		 * @author Thomas Meyer - https://github.com/tmconnect
+		 *
+		 * @since WP-Forge 5.5.0.1
+		 */
 		$translation_array = array( 'nav_back' => __( 'Back', 'wpforge' ) );
 		wp_localize_script( 'foundation-js', 'foundation_strings', $translation_array );
 		
