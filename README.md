@@ -27,7 +27,7 @@ If you need help with implementation or if you run into issues, you can post you
 
 ###WP-Forge was built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
-* [WP-Test](http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integioty of themes and plugins. Developed by [Michael Novotny](http://manovotny.com/)
+* [WP-Test](http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integrity of themes and plugins. Developed by [Michael Novotny](http://manovotny.com/)
 * [Theme Unit Test] (http://codex.wordpress.org/Theme_Unit_Test) - Similar to WP-Test. A set of test data created by the WordPress Theme Review Team
 * [Debug Bar](http://wordpress.org/plugins/debug-bar/) - a debugging menu added to the admin bar that quickly shows query, cache, and other helpful debugging information.
 * [Log Depreceated Notices](http://wordpress.org/plugins/log-deprecated-notices/) - a plugin that helps you identify old WordPress API functions a theme or plugin is currently using so you can update to the newer methods.
