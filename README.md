@@ -6,10 +6,11 @@ Welcome to WP-Forge v5.5.0.1
 WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
 
 ##WP-Forge Demo##
-You can see a demo of WP-Forge here: http://wpforge.themeawesome.com/ - You will notice that the [Viewport Resizer] (http://lab.maltewassermann.com/viewport-resizer/) from Malte Wassermann automatically loads at the top of the browser. This will allow you to test the theme against various device sizes.
+You can see a demo of WP-Forge here: http://themeawesome.com/themes/wpforge/
 
 ###Sites Using WP-Forge###
-The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/)
+The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
+* [Motley Crue] (http://www.motley.com/)
 * [SixxamMusic.com] (http://sixxammusic.com/)
 * [BashoCafe.com] (http://bashocafe.com/)
 * [JamesandTillaWaters.co.uk] (http://www.jamesandtillawaters.co.uk/)
