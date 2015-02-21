@@ -10,7 +10,7 @@ You can see a demo of WP-Forge here: http://themeawesome.com/themes/wpforge/
 
 ###Sites Using WP-Forge###
 The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
-* [Motley Crue] (http://www.motley.com/)
+* [Motley.com (Motley Crue)] (http://www.motley.com/)
 * [SixxamMusic.com] (http://sixxammusic.com/)
 * [BashoCafe.com] (http://bashocafe.com/)
 * [JamesandTillaWaters.co.uk] (http://www.jamesandtillawaters.co.uk/)
