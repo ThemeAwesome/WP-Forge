@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0.1
+ * @since WP-Forge 5.5.1.7
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h3><?php printf( __( 'Search Results for: %s', 'wpforge' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
+				<h3><?php printf( __( 'Search Results for: %s', 'wp-forge' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
 			</header>
 
 			<?php /* Start the Loop */ ?>

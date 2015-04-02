@@ -1,7 +1,7 @@
-Welcome to WP-Forge v5.5.0.1
+Welcome to WP-Forge v5.5.1.7
 ====================
 
-###Updated 12-20-2014
+###Updated 03-28-2015
 
 WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
 
@@ -20,11 +20,8 @@ The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-
 * [UrbanPutt.com] (http://www.urbanputt.com/)
 * [RetroMetroHome.co.uk] (http://retrometrohome.co.uk/)
 
-###Github Updater###
-Added support for Andy Fragen's [Github Updater] (https://github.com/afragen/github-updater) - Now you can update WP-Forge from within the WordPress dashboard itself. `Make sure you download and install the plugin`.
-
 ##WP-Forge Support##
-If you need help with implementation or if you run into issues, you can post your questions/issues here [WP-Forge Issues] (https://github.com/tsquez/wp-forge/issues)
+If you need help with implementation or if you run into issues, you can post your questions/issues here [WP-Forge Support] (https://wordpress.org/support/theme/wp-forge)
 
 ###WP-Forge was built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
@@ -51,9 +48,6 @@ WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in t
 
 ###Child Theme###
 I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
-
-###Font-Awesome 4.2###
-Includes all 439 free icons from [Font-Awesome] (http://fontawesome.io/)
 
 ###Genericons 3.3###
 Includes the free WordPress icon set [Genericons] (http://genericons.com/#wordpress)
@@ -94,7 +88,3 @@ This means WP-Forge is completely free to use and modify as you see fit. I hope 
 ThemeAwesome.com
 =============
 WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on Responsive WordPress theme development.
-
-FoundationThemes.co
-=============
-[FoundationThemes.co](http://foundationthemes.co/) is a website focused on developing Responsive WordPress child themes for WP-Forge - Currently still in development. Make sure to visit and enter your email address to be notified when the site launches.

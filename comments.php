@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0.1
+ * @since WP-Forge 5.5.1.7
  */
 
 /*
@@ -24,7 +24,7 @@ if (post_password_required()) {
 
 	<h2 class="comments-title">
 		<?php
-			printf( _n('One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(),'wpforge'),
+			printf( _n('One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(),'wp-forge'),
 				number_format_i18n(get_comments_number()),get_the_title());
 		?>
 	</h2>
@@ -41,14 +41,14 @@ if (post_password_required()) {
 
 	<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
 	<nav id="comment-nav-below" class="large-12 medium-12 columns navigation comment-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e('Comment navigation','wpforge'); ?></h1>
-		<div class="nav-previous"><?php previous_comments_link(__('&laquo; Older Comments','wpforge')); ?></div>
-		<div class="nav-next"><?php next_comments_link(__('Newer Comments &raquo;','wpforge')); ?></div>
+		<h1 class="screen-reader-text"><?php _e('Comment navigation','wp-forge'); ?></h1>
+		<div class="nav-previous"><?php previous_comments_link(__('&laquo; Older Comments','wp-forge')); ?></div>
+		<div class="nav-next"><?php next_comments_link(__('Newer Comments &raquo;','wp-forge')); ?></div>
 	</nav>
 	<?php endif; // Check for comment navigation. ?>
 
 	<?php if (! comments_open()) : ?>
-	<p class="no-comments"><?php _e('Comments are closed.','wpforge'); ?></p>
+	<p class="no-comments"><?php _e('Comments are closed.','wp-forge'); ?></p>
 	<?php endif; ?>
 
 	<?php endif; // have_comments() ?>
@@ -64,12 +64,12 @@ if (post_password_required()) {
 		   		$comments_args = array(
 			  'id_form'           => 'commentform',
 			  'id_submit'         => 'submit',
-			  'title_reply'       => __( 'Leave a Reply', 'wpforge' ),
-			  'title_reply_to'    => __( 'Leave a Reply to %s', 'wpforge' ),
-			  'cancel_reply_link' => __( 'Cancel Reply', 'wpforge' ),
-			  'label_submit'      => __( 'Post Comment', 'wpforge' ),
+			  'title_reply'       => __( 'Leave a Reply', 'wp-forge' ),
+			  'title_reply_to'    => __( 'Leave a Reply to %s', 'wp-forge' ),
+			  'cancel_reply_link' => __( 'Cancel Reply', 'wp-forge' ),
+			  'label_submit'      => __( 'Post Comment', 'wp-forge' ),
 
-			  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'wpforge' ) .
+			  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'wp-forge' ) .
 			    '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
 			    '</textarea></p>',
 
@@ -88,7 +88,7 @@ if (post_password_required()) {
 			    ) . '</p>',
 
 			  'comment_notes_before' => '<p class="comment-notes">' .
-			    __( 'Your email address will not be published.', 'wpforge' ) . ( $req ? $required_text : '' ) . '</p>',
+			    __( 'Your email address will not be published.', 'wp-forge' ) . ( $req ? $required_text : '' ) . '</p>',
 
 			  'comment_notes_after' => '<p class="form-allowed-tags">' .
 			    sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
@@ -108,7 +108,7 @@ if (post_password_required()) {
 
 			    'url' =>
 			      '<p class="comment-form-url"><label for="url">' .
-			      __( 'Your Website', 'wpforge' ) . '</label>' .
+			      __( 'Your Website', 'wp-forge' ) . '</label>' .
 			      '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
 			      '" size="30" /></p>'
 			    )

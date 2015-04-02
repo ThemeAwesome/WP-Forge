@@ -3,7 +3,7 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  * Things like site title, description, and background color changes.
- * @since WP-Forge 5.5.0.1
+ * @since WP-Forge 5.5.1.7
  */
 
 ( function( $ ) {	
@@ -17,34 +17,16 @@
 		value.bind( function( to ) {
 			$( '.site-description' ).text( to );
 		} );
-	} );
-
-	// Header text color
-	wp.customize( 'header_textcolor', function( value ) {
-		value.bind( function( to ) {
-			if ( 'blank' === to ) {
-				$( '.site-title, .site-title a, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
-				} );
-			} else {
-				$( '.site-title, .site-title a, .site-description' ).css( {
-					'clip': 'auto',
-					'color': to,
-					'position': 'relative'
-				} );
-			}
-		} );
-	} );
+	} );	
 
 	// Header Container Background Color
-	wp.customize('header_background_color',function( value ) {
+	wp.customize('header_container_background_color',function( value ) {
         value.bind(function(to) {
             $('.header_container').css('background-color', to ? to : '' );
         });
     });
 
-	// Header Content Background Color
+	// Header Wrap Background Color
 	wp.customize('header_color',function( value ) {
         value.bind(function(to) {
             $('.header_wrap').css('background-color', to ? to : '' );
@@ -58,6 +40,30 @@
         });
     });
 
+    // Site Description Color
+	wp.customize('header_textcolor',function( value ) {
+        value.bind(function(to) {
+            $('.header-info h2').css('color', to ? to : '' );
+        });
+    });
+
+	// Header Text Display
+	wp.customize( 'header_textcolor', function( value ) {
+		value.bind( function( to ) {
+			if ( 'blank' === to ) {
+				$( '.site-title, .site-title a, .site-description' ).css( {
+					'clip': 'rect(1px, 1px, 1px, 1px)',
+					'position': 'absolute'
+				} );
+			} else {
+				$( '.site-title, .site-title a, .site-description' ).css( {
+					'clip': 'auto',
+					'position': 'relative'
+				} );
+			}
+		} );
+	} );       
+
 	// Top-Bar Home Link Text
 	wp.customize('wpforge_nav_text', function(value) {
 		value.bind(function(to) {
@@ -69,7 +75,7 @@
         value.bind(function(to) {
             $('.top-bar, .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li:hover:not(.has-form) > a, .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button)').css('background-color', to ? to : '' );
         });
-    });
+    });   
 
 	// Hook into background color/image change and adjust body class value as needed.
 	wp.customize( 'background_color', function( value ) {
@@ -98,14 +104,14 @@
 	} );
 
 	// Nav Container Background Color
-	wp.customize('nav_background_color',function( value ) {
+	wp.customize('nav_container_background_color',function( value ) {
         value.bind(function(to) {
             $('.nav_container').css('background-color', to ? to : '' );
         });
     });
 
 	// Content Container Background Color
-	wp.customize('content_background_color',function( value ) {
+	wp.customize('content_container_background_color',function( value ) {
         value.bind(function(to) {
             $('.content_container').css('background-color', to ? to : '' );
         });
@@ -130,7 +136,7 @@
         });
     });
 	// Footer Sidebar Container Background Color
-	wp.customize('footer_sidebar_container',function( value ) {
+	wp.customize('footer_sidebar_container_background_color',function( value ) {
         value.bind(function(to) {
             $('.sidebar_container').css('background-color', to ? to : '' );
         });
@@ -144,7 +150,7 @@
     });
 
 	// Footer Sidebar Container Background Color
-	wp.customize('footer_container_color',function( value ) {
+	wp.customize('footer_container_background_color',function( value ) {
         value.bind(function(to) {
             $('.footer_container').css('background-color', to ? to : '' );
         });
@@ -225,11 +231,6 @@
 	wp.customize('button_color',function( value ) {
         value.bind(function(to) {
             $('button, .button').css('background-color', to ? to : '' );
-        });
-    });
-	wp.customize('button_border_color',function( value ) {
-        value.bind(function(to) {
-            $('button,.button,#content a.button').css('border-color', to ? to : '' );
         });
     });
 	wp.customize('button_font_color',function( value ) {

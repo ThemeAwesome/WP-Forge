@@ -1,129 +1,158 @@
-WP-Forge v5.5.0.1
-=======================================
-Based on Twenty Twelve, WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content 
-management system. The second being Foundation, the most advanced responsive front-end framework.
+=== WP-Forge ===
+Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
+Requires at least: 4.1
+Tested up to: 4.1
+Stable tag: 5.5.1.7
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Demo
-=======================================
-http://wpforge.themeawesome.com/
+== Description ==
 
-Installation
-=======================================
-1. Add the "wp-forge" folder to your sites theme folder (wp-content/themes) either via the Admin dashboard or FTP.
-2. Go to "Appearance > Themes" and click "Activate" under WP-Forge.
-3. This is more of a reminder, if you have a favicon, make sure you upload it to your site root folder.
-4. Go to "Appearance > Menus" If you have not done so, create and assign menus. If you have already created menus, make sure you assign them to the appropriate areas.
-5. Download and install the Github Updater from Andy Fragen - https://github.com/afragen/github-updater - This will allow you to update WP-Forge from within WordPress itself.
+A simple, responsive theme, WP-Forge is a combination of two powerful platforms. The first, of course, being WordPress, the leading open source blogging tool and content management system. The second being ZURB Foundation, the most advanced responsive front-end framework in the world. You can use WP-Forge right out of the box, or use it with WP-Starter (WP-Forges' WordPress child theme) to build the site you've always wanted.
 
-Configuration
-=======================================
-Once you have uploaded WP-Forge and activated it, go to Appearance > Customize
+== Bundled Resources ==
 
-= Header Section
-1. If you like to use a logo you can upload it here
-2. Change the title of your site
-3. Change the tagline of your site
-4. You can hide the site title and tagline
-5. Click "Save and Publish" once you are done
+1. Normalize Css 3.0.2 (http://opensource.org/licenses/MIT)
+2. Foundation Framework 5.5.1 (Includes all the files located in the /js/foundation folder) - MIT License (https://github.com/zurb/foundation/blob/master/LICENSE) - This also includes the following bundled scripts located in the /js/vendor folder:
+	1. FastClick - https://github.com/ftlabs/fastclick (http://opensource.org/licenses/MIT)*
+	2. jQuery Cookie Plugin v1.4.1 https://github.com/carhartl/jquery-cookie*
+	3. Modernizr v2.8.3 - Available under the BSD and MIT licenses: www.modernizr.com/license/*
+	4. PlaceHolder - MIT License (http://opensource.org/licenses/mit-license.php)*
+*Please note, the resources listed above are minified versions. Full versions are included in a folder called full_version inside of the vendor folder: /js/vendor/full_version
 
-= Navigation Section
-*Make sure you follow step #4 above before you continue
-1. Click on the Navigation section
-2. Select the menu you want to use in the Footer.
-3. Select the menu you want to use in Main menu area
-4. Select the menu you want to use for the Social menu area *Make sure to read the "Create Social Menu" section below.
-5. Select the position of the main menu, Normal Position, Top of Browser and Contain-ToGrid Sticky.
-	1. Normal Position - Navigation displays just below the header. This is default.
-	2. Top of Browser - Navigation will appear outside of the theme at the top of the browser. Can set a fixed position or have navigation scroll with the theme.
-	3. Contain-To-Grid Sticky - Navigation will remain in defaukt position until the user scrolls. Navigation will then take on a fixed position and move to the top of the browser.
-6. You can select to display the site name for the home link in the navigation or if you prefer you can change the text to whatever you wish.
-7. Click "Save and Publish" once you are done.
+3. Font-Awesome - http://fortawesome.github.io/Font-Awesome/license/
+4. Genericons 3.3 - GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
 
-= Off-Canvas
-1. Display Off-Canvas for Mobile - Choose Yes to use Off-Canvas when your site is viewd on mobile devices. The regular menu will not display. The default is set to NO. This means the regular navigation will display according to the options you have configured in the Navigation section.
-2. Display Off-Canvas Left or Right - Default is Left. This will display the Off-Canvas menu to the left. If set to Right, Off-Canvas will display to the right.
-3. Click "Save and Publish" once you are done
+== Using rem values ==
+When you look at the style.css file you will notice that a majority of the values use rem (root em). I used the following tool to help with determining what rem value I needed to add:
 
-= Posts Section
-1. Select to display the full version of posts or an excerpt of posts
-2. Select whether or not to display post thumbnails on the index page. Default is set to NO. Change to Yes to display post thumbnails.
-3. Select whether or not to display post thumbnails when viewing a single post. Default is set to NO. Change to YES to display post thumbnails in single view.
-4. Click "Save and Publish" once you are done
+https://offroadcode.com/prototypes/rem-calculator/
 
-= Footer Section
-1. Allows you to change the Copyright text in the footer.
-2. Click "Save and Publish" once you are done
+*When inputting a value for these divs, you can use px if that is what you are comfortable with. I do however recommend you use rem values to set the width of these divs.
 
-= Background Section
-1. Change the background color of your site. The defaults have been removed, so you may want to set a background color.
-2. Use a background image for your site
-3. Background-Size: If you want to use a large image as the background of your site, set this to cover.
-3. Set how the background image repeats
-4. Ste the position of the background image (if you use a background image and choose cover, set this to center)
-5. Choose a fixed or scrolling background 
-6. Click "Save and Publish" once you are done
+== Installation ==
 
-= Colors
-1. Change the color of page titles
-2. Change the color of site text
-3. Change the color of site links
-4. Change the color of links on hover.
-5. Click "Save and Publish" once you are done
+1. In your admin panel, go to Appearance -> Themes and click the Add New button.
+2. Either use the Search or Filter options to locate a Theme you would like to use or click upload and choose file, then select the theme's ZIP file. Click Install Now.
+3. Click Activate to use your new theme right away.
+4. Click Appearance -> Customize to start modifying your theme.
+5. In order to modify anything related to WordPress, you will need to make adjustments or add your own styles to style.css. In order to modify anything regarding Foundation, you need to make adjustments or add your own styles to foundation.css located in /css/foundation.css
 
-= Static Front Page
-1. Show your latest posts on the front of your site
-2. Use a page on the front of your site.
-3. Click "Save and Publish" once you are done
+== Configuration ==
 
-Create your Social Menu
-=======================================
-1. Go to "Appearance>Menus" and click "create new menu"
-2. Give your menu a name and click "Create Menu"
-3. On the left hand side, click on the "Links" tab and add links to your social profiles. Currently the following sites are supported: Facebook, Twitter, LinkedIn, Google+, Flickr, YouTube,
-GitHub, FourSquare, Instagram, Pinterest, Tumblr, Vimeo and Dribbble
-4. Once you have added links to your social profiles, scroll down and check the box next to "Social" in the Theme Locations section.
-5. Click "Save Menu".
+WP-Forge makes use of the built in Theme Customizer. Once you have activated WP-Forge, go to Appearance -> Customize. The theme customizer of WP-Forge has nine (9) different panels. Each panel contains sections which you can use to change different aspects of WP-Forge.
 
-Change the location of the Social Menu
-=======================================
-You can change the location of the Social Menu to anywhere you want. Open up footer.php and copy and paste line 43, 44 and 45 anywhere in the theme you want.
+	Header Panel
+	========================
+	In this panel you can modify different aspects of the Header portion of your theme. The Header Image and Site Title & Tagline are default sections in the Customizer. They are also available via Appearance - Header. The following sections are vilable:
+	
+	1. Header Container - Change the background color of the container that holds the Header Wrapper.
+	2. Header Wrapper* - Change the width and background color of the header content area,
+	3. Header Image - Upload a logo. 994 × 330 pixels is recommended.
+	4. Site Title & Tagline - Chnge the title as well as the description of your site. Select to show or hide in the header.
 
-You do not have to use line 43 or line 45. You can always just copy line 44 and paste it anywhere you want as well.
+	Background Panel
+	========================
+	This is the default section of the customizer where you can upload an image to use for your themes background image. This section is also available via Appearance - Background. This section is standard in the customizer (part of WordPress core). The following sections are available:
+	
+	1. Background Image - You can upload an image to use for your site background. Once you have uploaded your image other options such as Background Repeat, Background Position and Background Attachment will appear.
 
-Github
-=======================================
-https://github.com/tsquez/WP-Forge
+	Navigation Panel
+	========================
+	The default Navigation section of the WordPress Customizer. You can also modify top-bar navigation as well as off-canvas navigation in this area. The following sections are available:
 
-Author
-=======================================
-Thomas E. Vasquez (@tsquez)
-http://themeawesome.com
+	1. Main Navigation - WP-Forge supports 3 menus, Main menu, Footer Menu and Social Menu (see "Configure the Social Menu below). Select which menu appears in each location. You can edit your menu content on the Menus screen in the Appearance section.
+	2. Navigation Container - Change the background color of the container that holds the Nav Wrapper.
+	3. Nav Wrapper* - Change the width and background color of the navigation area of your theme.
+	4. Top-Bar Settings - Configure the Top-Bar Navigation area of your theme. Set the position and change the text of the "Home" link.
+	5. Off-Canvas Settings - Configure Off-Canvas Navigation area of your theme.
 
-Contributors
-=======================================
-The following individuals have contributed to WP-Forge
-Felipe Trombini - http://www.felipetrombini.com.br/ - for Portuguese localization
-Christopher Anderton - https://github.com/Deluxive - for Swedish localization
-Andriy - https://github.com/helirexi - for Russian localization
-Alfonso Correas - http://www.cor-ser.com/ - for Spanish localization
+	Colors Panel
+	========================
+	The default Colors section of the WordPress Customizer. Here you can change the colors of text, widget titles, links and hover colors of different sections of your theme. The following sections are available:
 
-If you would like to contribute a language translation for WP-Forge, please feel free to email me: tsquez[at]gmail.com
+	1. Default Colors - These are the default color settings for the custom header and custom background portion of your theme. These are standard in the customizer, meaning part of WordPress core.
+	2. Header Link Colors - Change the link and hover colors of the Site Title section of your theme.
+	3. Top-Bar Colors - Change the overall color, link, hover and active colors in the Top-Bar portion of your theme
+	4. Content Colors - Change text, link and hover colors in the Content section of your theme.
+	5. Sidebar Colors - Change widget title, link and hover colors in the main sidebar area of your theme.
+	6. Footer Sidebar Colors - Change widget title, link and hover colors in the Footer sidebar area of your theme.
+	7. Footer Colors - Change normal text, link and hover colors in the Footer section of your theme.
+	8. Button Colors - Change the color and hover colors of submit buttons of your theme.
+	9. Back to Top Colors: Change the color and hover colors of the Back to Top button that appears in the lower right hand corner of the browser window when you scroll down.
 
-Additional Credits - I used various functions from different themes built with WordPress and Foundation
-=======================================
-Anthony Wilhelm - Reactor Theme (https://github.com/awtheme/reactor)
-Zhen Huang - Reverie Theme (http://themefortress.com/reverie/)
-320Press - WordPress Foundation (https://github.com/320press/wordpress-foundation)
-required+ - Required-Foundation (https://github.com/wearerequired/required-foundation)
+	Front Page Panel
+	========================
+	The default Front Page section of the WordPress Customizer. The following sections are available:
 
-License
-=======================================
-GPLv2 - http://www.gnu.org/licenses/gpl-2.0.html
-Foundation by ZURB is MIT - http://opensource.org/licenses/MIT
+	1. Static Front Page - This is where you set up a front page for your theme. You can use either your latest blog posts or select a page.
 
-I hope you utilize WP-Forge to learn something new, create something awesome, have fun and, more importantly, I hope you share what you have learned with others.
+	Content Panel
+	========================
+	In this section you can modify different aspects of the content portion of your theme. The following sections are available:
 
-FoundationThemes.co
-=======================================
-FoundationThemes.co(http://foundationthemes.co/) is a website focused on developing Responsive WordPress child themes for WP-Forge.
-Currently still in development. Make sure to visit and enter your email address to be notified when the site launches.
+	1. Content Container - change the background color of the container that holds the Content Wrapper.
+	2. Content Wrapper* - Change the width and the background color of the content area of your theme.
+	3. Posts - Select to show full posts or excerpts as well select to show or hide post thumbnails in blog view as well as single view.
+	4. Sidebar - Select the position of the sidebar, either to display on the right (default) or left.
+
+	Footer Sidebar Panel
+	========================
+	This controls the main conatiner that holds the Footer Sidebar area of the theme. Change the width and the background color of the Footer Sidebar content area. The following sections are available:
+
+	1. Footer Sidebar Container* - Change the background color of the container holding the Footer Sidebar Wrapper.
+	2. Footer Sidebar Wrapper - Change the width and the background color of the Footer Sidebar content area.
+
+	Footer Panel
+	========================
+	This controls the Footer Section of your theme. You can change the width and the background color of the Footer content area as well as change the footer text and set the alignment of the footer menu and copyright text. The following sections are available:
+
+	1. Footer Container - Change the background color of the container that holds the Footer Wrapper.
+	2. Footer Wrapper* - Change the width and the background color of the Footer Sidebar content area.
+	3. Footer Content - Change the footer text of your theme and select the position in which you want it to appear.
+
+	Widgets Panel
+	========================
+	Widgets are independent sections of content that can be placed into widgetized areas provided by your theme (commonly called sidebars). The following sections are available:
+
+	1. Main Sidebar - Displays widgets in the blog area as well as pages.
+	2. First Footer Widget Area - An optional widget area for your site footer (will only appear if a widget is added)
+	3. Second Footer Widget Area - An second optional widget area for your site footer (will only appear if a widget is added)
+	4. Third Footer Widget Area - An third optional widget area for your site footer (will only appear if a widget is added)
+
+== Configure the Social Menu ==
+WP-Forge allows you display links to your social media profiles, like Twitter and Facebook, with icons. This menu is located in the footer portion of the theme. All of the social icons have been assigned a specific color to make them standout from each other.
+
+1. Create a new Custom Menu, and assign it to the Social Links Menu location.
+2. Add links to each of your social services using the Links panel (do not use pages).
+3. Icons for your social links will automatically appear if it's available.
+
+Available icons: (Linking to any of the following sites will automatically display its icon in your social menu).
+
+* Codepen
+* Digg
+* Dribbble
+* Dropbox
+* Facebook
+* Flickr
+* Foursquare
+* GitHub
+* Google+
+* Instagram
+* LinkedIn
+* Email (mailto: links)
+* Pinterest
+* Pocket
+* PollDaddy
+* Reddit
+* RSS Feed (URLs with /feed/)
+* Spotify
+* StumbleUpon
+* Tumblr
+* Twitch
+* Twitter
+* Vimeo
+* WordPress
+* YouTube
+
+Social networks that aren't currently supported will be indicated by a generic share icon.	

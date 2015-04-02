@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0.1
+ * @since WP-Forge 5.5.1.7
  */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 						<div class="entry-meta-header">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								printf( __( '<span class="meta-prep meta-prep-entry-date"><span class="genericon genericon-time"></span></span><span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span>&nbsp;&nbsp;&nbsp;<span class="genericon genericon-picture"></span><a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a>&nbsp;&nbsp;&nbsp;<span class="genericon genericon-category"></span><a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'wpforge' ),
+								printf( __( '<span class="meta-prep meta-prep-entry-date"><span class="genericon genericon-time"></span></span><span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span><span class="genericon genericon-picture"></span><a class="nudge" href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a><span class="genericon genericon-category"></span><a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'wp-forge' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
 									esc_url( wp_get_attachment_url() ),
@@ -36,7 +36,7 @@ get_header(); ?>
 									get_the_title( $post->post_parent )
 								);
 							?>
-							<?php edit_post_link( __( 'Edit Image', 'wpforge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' ); ?>
+							<?php edit_post_link( __( 'Edit Image', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' ); ?>
 						</div><!-- end .entry-meta-header -->
 
 					</header><!-- .entry-header -->
@@ -47,8 +47,9 @@ get_header(); ?>
 							<div class="attachment">
 <?php
 /**
- * Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a gallery,
- * or the first image (if we're looking at the last image in a gallery), or, in a gallery of one, just the link to that image file
+ * Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a 
+ * gallery, or the first image (if we're looking at the last image in a gallery), or, in a gallery of one, just the
+ * link to that image file
  */
 $attachments = array_values( get_children( array( 'post_parent' => $post->post_parent, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID' ) ) );
 foreach ( $attachments as $k => $attachment ) :
@@ -87,14 +88,14 @@ endif;
 
 						<div class="entry-description">
 							<?php the_content(); ?>
-							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wpforge' ), 'after' => '</div>' ) ); ?>
+							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wp-forge' ), 'after' => '</div>' ) ); ?>
 						</div><!-- .entry-description -->
 
 					</div><!-- .entry-content -->
 
 					<nav id="image-navigation" class="navigation" role="navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&laquo; Previous Image', 'wpforge' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next Image &raquo;', 'wpforge' ) ); ?></span>
+							<span class="previous-image"><?php previous_image_link( false, __( '&laquo; Previous Image', 'wp-forge' ) ); ?></span>
+							<span class="next-image"><?php next_image_link( false, __( 'Next Image &raquo;', 'wp-forge' ) ); ?></span>
 						</nav><!-- #image-navigation -->
 
 				</article><!-- #post -->

@@ -2,29 +2,45 @@
 Theme Name: WP-Forge
 Theme URI: http://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome.com
-Author URI: http://themeawesome.com
-Description: WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
-Version: 5.5.0.1
+Author URI: http://themeawesome.com/
+Description: A simple, responsive theme, WP-Forge is a combination of two powerful platforms. The first, of course, being WordPress, the leading open source blogging tool and content management system. The second being ZURB Foundation, the most advanced responsive front-end framework in the world. You can use WP-Forge right out of the box, or use it with WP-Starter (WP-Forges' WordPress child theme) to build the site you've always wanted.
+Version: 5.5.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: light, black, white, gray, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
-Text Domain: wpforge
-GitHub Theme URI: https://github.com/tsquez/wp-forge
-GitHub Branch: master
+Tags: light, black, white, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready, responsive-layout
+Text Domain: wp-forge
 
 This theme, like WordPress, is licensed under the GPL. I hope you utilize WP-Forge to learn something new, create something awesome, have fun and more importantly, I hope you share what you have learned with others.
-
-I update WP-Forge on a regular basis. I highly recommend joining my mailing list as well as using my child theme WP-Starter so you do not lose any edits.
 */
 
-
+/**
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Accessibility
+ * 3.0 - Repeatable Patterns
+ * 4.0 - Basic Structure
+ * 5.0 - Main content and comment content
+ * 6.0 - Archives
+ * 7.0 - Single image attachment view
+ * 8.0 - Post Formats
+ * 9.0 - Page Links
+ * 10.0 - Comments
+ * 11.0 - Front Page Template
+ * 12.0 - Widgets
+ * 13.0 - TinyMCE Editor
+ * 14.0 - Social Menu
+ * 15.0 - Misc
+ * 16.0 - Media Queries
+ */
+ 
 /**
  * 1.0 - Reset
  */
 ins {
 	background: #fff9c0;
 	text-decoration: none;
-	padding:0 3px;
+	padding:0 0.1875rem;
 }
 sub,
 sup {
@@ -49,18 +65,20 @@ img {
 .top-bar-section > .alert-box.secondary p {
 	margin:0.5em 0;
 }
-.sticky {}
+.sticky {/* Style not used but left in case you want to style the sticky in some way */}
 
 /**
  * 2.0 - Accessibility
  */
 .says,
-.screen-reader-text {
+.assistive-text,
+.screen-reader-text,
+.site .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	height: 1px;
 	overflow: hidden;
 	position: absolute !important;
-	width: 1px;
+	width: 0.0625rem;
 }
 .site .skip-link {
 	background-color: #f1f1f1;
@@ -91,6 +109,7 @@ img {
 /**
  * 3.0 - Repeatable Patterns
  */
+
 /* Small headers */
 .archive-title,
 .page-title,
@@ -135,7 +154,6 @@ img.wp-post-image {
 img.wp-post-image {
 	margin-bottom:1.5rem;
 }
-
 /* Make sure videos and embeds fit their containers */
 embed,
 iframe,
@@ -145,6 +163,14 @@ video {
 }
 .entry-content .twitter-tweet-rendered {
 	max-width: 100% ; /* Override the Twitter embed fixed width */
+}
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
 }
 
 /* Images */
@@ -162,11 +188,13 @@ video {
 figure {
 	margin: 0 0 1rem;
 }
-figcaption, .wp-caption {
+figcaption, 
+.wp-caption {
 	max-width: 100%; /* Keep wide captions from overflowing their container. */
 	padding: 4px;
 }
-figcaption, .wp-caption .wp-caption-text,
+figcaption, 
+.wp-caption .wp-caption-text,
 .gallery-caption,
 .entry-caption {
 	font-style: italic;
@@ -209,13 +237,18 @@ img.wp-smiley,
 	padding: 3%;
 }
 
-/* Navigation */
-.nav-single  {
+/* Post Navigation */
+.nav-single {
 	position:relative;
 	float:left;
-	display:block;
 	width:100%;
-	margin-bottom:60px;
+	margin-bottom:3.75rem;
+}
+#nav-below  {
+	position:relative;
+	float:left;
+	width:100%;
+	margin-bottom:2rem;
 }
 .site-content nav {
 	clear: both;
@@ -252,9 +285,9 @@ img.wp-smiley,
 .nav-single + .comments-area,
 #comment-nav-above {
 	margin: 3rem 0;
-  display: block;
-  position: relative;
-  clear: both;
+  	display: block;
+  	position: relative;
+  	clear: both;
 }
 
 /* Author profiles */
@@ -306,7 +339,7 @@ img.wp-smiley,
 }
 
 /**
- * 3.0 - Basic Structure
+ * 4.0 - Basic Structure
  */
 body {
 	color: #444444;
@@ -314,15 +347,6 @@ body {
 	text-rendering: optimizeLegibility;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-}
-.header_container,
-.nav_container,
-.content_container,
-.footer_sidebar-container,
-.footer_container {
-	background-color: transparent!important;
-	max-width: 100%;
-	width: 100%;
 }
 .content_wrap {
 	padding-top: 1.5rem;
@@ -350,7 +374,6 @@ body {
 	color: #21759b;
 }
 .header-info h2 {
-	color: #444444;
 	font-size: 1.6875rem;
 	line-height:1.3;	
 }
@@ -396,6 +419,9 @@ footer[role="contentinfo"] {
 	line-height: 2;
 	padding: 1.5rem 0;
 }
+footer[role="contentinfo"].inline-list {
+	margin-bottom: 1rem;
+}
 footer > .site-info {
 	margin-bottom:0;
 }
@@ -412,23 +438,17 @@ footer > .site-info.cntr {
 	display: table;   /* Allow the centering to work */
 	margin: 0 auto;
 }
-.table ul.navcntr {
-	margin-bottom: 0.5rem;
-}
 .table ul.navcntr li {
 	display: inline-block!important;
 }
-footer > .site-info p {
+.footer_wrap p {
   margin-bottom:0;
 }
-footer[role="contentinfo"] a {
-	color: #686868;
+.footer_wrap a {
 	text-decoration:none;
 }
-footer[role="contentinfo"] a:hover {
-	color: #21759b;
-}
-footer[role="contentinfo"] p, footer[role="contentinfo"] a  {
+.footer_wrap p, 
+.footer_wrap a  {
 	font-size: 1rem;
 }
 #secondary-sidebar {
@@ -437,7 +457,7 @@ footer[role="contentinfo"] p, footer[role="contentinfo"] a  {
 }
 
 /**
- * 4.0 - Main content and comment content
+ * 5.0 - Main content and comment content
  */
 .entry-meta {
 	clear: both;
@@ -469,7 +489,7 @@ span.edit-link .genericon {
 	line-height: 1;
 }
 .attachment span.edit-link {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 article .featured-post {
 	border-top: 4px double #ededed;
@@ -603,7 +623,7 @@ body.page article {
 	line-height: 1.714285714;
 }
 footer.entry-meta {
-	margin-top: 1.5rem;
+	padding: 1rem 0;
 	color: #757575;
 }
 .entry-meta-tags {
@@ -630,7 +650,7 @@ span.pfont,
 }
 
 /**
- * 5.0 - Archives
+ * 6.0 - Archives
  */
 .archive-header,
 .page-header {
@@ -646,7 +666,7 @@ span.pfont,
 }
 
 /**
- * 6.0 - Single image attachment view
+ * 7.0 - Single image attachment view
  */
 .article.attachment {
 	overflow: hidden;
@@ -668,7 +688,7 @@ span.pfont,
 }
 
 /**
- * 7.0 - Post Formats
+ * 8.0 - Post Formats
  */
 article.format-aside h1 {
 	margin-bottom: 1.5rem;
@@ -771,7 +791,7 @@ article.format-quote .entry-content blockquote {
 }
 
 /**
- * 8.0 - Page Links
+ * 9.0 - Page Links
  */
 .page-links {
 	clear: both;
@@ -798,7 +818,7 @@ article.format-quote .entry-content blockquote {
 }
 
 /**
- * 9.0 - Comments
+ * 10.0 - Comments
  */
 #comments ol {
 	list-style: none;
@@ -879,7 +899,7 @@ article.format-quote .entry-content blockquote {
 	color: #ffffff;
 	position: absolute;
 	margin:3px 0 0 5px;
-	padding: 2px 5px 1px;
+	padding: 1px 5px 1.5px;
 	font-size: 10px;
 }
 .reply {
@@ -964,7 +984,7 @@ p.comment-form-email {
 }
 
 /**
- * 10.0 - Front page template
+ * 11.0 - Front page template
  */
 .front-image {
 	float: right;
@@ -985,7 +1005,7 @@ p.comment-form-email {
 }
 
 /**
- * 11.0 - Widgets
+ * 12.0 - Widgets
  */
 .widget-area .widget ul ul {
 	margin-left: 12px;
@@ -1028,7 +1048,7 @@ p.comment-form-email {
 }
 
 /**
- * 12.0 - TinyMCE Editor
+ * 13.0 - TinyMCE Editor
  */
 html .mceContentBody {
 	max-width: 920px;
@@ -1064,7 +1084,7 @@ html .mceContentBody ol {
 }
 .mceContentBody abbr,
 .mceContentBody dfn,
-.mceContentBody acronym{
+.mceContentBody acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
@@ -1148,84 +1168,13 @@ html .mceContentBody ol {
 }
 
 /**
- * 14.0 - Misc
+ * 14.0 - Social Menu
  */
-ul.off-canvas-list li, 
-ul.off-canvas-list li li, 
-ul.off-canvas-list li li li, 
-ul.off-canvas-list li li li li,
-ul.off-canvas-list li li li li li,
-ul.off-canvas-list li li li li li li {
-	list-style-type:none;
-}
-section.tab-bar-section.go-left{
-	text-align:left;
-}
-section.tab-bar-section.go-right {
-	text-align:right;
-}
-section.tab-bar-section.middle a {
-	color:#fff;
-	font-weight:normal;
-}
-.top-bar .name a {
-	line-height: 45px;
-	font-size: 0.8125rem; 
-	font-weight: normal;
-	color: white;
-	display: block;
-	padding: 0 15px; 
-}
-.top-bar .toggle-topbar a {
-	font-weight:normal;
-}
-.orbit-bullets li {
-	cursor:pointer;
-	display:inline-block;
-}
-.orbit-container {
-	margin-bottom:1.714em;
-}
-.entry-content > [data-magellan-expedition] {
-	margin:0 0 1.714em;
-}
-.entry-content dl.sub-nav {
-	margin:0;
-}
-#backtotop {
-	background:#333333;
-	display: block;
-	position: fixed;
-	right: 1rem;
-	bottom:1rem;
-	z-index: 99999;
-	cursor: pointer;
-	display: none;
-	color:#f9f9f9;
-	font-size:0.6875rem;
-	width:3.125rem;
-	height:3.125rem;
-	line-height:3.125rem;
-	text-align:center;	
-	text-transform:uppercase;
-	border-radius:3.125rem;
-	transition: color 300ms ease-out;
-}
-#backtotop:hover {
-	background:#272727;
-}
-div.sitemap-left h5 a {
-	font-weight: bold;
-}
-
-/**
- * 13.0 - Social Menu
- */
- .social_wrap {
- 	margin: 1.5rem 0 0;
+.social_wrap {
+	margin: 1.3rem 0 0;
  	padding: 0;
- }
- .social-navigation a:before {
+}
+.social-navigation a:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -1272,122 +1221,224 @@ div.sitemap-left h5 a {
 }
 .social-navigation a[href$="/feed/"]:before {
 	content: "\f413";
-}
+	color: #ff7e00!important;}
 .social-navigation a[href*="codepen.io"]:before {
 	content: "\f216";
-}
+	color: #2d2d2c!important;}
 .social-navigation a[href*="digg.com"]:before {
 	content: "\f221";
-}
+	color: #3e7cc0!important;}
 .social-navigation a[href*="dribbble.com"]:before {
 	content: "\f201";
-}
+	color: #f977a7!important;}
 .social-navigation a[href*="dropbox.com"]:before {
 	content: "\f225";
-}
+	color: #007ee5!important;}
 .social-navigation a[href*="facebook.com"]:before {
 	content: "\f203";
-}
+	color: #3b5999!important;}
 .social-navigation a[href*="flickr.com"]:before {
 	content: "\f211";
-}
+	color: #d40055!important;}
 .social-navigation a[href*="foursquare.com"]:before {
 	content: "\f226";
-}
+	color: #229dc7!important;}
 .social-navigation a[href*="plus.google.com"]:before {
 	content: "\f206";
-}
+	color: #ca3732!important;}
 .social-navigation a[href*="github.com"]:before {
 	content: "\f200";
-}
+	color: #393939!important;}
 .social-navigation a[href*="instagram.com"]:before {
 	content: "\f215";
-}
+	color: #bd784f!important;}
 .social-navigation a[href*="linkedin.com"]:before {
 	content: "\f208";
-}
+	color: #0069a6!important;}
 .social-navigation a[href*="pinterest.com"]:before {
 	content: "\f210";
-}
+	color: #d43036!important;}
 .social-navigation a[href*="getpocket.com"]:before {
 	content: "\f224";
-}
+	color: #d43036!important;}
 .social-navigation a[href*="polldaddy.com"]:before {
 	content: "\f217";
-}
+	color: #d43036!important;}
 .social-navigation a[href*="reddit.com"]:before {
 	content: "\f222";
-}
+	color: #9aafc0!important;}
 .social-navigation a[href*="stumbleupon.com"]:before {
 	content: "\f223";
-}
+	color: #ff4519!important;}
 .social-navigation a[href*="tumblr.com"]:before {
 	content: "\f214";
-}
+	color: #2c4762!important;}
 .social-navigation a[href*="twitter.com"]:before {
 	content: "\f202";
-}
+	color: #55acee!important;}
 .social-navigation a[href*="vimeo.com"]:before {
 	content: "\f212";
-}
+	color: #20b9eb!important;}
 .social-navigation a[href*="wordpress.com"]:before,
 .social-navigation a[href*="wordpress.org"]:before {
 	content: "\f205";
-}
+	color: #ababab!important;}
 .social-navigation a[href*="youtube.com"]:before {
 	content: "\f213";
-}
+	color: #d43036!important;}
 .social-navigation a[href*="mailto:"]:before {
 	content: "\f410";
-}
+	color: #535353!important;}
 .social-navigation a[href*="spotify.com"]:before {
 	content: "\f515";
-}
+	color: #84bd00!important;}
 .social-navigation a[href*="twitch.tv"]:before {
 	content: "\f516";
-}
+	color: #6441a5!important;}
 
-/* =Media Queries
------------------------------------------------ */
+/**
+ * 15.0 - Misc
+ */
+ul.off-canvas-list li, 
+ul.off-canvas-list li li, 
+ul.off-canvas-list li li li, 
+ul.off-canvas-list li li li li,
+ul.off-canvas-list li li li li li,
+ul.off-canvas-list li li li li li li {
+	list-style-type:none;
+}
+section.tab-bar-section.go-left{
+	text-align:left;
+}
+section.tab-bar-section.go-right {
+	text-align:right;
+}
+section.tab-bar-section.middle a {
+	color:#fff;
+	font-weight:normal;
+}
+.top-bar .name a {
+	line-height: 45px;
+	font-size: 0.8125rem; 
+	font-weight: normal;
+	color: white;
+	display: block;
+	padding: 0 15px; 
+}
+.top-bar .toggle-topbar a {
+	font-weight:normal;
+}
+.orbit-bullets li {
+	cursor:pointer;
+	display:inline-block;
+}
+.orbit-container {
+	margin-bottom:1.714em;
+}
+.orbit-container img.alignnone {
+	margin-bottom: 0;
+}
+.entry-content > [data-magellan-expedition] {
+	margin:0 0 1.714em;
+}
+.entry-content dl.sub-nav {
+	margin:0;
+}
+#backtotop {
+	position: fixed;
+	right: 1rem;
+	bottom:1rem;
+	z-index: 99;
+	cursor: pointer;
+	display: none;
+	font-size: 1.2rem;
+	width:1.5rem;
+	height:1.5rem;
+	line-height:1.5rem;
+	text-align:center;
+	border-radius:10%;
+	opacity: 0.5;
+}
+#backtotop:hover {
+	opacity: 1.0;
+}
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+ul.breadcrumbs,
+ul.button-group {
+	margin-left: 0!important;
+}
+button,
+.button,
+button.secondary, 
+.button.secondary,
+button.success, 
+.button.success,
+button.alert, 
+.button.alert,
+button.warning, 
+.button.warning,
+button.info, .button.info {
+	border-color: transparent;
+}
+.keystroke, kbd, code {
+	padding: 0.125rem 0.25rem 0.125rem;
+	font-size: 0.875rem;
+}
+.tabs.vertical {
+margin: 0 0 1.25rem!important; 
+}
+.nudge {
+	margin-right: 0.5rem;
+}
+/**
+ * 16.0 - Media Queries
+ */
+
 @media only screen and (max-width: 40em) { /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 	p.site-title a {
 		font-size:1.875rem;
 	}
   	p.site-description {
     	font-size:1.5rem;
-  	}
+    }
 	#wrapper {
-		padding:0
+		padding:0;
 	}
 	.site-header {
 		padding-top:0.9375rem;
 	}
   	.comment-count {
     	margin-top: 2rem;
-  	}
+    }
 	footer > .site-info {
 		text-align:center;
 		font-size:0.75rem;
 	}
 	#backtotop {
-		background: rgb(0, 0, 0) ; opacity: 0.4;
-		bottom:2.5rem;
-		width:2.125rem;
-		height:2.125rem;
+		bottom:1rem;
 		font-size:0.5625rem;
-		line-height:2.125rem;
-		border-radius:3.125rem;		
+		color:rgb(0, 0, 0) ; opacity: 0.4;
 	}
 	#backtotop:hover {
-		background: rgb(0, 0, 0) ; opacity: 1;
+		color: rgb(0, 0, 0) ; opacity: 1;
 	}
 	#wpadminbar {
 		top: -2.875rem;
 	}	
-	#menu-social li a::before {
-		padding:        0 1px;
-		font-size:      28px;
-	}
 	section.tab-bar-section.middle a {
 		color:#fff;
 		font-weight:normal;
@@ -1402,7 +1453,7 @@ div.sitemap-left h5 a {
 	}
 	header.entry-header h1 {
     	font-size: 1.6875rem;
-	}
+    }
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) { /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 	}
@@ -1411,4 +1462,4 @@ div.sitemap-left h5 a {
 @media only screen and (min-width: 90.063em) and (max-width: 120em) { /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 	}
 @media only screen and (min-width: 120.063em) { /* min-width 1921px, xlarge screens */
-	}	
+	}

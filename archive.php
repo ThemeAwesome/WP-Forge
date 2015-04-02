@@ -14,7 +14,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0.1
+ * @since WP-Forge 5.5.1.7
  */
 
 get_header(); ?>
@@ -27,40 +27,40 @@ get_header(); ?>
 			<header class="archive-header">
 				<h4 class="archive-title"><?php
 					if ( is_day() ) :
-						printf( __( 'Daily Archives: %s', 'wpforge' ), '<span>' . get_the_date() . '</span>' );
+						printf( __( 'Daily Archives: %s', 'wp-forge' ), '<span>' . get_the_date() . '</span>' );
 					elseif ( is_month() ) :
-						printf( __( 'Monthly Archives: %s', 'wpforge' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'wpforge' ) ) . '</span>' );
+						printf( __( 'Monthly Archives: %s', 'wp-forge' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'wp-forge' ) ) . '</span>' );
 					elseif ( is_year() ) :
-						printf( __( 'Yearly Archives: %s', 'wpforge' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'wpforge' ) ) . '</span>' );
+						printf( __( 'Yearly Archives: %s', 'wp-forge' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'wp-forge' ) ) . '</span>' );
 					elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-						_e( 'Asides', 'wpforge' );
+						_e( 'Asides', 'wp-forge' );
 						
 					elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-						_e( 'Audio', 'wpforge' );
+						_e( 'Audio', 'wp-forge' );
 						
 					elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-						_e( 'Chats', 'wpforge' );						
+						_e( 'Chats', 'wp-forge' );						
 						
 					elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-						_e( 'Galleries', 'wpforge' );
+						_e( 'Galleries', 'wp-forge' );
 						
 					elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-						_e( 'Images', 'wpforge' );						
+						_e( 'Images', 'wp-forge' );						
 						
 					elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-						_e( 'Links', 'wpforge' );																
+						_e( 'Links', 'wp-forge' );																
 						
 					elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-						_e( 'Quotes', 'wpforge' );
+						_e( 'Quotes', 'wp-forge' );
 						
 					elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-						_e( 'Status', 'wpforge' );												
+						_e( 'Status', 'wp-forge' );												
 
 					elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-						_e( 'Videos', 'wpforge' );
+						_e( 'Videos', 'wp-forge' );
 						
 					else :
-						_e( 'Archives', 'wpforge' );
+						_e( 'Archives', 'wp-forge' );
 					endif;
 				?></h4>
 			</header><!-- .archive-header -->

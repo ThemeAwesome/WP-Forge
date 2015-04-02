@@ -8,20 +8,20 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0.1
+ * @since WP-Forge 5.5.1.7
  */
 
 get_header(); ?>
 
-		<div id="content" class="medium-12 large-12 columns" role="main">
-        
-        	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
+	<div id="content" class="medium-12 large-12 columns" role="main">
+    
+    	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
-				<?php comments_template( '', true ); ?>
-			<?php endwhile; // end of the loop. ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content', 'page' ); ?>
+			<?php comments_template( '', true ); ?>
+		<?php endwhile; // end of the loop. ?>
 
-		</div><!-- #content -->
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

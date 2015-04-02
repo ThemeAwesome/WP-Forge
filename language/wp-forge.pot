@@ -1,0 +1,1021 @@
+# Copyright (C) 2015 ThemeAwesome.com
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Forge 5.5.1.7\n"
+"POT-Creation-Date: 2015-03-07 10:47-0700\n"
+"PO-Revision-Date: 2015-03-07 10:48-0700\n"
+"Last-Translator: Thomas E. Vasquez <tsquez@gmail.com>\n"
+"Language-Team: Thomas E. Vasquez <tsquez@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: 404.php:20
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: 404.php:26
+msgid ""
+"The post, page or whatever it was you were looking for doesn&rsquo;t seem to "
+"be here. It could have been moved, deleted or maybe the URL you typed or the "
+"link you clicked was incorrect in some way."
+msgstr ""
+
+#: 404.php:28
+msgid "Try Again?"
+msgstr ""
+
+#: 404.php:30
+msgid ""
+"I know this didn&rsquo;t work before but you may want to try searching "
+"again, only this time make sure the spelling, cApitALiZaTiOn, and "
+"punctuation are correct."
+msgstr ""
+
+#: 404.php:42 searchform.php:14 searchform.php:17
+msgid "Search"
+msgstr ""
+
+#: 404.php:46
+msgid "Contact Us"
+msgstr ""
+
+#: 404.php:48
+msgid ""
+"If you are absolutely certain it was supposed to be here and just can&rsquo;"
+"t seem to find it, please let us know. We would be more than happy to look "
+"into the matter for you and let you know what happened."
+msgstr ""
+
+#: 404.php:50
+msgid "Why not try something new?"
+msgstr ""
+
+#: 404.php:52
+msgid ""
+"Even though you couldn&rsquo;t find a particular item on our site, we do "
+"have other great stuff to look at. Maybe we can interest you in some of our "
+"other exciting content. Below is a list of our newest posts. "
+msgstr ""
+
+#: archive.php:30
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:32
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:32
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:34
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:34
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:36
+msgid "Asides"
+msgstr ""
+
+#: archive.php:39
+msgid "Audio"
+msgstr ""
+
+#: archive.php:42
+msgid "Chats"
+msgstr ""
+
+#: archive.php:45
+msgid "Galleries"
+msgstr ""
+
+#: archive.php:48
+msgid "Images"
+msgstr ""
+
+#: archive.php:51
+msgid "Links"
+msgstr ""
+
+#: archive.php:54
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:57
+msgid "Status"
+msgstr ""
+
+#: archive.php:60
+msgid "Videos"
+msgstr ""
+
+#: archive.php:63
+msgid "Archives"
+msgstr ""
+
+#: author.php:30
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: author.php:48 content-author.php:17
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: category.php:22
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: comments.php:27
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:44
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:45
+msgid "&laquo; Older Comments"
+msgstr ""
+
+#: comments.php:46
+msgid "Newer Comments &raquo;"
+msgstr ""
+
+#: comments.php:51
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:67
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:68
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:69
+msgid "Cancel Reply"
+msgstr ""
+
+#: comments.php:70
+msgid "Post Comment"
+msgstr ""
+
+#: comments.php:72 content-aside.php:17 content-audio.php:17
+#: content-chat.php:25 content-gallery.php:25 content-image.php:16
+#: content-link.php:16 content-quote.php:16 content-status.php:16
+#: content-video.php:17 content.php:27
+msgid "Comment"
+msgstr ""
+
+#: comments.php:78
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:84
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: comments.php:91
+msgid "Your email address will not be published."
+msgstr ""
+
+#: comments.php:94
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: comments.php:111
+msgid "Your Website"
+msgstr ""
+
+#: content-aside.php:17 content-audio.php:17 content-chat.php:25
+#: content-gallery.php:25 content-image.php:16 content-link.php:16
+#: content-quote.php:16 content-status.php:16 content-video.php:17
+#: content.php:27
+msgid "1 Comment"
+msgstr ""
+
+#: content-aside.php:17 content-audio.php:17 content-chat.php:25
+#: content-gallery.php:25 content-image.php:16 content-link.php:16
+#: content-quote.php:16 content-status.php:16 content-video.php:17
+#: content.php:27
+msgid "% Comments"
+msgstr ""
+
+#: content-aside.php:19 content-audio.php:19 content-chat.php:27
+#: content-gallery.php:27 content-image.php:18 content-link.php:18
+#: content-quote.php:18 content-status.php:18 content-video.php:19
+#: content.php:29 functions.php:611
+msgid "Edit"
+msgstr ""
+
+#: content-aside.php:22 content-audio.php:26 content-gallery.php:18
+#: content-video.php:25 content.php:21
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-aside.php:24 content-audio.php:37 content-gallery.php:37
+#: content-image.php:21 content-link.php:21 content-quote.php:21
+#: content-status.php:27 content-video.php:36 content.php:42
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: content-audio.php:38 content-chat.php:33 content-gallery.php:38
+#: content-page.php:18 content-video.php:37 content.php:43 image.php:91
+msgid "Pages:"
+msgstr ""
+
+#: content-author.php:21
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: content-footer.php:38 content-footer.php:50 content-footer.php:87
+#: content-footer.php:99 content-footer.php:135 content-footer.php:147
+#: content-footer.php:172 content-footer.php:195
+msgid "Powered by"
+msgstr ""
+
+#: content-footer.php:38 content-footer.php:50 content-footer.php:87
+#: content-footer.php:99 content-footer.php:135 content-footer.php:147
+#: content-footer.php:172 content-footer.php:195
+msgid "http://themeawesome.com/responsive-wordpress-theme/"
+msgstr ""
+
+#: content-footer.php:38 content-footer.php:50 content-footer.php:87
+#: content-footer.php:99 content-footer.php:135 content-footer.php:147
+#: content-footer.php:172 content-footer.php:195
+msgid "A Responsive WordPress Theme"
+msgstr ""
+
+#: content-footer.php:38 content-footer.php:50 content-footer.php:87
+#: content-footer.php:99 content-footer.php:135 content-footer.php:147
+#: content-footer.php:172 content-footer.php:195
+msgid "WP-Forge"
+msgstr ""
+
+#: content-footer.php:38 content-footer.php:50 content-footer.php:87
+#: content-footer.php:99 content-footer.php:135 content-footer.php:147
+#: content-footer.php:172 content-footer.php:195
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: content-footer.php:38 content-footer.php:50 content-footer.php:87
+#: content-footer.php:99 content-footer.php:135 content-footer.php:147
+#: content-footer.php:172 content-footer.php:195
+msgid "WordPress"
+msgstr ""
+
+#: content-nav.php:13
+msgid "Skip to content"
+msgstr ""
+
+#: content-none.php:13
+msgid "No posts to display"
+msgstr ""
+
+#: content-none.php:16
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:20
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:23
+msgid ""
+"Apologies, but no results were found. Perhaps another search will help you "
+"find what you&#39;re looking for."
+msgstr ""
+
+#: content-page.php:21
+msgid "Edit Page"
+msgstr ""
+
+#: functions.php:130
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:131
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:132
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:203
+msgid "Back"
+msgstr ""
+
+#: functions.php:393
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:395
+msgid "Displays widgets in the blog area as well as pages."
+msgstr ""
+
+#: functions.php:402
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: functions.php:404
+msgid "An optional widget area for your site footer"
+msgstr ""
+
+#: functions.php:411
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: functions.php:413
+msgid "An second optional widget area for your site footer"
+msgstr ""
+
+#: functions.php:420
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: functions.php:422
+msgid "An third optional widget area for your site footer"
+msgstr ""
+
+#: functions.php:547
+msgid "Post Navigation"
+msgstr ""
+
+#: functions.php:548
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr ""
+
+#: functions.php:549
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: functions.php:574
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:574
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:589
+msgid "Post Author"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: functions.php:595
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:601
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:609
+msgid "<span class=\"genericon genericon-reply\"></span> Reply"
+msgstr ""
+
+#: functions.php:628 functions.php:667
+msgid ", "
+msgstr ""
+
+#: functions.php:643
+msgid "Sticky"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: functions.php:764
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: image.php:28
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\"><span class=\"genericon "
+"genericon-time\"></span></span><span class=\"entry-date\"><time class="
+"\"entry-date\" datetime=\"%1$s\">%2$s</time></span><span class=\"genericon "
+"genericon-picture\"></span><a class=\"nudge\" href=\"%3$s\" title=\"Link to "
+"full-size image\">%4$s &times; %5$s</a><span class=\"genericon genericon-"
+"category\"></span><a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">"
+"%8$s</a>"
+msgstr ""
+
+#: image.php:39
+msgid "Edit Image"
+msgstr ""
+
+#: image.php:97
+msgid "&laquo; Previous Image"
+msgstr ""
+
+#: image.php:98
+msgid "Next Image &raquo;"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Main Navigation"
+msgstr ""
+
+#: inc/customizer.php:50
+msgid "Header &amp; Background Colors"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "Set the front page for your theme."
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "Header Section"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "Deals with the header portion of your theme."
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Background Image Section"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Deals with the background of your theme."
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Navigation Section"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Deals with the navigation area of your theme."
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "Colors Section"
+msgstr ""
+
+#: inc/customizer.php:79
+msgid "Deals with the colors of your theme."
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Front Page Section"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Deals with setting up the front page of your theme."
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Content Section"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Deals with the main content area of your theme."
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Footer Sidebar Section"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Deals with the footer sidebar area of your theme."
+msgstr ""
+
+#: inc/customizer.php:102
+msgid "Footer Section"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "Deals with the footer area of your theme."
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Header Container"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "This is the container that holds the Header Content area."
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Header Container Background Color"
+msgstr ""
+
+#: inc/customizer.php:129
+msgid "Header Content"
+msgstr ""
+
+#: inc/customizer.php:130
+msgid ""
+"Main content area of your header, i.e site title, site description and logo."
+msgstr ""
+
+#: inc/customizer.php:142 inc/customizer.php:912
+msgid "Set width (Default is 64rem)"
+msgstr ""
+
+#: inc/customizer.php:155
+msgid "Header Content Background Color"
+msgstr ""
+
+#: inc/customizer.php:160
+msgid "Navigation Container"
+msgstr ""
+
+#: inc/customizer.php:161
+msgid ""
+"The container that holds the main navigation area. You can change the "
+"background color of this area."
+msgstr ""
+
+#: inc/customizer.php:174
+msgid "Navigation Container Background Color"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "Nav Wrapper"
+msgstr ""
+
+#: inc/customizer.php:182
+msgid ""
+"Change the width and background color of the navigation area of your theme."
+msgstr ""
+
+#: inc/customizer.php:190
+msgid "Nav Width (Default is 64rem)"
+msgstr ""
+
+#: inc/customizer.php:204
+msgid "Select Background Color"
+msgstr ""
+
+#: inc/customizer.php:209
+msgid "Top-Bar Settings"
+msgstr ""
+
+#: inc/customizer.php:210
+msgid ""
+"Configure the Top-Bar Navigation area of your theme. Set the position and "
+"change the text of the Home link."
+msgstr ""
+
+#: inc/customizer.php:223
+msgid "Main Menu Position"
+msgstr ""
+
+#: inc/customizer.php:226 inc/customizer.php:1020
+msgid "Normal Position"
+msgstr ""
+
+#: inc/customizer.php:227 inc/customizer.php:1021
+msgid "Top of Browser - Scroll"
+msgstr ""
+
+#: inc/customizer.php:228 inc/customizer.php:1022
+msgid "Top of Browser - Fixed"
+msgstr ""
+
+#: inc/customizer.php:229 inc/customizer.php:1023
+msgid "Contain-To-Grid-Sticky"
+msgstr ""
+
+#: inc/customizer.php:239
+msgid "Change text of Home link?"
+msgstr ""
+
+#: inc/customizer.php:244
+msgid "Off-Canvas Settings"
+msgstr ""
+
+#: inc/customizer.php:245
+msgid "Configure Off-Canvas Navigation area of your theme."
+msgstr ""
+
+#: inc/customizer.php:258
+msgid "Use Off-Canvas for Mobile?"
+msgstr ""
+
+#: inc/customizer.php:261 inc/customizer.php:824 inc/customizer.php:840
+#: inc/customizer.php:1034 inc/customizer.php:1046 inc/customizer.php:1095
+#: inc/customizer.php:1107
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:262 inc/customizer.php:825 inc/customizer.php:841
+#: inc/customizer.php:1035 inc/customizer.php:1047 inc/customizer.php:1094
+#: inc/customizer.php:1106
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:274
+msgid "Display Off-Canvas Left or Right?"
+msgstr ""
+
+#: inc/customizer.php:277 inc/customizer.php:877 inc/customizer.php:1058
+#: inc/customizer.php:1070
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:278 inc/customizer.php:878 inc/customizer.php:1059
+#: inc/customizer.php:1071
+msgid "Right"
+msgstr ""
+
+#: inc/customizer.php:290
+msgid "Site Title Link Color"
+msgstr ""
+
+#: inc/customizer.php:302
+msgid "Site Title Hover Color"
+msgstr ""
+
+#: inc/customizer.php:307
+msgid "Top-Bar Colors"
+msgstr ""
+
+#: inc/customizer.php:308
+msgid "Change all colors of the Top-Bar."
+msgstr ""
+
+#: inc/customizer.php:321
+msgid "Select Main Color"
+msgstr ""
+
+#: inc/customizer.php:333
+msgid "Select Divider Color"
+msgstr ""
+
+#: inc/customizer.php:345
+msgid "Select Hover Color"
+msgstr ""
+
+#: inc/customizer.php:357
+msgid "Select Active Color"
+msgstr ""
+
+#: inc/customizer.php:362
+msgid "Content Colors"
+msgstr ""
+
+#: inc/customizer.php:363
+msgid ""
+"Change text, link and hover colors in the Content section of your theme."
+msgstr ""
+
+#: inc/customizer.php:376
+msgid "Select Text Color"
+msgstr ""
+
+#: inc/customizer.php:389
+msgid "Select Link Color"
+msgstr ""
+
+#: inc/customizer.php:401
+msgid "Select Link Hover Color"
+msgstr ""
+
+#: inc/customizer.php:406
+msgid "Pagination Colors"
+msgstr ""
+
+#: inc/customizer.php:407
+msgid "Deals with the colors of built-in pgination."
+msgstr ""
+
+#: inc/customizer.php:419
+msgid "Current Background Color"
+msgstr ""
+
+#: inc/customizer.php:431
+msgid "Current Font Color"
+msgstr ""
+
+#: inc/customizer.php:443
+msgid "Pagination Link Color"
+msgstr ""
+
+#: inc/customizer.php:455
+msgid "Pagination Background Hover Color"
+msgstr ""
+
+#: inc/customizer.php:467
+msgid "Pagination Link Hover Color"
+msgstr ""
+
+#: inc/customizer.php:472
+msgid "Sidebar Colors"
+msgstr ""
+
+#: inc/customizer.php:473
+msgid "Change widget title, link and hover colors of main sidebar."
+msgstr ""
+
+#: inc/customizer.php:486
+msgid "Sidebar Widget Title Color"
+msgstr ""
+
+#: inc/customizer.php:499
+msgid "Sidebar Text Color"
+msgstr ""
+
+#: inc/customizer.php:512
+msgid "Sidebar Link Color"
+msgstr ""
+
+#: inc/customizer.php:524
+msgid "Sidebar Link Hover Color"
+msgstr ""
+
+#: inc/customizer.php:529
+msgid "Footer Sidebar Colors"
+msgstr ""
+
+#: inc/customizer.php:530
+msgid "Change widget title, link and hover colors in Footer sidebar."
+msgstr ""
+
+#: inc/customizer.php:543
+msgid "Footer Sidebar Widget Title Color"
+msgstr ""
+
+#: inc/customizer.php:556
+msgid "Footer Sidebar Text Color"
+msgstr ""
+
+#: inc/customizer.php:569
+msgid "Footer Sidebar Link Color"
+msgstr ""
+
+#: inc/customizer.php:581
+msgid "Footer Sidebar Link Hover Color"
+msgstr ""
+
+#: inc/customizer.php:586
+msgid "Footer Colors"
+msgstr ""
+
+#: inc/customizer.php:587
+msgid "Change text, link and hover colors in the Footer."
+msgstr ""
+
+#: inc/customizer.php:600
+msgid "Footer Text Color"
+msgstr ""
+
+#: inc/customizer.php:613
+msgid "Footer Link Color"
+msgstr ""
+
+#: inc/customizer.php:625
+msgid "Footer Hover Color"
+msgstr ""
+
+#: inc/customizer.php:630
+msgid "Button Colors"
+msgstr ""
+
+#: inc/customizer.php:631
+msgid ""
+"Change color and hover colors of default buttons. Affects Magellan and Sub "
+"Navs."
+msgstr ""
+
+#: inc/customizer.php:644
+msgid "Button Color"
+msgstr ""
+
+#: inc/customizer.php:656
+msgid "Button Hover Color"
+msgstr ""
+
+#: inc/customizer.php:669
+msgid "Button Font Color"
+msgstr ""
+
+#: inc/customizer.php:681
+msgid "Button Font Hover Color"
+msgstr ""
+
+#: inc/customizer.php:686
+msgid "Back To Top Colors"
+msgstr ""
+
+#: inc/customizer.php:687
+msgid "Change the color and hover colors of the back to top button."
+msgstr ""
+
+#: inc/customizer.php:700
+msgid "Back To Top Color"
+msgstr ""
+
+#: inc/customizer.php:712
+msgid "Back To Top Hover Color"
+msgstr ""
+
+#: inc/customizer.php:725
+msgid "Back To Top Font Color"
+msgstr ""
+
+#: inc/customizer.php:737
+msgid "Back To Top Font Hover Color"
+msgstr ""
+
+#: inc/customizer.php:742
+msgid "Content Container"
+msgstr ""
+
+#: inc/customizer.php:743
+msgid "This container wraps around the main content area of the theme."
+msgstr ""
+
+#: inc/customizer.php:756
+msgid "Content Container Background Color"
+msgstr ""
+
+#: inc/customizer.php:761
+msgid "Content Wrapper"
+msgstr ""
+
+#: inc/customizer.php:762
+msgid "Change width and background color of main content area."
+msgstr ""
+
+#: inc/customizer.php:772
+msgid "Content Width (Default is 64rem)"
+msgstr ""
+
+#: inc/customizer.php:786
+msgid "Content Background Color"
+msgstr ""
+
+#: inc/customizer.php:791
+msgid "Posts"
+msgstr ""
+
+#: inc/customizer.php:792
+msgid "Deals with posts in your theme."
+msgstr ""
+
+#: inc/customizer.php:805
+msgid "Show full post or excerpt?"
+msgstr ""
+
+#: inc/customizer.php:808 inc/customizer.php:1082
+msgid "Full Post"
+msgstr ""
+
+#: inc/customizer.php:809 inc/customizer.php:1083
+msgid "Excerpt"
+msgstr ""
+
+#: inc/customizer.php:821
+msgid "Display post thumbnails?"
+msgstr ""
+
+#: inc/customizer.php:837
+msgid "Show single post view thumbnail?"
+msgstr ""
+
+#: inc/customizer.php:853
+msgid "Default Post Navigation or PageNavi?"
+msgstr ""
+
+#: inc/customizer.php:856 inc/customizer.php:1118
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:857 inc/customizer.php:1119
+msgid "PageNavi"
+msgstr ""
+
+#: inc/customizer.php:861
+msgid "Sidebar"
+msgstr ""
+
+#: inc/customizer.php:862
+msgid "Adjust the position of the main sidebar."
+msgstr ""
+
+#: inc/customizer.php:874
+msgid "Content Position"
+msgstr ""
+
+#: inc/customizer.php:882
+msgid "Footer Sidebar Container"
+msgstr ""
+
+#: inc/customizer.php:883
+msgid "This container wraps around the Footer Sidebar section."
+msgstr ""
+
+#: inc/customizer.php:896
+msgid "Footer Sidebar Container Background Color"
+msgstr ""
+
+#: inc/customizer.php:901
+msgid "Footer Sidebar Content"
+msgstr ""
+
+#: inc/customizer.php:902
+msgid "The main content area of the Footer Sidebar."
+msgstr ""
+
+#: inc/customizer.php:927 inc/customizer.php:977
+msgid "Set background color"
+msgstr ""
+
+#: inc/customizer.php:932
+msgid "Footer Container"
+msgstr ""
+
+#: inc/customizer.php:933
+msgid "Wraps around the footer content area."
+msgstr ""
+
+#: inc/customizer.php:946
+msgid "Footer Container Background Color"
+msgstr ""
+
+#: inc/customizer.php:951
+msgid "Footer Content"
+msgstr ""
+
+#: inc/customizer.php:952
+msgid "Deals with the content area of the footer."
+msgstr ""
+
+#: inc/customizer.php:962
+msgid "Set Width (Default is 64rem)"
+msgstr ""
+
+#: inc/customizer.php:989
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:1002
+msgid "Select position"
+msgstr ""
+
+#: inc/customizer.php:1005 inc/customizer.php:1130
+msgid "Text &amp; Nav Centered"
+msgstr ""
+
+#: inc/customizer.php:1006 inc/customizer.php:1131
+msgid "Text Right - Nav Left"
+msgstr ""
+
+#: inc/customizer.php:1007 inc/customizer.php:1132
+msgid "Text Left - Nav Right"
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:21
+msgctxt "Previous post link"
+msgid "&laquo;"
+msgstr ""
+
+#: single.php:22
+msgctxt "Next post link"
+msgid "&raquo;"
+msgstr ""
+
+#: tag.php:22
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""

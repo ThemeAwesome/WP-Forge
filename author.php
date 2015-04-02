@@ -8,7 +8,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.0.1
+ * @since WP-Forge 5.5.1.7
  */
 
 get_header(); ?>
@@ -27,7 +27,7 @@ get_header(); ?>
 			?>
 
 			<header class="archive-header">
-				<h3 class="archive-title"><?php printf( __( 'Author: %s', 'wpforge' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h3>
+				<h3 class="archive-title"><?php printf( __( 'Author: %s', 'wp-forge' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h3>
 			</header><!-- .archive-header -->
 
 			<?php
@@ -45,7 +45,7 @@ get_header(); ?>
 						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 200 ) ); ?>
 					</div><!-- .author-avatar -->
 					<div class="author-description small-12 medium-12 large-12 columns">
-						<h3><?php printf( __( 'About %s', 'wpforge' ), get_the_author() ); ?></h3>
+						<h3><?php printf( __( 'About %s', 'wp-forge' ), get_the_author() ); ?></h3>
 						<p><?php the_author_meta( 'description' ); ?></p>
 					</div><!-- .author-description -->
 				</div><!-- .author-info -->

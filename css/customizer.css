@@ -1,0 +1,150 @@
+ /* main containers */
+.header_container,
+.nav_container,
+.content_container,
+.footer_sidebar-container,
+.footer_container {
+	background-color: #e6e6e6;
+	max-width: 100%;
+	width: 100%;
+}
+
+/* main wrappers */
+.header_wrap,
+.content_wrap,
+.sidebar_wrap,
+.footer_wrap {
+	max-width:64rem;
+	background-color:#ffffff;
+	width:100%;}
+.nav_wrap {
+	max-width:64rem;
+	background-color:#333333;
+	width:100%;}
+
+/* header colors */	
+.header-info h1 a {
+	color:#444444;}
+.header-info h1 a:hover {
+	color:#0078a0;}
+.header-info h2 {
+	color:#444444;}
+
+/* top-bar colors */
+.top-bar,
+.top-bar-section ul li,
+.top-bar-section li:not(.has-form) a:not(.button),
+.top-bar-section ul li:hover:not(.has-form) > a,
+.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+	background-color:#333333;}
+.top-bar-section > ul > .divider,
+.top-bar-section > ul > [role="separator"] {
+	border-right: solid 1px #4e4e4e;}
+.top-bar-section li:not(.has-form) a:not(.button):hover,
+.top-bar .name:hover,
+.top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
+	background-color:#272727;}
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+	background-color:#008cba;}
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+	background-color:#0078a0;}
+
+/* content colors */
+#content,
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6,
+.entry-meta-header,
+.entry-meta-categories,
+.entry-meta-tags {
+	color:#444444;}
+#content a {
+	color:#008cba;}
+#content a:hover {
+	color:#007095;}
+
+/* pagination colors */
+ul.pagination li.current a,
+ul.pagination li.current button,
+ul.pagination li.current a:hover,
+ul.pagination li.current a:focus,
+ul.pagination li.current button:hover,
+ul.pagination li.current button:focus,
+.page-links a {
+	background-color:#008cba;
+	color:#ffffff;}
+ul.pagination li a,
+ul.pagination li button {
+	color:#999999;}
+ul.pagination li:hover a,
+ul.pagination li a:focus,
+ul.pagination li:hover button,
+ul.pagination li button:focus {
+	color:#999999;
+	background-color:#e6e6e6;}
+
+/* main sidebar colors */
+#content.columns {
+	float:left!important;}
+#secondary h6.widget-title {
+	color:#444444;}
+#secondary {
+	color:#444444;}
+#secondary a {
+	color:#008cba;}
+#secondary a:hover {
+	color:#007095;}
+
+/* footer sidebar colors */	
+#secondary-sidebar h6.widget-title {
+	color:#444444;}
+#secondary-sidebar {
+	color:#444444;}
+#secondary-sidebar a {
+	color:#008cba;}
+#secondary-sidebar a:hover {
+	color:#007095;}
+
+/* footer colors */
+.footer_wrap p {
+	color:#444444;}
+.footer_wrap a {
+	color:#008cba;}
+.footer_wrap a:hover {
+	color:#007095;}
+
+/* button colors */
+button,
+.button, 
+#content dl.sub-nav dd.active a {
+	background-color:#008cba;}
+button,
+.button,
+#content a.button, 
+#content dl.sub-nav dd.active a {
+	color:#ffffff;}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus, 
+#content dl.sub-nav dd.active a:hover, 
+#content dl.sub-nav dd.active a:focus {
+	background-color:#007095;}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus, 
+#content dl.sub-nav dd.active a:hover, 
+#content dl.sub-nav dd.active a:focus {
+	color:#ffffff;}
+
+/* back to top colors */	
+#backtotop {
+	background-color:#888888;
+	color:#ffffff;}
+#backtotop:hover, 
+#backtotop:focus {
+	background-color:#444444;}
