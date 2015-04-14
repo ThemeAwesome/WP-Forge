@@ -5,7 +5,7 @@
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * @since WP-Forge 5.5.1.7 
+ * @since WP-Forge 5.5.1.8 
 */
 
 (function ($, window, document, undefined) {
@@ -285,7 +285,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.5.1.7',
+    version : '5.5.1.8',
 
     media_queries : {
       'small'       : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),

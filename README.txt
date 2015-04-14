@@ -1,14 +1,14 @@
 === WP-Forge ===
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
 Requires at least: 4.1
-Tested up to: 4.1
-Stable tag: 5.5.1.7
+Tested up to: 4.1.1
+Stable tag: 5.5.1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-A simple, responsive theme, WP-Forge is a combination of two powerful platforms. The first, of course, being WordPress, the leading open source blogging tool and content management system. The second being ZURB Foundation, the most advanced responsive front-end framework in the world. You can use WP-Forge right out of the box, or use it with WP-Starter (WP-Forges' WordPress child theme) to build the site you've always wanted.
+A simple, responsive theme, WP-Forge is a combination of two powerful platforms. The first, of course, being WordPress, the leading open source blogging tool and content management system. The second being ZURB Foundation, the most advanced responsive front-end framework in the world. Foundation comes packed with all kinds of goodies. You get cool things like tooltips, modal popups, a slider, pricing tables and a whole bunch more. Combine that with WordPress and you get a responsive WordPress theme that makes creating websites fun and exciting again! You can use WP-Forge right out of the box, or use it with WP-Starter (WP-Forges' WordPress child theme) to build the site you've always wanted.
 
 == Bundled Resources ==
 

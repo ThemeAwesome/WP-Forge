@@ -1,0 +1,129 @@
+body, html {
+	height: auto !important;
+}
+html {
+    padding:15px !important;
+}
+html .mceContentBody {
+	padding:0;
+	background:#fff;
+	font-family: 'Open Sans', sans-serif;
+}
+html .mceContentBody p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300!important;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #444444!important;
+	font-weight: 300!important;
+}
+cite {
+	border-bottom:0;
+}
+html .mceContentBody ul, 
+html .mceContentBody ol {
+	margin-left:25px;
+}
+.mceContentBody code {
+	font-family: Consolas, Monaco, Lucida Console, monospace;
+	font-size: 12px;
+	line-height: 2;
+}
+.mceContentBody pre {
+	background: #f5f5f5;
+	color: #666;
+	font-family: monospace;
+	font-size: 14px;
+	margin: 20px 0;
+	overflow: auto;
+	padding: 20px;
+	white-space: pre;
+	white-space: pre-wrap;
+}
+.mceContentBody pre code {
+	display: block;
+}
+.mceContentBody abbr,
+.mceContentBody dfn,
+.mceContentBody acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+.mceContentBody address {
+	display: block;
+	line-height: 1.714285714;
+	margin: 0 0 1.5rem;
+}
+.mceContentBody img.alignleft, 
+.mceContentBody .wp-caption.alignleft {
+	margin: 12px 1.5rem 12px 0;
+}
+.mceContentBody img.alignright, 
+.mceContentBody .wp-caption.alignright {
+	margin: 12px 0 12px 1.5rem;
+}
+.mceContentBody img.aligncenter {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+.mceContentBody img.alignnone {
+	margin-bottom: 1.5rem;
+}
+.mceContentBody embed,
+.mceContentBody iframe,
+.mceContentBody object,
+.mceContentBody video {
+	margin-bottom: 1.5rem;
+}
+.mceContentBody dl {
+	margin: 0 1.5rem;
+}
+.mceContentBody dt {
+	font-weight: bold;
+	line-height: 1.714285714;
+}
+.mceContentBody dd {
+	line-height: 1.714285714;
+	margin-bottom: 1.5rem;
+}
+.mceContentBody table {
+	border-bottom: 1px solid #ededed;
+	color: #757575;
+	line-height: 2;
+	margin: 0 0 1.5rem;
+	width: 100%;
+}
+.mceContentBody table caption {
+	font-size: 16px;
+	margin: 1.5rem 0;
+}
+.mceContentBody td {
+	border-top: 1px solid #ededed;
+	padding: 0.429em 0.714em;
+}
+.mceContentBody del {
+	color: #333;
+}
+.mceContentBody ins {
+	background: #fff9c0;
+	text-decoration: none;
+	padding:0 0.214em;
+	color:inherit;
+	border:0;
+}
+.mceContentBody sub,
+.mceContentBody sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+.mceContentBody sup {
+	top: -0.5em;
+}
+.mceContentBody sub {
+	bottom: -0.25em;
+}
+.mceContentBody small {
+	font-size: smaller;
+}

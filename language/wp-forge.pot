@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 5.5.1.7\n"
+"Project-Id-Version: WP-Forge 5.5.1.8\n"
 "POT-Creation-Date: 2015-03-07 10:47-0700\n"
 "PO-Revision-Date: 2015-03-07 10:48-0700\n"
 "Last-Translator: Thomas E. Vasquez <tsquez@gmail.com>\n"

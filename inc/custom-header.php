@@ -2,23 +2,16 @@
 /**
  * Implement an optional custom header for WP-Forge
  *
- * See http://codex.wordpress.org/Custom_Headers
  *
- * @package WordPress
- * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.7
- */
-
-/**
- * Set up the WordPress core custom header arguments and settings.
- *
+ * @see http://codex.wordpress.org/Custom_Headers
  * @uses add_theme_support() to register support for 3.4 and up.
  * @uses wpforge_header_style() to style front-end.
- * @uses wpforge_admin_header_style() to style wp-admin form.
  * @uses wpforge_admin_header_image() to add custom markup to wp-admin form.
- *
- * @since WP-Forge 5.5.1.7
+ * @package WordPress
+ * @subpackage WP_Forge
+ * @since WP-Forge 5.5.1.8
  */
+
 if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
 	function wpforge_custom_header_setup() {
 		$args = array(
@@ -54,7 +47,7 @@ if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
  *
  * get_header_textcolor() options: 444444 is default, hide text (returns 'blank'), or any hex value.
  *
- * @since WP-Forge 5.5.1.7
+ * @since WP-Forge 5.5.1.8
  */
 if ( ! function_exists( 'wpforge_header_style' ) ) {
 	function wpforge_header_style() {
@@ -66,16 +59,13 @@ if ( ! function_exists( 'wpforge_header_style' ) ) {
 
 		// If we get this far, we have custom styles.
 		?>
-	<style type="text/css" id="custom-header-css">
-	<?php
-		// Has the text been hidden?
-		if ( ! display_header_text() ) :
-	?>
-	.site-title, .site-description {position: absolute; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);}
-	<?php else : ?>
-	.header-info h1 a, .header-info h2 {color: #<?php echo $text_color; ?>;}
-	<?php endif; ?>
-	</style>
-	<?php
-	}
+<style type="text/css" id="custom-header-css">
+<?php if ( ! display_header_text() ) : ?>
+.site-title, .site-description {display:none;}
+<?php else : ?>
+.site-title h1 a, .site-description {color: #<?php echo $text_color; ?>;}
+<?php endif; ?>
+</style>
+<?php
+}
 }	

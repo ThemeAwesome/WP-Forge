@@ -1,7 +1,7 @@
-Welcome to WP-Forge v5.5.1.7
+Welcome to WP-Forge v5.5.1.8
 ====================
 
-###Updated 03-28-2015
+###Updated 04-16-2015
 
 WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
 
@@ -10,6 +10,7 @@ You can see a demo of WP-Forge here: http://themeawesome.com/themes/wpforge/
 
 ###Sites Using WP-Forge###
 The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
+* [HellYeah] (http://hellyeahband.com/)
 * [Motley.com (Motley Crue)] (http://www.motley.com/)
 * [SixxamMusic.com] (http://sixxammusic.com/)
 * [BashoCafe.com] (http://bashocafe.com/)
@@ -55,9 +56,6 @@ Includes the free WordPress icon set [Genericons] (http://genericons.com/#wordpr
 ###Yoast SEO Plugin###
 Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
 
-###Additional Information###
-WP-Forge validates at 100% over at [ThemeCheck.org] (http://themecheck.org/score/wordpress_theme_wp-forge.html)
-
 Contributors
 =============
 The following individuals have contributed to WP-Forge
@@ -87,4 +85,4 @@ This means WP-Forge is completely free to use and modify as you see fit. I hope 
 
 ThemeAwesome.com
 =============
-WP-Forge is a Responsive WordPress theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on Responsive WordPress theme development.
+WP-Forge is a WordPress Foundation theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on WordPress Foundation theme development.

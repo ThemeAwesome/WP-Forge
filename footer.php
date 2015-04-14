@@ -7,7 +7,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.7
+ * @since WP-Forge 5.5.1.8
  */
 ?>
 	</section><!-- end .content-wrap -->
@@ -41,7 +41,11 @@
 
 <?php } // end if ?>
 
-    <div id="backtotop" class="hvr-fade"><i class="fa fa-angle-up"></i></div><!-- #backtotop -->
+    <div id="backtotop" class="hvr-fade">
+
+        <span class="genericon genericon-collapse"></span>
+
+    </div><!-- #backtotop -->
 
 <?php wp_footer(); ?>
 </body>
