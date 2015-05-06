@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 ?>
 
@@ -14,7 +14,7 @@
 
 <?php if( get_theme_mod( 'wpforge_nav_position' ) == '') { ?>
     <div class="nav_wrap row">
-        <nav class="top-bar" data-topbar data-options="scrolltop:false;mobile_show_parent_link:true;">
+        <nav class="top-bar" data-topbar data-options="scrolltop:false; mobile_show_parent_link: true;">
             <ul class="title-area">
                 <li class="name">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Home')); ?></a>
@@ -49,7 +49,7 @@
         <?php } else { ?>
         <div class="nav_wrap row">
         <?php } // end if ?>
-                <nav class="top-bar" data-topbar data-options="scrolltop:false;mobile_show_parent_link:true">
+                <nav class="top-bar" data-topbar data-options="scrolltop:false; mobile_show_parent_link: true">
                     <ul class="title-area">
                         <li class="name">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Home')); ?></a>
@@ -85,7 +85,7 @@
         <?php } else { ?>
         <div class="<?php echo esc_attr(get_theme_mod( 'wpforge_nav_display' )); ?>">
         <?php } // end if ?>
-            <nav class="top-bar" data-topbar data-options="scrolltop:false;mobile_show_parent_link:true">
+            <nav class="top-bar" data-topbar data-options="scrolltop:false; mobile_show_parent_link: true">
                 <ul class="title-area">
                         <li class="name">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Home')); ?></a>
@@ -121,7 +121,7 @@
         <?php } else { ?>
         <div class="fixed row">
         <?php } // end if ?>
-            <nav class="top-bar" data-topbar data-options="scrolltop:false;mobile_show_parent_link:true;">
+            <nav class="top-bar" data-topbar data-options="scrolltop:false; mobile_show_parent_link: true;">
                 <ul class="title-area">
                         <li class="name">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Home')); ?></a>
@@ -158,7 +158,7 @@
         <div class="nav_wrap row">
         <?php } // end if ?>
                 <div class="contain-to-grid sticky">
-                    <nav class="top-bar" data-topbar data-options="scrolltop:false;mobile_show_parent_link:true;">
+                    <nav class="top-bar" data-topbar data-options="scrolltop:false; mobile_show_parent_link: true;">
                         <ul class="title-area">
                             <li class="name">
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Home')); ?></a>

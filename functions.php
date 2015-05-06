@@ -1,28 +1,25 @@
 <?php
 /**
- * WP-Forge functions and definitions
+ * WP-Forge functions and definitions.
  *
- * Set up the theme and provides some helper functions, which are used in the
- * theme as custom template tags. Others are attached to action and filter
- * hooks in WordPress to change core functionality.
+ * Sets up the theme and provides some helper functions, which are used
+ * in the theme as custom template tags. Others are attached to action and
+ * filter hooks in WordPress to change core functionality.
  *
- * When using a child theme you can override certain functions (those wrapped
- * in a function_exists() call) by defining them first in your child theme's
- * functions.php file. The child theme's functions.php file is included before
- * the parent theme's file, so the child theme functions would be used.
+ * When using a child theme (see http://codex.wordpress.org/Theme_Development and
+ * http://codex.wordpress.org/Child_Themes), you can override certain functions
+ * (those wrapped in a function_exists() call) by defining them first in your child theme's
+ * functions.php file. The child theme's functions.php file is included before the parent
+ * theme's file, so the child theme functions would be used.
  *
- * @link https://codex.wordpress.org/Theme_Development
- * @link https://codex.wordpress.org/Child_Themes
+ * Functions that are not pluggable (not wrapped in function_exists()) are instead attached
+ * to a filter or action hook.
  *
- * Functions that are not pluggable (not wrapped in function_exists()) are
- * instead attached to a filter or action hook.
- *
- * For more information on hooks, actions, and filters,
- * {@link https://codex.wordpress.org/Plugin_API}
+ * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 
 /**
@@ -40,10 +37,10 @@ if ( ! isset( $content_width ) )
  */
 if ( ! function_exists( 'wpforge_adjust_content_width' ) ) {
 	function wpforge_adjust_content_width() {
-		if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
-			global $content_width;
-			$content_width = 1024;
-		}
+	    global $content_width;
+	    if ( is_page_template( 'full-width.php' ) || is_page_template( 'front-page.php' ) || is_attachment() || 
+	    	! is_active_sidebar( 'sidebar-1' ))
+	        $content_width = 1024;
 	}
 	add_action( 'template_redirect', 'wpforge_adjust_content_width' );
 }
@@ -92,9 +89,7 @@ function wpforge_setup() {
 	 *
 	 * @see http://codex.wordpress.org/Function_Reference/add_theme_support
 	 */
-	add_theme_support( 'html5', array( 
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' 
-	));	
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ));	
 
 	/**
 	 * Add support for all available post formats by default.
@@ -164,7 +159,7 @@ if ( ! function_exists( 'wpforge_add_editor_styles' ) ) {
 	function wpforge_add_editor_styles() {
 	    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700' );
 	    add_editor_style( array(
-	    	$font_url, 'css/editor-style.css','fonts/wpforge-fonts.css','style.css','css/foundation.css',
+	    	$font_url, 'css/editor-style.css','fonts/genericons.css','style.css','css/foundation.css',
 	 	));
 	}
 	add_action( 'after_setup_theme', 'wpforge_add_editor_styles' );
@@ -207,11 +202,11 @@ if ( ! function_exists( 'wpforge_google_fonts' ) ) {
  */
 function wpforge_scripts() {
     wp_enqueue_style('wpforge-genericons', get_template_directory_uri() . '/fonts/genericons.css','', '3.3' );
-    wp_enqueue_style('wpforge-normalize', get_template_directory_uri() . '/css/normalize.css','', '3.0.2' );
-    wp_enqueue_style('wpforge-foundation', get_template_directory_uri() . '/css/foundation.css','', '5.5.1' );
-    wp_enqueue_style('wpforge', get_stylesheet_uri(),'', '5.5.1.8' );
+    wp_enqueue_style('wpforge-normalize', get_template_directory_uri() . '/css/normalize.css','', '3.0.3' );
+    wp_enqueue_style('wpforge-foundation', get_template_directory_uri() . '/css/foundation.css','', '5.5.2' );
+    wp_enqueue_style('wpforge', get_stylesheet_uri(),'', '5.5.2' );
 	wp_enqueue_script ('wpforge_modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array('jquery'), '2.8.3', false );
-	wp_enqueue_script ('wpforge_foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '5.5.1', true );
+	wp_enqueue_script ('wpforge_foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '5.5.2', true );
 
 	/**
 	 * Make the "Back" string in foundation.min.js translatable. Needs to come right after foundation.min.js is
@@ -222,7 +217,7 @@ function wpforge_scripts() {
 	$translation_array = array( 'nav_back' => __( 'Back', 'wp-forge' ) );
 	wp_localize_script( 'wpforge_foundation', 'foundation_strings', $translation_array );
 
-	wp_enqueue_script ('wpforge_functions', get_template_directory_uri() . '/js/wpforge-functions.js', array('jquery'), '5.5.1.8', true );
+	wp_enqueue_script ('wpforge_functions', get_template_directory_uri() . '/js/wpforge-functions.js', array('jquery'), '5.5.2', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
@@ -230,11 +225,11 @@ add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
 /**
  * Enqueue our Foundation script with a very low priority so it loads as close to the closing body tag as possible
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_prepare_foundation' ) ) {
 	function wpforge_prepare_foundation() {	
-		wp_enqueue_script ('wpforge_load_foundation', get_template_directory_uri() . '/js/load-foundation.js', array('wpforge_foundation'), '5.5.1.8', true);
+		wp_enqueue_script ('wpforge_load_foundation', get_template_directory_uri() . '/js/load-foundation.js', array('wpforge_foundation'), '5.5.2', true);
 	}
 	add_action( 'wp_enqueue_scripts', 'wpforge_prepare_foundation', 999);
 }	
@@ -242,7 +237,7 @@ if ( ! function_exists( 'wpforge_prepare_foundation' ) ) {
 /**
  * Enque threaded comments script in footer
  *
- * @since WP-Forge 5.5.1.8 
+ * @since WP-Forge 5.5.1.7 
  */
 if ( ! function_exists( 'wpforge_enqueue_comments_reply' ) ) {
 	function wpforge_enqueue_comments_reply() {
@@ -256,7 +251,7 @@ if ( ! function_exists( 'wpforge_enqueue_comments_reply' ) ) {
 /**
  * Add Foundation 'active' class for the current menu item
  *
- * @since WP-Forge 5.5.1.8 
+ * @since WP-Forge 5.5.1.7 
  */
 if ( ! function_exists( 'wpforge_active_nav_class' ) ) {
 	function wpforge_active_nav_class( $classes, $item ) {
@@ -271,7 +266,7 @@ if ( ! function_exists( 'wpforge_active_nav_class' ) ) {
 /**
  * Use the active class of ZURB Foundation on wp_list_pages output.
  *
- * @since WP-Forge 5.5.1.8 
+ * @since WP-Forge 5.5.1.7 
  */
 if ( ! function_exists( 'wpforge_active_list_pages_class' ) ) {
 	function wpforge_active_list_pages_class( $input ) {
@@ -455,7 +450,7 @@ if ( ! function_exists( 'wpforge_widgets_init' ) ) {
  * Modified version of twentyeleven_footer_sidebar_class().
  *
  * @see Twenty Eleven Theme Functions.php line 557 
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_footer_sidebar_class' ) ) {
 	function wpforge_footer_sidebar_class() {
@@ -493,7 +488,7 @@ if ( ! function_exists( 'wpforge_footer_sidebar_class' ) ) {
  * Numeric Page Navi (built into the theme by default)
  *
  * @see http://320press.com/wp-foundation/
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_page_navi' ) ) {
 	function wpforge_page_navi($before = '', $after = '') {
@@ -549,7 +544,7 @@ if ( ! function_exists( 'wpforge_page_navi' ) ) {
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_content_nav' ) ) :
 
@@ -580,7 +575,7 @@ endif;
  * simply create your own wpforge_comment(), and that function will be used instead.
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_comment' ) ) :
 
@@ -641,7 +636,7 @@ endif;
  * Prints HTML with meta information for current post in home and single post view: categories
  * Create your own wpforge_entry_meta_categories() to override in a child theme.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_entry_meta_categories' ) ) :
 	function wpforge_entry_meta_categories() {
@@ -656,7 +651,7 @@ endif;
 /**
  * Print HTML with meta information for the current post-date/time and author.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_entry_meta_header' ) ) :
 	function wpforge_entry_meta_header() {
@@ -679,7 +674,7 @@ endif;
  * Prints HTML with meta information in the footer for current post in home and single post view: tags.
  * Create your own wpforge_entry_meta_footer() to override in a child theme.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_entry_meta_footer' ) ) :
 
@@ -696,15 +691,14 @@ endif;
  * Extends the default WordPress body class to denote:
  * 1. Using a full-width layout, when no active widgets in the sidebar
  *    or full-width template.
- * 2. Front Page template: thumbnail in use and number of sidebars for
- *    widget areas.
+ * 2. Using a full-width layout, when no active widgets in the sidebar
+ *    or front-page template. 
  * 3. White or empty background color to change the layout and spacing.
- * 4. Custom fonts enabled.
- * 5. Single or multiple authors.
+ * 4. Single or multiple authors.
  * @param array Existing class values.
  * @return array Filtered class values.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_body_class' ) ) {
 	function wpforge_body_class( $classes ) {
@@ -713,22 +707,13 @@ if ( ! function_exists( 'wpforge_body_class' ) ) {
 		if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'page-templates/full-width.php' ) )
 			$classes[] = 'full-width';
 
-		if ( is_page_template( 'page-templates/front-page.php' ) ) {
-			$classes[] = 'template-front-page';
-			if ( has_post_thumbnail() )
-				$classes[] = 'has-post-thumbnail';
-			if ( is_active_sidebar( 'sidebar-2' ) && is_active_sidebar( 'sidebar-3' ) )
-				$classes[] = 'two-sidebars';
-		}
+		if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'page-templates/front-page.php' ) )
+			$classes[] = 'front-page';		
 
 		if ( empty( $background_color ) )
 			$classes[] = 'custom-background-empty';
 		elseif ( in_array( $background_color, array( 'e6e6e6', 'e6e6e6' ) ) )
 			$classes[] = 'custom-background-white';
-
-		// Enable custom font class only if the font CSS is queued to load.
-		if ( wp_style_is( 'fonts', 'queue' ) )
-			$classes[] = 'custom-font-enabled';
 
 		if ( ! is_multi_author() )
 			$classes[] = 'single-author';
@@ -742,7 +727,7 @@ if ( ! function_exists( 'wpforge_body_class' ) ) {
  * Custom Excerpt Length
  *
  * @see http://codex.wordpress.org/Function_Reference/the_excerpt
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_custom_excerpt' ) ) {
 	function wpforge_custom_excerpt( $length ) { 
@@ -755,7 +740,7 @@ if ( ! function_exists( 'wpforge_custom_excerpt' ) ) {
  * Replaces "[...]" (appended to automatically generated excerpts) with ...
  * and a Continue reading link.
  *
- * @since WP-Forge 5.5.1.8.1
+ * @since WP-Forge 5.5.1.7
  *
  * @param string $more Default Read More excerpt link.
  * @return string Filtered Read More excerpt link.
@@ -776,7 +761,7 @@ endif;
 /**
  * Remove .sticky from the post_class array
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_filter_post_class' ) ) {
 	function wpforge_filter_post_class( $classes ) {
@@ -793,7 +778,7 @@ if ( ! function_exists( 'wpforge_filter_post_class' ) ) {
  * Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
  *
  * @see https://gist.github.com/Narga/2887406
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_remove_recent_comments_style' ) ) {
 	function wpforge_remove_recent_comments_style() {  
@@ -814,6 +799,20 @@ if ( ! function_exists( 'wpforge_link_postthumb' ) ) {
 	  return $html;
 	}
 	add_filter( 'post_thumbnail_html', 'wpforge_link_postthumb', 10, 3 );
+}
+
+/**
+ * Outputs a custom Favicon in the header.
+ *
+ * @since WP-Forge 5.5.2
+*/
+if ( get_theme_mod('wpforge_favicon_url') != '' ) {
+if ( ! function_exists( 'wpforge_set_favicon' ) ) {
+function wpforge_set_favicon() { ?>
+<link rel="shortcut icon" href="<?php echo esc_url(get_theme_mod('wpforge_favicon_url')); ?>" /> 
+<?php }
+add_action('wp_head', 'wpforge_set_favicon');
+}
 }
 
 ?>

@@ -2,7 +2,7 @@
  * We use this file to add different elements to the theme via javascript i.e. the Back to Top code, which
  * appears when a user scrolls and when clicked will scroll the page up to the top for the user.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 
 jQuery(document).ready(function(){

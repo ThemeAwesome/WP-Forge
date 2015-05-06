@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 ?>
 
@@ -12,7 +12,7 @@
 /**
  * Text and Nav default
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
  if( get_theme_mod( 'wpforge_footer_position' ) == '') { ?>
 
@@ -61,7 +61,7 @@
  * Text and Nav centered
  * Menu and text positioned in the center
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
  if( get_theme_mod( 'wpforge_footer_position' ) == 'center') { ?>
 
@@ -110,7 +110,7 @@
  * Text Right - Nav Left
  * Menu positioned to the left and copyright text positioned to the right
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
  if( get_theme_mod( 'wpforge_footer_position' ) == 'right') { ?>
 
@@ -158,7 +158,7 @@
  * Text Left - Nav Right
  * Menu positioned to the right and copyright text positioned to the left.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
  if( get_theme_mod( 'wpforge_footer_position' ) == 'left') { ?>
 

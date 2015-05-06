@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">

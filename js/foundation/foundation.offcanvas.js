@@ -1,13 +1,10 @@
-/*
- * @since WP-Forge 5.5.1.8 
-*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.offcanvas = {
     name : 'offcanvas',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     settings : {
       open_method : 'move',
@@ -114,13 +111,13 @@
 
     show : function (class_name, $off_canvas) {
       $off_canvas = $off_canvas || this.get_wrapper();
-      $off_canvas.trigger('open').trigger('open.fndtn.offcanvas');
+      $off_canvas.trigger('open.fndtn.offcanvas');
       $off_canvas.addClass(class_name);
     },
 
     hide : function (class_name, $off_canvas) {
       $off_canvas = $off_canvas || this.get_wrapper();
-      $off_canvas.trigger('close').trigger('close.fndtn.offcanvas');
+      $off_canvas.trigger('close.fndtn.offcanvas');
       $off_canvas.removeClass(class_name);
     },
 

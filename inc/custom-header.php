@@ -2,16 +2,23 @@
 /**
  * Implement an optional custom header for WP-Forge
  *
+ * See http://codex.wordpress.org/Custom_Headers
  *
- * @see http://codex.wordpress.org/Custom_Headers
- * @uses add_theme_support() to register support for 3.4 and up.
- * @uses wpforge_header_style() to style front-end.
- * @uses wpforge_admin_header_image() to add custom markup to wp-admin form.
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 
+/**
+ * Set up the WordPress core custom header arguments and settings.
+ *
+ * @uses add_theme_support() to register support for 3.4 and up.
+ * @uses wpforge_header_style() to style front-end.
+ * @uses wpforge_admin_header_style() to style wp-admin form.
+ * @uses wpforge_admin_header_image() to add custom markup to wp-admin form.
+ *
+ * @since WP-Forge 5.5.1.7
+ */
 if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
 	function wpforge_custom_header_setup() {
 		$args = array(
@@ -47,7 +54,7 @@ if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
  *
  * get_header_textcolor() options: 444444 is default, hide text (returns 'blank'), or any hex value.
  *
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 if ( ! function_exists( 'wpforge_header_style' ) ) {
 	function wpforge_header_style() {
@@ -59,11 +66,12 @@ if ( ! function_exists( 'wpforge_header_style' ) ) {
 
 		// If we get this far, we have custom styles.
 		?>
-<style type="text/css" id="custom-header-css">
-<?php if ( ! display_header_text() ) : ?>
-.site-title, .site-description {display:none;}
-<?php else : ?>
-.site-title h1 a, .site-description {color: #<?php echo $text_color; ?>;}
+<style type="text/css" id="wpforge-custom-header-css">
+<?php
+	// Has the text been hidden?
+	if ( ! display_header_text() ) :
+?>
+.site-title,.site-title h1 a,.site-description {display:none;}
 <?php endif; ?>
 </style>
 <?php

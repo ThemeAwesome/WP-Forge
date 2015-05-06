@@ -4,7 +4,7 @@ Theme URI: http://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome.com
 Author URI: http://themeawesome.com/
 Description: A simple, responsive theme, WP-Forge is a combination of two powerful platforms: WordPress, the leading open source blogging tool and content management system and ZURB Foundation, the most advanced responsive front-end framework in the world. Foundation comes packed with all kinds of goodies. You get cool things like tooltips, modal popups, a slider, pricing tables and a whole bunch more. Combine the two and you get what many consider the best WordPress Foundation theme that makes creating websites fun and exciting again! Use WP-Forge right out of the box, or use it with WP-Starter (WP-Forges' WordPress child theme) to build the site you've always wanted.
-Version: 5.5.1.8
+Version: 5.5.2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, black, white, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready, responsive-layout
@@ -32,7 +32,7 @@ This theme, like WordPress, is licensed under the GPL. I hope you utilize WP-For
  * 14.0 - Misc
  * 15.0 - Media Queries
  */
-
+ 
 /**
  * 1.0 - Reset
  */
@@ -351,8 +351,9 @@ body {
 .header_container,
 .nav_container,
 .content_container,
-.footer_sidebar-container,
+.sidebar_container,
 .footer_container {
+	background-color: transparent;
 	max-width: 100%;
 	width: 100%;
 }
@@ -362,26 +363,22 @@ body {
 #header {
 	padding:1.5rem 0;
 }
-.header-logo, .header-info {
+.header-logo, 
+.header-info {
 	display:block;
 	float:left;
 	max-width:100%;
 }
-.header-info h1, .header-info h2 {
+h1.site-title, 
+h2 .site-description {
 	margin: 0
 }
-.header-info h1 a {
-	color: #444444;
-	display: block;	
-	font-size: 2.75rem;
+h1.site-title a {
+	display: block;
 	line-height: 1.2;
-	margin-bottom: 1rem;
 	text-decoration: none;
 }
-.header-info a:hover {
-	color: #21759b;
-}
-.header-info h2 {
+h2.site-description {
 	font-size: 1.6875rem;
 	line-height:1.3;	
 }
@@ -495,9 +492,6 @@ span.edit-link {
 span.edit-link .genericon {
 	font-size: 1rem;
 	line-height: 1;
-}
-#comments span.edit-link .genericon {
-	line-height: 1.7;
 }
 .attachment span.edit-link {
   margin-left: 0.5rem;
@@ -1059,7 +1053,7 @@ p.comment-form-email {
 }
 
 /**
- * 13.0 - Social Menu
+ * 14.0 - Social Menu
  */
 .social_wrap {
 	margin: 1.3rem 0 0;
@@ -1311,6 +1305,7 @@ img#wpstats{
 /**
  * 15.0 - Media Queries
  */
+
 @media only screen and (max-width: 40em) { /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 	p.site-title a {
 		font-size:1.875rem;

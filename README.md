@@ -1,7 +1,7 @@
-Welcome to WP-Forge v5.5.1.8
+Welcome to WP-Forge v5.5.2.1
 ====================
 
-###Updated 04-16-2015
+###Updated 05-06-2015
 
 WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
 

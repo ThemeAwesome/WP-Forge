@@ -1,6 +1,3 @@
-/*
- * @since WP-Forge 5.5.1.8 
-*/
 ;(function ($, window, document, undefined) {
   'use strict';
 
@@ -9,7 +6,7 @@
   Foundation.libs.joyride = {
     name : 'joyride',
 
-    version : '5.5.1',
+    version : '5.5.2',
 
     defaults : {
       expose                   : false,     // turn on or off the expose feature

@@ -3,7 +3,7 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  * Things like site title, description, and background color changes.
- * @since WP-Forge 5.5.1.8
+ * @since WP-Forge 5.5.1.7
  */
 
 ( function( $ ) {	
@@ -17,14 +17,7 @@
 		value.bind( function( to ) {
 			$( '.site-description' ).text( to );
 		} );
-	} );	
-
-	// Header Container Background Color
-	wp.customize('header_container_background_color',function( value ) {
-        value.bind(function(to) {
-            $('.header_container').css('background-color', to ? to : '' );
-        });
-    });
+	} );
 
 	// Header Wrap Background Color
 	wp.customize('header_color',function( value ) {
@@ -36,14 +29,14 @@
     // Site Title Link Color
 	wp.customize('site_title_link_color',function( value ) {
         value.bind(function(to) {
-            $('.header-info h1 a').css('color', to ? to : '' );
+            $('.site-title a').css('color', to ? to : '' );
         });
     });
 
     // Site Description Color
 	wp.customize('header_textcolor',function( value ) {
         value.bind(function(to) {
-            $('.header-info h2').css('color', to ? to : '' );
+            $('h2.site-description').css('color', to ? to : '' );
         });
     });
 
@@ -52,7 +45,8 @@
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
 				$( '.site-title, .site-title a, .site-description' ).css( {
-					'display': 'none'
+					'clip': 'rect(1px, 1px, 1px, 1px)',
+					'position': 'absolute'
 				} );
 			} else {
 				$( '.site-title, .site-title a, .site-description' ).css( {
@@ -61,7 +55,7 @@
 				} );
 			}
 		} );
-	} );       
+	} );
 
 	// Top-Bar Home Link Text
 	wp.customize('wpforge_nav_text', function(value) {
@@ -69,13 +63,12 @@
 			$('.name a').html(to);
 		});
 	});
-
 	// Top-Bar Colors
 	wp.customize('top_bar_main_color',function( value ) {
         value.bind(function(to) {
             $('.top-bar, .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li:hover:not(.has-form) > a, .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button)').css('background-color', to ? to : '' );
         });
-    });
+    });   
 
 	// Hook into background color/image change and adjust body class value as needed.
 	wp.customize( 'background_color', function( value ) {
@@ -90,7 +83,6 @@
 				body.removeClass( 'custom-background-empty custom-background-white' );
 		} );
 	} );
-
 	wp.customize( 'background_image', function( value ) {
 		value.bind( function( to ) {
 			var body = $( 'body' );
@@ -104,34 +96,18 @@
 		} );
 	} );
 
-	// Nav Container Background Color
-	wp.customize('nav_container_background_color',function( value ) {
-        value.bind(function(to) {
-            $('.nav_container').css('background-color', to ? to : '' );
-        });
-    });
-
-	// Content Container Background Color
-	wp.customize('content_container_background_color',function( value ) {
-        value.bind(function(to) {
-            $('.content_container').css('background-color', to ? to : '' );
-        });
-    });
-
 	// Content Background Color
 	wp.customize('content_color',function( value ) {
         value.bind(function(to) {
             $('.content_wrap').css('background-color', to ? to : '' );
         });
     });
-
 	// Content Font Color
 	wp.customize('content_font_color',function( value ) {
         value.bind(function(to) {
             $('#content').css('color', to ? to : '' );
         });
-    }); 
-
+    });     
 	// Content Link Color
 	wp.customize('content_link_color',function( value ) {
         value.bind(function(to) {
@@ -139,24 +115,10 @@
         });
     });
 
-	// Footer Sidebar Container Background Color
-	wp.customize('footer_sidebar_container_background_color',function( value ) {
-        value.bind(function(to) {
-            $('.sidebar_container').css('background-color', to ? to : '' );
-        });
-    });
-
 	// Footer Sidebar Content Background Color
 	wp.customize('footer_sidebar_color',function( value ) {
         value.bind(function(to) {
             $('.sidebar_wrap').css('background-color', to ? to : '' );
-        });
-    });
-
-	// Footer Sidebar Container Background Color
-	wp.customize('footer_container_background_color',function( value ) {
-        value.bind(function(to) {
-            $('.footer_container').css('background-color', to ? to : '' );
         });
     });
 
@@ -180,21 +142,21 @@
 	});    
 
 	// Widget Color
-	wp.customize('widget_title_color',function( value ) {
+	wp.customize('main_widget_title_color',function( value ) {
         value.bind(function(to) {
             $('#secondary .widget-title').css('color', to ? to : '' );
         });
     });
 
 	// Widget Text Color
-	wp.customize('widget_text_color',function( value ) {
+	wp.customize('main_widget_text_color',function( value ) {
         value.bind(function(to) {
             $('#secondary').css('color', to ? to : '' );
         });
     });
-
+    
 	// Widget Links Color
-	wp.customize('widget_link_color',function( value ) {
+	wp.customize('main_widget_link_color',function( value ) {
         value.bind(function(to) {
             $('#secondary a').css('color', to ? to : '' );
         });
@@ -220,14 +182,12 @@
             $('#secondary-sidebar a').css('color', to ? to : '' );
         });
     });
-
 	// Footer Text Color
 	wp.customize('footer_text_color',function( value ) {
         value.bind(function(to) {
             $('footer[role="contentinfo"] p').css('color', to ? to : '' );
         });
     });
-
 	// Footer Link Color
 	wp.customize('footer_link_color',function( value ) {
         value.bind(function(to) {

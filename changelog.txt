@@ -1,9 +1,21 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.1.1
-Stable tag: 5.5.1.8
+Tested up to: 4.2.1
+Stable tag: 5.5.2.1
 
 == Changelog ==
+
+= 5.5.2.1 =
+* Updated to the latest version of Foundation 5.5.2
+* Renamed the setting and control for sidebar colors. With the new WP 4.2 update this caused an issue with the way those mods were named. Mods renamed and issue is corrected.
+* Corrected issue with the site title and site description. Any colors assigned being handled by both the customizer as well as the style sheet. Moved all control of these to the customizer.
+* Removed the container colors from the cutomizer and to the style sheet. No need for these to be in the customizer when all can be controlled in one area. The background color of these containers were preventing any background image to show through. Now these background colors can be set individually in the style sheet.
+* Corrected an issue with the top-bar when placed in Contain-To-Grid-Sticky. This was causing the main Home link to move to the right.
+* Removed html5 support for gallery and caption. See the following as to why this was removed: https://wordpress.org/support/topic/html5-wp-gallery-5518
+* Added the ability to upload a favicon.
+* Adjusted the body class function in functions.php, line 703
+* Updated .po file
+* Corrected an issue with the the footer sidebar class being mislabeled in style.css. https://github.com/tsquez/wp-forge/issues/44
 
 = 5.5.1.8 =
 * Modified the description of WP-Forge in style.css.
