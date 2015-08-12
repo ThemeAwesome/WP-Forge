@@ -1,15 +1,15 @@
 <?php
 /**
- * The template that supplies Off-Canvas support to WP-Forge
+ * The template that supplies Off-Canvas mobile support to WP-Forge
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.5.1.7
+ * @since WP-Forge 5.5.2.2
  */
 ?>
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
-    <nav class="tab-bar">
+    <nav class="tab-bar show-for-medium-down">
         <?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>  
               <section class="right-small">
                   <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>

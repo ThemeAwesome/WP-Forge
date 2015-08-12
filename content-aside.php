@@ -9,7 +9,6 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php wpforge_entry_meta_categories(); ?>
 		<div class="entry-meta-header">
 			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'aside' ) ); ?>" title="View all Aside Posts"><span class="genericon genericon-aside"></span> <?php echo get_post_format_string( 'aside' ); ?></a>			
 			<?php wpforge_entry_meta_header(); ?>
@@ -26,7 +25,11 @@
 		</div><!-- .aside -->
 
 		<footer class="entry-meta">
-			<?php wpforge_entry_meta_footer(); ?>
+			<div class="entry-meta-footer">
+				<?php  if( get_theme_mod( 'wpforge_tag_display','yes' ) == 'yes') { ?>
+					<?php wpforge_entry_meta_footer(); ?>
+				<?php } // end if ?>
+			</div><!-- end .entry-meta-footer -->
 			<?php get_template_part( 'content', 'author' ); ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->

@@ -8,8 +8,8 @@
  * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
  */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+?><!doctype html>
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,21 +18,29 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>>   
 
-    <?php get_template_part( 'content', 'off_canvas' ); ?>
+        <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
 
-    <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top') { ?>
+            <?php get_template_part( 'content', 'off_canvas_mobile' ); ?>
 
-        <?php get_template_part( 'content', 'nav' ); ?>
+        <?php } // end if ?>
 
-    <?php } // end if ?>
+        <?php if( get_theme_mod( 'wpforge_nav_select' ) == 'offcanvas') { ?>
 
-    <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
+            <?php get_template_part( 'content', 'off_canvas' ); ?>
 
-        <?php get_template_part( 'content', 'nav' ); ?>
-        
-    <?php } // end if ?>
+        <?php } // end if ?>         
+
+        <?php if( get_theme_mod( 'wpforge_nav_select','topbar' ) == 'topbar') { ?>
+
+            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'top' || get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
+                
+                <?php get_template_part( 'content', 'nav' ); ?>
+
+            <?php } // end if ?>
+
+        <?php } // end if ?>
 
         <div class="header_container">
 
@@ -60,28 +68,22 @@
 
              </div><!-- .site-header -->
 
-        </header><!-- #header -->
+        </header><!-- #header -->       
 
         </div><!-- end .header_container -->
 
-            <?php if( get_theme_mod( 'wpforge_nav_position' ) == '') { ?>
+        <?php if( get_theme_mod( 'wpforge_nav_select','topbar' ) == 'topbar') { ?>
 
-                <?php get_template_part( 'content', 'nav' ); ?>
-
-            <?php } // end if ?>       
-            
-            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal') { ?>
+            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal' || get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
 
                 <?php get_template_part( 'content', 'nav' ); ?>
 
             <?php } // end if ?>
 
-            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
-
-                <?php get_template_part( 'content', 'nav' ); ?>
-
-            <?php } // end if ?>            
+        <?php } // end if ?>
 
         <div class="content_container">
     
         <section class="content_wrap row" role="document">
+            <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes' || get_theme_mod( 'wpforge_nav_select' ) == 'offcanvas') { ?>
+        <hr class="show-for-medium-down"><?php } // end if ?>             

@@ -6,7 +6,10 @@
  * @since WP-Forge 5.5.1.7
  */
 
-( function( $ ) {	
+( function( $ ) {
+
+/* Start adding */
+
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
@@ -18,6 +21,13 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
+
+	// Header Wrap Width
+	wp.customize('header_width',function( value ) {
+        value.bind(function(to) {
+            $('.header_wrap').css('max-width', to ? to : '' );
+        });
+    });	
 
 	// Header Wrap Background Color
 	wp.customize('header_color',function( value ) {
@@ -57,6 +67,13 @@
 		} );
 	} );
 
+	// Nav Wrap Width
+	wp.customize('nav_width',function( value ) {
+        value.bind(function(to) {
+            $('.nav_wrap').css('max-width', to ? to : '' );
+        });
+    });		
+
 	// Top-Bar Home Link Text
 	wp.customize('wpforge_nav_text', function(value) {
 		value.bind(function(to) {
@@ -68,7 +85,63 @@
         value.bind(function(to) {
             $('.top-bar, .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul li:hover:not(.has-form) > a, .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button)').css('background-color', to ? to : '' );
         });
-    });   
+    });
+
+	// Off-Canvas Hamburger Icon Text
+	wp.customize('wpforge_off_canvas_text', function(value) {
+		value.bind(function(to) {
+			$('section.tab-bar-section.middle a').html(to);
+		});
+	});
+
+	// Off-Canvas Main Color
+	wp.customize('wpforge_off_canvas_main_color',function( value ) {
+        value.bind(function(to) {
+            $('.tab-bar, .left-off-canvas-menu, .right-off-canvas-menu').css('background-color', to ? to : '' );
+        });
+    });
+
+	// Off-Canvas Main Title Color
+	wp.customize('wpforge_hamburger_icon_title_color',function( value ) {
+        value.bind(function(to) {
+            $('section.tab-bar-section.middle a').css('color', to ? to : '' );
+        });
+    });
+
+	// Off-Canvas Link Color
+	wp.customize('wpforge_off_canvas_link_color',function( value ) {
+	    value.bind(function(to) {
+	        $('ul.off-canvas-list li a').css('color', to ? to : '' );
+	    });
+	});
+
+	// Off-Canvas Hover Color
+	wp.customize('wpforge_off_canvas_hover_color',function( value ) {
+	    value.bind(function(to) {
+	        $('ul.off-canvas-list li a:hover').css('color', to ? to : '' );
+	    });
+	});  
+
+	// Off-Canvas Background Hover Color
+  	wp.customize('wpforge_off_canvas_background_hover_color',function( value ) {
+        value.bind(function(to) {
+            $('ul.off-canvas-list li a:hover').css('background-color', to ? to : '' );
+        });
+    });
+
+    // Off-Canvas Active Color
+    wp.customize('wpforge_off_canvas_active_color',function( value ) {
+        value.bind(function(to) {
+            $('ul.off-canvas-list .active > a').css('background-color', to ? to : '' );
+        });
+    });
+
+    // Off-Canvas Active Hover Color
+    wp.customize('wpforge_off_canvas_active_hover_color',function( value ) {
+        value.bind(function(to) {
+            $('ul.off-canvas-list .active > a:hover').css('background-color', to ? to : '' );
+        });
+    });        
 
 	// Hook into background color/image change and adjust body class value as needed.
 	wp.customize( 'background_color', function( value ) {
@@ -96,24 +169,40 @@
 		} );
 	} );
 
+	// Content Wrapper Width
+	wp.customize('content_width',function( value ) {
+        value.bind(function(to) {
+            $('.content_wrap').css('max-width', to ? to : '' );
+        });
+    });
+
 	// Content Background Color
 	wp.customize('content_color',function( value ) {
         value.bind(function(to) {
             $('.content_wrap').css('background-color', to ? to : '' );
         });
     });
+
 	// Content Font Color
 	wp.customize('content_font_color',function( value ) {
         value.bind(function(to) {
             $('#content').css('color', to ? to : '' );
         });
-    });     
+    });
+
 	// Content Link Color
 	wp.customize('content_link_color',function( value ) {
         value.bind(function(to) {
             $('#content a').css('color', to ? to : '' );
         });
     });
+
+	// Footer Sidebar Width
+	wp.customize('footer_sidebar_width',function( value ) {
+        value.bind(function(to) {
+            $('.sidebar_wrap').css('max-width', to ? to : '' );
+        });
+    });    
 
 	// Footer Sidebar Content Background Color
 	wp.customize('footer_sidebar_color',function( value ) {
@@ -129,7 +218,14 @@
         });
     });
 
-	// Footer
+	// Footer Content Width
+	wp.customize('footer_content_width',function( value ) {
+        value.bind(function(to) {
+            $('.footer_wrap').css('max-width', to ? to : '' );
+        });
+    });
+
+	// Footer Text
 	wp.customize('wpforge_footer_text', function(value) {
 		value.bind(function(to) {
 			$('.site-info').html(to);
@@ -205,6 +301,8 @@
         value.bind(function(to) {
             $('button,.button,#content a.button').css('color', to ? to : '' );
         });
-    });          
+    });
+
+/* end adding */
 
 } )( jQuery );

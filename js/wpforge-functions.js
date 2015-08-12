@@ -9,8 +9,6 @@ jQuery(document).ready(function(){
 
 	// Add button class to certain buttons in the theme
 	jQuery('input[type="submit"]').addClass('tiny radius button');
-	jQuery('.attachment-post-thumbnail').addClass('th');
-
 	
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
 	jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo" />');

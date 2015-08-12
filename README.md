@@ -1,12 +1,15 @@
-Welcome to WP-Forge v5.5.2.1
+Welcome to WP-Forge v5.5.2.2
 ====================
 
-###Updated 05-06-2015
+###Updated 08-10-2015
 
-WP-Forge is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Zurb's Foundation for Sites, the most advanced responsive front-end framework in the world.
+WP-Forge is A WordPress Foundation theme that combinds two powerful platforms: WordPress, the leading open source blogging tool and content management system and ZURB's Foundation, the most advanced responsive front-end framework in the world. Foundation comes packed with all kinds of goodies. You get cool things like tooltips, modal popups, a slider, pricing tables and a whole lot more. By combining WordPress and Foundation you get a theme that makes creating websites fun and exciting again! Use WP-Forge right out of the box, or as a parent theme with WP-Starter (the child theme I developed for WP-Forge) to build the site you've always wanted.
 
 ##WP-Forge Demo##
 You can see a demo of WP-Forge here: http://themeawesome.com/themes/wpforge/
+
+##WP-Forge Quick Start Guide##
+A helpul guide to get your site up and running as quickly as possible: http://themeawesome.com/docs/wp-forge/
 
 ###Sites Using WP-Forge###
 The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
@@ -50,7 +53,7 @@ WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in t
 ###Child Theme###
 I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
 
-###Genericons 3.3###
+###Genericons 3.3.1###
 Includes the free WordPress icon set [Genericons] (http://genericons.com/#wordpress)
 
 ###Yoast SEO Plugin###
@@ -85,4 +88,4 @@ This means WP-Forge is completely free to use and modify as you see fit. I hope 
 
 ThemeAwesome.com
 =============
-WP-Forge is a WordPress Foundation theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on WordPress Foundation theme development.
+WP-Forge is a WordPress Foundation theme developed by [ThemeAwesome.com](http://themeawesome.com), a site focused on WordPress Foundation theme development and WordPress Help & Support.

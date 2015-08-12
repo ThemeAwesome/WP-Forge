@@ -134,9 +134,13 @@ function wpforge_setup() {
 	 * @see http://codex.wordpress.org/Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-
-	// Set custom thumbnail dimensions
 	set_post_thumbnail_size( 685, 9999 ); // Unlimited height, soft crop
+
+	/**
+	* Full width image size added for featured image support in pages
+	* @since WP-Forge 5.5.2.2 
+	*/
+	add_image_size( 'full-width-thumb', 1024, 9999 ); // Fixed width, Unlimited height, soft crop	
 
 	/**
 	 * This theme supports custom background color and image, and here we also set up the default background color.
@@ -180,6 +184,13 @@ require( get_template_directory() . '/inc/custom-header.php' );
 require( get_template_directory() . '/inc/customizer.php' );
 
 /**
+ * A non-disruptive admin page which informs users about additional resources
+ *
+ * @since WP-Forge 5.5.2.2
+ */
+require( get_template_directory() . '/inc/about/about.php' );
+
+/**
  * Load our Google Font
  *
  * Create your own Google font function to override in a child theme.
@@ -201,10 +212,10 @@ if ( ! function_exists( 'wpforge_google_fonts' ) ) {
  * @see http://codex.wordpress.org/Function_Reference/wp_enqueue_style
  */
 function wpforge_scripts() {
-    wp_enqueue_style('wpforge-genericons', get_template_directory_uri() . '/fonts/genericons.css','', '3.3' );
+    wp_enqueue_style('wpforge-genericons', get_template_directory_uri() . '/fonts/genericons.css','', '3.3.1' );
     wp_enqueue_style('wpforge-normalize', get_template_directory_uri() . '/css/normalize.css','', '3.0.3' );
     wp_enqueue_style('wpforge-foundation', get_template_directory_uri() . '/css/foundation.css','', '5.5.2' );
-    wp_enqueue_style('wpforge', get_stylesheet_uri(),'', '5.5.2' );
+    wp_enqueue_style('wpforge', get_stylesheet_uri(),'', '5.5.2.2' );
 	wp_enqueue_script ('wpforge_modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array('jquery'), '2.8.3', false );
 	wp_enqueue_script ('wpforge_foundation', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '5.5.2', true );
 
@@ -217,7 +228,7 @@ function wpforge_scripts() {
 	$translation_array = array( 'nav_back' => __( 'Back', 'wp-forge' ) );
 	wp_localize_script( 'wpforge_foundation', 'foundation_strings', $translation_array );
 
-	wp_enqueue_script ('wpforge_functions', get_template_directory_uri() . '/js/wpforge-functions.js', array('jquery'), '5.5.2', true );
+	wp_enqueue_script ('wpforge_functions', get_template_directory_uri() . '/js/wpforge-functions.js', array('jquery'), '5.5.2.2', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
@@ -643,7 +654,7 @@ if ( ! function_exists( 'wpforge_entry_meta_categories' ) ) :
 		// Translators: used between list items, there is a space after the comma.
 		$categories_list = get_the_category_list( __( ', ', 'wp-forge' ) );
 		if ( $categories_list ) {
-			echo '<div class="entry-meta-categories"><span class="categories-links">' . $categories_list . '</span></div>';
+			echo '<div class="entry-meta-categories"><span class="categories-links">'. $categories_list .'</span></div>';
 		}
 	}
 endif;
@@ -792,6 +803,7 @@ if ( ! function_exists( 'wpforge_remove_recent_comments_style' ) ) {
  * Link all post thumbnials to the post permalink
  *
  * @see http://codex.wordpress.org/Function_Reference/the_post_thumbnail
+ * @since WP-Forge 5.5.1.7 
  */
 if ( ! function_exists( 'wpforge_link_postthumb' ) ) {
 	function wpforge_link_postthumb( $html, $post_id, $post_image_id ) {
@@ -811,8 +823,29 @@ if ( ! function_exists( 'wpforge_set_favicon' ) ) {
 function wpforge_set_favicon() { ?>
 <link rel="shortcut icon" href="<?php echo esc_url(get_theme_mod('wpforge_favicon_url')); ?>" /> 
 <?php }
-add_action('wp_head', 'wpforge_set_favicon');
+add_action('wp_head', 'wpforge_set_favicon'); // Favicon for main website
+add_action( 'admin_head', 'wpforge_set_favicon' ); // Favicon for admin area
+add_action( 'login_head', 'wpforge_set_favicon' ); // Favicon for login page
 }
 }
+
+/**
+ * Prints HTML with meta information for current post in home and single post view: categories
+ * This displays at the bottom of the post if the option in the customizer is set to display categories
+ * at the bottom of posts.
+ *
+ * Create your own wpforge_entry_meta_categories() to override in a child theme.
+ *
+ * @since WP-Forge 5.5.2.2
+ */
+if ( ! function_exists( 'wpforge_bottom_meta_categories' ) ) :
+	function wpforge_bottom_meta_categories() {
+		// Translators: used between list items, there is a space after the comma.
+		$categories_list = get_the_category_list( __( ', ', 'wp-forge' ) );
+		if ( $categories_list ) {
+			echo '<div class="entry-meta-categories_bottom"><span class="categories-links"><span class="genericon genericon-category"></span> ' . $categories_list . '</span></div>';
+		}
+	}
+endif;
 
 ?>

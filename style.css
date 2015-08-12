@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: http://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome.com
 Author URI: http://themeawesome.com/
-Description: A simple, responsive theme, WP-Forge is a combination of two powerful platforms: WordPress, the leading open source blogging tool and content management system and ZURB Foundation, the most advanced responsive front-end framework in the world. Foundation comes packed with all kinds of goodies. You get cool things like tooltips, modal popups, a slider, pricing tables and a whole bunch more. Combine the two and you get what many consider the best WordPress Foundation theme that makes creating websites fun and exciting again! Use WP-Forge right out of the box, or use it with WP-Starter (WP-Forges' WordPress child theme) to build the site you've always wanted.
-Version: 5.5.2.1
+Description: WP-Forge is A WordPress Foundation theme that combinds two powerful platforms: WordPress, the leading open source blogging tool and content management system and ZURB's Foundation, the most advanced responsive front-end framework in the world. Foundation comes packed with all kinds of goodies. You get cool things like tooltips, modal popups, a slider, pricing tables and a whole lot more. By combining WordPress and Foundation you get a theme that makes creating websites fun and exciting again! Use WP-Forge right out of the box, or as a parent theme with WP-Starter (the child theme I developed for WP-Forge) to build the site you've always wanted.
+Version: 5.5.2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, black, white, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready, responsive-layout
@@ -32,7 +32,7 @@ This theme, like WordPress, is licensed under the GPL. I hope you utilize WP-For
  * 14.0 - Misc
  * 15.0 - Media Queries
  */
- 
+
 /**
  * 1.0 - Reset
  */
@@ -150,9 +150,7 @@ img.wp-post-image {
 	max-width: 100%;
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
-img.wp-post-image {
-	margin-bottom:1.5rem;
-}
+
 /* Make sure videos and embeds fit their containers */
 embed,
 iframe,
@@ -483,11 +481,20 @@ footer > .site-info.cntr {
     line-height:1;
     font-size: 1rem;
 }
+h1.entry-title {
+	line-height: 1.2;
+	margin-bottom: 1rem;
+}
 .entry-header .entry-title a {
 	text-decoration: none;
 }
 span.edit-link {
 	font-size: 0.75rem;
+	margin-left: 0.3125rem;
+}
+span.edit-link-none {
+	font-size: 0.75rem;
+	margin: 0;
 }
 span.edit-link .genericon {
 	font-size: 1rem;
@@ -532,7 +539,7 @@ article .featured-post {
 .entry-content pre,
 .comment-content pre {
 	background: #f9f9f9;
-	color: #666;
+	color: #444;
 	margin: 20px 0;
 	overflow-x: auto;
 	padding: 20px;
@@ -635,6 +642,12 @@ footer.entry-meta {
     color: #757575;
     font-size: 0.75rem;
     line-height: normal;
+}
+.entry-meta-categories_bottom {
+    color: #757575;
+    font-size: 0.75rem;
+    line-height: normal;
+    margin-bottom: 0.25rem;
 }
 .entry-meta-tags .genericon {
     font-size: 1rem;
@@ -932,6 +945,8 @@ p.edit-link .genericon {
 }
 #respond {
 	margin-top: 3rem;
+	max-width: 99%;
+	width: 99%;
 }
 #respond h3#reply-title {
 	font-size: 1.4375rem;
@@ -974,6 +989,9 @@ p.edit-link .genericon {
 	margin: 0;
 	font-size: 0.6875rem;
 	color: #5e5e5e;
+}
+#respond .form-allowed-tags code {
+	font-size: 0.68rem;
 }
 .required {
 	color: red;
@@ -1105,85 +1123,64 @@ p.comment-form-email {
 	left: 0;
 }
 .social-navigation a[href$="/feed/"]:before {
-	content: "\f413";
-	color: #ff7e00!important;}
+	content: "\f413";}
 .social-navigation a[href*="codepen.io"]:before {
-	content: "\f216";
-	color: #2d2d2c!important;}
+	content: "\f216";}
 .social-navigation a[href*="digg.com"]:before {
-	content: "\f221";
-	color: #3e7cc0!important;}
+	content: "\f221";}
 .social-navigation a[href*="dribbble.com"]:before {
-	content: "\f201";
-	color: #f977a7!important;}
+	content: "\f201";}
 .social-navigation a[href*="dropbox.com"]:before {
-	content: "\f225";
-	color: #007ee5!important;}
+	content: "\f225";}
 .social-navigation a[href*="facebook.com"]:before {
-	content: "\f203";
-	color: #3b5999!important;}
+	content: "\f203";}
 .social-navigation a[href*="flickr.com"]:before {
-	content: "\f211";
-	color: #d40055!important;}
+	content: "\f211";}
 .social-navigation a[href*="foursquare.com"]:before {
-	content: "\f226";
-	color: #229dc7!important;}
+	content: "\f226";}
 .social-navigation a[href*="plus.google.com"]:before {
-	content: "\f206";
-	color: #ca3732!important;}
+	content: "\f206";}
 .social-navigation a[href*="github.com"]:before {
-	content: "\f200";
-	color: #393939!important;}
+	content: "\f200";}
 .social-navigation a[href*="instagram.com"]:before {
-	content: "\f215";
-	color: #bd784f!important;}
+	content: "\f215";}
 .social-navigation a[href*="linkedin.com"]:before {
-	content: "\f208";
-	color: #0069a6!important;}
+	content: "\f208";}
 .social-navigation a[href*="pinterest.com"]:before {
-	content: "\f210";
-	color: #d43036!important;}
+	content: "\f210";}
 .social-navigation a[href*="getpocket.com"]:before {
-	content: "\f224";
-	color: #d43036!important;}
+	content: "\f224";}
 .social-navigation a[href*="polldaddy.com"]:before {
-	content: "\f217";
-	color: #d43036!important;}
+	content: "\f217";}
 .social-navigation a[href*="reddit.com"]:before {
-	content: "\f222";
-	color: #9aafc0!important;}
+	content: "\f222";}
 .social-navigation a[href*="stumbleupon.com"]:before {
-	content: "\f223";
-	color: #ff4519!important;}
+	content: "\f223";}
 .social-navigation a[href*="tumblr.com"]:before {
-	content: "\f214";
-	color: #2c4762!important;}
+	content: "\f214";}
 .social-navigation a[href*="twitter.com"]:before {
-	content: "\f202";
-	color: #55acee!important;}
+	content: "\f202";}
 .social-navigation a[href*="vimeo.com"]:before {
-	content: "\f212";
-	color: #20b9eb!important;}
+	content: "\f212";}
 .social-navigation a[href*="wordpress.com"]:before,
 .social-navigation a[href*="wordpress.org"]:before {
-	content: "\f205";
-	color: #ababab!important;}
+	content: "\f205";}
 .social-navigation a[href*="youtube.com"]:before {
-	content: "\f213";
-	color: #d43036!important;}
+	content: "\f213";}
 .social-navigation a[href*="mailto:"]:before {
-	content: "\f410";
-	color: #535353!important;}
+	content: "\f410";}
 .social-navigation a[href*="spotify.com"]:before {
-	content: "\f515";
-	color: #84bd00!important;}
+	content: "\f515";}
 .social-navigation a[href*="twitch.tv"]:before {
-	content: "\f516";
-	color: #6441a5!important;}
+	content: "\f516";}
 
 /**
  * 14.0 - Misc
  */
+.content_container hr {
+	border-color: #ededed;
+	margin: 0 0 1.5rem!important;
+}
 ul.off-canvas-list li, 
 ul.off-canvas-list li li, 
 ul.off-canvas-list li li li, 
@@ -1297,16 +1294,29 @@ img#wpstats{
 	display:none
 }
 
+/* Search button fix */
+.postfix.button {
+  padding: 0;
+  font-size: 0.875rem;
+}
+button.tiny, .button.tiny {
+  font-size: 0.875rem;
+}
+input[type=submit] {
+	font-size: 0.875rem!important;
+}
 /* Gravity Forms button - Only applies if you use the Gravity Forms plugin */
 .gf_browser_ie.gform_wrapper .gform_footer input.button {
 	padding: 0.62rem 1.25rem 0.68rem!important;
 }
 
+
 /**
  * 15.0 - Media Queries
  */
 
-@media only screen and (max-width: 40em) { /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+// Small screens
+@media only screen { /* Define mobile styles */
 	p.site-title a {
 		font-size:1.875rem;
 	}
@@ -1353,11 +1363,23 @@ img#wpstats{
     	font-size: 1.6875rem;
     }
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
-	}
-@media only screen and (min-width: 64.063em) and (max-width: 90em) { /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
-	}
-@media only screen and (min-width: 90.063em) and (max-width: 120em) { /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-	}
-@media only screen and (min-width: 120.063em) { /* min-width 1921px, xlarge screens */
-	}
+
+@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */

@@ -27,9 +27,9 @@ if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
 			'default-image'          => '',
 
 			// Set height and width, with a maximum value for the width.
-			'height'                 => 330,
-			'width'                  => 994,
-			'max-width'              => 994,
+			'height'                 => 175,
+			'width'                  => 960,
+			'max-width'              => 960,
 
 			// Support flexible height and width.
 			'flex-height'            => true,

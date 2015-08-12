@@ -31,7 +31,7 @@
 
     </div><!-- end #footer_container -->
 
-<?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
+<?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes' || get_theme_mod( 'wpforge_nav_select' ) == 'offcanvas') { ?>
 
 	  <a class="exit-off-canvas"></a>
 

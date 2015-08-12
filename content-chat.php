@@ -10,7 +10,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>	
 	<header class="entry-header">
-	<?php wpforge_entry_meta_categories(); ?>
+		<?php  if( get_theme_mod( 'wpforge_cat_display','yes' ) == 'yes') { ?>
+			<?php  if( get_theme_mod( 'wpforge_cat_position','top' ) == 'top') { ?>
+				<?php wpforge_entry_meta_categories(); ?>
+			<?php } // end if ?>
+		<?php } // end if ?>
 		<?php if ( is_single() ) : ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php else : ?>
@@ -34,7 +38,16 @@
 	</div><!-- .entry-content -->
 
 		<footer class="entry-meta">
-			<?php wpforge_entry_meta_footer(); ?>
+			<div class="entry-meta-footer">
+				<?php  if( get_theme_mod( 'wpforge_cat_display' ) == 'yes') { ?>
+					<?php  if( get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
+						<?php wpforge_bottom_meta_categories(); ?>
+					<?php } // end if ?>
+				<?php } // end if ?>
+				<?php  if( get_theme_mod( 'wpforge_tag_display','yes' ) == 'yes') { ?>
+					<?php wpforge_entry_meta_footer(); ?>
+				<?php } // end if ?>
+			</div><!-- end .entry-meta-footer -->
 			<?php get_template_part( 'content', 'author' ); ?>
 		</footer><!-- .entry-meta -->
 </article><!-- #post -->

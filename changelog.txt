@@ -1,11 +1,39 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.2.1
-Stable tag: 5.5.2.1
+Tested up to: 4.2.3
+Stable tag: 5.5.2.2
 
 == Changelog ==
 
-= 5.5.2.1 =
+= 5.5.2.2 =
+* Fixed the search button issue. This was caused by the Foundation update. Seems they changed something and it was causing the text on the search button to display towards the bottom of the button.
+* Wrapped all functions in customizer.php in "if function_exists" statements. Now the customizer can be overwritten easily with "remove_action".
+* Adjusted the line height of the h1.entry-title element. I felt there was too much space when the line wrapped.
+* Increased the font size for buttons, to me it looks better and is easier to see.
+* Switched where the post thumbnail was being displayed in single post view. I never noticed before but the entry-meta was showing below the post thumbnail. Single post view is supposed to display the same as home (blog) view. Now it does.
+* Added featured images to pages. Seems to make sense to me that if featured images are available in posts they should also be available for pages as well. Thanks to user geotn for pointing it out https://wordpress.org/support/topic/does-featured-image-work-for-this-theme-featured-image-not-working
+* Removed the jQuery function that added "th" to featured images. Adding "th" to featured images added the white border. I received a lot of emails asking how this can be removed.
+* Updated Genericons to 3.3.1
+* Increased the size of the Customizer area. I was seeing the top of the left panels being blocked a little, where some of the information in the panel or section was being blocked. Increasing the size has corrected the issue so far. It has reduced real estate in the customizer preview panel just a little.
+* Added favicon to admin area and login page. This makes the favicon consistent throughout the entire site if a user uploads a custom favicon.
+* Added the top-bar color to the ul when the top-bar is set to the scroll or fixed position. If there is more than one line of links and the links wrapped to  second line, the background was transparent. This looked awkward. This corrects the issue.
+* Fixed an issue with the top-bar displaying along with the off-canvas menu in mobile view.
+* Added the abilty to show or hide catgories, post meta and post tags in posts. You also have the ability to choose whether or not to show the categories above the post title or above the post tags.
+* Adjusted the font size of the code block displayed at the end of the comments form. It was kind of big and blocky and didn't look right to me.
+* Added a About WP-Forge admin page. This gives users a brief overview of WP-Forge as well as links to the WP-Forge Quick Start Guide, a link to the WP-Forge support forums and a link to download WP-Starter.
+* Added the option to hide the title area of the top-bar. This only affects the top-bar in the normal and contain-to-grid-sticky positions.
+* Added the option to float links in the top-bar to the right (default) or left positions when the top-bar is in the top of browser - scroll and top of browser - fixed positions.
+* Added a hr to the content area. This will only display when off-canvas is used in mobile. I added this because there was no separation of header or main content area in mobile view.
+* Added "hide-for-small hide-for-medium" to the top-bar in content-nav.php. This prevents the top-bar from showing along with the off-canvas menu when "Use Off-Canvas for Mobile?" is set to yes.
+* Added Off-Canvas as a menu option. This means you can use the Off-Canvas menu as your sites menu.
+* Added Off-Canvas color options to the customizer. Now users can change the colors associated with the Off-Canvas menu.
+* Added the ability for users to hide the title of any page set as the Home page. Users must have the front-page template assigned to the page in order for it to work.
+* Corrected issue with the bakground color of the Nav-Wrapper showing through when Contain-To-Grid-Sticky was selected.
+* Added the ability to change the color and hover color of links in the Social Menu.
+* Removed the different colors from the Social Menu links. All links are one color now.
+* Updated screenshot.png
+
+= 5.5.2 =
 * Updated to the latest version of Foundation 5.5.2
 * Renamed the setting and control for sidebar colors. With the new WP 4.2 update this caused an issue with the way those mods were named. Mods renamed and issue is corrected.
 * Corrected issue with the site title and site description. Any colors assigned being handled by both the customizer as well as the style sheet. Moved all control of these to the customizer.
