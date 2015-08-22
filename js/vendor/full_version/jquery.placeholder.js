@@ -1,3 +1,7 @@
+/**
+ * @version 5.5.2.5
+ */
+
 /*! http://mths.be/placeholder v2.1.1 by @mathias */
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {

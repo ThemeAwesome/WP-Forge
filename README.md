@@ -1,7 +1,7 @@
-Welcome to WP-Forge v5.5.2.2
+Welcome to WP-Forge v5.5.2.5
 ====================
 
-###Updated 08-10-2015
+###Updated 08-19-2015
 
 WP-Forge is A WordPress Foundation theme that combinds two powerful platforms: WordPress, the leading open source blogging tool and content management system and ZURB's Foundation, the most advanced responsive front-end framework in the world. Foundation comes packed with all kinds of goodies. You get cool things like tooltips, modal popups, a slider, pricing tables and a whole lot more. By combining WordPress and Foundation you get a theme that makes creating websites fun and exciting again! Use WP-Forge right out of the box, or as a parent theme with WP-Starter (the child theme I developed for WP-Forge) to build the site you've always wanted.
 

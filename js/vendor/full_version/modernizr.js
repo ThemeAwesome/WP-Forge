@@ -1,3 +1,7 @@
+/**
+ * @version 5.5.2.5
+ */
+
 /*!
  * Modernizr v2.8.3
  * www.modernizr.com

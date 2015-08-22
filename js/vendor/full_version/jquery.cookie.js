@@ -1,3 +1,7 @@
+/**
+ * @version 5.5.2.5
+ */
+
 /*!
  * jQuery Cookie Plugin v1.4.1
  * https://github.com/carhartl/jquery-cookie

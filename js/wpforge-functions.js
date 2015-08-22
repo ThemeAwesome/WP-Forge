@@ -3,6 +3,8 @@
  * appears when a user scrolls and when clicked will scroll the page up to the top for the user.
  *
  * @since WP-Forge 5.5.1.7
+ *
+ * @version 5.5.2.5
  */
 
 jQuery(document).ready(function(){

@@ -8,6 +8,8 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
+ *
+ * @version 5.5.2.5
  */
 ?>
 	</section><!-- end .content-wrap -->

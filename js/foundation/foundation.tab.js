@@ -1,3 +1,7 @@
+/**
+ * @version 5.5.2.5
+ */
+
 ;(function ($, window, document, undefined) {
   'use strict';
 

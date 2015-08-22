@@ -5,6 +5,8 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
+ *
+ * @version 5.5.2.5
  */
 ?>
 <div class="off-canvas-wrap" data-offcanvas>
@@ -22,21 +24,22 @@
         <?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>
           <section class="middle tab-bar-section go-right">
             <h5 class="title">
-              <?php if( get_theme_mod( 'wpforge_off_canvas_text' ) ) { ?>
-                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home"><?php echo get_theme_mod( 'wpforge_off_canvas_text' ); ?></a>
+              <?php if( get_theme_mod( 'wpforge_off_canvas_text','Home' ) ) { ?>
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home"><?php echo get_theme_mod( 'wpforge_off_canvas_text','Home' ); ?></a>
               <?php } // end if ?>
             </h5>
           </section>
         <?php } else { ?>
           <section class="middle tab-bar-section go-left">
             <h5 class="title">
-              <?php if( get_theme_mod( 'wpforge_off_canvas_text' ) ) { ?>
-                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home"><?php echo get_theme_mod( 'wpforge_off_canvas_text' ); ?></a>
+              <?php if( get_theme_mod( 'wpforge_off_canvas_text','Home' ) ) { ?>
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home"><?php echo get_theme_mod( 'wpforge_off_canvas_text','Home' ); ?></a>
               <?php } // end if ?>
             </h5>
           </section>
         <?php } // end if ?>
     </nav>
+    
         <?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>
           <aside class="right-off-canvas-menu">
                 <?php

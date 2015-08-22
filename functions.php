@@ -20,6 +20,8 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
+ *
+ * @version 5.5.2.5
  */
 
 /**
@@ -189,6 +191,13 @@ require( get_template_directory() . '/inc/customizer.php' );
  * @since WP-Forge 5.5.2.2
  */
 require( get_template_directory() . '/inc/about/about.php' );
+
+/**
+ * A non-disruptive admin notice which informs users about additional resources
+ *
+ * @since WP-Forge 5.5.2.3
+ */
+require( get_template_directory() . '/inc/admin-notice.php' );
 
 /**
  * Load our Google Font
@@ -811,22 +820,6 @@ if ( ! function_exists( 'wpforge_link_postthumb' ) ) {
 	  return $html;
 	}
 	add_filter( 'post_thumbnail_html', 'wpforge_link_postthumb', 10, 3 );
-}
-
-/**
- * Outputs a custom Favicon in the header.
- *
- * @since WP-Forge 5.5.2
-*/
-if ( get_theme_mod('wpforge_favicon_url') != '' ) {
-if ( ! function_exists( 'wpforge_set_favicon' ) ) {
-function wpforge_set_favicon() { ?>
-<link rel="shortcut icon" href="<?php echo esc_url(get_theme_mod('wpforge_favicon_url')); ?>" /> 
-<?php }
-add_action('wp_head', 'wpforge_set_favicon'); // Favicon for main website
-add_action( 'admin_head', 'wpforge_set_favicon' ); // Favicon for admin area
-add_action( 'login_head', 'wpforge_set_favicon' ); // Favicon for login page
-}
 }
 
 /**

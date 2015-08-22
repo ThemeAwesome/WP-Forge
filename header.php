@@ -7,6 +7,8 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
+ *
+ * @version 5.5.2.5
  */
 ?><!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -74,7 +76,7 @@
 
         <?php if( get_theme_mod( 'wpforge_nav_select','topbar' ) == 'topbar') { ?>
 
-            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'normal' || get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
+            <?php if( get_theme_mod( 'wpforge_nav_position','normal' ) == 'normal' || get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
 
                 <?php get_template_part( 'content', 'nav' ); ?>
 

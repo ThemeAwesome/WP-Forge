@@ -1,9 +1,23 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.2.4
-Stable tag: 5.5.2.2
+Tested up to: 4.3
+Stable tag: 5.5.2.5
 
 == Changelog ==
+
+= 5.5.2.5 =
+* Corrected an issue that was caused with the release of WordPress 4.3 - The cahnhes that were made to the customizer in core removed or renamed an area. This change caused an error message to be displayed when viewing the customizer.
+*Removed Site Favicon from the customizer. This is being handled now by Site Identity (a new section of the customizer added in core.)
+* Renamed Navigation Section to Menu Options.
+
+= 5.5.2.4 =
+* Corrected an issue with the top-bar menu in header.php - the default normal position was not displaying once the theme was activated or updated. Adding the default value into header.php seems to have corrected the issue. This is why menus were disappearing after activation and update.
+* Corrected an issue with the title text not showing in the off-canvas menu when set to Off-Canvas in the Menu Selection setting.
+* Reconfigured the Top-Bar Settings and Off-Canvas Settings areas. Thanks to user Geertje König who emailed me suggesting the change. This change not only makes perfect sense, it also makes this area easier to use. Basically I moved a few things around.
+* Added an admin notice that will appear when the theme is first activated. This was initially supposed to be added to 5.5.2.2 but was left out by mistake.
+
+= 5.5.2.3 =
+*cancelled update
 
 = 5.5.2.2 =
 * Fixed the search button issue. This was caused by the Foundation update. Seems they changed something and it was causing the text on the search button to display towards the bottom of the button.

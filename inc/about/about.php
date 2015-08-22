@@ -11,7 +11,7 @@ add_action('admin_init', 'wpforge_about_setup');
 function wpforge_about_setup() {
 $wpforge_about = array (
 
-array( "name" => __( 'wpforge' , 'wpforge' ),
+array( "name" => __( 'wpforge' , 'wp-forge' ),
 	"type" => "title"),
 
 array( "type" => "open"),
@@ -22,14 +22,14 @@ array( "name" => "Start Tabs",
 		"icon" => "layout"),
 
 // Home
-array( "name" => __( '<span class="genericon genericon-home"></span> Welcome' , 'wpforge' ),
+array( "name" => __( '<span class="genericon genericon-home"></span> Welcome' , 'wp-forge' ),
 		"id" => "tab_menu_0",
 		"type" => "tab",
 		"icon" => "layout",
 		"class" => " selected first"),
 
 // Get Premium
-array( "name" => __( '<span class="genericon genericon-info"></span> Additional Info' , 'wpforge' ),
+array( "name" => __( '<span class="genericon genericon-info"></span> Additional Info' , 'wp-forge' ),
 		"type" => "tab",
 		"id" => "tab_menu_1",
 		"class" => ""),
@@ -49,18 +49,18 @@ array( "name" => "tab_content_0",
 		"icon" => "layout"),
 
 // Home
-array( "name" => __( 'Welcome to WP-Forge' , 'wpforge' ),
+array( "name" => __( 'Welcome to WP-Forge' , 'wp-forge' ),
 	"type" => "heading",
 	"icon" => "layout"),
 
-array("name" => __( 'Thank you for choosing WP-Forge, the best WordPress Foundation theme available! I hope you utilize WP-Forge to learn something new, create something awesome, have fun and more importantly, I hope you share what you have learned with others.' , 'wpforge' ),
+array("name" => __( 'Thank you for choosing WP-Forge, the best WordPress Foundation theme available! I hope you utilize WP-Forge to learn something new, create something awesome, have fun and more importantly, I hope you share what you have learned with others.' , 'wp-forge' ),
 	"type" => "infotext"),
 
-array( "name" => __( 'About WP-Forge' , 'wpforge' ),
+array( "name" => __( 'About WP-Forge' , 'wp-forge' ),
 	"type" => "heading",
 	"icon" => "layout"),
 
-array("name" => __( 'WP-Forge is A WordPress Foundation theme that combinds two powerful platforms: WordPress, the leading open source blogging tool and content management system and ZURBs Foundation, the most advanced responsive front-end framework in the world. Foundation comes packed with all kinds of goodies. You get cool things like tooltips, modal popups, a slider, pricing tables and a whole lot more. By combining WordPress and Foundation you get a theme that makes creating websites fun and exciting again! Use WP-Forge right out of the box, or as a parent theme with WP-Starter (the child theme built for WP-Forge) to build the site you&rsquo;ve always wanted.' , 'wpforge' ),
+array("name" => __( 'WP-Forge is A WordPress Foundation theme that combinds two powerful platforms: WordPress, the leading open source blogging tool and content management system and ZURBs Foundation, the most advanced responsive front-end framework in the world. Foundation comes packed with all kinds of goodies. You get cool things like tooltips, modal popups, a slider, pricing tables and a whole lot more. By combining WordPress and Foundation you get a theme that makes creating websites fun and exciting again! Use WP-Forge right out of the box, or as a parent theme with WP-Starter (the child theme built for WP-Forge) to build the site you&rsquo;ve always wanted.' , 'wp-forge' ),
 	"type" => "infotext"),
 
 array( "name" => "tab_content_0",
@@ -74,26 +74,26 @@ array( "name" => "tab_content_1",
 		"display" => "none",
 		"icon" => "layout"),
 
-array( "name" => __( 'WP-Forge Quick Start Guide' , 'wpforge' ),
+array( "name" => __( 'WP-Forge Quick Start Guide' , 'wp-forge' ),
 	"type" => "heading",
 	"icon" => "layout"),
 
 array( "type" => "infotext",
-	"name" => __( 'The Wp-Forge Quick Start Guide will walk you through every aspect of WP-Forge and the theme customizer. The guide covers each and every aspect of the different panels and sections within the Customizerenabling you to get your site up and running as fast as possible.' , 'wpforge' )),
+	"name" => __( 'The Wp-Forge Quick Start Guide will walk you through every aspect of WP-Forge and the theme customizer. The guide covers each and every aspect of the different panels and sections within the Customizerenabling you to get your site up and running as fast as possible.' , 'wp-forge' )),
 
-array( "name" => __( 'WP-Forge Support Forums' , 'wpforge' ),
+array( "name" => __( 'WP-Forge Support Forums' , 'wp-forge' ),
 	"type" => "heading",
 	"icon" => "layout"),
 
 array( "type" => "infotext",
-	"name" => __( 'Have questions about how to do something with WP-Forge? Something not working the way it should? You can get fast, friendly support using the official WP-Forge support forums located on WordPress.org - Remeber, before asking a question, check the forums to make sure your question hasn&rsquo;t been asked and answered.' , 'wpforge' )),
+	"name" => __( 'Have questions about how to do something with WP-Forge? Something not working the way it should? You can get fast, friendly support using the official WP-Forge support forums located on WordPress.org - Remeber, before asking a question, check the forums to make sure your question hasn&rsquo;t been asked and answered.' , 'wp-forge' )),
 
-array( "name" => __( 'WP-Starter' , 'wpforge' ),
+array( "name" => __( 'WP-Starter' , 'wp-forge' ),
 	"type" => "heading",
 	"icon" => "layout"),
 
 array( "type" => "infotext",
-	"name" => __( 'I recommend you always use a child theme no matter what theme you are using for your site. If you don&rsquo;t have time to set up your own child theme I have created a child theme for use with WP-Forge called WP-Starter. Once you have installed WP-Forge, simply download and activate and you&rsquo;re ready to go. Just add your images and styles and your site will be up in no time.' , 'wpforge' )),
+	"name" => __( 'I recommend you always use a child theme no matter what theme you are using for your site. If you don&rsquo;t have time to set up your own child theme I have created a child theme for use with WP-Forge called WP-Starter. Once you have installed WP-Forge, simply download and activate and you&rsquo;re ready to go. Just add your images and styles and your site will be up in no time.' , 'wp-forge' )),
 
 array( "name" => "tab_content_1",
 	"type" => "tabcontent-close",
@@ -130,7 +130,7 @@ function wpforge_admin_css() { ?>
 
 <?php }
 function wpforge_add_admin() {
-	add_theme_page( __( 'About WP-Forge' , 'wpforge' ), __( 'About WP-Forge' , 'wpforge' ), 'edit_theme_options', 'about.php', 'wpforge_admin', '', '1' );
+	add_theme_page( __( 'About WP-Forge' , 'wp-forge' ), __( 'About WP-Forge' , 'wp-forge' ), 'edit_theme_options', 'about.php', 'wpforge_admin', '', '1' );
 }
 
 function wpforge_admin() {
@@ -142,13 +142,13 @@ $wpforge_about = wpforge_about_setup();
 
 	<div id="wrap_fm"><!-- [ Header ]-->
 		<div class="header_fm">
-			<div class="logo_fm"><?php _e( 'WP-Forge' , 'wpforge' ); ?></div>
+			<div class="logo_fm"><?php _e( 'WP-Forge' , 'wp-forge' ); ?></div>
 		</div>
 
 		<!-- [ Top Menu ]-->
 		<div class="top_menu_fm">
 			<a target="_blank" class="doc_fm" href="http://themeawesome.com/docs/wp-forge/"><?php _e( '<span class="genericon genericon-book"></span> WP-Forge Quick Start Guide
-' , 'wpforge' ); ?></a> <span class="genericon genericon-dot"></span> <a target="_blank" class="support_fm" href="https://wordpress.org/support/theme/wp-forge"><?php _e( '<span class="genericon genericon-help"></span> Support' , 'wpforge' ); ?></a> <span class="genericon genericon-dot"></span> <a target="_blank" class="premium_fm" href="http://themeawesome.com/wordpress-child-theme/"><?php _e( '<span class="genericon genericon-cloud-download"></span> Get WP-Starter' , 'wpforge' ); ?></a>
+' , 'wp-forge' ); ?></a> <span class="genericon genericon-dot"></span> <a target="_blank" class="support_fm" href="https://wordpress.org/support/theme/wp-forge"><?php _e( '<span class="genericon genericon-help"></span> Support' , 'wp-forge' ); ?></a> <span class="genericon genericon-dot"></span> <a target="_blank" class="premium_fm" href="http://themeawesome.com/wordpress-child-theme/"><?php _e( '<span class="genericon genericon-cloud-download"></span> Get WP-Starter' , 'wp-forge' ); ?></a>
 		</div>
 
 	<?php 

@@ -1,11 +1,15 @@
+/**
+ * @version 5.5.2.5
+ */
+
 # Copyright (C) 2015 ThemeAwesome.com
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 5.5.2.2\n"
+"Project-Id-Version: WP-Forge 5.5.2.3\n"
 "Report-Msgid-Bugs-To: tsquez@gmail.com\n"
-"POT-Creation-Date: 2015-08-05 04:31-0700\n"
-"PO-Revision-Date: 2015-08-05 04:31-0700\n"
+"POT-Creation-Date: 2015-08-15 13:51-0700\n"
+"PO-Revision-Date: 2015-08-15 13:51-0700\n"
 "Last-Translator: ThemeAwesome.com <tsquez@gmail.com>\n"
 "Language-Team: ThemeAwesome.com <tsquez@gmail.com>\n"
 "Language: \n"
@@ -182,8 +186,8 @@ msgstr ""
 msgid "Post Comment"
 msgstr ""
 
-#: comments.php:72 content-aside.php:19 content-audio.php:17
-#: content-chat.php:27 content-gallery.php:27 content-image.php:16
+#: comments.php:72 content-aside.php:16 content-audio.php:17
+#: content-chat.php:29 content-gallery.php:29 content-image.php:16
 #: content-link.php:16 content-quote.php:16 content-status.php:16
 #: content-video.php:17 content.php:30
 msgid "Comment"
@@ -216,40 +220,40 @@ msgstr ""
 msgid "Your Website"
 msgstr ""
 
-#: content-aside.php:19 content-audio.php:17 content-chat.php:27
-#: content-gallery.php:27 content-image.php:16 content-link.php:16
+#: content-aside.php:16 content-audio.php:17 content-chat.php:29
+#: content-gallery.php:29 content-image.php:16 content-link.php:16
 #: content-quote.php:16 content-status.php:16 content-video.php:17
 #: content.php:30
 msgid "1 Comment"
 msgstr ""
 
-#: content-aside.php:19 content-audio.php:17 content-chat.php:27
-#: content-gallery.php:27 content-image.php:16 content-link.php:16
+#: content-aside.php:16 content-audio.php:17 content-chat.php:29
+#: content-gallery.php:29 content-image.php:16 content-link.php:16
 #: content-quote.php:16 content-status.php:16 content-video.php:17
 #: content.php:30
 msgid "% Comments"
 msgstr ""
 
-#: content-aside.php:21 content-audio.php:19 content-chat.php:29
-#: content-gallery.php:29 content-image.php:18 content-link.php:18
+#: content-aside.php:18 content-audio.php:19 content-chat.php:31
+#: content-gallery.php:31 content-image.php:18 content-link.php:18
 #: content-quote.php:18 content-status.php:18 content-video.php:19
-#: content.php:31 content.php:33 functions.php:638
+#: content.php:31 content.php:33 functions.php:645
 msgid "Edit"
 msgstr ""
 
-#: content-aside.php:24 content-audio.php:26 content-gallery.php:20
+#: content-aside.php:21 content-audio.php:26 content-gallery.php:22
 #: content-video.php:25 content.php:22
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: content-aside.php:26 content-audio.php:37 content-gallery.php:39
+#: content-aside.php:23 content-audio.php:37 content-gallery.php:41
 #: content-image.php:21 content-link.php:21 content-quote.php:21
 #: content-status.php:27 content-video.php:36 content.php:51
 msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
-#: content-audio.php:38 content-chat.php:35 content-gallery.php:40
+#: content-audio.php:38 content-chat.php:37 content-gallery.php:42
 #: content-home.php:25 content-page.php:23 content-video.php:37 content.php:52
 #: image.php:91
 msgid "Pages:"
@@ -330,88 +334,88 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:235
 msgid "Back"
 msgstr ""
 
-#: functions.php:420
+#: functions.php:427
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:422
+#: functions.php:429
 msgid "Displays widgets in the blog area as well as pages."
 msgstr ""
 
-#: functions.php:429
+#: functions.php:436
 msgid "First Footer Widget Area"
 msgstr ""
 
-#: functions.php:431
+#: functions.php:438
 msgid "An optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:438
+#: functions.php:445
 msgid "Second Footer Widget Area"
 msgstr ""
 
-#: functions.php:440
+#: functions.php:447
 msgid "An second optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:447
+#: functions.php:454
 msgid "Third Footer Widget Area"
 msgstr ""
 
-#: functions.php:449
+#: functions.php:456
 msgid "An third optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:574
+#: functions.php:581
 msgid "Post Navigation"
 msgstr ""
 
-#: functions.php:575
+#: functions.php:582
 msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
 msgstr ""
 
-#: functions.php:576
+#: functions.php:583
 msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
-#: functions.php:601
+#: functions.php:608
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:601
+#: functions.php:608
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:616
+#: functions.php:623
 msgid "Post Author"
 msgstr ""
 
-#: functions.php:622
+#: functions.php:629
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:628
+#: functions.php:635
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:636
+#: functions.php:643
 msgid "<span class=\"genericon genericon-reply\"></span> Reply"
 msgstr ""
 
-#: functions.php:655 functions.php:694 functions.php:844
+#: functions.php:662 functions.php:701 functions.php:851
 msgid ", "
 msgstr ""
 
-#: functions.php:670
+#: functions.php:677
 msgid "Sticky"
 msgstr ""
 
-#: functions.php:765
+#: functions.php:772
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
@@ -458,6 +462,15 @@ msgstr ""
 #: tag.php:22
 #, php-format
 msgid "Tag Archives: %s"
+msgstr ""
+
+#: inc/admin-notice.php:21
+#, php-format
+msgid ""
+"Thank you for using WP-Forge! Get your site up and running fast by viewing "
+"the <a target=\"_blank\" href=\"%s\">WP-Forge Quick Start Guide!</a> <a "
+"style=\"float:right;text-decoration:none;\" href=\"%s\" title=\"Close this "
+"notice\">x</a>"
 msgstr ""
 
 #: inc/customizer.php:62
@@ -668,30 +681,31 @@ msgstr ""
 msgid "Configure Off-Canvas Navigation area of your theme."
 msgstr ""
 
-#: inc/customizer.php:316
-msgid "Display hamburger icon left or right?"
+#: inc/customizer.php:315
+msgid "Change hamburger icon text"
 msgstr ""
 
-#: inc/customizer.php:319 inc/customizer.php:1812 inc/customizer.php:2002
+#: inc/customizer.php:320
+msgid "Mobile Menu View"
+msgstr ""
+
+#: inc/customizer.php:321
+msgid ""
+"Choose to use Off-Canvas for mobile view and position the hamburger icon."
+msgstr ""
+
+#: inc/customizer.php:334
+msgid "Show hamburger icon left or right?"
+msgstr ""
+
+#: inc/customizer.php:337 inc/customizer.php:1812 inc/customizer.php:2002
 #: inc/customizer.php:2014
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:320 inc/customizer.php:1813 inc/customizer.php:2003
+#: inc/customizer.php:338 inc/customizer.php:1813 inc/customizer.php:2003
 #: inc/customizer.php:2015
 msgid "Right"
-msgstr ""
-
-#: inc/customizer.php:331
-msgid "Change hamburger icon text"
-msgstr ""
-
-#: inc/customizer.php:336
-msgid "Mobile Menu View"
-msgstr ""
-
-#: inc/customizer.php:337
-msgid "Select whether or not to use Off-Canvas for mobile view."
 msgstr ""
 
 #: inc/customizer.php:350

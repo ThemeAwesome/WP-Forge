@@ -21,6 +21,8 @@
 * @see http://ottopress.com/2015/whats-new-with-the-customizer/
 *
 * @since WP-Forge 5.5.1.7
+*
+* @version 5.5.2.5
 */
 
 /**
@@ -58,9 +60,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->get_section('title_tagline')->priority = 50; // Shows after the Header image section
   $wp_customize->get_section('title_tagline')->panel = 'wpforge_header'; // Add to Header Panel
   $wp_customize->get_section('background_image')->panel = 'wpforge_background'; // Add to Background Panel
-  $wp_customize->get_section('nav')->panel = 'wpforge_navigation'; // Add to Navigation Panel
-  $wp_customize->get_section('nav')->title = __( 'Main Navigation', 'wp-forge' ); // Changed title
-  $wp_customize->get_section('nav')->priority = 10; // Changed priority so it shows first in the navigation panel
   $wp_customize->get_section('colors')->panel = 'wpforge_colors'; // Add to Colors Panel
   $wp_customize->get_section('colors')->priority = 10; // Changed priority so it shows first in color panel
   $wp_customize->get_section('colors')->title = __( 'Header &amp; Background Colors', 'wp-forge' ); // Changed title
@@ -83,37 +82,37 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'description'    => __('Deals with the background of your theme.', 'wp-forge'),
   ));
   $wp_customize->add_panel( 'wpforge_navigation', array( // Navigation Panel
-      'priority'       => 3,
+      'priority'       => 4,
       'capability'     => 'edit_theme_options',
-      'title'          => __('Navigation Section', 'wp-forge'),
-      'description'    => __('Deals with the navigation area of your theme.', 'wp-forge'),
+      'title'          => __('Menu Options', 'wp-forge'),
+      'description'    => __('Select the menu type you want to use with your theme.', 'wp-forge'),
   ));
   $wp_customize->add_panel( 'wpforge_colors', array( // Color Panel
-      'priority'       => 4,
+      'priority'       => 5,
       'capability'     => 'edit_theme_options',
       'title'          => __('Colors Section', 'wp-forge'),
       'description'    => __('Deals with the colors of your theme.', 'wp-forge'),
   ));
   $wp_customize->add_panel( 'wpforge_front_page', array( // Front Page Panel
-      'priority'       => 5,
+      'priority'       => 6,
       'capability'     => 'edit_theme_options',
       'title'          => __('Front Page Section', 'wp-forge'),
       'description'    => __('Deals with setting up the front page of your theme.', 'wp-forge'),
   ));
   $wp_customize->add_panel( 'wpforge_content', array( // Content Panel
-      'priority'       => 6,
+      'priority'       => 7,
       'capability'     => 'edit_theme_options',
       'title'          => __('Content Section', 'wp-forge'),
       'description'    => __('Deals with the main content area of your theme.', 'wp-forge'),
   ));
   $wp_customize->add_panel( 'wpforge_footer_sidebar', array( // Footer Sidebar Panel
-      'priority'       => 7,
+      'priority'       => 8,
       'capability'     => 'edit_theme_options',
       'title'          => __('Footer Sidebar Section', 'wp-forge'),
       'description'    => __('Deals with the footer sidebar area of your theme.', 'wp-forge'),
   ));
   $wp_customize->add_panel( 'wpforge_footer', array( // Footer Panel
-      'priority'       => 8,
+      'priority'       => 9,
       'capability'     => 'edit_theme_options',
       'title'          => __('Footer Section', 'wp-forge'),
       'description'    => __('Deals with the footer area of your theme.', 'wp-forge'),
@@ -153,23 +152,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'label' => __('Header Content Background Color', 'wp-forge'),
     'section' => 'header_content',
     'settings' => 'header_color',
-  )));
-  $wp_customize->add_section('site_favicon', array( /* header content section */
-    'title' => __('Site Favicon', 'wp-forge'),
-    'description' => __('Upload a favicon for your site.', 'wp-forge'),
-    'priority' => 35,
-    'panel' => 'wpforge_header',
-  ));
-  $wp_customize->add_setting('wpforge_favicon_url', array(
-      'default'        => '',
-      'capability'     => 'edit_theme_options',
-      'type'           => 'theme_mod',
-      'sanitize_callback' => 'wpforge_sanitize_uri',
-  ));
-  $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'wpforge_favicon_url', array(
-      'label'    => __('Favicon', 'wpforge'),
-      'section'  => 'site_favicon',
-      'settings' => 'wpforge_favicon_url',
   )));
   $wp_customize->add_section('nav_content', array( /* nav wrapper section */
     'title' => __('Nav Wrapper', 'wp-forge'),
@@ -304,28 +286,12 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'priority' => 50,
     'panel' => 'wpforge_navigation',
   ));
-  $wp_customize->add_setting('wpforge_mobile_position',array( /* hamburger icon position */
-    'default' => 'left',
-    'type'    => 'theme_mod',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'wpforge_sanitize_mobile_position',
-    'priority' => 5,  
-  ));
-  $wp_customize->add_control('wpforge_mobile_position',array(
-    'type' => 'select',
-    'label' => __('Display hamburger icon left or right?', 'wp-forge'),
-    'section' => 'off_canvas',
-    'choices' => array(
-      'left'  => __('Left', 'wp-forge'),
-      'right' => __('Right', 'wp-forge'),
-    ),
-  ));
   $wp_customize->add_setting('wpforge_off_canvas_text',array( /* off-canvas main link anchor text */
     'default' => 'Home',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',    
     'sanitize_callback' => 'wpforge_sanitize_text',   
-    'priority' => 10,
+    'priority' => 1,
   ));
   $wp_customize->add_control('wpforge_off_canvas_text',array(
     'label' => __('Change hamburger icon text','wp-forge'),
@@ -334,16 +300,32 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   )); 
   $wp_customize->add_section('wpforge_mobile_settings', array( /* off-canvas section */
     'title' => __('Mobile Menu View', 'wp-forge'),
-    'description' => __('Select whether or not to use Off-Canvas for mobile view.', 'wp-forge'),
+    'description' => __('Choose to use Off-Canvas for mobile view and position the hamburger icon.', 'wp-forge'),
     'priority' => 60,
     'panel' => 'wpforge_navigation',
-  )); 
+  ));
+  $wp_customize->add_setting('wpforge_mobile_position',array( /* hamburger icon position */
+    'default' => 'left',
+    'type'    => 'theme_mod',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'wpforge_sanitize_mobile_position',
+    'priority' => 1,  
+  ));
+  $wp_customize->add_control('wpforge_mobile_position',array(
+    'type' => 'select',
+    'label' => __('Show hamburger icon left or right?', 'wp-forge'),
+    'section' => 'wpforge_mobile_settings',
+    'choices' => array(
+      'left'  => __('Left', 'wp-forge'),
+      'right' => __('Right', 'wp-forge'),
+    ),
+  ));
   $wp_customize->add_setting('wpforge_mobile_display',array( /* off-canvas for mobile */
     'default' => 'no',
     'type'    => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_mobile_display',
-    'priority' => 5,  
+    'priority' => 2,  
   ));
   $wp_customize->add_control('wpforge_mobile_display',array(
     'type' => 'select',

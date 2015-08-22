@@ -7,6 +7,8 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
+ *
+ * @version 5.5.2.5
  */
 
 /*
@@ -75,13 +77,13 @@ if (post_password_required()) {
 
 			  'must_log_in' => '<p class="must-log-in">' .
 			    sprintf(
-			      __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+			      __( 'You must be <a href="%s">logged in</a> to post a comment.', 'wp-forge' ),
 			      wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
 			    ) . '</p>',
 
 			  'logged_in_as' => '<p class="logged-in-as">' .
 			    sprintf(
-			    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+			    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'wp-forge' ),
 			      admin_url( 'profile.php' ),
 			      $user_identity,
 			      wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
@@ -91,7 +93,7 @@ if (post_password_required()) {
 			    __( 'Your email address will not be published.', 'wp-forge' ) . ( $req ? $required_text : '' ) . '</p>',
 
 			  'comment_notes_after' => '<p class="form-allowed-tags">' .
-			    sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
+			    sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'wp-forge' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
 
 			  'fields' => apply_filters( 'comment_form_default_fields', array(
 
