@@ -5,6 +5,8 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 5.5.2.2
+ *
+ * @since WP-Forge 5.5.2.5 
  */
 ?>
 <div class="off-canvas-wrap" data-offcanvas>
