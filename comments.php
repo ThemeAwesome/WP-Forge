@@ -58,9 +58,9 @@ if (post_password_required()) {
 			<?php // You can modify the comments form to suit your needs here. Please refer to http://codex.wordpress.org/Function_Reference/comment_form as well as http://codex.wordpress.org/Function_Reference/comments_template
 				$commenter = wp_get_current_commenter();
 				$req = get_option( 'require_name_email' );
-				$required_text = __(' Required fields are marked <span class="required">*</span>');
-				$required_name = __('Your Name <span class="required">*</span>');
-				$required_email = __('Your Email <span class="required">*</span>');
+				$required_text = __(' Required fields are marked <span class="required">*</span>', 'wp-forge');
+				$required_name = __('Your Name <span class="required">*</span>', 'wp-forge');
+				$required_email = __('Your Email <span class="required">*</span>', 'wp-forge');
 				$aria_req = ( $req ? " aria-required='true'" : '' );
 
 		   		$comments_args = array(
