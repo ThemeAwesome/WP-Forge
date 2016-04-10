@@ -1,21 +1,19 @@
-/**
- * We use this file to add different elements to the theme via javascript i.e. the Back to Top code, which
- * appears when a user scrolls and when clicked will scroll the page up to the top for the user.
- *
+/*
  * @since WP-Forge 5.5.1.7
- *
- * @version 5.5.2.5
+ * @version 6.2.1
  */
 
-jQuery(document).ready(function(){
+/*jslint browser: true*/
+/*global $, jQuery, alert*/
 
-	// Add button class to certain buttons in the theme
-	jQuery('input[type="submit"]').addClass('tiny radius button');
+jQuery(document).ready(function($) {
+
+	// Add button class submit buttons in the theme
+	jQuery('input[type="submit"]').addClass('button');
 	
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
 	jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo" />');
-	jQuery('iframe[src*="dailymotion.com"]').wrap('<div class="flex-video widescreen" />');
-	jQuery('iframe[src*="youtube.com"]').wrap('<div class="flex-video widescreen" />');
+	jQuery('iframe[src*="youtube.com"],iframe[src*="dailymotion.com"]').wrap('<div class="flex-video widescreen" />');
 	
 	// BackToTop Button: Controls the fade in of the BacktoTop Button
 	jQuery(window).load(function() {
@@ -36,7 +34,13 @@ jQuery(document).ready(function(){
 		scrollTop: jQuery('body').offset().top
 		}, 1000); // Change this value to control the speed of the scroll back to the top of the page.		   
 	});
-	
+
+	// Remove empty P tags created by WP inside of Accordion and Orbit - Thanks to JointsWP - added 6.1.1
+    jQuery('.accordion p:empty, .orbit p:empty, .accordion br, .entry-content p:empty, .entry-content br').remove();
+
+    // Add clearfix class to gallery
+	jQuery('.gallery').addClass('clearfix');
+
 // end loading all functions  
    
 });

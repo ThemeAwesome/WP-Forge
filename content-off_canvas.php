@@ -1,77 +1,36 @@
 <?php
 /**
  * The template that supplies Off-Canvas support to WP-Forge
- *
- * @package WordPress
- * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
- *
- * @version 5.5.2.5
+ * @version 6.2.1
  */
 ?>
-<div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
-    <nav class="tab-bar">
-        <?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>  
-              <section class="right-small">
-                  <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-              </section>
-          <?php } else { ?>
-              <section class="left-small">
-                  <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-              </section>            
-        <?php } // end if ?>
-        <?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>
-          <section class="middle tab-bar-section go-right">
-            <h5 class="title">
-              <?php if( get_theme_mod( 'wpforge_off_canvas_text','Home' ) ) { ?>
-                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home"><?php echo get_theme_mod( 'wpforge_off_canvas_text','Home' ); ?></a>
-              <?php } // end if ?>
-            </h5>
-          </section>
-        <?php } else { ?>
-          <section class="middle tab-bar-section go-left">
-            <h5 class="title">
-              <?php if( get_theme_mod( 'wpforge_off_canvas_text','Home' ) ) { ?>
-                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home"><?php echo get_theme_mod( 'wpforge_off_canvas_text','Home' ); ?></a>
-              <?php } // end if ?>
-            </h5>
-          </section>
-        <?php } // end if ?>
-    </nav>
-    
-        <?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>
-          <aside class="right-off-canvas-menu">
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'primary',
-                    'container' => false,
-                    'depth' => 0,
-                    'items_wrap' => '<ul class="off-canvas-list">%3$s</ul>',
-                    'fallback_cb' => 'wpforge_menu_fallback', // workaround to show a message to set up a menu
-                    'walker' => new wpforge_walker( array(
-                        'in_top_bar' => true,
-                        'item_type' => 'li',
-                        'menu_type' => 'main-menu'
-                    ) ),
-                ) );
-                ?>
-          </aside>
-        <?php } else { ?>
-          <aside class="left-off-canvas-menu">
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'primary',
-                    'container' => false,
-                    'depth' => 0,
-                    'items_wrap' => '<ul class="off-canvas-list">%3$s</ul>',
-                    'fallback_cb' => 'wpforge_menu_fallback', // workaround to show a message to set up a menu
-                    'walker' => new wpforge_walker( array(
-                        'in_top_bar' => true,
-                        'item_type' => 'li',
-                        'menu_type' => 'main-menu'
-                    ) ),
-                ) );
-                ?>
-          </aside>
-        <?php } // end if ?>
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+  	<?php if( get_theme_mod( 'wpforge_mobile_position','left' ) == 'left') { ?>
+	<div class="title-bar">
+	  <div class="title-bar-left">
+	    <button type="button" data-open="offCanvasLeft"><span class="genericon genericon-menu"></span></button>
+		<?php if( get_theme_mod( 'wpforge_off_canvas_text','Home' ) ) { ?>
+		<span class="title-bar-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home"><?php echo get_theme_mod( 'wpforge_off_canvas_text','Home' ); ?></a></span>
+		<?php } // end if ?>
+	  </div><!-- end title-bar-left -->
+	</div><!-- end title-bar -->  	
+	<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+	  <?php wpforge_off_canvas_nav(); ?>
+	</div><!-- end off-canvas position -->
+	<?php } // end if ?>
+  	<?php if( get_theme_mod( 'wpforge_mobile_position' ) == 'right') { ?>
+	<div class="title-bar">
+	  <div class="title-bar-right">
+		<?php if( get_theme_mod( 'wpforge_off_canvas_text','Home' ) ) { ?>
+		<span class="title-bar-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home"><?php echo get_theme_mod( 'wpforge_off_canvas_text','Home' ); ?></a></span>
+		<?php } // end if ?>
+	    <button type="button" data-open="offCanvasRight"><span class="genericon genericon-menu"></span></button>
+	  </div><!-- end title-bar-right -->
+	</div><!-- end title-bar -->  	
+	<div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+	  <?php wpforge_off_canvas_nav(); ?>
+	</div><!-- end off-canvas position -->
+	<?php } // end if ?>	
+    <div class="off-canvas-content" data-off-canvas-content>

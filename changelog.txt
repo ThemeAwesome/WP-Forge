@@ -1,13 +1,91 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.3
-Stable tag: 5.5.2.5
+Tested up to: 4.4.2
+Stable tag: 6.2.1
 
 == Changelog ==
 
+= 6.2.1 =
+* Updated to Foundation 6.2.1
+* Went back to the accordion style menu for off-canvas.
+* Removed the border around images.
+* Corrected an issue where the categories were displaying at the end of posts above the post tags even if the option was not set for them to display there.
+* Added .button support to the Foundation Buttons section of the customizer.
+* Added button support to the Foundation Buttons section of the customizer.
+* Modified the heading tag section of both post content and page content sections of the customizer. Now the fields to change the font size of heading tags is hidden unless a specific tag is chosen.
+* Added the .button class css from foundation.css to the button class in the WP-Forge style sheet. Now buttons built with <button></button> will have the same look and feel as regualr foundation buttons and will take on the modification set in the Foundation Buttons section of the customizer.
+* Corrected an issue where the default link color for links within a page were showing up as black. They now show properly as blue, which is the default.
+
+= 6.2 =
+* Updated to the latest version of Zurb's Foundation, 6.2
+* Increased the width of the theme from 1024px to 1200px. This is based off the new width of rows wich is 1200px.
+* With the increase in width, I decided to add a fourth footer widget.
+* Added fonts.css to editor. Previously only genericons.css was added. Since this was combined into fonts.css with font-awesome, fonts.css was added. Now genericons and font-awesome are available via the editor.
+* Updated Font-Awesome to latest version, 4.5. font-awesome.min.css was added to fonts.css, the full version of Font-Awesome is located in /fonts/full (per WordPress guidelines).
+* Genericons css was minified and changed in fonts.css - full version of genericon.css is available in /fonts/full (per WordPress guidelines).
+* Added Motion-UI (https://github.com/zurb/motion-ui)
+* Renamed load-foundation.js to app.js.
+* Removed normalize.css as it is now part of foundation.css.
+* Increased thumbnail size to 800px and full width thumbnail to 1200px.
+* Removed Modernizer - The way F6 is written, this file is no longer needed.
+* Added the contain-to-grid option back for the main menu area. Initially I removed it because the contain-to-grid element was removed in F6. However I was able to retain this option. All options previously available for the top-bar menu are still intact.
+* Added to ability to set the font size for the footer area.
+* Removed the 'wpforge_active_list_pages_class' function. This started on line 276 of functions.php - This function was not need as the 'wpforge_active_nav_class' function above it starting on line 261 added the same 'active' class to the current page item in the top-bar menu.
+* Added a new version of page-navi function. Old function was not displaying properly. See http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/ for more information.
+* Removed the custom-bckground-white body class from the theme. I saw no purpose in it, so it is removed.
+* Removed the postfix element from the search submit button. This element was removed from F6 and shrunk the submit button in the search form widget.
+* Changed word-wrap for pre. Now pre wraps properly (or at least how I want it to)
+* Added new off-canvas menu. I was able to retain the look and functionality, plus all of the options in the customizer.
+* Adjusted the options for the new top-bar menu in customizer.
+* Added @version to all files for better version control.
+* Corrected an issue in the comment form. In discussion settings, unchecking "Comment author must fill out name and email" removed the "Your Name" and "Your Email" labels from the comment form. These labels appear properly now. See this thread: https://wordpress.org/support/topic/comment-form-labels-not-visible-on-discussion-setting-change?replies=3#post-7869547 - Thanks to user "forbc" for bringing this to my attention.
+* Added option in customizer to reset the comment forms back to their original positions. For details see http://www.wpbeginner.com/wp-tutorials/how-to-move-comment-text-field-to-bottom-in-wordpress-4-4/
+* The separator for breadcrumbs will now show automatically via css.
+* Added function to wpforge-functions.js that removes empty p and br tags from the content area.
+* Removed the About WP-Forge section under Appearance. It was kind of clunky and not dev friendly. I will be switching to a new About WP-Forge admin page. The admin notice about WP-Forge will still display once the theme has been activated.
+* Added the clearfix class to gallery via the wpforge-functions.js file
+* Added support for Jetpacks new social menu.
+* Fixed issue where catgories were not showing above tags if Where to display categories? was set to Above Post Tags.
+* Redid the comment reply button by adding a label class.
+* Reversed the Sticky pin icon to the other direction.
+* Changed the icon for the post date.
+* Removed the actual search form from 404.php and added get_search_form function instead.
+* Changed .entry-content for posts to .entry-content-posts and .entry-content for pages to .entry-content-pages. I did this to better help the end user control the look and feel of posts as well as pages.
+* Added options for font sizes, color as well as link decoration to customizer for posts, pages, sidebar and footer sidebar.
+* Title Area of the top-bar will only appear in Top- of Browser - Scroll and Top of Browser - Fixed. Title area does not show in Normal Position or Contain to Grid Sticky
+* Added Foundation Buttons Panel and sections for Foundation buttons - Now the end user can change the settings of all the Foundation buttons.
+* Added the option to select between regular Foundation grid or the new Foundation flex grid (this is available under the Content Settings Panel)
+* Left the inline css that is added to the header via the customizer as is. Meaning, each element is on its own line.
+
+= 5.5.3.1 =
+* Added WooCommerce support back into theme.
+* Changed the style for pre code.
+* Removed the Google Analytics code from the header which was accidentally left there when I was updating the child theme I use on the site.
+
+= 5.5.3 =
+* Updated to the latest version of Foundation
+* Added <?php get_template_part( 'content', get_post_format() ); ?> to search.php. originally it was <?php get_template_part( 'content', 'loop' ); ?>. There is no content-loop.php so this needed to be changed accordingly.
+
+= 5.5.2.7 =
+* Corrected an issue with the top-bar displaying alongside the off-canvas menu.
+* Updated Genericons to 3.4.1
+* Removed extra copy of .po file
+
+= 5.5.2.6 =
+* Set the default display of post thumbnails to yes for the customizer view.
+* Corrected the issue with the footer text area. Now users can insert html.
+* Corrected issue with archive, tag and search pages not showing excerpts if Show full post or excerpt? is set to excerpt. Also added post thumbal display to archive, tag and search pages.
+* Corrected an issue with off-canvas for mobile where the hamburger icon text was not showing.
+* Moved all Off-Canvas settings to Mobile Menu View. This makes it easier to access the off-canvas settings instead of the user having to go back and forth to different sections.
+* Added Font-Awesome back into the mix. I have been receiving a lot of emails asking for this to be brought back, so I decided why not.
+* Moved the Show home page title section into the Static Front Page Section.
+* Renamed the panels in customizer. Instead of sections they are now called options. Also modified some of the descriptions of the panels and secions.
+* Updated README.txt
+* Updated verbiage of style.css
+
 = 5.5.2.5 =
-* Corrected an issue that was caused with the release of WordPress 4.3 - The cahnhes that were made to the customizer in core removed or renamed an area. This change caused an error message to be displayed when viewing the customizer.
-*Removed Site Favicon from the customizer. This is being handled now by Site Identity (a new section of the customizer added in core.)
+* Corrected an issue that was caused with the release of WordPress 4.3 - The changes that were made to the customizer in core removed or renamed an area. This change caused an error message to be displayed when viewing the customizer.
+* Removed Site Favicon from the customizer. This is being handled now by Site Identity (a new section of the customizer added in core.)
 * Renamed Navigation Section to Menu Options.
 
 = 5.5.2.4 =

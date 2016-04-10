@@ -1,12 +1,8 @@
 <?php
 /**
  * The template for displaying posts in the Chat post format on index and archive pages.
- *
- * @package WordPress
- * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
- *
- * @version 5.5.2.5
+ * @version 6.2.1
  */
 ?>
 
@@ -18,9 +14,9 @@
 			<?php } // end if ?>
 		<?php } // end if ?>
 		<?php if ( is_single() ) : ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h1 class="entry-title-post"><?php the_title(); ?></h1>
 		<?php else : ?>
-		<h1 class="entry-title">
+		<h1 class="entry-title-post">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 		<?php endif; // is_single() ?>
@@ -33,23 +29,19 @@
 			<?php edit_post_link( __( 'Edit', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' ); ?>
 		</div><!-- end .entry-meta-header -->		
 	</header><!-- .entry-header -->
-
-	<div class="entry-content">
+	<div class="entry-content-post">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'wp-forge' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div><!-- .entry-content -->
-
 		<footer class="entry-meta">
 			<div class="entry-meta-footer">
-				<?php  if( get_theme_mod( 'wpforge_cat_display' ) == 'yes') { ?>
-					<?php  if( get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
-						<?php wpforge_bottom_meta_categories(); ?>
-					<?php } // end if ?>
+				<?php if( get_theme_mod( 'wpforge_cat_display' ) == 'yes' || get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
+					<?php wpforge_bottom_meta_categories(); ?>
 				<?php } // end if ?>
 				<?php  if( get_theme_mod( 'wpforge_tag_display','yes' ) == 'yes') { ?>
 					<?php wpforge_entry_meta_footer(); ?>
 				<?php } // end if ?>
 			</div><!-- end .entry-meta-footer -->
-			<?php get_template_part( 'content', 'author' ); ?>
+				<?php get_template_part( 'content', 'author' ); ?>
 		</footer><!-- .entry-meta -->
-</article><!-- #post -->
+	</article><!-- #post -->

@@ -2,28 +2,17 @@
 /**
  * The template for displaying image attachments.
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
- *
- * @version 5.5.2.5
+ * @version 6.2.1
  */
-
 get_header(); ?>
-
 	<div id="primary" class="medium-12 large-12 columns site-content">
 		<div id="content" role="main">
-        
-        <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
-
+    	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<nav aria-label="You are here:" role="navigation"><ul class="breadcrumbs">','</ul></nav>'); } ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'image-attachment' ); ?>>
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-
 						<div class="entry-meta-header">
 							<?php
 								$metadata = wp_get_attachment_metadata();
@@ -40,25 +29,15 @@ get_header(); ?>
 							?>
 							<?php edit_post_link( __( 'Edit Image', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' ); ?>
 						</div><!-- end .entry-meta-header -->
-
 					</header><!-- .entry-header -->
-
 					<div class="entry-content">
-
 						<div class="entry-attachment">
 							<div class="attachment">
-<?php
-/**
- * Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a 
- * gallery, or the first image (if we're looking at the last image in a gallery), or, in a gallery of one, just the
- * link to that image file
- */
-$attachments = array_values( get_children( array( 'post_parent' => $post->post_parent, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID' ) ) );
+<?php $attachments = array_values( get_children( array( 'post_parent' => $post->post_parent, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID' ) ) );
 foreach ( $attachments as $k => $attachment ) :
 	if ( $attachment->ID == $post->ID )
 		break;
 endforeach;
-
 $k++;
 // If there is more than 1 attachment in a gallery
 if ( count( $attachments ) > 1 ) :
@@ -78,35 +57,25 @@ endif;
 								$attachment_size = apply_filters( 'wpforge_attachment_size', array( 960, 960 ) );
 								echo wp_get_attachment_image( $post->ID, $attachment_size );
 								?></a>
-
 								<?php if ( ! empty( $post->post_excerpt ) ) : ?>
 								<div class="entry-caption">
 									<?php the_excerpt(); ?>
 								</div>
 								<?php endif; ?>
 							</div><!-- .attachment -->
-
 						</div><!-- .entry-attachment -->
-
 						<div class="entry-description">
 							<?php the_content(); ?>
 							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'wp-forge' ), 'after' => '</div>' ) ); ?>
 						</div><!-- .entry-description -->
-
 					</div><!-- .entry-content -->
-
 					<nav id="image-navigation" class="navigation" role="navigation">
 							<span class="previous-image"><?php previous_image_link( false, __( '&laquo; Previous Image', 'wp-forge' ) ); ?></span>
 							<span class="next-image"><?php next_image_link( false, __( 'Next Image &raquo;', 'wp-forge' ) ); ?></span>
 						</nav><!-- #image-navigation -->
-
 				</article><!-- #post -->
-
 				<?php comments_template(); ?>
-
 			<?php endwhile; // end of the loop. ?>
-
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
 <?php get_footer(); ?>

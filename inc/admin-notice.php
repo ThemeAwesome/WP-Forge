@@ -1,12 +1,10 @@
 <?php
 /**
  * A non-disruptive admin notice to inform users about additional resources.
- *
- * @package WP_Forge
  * @since WP-Forge 5.5.2.3
- *
- * @version 5.5.2.5
+ * @version 6.2.1
  */
+
 // Don't nag users who can't switch themes.
 if ( ! is_admin() || ! current_user_can( 'switch_themes' ) )
 	return;
