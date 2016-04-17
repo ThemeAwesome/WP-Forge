@@ -1,9 +1,18 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.4.2
-Stable tag: 6.2.1
+Tested up to: 4.5
+Stable tag: 6.2.1.1
 
 == Changelog ==
+
+= 6.2.1.1 =
+* Corrected and issue where some of the text in the comment form was not translateable. Thanks to @jarnoan (https://github.com/jarnoan) for bringing this to my attention months ago: https://github.com/tsquez/wp-forge/pull/48
+* Adjusted the Off-Canvas menu. 6.2.1 added some additional padding which made the menu look "fatter".
+* Updated Font-Awesome to 4.6.1
+* Updated Motion-Ui to 1.2.2
+* Adjusted the mobile styles for certain elements.
+* Added the following classes: secondary label radius, to the comment reply link via js in wpforge-functions.js and I also added the following classes: alert label radius, to the cancel reply link via js in wpforge-functions.js. 
+* Removed the hr from header.php. This only displayed on small mobile devices and after a hard look, I decided to remove it.
 
 = 6.2.1 =
 * Updated to Foundation 6.2.1

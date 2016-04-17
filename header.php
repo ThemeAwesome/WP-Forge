@@ -3,7 +3,7 @@
  * The Header template of our theme.
  *
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1
+ * @version 6.2.1.1
  */
 ?><!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -49,6 +49,4 @@
             <?php } // end if ?>
         <?php } // end if ?>
         <div class="content_container">
-        <section class="content_wrap row" role="document">
-            <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes' || get_theme_mod( 'wpforge_nav_select' ) == 'offcanvas') { ?>
-        <hr class="show-for-small hide-for-large"><?php } // end if ?>             
+        <section class="content_wrap row" role="document">             

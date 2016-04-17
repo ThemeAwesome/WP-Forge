@@ -1,7 +1,7 @@
-WP-Forge v6.2.1
+WP-Forge v6.2.1.1
 ====================
 
-###Last Updated April 9, 2016
+###Last Updated April 17, 2016
 
 A WordPress theme built with ZURB's Foundation for Sites, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
 
@@ -55,13 +55,8 @@ The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-
 * [HellYeah] (http://hellyeahband.com/)
 * [Motley.com (Motley Crue)] (http://www.motley.com/)
 * [SixxamMusic.com] (http://sixxammusic.com/)
-* [BashoCafe.com] (http://bashocafe.com/)
-* [JamesandTillaWaters.co.uk] (http://www.jamesandtillawaters.co.uk/)
+* [DrowningPool.com] (http://drowningpool.com/)
 * [Metal1.info] (http://www.metal1.info/)
-* [LiquidPlanner.com] (http://www.liquidplanner.com/home-page/)
-* [MorningCoach.com] (http://www.morningcoach.com/)
-* [UrbanPutt.com] (http://www.urbanputt.com/)
-* [RetroMetroHome.co.uk] (http://retrometrohome.co.uk/)
 
 License
 =============

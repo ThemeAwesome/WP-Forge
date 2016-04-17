@@ -7,7 +7,7 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1
+ * @version 6.2.1.1
  */
 ?>
 	<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>

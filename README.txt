@@ -1,8 +1,8 @@
 === WP-Forge ===
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
-Requires at least: 4.4.2
-Tested up to: 4.4.2
-Stable tag: 6.2.1
+Requires at least: 4.5
+Tested up to: 4.5
+Stable tag: 6.2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,16 +17,16 @@ A WordPress theme built with ZURB's Foundation for Sites (Foundation 6), the mos
 ///////////////////////////////////
 
 	1. Foundation Framework 6.2.1 - MIT License (https://github.com/zurb/foundation/blob/master/LICENSE)
-	2. Motion-UI - MIT License (https://github.com/zurb/motion-ui/commit/2a6617b9e45eaaa7f8888ba04a811002c5ebff5e)
+	2. Motion-UI 1.2.2 - MIT License (https://github.com/zurb/motion-ui/blob/master/LICENSE)
 	3. What-Input - MIT License (https://github.com/ten1seven/what-input/blob/master/LICENSE)
 	4. Genericons 3.4.1 - GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-	5. Font-Awesome 4.5 - See all license for Font-Awesome https://fortawesome.github.io/Font-Awesome/license/
+	5. Font-Awesome 4.6.1 - See all license for Font-Awesome https://fortawesome.github.io/Font-Awesome/license/
 
 	*minimized version of font-awesome.css as well as genericons.css is used in fonts.css, full versions are located in /fonts/full
 
 Using rem values 
 =================
-When you look at the style.css file you will notice that a majority of the values use rem (root em). I used the following tool to help with determining what rem value I needed to add:
+When you look at the style.css file you will notice that a majority of the values use rem (not em). I used the following tool to help with determining what rem value I needed to add:
 
 https://offroadcode.com/prototypes/rem-calculator/
 
@@ -56,16 +56,7 @@ WP-Forge makes use of the built in Theme Customizer. Once you have activated WP-
 This panel allows you to modify the different aspects of the Header portion of your theme. The Header Image and Site Title & Tagline are default sections in the Customizer. They are also available via Appearance - Header. The following sections are vilable:
 
 	1. Header Content Area* - Change the width (default is 64rem) and background color of the header content area.
-	2. Header Image - Upload a logo. 994 × 175 pixels is recommended.
-	3. Site Identity - Change the title as well as the description of your site. Select to show or hide in the header. You can also upload a site icon.
-
-///////////////////////////////////
-// Background Image Settings
-///////////////////////////////////
-
-This is the default panel of the customizer where you can upload an image to use for your themes background image. This section is also available via Appearance - Background. This section is standard in the customizer (part of WordPress core). The following sections are available:
-
-	1. Background Image - You can upload an image to use for your site background. Once you have uploaded your image other options such as Background Repeat, Background Position and Background Attachment will appear.
+        a.
 
 ///////////////////////////////////
 // Main Menu Settings
@@ -184,10 +175,18 @@ This panel deals with the Footer Section of your theme. The following sections a
 
 	1. Footer Content Width* - Change the width (Default is 64rem) of the Footer Sidebar content area.
 	2. Footer Content Background Color - Change the background color of the Footer Sidebar content area.
-	3. Footer Text - Change the footer text of your theme and select the position in which you want it to appear (html is not allowed in the textarea. This is a security concern and part of WordPress standards.)
+	3. Footer Text - Change the footer text of your theme and select the position in which you want it to appear.
 	4. Footer Content Position - Choose how you want to display the content in the footer area.
 
 See: http://themeawesome.com/docs/wp-forge/footer-section/
+
+///////////////////////////////////
+// Foundation Buttons
+///////////////////////////////////
+
+This section allows you to change the primary color, hover color, primary font color, font hover color as well as the font weight of all the buttons that are included with Foundation.
+
+These buttns are Primary, Secondary, Success, Warning, Alert and Info buttons.
 
 ///////////////////////////////////
 // Menus
@@ -196,8 +195,8 @@ See: http://themeawesome.com/docs/wp-forge/footer-section/
 The Menu Customizer adds custom menu management to the Customizer. It allows you to live-preview changes to your menus before they're published. WP-Forge supports three menu locations: 
 
 	1. Main Menu
-	2.Footer Menu
-	3.Social Menu 
+	2. Footer Menu
+	3. Social Menu 
 
 After you create your menus, you can select which menu appears in each location. Make sure you see the "Configure the Social Menu" below to set up your social menu.
 

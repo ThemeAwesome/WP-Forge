@@ -3,7 +3,7 @@
  * The template for displaying posts in the Video post format on index and archive pages.
  *
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1
+ * @version 6.2.1.1
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

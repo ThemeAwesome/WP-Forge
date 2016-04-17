@@ -4,7 +4,7 @@ Theme URI: http://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome.com
 Author URI: http://themeawesome.com/
 Description: A WordPress theme built with ZURB's Foundation for Sites (Foundation 6.2.1), the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.2.1
+Version: 6.2.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, black, white, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready, responsive-layout
@@ -772,8 +772,10 @@ article.format-quote .entry-content-page blockquote {
 	cursor: pointer;}
 a.comment-reply-link,
 a.comment-edit-link {
+    cursor: pointer;
 	text-decoration:none;
-  	font-size: 0.75rem;
+  	font-size: 0.5rem;
+    font-weight: bold;
   	line-height: normal;
   	margin-bottom: 1.5rem;}
 p.edit-link {
@@ -796,7 +798,8 @@ p.edit-link .genericon {
 #respond h3#reply-title #cancel-comment-reply-link {
 	margin-left: 10px;
 	font-weight: normal;
-	font-size: 12px;}
+	font-size: 0.65rem;
+    cursor: pointer;}
 #respond form {
 	margin: 1.5rem 0;}
 #respond form p {
@@ -990,26 +993,17 @@ ul.off-canvas-list li li li li,
 ul.off-canvas-list li li li li li,
 ul.off-canvas-list li li li li li li {
 	list-style-type:none;}
-section.tab-bar-section.go-left{
-	text-align:left;}
-section.tab-bar-section.go-right {
-	text-align:right;}
 section.tab-bar-section.middle a {
 	color:#fff;
 	font-weight:normal;}
-.orbit-bullets li {
-	cursor:pointer;
-	display:inline-block;}
-.orbit-container {
-	margin-bottom:1.714em;}
-.orbit-container img.alignnone {
-	margin-bottom: 0;}
-.entry-content-post > [data-magellan-expedition],
-.entry-content-page > [data-magellan-expedition] {
-	margin:0 0 1.714em;}
-.entry-content-post dl.sub-nav,
-.entry-content-page dl.sub-nav {
-	margin:0;}
+ul.orbit-container {
+    margin-left: 0;}
+.orbit > button {
+    background: transparent;}
+.orbit-previous {
+    padding: 0 0.4rem 0 0.3rem;} 
+.orbit-next {
+    padding: 0 0.3rem 0 0.4rem;}
 #backtotop {
 	position: fixed;
 	right: 1rem;
@@ -1058,21 +1052,6 @@ button.warning,
 .button.warning,
 button.info, .button.info {
 	border-color: transparent;}
-button {
-  display: inline-block;
-  text-align: center;
-  line-height: 1;
-  cursor: pointer;
-  -webkit-appearance: none;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  vertical-align: middle;
-  border: 1px solid transparent;
-  border-radius: 0;
-  padding: 0.85em 1em;
-  margin: 0 0 1rem 0;
-  font-size: 0.9rem;
-  background-color: #2199e8;
-  color: #fefefe; }
 .keystroke, kbd, code {
 	padding: 0.125rem 0.25rem 0.125rem;
 	font-size: 0.875rem;}
@@ -1082,13 +1061,10 @@ margin: 0 0 1.25rem!important; }
 	margin-right: 0.5rem;}
 img#wpstats{
 	display:none}
-/* Gravity Forms button - Only applies if you use the Gravity Forms plugin */
-.gf_browser_ie.gform_wrapper .gform_footer input.button {
-	padding: 0.62rem 1.25rem 0.68rem!important;}
 .no-js [data-responsive-toggle] {
   display: none!important;}
 [type='text'] {
-	height: 2.55rem;}
+	height: auto;}
 /* off-canvas styles */
 .title-bar-title {
 	font-weight: normal;}
@@ -1099,11 +1075,11 @@ img#wpstats{
 	background-color: transparent;
 	outline:none!important;}
 .title-bar-left .genericon {
-	margin-right: 5px;
-    line-height: 1.3;}
+    margin-left: 5px;
+    line-height: 1.5;}
 .title-bar-right .genericon {
-	margin-left: 5px;
-    line-height: 1.4;}
+	margin-right: 5px;
+    line-height: 1.5;}
 .off-canvas {
 	height: 100%;
 	background-color: #333333;
@@ -1288,39 +1264,40 @@ hr {
 	padding: 0.7rem 1rem;}		
 .home .top-bar .menu > .active {
 	background: none!important;}
+.title-bar-left button, 
+.title-bar-right button {
+    margin-bottom: 0!important;}
+.title-bar .genericon {
+    line-height: 1.5;
+}
 /**
  * 15.0 - Media Queries
  */
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-	#header {
-		padding-bottom: 0;}
-	.header-info {
-		margin-top: 0;
-		margin-bottom: 0.9375rem;}
-	h1.site-title a {
-		font-size: 2.5rem;}
-	h2.site-description {
-		font-size: 1rem;}
-	.title-bar button {
-		margin:0 5px;}	
-	.content_wrap {
-    	padding-top: 0.5rem;}
-	.breadcrumbs {
-		padding: 0.1rem 0.5rem;	}
-	h1.entry-title-post,h1.entry-title-post a {
-		font-size: 2.3rem;}
-	.entry-meta-header, 
-	.entry-meta-categories,
-	span.edit-link a {
-		font-size: 0.65rem!important;	}
-	.entry-meta-header .genericon, 
-	.entry-meta-categories .genericon,
-	span.edit-link .genericon {
-		line-height: 1.1;}
-	#footer .menu {
-		text-align: center!important;	}
+	.header-info {margin-top: 0;margin-bottom: 0.9375rem;}
+	h1.site-title a {font-size: 1.8rem;}
+    .site-description {font-size: 1rem!important;}
+	.title-bar button {margin:0;padding-right: 0.7em}	
+	.content_wrap {padding-top: 1rem;}
+	.breadcrumbs {padding: 0.1rem 0.5rem;font-size: 0.5rem;}
+	h1.entry-title-post,h1.entry-title-post a {font-size: 1.8rem;line-height: 1.3;margin-bottom: 1.5rem;}
+    h1.entry-title-page {font-size: 1.8rem;line-height: 1.3;margin-bottom: 1.5rem;}
+	.entry-meta-header,.entry-meta-categories,span.edit-link a {font-size: 0.65rem!important;}
+	.entry-meta-header .genericon,.entry-meta-categories .genericon,span.edit-link .genericon {line-height: 1.1;}
+	#footer .menu {text-align: center!important;}
+   .footer_wrap p, .footer_wrap a {font-size: 0.875rem!important;}
+    h1 {font-size:1.8rem!important;}
+    h2 {font-size: 1.6rem!important;}
+    h3 {font-size: 1.25rem!important;}
+    h4 {font-size: 1.2rem!important;}
+    h5 {font-size: 1rem!important;}
+    h6 {font-size: 0.875rem!important;}
+    .entry-content-post p, .entry-content-post ul li, .entry-content-post ol li, .comment-content table, .entry-content-post address, .comment-content address, .entry-content-post pre, .comment-content pre, .comments-area article header cite, #comments, .entry-content-post dl, .entry-content-post dt,.entry-content-page p, .entry-content-page ul li, .entry-content-page ol li, .entry-content-page table th, .entry-content-page .comment-content table, .entry-content-page address, .entry-content-page .comment-content address, .entry-content-page pre, .entry-content-page .comment-content pre, .comments-area article header cite, .entry-content-page #comments, .entry-content-page dl, .entry-content-page dt {font-size: 0.875rem!important;}
+    .entry-content-post table,.entry-content-page table {font-size: 0.75rem!important;}
+    #wp-calendar {font-size: 0.75rem;}
+    #secondary select {font-size: 0.85rem;}
 }
 
 /* Medium and up */
@@ -1328,17 +1305,28 @@ hr {
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-	#header {
-		padding-bottom: 0;}
-	.header-info {
-		margin-top: 0;
-		margin-bottom: 0.9375rem;}	
-	.content_wrap {
-    	padding-top: 0;}
-	.breadcrumbs {
-		padding: 0.1rem 0.5rem;}
-	.content_wrap {
-    	padding-top: 1.5rem;}	
+	.header-info {margin-top: 0;margin-bottom: 0.9375rem;}
+	h1.site-title a {font-size: 2.5rem;}
+    .site-description {font-size: 1rem!important;}
+	.title-bar button {margin:0;padding-right: 0.7em}	
+	.content_wrap {padding-top: 1rem;}
+	.breadcrumbs {padding: 0.1rem 0.5rem;}
+	h1.entry-title-post,h1.entry-title-post a {font-size: 1.8rem;line-height: 1.3;margin-bottom: 1.5rem;}
+    h1.entry-title-page {font-size: 1.8rem;line-height: 1.3;margin-bottom: 1.5rem;}
+	.entry-meta-header,.entry-meta-categories,span.edit-link a {font-size: 0.65rem!important;}
+	.entry-meta-header .genericon,.entry-meta-categories .genericon,span.edit-link .genericon {line-height: 1.1;}
+	#footer .menu {text-align: center!important;}
+   .footer_wrap p, .footer_wrap a {font-size: 0.875rem!important;}
+    h1 {font-size:1.8rem!important;}
+    h2 {font-size: 1.6rem!important;}
+    h3 {font-size: 1.25rem!important;}
+    h4 {font-size: 1.2rem!important;}
+    h5 {font-size: 1rem!important;}
+    h6 {font-size: 0.875rem!important;}
+    .entry-content-post p, .entry-content-post ul li, .entry-content-post ol li, .comment-content table, .entry-content-post address, .comment-content address, .entry-content-post pre, .comment-content pre, .comments-area article header cite, #comments, .entry-content-post dl, .entry-content-post dt,.entry-content-page p, .entry-content-page ul li, .entry-content-page ol li, .entry-content-page table th, .entry-content-page .comment-content table, .entry-content-page address, .entry-content-page .comment-content address, .entry-content-page pre, .entry-content-page .comment-content pre, .comments-area article header cite, .entry-content-page #comments, .entry-content-page dl, .entry-content-page dt {font-size: 0.875rem!important;}
+    .entry-content-post table,.entry-content-page table {font-size: 0.75rem!important;}
+    #wp-calendar {font-size: 0.75rem;}
+    #secondary select {font-size: 0.85rem;}	
 }
 
 /* Large and up */

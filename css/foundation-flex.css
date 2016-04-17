@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Foundation for Sites by ZURB
+ * Foundation for Sites by ZURB FLEX
  * Version 6.2.1
  * foundation.zurb.com
  * Licensed under MIT Open Source
@@ -406,17 +406,6 @@ select {
 .mqa-display embed,
 .mqa-display object {
   max-width: none !important; }
-
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: transparent;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  line-height: 1; }
-  [data-whatinput='mouse'] button {
-    outline: 0; }
 
 .is-visible {
   display: block !important; }

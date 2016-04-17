@@ -6,7 +6,7 @@
  * Others are attached to action and filter hooks in WordPress to change core functionality. Any new functions will
  * be added at the end of the file. This will allow everyone to keep track of what has been added.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1 
+ * @version 6.2.1.1 
  */
 
 /**
@@ -157,19 +157,19 @@ if ( ! function_exists( 'wpforge_google_fonts' ) ) {
  */
 function wpforge_scripts() {
 	global $wp_styles;
-    wp_enqueue_style('wpforge_fonts', get_template_directory_uri() . '/fonts/fonts.css','', '6.2' );
+    wp_enqueue_style('wpforge_fonts', get_template_directory_uri() . '/fonts/fonts.css','', '6.2.1' );
 
 		if( get_theme_mod( 'wpforge_select_css' ) == 'flex') {
-			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation-flex.css','', '6.2' );
+			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation-flex.css','', '6.2.1' );
 		} else {	
-			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation.css','', '6.2' );
+			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation.css','', '6.2.1' );
 		}
 		
-    wp_enqueue_style('wpforge_motion_ui', get_template_directory_uri() . '/css/motion-ui.css','', '1.1.1' );
-    wp_enqueue_style('wpforge', get_stylesheet_uri(),'','6.2' );
-	wp_enqueue_script('wpforge_what_input', get_template_directory_uri() . '/js/what-input.min.js', array('jquery'),'6.2', true);
-	wp_enqueue_script('wpforge_foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'),'6.2', true);
-	wp_enqueue_script('wpforge_functions', get_template_directory_uri() . '/js/wpforge-functions.js', array('jquery'),'6.2', true);
+    wp_enqueue_style('wpforge_motion_ui', get_template_directory_uri() . '/css/motion-ui.css','', '1.2.2' );
+    wp_enqueue_style('wpforge', get_stylesheet_uri(),'','6.2.1.1' );
+	wp_enqueue_script('wpforge_what_input', get_template_directory_uri() . '/js/what-input.min.js', array('jquery'),'6.2.1.1', true);
+	wp_enqueue_script('wpforge_foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'),'6.2.1.1', true);
+	wp_enqueue_script('wpforge_functions', get_template_directory_uri() . '/js/wpforge-functions.js', array('jquery'),'6.2.1.1', true);
 }
 add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
 /**
@@ -379,7 +379,7 @@ if ( ! function_exists( 'wpforge_comment' ) ) :
 				</section><!-- .comment-content -->
 
 				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( '<span class="label secondary radius">Reply &raquo;</span>', 'wp-forge' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply &raquo;', 'wp-forge' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 				</div><!-- .reply -->
 				<?php edit_comment_link( __( 'Edit', 'wp-forge' ), '<p class="edit-link"><span class="genericon genericon-edit"></span>', '</p>' ); ?>
 			</article><!-- #comment-## -->

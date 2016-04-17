@@ -3,7 +3,7 @@
  * The template for displaying the author information at the bottom of posts if a user has filled out their description and this is a
  * multi-author blog, show a bio on their entries.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1
+ * @version 6.2.1.1
  */
 ?>
 			<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
