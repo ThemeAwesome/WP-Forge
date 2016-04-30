@@ -1,11 +1,8 @@
 <?php
 /**
  * The template for displaying the search form.
- *
- * @package WordPress
- * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.1
+ * @version 6.2.1.2
  */
 ?>
 <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">

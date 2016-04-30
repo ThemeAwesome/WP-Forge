@@ -1,9 +1,13 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.5
-Stable tag: 6.2.1.1
+Tested up to: 4.5.1
+Stable tag: 6.2.1.2
 
 == Changelog ==
+
+= 6.2.1.2 =
+* Removed the java script from `wpforge-functions.php` that removed empty p and br tags from the content area. This was causing line breaks not to work.
+* Corrected an issue where changes made to pagination colors in customizer were not being applied in real time.
 
 = 6.2.1.1 =
 * Corrected and issue where some of the text in the comment form was not translateable. Thanks to @jarnoan (https://github.com/jarnoan) for bringing this to my attention months ago: https://github.com/tsquez/wp-forge/pull/48
@@ -11,7 +15,7 @@ Stable tag: 6.2.1.1
 * Updated Font-Awesome to 4.6.1
 * Updated Motion-Ui to 1.2.2
 * Adjusted the mobile styles for certain elements.
-* Added the following classes: secondary label radius, to the comment reply link via js in wpforge-functions.js and I also added the following classes: alert label radius, to the cancel reply link via js in wpforge-functions.js. 
+* Added the following classes: secondary label radius, to the comment reply link via js in wpforge-functions.js and I also added the following classes: alert label radius, to the cancel reply link via js in wpforge-functions.js.
 * Removed the hr from header.php. This only displayed on small mobile devices and after a hard look, I decided to remove it.
 
 = 6.2.1 =

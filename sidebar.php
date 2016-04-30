@@ -1,13 +1,8 @@
 <?php
 /**
  * The sidebar containing the main widget area.
- *
- * If no active widgets in sidebar, let's hide it completely.
- *
- * @package WordPress
- * @subpackage WP_Forge
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.1
+ * @version 6.2.1.2
  */
 ?>
 	<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>

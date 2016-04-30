@@ -2,7 +2,7 @@
 /**
  * Implement an optional custom header for WP-Forge
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.1
+ * @version 6.2.1.2
  */
 
 if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
@@ -40,4 +40,4 @@ if ( ! function_exists( 'wpforge_header_style' ) ) {
 <style type="text/css" id="wpforge-custom-header-css"><?php if ( ! display_header_text() ) : ?>.site-title,.site-title h1 a,.site-description{display:none;}<?php endif; ?></style>
 <?php
 }
-}	
+}

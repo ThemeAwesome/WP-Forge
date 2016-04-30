@@ -1,12 +1,8 @@
 <?php
 /**
- * The Footer Sidebar. This sidebar contains the four footer widget areas. If no active widgets are in either sidebar,
- * they will be hidden completely.
- *
- * @package WordPress
- * @subpackage WP_Forge
+ * The Footer Sidebar. This sidebar contains the four footer widget areas.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.1
+ * @version 6.2.1.2
  */
 if ( ! is_active_sidebar( 'footer-sidebar-1' )
 	&& ! is_active_sidebar( 'footer-sidebar-2' )
@@ -36,6 +32,6 @@ if ( ! is_active_sidebar( 'footer-sidebar-1' )
         <div class="<?php wpforge_footer_sidebar_class(); ?> columns">
             <?php dynamic_sidebar( 'footer-sidebar-4' ); ?>
         </div><!-- .fourth -->
-        <?php endif; ?>   
+        <?php endif; ?>
     </div><!-- #secondary -->
 </div><!-- end .sidebar_container -->

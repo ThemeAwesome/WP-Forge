@@ -1,21 +1,20 @@
 <?php
 /**
  * The template for displaying posts in the Video post format on index and archive pages.
- *
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.1
+ * @version 6.2.1.2
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 		<div class="entry-meta-header">
-			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" title="View all Video Posts"><span class="genericon genericon-video"></span> <?php echo get_post_format_string( 'video' ); ?></a>			
+			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" title="View all Video Posts"><span class="genericon genericon-video"></span> <?php echo get_post_format_string( 'video' ); ?></a>
 			<?php wpforge_entry_meta_header(); ?>
 			<?php if ( comments_open() ) : ?>
 				<span class="genericon genericon-comment"></span> <?php comments_popup_link( '<span class="leave-reply">' . __( 'Comment', 'wp-forge' ) . '</span>', __( '1 Comment', 'wp-forge' ), __( '% Comments', 'wp-forge' ) ); ?>
 			<?php endif; // comments_open() ?>
 			<?php edit_post_link( __( 'Edit', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' ); ?>
-		</div><!-- end .entry-meta-header -->			
+		</div><!-- end .entry-meta-header -->
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title-post"><?php the_title(); ?></h1>
 			<?php else : ?>

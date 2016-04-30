@@ -1,11 +1,8 @@
 /**
  * Theme Customizer enhancements for a better user experience.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.1
+ * @version 6.2.1.2
  */
-
-/*jslint browser: true*/
-/*global $, jQuery, alert*/
 
 ( function( $ ) {
 
@@ -46,7 +43,7 @@
         value.bind(function(to) {
             $('.header_wrap').css('max-width', to ? to : '' );
         });
-    });	
+    });
 
 	// Header Wrap Background Color
 	wp.customize('header_color',function( value ) {
@@ -91,11 +88,11 @@
         value.bind(function(to) {
             $('.nav_wrap').css('max-width', to ? to : '' );
         });
-    });		
+    });
 
 ///////////////////////////////////
 // Top-Bar Menu
-///////////////////////////////////	
+///////////////////////////////////
 
 	// Top-Bar Home Link Text
 	wp.customize('wpforge_nav_text', function(value) {
@@ -130,7 +127,7 @@
 	    value.bind(function(to) {
 	        $('.top-bar-left .menu > li.name:hover,.top-bar-right .menu > li.name:hover,.top-bar .menu > li:not(.menu-text) > a:hover').css('background', to ? to : '' );
 	    });
-	}); 
+	});
 
 	// Top-Bar Active Color
 	wp.customize('top_bar_active_color',function( value ) {
@@ -158,7 +155,7 @@
 	    value.bind(function(to) {
 	        $('.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after, .is-drilldown-submenu-parent > a::after, .js-drilldown-back > a::before').css('border-color', to ? to : '' );
 	    });
-	});	
+	});
 
 ///////////////////////////////////
 // Off-Canvas Menu
@@ -169,7 +166,7 @@
 		value.bind(function(to) {
 			$('.title-bar-title a').html(to);
 		});
-	});	
+	});
 
 	// Off-Canvas Main Color
 	wp.customize('wpforge_off_canvas_main_color',function( value ) {
@@ -190,7 +187,7 @@
 	    value.bind(function(to) {
 	        $('.title-bar-left button:hover,.title-bar-right button:hover').css('color', to ? to : '' );
 	    });
-	});    
+	});
 
 	// Off-Canvas Hamburger Icon Title Color
 	wp.customize('wpforge_hamburger_icon_title_color',function( value ) {
@@ -211,7 +208,7 @@
 	    value.bind(function(to) {
 	        $('.off-canvas .menu > li:not(.menu-text) > a').css('color', to ? to : '' );
 	    });
-	});        
+	});
 
 	// Off-Canvas Link Hover Color
 	wp.customize('wpforge_off_canvas_hover_color',function( value ) {
@@ -264,7 +261,7 @@
 	    value.bind(function(to) {
 	        $('.entry-meta-header,span.edit-link a').css('font-size', to ? to : '' );
 	    });
-	});		
+	});
 
 	// Post Meta Genericon Font Size
 	wp.customize('wpforge_postmeta_gen_font_size',function( value ) {
@@ -335,7 +332,7 @@
 		    $('.entry-content-post a').css('font-weight', to ? to : '' );
 		});
 	});
-  
+
 	// Post H1 Font Size
 	wp.customize('wpforge_post_h1_size',function( value ) {
 	  value.bind(function(to) {
@@ -348,21 +345,21 @@
 	  value.bind(function(to) {
 	      $('.entry-content-post h2').css('font-size', to ? to : '' );
 	  });
-	}); 
+	});
 
 	// Post H3 Font Size
 	wp.customize('wpforge_post_h3_size',function( value ) {
 	  value.bind(function(to) {
 	      $('.entry-content-post h3').css('font-size', to ? to : '' );
 	  });
-	}); 
+	});
 
 	// Post H4 Font Size
 	wp.customize('wpforge_post_h4_size',function( value ) {
 	  value.bind(function(to) {
 	      $('.entry-content-post h4').css('font-size', to ? to : '' );
 	  });
-	}); 
+	});
 
 	// Post H5 Font Size
 	wp.customize('wpforge_post_h5_size',function( value ) {
@@ -429,7 +426,7 @@
 		value.bind(function(to) {
 			$('.entry-content-page a:hover').css('text-decoration', to ? to : '' );
 		});
-	});	
+	});
 
 	// Page Link Font Weight
 	wp.customize('wpforge_page_link_weight',function( value ) {
@@ -450,21 +447,21 @@
 	  value.bind(function(to) {
 	      $('.entry-content-page h2').css('font-size', to ? to : '' );
 	  });
-	}); 
+	});
 
 	// Page H3 Font Size
 	wp.customize('wpforge_page_h3_size',function( value ) {
 	  value.bind(function(to) {
 	      $('.entry-content-page h3').css('font-size', to ? to : '' );
 	  });
-	}); 
+	});
 
 	// Page H4 Font Size
 	wp.customize('wpforge_page_h4_size',function( value ) {
 	  value.bind(function(to) {
 	      $('.entry-content-page h4').css('font-size', to ? to : '' );
 	  });
-	}); 
+	});
 
 	// Page H5 Font Size
 	wp.customize('wpforge_page_h5_size',function( value ) {
@@ -524,7 +521,7 @@
     value.bind(function(to) {
         $('#secondary a:hover').css('text-decoration', to ? to : '' );
     });
-  }); 
+  });
 
   // Sidebar Link Font Weight
   wp.customize('wpforge_sidebar_link_weight',function( value ) {
@@ -534,7 +531,7 @@
   });
 
 ///////////////////////////////////
-// 
+//
 ///////////////////////////////////
 
 	// Hook into background color/image change and adjust body class value as needed.
@@ -586,7 +583,7 @@
         value.bind(function(to) {
             $('.sidebar_wrap').css('max-width', to ? to : '' );
         });
-    });    
+    });
 
 	// Footer Sidebar Content Background Color
 	wp.customize('footer_sidebar_color',function( value ) {
@@ -667,12 +664,12 @@
 		value.bind(function(to) {
 			$('.site-info').html(to);
 		});
-	});	
+	});
 	wp.customize('textarea_settings', function(value) {
 		value.bind(function(to) {
 			$('.site-info').html(to);
 		});
-	});    
+	});
 
 ///////////////////////////////////
 // Color Options
@@ -789,7 +786,7 @@
             $('#secondary').css('color', to ? to : '' );
         });
     });
-    
+
 	// Widget Links Color
 	wp.customize('main_widget_link_color',function( value ) {
         value.bind(function(to) {
@@ -809,7 +806,7 @@
         value.bind(function(to) {
             $('#secondary-sidebar').css('color', to ? to : '' );
         });
-    });    
+    });
 
 	// Footer Sidebar Widget Links Color
 	wp.customize('footer_widget_link_color',function( value ) {
@@ -852,7 +849,7 @@
           value.bind(function(to) {
               $('button:hover,a.button:hover,button:focus,a.button:focus').css('background-color', to ? to : '' );
           });
-      });      
+      });
 
     // Primary Button Font Color
     wp.customize('primary_button_font_color',function( value ) {
@@ -891,7 +888,7 @@
           value.bind(function(to) {
               $('a.button.secondary:hover,a.button.secondary:focus').css('background-color', to ? to : '' );
           });
-      });      
+      });
 
     // Secondary Button Font Color
     wp.customize('secondary_button_font_color',function( value ) {
@@ -930,7 +927,7 @@
           value.bind(function(to) {
               $('a.button.success:hover,a.button.success:focus').css('background-color', to ? to : '' );
           });
-      });      
+      });
 
     // Success Button Font Color
     wp.customize('success_button_font_color',function( value ) {
@@ -969,7 +966,7 @@
           value.bind(function(to) {
               $('a.button.warning:hover,a.button.warning:focus').css('background-color', to ? to : '' );
           });
-      });      
+      });
 
     // Warning Button Font Color
     wp.customize('warning_button_font_color',function( value ) {
@@ -1008,7 +1005,7 @@
           value.bind(function(to) {
               $('a.button.alert:hover,a.button.alert:focus').css('background-color', to ? to : '' );
           });
-      });      
+      });
 
     // Alert Button Font Color
     wp.customize('alert_button_font_color',function( value ) {
@@ -1047,7 +1044,7 @@
           value.bind(function(to) {
               $('a.button.info:hover,a.button.info:focus').css('background-color', to ? to : '' );
           });
-      });      
+      });
 
     // Info Button Font Color
     wp.customize('info_button_font_color',function( value ) {
@@ -1071,8 +1068,43 @@
       });
 
 ///////////////////////////////////
-// Disabled Button Options
+// Pagination Colors
 ///////////////////////////////////
+
+		// Active Background Color
+		wp.customize('pagination_current_color',function( value ) {
+					value.bind(function(to) {
+							$('#content ul.pagination .current a,#content ul.pagination li.current button,#content ul.pagination li.current a:hover,#content ul.pagination li.current a:focus,#content ul.pagination li.current button:hover,#content ul.pagination li.current button:focus,#content .page-links a').css('background-color', to ? to : '' );
+					});
+		});
+
+// Active Font Color
+wp.customize('pagination_current_font_color',function( value ) {
+			value.bind(function(to) {
+					$('#content ul.pagination .current a,#content ul.pagination li.current button,#content ul.pagination li.current a:hover,#content ul.pagination li.current a:focus,#content ul.pagination li.current button:hover,#content ul.pagination li.current button:focus,#content .page-links a').css('color', to ? to : '' );
+			});
+});
+
+// Pagination Link Color
+wp.customize('pagination_link_color',function( value ) {
+			value.bind(function(to) {
+					$('#content ul.pagination li a,#content ul.pagination li button').css('color', to ? to : '' );
+			});
+});
+
+// Pagination Link Hover Color
+wp.customize('pagination_link_hover_color',function( value ) {
+			value.bind(function(to) {
+					$('#content ul.pagination li:hover a,#content ul.pagination li a:focus,#content ul.pagination li:hover button,#content ul.pagination li button:focus').css('color', to ? to : '' );
+			});
+});
+
+// Pagination Background Hover Color
+wp.customize('pagination_hover_color',function( value ) {
+			value.bind(function(to) {
+					$('#content ul.pagination li:hover a,#content ul.pagination li a:focus,#content ul.pagination li:hover button,#content ul.pagination li button:focus').css('background-color', to ? to : '' );
+			});
+});
 
 /* end adding */
 

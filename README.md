@@ -1,21 +1,21 @@
-WP-Forge v6.2.1.1
+WP-Forge v6.2.1.2
 ====================
 
-###Last Updated April 17, 2016
+###Last Updated April 30, 2016
 
-A WordPress theme built with ZURB's Foundation for Sites, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
+A WordPress theme built with ZURB's Foundation for Sites, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a responsive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG.txt and README.txt files before/after installation and/or update.
 
 Demo
 =============
-You can check out a demo of [WP-Forge here] (http://themeawesome.com/themes/wpforge/)
+View the demo of [WP-Forge here] (http://themeawesome.com/themes/wpforge/)
 
 Quick Start Guide
 =============
-A helpul guide to get your site up and running as quickly as possible: [WP-Forge Quick Start Guide] (http://themeawesome.com/docs/wp-forge/)
+A helpful guide to help you get your site up and running as quickly as possible: [WP-Forge Quick Start Guide] (http://themeawesome.com/docs/wp-forge/)
 
 Support
 =============
-If you need help with implementation or if you run into issues, you can post your questions/issues here [WP-Forge Support] (https://wordpress.org/support/theme/wp-forge)
+If you need help with implementation or if you run into issues, you can post your questions/issues here [WP-Forge Support] (https://wordpress.org/support/theme/wp-forge) or you can also get support via Twitter [@support_themeaw] (https://twitter.com/support_themeaw)
 
 ###WP-Forge was built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
@@ -39,12 +39,12 @@ When 3.4 was released, WordPress introduced the [Theme Customizer] (https://code
 WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in the header. This practice falls within the [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development). You can do a search and find the information you need to use Google's version and load it in the footer if you wish.
 
 ###Child Theme###
-I have created a child theme for WP-Forge called [WP-Starter] (https://github.com/tsquez/wp-starter). If you prefer, you can create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
+I have created a child theme for WP-Forge called [WP-Starter] (http://themeawesome.com/wordpress-child-theme/). If you prefer, you can also create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
 
 ###Genericons 3.4.1###
 Includes the free WordPress icon set [Genericons] (https://genericons.com/)
 
-###Font-Awesome 4.5###
+###Font-Awesome 4.6.1###
 Includes the free icon set [Font-Awesome] (http://fontawesome.io)
 
 ###Yoast SEO Plugin###
@@ -67,7 +67,7 @@ All of the components used in the creation of WP-Forge are licensed as follows:
 * What-Input is licensed [MIT License] (https://github.com/ten1seven/what-input/blob/master/LICENSE)
 * Genericons is licensed [GNU General Public License v2 or later] (http://www.gnu.org/licenses/gpl-2.0.html)
 * Font-Awesome is [fully open source and GPL friendly] (http://fortawesome.github.io/Font-Awesome/license/)
-    
+
 This means WP-Forge is completely free to use and modify as you see fit.
 
 ThemeAwesome.com

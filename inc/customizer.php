@@ -3,7 +3,7 @@
 * WP-Forge Theme Customizer
 * A Theme Customizer for WP-Forge. Adds the individual, panels, sections, settings, and controls to the theme customizer
 * @since WP-Forge 5.5.1.7
-* @version 6.2.1.1
+* @version 6.2.1.2
 */
 
 /**
@@ -91,7 +91,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'capability'     => 'edit_theme_options',
       'title'          => __('Main Sidebar Settings', 'wp-forge'),
       'description'    => __('Deals with the main sidebar area of your theme.', 'wp-forge'),
-  ));  
+  ));
   $wp_customize->add_panel( 'wpforge_footer_sidebar', array( // Footer Sidebar Panel
       'priority'       => 9,
       'capability'     => 'edit_theme_options',
@@ -119,27 +119,27 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'description' => __('Main content area of your header, i.e site title, site description and logo.', 'wp-forge'),
     'priority' => 30,
     'panel' => 'wpforge_header',
-  ));  
+  ));
   $wp_customize->add_setting('header_width',array( /* header width */
     'default' => '75rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 15,  
+    'priority' => 15,
   ));
   $wp_customize->add_control('header_width',array(
     'label' => __('Header Content Width','wp-forge'),
     'section' => 'header_content',
     'type' => 'text',
-  )); 
+  ));
   $wp_customize->add_setting('header_color', array( /* header background color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 20,   
+    'priority' => 20,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'header_color',array(
     'label' => __('Header Content Background Color', 'wp-forge'),
@@ -150,9 +150,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '3rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 25,    
+    'priority' => 25,
   ));
   $wp_customize->add_control('wpforge_site_title_font_size',array(
     'label' => __('Site Title Font Size','wp-forge'),
@@ -164,7 +164,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1.6875rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
     'priority' => 30,
   ));
@@ -183,7 +183,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '75rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
     'priority' => 10,
   ));
@@ -191,13 +191,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'label' => __('Nav Content Width','wp-forge'),
     'section' => 'nav_content',
     'type' => 'text',
-  ));  
+  ));
   $wp_customize->add_setting('nav_wrap_main_color', array( /* nav background color */
     'default' => '#333333',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 5,    
+    'priority' => 5,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_wrap_main_color',array(
     'label' => __('Nav Content Background Color', 'wp-forge'),
@@ -215,7 +215,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type'    => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_nav_select',
-    'priority' => 1,  
+    'priority' => 1,
   ));
   $wp_customize->add_control('wpforge_nav_select',array(
     'type' => 'select',
@@ -238,7 +238,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type'    => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_nav_position',
-    'priority' => 5,  
+    'priority' => 5,
   ));
   $wp_customize->add_control('wpforge_nav_position',array(
     'type' => 'select',
@@ -256,7 +256,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type'    => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_title_area',
-    'priority' => 10,  
+    'priority' => 10,
   ));
   $wp_customize->add_control('wpforge_title_area',array(
     'type' => 'select',
@@ -273,23 +273,23 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type'    => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_position',
-    'priority' => 15,  
+    'priority' => 15,
   ));
   $wp_customize->add_control('wpforge_link_position',array(
-    'type' => 'select', 
-    'active_callback' => 'wpforge_link_position_callback', 
+    'type' => 'select',
+    'active_callback' => 'wpforge_link_position_callback',
     'label' => __('Top-Bar link position?', 'wp-forge'),
     'section' => 'top_bar',
     'choices' => array(
       'left'  => __('Links to the left', 'wp-forge'),
-      'right' => __('Links to the right', 'wp-forge'),      
+      'right' => __('Links to the right', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_nav_text',array( /* top-bar main link anchor text */
     'default' => 'Home',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
-    'sanitize_callback' => 'wpforge_sanitize_text',   
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'wpforge_sanitize_text',
     'priority' => 20,
   ));
   $wp_customize->add_control('wpforge_nav_text',array(
@@ -302,9 +302,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '0.825rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 25,    
+    'priority' => 25,
   ));
   $wp_customize->add_control('wpforge_top_bar_font_size',array(
     'label' => __('Top-Bar Font Size','wp-forge'),
@@ -315,7 +315,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '-0.3125rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
     'priority' => 30,
   ));
@@ -335,9 +335,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 1,    
+    'priority' => 1,
   ));
   $wp_customize->add_control('wpforge_off_canvas_title_font_size',array(
     'label' => __('Off-Canvas Title Bar Font Size','wp-forge'),
@@ -349,9 +349,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 2,    
+    'priority' => 2,
   ));
   $wp_customize->add_control('wpforge_off_canvas_font_size',array(
     'label' => __('Off-Canvas Link Font Size','wp-forge'),
@@ -368,13 +368,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'description' => __('Choose to use Off-Canvas for mobile view, change the hamburger icon text and position the hamburger icon.', 'wp-forge'),
     'priority' => 60,
     'panel' => 'wpforge_navigation',
-  ));  
+  ));
   $wp_customize->add_setting('wpforge_mobile_display',array( /* off-canvas for mobile */
     'default' => 'no',
     'type'    => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_mobile_display',
-    'priority' => 1,  
+    'priority' => 1,
   ));
   $wp_customize->add_control('wpforge_mobile_display',array(
     'type' => 'select',
@@ -388,21 +388,21 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_off_canvas_text',array( /* off-canvas main link anchor text */
     'default' => 'Home',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
-    'sanitize_callback' => 'wpforge_sanitize_text',   
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'wpforge_sanitize_text',
     'priority' => 2,
   ));
   $wp_customize->add_control('wpforge_off_canvas_text',array(
     'label' => __('Change hamburger icon text','wp-forge'),
     'section' => 'wpforge_mobile_settings',
     'type' => 'text',
-  ));   
+  ));
   $wp_customize->add_setting('wpforge_mobile_position',array( /* hamburger icon position */
     'default' => 'left',
     'type'    => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_mobile_position',
-    'priority' => 3,  
+    'priority' => 3,
   ));
   $wp_customize->add_control('wpforge_mobile_position',array(
     'type' => 'select',
@@ -412,71 +412,71 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'left'  => __('Left', 'wp-forge'),
       'right' => __('Right', 'wp-forge'),
     ),
-  ));  
+  ));
   $wp_customize->add_setting('site_title_link_color', array( /* site title link color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,    
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'site_title_link_color',array(
     'label' => __('Site Title Link Color', 'wp-forge'),
     'section' => 'colors',
     'settings' => 'site_title_link_color',
-  )));  
+  )));
   $wp_customize->add_setting('site_title_hover_color', array( /* site title hover color */
     'default' => '#0078a0',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,    
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'site_title_hover_color',array(
     'label' => __('Site Title Hover Color', 'wp-forge'),
     'section' => 'colors',
     'settings' => 'site_title_hover_color',
-  ))); 
+  )));
   $wp_customize->add_section('top_bar_colors', array( /* top-bar colors section */
     'title' => __('Top-Bar Colors', 'wp-forge'),
     'description' => __('Change all the colors of the Top-Bar, including the Hamburger icon and title link in mobile view.', 'wp-forge'),
     'priority' => 55,
     'panel' => 'wpforge_colors',
-  )); 
+  ));
   $wp_customize->add_setting('top_bar_main_color', array( /* top-bar main color */
     'default' => '#333333',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 5,    
+    'priority' => 5,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_main_color',array(
     'label' => __('Top-Bar Main Color', 'wp-forge'),
     'section' => 'top_bar_colors',
     'settings' => 'top_bar_main_color',
-  )));   
+  )));
   $wp_customize->add_setting('top_bar_hover_color', array( /* top-bar hover color */
     'default' => '#242424',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 6,    
+    'priority' => 6,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_hover_color',array(
     'label' => __('Top-Bar Link Background Hover Color', 'wp-forge'),
     'section' => 'top_bar_colors',
     'settings' => 'top_bar_hover_color',
-  ))); 
+  )));
   $wp_customize->add_setting('top_bar_active_color', array( /* top-bar active color */
     'default' => '#008cba',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 7,    
+    'priority' => 7,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_active_color',array(
     'label' => __('Top-Bar Active Color', 'wp-forge'),
@@ -486,10 +486,10 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('top_bar_font_color', array( /* top-bar font color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
-    'transport' => 'postMessage', 
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 8,    
+    'priority' => 8,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_font_color',array(
     'label' => __('Top-Bar Link Color', 'wp-forge'),
@@ -502,7 +502,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 9,    
+    'priority' => 9,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_font_hover_color',array(
     'label' => __('Top-Bar Link Hover Color', 'wp-forge'),
@@ -515,7 +515,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 10,    
+    'priority' => 10,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_dropdown_arrow_color',array(
     'label' => __('Top-Bar Dropdown Arrow Color', 'wp-forge'),
@@ -528,7 +528,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 11,    
+    'priority' => 11,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_hamburger_color',array(
     'label' => __('Hamburger Icon Color', 'wp-forge'),
@@ -541,7 +541,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 12,    
+    'priority' => 12,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_hamburger_hover_color',array(
     'label' => __('Hamburger Icon Hover Color', 'wp-forge'),
@@ -554,7 +554,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 13,    
+    'priority' => 13,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_home_link_color',array(
     'label' => __('Top-Bar Title Color', 'wp-forge'),
@@ -567,7 +567,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 14,    
+    'priority' => 14,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'top_bar_home_link_hover_color',array(
     'label' => __('Top-Bar Title Hover Color', 'wp-forge'),
@@ -590,7 +590,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,    
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_off_canvas_main_color',array(
     'label' => __('Off-Canvas Main Color', 'wp-forge'),
@@ -603,7 +603,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,    
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_hamburger_icon_color',array(
     'label' => __('Hamburger Icon Color', 'wp-forge'),
@@ -616,7 +616,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,    
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_hamburger_icon_hover_color',array(
     'label' => __('Hamburger Icon Hover Color', 'wp-forge'),
@@ -629,7 +629,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,    
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_hamburger_icon_title_color',array(
     'label' => __('Hamburger Icon Title Color', 'wp-forge'),
@@ -639,10 +639,10 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_hamburger_icon_title_hover_color', array( /* hamburger icon title hover color */
     'default' => '#0078a0',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',    
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 5,    
+    'priority' => 5,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_hamburger_icon_title_hover_color',array(
     'label' => __('Hamburger Icon Title Hover Color', 'wp-forge'),
@@ -656,7 +656,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 6,    
+    'priority' => 6,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_off_canvas_link_color',array(
     'label' => __('Off-Canvas Link Color', 'wp-forge'),
@@ -669,7 +669,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 7,    
+    'priority' => 7,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_off_canvas_hover_color',array(
     'label' => __('Off-Canvas Link Hover Color', 'wp-forge'),
@@ -682,7 +682,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 8,    
+    'priority' => 8,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_off_dropdown_arrow_color',array(
     'label' => __('Off-Canvas Dropdown Arrow Color', 'wp-forge'),
@@ -695,7 +695,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 9,    
+    'priority' => 9,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_off_canvas_background_hover_color',array(
     'label' => __('Off-Canvas Link Background Hover Color', 'wp-forge'),
@@ -708,39 +708,39 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 10,    
+    'priority' => 10,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_off_canvas_active_color',array(
     'label' => __('Off-Canvas Active Color', 'wp-forge'),
     'section' => 'wpforge_off_canvas_colors',
     'settings' => 'wpforge_off_canvas_active_color',
-  )));  
+  )));
   $wp_customize->add_section('content_colors', array( /* content color section */
     'title' => __('Post Colors', 'wp-forge'),
     'description' => __('Change text, link and hover colors in the Content section of your theme.', 'wp-forge'),
     'priority' => 65,
     'panel' => 'wpforge_colors',
-  )); 
+  ));
   $wp_customize->add_setting('content_font_color', array( /* content font color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,    
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'content_font_color',array(
     'label' => __('Post Text Color', 'wp-forge'),
     'section' => 'content_colors',
     'settings' => 'content_font_color',
-  ))); 
+  )));
   $wp_customize->add_setting('content_link_color', array( /* content link color */
     'default' => '#008cba',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,    
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'content_link_color',array(
     'label' => __('Post Link Color', 'wp-forge'),
@@ -752,7 +752,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'content_hover_color',array(
     'label' => __('Post Link Hover Color', 'wp-forge'),
@@ -765,7 +765,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h1_color',array(
     'label' => __('Post Content H1 Color', 'wp-forge'),
@@ -778,7 +778,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 5,   
+    'priority' => 5,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h2_color',array(
     'label' => __('Post Content H2 Color', 'wp-forge'),
@@ -791,7 +791,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 6,   
+    'priority' => 6,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h3_color',array(
     'label' => __('Post Content H3 Color', 'wp-forge'),
@@ -804,7 +804,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 7,   
+    'priority' => 7,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h4_color',array(
     'label' => __('Post Content H4 Color', 'wp-forge'),
@@ -817,7 +817,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 8,   
+    'priority' => 8,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h5_color',array(
     'label' => __('Post Content H5 Color', 'wp-forge'),
@@ -830,7 +830,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 9,   
+    'priority' => 9,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h6_color',array(
     'label' => __('Post Content H6 Color', 'wp-forge'),
@@ -849,20 +849,20 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_title_color',array(
     'label' => __('Page Title Color', 'wp-forge'),
     'section' => 'wpforge_page_colors',
     'settings' => 'wpforge_page_title_color',
-  )));    
+  )));
   $wp_customize->add_setting('wpforge_page_link_color', array( /* page link color */
     'default' => '#008cba',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_link_color',array(
     'label' => __('Page Link Color', 'wp-forge'),
@@ -875,20 +875,20 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_link_hover_color',array(
     'label' => __('Page Link Hover Color', 'wp-forge'),
     'section' => 'wpforge_page_colors',
     'settings' => 'wpforge_page_link_hover_color',
-  )));    
+  )));
   $wp_customize->add_setting('wpforge_page_h1_color', array( /* page h1 color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_h1_color',array(
     'label' => __('Page H1 Color', 'wp-forge'),
@@ -901,7 +901,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 5,   
+    'priority' => 5,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_h2_color',array(
     'label' => __('Page H2 Color', 'wp-forge'),
@@ -914,7 +914,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 6,   
+    'priority' => 6,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_h3_color',array(
     'label' => __('Page H3 Color', 'wp-forge'),
@@ -927,7 +927,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 7,   
+    'priority' => 7,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_h4_color',array(
     'label' => __('Page H4 Color', 'wp-forge'),
@@ -940,7 +940,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 8,   
+    'priority' => 8,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_h5_color',array(
     'label' => __('Page H5 Color', 'wp-forge'),
@@ -953,295 +953,292 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 9,   
+    'priority' => 9,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_page_h6_color',array(
     'label' => __('Page H6 Color', 'wp-forge'),
     'section' => 'wpforge_page_colors',
     'settings' => 'wpforge_page_h6_color',
   )));
-
-
-
   $wp_customize->add_section('pagination_colors', array( /* pagination color section */
     'title' => __('Pagination Colors', 'wp-forge'),
-    'description' => __('Deals with the colors of built-in pagination.', 'wp-forge'),
+    'description' => __('Deals with the colors of the built-in pagination.', 'wp-forge'),
     'priority' => 75,
     'panel' => 'wpforge_colors',
-  ));  
+  ));
   $wp_customize->add_setting('pagination_current_color', array( /* pagination current color */
     'default' => '#008cba',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',      
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 5,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'pagination_current_color',array(
-    'label' => __('Current Background Color', 'wp-forge'),
+    'label' => __('Active Background Color', 'wp-forge'),
     'section' => 'pagination_colors',
     'settings' => 'pagination_current_color',
-  )));  
+  )));
   $wp_customize->add_setting('pagination_current_font_color', array( /* pagination current font color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',       
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 10,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'pagination_current_font_color',array(
-    'label' => __('Current Font Color', 'wp-forge'),
+    'label' => __('Active Font Color', 'wp-forge'),
     'section' => 'pagination_colors',
     'settings' => 'pagination_current_font_color',
-  ))); 
+  )));
   $wp_customize->add_setting('pagination_link_color', array( /* pagination link color */
     'default' => '#999999',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',       
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 15,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'pagination_link_color',array(
     'label' => __('Pagination Link Color', 'wp-forge'),
     'section' => 'pagination_colors',
     'settings' => 'pagination_link_color',
-  )));  
-  $wp_customize->add_setting('pagination_hover_color', array( /* pagination background hover color */
-    'default' => '#e6e6e6',
-    'type' => 'theme_mod',
-    'transport' => 'postMessage',    
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 20,   
-  ));
-  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'pagination_hover_color',array(
-    'label' => __('Pagination Background Hover Color', 'wp-forge'),
-    'section' => 'pagination_colors',
-    'settings' => 'pagination_hover_color',
-  )));  
+  )));
   $wp_customize->add_setting('pagination_link_hover_color', array( /* pagination link hover color */
     'default' => '#999999',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',    
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 25,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'pagination_link_hover_color',array(
     'label' => __('Pagination Link Hover Color', 'wp-forge'),
     'section' => 'pagination_colors',
     'settings' => 'pagination_link_hover_color',
   )));
+  $wp_customize->add_setting('pagination_hover_color', array( /* pagination background hover color */
+    'default' => '#e6e6e6',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 5,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'pagination_hover_color',array(
+    'label' => __('Pagination Background Hover Color', 'wp-forge'),
+    'section' => 'pagination_colors',
+    'settings' => 'pagination_hover_color',
+  )));
   $wp_customize->add_section('main_sidebar_colors', array( /* sidebar colors section */
     'title' => __('Main Sidebar Colors', 'wp-forge'),
     'description' => __('Change widget title, link and hover colors of main sidebar.', 'wp-forge'),
     'priority' => 80,
     'panel' => 'wpforge_colors',
-  ));  
+  ));
   $wp_customize->add_setting('main_widget_title_color', array( /* widget title color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 10,    
+    'priority' => 10,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'main_widget_title_color',array(
     'label' => __('Sidebar Widget Title Color', 'wp-forge'),
     'section' => 'main_sidebar_colors',
     'settings' => 'main_widget_title_color',
-  ))); 
+  )));
   $wp_customize->add_setting('main_widget_text_color', array( /* widget text color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 20,    
+    'priority' => 20,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'main_widget_text_color',array(
     'label' => __('Sidebar Text Color', 'wp-forge'),
     'section' => 'main_sidebar_colors',
     'settings' => 'main_widget_text_color',
-  )));  
+  )));
   $wp_customize->add_setting('main_widget_link_color', array( /* widget link color */
     'default' => '#008cba',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 30,    
+    'priority' => 30,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'main_widget_link_color',array(
     'label' => __('Sidebar Link Color', 'wp-forge'),
     'section' => 'main_sidebar_colors',
     'settings' => 'main_widget_link_color',
-  )));  
+  )));
   $wp_customize->add_setting('main_widget_hover_color', array( /* widget link hover color */
     'default' => '#0078a0',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 40,    
+    'priority' => 40,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'main_widget_hover_color',array(
     'label' => __('Sidebar Link Hover Color', 'wp-forge'),
     'section' => 'main_sidebar_colors',
     'settings' => 'main_widget_hover_color',
-  ))); 
+  )));
   $wp_customize->add_section('footer_sidebar_colors', array( /* footer sidebar colors section */
     'title' => __('Footer Sidebar Colors', 'wp-forge'),
     'description' => __('Change widget title, link and hover colors in Footer sidebar.', 'wp-forge'),
     'priority' => 85,
     'panel' => 'wpforge_colors',
-  ));  
+  ));
   $wp_customize->add_setting('footer_widget_title_color', array( /* footer sidebar widget title color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 10,       
+    'priority' => 10,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_title_color',array(
     'label' => __('Footer Sidebar Widget Title Color', 'wp-forge'),
     'section' => 'footer_sidebar_colors',
     'settings' => 'footer_widget_title_color',
-  ))); 
+  )));
   $wp_customize->add_setting('footer_widget_text_color', array( /* footer sidebar text color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 20,       
+    'priority' => 20,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_text_color',array(
     'label' => __('Footer Sidebar Text Color', 'wp-forge'),
     'section' => 'footer_sidebar_colors',
     'settings' => 'footer_widget_text_color',
-  )));  
+  )));
   $wp_customize->add_setting('footer_widget_link_color', array( /* footer sidebar widget link color */
     'default' => '#008cba',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 30,       
+    'priority' => 30,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_link_color',array(
     'label' => __('Footer Sidebar Link Color', 'wp-forge'),
     'section' => 'footer_sidebar_colors',
     'settings' => 'footer_widget_link_color',
-  )));   
+  )));
   $wp_customize->add_setting('footer_widget_link_hover_color', array( /* footer sidebar widget link hover color*/
     'default' => '#0078a0',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 40,        
+    'priority' => 40,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_widget_link_hover_color',array(
     'label' => __('Footer Sidebar Link Hover Color', 'wp-forge'),
     'section' => 'footer_sidebar_colors',
     'settings' => 'footer_widget_link_hover_color',
-  )));   
+  )));
   $wp_customize->add_section('footer_colors', array( /* footer colors section */
     'title' => __('Footer Colors', 'wp-forge'),
     'description' => __('Change text, link and hover colors in the Footer.', 'wp-forge'),
     'priority' => 90,
     'panel' => 'wpforge_colors',
-  ));  
+  ));
   $wp_customize->add_setting('footer_text_color', array( /* footer text color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 10,   
+    'priority' => 10,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_text_color',array(
     'label' => __('Footer Text Color', 'wp-forge'),
     'section' => 'footer_colors',
     'settings' => 'footer_text_color',
-  )));   
+  )));
   $wp_customize->add_setting('footer_link_color', array( /* footer link color */
     'default' => '#008cba',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 20,   
+    'priority' => 20,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_link_color',array(
     'label' => __('Footer Link Color', 'wp-forge'),
     'section' => 'footer_colors',
     'settings' => 'footer_link_color',
-  )));  
+  )));
   $wp_customize->add_setting('footer_hover_color', array( /* footer hover color */
     'default' => '#0078a0',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 30,   
+    'priority' => 30,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_hover_color',array(
     'label' => __('Footer Hover Color', 'wp-forge'),
     'section' => 'footer_colors',
     'settings' => 'footer_hover_color',
-  )));  
+  )));
   $wp_customize->add_section('backtotop_colors', array( /* back to top section or btt */
     'title' => __('Back To Top Colors', 'wp-forge'),
     'description' => __('Change the color and hover colors of the back to top button.', 'wp-forge'),
     'priority' => 100,
     'panel' => 'wpforge_colors',
-  ));  
+  ));
   $wp_customize->add_setting('backtotop_color', array( /* btt color */
     'default' => '#333333',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'backtotop_color',array(
     'label' => __('Back To Top Color', 'wp-forge'),
     'section' => 'backtotop_colors',
     'settings' => 'backtotop_color',
-  )));  
+  )));
   $wp_customize->add_setting('backtotop_hover_color', array( /* back to top hover color */
     'default' => '#242424',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'backtotop_hover_color',array(
     'label' => __('Back To Top Hover Color', 'wp-forge'),
     'section' => 'backtotop_colors',
     'settings' => 'backtotop_hover_color',
-  )));  
+  )));
   $wp_customize->add_setting('backtotop_font_color', array( /* back to top font color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'backtotop_font_color',array(
     'label' => __('Back To Top Font Color', 'wp-forge'),
     'section' => 'backtotop_colors',
     'settings' => 'backtotop_font_color',
-  )));   
+  )));
   $wp_customize->add_setting('backtotop_font_hover_color', array( /* btt font hover color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'backtotop_font_hover_color',array(
     'label' => __('Back To Top Font Hover Color', 'wp-forge'),
@@ -1259,7 +1256,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_feed_color',array(
     'label' => __('Feed Icon Color', 'wp-forge'),
@@ -1271,7 +1268,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_feed_hover_color',array(
     'label' => __('Feed Icon Hover Color', 'wp-forge'),
@@ -1283,19 +1280,19 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_codepen_color',array(
     'label' => __('Codepen Icon Color', 'wp-forge'),
     'section' => 'wpforge_social_menu_colors',
     'settings' => 'wpforge_social_codepen_color',
-  ))); 
+  )));
   $wp_customize->add_setting('wpforge_social_codepen_hover_color', array( /* codepen hover color */
     'default' => '#0078a0',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_codepen_hover_color',array(
     'label' => __('Codepen Icon Hover Color', 'wp-forge'),
@@ -1307,7 +1304,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 5,   
+    'priority' => 5,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_digg_color',array(
     'label' => __('Digg Icon Color', 'wp-forge'),
@@ -1319,19 +1316,19 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 6,   
+    'priority' => 6,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_digg_hover_color',array(
     'label' => __('Digg Icon Hover Color', 'wp-forge'),
     'section' => 'wpforge_social_menu_colors',
     'settings' => 'wpforge_social_digg_hover_color',
-  ))); 
+  )));
   $wp_customize->add_setting('wpforge_social_dribble_color', array( /* dribble color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 7,   
+    'priority' => 7,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_dribble_color',array(
     'label' => __('Dribbble Icon Color', 'wp-forge'),
@@ -1343,7 +1340,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 8,   
+    'priority' => 8,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_dribble_hover_color',array(
     'label' => __('Dribbble Icon Hover Color', 'wp-forge'),
@@ -1355,7 +1352,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 9,   
+    'priority' => 9,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_dropbox_color',array(
     'label' => __('Dropbox Icon Color', 'wp-forge'),
@@ -1367,7 +1364,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 10,   
+    'priority' => 10,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_dropbox_hover_color',array(
     'label' => __('Dropbox Icon Hover Color', 'wp-forge'),
@@ -1379,7 +1376,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 11,   
+    'priority' => 11,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_facebook_color',array(
     'label' => __('Facebook Icon Color', 'wp-forge'),
@@ -1391,7 +1388,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 12,   
+    'priority' => 12,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_facebook_hover_color',array(
     'label' => __('Facebook Icon Hover Color', 'wp-forge'),
@@ -1403,7 +1400,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 13,   
+    'priority' => 13,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_flickr_color',array(
     'label' => __('Flickr Icon Color', 'wp-forge'),
@@ -1415,7 +1412,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 14,   
+    'priority' => 14,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_flickr_hover_color',array(
     'label' => __('Flickr Icon Hover Color', 'wp-forge'),
@@ -1427,7 +1424,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 15,   
+    'priority' => 15,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_foursquare_color',array(
     'label' => __('Foursquare Icon Color', 'wp-forge'),
@@ -1439,7 +1436,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 16,   
+    'priority' => 16,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_foursquare_hover_color',array(
     'label' => __('Foursquare Icon Hover Color', 'wp-forge'),
@@ -1451,7 +1448,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 17,   
+    'priority' => 17,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_google_color',array(
     'label' => __('Google+ Icon Color', 'wp-forge'),
@@ -1463,7 +1460,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 18,   
+    'priority' => 18,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_google_hover_color',array(
     'label' => __('Google+ Icon Hover Color', 'wp-forge'),
@@ -1475,7 +1472,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 19,   
+    'priority' => 19,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_github_color',array(
     'label' => __('GitHub Icon Color', 'wp-forge'),
@@ -1487,7 +1484,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 20,   
+    'priority' => 20,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_github_hover_color',array(
     'label' => __('GitHub Icon Hover Color', 'wp-forge'),
@@ -1499,7 +1496,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 21,   
+    'priority' => 21,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_instagram_color',array(
     'label' => __('Instagram Icon Color', 'wp-forge'),
@@ -1511,7 +1508,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 22,   
+    'priority' => 22,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_instagram_hover_color',array(
     'label' => __('Instagram Icon Hover Color', 'wp-forge'),
@@ -1523,7 +1520,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 23,   
+    'priority' => 23,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_linkedin_color',array(
     'label' => __('LinkedIn Icon Color', 'wp-forge'),
@@ -1535,7 +1532,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 24,   
+    'priority' => 24,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_linkedin_hover_color',array(
     'label' => __('LinkedIn Icon Hover Color', 'wp-forge'),
@@ -1547,7 +1544,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 25,   
+    'priority' => 25,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_pinterest_color',array(
     'label' => __('Pinterest Icon Color', 'wp-forge'),
@@ -1559,7 +1556,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 26,   
+    'priority' => 26,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_pinterest_hover_color',array(
     'label' => __('Pinterest Icon Hover Color', 'wp-forge'),
@@ -1571,7 +1568,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 27,   
+    'priority' => 27,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_pocket_color',array(
     'label' => __('Pocket Icon Color', 'wp-forge'),
@@ -1583,7 +1580,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 28,   
+    'priority' => 28,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_pocket_hover_color',array(
     'label' => __('Pocket Icon Hover Color', 'wp-forge'),
@@ -1595,7 +1592,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 29,   
+    'priority' => 29,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_polldaddy_color',array(
     'label' => __('PollDaddy Icon Color', 'wp-forge'),
@@ -1607,7 +1604,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 30,   
+    'priority' => 30,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_polldaddy_hover_color',array(
     'label' => __('PollDaddy Icon Hover Color', 'wp-forge'),
@@ -1619,7 +1616,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 31,   
+    'priority' => 31,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_reddit_color',array(
     'label' => __('Reddit Icon Color', 'wp-forge'),
@@ -1631,7 +1628,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 32,   
+    'priority' => 32,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_reddit_hover_color',array(
     'label' => __('Reddit Icon Hover Color', 'wp-forge'),
@@ -1643,7 +1640,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 33,   
+    'priority' => 33,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_stumbleupon_color',array(
     'label' => __('Stumbleupon Icon Color', 'wp-forge'),
@@ -1655,7 +1652,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 34,   
+    'priority' => 34,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_stumbleupon_hover_color',array(
     'label' => __('Stumbleupon Icon Hover Color', 'wp-forge'),
@@ -1667,7 +1664,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 35,   
+    'priority' => 35,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_tumblr_color',array(
     'label' => __('Tumblr Icon Color', 'wp-forge'),
@@ -1679,7 +1676,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 36,   
+    'priority' => 36,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_tumblr_hover_color',array(
     'label' => __('Tumblr Icon Hover Color', 'wp-forge'),
@@ -1691,7 +1688,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 37,   
+    'priority' => 37,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_twitter_color',array(
     'label' => __('Twitter Icon Color', 'wp-forge'),
@@ -1703,7 +1700,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 38,   
+    'priority' => 38,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_twitter_hover_color',array(
     'label' => __('Twitter Icon Hover Color', 'wp-forge'),
@@ -1715,7 +1712,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 39,   
+    'priority' => 39,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_vimeo_color',array(
     'label' => __('Vimeo Icon Color', 'wp-forge'),
@@ -1727,7 +1724,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 40,   
+    'priority' => 40,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_vimeo_hover_color',array(
     'label' => __('Vimeo Icon Hover Color', 'wp-forge'),
@@ -1739,7 +1736,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 41,   
+    'priority' => 41,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_wordpress_color',array(
     'label' => __('WordPress Icon Color', 'wp-forge'),
@@ -1751,7 +1748,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 42,   
+    'priority' => 42,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_wordpress_hover_color',array(
     'label' => __('WordPress Icon Hover Color', 'wp-forge'),
@@ -1763,7 +1760,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 43,   
+    'priority' => 43,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_youtube_color',array(
     'label' => __('YouTube Icon Color', 'wp-forge'),
@@ -1775,7 +1772,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 44,   
+    'priority' => 44,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_youtube_hover_color',array(
     'label' => __('YouTube Icon Hover Color', 'wp-forge'),
@@ -1787,7 +1784,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 45,   
+    'priority' => 45,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_mailto_color',array(
     'label' => __('MailTo Icon Color', 'wp-forge'),
@@ -1799,7 +1796,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 46,   
+    'priority' => 46,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_mailto_hover_color',array(
     'label' => __('MailTo Icon Hover Color', 'wp-forge'),
@@ -1811,7 +1808,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 47,   
+    'priority' => 47,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_spotify_color',array(
     'label' => __('Spotify Icon Color', 'wp-forge'),
@@ -1823,7 +1820,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 48,   
+    'priority' => 48,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_spotify_hover_color',array(
     'label' => __('Spotify Icon Hover Color', 'wp-forge'),
@@ -1835,7 +1832,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 49,   
+    'priority' => 49,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_twitch_color',array(
     'label' => __('Twitch TV Icon Color', 'wp-forge'),
@@ -1847,7 +1844,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 50,   
+    'priority' => 50,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_social_twitch_hover_color',array(
     'label' => __('Twitch TV Icon Hover Color', 'wp-forge'),
@@ -1857,7 +1854,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_home_page_title_display',array( /* home page title display */
     'default' => 'yes',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_home_page_display',
     'priority' => 10,
   ));
@@ -1881,7 +1878,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'float',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_css_selection',
     'priority' => 5,
   ));
@@ -1891,7 +1888,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'wpforge_foundation_css_settings',
     'choices' => array(
       'float'   => __('Float', 'wp-forge'),
-      'flex'    => __('Flex', 'wp-forge'),            
+      'flex'    => __('Flex', 'wp-forge'),
     ),
   ));
   $wp_customize->add_section('content_layout', array( /* content section */
@@ -1899,12 +1896,12 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'description' => __('Change width and background color of main content area.', 'wp-forge'),
     'priority' => 20,
     'panel' => 'wpforge_content',
-  ));    
+  ));
   $wp_customize->add_setting('content_width',array( /* content width */
     'default' => '75rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
     'priority' => 10,
   ));
@@ -1912,14 +1909,14 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'label' => __('Content Width (Default is 75rem)','wp-forge'),
     'section' => 'content_layout',
     'type' => 'text',
-  )); 
+  ));
   $wp_customize->add_setting('content_color', array( /* content background color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 15,   
+    'priority' => 15,
     ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'content_color',array(
     'label' => __('Content Background Color', 'wp-forge'),
@@ -1935,8 +1932,8 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_content_position',array( /* content position */
     'default' => 'left',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',  
-    'sanitize_callback' => 'wpforge_sanitize_content_position',   
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'wpforge_sanitize_content_position',
   ));
   $wp_customize->add_control('wpforge_content_position',array(
     'type' => 'select',
@@ -1946,17 +1943,17 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'left' => __('Left', 'wp-forge'),
       'right'  => __('Right', 'wp-forge'),
     ),
-  )); 
+  ));
   $wp_customize->add_section('post_layout', array( /* posts section */
     'title' => __('Post Configuration', 'wp-forge'),
     'description' => __('Configure the appearance of certain post elements in your theme.', 'wp-forge'),
     'priority' => 30,
     'panel' => 'wpforge_content',
-  ));    
+  ));
   $wp_customize->add_setting('wpforge_cat_display',array( /* show categories */
     'default' => 'yes',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_cat_display',
     'priority' => 1,
   ));
@@ -1972,7 +1969,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_cat_position',array( /* category position */
     'default' => 'top',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_cat_position',
     'priority' => 2,
   ));
@@ -1990,13 +1987,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '0.75rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 3,    
+    'priority' => 3,
   ));
   $wp_customize->add_control('wpforge_category_font_size',array(
     'type' => 'text',
-    'active_callback' => 'wpforge_cat_position_callback_top', 
+    'active_callback' => 'wpforge_cat_position_callback_top',
     'label' => __('Categories Above Title Font Size','wp-forge'),
     'section' => 'post_layout',
   ));
@@ -2004,13 +2001,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '0.75rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 4,    
+    'priority' => 4,
   ));
   $wp_customize->add_control('wpforge_category_tag_font_size',array(
     'type' => 'text',
-    'active_callback' => 'wpforge_cat_position_callback_bottom', 
+    'active_callback' => 'wpforge_cat_position_callback_bottom',
     'label' => __('Categories Above Tags Font Size','wp-forge'),
     'section' => 'post_layout',
   ));
@@ -2018,13 +2015,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 5,    
+    'priority' => 5,
   ));
   $wp_customize->add_control('wpforge_category_gen_font_size',array(
     'type' => 'text',
-    'active_callback' => 'wpforge_cat_position_callback_bottom', 
+    'active_callback' => 'wpforge_cat_position_callback_bottom',
     'label' => __('Categories Displayed Above Tags Genericon Font Size','wp-forge'),
     'section' => 'post_layout',
   ));
@@ -2032,19 +2029,19 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '3rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 6,    
+    'priority' => 6,
   ));
   $wp_customize->add_control('wpforge_post_title_font_size',array(
     'type' => 'text',
     'label' => __('Post Title Font Size','wp-forge'),
     'section' => 'post_layout',
-  ));    
+  ));
   $wp_customize->add_setting('wpforge_meta_display',array( /* meta display */
     'default' => 'yes',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_meta_display',
     'priority' => 7,
   ));
@@ -2061,13 +2058,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '0.75rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 8,    
+    'priority' => 8,
   ));
   $wp_customize->add_control('wpforge_postmeta_font_size',array(
     'type' => 'text',
-    'active_callback' => 'wpforge_postmeta_callback', 
+    'active_callback' => 'wpforge_postmeta_callback',
     'label' => __('Post Meta Font Size','wp-forge'),
     'section' => 'post_layout',
   ));
@@ -2075,9 +2072,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 9,    
+    'priority' => 9,
   ));
   $wp_customize->add_control('wpforge_postmeta_gen_font_size',array(
     'type' => 'text',
@@ -2088,7 +2085,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_post_display',array( /* full post or excerpt */
     'default' => 'full',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_post_display',
     'priority' => 10,
   ));
@@ -2100,11 +2097,11 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'full'    => __('Full Post', 'wp-forge'),
       'excerpt' => __('Excerpt', 'wp-forge'),
     ),
-  ));   
+  ));
   $wp_customize->add_setting('wpforge_thumb_display',array( /* display thumbs on index page */
     'default' => 'yes',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_thumb_display',
     'priority' => 11,
   ));
@@ -2120,7 +2117,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_single_thumb_display',array( /* display thumbs in single post view */
     'default' => 'yes',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_single_thumb_display',
     'priority' => 12,
   ));
@@ -2137,7 +2134,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
     'priority' => 13,
   ));
@@ -2149,7 +2146,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_change_tag_settings',array( /* meta display */
     'default' => 'select',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_change_tag_settings',
     'priority' => 14,
   ));
@@ -2171,9 +2168,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '3rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 15,  
+    'priority' => 15,
   ));
   $wp_customize->add_control('wpforge_post_h1_size',array(
     'label' => __('Post H1 Font Size','wp-forge'),
@@ -2186,9 +2183,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '2.5rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 16,  
+    'priority' => 16,
   ));
   $wp_customize->add_control('wpforge_post_h2_size',array(
     'label' => __('Post H2 Font Size','wp-forge'),
@@ -2201,9 +2198,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1.9375rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 17,  
+    'priority' => 17,
   ));
   $wp_customize->add_control('wpforge_post_h3_size',array(
     'label' => __('Post H3 Font Size','wp-forge'),
@@ -2216,9 +2213,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1.5625rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 18,  
+    'priority' => 18,
   ));
   $wp_customize->add_control('wpforge_post_h4_size',array(
     'label' => __('Post H4 Font Size','wp-forge'),
@@ -2231,9 +2228,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1.25rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 19,  
+    'priority' => 19,
   ));
   $wp_customize->add_control('wpforge_post_h5_size',array(
     'label' => __('Post H5 Font Size','wp-forge'),
@@ -2246,9 +2243,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 20,  
+    'priority' => 20,
   ));
   $wp_customize->add_control('wpforge_post_h6_size',array(
     'label' => __('Post H6 Font Size','wp-forge'),
@@ -2259,7 +2256,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_tag_display',array( /* tag display */
     'default' => 'yes',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_tag_display',
     'priority' => 21,
   ));
@@ -2276,9 +2273,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '0.75rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 22,    
+    'priority' => 22,
   ));
   $wp_customize->add_control('wpforge_post_tag_size',array(
     'type' => 'text',
@@ -2290,9 +2287,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 23,    
+    'priority' => 23,
   ));
   $wp_customize->add_control('wpforge_tag_gen_size',array(
     'type' => 'text',
@@ -2304,7 +2301,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'none',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_decoration',
     'priority' => 24,
   ));
@@ -2316,14 +2313,14 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'none'          => __('none', 'wp-forge'),
       'underline'     => __('underline', 'wp-forge'),
       'overline'      => __('overline', 'wp-forge'),
-      'line-through'  => __('line-through', 'wp-forge'),            
+      'line-through'  => __('line-through', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_post_link_hover_decoration',array( /* post link hover decoration */
     'default' => 'none',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_decoration',
     'priority' => 25,
   ));
@@ -2335,14 +2332,14 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'none'          => __('none', 'wp-forge'),
       'underline'     => __('underline', 'wp-forge'),
       'overline'      => __('overline', 'wp-forge'),
-      'line-through'  => __('line-through', 'wp-forge'),            
+      'line-through'  => __('line-through', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_post_link_weight',array( /* post link weight */
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 26,
   ));
@@ -2352,15 +2349,15 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'post_layout',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
-  ));  
+  ));
   $wp_customize->add_setting('wpforge_post_nav_display',array( /* post navigation */
     'default' => 'default',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_wpforge_post_nav_display',
-    'priority' => 27,  
+    'priority' => 27,
   ));
   $wp_customize->add_control('wpforge_post_nav_display',array(
     'type'    => 'select',
@@ -2374,9 +2371,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('wpforge_comment_layout',array( /* comment form layout */
     'default' => 'new',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_wpforge_comment_layout',
-    'priority' => 28,  
+    'priority' => 28,
   ));
   $wp_customize->add_control('wpforge_comment_layout',array(
     'type'    => 'select',
@@ -2397,12 +2394,12 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '3rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 1,    
+    'priority' => 1,
   ));
   $wp_customize->add_control('wpforge_page_title_font_size',array(
-    'type' => 'text', 
+    'type' => 'text',
     'label' => __('Page Title Font Size','wp-forge'),
     'section' => 'page_layout',
   ));
@@ -2410,12 +2407,12 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 2,    
+    'priority' => 2,
   ));
   $wp_customize->add_control('wpforge_page_content_font_size',array(
-    'type' => 'text', 
+    'type' => 'text',
     'label' => __('Page Content Font Size','wp-forge'),
     'section' => 'page_layout',
   ));
@@ -2423,7 +2420,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'none',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_decoration',
     'priority' => 3,
   ));
@@ -2435,14 +2432,14 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'none'          => __('none', 'wp-forge'),
       'underline'     => __('underline', 'wp-forge'),
       'overline'      => __('overline', 'wp-forge'),
-      'line-through'  => __('line-through', 'wp-forge'),            
+      'line-through'  => __('line-through', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_page_link_hover_decoration',array( /* page link hover decoration */
     'default' => 'underline',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_decoration',
     'priority' => 4,
   ));
@@ -2452,16 +2449,16 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'page_layout',
     'choices' => array(
       'underline'     => __('underline', 'wp-forge'),
-      'none'          => __('none', 'wp-forge'),      
+      'none'          => __('none', 'wp-forge'),
       'overline'      => __('overline', 'wp-forge'),
-      'line-through'  => __('line-through', 'wp-forge'),            
+      'line-through'  => __('line-through', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_page_link_weight',array( /* page link weight */
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 5,
   ));
@@ -2471,13 +2468,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'page_layout',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_change_page_tag_settings',array( /* change page heading sizes */
     'default' => 'select',
     'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_change_page_tag_settings',
     'priority' => 6,
   ));
@@ -2499,9 +2496,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '3rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 7,  
+    'priority' => 7,
   ));
   $wp_customize->add_control('wpforge_page_h1_size',array(
     'label' => __('Page H1 Font Size','wp-forge'),
@@ -2514,9 +2511,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '2.5rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 8,  
+    'priority' => 8,
   ));
   $wp_customize->add_control('wpforge_page_h2_size',array(
     'label' => __('Page H2 Font Size','wp-forge'),
@@ -2529,9 +2526,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1.9375rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 9,  
+    'priority' => 9,
   ));
   $wp_customize->add_control('wpforge_page_h3_size',array(
     'label' => __('Page H3 Font Size','wp-forge'),
@@ -2544,9 +2541,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1.5625rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 10,  
+    'priority' => 10,
   ));
   $wp_customize->add_control('wpforge_page_h4_size',array(
     'label' => __('Page H4 Font Size','wp-forge'),
@@ -2559,9 +2556,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1.25rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 11,  
+    'priority' => 11,
   ));
   $wp_customize->add_control('wpforge_page_h5_size',array(
     'label' => __('Page H5 Font Size','wp-forge'),
@@ -2573,9 +2570,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 12,  
+    'priority' => 12,
   ));
   $wp_customize->add_control('wpforge_page_h6_size',array(
     'label' => __('Page H6 Font Size','wp-forge'),
@@ -2593,9 +2590,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '0.875rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 1,  
+    'priority' => 1,
   ));
   $wp_customize->add_control('wpforge_sidebar_widget_title',array(
     'label' => __('Sidebar Widget Title Font Size','wp-forge'),
@@ -2606,7 +2603,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'uppercase',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_widget_transform',
     'priority' => 2,
   ));
@@ -2617,15 +2614,15 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'choices' => array(
       'uppercase'   => __('Uppercase', 'wp-forge'),
       'none'        => __('None', 'wp-forge'),
-      'capitalize'  => __('Capitalize', 'wp-forge'),            
-      'lowercase'   => __('Lowercase', 'wp-forge'),           
+      'capitalize'  => __('Capitalize', 'wp-forge'),
+      'lowercase'   => __('Lowercase', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_sidebar_widget_title_weight',array( /* sidebar widget title weight */
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 3,
   ));
@@ -2635,16 +2632,16 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'wpforge_sidebar_content',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
-  ));  
+  ));
   $wp_customize->add_setting('wpforge_sidebar_font_size',array( /* sidebar font size */
     'default' => '0.875rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 4,  
+    'priority' => 4,
   ));
   $wp_customize->add_control('wpforge_sidebar_font_size',array(
     'label' => __('Sidebar Font Size','wp-forge'),
@@ -2655,7 +2652,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'none',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_decoration',
     'priority' => 5,
   ));
@@ -2667,14 +2664,14 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'none'          => __('none', 'wp-forge'),
       'underline'     => __('underline', 'wp-forge'),
       'overline'      => __('overline', 'wp-forge'),
-      'line-through'  => __('line-through', 'wp-forge'),            
+      'line-through'  => __('line-through', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_sidebar_link_hover_decoration',array( /* sidebar link hover decoration */
     'default' => 'underline',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_decoration',
     'priority' => 6,
   ));
@@ -2684,16 +2681,16 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'wpforge_sidebar_content',
     'choices' => array(
       'underline'     => __('underline', 'wp-forge'),
-      'none'          => __('none', 'wp-forge'),      
+      'none'          => __('none', 'wp-forge'),
       'overline'      => __('overline', 'wp-forge'),
-      'line-through'  => __('line-through', 'wp-forge'),            
+      'line-through'  => __('line-through', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_sidebar_link_weight',array( /* sidebar link weight */
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 7,
   ));
@@ -2703,7 +2700,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'wpforge_sidebar_content',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
   $wp_customize->add_section('wpforge_footer_sidebar_content', array( /* footer sidebar content section */
@@ -2724,14 +2721,14 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'label' => __('Footer Sidebar Content Width','wp-forge'),
     'section' => 'wpforge_footer_sidebar_content',
     'type' => 'text',
-  ));  
-  $wp_customize->add_setting('footer_sidebar_color', array( /* footer sidebar contet background color */ 
+  ));
+  $wp_customize->add_setting('footer_sidebar_color', array( /* footer sidebar contet background color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
     ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_sidebar_color',array(
     'label' => __('Footer Sidebar Background Color', 'wp-forge'),
@@ -2742,9 +2739,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '0.875rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 3,  
+    'priority' => 3,
   ));
   $wp_customize->add_control('wpforge_footer_sidebar_widget_title',array(
     'label' => __('Footer Sidebar Widget Title Font Size','wp-forge'),
@@ -2755,7 +2752,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'uppercase',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_widget_transform',
     'priority' => 4,
   ));
@@ -2766,15 +2763,15 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'choices' => array(
       'uppercase'   => __('Uppercase', 'wp-forge'),
       'none'        => __('None', 'wp-forge'),
-      'capitalize'  => __('Capitalize', 'wp-forge'),            
-      'lowercase'   => __('Lowercase', 'wp-forge'),           
+      'capitalize'  => __('Capitalize', 'wp-forge'),
+      'lowercase'   => __('Lowercase', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_footer_sidebar_widget_title_weight',array( /* footer sidebar widget title weight */
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 5,
   ));
@@ -2784,16 +2781,16 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'wpforge_footer_sidebar_content',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
-  ));  
+  ));
   $wp_customize->add_setting('wpforge_footer_sidebar_font_size',array( /* footer sidebar font size */
     'default' => '0.875rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',  
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 6,  
+    'priority' => 6,
   ));
   $wp_customize->add_control('wpforge_footer_sidebar_font_size',array(
     'label' => __('Footer Sidebar Font Size','wp-forge'),
@@ -2804,7 +2801,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'none',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_decoration',
     'priority' => 7,
   ));
@@ -2816,14 +2813,14 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'none'          => __('none', 'wp-forge'),
       'underline'     => __('underline', 'wp-forge'),
       'overline'      => __('overline', 'wp-forge'),
-      'line-through'  => __('line-through', 'wp-forge'),            
+      'line-through'  => __('line-through', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_footer_sidebar_link_hover_decoration',array( /* footer sidebar link hover decoration */
     'default' => 'underline',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_decoration',
     'priority' => 8,
   ));
@@ -2833,16 +2830,16 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'wpforge_footer_sidebar_content',
     'choices' => array(
       'underline'     => __('underline', 'wp-forge'),
-      'none'          => __('none', 'wp-forge'),      
+      'none'          => __('none', 'wp-forge'),
       'overline'      => __('overline', 'wp-forge'),
-      'line-through'  => __('line-through', 'wp-forge'),            
+      'line-through'  => __('line-through', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_footer_sidebar_link_weight',array( /* footer sidebar link weight */
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 9,
   ));
@@ -2852,7 +2849,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'wpforge_footer_sidebar_content',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
   $wp_customize->add_section('footer_content', array( /* footer content section */
@@ -2865,22 +2862,22 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => '75rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
-    'priority' => 10,    
+    'priority' => 10,
   ));
   $wp_customize->add_control('footer_content_width',array(
     'label' => __('Footer Content Width','wp-forge'),
     'section' => 'footer_content',
     'type' => 'text',
-  ));   
+  ));
   $wp_customize->add_setting('footer_content_color', array( /* footer content background color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 15,   
+    'priority' => 15,
     ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_content_color',array(
     'label' => __('Footer Content Background Color', 'wp-forge'),
@@ -2905,23 +2902,23 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type'    => 'theme_mod',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_footer_position',
-    'priority' => 25, 
+    'priority' => 25,
   ));
   $wp_customize->add_control('wpforge_footer_position',array(
-    'type' => 'select',   
+    'type' => 'select',
     'label' => __('Footer Content Position', 'wp-forge'),
     'section' => 'footer_content',
     'choices' => array(
-      'center'  => __('Text &amp; Nav Centered', 'wp-forge'),      
+      'center'  => __('Text &amp; Nav Centered', 'wp-forge'),
       'right'   => __('Text Right - Nav Left', 'wp-forge'),
-      'left'    => __('Text Left - Nav Right', 'wp-forge'),      
+      'left'    => __('Text Left - Nav Right', 'wp-forge'),
     ),
   ));
   $wp_customize->add_setting('wpforge_footer_txt_size',array( /* footer text font size */
     'default' => '1rem',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',    
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_text',
     'priority' => 30,
   ));
@@ -2942,46 +2939,46 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'primary_button_color',array(
     'label' => __('Primary Button Color', 'wp-forge'),
     'section' => 'primary_button_settings',
     'settings' => 'primary_button_color',
-  )));   
+  )));
   $wp_customize->add_setting('primary_button_hover_color', array( /* primary button hover color */
     'default' => '#007095',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'primary_button_hover_color',array(
     'label' => __('Primary Button Hover Color', 'wp-forge'),
     'section' => 'primary_button_settings',
     'settings' => 'primary_button_hover_color',
-  )));  
+  )));
   $wp_customize->add_setting('primary_button_font_color', array( /* primary button text color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',    
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'primary_button_font_color',array(
     'label' => __('Primary Button Font Color', 'wp-forge'),
     'section' => 'primary_button_settings',
     'settings' => 'primary_button_font_color',
-  )));   
+  )));
   $wp_customize->add_setting('primary_button_font_hover_color', array( /* primary button font hover color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'primary_button_font_hover_color',array(
     'label' => __('Primary Button Font Hover Color', 'wp-forge'),
@@ -2992,7 +2989,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 5,
   ));
@@ -3002,7 +2999,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'primary_button_settings',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
     $wp_customize->add_section('secondary_button_settings', array( /* secondary button settings */
@@ -3017,46 +3014,46 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'secondary_button_color',array(
     'label' => __('Secondary Button Color', 'wp-forge'),
     'section' => 'secondary_button_settings',
     'settings' => 'secondary_button_color',
-  )));   
+  )));
   $wp_customize->add_setting('secondary_button_hover_color', array( /* secondary button hover color */
     'default' => '#5f5f5f',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'secondary_button_hover_color',array(
     'label' => __('secondary Button Hover Color', 'wp-forge'),
     'section' => 'secondary_button_settings',
     'settings' => 'secondary_button_hover_color',
-  )));  
+  )));
   $wp_customize->add_setting('secondary_button_font_color', array( /* secondary button text color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',    
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'secondary_button_font_color',array(
     'label' => __('Secondary Button Font Color', 'wp-forge'),
     'section' => 'secondary_button_settings',
     'settings' => 'secondary_button_font_color',
-  )));   
+  )));
   $wp_customize->add_setting('secondary_button_font_hover_color', array( /* secondary button font hover color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'secondary_button_font_hover_color',array(
     'label' => __('Secondary Button Font Hover Color', 'wp-forge'),
@@ -3067,7 +3064,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 5,
   ));
@@ -3077,7 +3074,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'secondary_button_settings',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
     $wp_customize->add_section('success_button_settings', array( /* success button settings */
@@ -3092,46 +3089,46 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'success_button_color',array(
     'label' => __('Success Button Color', 'wp-forge'),
     'section' => 'success_button_settings',
     'settings' => 'success_button_color',
-  )));   
+  )));
   $wp_customize->add_setting('success_button_hover_color', array( /* success button hover color */
     'default' => '#22bb5b',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'success_button_hover_color',array(
     'label' => __('Success Button Hover Color', 'wp-forge'),
     'section' => 'success_button_settings',
     'settings' => 'success_button_hover_color',
-  )));  
+  )));
   $wp_customize->add_setting('success_button_font_color', array( /* success button text color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',    
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'success_button_font_color',array(
     'label' => __('Success Button Font Color', 'wp-forge'),
     'section' => 'success_button_settings',
     'settings' => 'success_button_font_color',
-  )));   
+  )));
   $wp_customize->add_setting('success_button_font_hover_color', array( /* success button font hover color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'success_button_font_hover_color',array(
     'label' => __('Success Button Font Hover Color', 'wp-forge'),
@@ -3142,7 +3139,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 5,
   ));
@@ -3152,7 +3149,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'success_button_settings',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
     $wp_customize->add_section('warning_button_settings', array( /* Warning Button settings */
@@ -3167,46 +3164,46 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'warning_button_color',array(
     'label' => __('Warning Button Color', 'wp-forge'),
     'section' => 'warning_button_settings',
     'settings' => 'warning_button_color',
-  )));   
+  )));
   $wp_customize->add_setting('warning_button_hover_color', array( /* Warning Button hover color */
     'default' => '#cc8b00',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'warning_button_hover_color',array(
     'label' => __('Warning Button Hover Color', 'wp-forge'),
     'section' => 'warning_button_settings',
     'settings' => 'warning_button_hover_color',
-  )));  
+  )));
   $wp_customize->add_setting('warning_button_font_color', array( /* Warning Button text color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',    
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'warning_button_font_color',array(
     'label' => __('Warning Button Font Color', 'wp-forge'),
     'section' => 'warning_button_settings',
     'settings' => 'warning_button_font_color',
-  )));   
+  )));
   $wp_customize->add_setting('warning_button_font_hover_color', array( /* Warning Button font hover color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'warning_button_font_hover_color',array(
     'label' => __('Warning Button Font Hover Color', 'wp-forge'),
@@ -3217,7 +3214,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 5,
   ));
@@ -3227,7 +3224,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'warning_button_settings',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
     $wp_customize->add_section('alert_button_settings', array( /* Alert Button settings */
@@ -3242,46 +3239,46 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'alert_button_color',array(
     'label' => __('Alert Button Color', 'wp-forge'),
     'section' => 'alert_button_settings',
     'settings' => 'alert_button_color',
-  )));   
+  )));
   $wp_customize->add_setting('alert_button_hover_color', array( /* Alert Button hover color */
     'default' => '#da3116',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'alert_button_hover_color',array(
     'label' => __('Alert Button Hover Color', 'wp-forge'),
     'section' => 'alert_button_settings',
     'settings' => 'alert_button_hover_color',
-  )));  
+  )));
   $wp_customize->add_setting('alert_button_font_color', array( /* Alert Button text color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',    
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'alert_button_font_color',array(
     'label' => __('Alert Button Font Color', 'wp-forge'),
     'section' => 'alert_button_settings',
     'settings' => 'alert_button_font_color',
-  )));   
+  )));
   $wp_customize->add_setting('alert_button_font_hover_color', array( /* Alert Button font hover color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'alert_button_font_hover_color',array(
     'label' => __('Alert Button Font Hover Color', 'wp-forge'),
@@ -3292,7 +3289,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 5,
   ));
@@ -3302,7 +3299,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'alert_button_settings',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
     $wp_customize->add_section('info_button_settings', array( /* Info Button settings */
@@ -3317,46 +3314,46 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,   
+    'priority' => 1,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'info_button_color',array(
     'label' => __('Info Button Color', 'wp-forge'),
     'section' => 'info_button_settings',
     'settings' => 'info_button_color',
-  )));   
+  )));
   $wp_customize->add_setting('info_button_hover_color', array( /* Info Button hover color */
     'default' => '#61b6d9',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,   
+    'priority' => 2,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'info_button_hover_color',array(
     'label' => __('Info Button Hover Color', 'wp-forge'),
     'section' => 'info_button_settings',
     'settings' => 'info_button_hover_color',
-  )));  
+  )));
   $wp_customize->add_setting('info_button_font_color', array( /* Info Button text color */
     'default' => '#333333',
     'type' => 'theme_mod',
-    'transport' => 'postMessage',    
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,   
+    'priority' => 3,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'info_button_font_color',array(
     'label' => __('Info Button Font Color', 'wp-forge'),
     'section' => 'info_button_settings',
     'settings' => 'info_button_font_color',
-  )));   
+  )));
   $wp_customize->add_setting('info_button_font_hover_color', array( /* Info Button font hover color */
     'default' => '#ffffff',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,   
+    'priority' => 4,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'info_button_font_hover_color',array(
     'label' => __('Info Button Font Hover Color', 'wp-forge'),
@@ -3367,7 +3364,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'default' => 'normal',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',   
+    'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_link_weight',
     'priority' => 5,
   ));
@@ -3377,7 +3374,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'info_button_settings',
     'choices' => array(
       'normal'   => __('Normal', 'wp-forge'),
-      'bold'     => __('Bold', 'wp-forge'),            
+      'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
 
@@ -3400,13 +3397,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'topbar'    => __('Top-Bar', 'wp-forge'),
         'offcanvas' => __('Off-Canvas', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
           return '';
       }
-  }  
+  }
   function wpforge_sanitize_nav_position( $input ) { // Nav Position
       $valid = array(
         'normal' => __('Normal Position', 'wp-forge'),
@@ -3414,7 +3411,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'fixed'  => __('Top of Browser - Fixed', 'wp-forge'),
         'sticky' => __('Contain-To-Grid-Sticky', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3426,19 +3423,19 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'no'  => __('No', 'wp-forge'),
         'yes' => __('Yes', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
           return '';
       }
-  }  
+  }
   function wpforge_sanitize_link_position( $input ) { // link position
       $valid = array(
         'left'  => __('Links to the left', 'wp-forge'),
-        'right' => __('Links to the right', 'wp-forge'),        
+        'right' => __('Links to the right', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3450,7 +3447,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'no'  => __('No', 'wp-forge'),
         'yes' => __('Yes', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3462,7 +3459,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'no'  => __('No', 'wp-forge'),
         'yes' => __('Yes', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3474,7 +3471,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'left'  => __('Left', 'wp-forge'),
         'right' => __('Right', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3486,7 +3483,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'left'  => __('Left', 'wp-forge'),
         'right' => __('Right', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3498,19 +3495,19 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes, show categories', 'wp-forge'),
         'no'  => __('No, hide categories', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
           return '';
       }
-  } 
+  }
   function wpforge_sanitize_cat_position( $input ) { // category position
       $valid = array(
         'top'     => __('Above the post title', 'wp-forge'),
         'bottom'  => __('Above the post tags', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3522,19 +3519,19 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes, display post meta', 'wp-forge'),
         'no'  => __('No, hide post meta', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
           return '';
       }
-  }  
+  }
   function wpforge_sanitize_post_display( $input ) { // post display
       $valid = array(
         'full'    => __('Full Post', 'wp-forge'),
         'excerpt' => __('Excerpt', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3546,7 +3543,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes', 'wp-forge'),
         'no'  => __('No', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3558,7 +3555,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes', 'wp-forge'),
         'no'  => __('No', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3570,7 +3567,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes, display post tags', 'wp-forge'),
         'no'  => __('No, hide post tags', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3582,7 +3579,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'default'   => __('Default', 'wp-forge'),
         'pagenavi'  => __('PageNavi', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3594,20 +3591,20 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'new'   => __('New Comment Layout', 'wp-forge'),
         'old'  => __('Old Comment Layout', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
           return '';
       }
-  }    
+  }
   function wpforge_sanitize_footer_position( $input ) { // Footer Position
       $valid = array(
-        'center'  => __('Text &amp; Nav Centered', 'wp-forge'),      
+        'center'  => __('Text &amp; Nav Centered', 'wp-forge'),
         'right'   => __('Text Right - Nav Left', 'wp-forge'),
         'left'    => __('Text Left - Nav Right', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3619,7 +3616,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes, show the title', 'wp-forge'),
         'no'  => __('No, hide the title', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3630,24 +3627,24 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       $valid = array(
         'uppercase'   => __('Uppercase', 'wp-forge'),
         'none'        => __('None', 'wp-forge'),
-        'capitalize'  => __('Capitalize', 'wp-forge'),            
-        'lowercase'   => __('Lowercase', 'wp-forge'), 
+        'capitalize'  => __('Capitalize', 'wp-forge'),
+        'lowercase'   => __('Lowercase', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
           return '';
       }
-  }  
+  }
   function wpforge_sanitize_link_decoration( $input ) { // link hover decoration
       $valid = array(
         'underline'     => __('underline', 'wp-forge'),
-        'none'          => __('none', 'wp-forge'),      
+        'none'          => __('none', 'wp-forge'),
         'overline'      => __('overline', 'wp-forge'),
         'line-through'  => __('line-through', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3659,7 +3656,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'normal'   => __('Normal', 'wp-forge'),
         'bold'     => __('Bold', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3671,7 +3668,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'float'   => __('Float', 'wp-forge'),
         'flex'    => __('Flex', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3688,7 +3685,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'change_h5'  => __('H5 Heading Tag', 'wp-forge'),
         'change_h6'  => __('H6 Heading Tag', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3705,7 +3702,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'change_page_h5'  => __('H5 Heading Tag', 'wp-forge'),
         'change_page_h6'  => __('H6 Heading Tag', 'wp-forge'),
       );
-    
+
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3986,12 +3983,12 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     $wp_customize->get_setting( 'footer_sidebar_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_footer_sidebar_widget_title' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_footer_sidebar_widget_title_transform' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'wpforge_footer_sidebar_widget_title_weight' )->transport = 'postMessage';    
+    $wp_customize->get_setting( 'wpforge_footer_sidebar_widget_title_weight' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_footer_sidebar_font_size' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_footer_sidebar_link_decoration' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_footer_sidebar_link_hover_decoration' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'wpforge_footer_sidebar_link_weight' )->transport = 'postMessage'; 
-    $wp_customize->get_setting( 'footer_widget_text_color' )->transport = 'postMessage';    
+    $wp_customize->get_setting( 'wpforge_footer_sidebar_link_weight' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'footer_widget_text_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_footer_text' )->transport = 'postMessage';
     $wp_customize->get_setting( 'main_widget_title_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'main_widget_link_color' )->transport = 'postMessage';
@@ -4001,7 +3998,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     $wp_customize->get_setting( 'footer_content_width' )->transport = 'postMessage';
     $wp_customize->get_setting( 'footer_text_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'footer_link_color' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'wpforge_footer_txt_size' )->transport = 'postMessage';    
+    $wp_customize->get_setting( 'wpforge_footer_txt_size' )->transport = 'postMessage';
     $wp_customize->get_setting( 'primary_button_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'primary_button_hover_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'primary_button_font_color' )->transport = 'postMessage';
@@ -4032,7 +4029,12 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     $wp_customize->get_setting( 'info_button_font_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'info_button_font_hover_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'info_button_font_weight' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'wpforge_select_css' )->transport = 'postMessage';                 
+    $wp_customize->get_setting( 'wpforge_select_css' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'pagination_current_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'pagination_current_font_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'pagination_link_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'pagination_hover_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'pagination_link_hover_color' )->transport = 'postMessage';
   }
   add_action( 'customize_register', 'wpforge_customize_register' );
 }
@@ -4200,7 +4202,7 @@ h1.entry-title-page{color:<?php echo esc_attr(get_theme_mod('wpforge_page_title_
 
 #secondary-sidebar a{color:<?php echo esc_attr(get_theme_mod('footer_widget_link_color','#008CBA')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('wpforge_footer_sidebar_link_weight','normal')); ?>;text-decoration:<?php echo esc_attr(get_theme_mod('wpforge_footer_sidebar_link_decoration','none')); ?>;}
 
-#secondary-sidebar a:hover{color:<?php echo esc_attr(get_theme_mod('footer_widget_link_hover_color','#0078a0')); ?>;text-decoration:<?php echo esc_attr(get_theme_mod('wpforge_footer_sidebar_link_hover_decoration','underline')); ?>;} 
+#secondary-sidebar a:hover{color:<?php echo esc_attr(get_theme_mod('footer_widget_link_hover_color','#0078a0')); ?>;text-decoration:<?php echo esc_attr(get_theme_mod('wpforge_footer_sidebar_link_hover_decoration','underline')); ?>;}
 
 footer[role="contentinfo"] p,footer[role="contentinfo"]{color:<?php echo esc_attr(get_theme_mod('footer_text_color','#444444')); ?>;}
 
@@ -4220,7 +4222,7 @@ a.button.secondary:hover,a.button.secondary:focus{background-color:<?php echo es
 
 a.button.success{background-color:<?php echo esc_attr(get_theme_mod('success_button_color','#3adb76')); ?>;color:<?php echo esc_attr(get_theme_mod('success_button_font_color','#ffffff')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('success_button_font_weight','normal')); ?>;text-decoration:none;}
 
-a.button.success:hover,a.button.success:focus{background-color:<?php echo esc_attr(get_theme_mod('success_button_hover_color','#22bb5b')); ?>;color:<?php echo esc_attr(get_theme_mod('success_button_font_hover_color','#ffffff')); ?>;text-decoration: none;} 
+a.button.success:hover,a.button.success:focus{background-color:<?php echo esc_attr(get_theme_mod('success_button_hover_color','#22bb5b')); ?>;color:<?php echo esc_attr(get_theme_mod('success_button_font_hover_color','#ffffff')); ?>;text-decoration: none;}
 
 a.button.warning{background-color:<?php echo esc_attr(get_theme_mod('warning_button_color','#ffae00')); ?>;color:<?php echo esc_attr(get_theme_mod('warning_button_font_color','#ffffff')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('warning_button_font_weight','normal')); ?>;text-decoration:none;}
 
@@ -4228,7 +4230,7 @@ a.button.warning:hover,a.button.warning:focus{background-color:<?php echo esc_at
 
 a.button.alert{background-color:<?php echo esc_attr(get_theme_mod('alert_button_color','#ec5840')); ?>;color:<?php echo esc_attr(get_theme_mod('alert_button_font_color','#ffffff')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('alert_button_font_weight','normal')); ?>;text-decoration:none;}
 
-a.button.alert:hover,a.button.alert:focus{background-color:<?php echo esc_attr(get_theme_mod('alert_button_hover_color','#da3116')); ?>;color:<?php echo esc_attr(get_theme_mod('alert_button_font_hover_color','#ffffff')); ?>;text-decoration: none;} 
+a.button.alert:hover,a.button.alert:focus{background-color:<?php echo esc_attr(get_theme_mod('alert_button_hover_color','#da3116')); ?>;color:<?php echo esc_attr(get_theme_mod('alert_button_font_hover_color','#ffffff')); ?>;text-decoration: none;}
 
 a.button.info{background-color:<?php echo esc_attr(get_theme_mod('info_button_color','#a0d3e8')); ?>;color:<?php echo esc_attr(get_theme_mod('info_button_font_color','#333333')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('info_button_font_weight','normal')); ?>;text-decoration:none;}
 

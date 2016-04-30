@@ -1,17 +1,21 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.5
-Stable tag: 6.2.1.1
+Tested up to: 4.5.1
+Stable tag: 6.2.1.2
 
 == Changelog ==
 
+= 6.2.1.2 =
+* Removed the java script from wpforge-functions.php that removed empty p and br tags from the content area. This was causing line breaks not to work.
+* Corrected an issue where changes made to pagination colors in customizer were not being applied in real time.
+
 = 6.2.1.1 =
-* Corrected and issue where some of the text in the comment form was not translateable. Thanks to @jarnoan (https://github.com/jarnoan) for bringing this to my attention months ago: https://github.com/tsquez/wp-forge/pull/48
+* Corrected and issue where some of the text in the comment form was not translatable Thanks to @jarnoan (https://github.com/jarnoan) for bringing this to my attention months ago: https://github.com/tsquez/wp-forge/pull/48
 * Adjusted the Off-Canvas menu. 6.2.1 added some additional padding which made the menu look "fatter".
 * Updated Font-Awesome to 4.6.1
 * Updated Motion-Ui to 1.2.2
 * Adjusted the mobile styles for certain elements.
-* Added the following classes: secondary label radius, to the comment reply link via js in wpforge-functions.js and I also added the following classes: alert label radius, to the cancel reply link via js in wpforge-functions.js. 
+* Added the following classes: secondary label radius, to the comment reply link via js in wpforge-functions.js and I also added the following classes: alert label radius, to the cancel reply link via js in wpforge-functions.js.
 * Removed the hr from header.php. This only displayed on small mobile devices and after a hard look, I decided to remove it.
 
 = 6.2.1 =
@@ -22,12 +26,12 @@ Stable tag: 6.2.1.1
 * Added .button support to the Foundation Buttons section of the customizer.
 * Added button support to the Foundation Buttons section of the customizer.
 * Modified the heading tag section of both post content and page content sections of the customizer. Now the fields to change the font size of heading tags is hidden unless a specific tag is chosen.
-* Added the .button class css from foundation.css to the button class in the WP-Forge style sheet. Now buttons built with <button></button> will have the same look and feel as regualr foundation buttons and will take on the modification set in the Foundation Buttons section of the customizer.
+* Added the .button class css from foundation.css to the button class in the WP-Forge style sheet. Now buttons built with <button></button> will have the same look and feel as regular foundation buttons and will take on the modification set in the Foundation Buttons section of the customizer.
 * Corrected an issue where the default link color for links within a page were showing up as black. They now show properly as blue, which is the default.
 
 = 6.2 =
 * Updated to the latest version of Zurb's Foundation, 6.2
-* Increased the width of the theme from 1024px to 1200px. This is based off the new width of rows wich is 1200px.
+* Increased the width of the theme from 1024px to 1200px. This is based off the new width of rows which is 1200px.
 * With the increase in width, I decided to add a fourth footer widget.
 * Added fonts.css to editor. Previously only genericons.css was added. Since this was combined into fonts.css with font-awesome, fonts.css was added. Now genericons and font-awesome are available via the editor.
 * Updated Font-Awesome to latest version, 4.5. font-awesome.min.css was added to fonts.css, the full version of Font-Awesome is located in /fonts/full (per WordPress guidelines).
@@ -54,7 +58,7 @@ Stable tag: 6.2.1.1
 * Removed the About WP-Forge section under Appearance. It was kind of clunky and not dev friendly. I will be switching to a new About WP-Forge admin page. The admin notice about WP-Forge will still display once the theme has been activated.
 * Added the clearfix class to gallery via the wpforge-functions.js file
 * Added support for Jetpacks new social menu.
-* Fixed issue where catgories were not showing above tags if Where to display categories? was set to Above Post Tags.
+* Fixed issue where categories were not showing above tags if Where to display categories? was set to Above Post Tags.
 * Redid the comment reply button by adding a label class.
 * Reversed the Sticky pin icon to the other direction.
 * Changed the icon for the post date.
@@ -83,12 +87,12 @@ Stable tag: 6.2.1.1
 = 5.5.2.6 =
 * Set the default display of post thumbnails to yes for the customizer view.
 * Corrected the issue with the footer text area. Now users can insert html.
-* Corrected issue with archive, tag and search pages not showing excerpts if Show full post or excerpt? is set to excerpt. Also added post thumbal display to archive, tag and search pages.
+* Corrected issue with archive, tag and search pages not showing excerpts if Show full post or excerpt? is set to excerpt. Also added post thumbnail display to archive, tag and search pages.
 * Corrected an issue with off-canvas for mobile where the hamburger icon text was not showing.
 * Moved all Off-Canvas settings to Mobile Menu View. This makes it easier to access the off-canvas settings instead of the user having to go back and forth to different sections.
 * Added Font-Awesome back into the mix. I have been receiving a lot of emails asking for this to be brought back, so I decided why not.
 * Moved the Show home page title section into the Static Front Page Section.
-* Renamed the panels in customizer. Instead of sections they are now called options. Also modified some of the descriptions of the panels and secions.
+* Renamed the panels in customizer. Instead of sections they are now called options. Also modified some of the descriptions of the panels and sections.
 * Updated README.txt
 * Updated verbiage of style.css
 
@@ -119,7 +123,7 @@ Stable tag: 6.2.1.1
 * Added favicon to admin area and login page. This makes the favicon consistent throughout the entire site if a user uploads a custom favicon.
 * Added the top-bar color to the ul when the top-bar is set to the scroll or fixed position. If there is more than one line of links and the links wrapped to  second line, the background was transparent. This looked awkward. This corrects the issue.
 * Fixed an issue with the top-bar displaying along with the off-canvas menu in mobile view.
-* Added the abilty to show or hide catgories, post meta and post tags in posts. You also have the ability to choose whether or not to show the categories above the post title or above the post tags.
+* Added the ability to show or hide categories, post meta and post tags in posts. You also have the ability to choose whether or not to show the categories above the post title or above the post tags.
 * Adjusted the font size of the code block displayed at the end of the comments form. It was kind of big and blocky and didn't look right to me.
 * Added a About WP-Forge admin page. This gives users a brief overview of WP-Forge as well as links to the WP-Forge Quick Start Guide, a link to the WP-Forge support forums and a link to download WP-Starter.
 * Added the option to hide the title area of the top-bar. This only affects the top-bar in the normal and contain-to-grid-sticky positions.
@@ -129,7 +133,7 @@ Stable tag: 6.2.1.1
 * Added Off-Canvas as a menu option. This means you can use the Off-Canvas menu as your sites menu.
 * Added Off-Canvas color options to the customizer. Now users can change the colors associated with the Off-Canvas menu.
 * Added the ability for users to hide the title of any page set as the Home page. Users must have the front-page template assigned to the page in order for it to work.
-* Corrected issue with the bakground color of the Nav-Wrapper showing through when Contain-To-Grid-Sticky was selected.
+* Corrected issue with the background color of the Nav-Wrapper showing through when Contain-To-Grid-Sticky was selected.
 * Added the ability to change the color and hover color of links in the Social Menu.
 * Removed the different colors from the Social Menu links. All links are one color now.
 * Updated screenshot.png
@@ -138,7 +142,7 @@ Stable tag: 6.2.1.1
 * Updated to the latest version of Foundation 5.5.2
 * Renamed the setting and control for sidebar colors. With the new WP 4.2 update this caused an issue with the way those mods were named. Mods renamed and issue is corrected.
 * Corrected issue with the site title and site description. Any colors assigned being handled by both the customizer as well as the style sheet. Moved all control of these to the customizer.
-* Removed the container colors from the cutomizer and to the style sheet. No need for these to be in the customizer when all can be controlled in one area. The background color of these containers were preventing any background image to show through. Now these background colors can be set individually in the style sheet.
+* Removed the container colors from the customizer and to the style sheet. No need for these to be in the customizer when all can be controlled in one area. The background color of these containers were preventing any background image to show through. Now these background colors can be set individually in the style sheet.
 * Corrected an issue with the top-bar when placed in Contain-To-Grid-Sticky. This was causing the main Home link to move to the right.
 * Removed html5 support for gallery and caption. See the following as to why this was removed: https://wordpress.org/support/topic/html5-wp-gallery-5518
 * Added the ability to upload a favicon.
@@ -158,7 +162,7 @@ Stable tag: 6.2.1.1
 * Added version to enqueued style sheets for security. I did this to reflect the version of the theme instead of the WordPress version
 * Adjusted an issue with the theme displaying horizontal scrolling when using a header image and hiding the site title and site description. https://github.com/tsquez/wp-forge/issues/40 - Thanks again to BadCat for pointing it out http://www.badcat.com/
 * Added styling for Gravity Forms plugin. In IE submit buttons look squished. Removing the padding makes the submit buttons look normal (line 1306 of style.css)
-* Added back the ability to change the active hover state in top-bar. I had intended to remove it as I thought it redundent, however after user atelier_tsukee brought it to my attention (https://wordpress.org/support/topic/customiser-top_bar_active_hover_color), I decided to add it back.
+* Added back the ability to change the active hover state in top-bar. I had intended to remove it as I thought it redundant, however after user atelier_tsukee brought it to my attention (https://wordpress.org/support/topic/customiser-top_bar_active_hover_color), I decided to add it back.
 * Removed customizer.css from the css folder. This was accidentally left over when I was attempting something with the customizer.
 * Added the .content_container background color to the customizer. Somehow this got taken out at some point.
 * Added the ability to change the font color and hover font color in the top-bar via the customizer.

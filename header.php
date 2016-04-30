@@ -1,9 +1,8 @@
 <?php
 /**
  * The Header template of our theme.
- *
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.1
+ * @version 6.2.1.2
  */
 ?><!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -18,15 +17,15 @@
 <body <?php body_class(); ?>>
         <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
             <?php get_template_part( 'content', 'off_canvas_mobile' ); ?>
-        <?php } // end if ?>    
+        <?php } // end if ?>
         <?php if( get_theme_mod( 'wpforge_nav_select' ) == 'offcanvas') { ?>
             <?php get_template_part( 'content', 'off_canvas' ); ?>
-        <?php } // end if ?>    
+        <?php } // end if ?>
         <?php if( get_theme_mod( 'wpforge_nav_select','topbar' ) == 'topbar') { ?>
             <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'scroll' || get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
                 <?php get_template_part( 'content', 'nav' ); ?>
             <?php } // end if ?>
-        <?php } // end if ?>    
+        <?php } // end if ?>
         <div class="header_container">
         <header id="header" class="header_wrap row" role="banner">
             <div class="site-header medium-12 large-12 columns">
@@ -41,7 +40,7 @@
                     <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
                 </div><!-- /.header-info -->
              </div><!-- .site-header -->
-        </header><!-- #header -->       
+        </header><!-- #header -->
         </div><!-- end .header_container -->
         <?php if( get_theme_mod( 'wpforge_nav_select','topbar' ) == 'topbar') { ?>
             <?php if( get_theme_mod( 'wpforge_nav_position','normal' ) == 'normal' || get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
@@ -49,4 +48,4 @@
             <?php } // end if ?>
         <?php } // end if ?>
         <div class="content_container">
-        <section class="content_wrap row" role="document">             
+        <section class="content_wrap row" role="document">

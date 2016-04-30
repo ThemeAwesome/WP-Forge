@@ -2,19 +2,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 6.2.1\n"
-"POT-Creation-Date: 2016-04-08 17:28-0700\n"
-"PO-Revision-Date: 2016-04-08 17:31-0700\n"
+"Project-Id-Version: WP-Forge 6.2.1.2.\n"
+"POT-Creation-Date: 2016-04-17 07:18-0700\n"
+"PO-Revision-Date: 2016-04-17 07:17-0700\n"
 "Last-Translator: Thomas E. Vasquez <tsquez@gmail.com>\n"
-"Language-Team: ThemeAwesome.com <thomas@themeawesome.com>\n"
-"Language: en_GB\n"
+"Language-Team: ThemeAwesome.com <thomas@themeawesome.com> \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -166,6 +164,18 @@ msgstr ""
 
 #: comments.php:39
 msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:45
+msgid " Required fields are marked <span class=\"required\">*</span>"
+msgstr ""
+
+#: comments.php:46
+msgid "Your Name <span class=\"required\">*</span>"
+msgstr ""
+
+#: comments.php:47
+msgid "Your Email <span class=\"required\">*</span>"
 msgstr ""
 
 #: comments.php:52
@@ -395,7 +405,7 @@ msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #: functions.php:382
-msgid "<span class=\"label secondary radius\">Reply &raquo;</span>"
+msgid "Reply &raquo;"
 msgstr ""
 
 #: functions.php:398 functions.php:432 functions.php:540
@@ -1953,7 +1963,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"A WordPress theme built with ZURB's Foundation for Sites (Foundation 6.2), "
+"A WordPress theme built with ZURB's Foundation for Sites (Foundation 6.2.1), "
 "the most advanced responsive front-end framework in the world. By combining "
 "WordPress and Foundation you get a resposive WordPress theme that makes "
 "creating websites fun and exciting again! Please view the CHANGELOG and "
