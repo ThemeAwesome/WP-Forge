@@ -1,7 +1,7 @@
 /**
  * Theme Customizer enhancements for a better user experience.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 
 ( function( $ ) {
@@ -675,6 +675,55 @@
 // Color Options
 ///////////////////////////////////
 
+	// Category Link Color
+	wp.customize('category_link_color',function( value ) {
+	      value.bind(function(to) {
+	          $('span.categories-links a').css('color', to ? to : '' );
+	      });
+	  });
+
+	// Category Link Hover Color
+	wp.customize('category_link_hover_color',function( value ) {
+	    value.bind(function(to) {
+	        $('span.categories-links a:hover').css('color', to ? to : '' );
+	    });
+	});
+
+	// Post Title Link Color
+	wp.customize('post_title_link_color',function( value ) {
+	      value.bind(function(to) {
+	          $('h1.entry-title-post a').css('color', to ? to : '' );
+	      });
+	  });
+
+	// Post Title Link Hover Color
+	wp.customize('post_title_link_hover_color',function( value ) {
+	    value.bind(function(to) {
+	        $('h1.entry-title-post a:hover').css('color', to ? to : '' );
+	    });
+	});
+
+	// Single Post View Title Color
+	wp.customize('single_post_title_color',function( value ) {
+	    value.bind(function(to) {
+	        $('h1.entry-title-post').css('color', to ? to : '' );
+	    });
+	});
+	
+	// Post Meta Link Color
+	wp.customize('meta_header_link_color',function( value ) {
+	      value.bind(function(to) {
+	          $('.entry-meta-header a').css('color', to ? to : '' );
+	      });
+	  });
+
+	// Post Meta Link Hover Color
+	wp.customize('meta_header_link_hover_color',function( value ) {
+	    value.bind(function(to) {
+	        $('.entry-meta-header a:hover').css('color', to ? to : '' );
+	    });
+	});
+
 	// Content Font Color
 	wp.customize('content_font_color',function( value ) {
         value.bind(function(to) {
@@ -688,6 +737,27 @@
             $('.entry-content-post a').css('color', to ? to : '' );
         });
     });
+
+		// Content Link Hover Color
+		wp.customize('content_hover_color',function( value ) {
+	        value.bind(function(to) {
+	            $('.entry-content-post a:hover').css('color', to ? to : '' );
+	        });
+	    });
+
+		// Tag Link Color
+		wp.customize('tag_link_color',function( value ) {
+		      value.bind(function(to) {
+		          $('span.tags-links a').css('color', to ? to : '' );
+		      });
+		  });
+
+		// Tag Link Hover Color
+		wp.customize('tag_link_hover_color',function( value ) {
+		    value.bind(function(to) {
+		        $('span.tags-links a:hover').css('color', to ? to : '' );
+		    });
+		});
 
 	// Post Content H1 Color
 	wp.customize('wpforge_content_h1_color',function( value ) {

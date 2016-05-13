@@ -1,9 +1,15 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.5.1
-Stable tag: 6.2.1.2
+Tested up to: 4.5.2
+Stable tag: 6.2.1.3
 
 == Changelog ==
+
+= 6.2.1.3 =
+* Added a color transition to all links
+* Added additional options to change colors of various elements in posts. You can now change the colors associated with category lists, tag lists, meta information and post title.
+* Corrected an issue with the post formats where the category was displaying at the bottom of the posts.
+* Changed the colors of the aside post format.
 
 = 6.2.1.2 =
 * Removed the java script from `wpforge-functions.php` that removed empty p and br tags from the content area. This was causing line breaks not to work.

@@ -2,11 +2,16 @@
 /**
  * The template for displaying posts in the Video post format on index and archive pages.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
+			<?php  if( get_theme_mod( 'wpforge_cat_display','yes' ) == 'yes') { ?>
+				<?php  if( get_theme_mod( 'wpforge_cat_position','top' ) == 'top') { ?>
+					<?php wpforge_entry_meta_categories(); ?>
+				<?php } // end if ?>
+			<?php } // end if ?>
 		<div class="entry-meta-header">
 			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" title="View all Video Posts"><span class="genericon genericon-video"></span> <?php echo get_post_format_string( 'video' ); ?></a>
 			<?php wpforge_entry_meta_header(); ?>
@@ -35,8 +40,10 @@
 		<?php endif; ?>
 		<footer class="entry-meta">
 			<div class="entry-meta-footer">
-				<?php if( get_theme_mod( 'wpforge_cat_display' ) == 'yes' || get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
-					<?php wpforge_bottom_meta_categories(); ?>
+				<?php  if( get_theme_mod( 'wpforge_cat_display' ) == 'yes') { ?>
+					<?php  if( get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
+						<?php wpforge_bottom_meta_categories(); ?>
+					<?php } // end if ?>
 				<?php } // end if ?>
 				<?php  if( get_theme_mod( 'wpforge_tag_display','yes' ) == 'yes') { ?>
 					<?php wpforge_entry_meta_footer(); ?>

@@ -2,7 +2,7 @@
 /**
  * Template Name: Full-width Page Template, No Sidebar
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 get_header(); ?>
 	<div id="content" class="medium-12 large-12 columns" role="main">

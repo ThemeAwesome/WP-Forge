@@ -6,7 +6,7 @@
  * Others are attached to action and filter hooks in WordPress to change core functionality. Any new functions will
  * be added at the end of the file. This will allow everyone to keep track of what has been added.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 
 /**

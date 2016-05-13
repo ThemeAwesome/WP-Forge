@@ -2,7 +2,7 @@
 /**
  * The template for displaying Archive pages.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 get_header(); ?>
 	<div id="content" class="medium-8 large-8 columns" role="main">

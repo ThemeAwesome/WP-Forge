@@ -1,6 +1,6 @@
 /*
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 
 jQuery(document).ready(function() {
@@ -8,9 +8,9 @@ jQuery(document).ready(function() {
 	// Add button class submit buttons in the theme
 	jQuery('input[type="submit"]').addClass('button');
 
-    jQuery('.comment-reply-link').addClass('secondary label radius');
+  jQuery('.comment-reply-link').addClass('secondary label radius');
 
-    jQuery('#cancel-comment-reply-link').addClass('alert label radius');
+  jQuery('#cancel-comment-reply-link').addClass('alert label radius');
 
 	// Adds flex video to embeded video: http://foundation.zurb.com/docs/components/flex-video.html
 	jQuery('iframe[src*="vimeo.com"]').wrap('<div class="flex-video widescreen vimeo" />');

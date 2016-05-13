@@ -2,7 +2,7 @@
 /**
  * The template for displaying Comments
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 
 /* If the current post is protected by a password and the visitor has not yet entered the password we will return early

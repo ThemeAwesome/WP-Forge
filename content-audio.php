@@ -2,19 +2,24 @@
 /**
  * The template for displaying posts in the Audio post format on index and archive pages
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
+			<?php  if( get_theme_mod( 'wpforge_cat_display','yes' ) == 'yes') { ?>
+				<?php  if( get_theme_mod( 'wpforge_cat_position','top' ) == 'top') { ?>
+					<?php wpforge_entry_meta_categories(); ?>
+				<?php } // end if ?>
+			<?php } // end if ?>
 		<div class="entry-meta-header">
-			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'audio' ) ); ?>" title="View all Audio Posts"><span class="genericon genericon-audio"></span> <?php echo get_post_format_string( 'audio' ); ?></a>			
+			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'audio' ) ); ?>" title="View all Audio Posts"><span class="genericon genericon-audio"></span> <?php echo get_post_format_string( 'audio' ); ?></a>
 			<?php wpforge_entry_meta_header(); ?>
 			<?php if ( comments_open() ) : ?>
 				<span class="genericon genericon-comment"></span> <?php comments_popup_link( '<span class="leave-reply">' . __( 'Comment', 'wp-forge' ) . '</span>', __( '1 Comment', 'wp-forge' ), __( '% Comments', 'wp-forge' ) ); ?>
 			<?php endif; // comments_open() ?>
 			<?php edit_post_link( __( 'Edit', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' ); ?>
-		</div><!-- end .entry-meta-header -->			
+		</div><!-- end .entry-meta-header -->
 			<?php the_post_thumbnail(); ?>
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title-post"><?php the_title(); ?></h1>
@@ -36,8 +41,10 @@
 		<?php endif; ?>
 		<footer class="entry-meta">
 			<div class="entry-meta-footer">
-				<?php if( get_theme_mod( 'wpforge_cat_display' ) == 'yes' || get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
-					<?php wpforge_bottom_meta_categories(); ?>
+				<?php  if( get_theme_mod( 'wpforge_cat_display' ) == 'yes') { ?>
+					<?php  if( get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
+						<?php wpforge_bottom_meta_categories(); ?>
+					<?php } // end if ?>
 				<?php } // end if ?>
 				<?php  if( get_theme_mod( 'wpforge_tag_display','yes' ) == 'yes') { ?>
 					<?php wpforge_entry_meta_footer(); ?>

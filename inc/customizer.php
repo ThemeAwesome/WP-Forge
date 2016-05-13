@@ -3,7 +3,7 @@
 * WP-Forge Theme Customizer
 * A Theme Customizer for WP-Forge. Adds the individual, panels, sections, settings, and controls to the theme customizer
 * @since WP-Forge 5.5.1.7
-* @version 6.2.1.2
+* @version 6.2.1.3
 */
 
 /**
@@ -574,10 +574,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'top_bar_colors',
     'settings' => 'top_bar_home_link_hover_color',
   )));
-
-
-
-
   $wp_customize->add_section('wpforge_off_canvas_colors', array( /* off-canvas colors section */
     'title' => __('Off-Canvas Colors', 'wp-forge'),
     'description' => __('Change colors of the Off-Canvas Menu.', 'wp-forge'),
@@ -721,13 +717,104 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'priority' => 65,
     'panel' => 'wpforge_colors',
   ));
+  $wp_customize->add_setting('category_link_color', array( /* category link color */
+    'default' => '#008cba',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 1,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'category_link_color',array(
+    'label' => __('Category Link Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'category_link_color',
+  )));
+  $wp_customize->add_setting('category_link_hover_color', array( /* category link hover color */
+    'default' => '#0078a0',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 2,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'category_link_hover_color',array(
+    'label' => __('Category Link Hover Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'category_link_hover_color',
+  )));
+  $wp_customize->add_setting('post_title_link_color', array( /* post title link color */
+    'default' => '#008cba',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 3,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_title_link_color',array(
+    'label' => __('Post Title Link Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'post_title_link_color',
+  )));
+  $wp_customize->add_setting('post_title_link_hover_color', array( /* post title link hover color */
+    'default' => '#0078a0',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 4,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_title_link_hover_color',array(
+    'label' => __('Post Title Link Hover Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'post_title_link_hover_color',
+  )));
+  $wp_customize->add_setting('single_post_title_color', array( /* single post title color */
+    'default' => '#444444',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 5,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'single_post_title_color',array(
+    'label' => __('Single Post View Title Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'single_post_title_color',
+  )));
+  $wp_customize->add_setting('meta_header_link_color', array( /* meta header link color */
+    'default' => '#008cba',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 6,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'meta_header_link_color',array(
+    'label' => __('Post Meta Link Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'meta_header_link_color',
+  )));
+  $wp_customize->add_setting('meta_header_link_hover_color', array( /* meta header link hover color */
+    'default' => '#0078a0',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 7,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'meta_header_link_hover_color',array(
+    'label' => __('Post Meta Link Hover Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'meta_header_link_hover_color',
+  )));
   $wp_customize->add_setting('content_font_color', array( /* content font color */
     'default' => '#444444',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 1,
+    'priority' => 8,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'content_font_color',array(
     'label' => __('Post Text Color', 'wp-forge'),
@@ -740,7 +827,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 2,
+    'priority' => 9,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'content_link_color',array(
     'label' => __('Post Link Color', 'wp-forge'),
@@ -750,14 +837,41 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->add_setting('content_hover_color', array( /*content link hover color */
     'default' => '#0078a0',
     'type' => 'theme_mod',
+    'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 3,
+    'priority' => 10,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'content_hover_color',array(
     'label' => __('Post Link Hover Color', 'wp-forge'),
     'section' => 'content_colors',
     'settings' => 'content_hover_color',
+  )));
+  $wp_customize->add_setting('tag_link_color', array( /* tag link color */
+    'default' => '#008cba',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 11,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'tag_link_color',array(
+    'label' => __('Tag Link Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'tag_link_color',
+  )));
+  $wp_customize->add_setting('tag_link_hover_color', array( /* tag link hover color */
+    'default' => '#0078a0',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_hex_color',
+    'priority' => 12,
+  ));
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'tag_link_hover_color',array(
+    'label' => __('Tag Link Hover Color', 'wp-forge'),
+    'section' => 'content_colors',
+    'settings' => 'tag_link_hover_color',
   )));
   $wp_customize->add_setting('wpforge_content_h1_color', array( /* content h1 color */
     'default' => '#444444',
@@ -765,7 +879,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 4,
+    'priority' => 13,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h1_color',array(
     'label' => __('Post Content H1 Color', 'wp-forge'),
@@ -778,7 +892,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 5,
+    'priority' => 14,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h2_color',array(
     'label' => __('Post Content H2 Color', 'wp-forge'),
@@ -791,7 +905,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 6,
+    'priority' => 15,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h3_color',array(
     'label' => __('Post Content H3 Color', 'wp-forge'),
@@ -804,7 +918,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 7,
+    'priority' => 16,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h4_color',array(
     'label' => __('Post Content H4 Color', 'wp-forge'),
@@ -817,7 +931,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 8,
+    'priority' => 17,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h5_color',array(
     'label' => __('Post Content H5 Color', 'wp-forge'),
@@ -830,7 +944,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_hex_color',
-    'priority' => 9,
+    'priority' => 18,
   ));
   $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'wpforge_content_h6_color',array(
     'label' => __('Post Content H6 Color', 'wp-forge'),
@@ -3709,6 +3823,23 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
           return '';
       }
   }
+  function wpforge_sanitize_post_header_color_settings( $input ) { // change post header color settings
+    $valid = array(
+    'select'         => __('Select a Heading Tag', 'wp-forge'),
+    'post_h1_color'  => __('Post H1 Color', 'wp-forge'),
+    'post_h2_color'  => __('Post H2 Color', 'wp-forge'),
+    'post_h3_color'  => __('Post H3 Color', 'wp-forge'),
+    'post_h4_color'  => __('Post H4 Color', 'wp-forge'),
+    'post_h5_color'  => __('Post H5 Color', 'wp-forge'),
+    'post_h6_color'  => __('Post H6 Color', 'wp-forge'),
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+  }
   /**
    * 5.0 - Active Callbacks
    *
@@ -3939,6 +4070,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     $wp_customize->get_setting( 'content_width' )->transport = 'postMessage';
     $wp_customize->get_setting( 'content_font_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'content_link_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'content_hover_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_post_h1_size' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_post_h2_size' )->transport = 'postMessage';
     $wp_customize->get_setting( 'wpforge_post_h3_size' )->transport = 'postMessage';
@@ -4035,6 +4167,14 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     $wp_customize->get_setting( 'pagination_link_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'pagination_hover_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'pagination_link_hover_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'post_title_link_hover_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'category_link_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'category_link_hover_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'tag_link_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'tag_link_hover_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'meta_header_link_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'meta_header_link_hover_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'single_post_title_color' )->transport = 'postMessage';
   }
   add_action( 'customize_register', 'wpforge_customize_register' );
 }
@@ -4121,6 +4261,24 @@ function wpforge_customize_css() { ?>
 .off-canvas .menu > .active a{background-color:<?php echo esc_attr(get_theme_mod('wpforge_off_canvas_active_color','#008CBA')); ?>;}
 
 .content_wrap{max-width:<?php echo esc_attr(get_theme_mod('content_width','75rem')); ?>;background-color:<?php echo esc_attr(get_theme_mod('content_color','#ffffff')); ?>;}
+
+span.categories-links a{color:<?php echo esc_attr(get_theme_mod('category_link_color','#008cba')); ?>;}
+
+span.categories-links a:hover{color:<?php echo esc_attr(get_theme_mod('category_link_hover_color','#0078a0')); ?>;}
+
+h1.entry-title-post a{color:<?php echo esc_attr(get_theme_mod('post_title_link_color','#008cba')); ?>;}
+
+h1.entry-title-post a:hover{color:<?php echo esc_attr(get_theme_mod('post_title_link_hover_color','#0078a0')); ?>;}
+
+h1.entry-title-post{color:<?php echo esc_attr(get_theme_mod('single_post_title_color','#444444')); ?>;}
+
+.entry-meta-header a{color:<?php echo esc_attr(get_theme_mod('meta_header_link_color','#008cba')); ?>;}
+
+.entry-meta-header a:hover{color:<?php echo esc_attr(get_theme_mod('meta_header_link_hover_color','#0078a0')); ?>;}
+
+span.tags-links a{color:<?php echo esc_attr(get_theme_mod('tag_link_color','#008cba')); ?>;}
+
+span.tags-links a:hover{color:<?php echo esc_attr(get_theme_mod('tag_link_hover_color','#0078a0')); ?>;}
 
 .entry-meta-categories{font-size:<?php echo esc_attr(get_theme_mod('wpforge_category_font_size','0.75rem')); ?>;}
 

@@ -1,8 +1,8 @@
 === WP-Forge ===
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
-Requires at least: 4.5.1
-Tested up to: 4.5.1
-Stable tag: 6.2.1.2
+Requires at least: 4.5.2
+Tested up to: 4.5.2
+Stable tag: 6.2.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

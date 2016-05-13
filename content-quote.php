@@ -2,11 +2,16 @@
 /**
  * The template for displaying posts in the Quote post format on index and archive pages.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.2
+ * @version 6.2.1.3
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry-meta-header">
+			<?php  if( get_theme_mod( 'wpforge_cat_display','yes' ) == 'yes') { ?>
+				<?php  if( get_theme_mod( 'wpforge_cat_position','top' ) == 'top') { ?>
+					<?php wpforge_entry_meta_categories(); ?>
+				<?php } // end if ?>
+			<?php } // end if ?>
 			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'quote' ) ); ?>" title="View all Quote Posts"><span class="genericon genericon-quote"></span> <?php echo get_post_format_string( 'quote' ); ?></a>
 			<?php wpforge_entry_meta_header(); ?>
 			<?php if ( comments_open() ) : ?>
@@ -19,8 +24,10 @@
 		</div><!-- .entry-content -->
 		<footer class="entry-meta">
 			<div class="entry-meta-footer">
-				<?php if( get_theme_mod( 'wpforge_cat_display' ) == 'yes' || get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
-					<?php wpforge_bottom_meta_categories(); ?>
+				<?php  if( get_theme_mod( 'wpforge_cat_display' ) == 'yes') { ?>
+					<?php  if( get_theme_mod( 'wpforge_cat_position' ) == 'bottom') { ?>
+						<?php wpforge_bottom_meta_categories(); ?>
+					<?php } // end if ?>
 				<?php } // end if ?>
 				<?php  if( get_theme_mod( 'wpforge_tag_display','yes' ) == 'yes') { ?>
 					<?php wpforge_entry_meta_footer(); ?>
