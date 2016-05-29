@@ -1,9 +1,15 @@
 Theme Name: WP-Forge
 File Name: Changelog
 Tested up to: 4.5.2
-Stable tag: 6.2.1.3
+Stable tag: 6.2.2
 
 == Changelog ==
+
+= 6.2.2 =
+= 6.2.2 =
+* Updated to the latest version of Foundation, 6.2.2. (foundation-flex.css was not updated by ZURB so version is still at 6.2.1)
+* Changed the name of 'wpforge-functions.js' to 'theme-functions.js'.
+* Added support for selective refresh for widgets. See https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/
 
 = 6.2.1.3 =
 * Added a color transition to all links

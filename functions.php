@@ -6,7 +6,7 @@
  * Others are attached to action and filter hooks in WordPress to change core functionality. Any new functions will
  * be added at the end of the file. This will allow everyone to keep track of what has been added.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.3
+ * @version 6.2.2
  */
 
 /**
@@ -109,6 +109,8 @@ function wpforge_setup() {
 	add_theme_support( 'custom-background', array(
 		'default-color' => 'e6e6e6',
 	));
+	// Indicate widget sidebars can use selective refresh in the Customizer.
+	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 add_action( 'after_setup_theme', 'wpforge_setup' );
 /**
@@ -157,19 +159,19 @@ if ( ! function_exists( 'wpforge_google_fonts' ) ) {
  */
 function wpforge_scripts() {
 	global $wp_styles;
-    wp_enqueue_style('wpforge_fonts', get_template_directory_uri() . '/fonts/fonts.css','', '6.2.1.2' );
+  wp_enqueue_style('wpforge_fonts', get_template_directory_uri() . '/fonts/fonts.css','', '6.2.2' );
 
-		if( get_theme_mod( 'wpforge_select_css' ) == 'flex') {
-			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation-flex.css','', '6.2.1' );
-		} else {
-			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation.css','', '6.2.1' );
-		}
+	if( get_theme_mod( 'wpforge_select_css' ) == 'flex') {
+			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation-flex.css','', '6.2.2' );
+	} else {
+			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation.css','', '6.2.2' );
+	}
 
-    wp_enqueue_style('wpforge_motion_ui', get_template_directory_uri() . '/css/motion-ui.css','', '1.2.2' );
-    wp_enqueue_style('wpforge', get_stylesheet_uri(),'','6.2.1.2' );
-	wp_enqueue_script('wpforge_what_input', get_template_directory_uri() . '/js/what-input.min.js', array('jquery'),'6.2.1.2', true);
-	wp_enqueue_script('wpforge_foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'),'6.2.1.2', true);
-	wp_enqueue_script('wpforge_functions', get_template_directory_uri() . '/js/wpforge-functions.js', array('jquery'),'6.2.1.2', true);
+  wp_enqueue_style('wpforge_motion_ui', get_template_directory_uri() . '/css/motion-ui.css','', '1.2.2' );
+  wp_enqueue_style('wpforge', get_stylesheet_uri(),'','6.2.1.2' );
+	wp_enqueue_script('wpforge_what_input', get_template_directory_uri() . '/js/what-input.js', array('jquery'),'6.2.2', true);
+	wp_enqueue_script('wpforge_foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'),'6.2.2', true);
+	wp_enqueue_script('wpforge_functions', get_template_directory_uri() . '/js/theme-functions.js', array('jquery'),'6.2.2', true);
 }
 add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
 /**
@@ -178,7 +180,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
  */
 if ( ! function_exists( 'wpforge_prepare_foundation' ) ) {
 	function wpforge_prepare_foundation() {
-		wp_enqueue_script ('wpforge_load_foundation', get_template_directory_uri() . '/js/app.js', array('wpforge_foundation'), '6.2', true);
+		wp_enqueue_script ('wpforge_load_foundation', get_template_directory_uri() . '/js/app.js', array('wpforge_foundation'), '6.2.2', true);
 	}
 	add_action( 'wp_enqueue_scripts', 'wpforge_prepare_foundation', 999);
 }

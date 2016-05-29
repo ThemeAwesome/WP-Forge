@@ -1,7 +1,7 @@
 /**
  * Allows the contain-to-grid menu option to work.
  * @since WP-Forge 6.2
- * @version 6.2.1.3
+ * @version 6.2.2
  */
 
 jQuery(document).ready(function() {

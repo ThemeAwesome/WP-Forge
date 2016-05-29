@@ -2,7 +2,7 @@
 /**
  * The template for displaying posts in the Aside post format on index and archive pages
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.3
+ * @version 6.2.2
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

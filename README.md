@@ -1,7 +1,7 @@
-WP-Forge v6.2.1.3
+WP-Forge v6.2.2
 ====================
 
-###Last Updated May 13, 2016
+###Last Updated May 28, 2016
 
 A WordPress theme built with ZURB's Foundation for Sites, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a responsive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG.txt and README.txt files before/after installation and/or update.
 
@@ -19,12 +19,10 @@ If you need help with implementation or if you run into issues, you can post you
 
 ###WP-Forge was built with the following tools###
 * [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
-* [WP-Test] (http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integioty of themes and plugins. Developed by [Michael Novotny] (http://manovotny.com/)
-* [Theme Unit Test] (http://codex.wordpress.org/Theme_Unit_Test) - Similar to WP-Test. A set of test data created by the WordPress Theme Review Team
+* [WP-Test] (http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integrity of themes and plugins. Developed by [Michael Novotny] (http://manovotny.com/)
 * [Debug Bar] (http://wordpress.org/plugins/debug-bar/) - a debugging menu added to the admin bar that quickly shows query, cache, and other helpful debugging information.
 * [Log Depreceated Notices] (http://wordpress.org/plugins/log-deprecated-notices/) - a plugin that helps you identify old WordPress API functions a theme or plugin is currently using so you can update to the newer methods.
 * [Theme Check] (http://wordpress.org/plugins/theme-check/) - a simple and easy way to test your theme for all the latest WordPress standards and practices.
-* [Theme Mentor] (http://wordpress.org/plugins/theme-mentor/) - the cousin of Theme-Check plugin. It does deeper code analysis to ensure best practices, like checking for the dequeueing of jQuery.
 * [Monster Widget] (http://wordpress.org/plugins/monster-widget/) - A widget that provides a quick and easy method of adding all core widgets to a sidebar for testing purposes.
 * [Viewport Resizer] (http://lab.maltewassermann.com/viewport-resizer/) - a handy bookmarklet that will load your site in a viewport the size of common devices. This is helpful in testing responsive design.
 * [Screenfly] (http://quirktools.com/screenfly/) – Responsive screen testing for monitors, tablets, smart phones, and more (personally one of my favorites).

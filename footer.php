@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.1.3
+ * @version 6.2.2
  */
 ?>
 	</section><!-- end .content-wrap -->
