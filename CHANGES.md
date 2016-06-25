@@ -1,11 +1,17 @@
 Theme Name: WP-Forge
 File Name: Changelog
-Tested up to: 4.5.2
-Stable tag: 6.2.2
+Tested up to: 4.5.3
+Stable tag: 6.2.3
 
 == Changelog ==
 
-= 6.2.2 =
+= 6.2.3 =
+* Updated to the latest version number of Foundation. No core files were updated. As stated by Zurb: This release builds upon 6.2.2 to improve how the settings file is generated. No changes to the core framework went in here.
+* Added popular categories, monthly archives and tags to 404.php.
+* Added the sitemap template back into the theme.
+* Updated Font-awesome to the latest version, 4.6.3.
+* Corrected an issue where when changing the color of the primary button, the color change would not appear in the preview but would show after the change was applied.
+
 = 6.2.2 =
 * Updated to the latest version of Foundation, 6.2.2. (foundation-flex.css was not updated by ZURB so version is still at 6.2.1)
 * Changed the name of 'wpforge-functions.js' to 'theme-functions.js'.

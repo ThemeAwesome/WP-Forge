@@ -1,7 +1,7 @@
-WP-Forge v6.2.2
+WP-Forge v6.2.3
 ====================
 
-###Last Updated May 28, 2016
+###Last Updated June 25, 2016
 
 A WordPress theme built with ZURB's Foundation for Sites, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a responsive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG.txt and README.txt files before/after installation and/or update.
 
@@ -42,7 +42,7 @@ I have created a child theme for WP-Forge called [WP-Starter] (http://themeaweso
 ###Genericons 3.4.1###
 Includes the free WordPress icon set [Genericons] (https://genericons.com/)
 
-###Font-Awesome 4.6.1###
+###Font-Awesome 4.6.3###
 Includes the free icon set [Font-Awesome] (http://fontawesome.io)
 
 ###Yoast SEO Plugin###

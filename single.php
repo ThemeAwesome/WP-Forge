@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.2
+ * @version 6.2.3
  */
 get_header(); ?>
 	<div id="content" class="medium-8 large-8 columns" role="main">

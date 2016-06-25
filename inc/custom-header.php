@@ -2,7 +2,7 @@
 /**
  * Implement an optional custom header for WP-Forge
  * @since WP-Forge 5.5.1.7
- * @version 6.2.2
+ * @version 6.2.3
  */
 
 if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
@@ -14,8 +14,8 @@ if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
 
 			// Set height and width, with a maximum value for the width.
 			'height'                 => 175,
-			'width'                  => 960,
-			'max-width'              => 960,
+			'width'                  => 1200,
+			'max-width'              => 1200,
 
 			// Support flexible height and width.
 			'flex-height'            => true,

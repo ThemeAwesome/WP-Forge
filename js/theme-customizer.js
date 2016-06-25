@@ -1,7 +1,7 @@
 /**
  * Theme Customizer enhancements for a better user experience.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.2
+ * @version 6.2.3
  */
 
 ( function( $ ) {
@@ -910,14 +910,14 @@
     // Primary Button Color
     wp.customize('primary_button_color',function( value ) {
           value.bind(function(to) {
-              $('button,a.button').css('background-color', to ? to : '' );
+              $('a.button,.button,button').css('background-color', to ? to : '' );
           });
       });
-
+    
     // Primary Button Hover Color
     wp.customize('primary_button_hover_color',function( value ) {
           value.bind(function(to) {
-              $('button:hover,a.button:hover,button:focus,a.button:focus').css('background-color', to ? to : '' );
+              $('a.button:hover,.button:hover,button:hover,a.button:focus,.button:focus,button:focus').css('background-color', to ? to : '' );
           });
       });
 

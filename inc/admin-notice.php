@@ -2,7 +2,7 @@
 /**
  * A non-disruptive admin notice to inform users about additional resources.
  * @since WP-Forge 5.5.2.3
- * @version 6.2.2
+ * @version 6.2.3
  */
 
 // Don't nag users who can't switch themes.

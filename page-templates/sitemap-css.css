@@ -1,0 +1,14 @@
+/**
+ * Add the following css to your style sheet
+ */
+
+.sitemap-left article {
+	border-bottom: 1px solid #ededed!important;
+	margin-bottom: 1.7rem!important;
+}
+.sitemap-left h2 .genericon {
+	line-height: 1.5;
+}
+.sitemap-right h3 .genericon {
+	line-height: 1.5;
+}
