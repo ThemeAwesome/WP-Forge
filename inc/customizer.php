@@ -3,7 +3,7 @@
 * WP-Forge Theme Customizer
 * A Theme Customizer for WP-Forge. Adds the individual, panels, sections, settings, and controls to the theme customizer
 * @since WP-Forge 5.5.1.7
-* @version 6.2.3
+* @version 6.2.3.1
 */
 
 /**
@@ -4366,7 +4366,7 @@ footer[role="contentinfo"] p,footer[role="contentinfo"]{color:<?php echo esc_att
 
 footer[role="contentinfo"] a,#footer .menu .active > a{color:<?php echo esc_attr(get_theme_mod('footer_link_color','#008CBA')); ?>;}
 
-footer[role="contentinfo"] a:hover,#footer .menu .active > a:hover{color:<?php echo esc_attr(get_theme_mod('footer_hover_color','#0078a0')); ?>;}
+footer[role="contentinfo"] a:hover,#footer .menu .active > a:hover{color:<?php echo esc_attr(get_theme_mod('footer_hover_color','#0078a0')); ?>!important;}
 
 .footer_wrap p,.footer_wrap a{font-size:<?php echo esc_attr(get_theme_mod('wpforge_footer_txt_size','1rem')); ?>;}
 

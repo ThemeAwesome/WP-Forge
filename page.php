@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.3
+ * @version 6.2.3.1
  */
 get_header(); ?>
 	<div id="content" class="medium-8 large-8 columns" role="main">

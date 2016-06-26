@@ -7,7 +7,8 @@
  *
  * @package WordPress
  * @subpackage WP_Forge
- * @since WP-Forge 5.3.4
+ * @since WP-Forge 6.2.3
+ * @version 6.2.3.1
  */
 
 get_header(); ?>
@@ -18,7 +19,7 @@ get_header(); ?>
 
 		<h1 class="pagetitle"><?php the_title(); ?></h1>
 
-				<div class="medium-8 large-8 columns sitemap-left">
+				<div class="site-map-left medium-9 large-9 columns">
 
 					<h5><?php _e("All Posts", 'wp-forge'); ?></h5>
 
@@ -39,9 +40,6 @@ get_header(); ?>
 										<span class="genericon genericon-comment"></span> <?php comments_popup_link( '<span class="leave-reply">' . __( 'Comment', 'wp-forge' ) . '</span>', __( '1 Comment', 'wp-forge' ), __( '% Comments', 'wp-forge' ) ); ?>
 									<?php endif; // comments_open() ?>
 								</div><!-- end .entry-meta-header -->
-									<?php if ( is_home() && get_theme_mod( 'wpforge_thumb_display' ) == 'yes' ) : ?>
-						            	<?php the_post_thumbnail(); ?>
-						            <?php endif; // end if ?>
 							</header><!-- .entry-header -->
 							<div class="entry-content">
 								<?php the_excerpt(); ?>
@@ -52,9 +50,9 @@ get_header(); ?>
 
 					<?php wpforge_content_nav( 'nav-below' ); ?>
 
-				</div><!-- end sitemap-left -->
+				</div><!-- end site-map-left -->
 
-				<div class="medium-4 large-4 columns sitemap-right">
+				<div class="site-map-right medium-3 large-3 columns">
 
 					<h5><?php _e("Site Feeds", 'wp-forge'); ?></h5>
 					<ul class="archives">
@@ -80,7 +78,7 @@ get_header(); ?>
 					<h5><?php _e("Top 20 Tags", 'wp-forge'); ?></h5>
 					<?php wp_tag_cloud('smallest=8&largest=20'); ?>
 
-				</div><!-- end .sitemap-right -->
+				</div><!-- end site-map-right -->
 
 			<footer class="entry-meta">
 				<?php edit_post_link( __( 'Edit Page', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' ); ?>

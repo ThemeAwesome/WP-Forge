@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.3
+ * @version 6.2.3.1
  */
 ?>
 	<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>

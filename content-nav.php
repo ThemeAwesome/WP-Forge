@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Top-Bar menu and its different positions.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.3
+ * @version 6.2.3.1
  */
 ?>
 <div class="nav_container norm">

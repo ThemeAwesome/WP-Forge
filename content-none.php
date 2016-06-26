@@ -2,7 +2,7 @@
 /**
  * The template for displaying a "No posts found" message.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.3
+ * @version 6.2.3.1
  */
 ?>
 	<article id="post-0" class="post no-results not-found">

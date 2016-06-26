@@ -1,7 +1,7 @@
-WP-Forge v6.2.3
+WP-Forge v6.2.3.1
 ====================
 
-###Last Updated June 25, 2016
+###Last Updated June 26, 2016
 
 A WordPress theme built with ZURB's Foundation for Sites, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a responsive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG.txt and README.txt files before/after installation and/or update.
 
@@ -31,7 +31,7 @@ Features
 =============
 
 ###Theme Customizer###
-When 3.4 was released, WordPress introduced the [Theme Customizer] (https://codex.wordpress.org/Theme_Customization_API). The customizer allows you to modify certain areas of a theme and preview those changes in real time before publishing. WP-Forge now comes with its own custom Theme Customizer. For more information regarding the Theme Customizer please read the information under Configuration in the README.txt file.
+WordPress introduced the [Theme Customizer] (https://codex.wordpress.org/Theme_Customization_API) in 3.4. The customizer allows you to modify certain areas of a theme and preview those changes in real time before publishing. WP-Forge utilizes this built in customizer and allows you to make changes to many areas of the theme. Please read the information under Configuration in the README.txt file to learn more about the customizer in WP-Forge.
 
 ###jQuery###
 WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in the header. This practice falls within the [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development). You can do a search and find the information you need to use Google's version and load it in the footer if you wish.

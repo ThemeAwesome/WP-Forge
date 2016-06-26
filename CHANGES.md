@@ -1,9 +1,15 @@
 Theme Name: WP-Forge
-File Name: Changelog
 Tested up to: 4.5.3
-Stable tag: 6.2.3
+Stable tag: 6.2.3.1
 
 == Changelog ==
+
+= 6.2.3.1 =
+* Changed the 'wp_get_attachment_metadata()' function for images in image.php - Seems there was an error being generated about the width and the height. Looked at the snippet in Twenty Sixteen and adjusted the function in WP-Forge.
+* Corrected an issue with the styling of the Sitemap template.
+* Removed sitemap style sheet from css folder as it was not needed.
+* Removed the post thumbnail from sitemap.php.
+* Added '!important' to line 4369 of 'customizer.php' - this portion of the file deals whith the hover color of the active link in the footer. Before adding '!important', when hovering over an active link in the footer, the link would disappear.
 
 = 6.2.3 =
 * Updated to the latest version number of Foundation. No core files were updated. As stated by Zurb: This release builds upon 6.2.2 to improve how the settings file is generated. No changes to the core framework went in here.
