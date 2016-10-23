@@ -4,7 +4,7 @@ Theme URI: http://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome.com
 Author URI: http://themeawesome.com/
 Description: A WordPress theme built with ZURB's Foundation for Sites (Foundation 6.2.3), the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.2.3.1
+Version: 6.2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
@@ -12,6 +12,9 @@ Text Domain: wp-forge
 */
 
 /**
+ * I update WP-Forge on a regular basis. I highly recommend joining my mailing list as well as using my child theme WP-Starter so
+ * you do not lose any edits.
+ *
  * Table of Contents
  *
  * 1.0 - Reset
@@ -108,10 +111,11 @@ blockquote cite {
 	color: #636363;}
 #secondary .widget-title {
 	font-weight:normal;}
+#secondary .menu .active > a {
+	background: none;}
 select { /* Make sure select elements fit in widgets */
 	cursor:pointer;
 	max-width: 100%;
-	padding:0.3em;
 	border:1px solid #ccc;}
 
 /* Responsive images */
@@ -1005,6 +1009,15 @@ ul.orbit-container {
     padding: 0 0.4rem 0 0.3rem;}
 .orbit-next {
     padding: 0 0.3rem 0 0.4rem;}
+.orbit-bullets button {
+    width: 0px;
+    height: 0.8rem;
+    margin: 0.2rem;
+    background-color: #cacaca;
+    border-radius: 50%;
+    border: 1px;}
+.orbit-bullets button:focus {
+	outline: none;}
 #backtotop {
 	position: fixed;
 	right: 1rem;
@@ -1268,15 +1281,64 @@ hr {
 .title-bar-left button,
 .title-bar-right button {
     margin-bottom: 0!important;}
-.title-bar .genericon {
-    line-height: 1.5;
-}
 .site-map-left article {
 	border-bottom: 1px solid #ededed!important;
     margin-bottom: 35px!important;
     padding-bottom: 1.5rem!important;
     -webkit-hyphens: auto!important;
 }
+
+/**
+ * Pricing Tables
+ */
+.pricing-table {
+	border: solid 1px #DDDDDD;
+	margin-left: 0;
+	margin-bottom: 1.25rem;
+	padding: 0; }
+	.pricing-table * {
+	list-style: none;
+	line-height: 1; }
+.pricing-table .title {
+	background-color: #333333;
+	color: #EEEEEE;
+	font-family:inherit;
+	font-size: 1rem;
+	font-weight: normal;
+	margin: 0;
+	padding: 0.9375rem 1.25rem;
+	text-align: center; }
+.pricing-table .price {
+	background-color: #F6F6F6;
+	color: #333333;
+	font-family: inherit;
+	font-size: 2rem;
+	font-weight: normal;
+	padding: 0.9375rem 1.25rem;
+	text-align: center; }
+.pricing-table .description {
+	background-color: #FFFFFF;
+	border-bottom: dotted 1px #DDDDDD;
+	color: #777777;
+	font-size: 0.75rem;
+	font-weight: normal;
+	line-height: 1.4;
+	padding: 0.9375rem;
+	text-align: center; }
+.pricing-table .bullet-item {
+	background-color: #FFFFFF;
+	border-bottom: dotted 1px #DDDDDD;
+	color: #333333;
+	font-size: 0.875rem;
+	font-weight: normal;
+	padding: 0.9375rem;
+	text-align: center; }
+.pricing-table .cta-button {
+	background-color: #FFFFFF;
+	padding: 1.25rem 1.25rem 0;
+	text-align: center; }
+ul.pricing-table li{
+	margin-left:0!important;}
 
 /**
  * 15.0 - Media Queries
@@ -1302,7 +1364,12 @@ hr {
     h4 {font-size: 1.2rem!important;}
     h5 {font-size: 1rem!important;}
     h6 {font-size: 0.875rem!important;}
-    .entry-content-post p, .entry-content-post ul li, .entry-content-post ol li, .comment-content table, .entry-content-post address, .comment-content address, .entry-content-post pre, .comment-content pre, .comments-area article header cite, #comments, .entry-content-post dl, .entry-content-post dt,.entry-content-page p, .entry-content-page ul li, .entry-content-page ol li, .entry-content-page table th, .entry-content-page .comment-content table, .entry-content-page address, .entry-content-page .comment-content address, .entry-content-page pre, .entry-content-page .comment-content pre, .comments-area article header cite, .entry-content-page #comments, .entry-content-page dl, .entry-content-page dt {font-size: 0.875rem!important;}
+    .entry-content-post p, .entry-content-post ul li, .entry-content-post ol li, .comment-content table, .entry-content-post address, 
+	 .comment-content address, .entry-content-post pre, .comment-content pre, .comments-area article header cite, #comments, .entry-content-post dl, 
+	 .entry-content-post dt,.entry-content-page p, .entry-content-page ul li, .entry-content-page ol li, .entry-content-page table th, 
+	 .entry-content-page .comment-content table, .entry-content-page address, .entry-content-page .comment-content address, .entry-content-page pre, 
+	 .entry-content-page .comment-content pre, .comments-area article header cite, .entry-content-page #comments, .entry-content-page dl, 
+	 .entry-content-page dt {font-size: 0.875rem!important;}
     .entry-content-post table,.entry-content-page table {font-size: 0.75rem!important;}
     #wp-calendar {font-size: 0.75rem;}
     #secondary select {font-size: 0.85rem;}
@@ -1331,7 +1398,12 @@ hr {
     h4 {font-size: 1.2rem!important;}
     h5 {font-size: 1rem!important;}
     h6 {font-size: 0.875rem!important;}
-    .entry-content-post p, .entry-content-post ul li, .entry-content-post ol li, .comment-content table, .entry-content-post address, .comment-content address, .entry-content-post pre, .comment-content pre, .comments-area article header cite, #comments, .entry-content-post dl, .entry-content-post dt,.entry-content-page p, .entry-content-page ul li, .entry-content-page ol li, .entry-content-page table th, .entry-content-page .comment-content table, .entry-content-page address, .entry-content-page .comment-content address, .entry-content-page pre, .entry-content-page .comment-content pre, .comments-area article header cite, .entry-content-page #comments, .entry-content-page dl, .entry-content-page dt {font-size: 0.875rem!important;}
+    .entry-content-post p, .entry-content-post ul li, .entry-content-post ol li, .comment-content table, .entry-content-post address, 
+	 .comment-content address, .entry-content-post pre, .comment-content pre, .comments-area article header cite, #comments, .entry-content-post dl, 
+	 .entry-content-post dt,.entry-content-page p, .entry-content-page ul li, .entry-content-page ol li, .entry-content-page table th, 
+	 .entry-content-page .comment-content table, .entry-content-page address, .entry-content-page .comment-content address, .entry-content-page pre, 
+	 .entry-content-page .comment-content pre, .comments-area article header cite, .entry-content-page #comments, .entry-content-page dl, 
+	 .entry-content-page dt {font-size: 0.875rem!important;}
     .entry-content-post table,.entry-content-page table {font-size: 0.75rem!important;}
     #wp-calendar {font-size: 0.75rem;}
     #secondary select {font-size: 0.85rem;}

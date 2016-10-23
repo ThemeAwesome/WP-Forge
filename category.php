@@ -2,7 +2,7 @@
 /**
  * The template for displaying Category pages.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.3.1
+ * @version 6.2.4
  */
 get_header(); ?>
 	<div id="content" class="medium-8 large-8 columns" role="main">

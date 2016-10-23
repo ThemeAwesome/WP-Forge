@@ -2,7 +2,7 @@
 /**
  * The Footer Sidebar. This sidebar contains the four footer widget areas.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.3.1
+ * @version 6.2.4
  */
 if ( ! is_active_sidebar( 'footer-sidebar-1' )
 	&& ! is_active_sidebar( 'footer-sidebar-2' )

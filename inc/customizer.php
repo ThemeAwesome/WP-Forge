@@ -3,7 +3,7 @@
 * WP-Forge Theme Customizer
 * A Theme Customizer for WP-Forge. Adds the individual, panels, sections, settings, and controls to the theme customizer
 * @since WP-Forge 5.5.1.7
-* @version 6.2.3.1
+* @version 6.2.4
 */
 
 /**
@@ -4344,13 +4344,13 @@ h1.entry-title-page{color:<?php echo esc_attr(get_theme_mod('wpforge_page_title_
 
 #content.columns{float:<?php echo esc_attr(get_theme_mod('wpforge_content_position','left')); ?>!important;}
 
-#secondary .widget-title{color:<?php echo esc_attr(get_theme_mod('main_widget_title_color','#444444')); ?>;font-size:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title','0.875rem')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title_weight','normal')); ?>;text-transform:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title_transform','uppercase')); ?>;}
+y .widget-title{color:<?php echo esc_attr(get_theme_mod('main_widget_title_color','#444444')); ?>;font-size:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title','0.875rem')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title_weight','normal')); ?>;text-transform:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title_transform','uppercase')); ?>;}
 
 #secondary p,#secondary li,#secondary .widget.widget_text{color:<?php echo esc_attr(get_theme_mod('main_widget_text_color','#444444')); ?>;font-size:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_font_size','0.875rem')); ?>;}
 
 #secondary a{color:<?php echo esc_attr(get_theme_mod('main_widget_link_color','#008CBA')); ?>;text-decoration:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_link_decoration','none')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_link_weight','normal')); ?>;}
 
-#secondary a:hover{color:<?php echo esc_attr(get_theme_mod('main_widget_hover_color','#0078a0')); ?>;text-decoration:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_link_hover_decoration','underline')); ?>;}
+#secondary a:hover{color:<?php echo esc_attr(get_theme_mod('main_widget_hover_color','#0078a0')); ?>!important;text-decoration:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_link_hover_decoration','underline')); ?>;}
 
 .footer_wrap{max-width:<?php echo esc_attr(get_theme_mod('footer_content_width','75rem')); ?>;background-color:<?php echo esc_attr(get_theme_mod('footer_content_color','#ffffff')); ?>;}
 

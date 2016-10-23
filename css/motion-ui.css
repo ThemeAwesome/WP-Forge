@@ -1,5 +1,7 @@
 /**
- * @version 6.2.3.1
+ * @package Motion-Ui
+ * @since WP-Forge 6.2
+ * @version 6.2.4
  */
 .slide-in-down.mui-enter {
   transition-duration: 500ms;

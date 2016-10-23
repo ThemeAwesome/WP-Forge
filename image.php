@@ -2,7 +2,7 @@
 /**
  * The template for displaying image attachments.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.3.1
+ * @version 6.2.4
  */
 get_header(); ?>
 	<div id="primary" class="medium-12 large-12 columns site-content">

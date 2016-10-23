@@ -1,8 +1,20 @@
 Theme Name: WP-Forge
-Tested up to: 4.5.3
-Stable tag: 6.2.3.1
+File Name: Changelog
+Tested up to: 4.6.1
+Stable tag: 6.2.4
 
 == Changelog ==
+
+= 6.2.4 =
+* Updated Foundation to latest version, 6.2.4
+* Corrected issue with 'active' class css in menu widget. The background was filled the active color.
+* Added '!important' to line 4353 of customizer.php - this portion of the file deals whith the hover color of the active link in the sidebar menu widget. Before adding '!important', when hovering over an active link in the menu widget, the link would disappear.
+* Added Pricing Table css from Foundation 5.
+* Modified contain-to-grid.js - Thanks to @HenkBarreveld for the suggestion - see this thread: https://github.com/tsquez/wp-forge/issues/49
+* Added css that affects the look and feel of the Orbit bullets. They appear smaller now. You can easily adjust the css to suit your needs. CSS is located on line 1013 of style.css
+* Added flex-video class to videos shared from VideoPress.com.
+* Corrected issue with the arrow not showing in select boxes.
+* Added a "scroll to" function to 'theme-functions.js' this will allow you to add anchor points to content in your theme and associate links with those anchors. When the link is clicked, the theme will scroll to the anchor point.
 
 = 6.2.3.1 =
 * Changed the 'wp_get_attachment_metadata()' function for images in image.php - Seems there was an error being generated about the width and the height. Looked at the snippet in Twenty Sixteen and adjusted the function in WP-Forge.
