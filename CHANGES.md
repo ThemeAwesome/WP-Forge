@@ -1,9 +1,12 @@
 Theme Name: WP-Forge
 File Name: Changelog
 Tested up to: 4.6.1
-Stable tag: 6.2.4
+Stable tag: 6.2.4.1
 
 == Changelog ==
+
+= 6.2.4.1 =
+* Removed the "scroll to function" I added in 6.2.4 - This was causing a conflict with tabs.
 
 = 6.2.4 =
 * Updated Foundation to latest version, 6.2.4

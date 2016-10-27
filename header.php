@@ -2,7 +2,7 @@
 /**
  * The Header template of our theme.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4
+ * @version 6.2.4.1
  */
 ?><!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>

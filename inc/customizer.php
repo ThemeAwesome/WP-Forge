@@ -3,7 +3,7 @@
 * WP-Forge Theme Customizer
 * A Theme Customizer for WP-Forge. Adds the individual, panels, sections, settings, and controls to the theme customizer
 * @since WP-Forge 5.5.1.7
-* @version 6.2.4
+* @version 6.2.4.1
 */
 
 /**

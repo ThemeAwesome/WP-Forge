@@ -1,17 +1,17 @@
-WP-Forge v6.2.4
+WP-Forge v6.2.4.1
 ====================
 
-###Last Updated October 23, 2016
+###Last Updated October 27, 2016
 
 A WordPress theme built with ZURB's Foundation for Sites, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a responsive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG.txt and README.txt files before/after installation and/or update.
 
 Demo
 =============
-View the demo of [WP-Forge here] (http://themeawesome.com/themes/wpforge/)
+View the demo of [WP-Forge here] (https://themeawesome.com/themes/wpforge/)
 
 Quick Start Guide
 =============
-A helpful guide to help you get your site up and running as quickly as possible: [WP-Forge Quick Start Guide] (http://themeawesome.com/docs/wp-forge/)
+A helpful guide to help you get your site up and running as quickly as possible: [WP-Forge Quick Start Guide] (https://themeawesome.com/docs/wp-forge/)
 
 Support
 =============
@@ -60,7 +60,7 @@ License
 =============
 All of the components used in the creation of WP-Forge are licensed as follows:
 * WordPress is licensed [GPLv2] (http://www.gnu.org/licenses/gpl-2.0.html)
-* Foundation Framework 6.2.1 is licensed [MIT License] (https://github.com/zurb/foundation/blob/master/LICENSE)
+* Foundation Framework 6.2.4 is licensed [MIT License] (https://github.com/zurb/foundation/blob/master/LICENSE)
 * Motion-UI is licensed [MIT License] (https://github.com/zurb/motion-ui/commit/2a6617b9e45eaaa7f8888ba04a811002c5ebff5e)
 * What-Input is licensed [MIT License] (https://github.com/ten1seven/what-input/blob/master/LICENSE)
 * Genericons is licensed [GNU General Public License v2 or later] (http://www.gnu.org/licenses/gpl-2.0.html)
@@ -70,4 +70,4 @@ This means WP-Forge is completely free to use and modify as you see fit.
 
 ThemeAwesome.com
 =============
-[ThemeAwesome.com] (http://themeawesome.com), a site focused on building WordPress themes utilizing the [Foundation for Sites] (http://foundation.zurb.com/) framework by [Zurb] (http://zurb.com/).
+[ThemeAwesome.com] (https://themeawesome.com), a site focused on building WordPress themes utilizing the [Foundation for Sites] (http://foundation.zurb.com/) framework by [Zurb] (http://zurb.com/).

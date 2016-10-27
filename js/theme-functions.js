@@ -1,6 +1,6 @@
 /*
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4
+ * @version 6.2.4.1
  */
 
 jQuery(document).ready(function() {
@@ -41,20 +41,6 @@ jQuery(document).ready(function() {
 
 	// Add clearfix class to gallery
 	jQuery('.gallery').addClass('clearfix');
-
-	// Performs a smooth page scroll to an anchor on the same page: see https://css-tricks.com/snippets/jquery/smooth-scrolling/
-	jQuery('a[href*="#"]:not([href="#"])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-		  var target = jQuery(this.hash);
-		  target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
-		  if (target.length) {
-		    jQuery('html, body').animate({
-		      scrollTop: target.offset().top
-		    }, 1000);
-		    return false;
-		  }
-		}
-	});
 
 // end loading all functions
 

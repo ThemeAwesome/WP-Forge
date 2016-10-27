@@ -2,7 +2,7 @@
 /**
  * The template that supplies Off-Canvas support to WP-Forge
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4
+ * @version 6.2.4.1
  */
 ?>
 <div class="off-canvas-wrapper">
