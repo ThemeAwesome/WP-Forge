@@ -6,7 +6,7 @@
  * Others are attached to action and filter hooks in WordPress to change core functionality. Any new functions will
  * be added at the end of the file. This will allow everyone to keep track of what has been added.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.1
+ * @version 6.2.4.2
  */
 
 /**
@@ -33,86 +33,88 @@ if ( ! function_exists( 'wpforge_adjust_content_width' ) ) {
  * Sets up theme defaults and registers the various WordPress features that WP-Forge supports.
  * @since WP-Forge 5.5.1.8
  */
-function wpforge_setup() {
-	/**
-	 * Add Title Tag support
-	 * @see http://codex.wordpress.org/Title_Tag
-	 */
-	add_theme_support( 'title-tag' );
-	/**
-	 * Makes WP-Forge available for translation.
-	 *
-	 * Translations can be added to the /languages/ directory.
-	 * If you're building a theme based on WP-Forge, use find and replace
-	 * to change 'wp-forge' to the name of your theme in all the template files.
-	 *
-	 * @see http://codex.wordpress.org/Translating_WordPress#Translation_Tools
-	 */
-	load_theme_textdomain( 'wp-forge', get_template_directory() . '/language' );
-	/**
-	 * Adds RSS feed links to <head> for posts and comments.
-	 * @see http://codex.wordpress.org/Automatic_Feed_Links
-	 */
-	add_theme_support( 'automatic-feed-links' );
-	// Adds support for WooCommerce
-	add_theme_support( 'woocommerce' );
-	// Adds support for Jetpacks Social Menu
-	add_theme_support( 'jetpack-social-menu' );
-	/**
-	 * Switches default core markup for search form, comment form, and comments to output valid HTML5.
-	 * @see http://codex.wordpress.org/Function_Reference/add_theme_support
-	 */
-	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ));
-	/**
-	 * Add support for all available post formats by default.
-	 * @see http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ));
-	/**
-	 * Add Excerpt support to Pages
-	 * @see http://codex.wordpress.org/Function_Reference/add_post_type_support
-	 */
-	add_post_type_support( 'page', 'excerpt' );
-	/**
-	 * Add support for Jetpack's Infinite Scroll
-	 * @see http://jetpack.me/support/infinite-scroll/
-	 */
-	add_theme_support( 'infinite-scroll', array(
-		'container' => 'content',
-		'footer' => 'page',
-	));
-	/**
-	 * This theme uses wp_nav_menu() in three locations.
-	 * @see http://codex.wordpress.org/Function_Reference/register_nav_menus
-	 */
-	register_nav_menus(array(
-		'primary' 	=> __( 'Main Menu', 'wp-forge' ),
-		'secondary' => __( 'Footer Menu', 'wp-forge' ),
-		'social' 	=> __( 'Social Menu', 'wp-forge' ),
-	));
-	/**
-	 * This theme uses a custom image size for featured images, displayed on "standard" posts.
-	 * @see http://codex.wordpress.org/Post_Thumbnails
-	 */
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 800, 9999 ); // Unlimited height, soft crop
-	/**
-	* Full width image size added for featured image support in pages
-	* @since WP-Forge 5.5.2.2
-	*/
-	add_image_size( 'full-width-thumb', 1200, 9999 ); // Fixed width, Unlimited height, soft crop
-	/**
-	 * This theme supports custom background color and image, and here we also set up the default background color.
-	 * @see http://codex.wordpress.org/Custom_Backgrounds
-	 */
-	add_theme_support( 'custom-background', array(
-		'default-color' => 'e6e6e6',
-	));
-	// Indicate widget sidebars can use selective refresh in the Customizer.
-	add_theme_support( 'customize-selective-refresh-widgets' );
+if ( ! function_exists( 'wpforge_setup' ) ) {
+	function wpforge_setup() {
+		/**
+		 * Add Title Tag support
+		 * @see http://codex.wordpress.org/Title_Tag
+		 */
+		add_theme_support( 'title-tag' );
+		/**
+		 * Makes WP-Forge available for translation.
+		 *
+		 * Translations can be added to the /languages/ directory.
+		 * If you're building a theme based on WP-Forge, use find and replace
+		 * to change 'wp-forge' to the name of your theme in all the template files.
+		 *
+		 * @see http://codex.wordpress.org/Translating_WordPress#Translation_Tools
+		 */
+		load_theme_textdomain( 'wp-forge', get_template_directory() . '/language' );
+		/**
+		 * Adds RSS feed links to <head> for posts and comments.
+		 * @see http://codex.wordpress.org/Automatic_Feed_Links
+		 */
+		add_theme_support( 'automatic-feed-links' );
+		// Adds support for WooCommerce
+		add_theme_support( 'woocommerce' );
+		// Adds support for Jetpacks Social Menu
+		add_theme_support( 'jetpack-social-menu' );
+		/**
+		 * Switches default core markup for search form, comment form, and comments to output valid HTML5.
+		 * @see http://codex.wordpress.org/Function_Reference/add_theme_support
+		 */
+		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ));
+		/**
+		 * Add support for all available post formats by default.
+		 * @see http://codex.wordpress.org/Post_Formats
+		 */
+		add_theme_support( 'post-formats', array(
+			'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ));
+		/**
+		 * Add Excerpt support to Pages
+		 * @see http://codex.wordpress.org/Function_Reference/add_post_type_support
+		 */
+		add_post_type_support( 'page', 'excerpt' );
+		/**
+		 * Add support for Jetpack's Infinite Scroll
+		 * @see http://jetpack.me/support/infinite-scroll/
+		 */
+		add_theme_support( 'infinite-scroll', array(
+			'container' => 'content',
+			'footer' => 'page',
+		));
+		/**
+		 * This theme uses wp_nav_menu() in three locations.
+		 * @see http://codex.wordpress.org/Function_Reference/register_nav_menus
+		 */
+		register_nav_menus(array(
+			'primary' 	=> __( 'Main Menu', 'wp-forge' ),
+			'secondary' => __( 'Footer Menu', 'wp-forge' ),
+			'social' 	=> __( 'Social Menu', 'wp-forge' ),
+		));
+		/**
+		 * This theme uses a custom image size for featured images, displayed on "standard" posts.
+		 * @see http://codex.wordpress.org/Post_Thumbnails
+		 */
+		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 800, 9999 ); // Unlimited height, soft crop
+		/**
+		* Full width image size added for featured image support in pages
+		* @since WP-Forge 5.5.2.2
+		*/
+		add_image_size( 'full-width-thumb', 1200, 9999 ); // Fixed width, Unlimited height, soft crop
+		/**
+		 * This theme supports custom background color and image, and here we also set up the default background color.
+		 * @see http://codex.wordpress.org/Custom_Backgrounds
+		 */
+		add_theme_support( 'custom-background', array(
+			'default-color' => 'e6e6e6',
+		));
+		// Indicate widget sidebars can use selective refresh in the Customizer.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+	}
+	add_action( 'after_setup_theme', 'wpforge_setup' );
 }
-add_action( 'after_setup_theme', 'wpforge_setup' );
 /**
  * This theme styles the visual editor to resemble the theme front end.
  * @see http://codex.wordpress.org/Function_Reference/add_editor_style
@@ -160,19 +162,19 @@ if ( ! function_exists( 'wpforge_google_fonts' ) ) {
  */
 function wpforge_scripts() {
 	global $wp_styles;
-  wp_enqueue_style('wpforge_fonts', get_template_directory_uri() . '/fonts/fonts.css','', '6.2.4.1' );
+	  	wp_enqueue_style('wpforge_fonts', get_template_directory_uri() . '/fonts/fonts.css','', '6.2.4.2' );
 
-	if( get_theme_mod( 'wpforge_select_css' ) == 'flex') {
-			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation-flex.css','', '6.2.4.1' );
-	} else {
-			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation.css','', '6.2.4.1' );
-	}
+		if( get_theme_mod( 'wpforge_select_css' ) == 'flex') {
+			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation-flex.css','', '6.2.4.2' );
+		} else {
+			wp_enqueue_style('wpforge_foundation', get_template_directory_uri() . '/css/foundation.css','', '6.2.4.2' );
+		}
 
-  	wp_enqueue_style('wpforge_motion_ui', get_template_directory_uri() . '/css/motion-ui.css','', '1.2.2' );
-  	wp_enqueue_style('wpforge', get_stylesheet_uri(),'','6.2.1.2' );
-	wp_enqueue_script('wpforge_what_input', get_template_directory_uri() . '/js/what-input.js', array('jquery'),'6.2.3', true);
-	wp_enqueue_script('wpforge_foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'),'6.2.3', true);
-	wp_enqueue_script('wpforge_functions', get_template_directory_uri() . '/js/theme-functions.js', array('jquery'),'6.2.4.1', true);
+	  	wp_enqueue_style('wpforge_motion_ui', get_template_directory_uri() . '/css/motion-ui.css','', '1.2.2' );
+	  	wp_enqueue_style('wpforge', get_stylesheet_uri(),'','6.2.1.2' );
+		wp_enqueue_script('wpforge_what_input', get_template_directory_uri() . '/js/what-input.js', array('jquery'),'6.2.3', true);
+		wp_enqueue_script('wpforge_foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'),'6.2.3', true);
+		wp_enqueue_script('wpforge_functions', get_template_directory_uri() . '/js/theme-functions.js', array('jquery'),'6.2.4.2', true);
 }
 add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
 /**
@@ -181,7 +183,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
  */
 if ( ! function_exists( 'wpforge_prepare_foundation' ) ) {
 	function wpforge_prepare_foundation() {
-		wp_enqueue_script ('wpforge_load_foundation', get_template_directory_uri() . '/js/app.js', array('wpforge_foundation'), '6.2.4.1', true);
+		wp_enqueue_script ('wpforge_load_foundation', get_template_directory_uri() . '/js/app.js', array('wpforge_foundation'), '6.2.4.2', true);
 	}
 	add_action( 'wp_enqueue_scripts', 'wpforge_prepare_foundation', 999);
 }
@@ -642,7 +644,7 @@ if ( ! function_exists( 'wpforge_top_nav' ) ) {
 		 	'theme_location' => 'primary',
 	        'container' => false,
 	        'depth' => 0,
-	        'items_wrap' => '<ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown" data-parent-link="true">%3$s</ul>',
+	        'items_wrap' => '<ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown" data-parent-link="true" data-close-on-click-inside="false">%3$s</ul>',
 	        'fallback_cb' => '',
 	        'walker' => new Topbar_Menu_Walker()
 	    ));

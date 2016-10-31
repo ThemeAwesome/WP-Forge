@@ -3,7 +3,7 @@
 * WP-Forge Theme Customizer
 * A Theme Customizer for WP-Forge. Adds the individual, panels, sections, settings, and controls to the theme customizer
 * @since WP-Forge 5.5.1.7
-* @version 6.2.4.1
+* @version 6.2.4.2
 */
 
 /**
@@ -4344,7 +4344,7 @@ h1.entry-title-page{color:<?php echo esc_attr(get_theme_mod('wpforge_page_title_
 
 #content.columns{float:<?php echo esc_attr(get_theme_mod('wpforge_content_position','left')); ?>!important;}
 
-y .widget-title{color:<?php echo esc_attr(get_theme_mod('main_widget_title_color','#444444')); ?>;font-size:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title','0.875rem')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title_weight','normal')); ?>;text-transform:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title_transform','uppercase')); ?>;}
+.widget-title{color:<?php echo esc_attr(get_theme_mod('main_widget_title_color','#444444')); ?>;font-size:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title','0.875rem')); ?>;font-weight:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title_weight','normal')); ?>;text-transform:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_widget_title_transform','uppercase')); ?>;}
 
 #secondary p,#secondary li,#secondary .widget.widget_text{color:<?php echo esc_attr(get_theme_mod('main_widget_text_color','#444444')); ?>;font-size:<?php echo esc_attr(get_theme_mod('wpforge_sidebar_font_size','0.875rem')); ?>;}
 

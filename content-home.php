@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in front-page.php
  * @since WP-Forge 5.5.2.2
- * @version 6.2.4.1
+ * @version 6.2.4.2
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

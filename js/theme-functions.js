@@ -1,6 +1,6 @@
 /*
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.1
+ * @version 6.2.4.2
  */
 
 jQuery(document).ready(function() {

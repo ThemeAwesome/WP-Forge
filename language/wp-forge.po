@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 6.2.4.1\n"
-"POT-Creation-Date: 2016-05-13 06:15-0700\n"
-"PO-Revision-Date: 2016-05-13 06:14-0700\n"
+"Project-Id-Version: WP-Forge 6.2.4.2\n"
+"POT-Creation-Date: 2016-10-31 06:23-0700\n"
+"PO-Revision-Date: 2016-10-31 06:25-0700\n"
 "Last-Translator: Thomas E. Vasquez <tsquez@gmail.com>\n"
-"Language-Team: ThemeAwesome.com <thomas@themeawesome.com> \n"
+"Language-Team: ThemeAwesome.com <tsquez@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +17,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Language: en_US\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -54,13 +55,14 @@ msgid ""
 msgstr ""
 
 #: 404.php:21
-msgid "We have other great stuff!"
+msgid "Don&rsquo;t go just yet! We have other great stuff!"
 msgstr ""
 
 #: 404.php:22
 msgid ""
 "Even though you couldn&rsquo;t find what you were looking for, we do have "
-"other great stuff to look at. Below is a list of our latest posts: "
+"other great content to offer. Use the lists below to find something new and "
+"exciting: "
 msgstr ""
 
 #: archive.php:14
@@ -198,7 +200,7 @@ msgstr ""
 #: comments.php:56 content-aside.php:18 content-audio.php:19
 #: content-chat.php:27 content-gallery.php:26 content-image.php:18
 #: content-link.php:18 content-quote.php:18 content-status.php:18
-#: content-video.php:19 content.php:27
+#: content-video.php:19 content.php:27 page-templates/sitemap.php:40
 msgid "Comment"
 msgstr ""
 
@@ -232,26 +234,26 @@ msgstr ""
 #: content-aside.php:18 content-audio.php:19 content-chat.php:27
 #: content-gallery.php:26 content-image.php:18 content-link.php:18
 #: content-quote.php:18 content-status.php:18 content-video.php:19
-#: content.php:27
+#: content.php:27 page-templates/sitemap.php:40
 msgid "1 Comment"
 msgstr ""
 
 #: content-aside.php:18 content-audio.php:19 content-chat.php:27
 #: content-gallery.php:26 content-image.php:18 content-link.php:18
 #: content-quote.php:18 content-status.php:18 content-video.php:19
-#: content.php:27
+#: content.php:27 page-templates/sitemap.php:40
 msgid "% Comments"
 msgstr ""
 
 #: content-aside.php:20 content-audio.php:21 content-chat.php:29
 #: content-gallery.php:28 content-image.php:20 content-link.php:20
 #: content-quote.php:20 content-status.php:20 content-video.php:21
-#: content.php:28 content.php:30 functions.php:384
+#: content.php:28 content.php:30 functions.php:389
 msgid "Edit"
 msgstr ""
 
 #: content-aside.php:23 content-audio.php:28 content-gallery.php:19
-#: content-video.php:27 content.php:19
+#: content-video.php:27 content.php:19 page-templates/sitemap.php:35
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
@@ -264,7 +266,7 @@ msgstr ""
 
 #: content-audio.php:39 content-chat.php:34 content-gallery.php:38
 #: content-home.php:21 content-page.php:19 content-video.php:38 content.php:48
-#: content.php:62 image.php:68
+#: content.php:62 image.php:70
 msgid "Pages:"
 msgstr ""
 
@@ -298,7 +300,7 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#: content-home.php:24 content-page.php:22
+#: content-home.php:24 content-page.php:22 page-templates/sitemap.php:84
 msgid "Edit Page"
 msgstr ""
 
@@ -319,109 +321,109 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:91
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:92
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:93
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:217
+#: functions.php:222
 msgid "Main Sidebar"
 msgstr ""
 
-#: functions.php:219
+#: functions.php:224
 msgid "Displays widgets in the blog area as well as pages."
 msgstr ""
 
-#: functions.php:226
+#: functions.php:231
 msgid "First Footer Widget Area"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:233
 msgid "An optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:240
 msgid "Second Footer Widget Area"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:242
 msgid "An second optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:249
 msgid "Third Footer Widget Area"
 msgstr ""
 
-#: functions.php:246
+#: functions.php:251
 msgid "An third optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:253
+#: functions.php:258
 msgid "Fourth Footer Widget Area"
 msgstr ""
 
-#: functions.php:255
+#: functions.php:260
 msgid "An fourth optional widget area for your site footer"
 msgstr ""
 
-#: functions.php:325
+#: functions.php:330
 msgid "Post Navigation"
 msgstr ""
 
-#: functions.php:326
+#: functions.php:331
 msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
 msgstr ""
 
-#: functions.php:327
+#: functions.php:332
 msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
-#: functions.php:347
+#: functions.php:352
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:347
+#: functions.php:352
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:362
+#: functions.php:367
 msgid "Post Author"
 msgstr ""
 
-#: functions.php:368
+#: functions.php:373
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:374
+#: functions.php:379
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:382
+#: functions.php:387
 msgid "Reply &raquo;"
 msgstr ""
 
-#: functions.php:398 functions.php:432 functions.php:540
+#: functions.php:403 functions.php:437 functions.php:545
 msgid ", "
 msgstr ""
 
-#: functions.php:411
+#: functions.php:416
 msgid "Sticky"
 msgstr ""
 
-#: functions.php:488
+#: functions.php:493
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&raquo;</span>"
 msgstr ""
 
-#: image.php:18
+#: image.php:19
 #, php-format
 msgid ""
 "<span class=\"meta-prep meta-prep-entry-date\"><span class=\"genericon "
@@ -433,15 +435,15 @@ msgid ""
 "%8$s</a>"
 msgstr ""
 
-#: image.php:29
+#: image.php:31
 msgid "Edit Image"
 msgstr ""
 
-#: image.php:72
+#: image.php:74
 msgid "&laquo; Previous Image"
 msgstr ""
 
-#: image.php:73
+#: image.php:75
 msgid "Next Image &raquo;"
 msgstr ""
 
@@ -1993,6 +1995,38 @@ msgstr ""
 msgid "Post H6 Color"
 msgstr ""
 
+#: page-templates/sitemap.php:24
+msgid "All Posts"
+msgstr ""
+
+#: page-templates/sitemap.php:57
+msgid "Site Feeds"
+msgstr ""
+
+#: page-templates/sitemap.php:59
+msgid "Main RSS Feed"
+msgstr ""
+
+#: page-templates/sitemap.php:60
+msgid "Comments RSS Feed"
+msgstr ""
+
+#: page-templates/sitemap.php:63
+msgid "Pages"
+msgstr ""
+
+#: page-templates/sitemap.php:68
+msgid "Monthly Archives"
+msgstr ""
+
+#: page-templates/sitemap.php:73
+msgid "Categories"
+msgstr ""
+
+#: page-templates/sitemap.php:78
+msgid "Top 20 Tags"
+msgstr ""
+
 #: search.php:12
 #, php-format
 msgid "Search Results for: %s"
@@ -2023,7 +2057,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"A WordPress theme built with ZURB's Foundation for Sites (Foundation 6.2.1), "
+"A WordPress theme built with ZURB's Foundation for Sites (Foundation 6.2.4), "
 "the most advanced responsive front-end framework in the world. By combining "
 "WordPress and Foundation you get a resposive WordPress theme that makes "
 "creating websites fun and exciting again! Please view the CHANGELOG and "

@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Top-Bar menu and its different positions.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.1
+ * @version 6.2.4.2
  */
 ?>
 <div class="nav_container norm">
@@ -24,7 +24,6 @@
           </div><!-- second end top-bar -->
         </div><!-- end top-bar -->
       </div><!-- .row -->
-    </div><!-- end nav_container -->
   <?php } // end if ?>
 
 

@@ -8,7 +8,7 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 6.2.3
- * @version 6.2.4.1
+ * @version 6.2.4.2
  */
 
 get_header(); ?>

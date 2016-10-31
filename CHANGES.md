@@ -1,9 +1,15 @@
 Theme Name: WP-Forge
 File Name: Changelog
 Tested up to: 4.6.1
-Stable tag: 6.2.4.1
+Stable tag: 6.2.4.2
 
 == Changelog ==
+
+= 6.2.4.2 =
+* Wrapped 'wpforge_setup' function in a 'if_function_exists'. This function is located in functions.php.
+* Modified the padding of the next and previous buttons in orbit.
+* Corrected an issue where the sub menu items could not be clicked on touch screens. Thanks to @gsatsan for bringing it to my attention: https://wordpress.org/support/topic/touch-menu-not-working/#post-8376221
+* Updated the .po file
 
 = 6.2.4.1 =
 * Removed the "scroll to function" I added in 6.2.4 - This was causing a conflict with tabs.

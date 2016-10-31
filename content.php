@@ -2,7 +2,7 @@
 /**
  * The default template for displaying content. Used for both single and index/archive/search.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.1
+ * @version 6.2.4.2
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

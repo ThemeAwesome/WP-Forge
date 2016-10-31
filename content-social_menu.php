@@ -2,7 +2,7 @@
 /**
  * The template that supplies our WordPress Social Menu
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.1
+ * @version 6.2.4.2
  */
 ?>
 <?php if ( has_nav_menu( 'social' ) ) : ?>
