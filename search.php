@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  * @since WP-Forge 5.5.1.7
- * @version 6.3.0
+ * @version 6.3.0.1
  */
 get_header(); ?>
 	<div id="content" class="small-12 large-8 columns" role="main">

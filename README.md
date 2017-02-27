@@ -1,4 +1,4 @@
-WP-Forge v6.3.0
+WP-Forge v6.3.0.1
 ====================
 
 ###Last Updated Febuary 27, 2017

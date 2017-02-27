@@ -2,24 +2,30 @@ Theme Name: WP-Forge
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
 Requires at least: 4.7.2
 Tested up to: 4.8-alpha-40127
-Stable tag: 6.3.0
+Stable tag: 6.3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
 
+= 6.3.0.1 =
+
+Theme updated 02/27/17
+
+* Corrected an issue in the 'theme-dashboard.php' file. Seems I added the version code in the wrong area.
+
 = 6.3.0 =
 
 Theme updated 02/27/17
 
-* Updated to Foundation version 6.3.0
+* Updated to Foundation version 6.3.0.1
 * Updated Font-Awesome to 4.7
 * Removed ap.js - moved the actual call for foundation to theme-functions.js - now there is only one file.
 * Added 'what-input.js' and 'foundation.js' to the 'wpforge_theme_functions' of functions.php - this makes the scripts load closer to the closing body tag as they were meant to be.
 * Moved to one off-canvas file for the theme. There is no need to have two of the same files being called by two different fuinctions, when one file and one function will do.
 * Moved Use Off-Canvas for Mobile? to Top-Bar Settings section.
 * Added options for off-canvas that will appear when Use Off-Canvas for Mobile? is set to 'Yes' in Top-Bar Settings. These settings only affect mobile Off-Canvas (the off-canvas menu used in conjunction with the top-bar)
-* Switched 'data-accordion' to 'data-drilldown' in off-canvas. 'data-accordion' still does not work as of 6.3.0 and is slated to be possibly added to next major release, 6.4. See this thread https://github.com/zurb/foundation-sites/pull/9348 - For now 'data-drilldown' will remain in place until the 'data-accordion' is corrected and functions properly. Thanks to @cbirdsong for asking how this is done, which promted the switch: See https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/
+* Switched 'data-accordion' to 'data-drilldown' in off-canvas. 'data-accordion' still does not work as of 6.3.0.1 and is slated to be possibly added to next major release, 6.4. See this thread https://github.com/zurb/foundation-sites/pull/9348 - For now 'data-drilldown' will remain in place until the 'data-accordion' is corrected and functions properly. Thanks to @cbirdsong for asking how this is done, which promted the switch: See https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/
 * Updated 'off-canvas' menu to the latest version. Unfortunately, only two Off-Canvas Directions are available: 'position-left' and 'position-right'. The other positions, 'position-top' and 'position-bottom', are slated for possible inclusion in the next update, keep in mind I make no guarantee that they will. The reason they were not added in this update is due to the fact that currently the menu does not look proper if top or bottom is used.
 * Added the abilty for the user to set the Off-Canvas Transitions to 'push' or 'overlap'.
 * Removed Foundation 'active' class from menus. Switched to'current-menu-item', which is already built into WP core. In my opinion this is a much better option and is easier to style. Thanks @OttoPotto for bringing up this request which gave me the idea to switch. See this thread https://github.com/tsquez/wp-forge/issues/50
@@ -52,7 +58,7 @@ Theme updated 10/27/16
 
 Theme updated 10/23/16
 
-* Updated Foundation to latest version, 6.3.0
+* Updated Foundation to latest version, 6.3.0.1
 * Corrected issue with 'active' class css in menu widget. The background was filled the active color.
 * Added '!important' to line 4353 of customizer.php - this portion of the file deals whith the hover color of the active link in the sidebar menu widget. Before adding '!important', when hovering over an active link in the menu widget, the link would disappear.
 * Added Pricing Table css from Foundation 5.
@@ -86,7 +92,7 @@ Theme updated 06/25/16
 
 Theme updated 05/29/16
 
-* Updated to the latest version of Foundation, 6.3.0. (foundation-flex.css was not updated by ZURB so version is still at 6.2.1)
+* Updated to the latest version of Foundation, 6.3.0.1. (foundation-flex.css was not updated by ZURB so version is still at 6.2.1)
 * Changed the name of 'wpforge-functions.js' to 'theme-functions.js'.
 * Added support for selective refresh for widgets. See https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/
 

@@ -2,7 +2,7 @@
 /**
  * Implement an optional custom header for WP-Forge
  * @since WP-Forge 5.5.1.7
- * @version 6.3.0
+ * @version 6.3.0.1
  */
 
 if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {

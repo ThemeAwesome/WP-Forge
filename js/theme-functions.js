@@ -1,6 +1,6 @@
 /**
  * @since WP-Forge 6.1.1
- * @version 6.3.0
+ * @version 6.3.0.1
  */
 jQuery(document).foundation();
 

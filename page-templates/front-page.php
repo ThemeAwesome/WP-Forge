@@ -2,7 +2,7 @@
 /**
  * Template Name: Front Page Template
  * @since WP-Forge 5.5.1.7
- * @version 6.3.0
+ * @version 6.3.0.1
  */
 get_header(); ?>
 	<div id="content" class="small-12 large-12 columns" role="main">

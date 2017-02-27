@@ -2,11 +2,17 @@ Theme Name: WP-Forge
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
 Requires at least: 4.7.2
 Tested up to: 4.8-alpha-40127
-Stable tag: 6.3.0
+Stable tag: 6.3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
+
+= 6.3.0.1 =
+
+Theme updated 02/27/17
+
+* Corrected an issue in the 'theme-dashboard.php' file. Seems I added the version code in the wrong area.
 
 = 6.3.0 =
 
