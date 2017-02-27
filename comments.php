@@ -2,7 +2,7 @@
 /**
  * The template for displaying Comments
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.2
+ * @version 6.3.0
  */
 
 /* If the current post is protected by a password and the visitor has not yet entered the password we will return early
@@ -29,7 +29,7 @@ if (post_password_required()) {
 		?>
 	</ol>
 	<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
-	<nav id="comment-nav-below" class="large-12 medium-12 columns navigation comment-navigation" role="navigation">
+	<nav id="comment-nav-below" class="small-12 large-12 columns navigation comment-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e('Comment navigation','wp-forge'); ?></h1>
 		<div class="nav-previous"><?php previous_comments_link(__('&laquo; Older Comments','wp-forge')); ?></div>
 		<div class="nav-next"><?php next_comments_link(__('Newer Comments &raquo;','wp-forge')); ?></div>

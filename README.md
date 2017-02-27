@@ -1,13 +1,13 @@
-WP-Forge v6.2.4.2
+WP-Forge v6.3.0
 ====================
 
-###Last Updated October 31, 2016
+###Last Updated Febuary 27, 2017
 
-A WordPress theme built with ZURB's Foundation for Sites, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a responsive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG.txt and README.txt files before/after installation and/or update.
+A WordPress theme built with Foundation for Sites (Foundation 6.3.0) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
 
 Demo
 =============
-View the demo of [WP-Forge here] (https://themeawesome.com/themes/wpforge/)
+Check out the [WP-Forge demo] (https://themeawesome.com/themes/wpforge/)
 
 Quick Start Guide
 =============
@@ -37,24 +37,25 @@ WordPress introduced the [Theme Customizer] (https://codex.wordpress.org/Theme_C
 WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in the header. This practice falls within the [WordPress Theme Standards] (http://codex.wordpress.org/Theme_Development). You can do a search and find the information you need to use Google's version and load it in the footer if you wish.
 
 ###Child Theme###
-I have created a child theme for WP-Forge called [WP-Starter] (http://themeawesome.com/wordpress-child-theme/). If you prefer, you can also create your own child theme. You can learn how to create your own child theme by reading the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
+I have created a [WordPress child theme] (http://themeawesome.com/wordpress-child-theme/) for WP-Forge called WP-Starter. If you prefer, you can also create your own child theme. You can learn how to do this over at the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
 
 ###Genericons 3.4.1###
 Includes the free WordPress icon set [Genericons] (https://genericons.com/)
 
-###Font-Awesome 4.6.3###
+###Font-Awesome 4.7###
 Includes the free icon set [Font-Awesome] (http://fontawesome.io)
 
 ###Yoast SEO Plugin###
 Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
 
 ###Sites Using WP-Forge###
-The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (http://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
+The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (https://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
 * [HellYeah] (http://hellyeahband.com/)
 * [Motley.com (Motley Crue)] (http://www.motley.com/)
 * [SixxamMusic.com] (http://sixxammusic.com/)
 * [DrowningPool.com] (http://drowningpool.com/)
 * [Metal1.info] (http://www.metal1.info/)
+* [National Comedy Theater] (http://nationalcomedy.com/)
 
 License
 =============
@@ -70,4 +71,4 @@ This means WP-Forge is completely free to use and modify as you see fit.
 
 ThemeAwesome.com
 =============
-[ThemeAwesome.com] (https://themeawesome.com), a site focused on building WordPress themes utilizing the [Foundation for Sites] (http://foundation.zurb.com/) framework by [Zurb] (http://zurb.com/).
+[ThemeAwesome.com] (https://themeawesome.com), a site focused on building WordPress themes with both the [Foundation for Sites 6.3] (http://foundation.zurb.com/) framework by [Zurb] (http://zurb.com/) and the [Bootstrap] (http://getbootstrap.com/) framework.

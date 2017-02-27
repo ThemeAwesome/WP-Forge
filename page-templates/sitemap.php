@@ -8,12 +8,12 @@
  * @package WordPress
  * @subpackage WP_Forge
  * @since WP-Forge 6.2.3
- * @version 6.2.4.2
+ * @version 6.3.0
  */
 
 get_header(); ?>
 
-	<div id="content" class="medium-12 large-12 columns" role="main">
+	<div id="content" class="small-12 large-12 columns" role="main">
 
 		<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
 
@@ -48,8 +48,6 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
-					<?php wpforge_content_nav( 'nav-below' ); ?>
-
 				</div><!-- end site-map-left -->
 
 				<div class="site-map-right medium-3 large-3 columns">
@@ -80,10 +78,10 @@ get_header(); ?>
 
 				</div><!-- end site-map-right -->
 
-			<footer class="entry-meta">
-				<?php edit_post_link( __( 'Edit Page', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span>', '</span>' ); ?>
+			<footer class="entry-meta medium-12 large-12 columns">
+				<?php wpforge_content_nav( 'nav-below' ); ?>
 			</footer><!-- .entry-meta -->
 
-		</div><!-- #content -->
+	</div><!-- #content -->
 
 <?php get_footer(); ?>

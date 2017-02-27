@@ -1,8 +1,8 @@
 === WP-Forge ===
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
-Requires at least: 4.6.1
-Tested up to: 4.6.1
-Stable tag: 6.2.4.2
+Requires at least: 4.7.2
+Tested up to: 4.8-alpha-40127
+Stable tag: 6.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,11 +16,11 @@ A WordPress theme built with ZURB's Foundation for Sites (Foundation 6), the mos
 // Bundled Resources
 ///////////////////////////////////
 
-	1. Foundation Framework 6.2.4 - MIT License (https://github.com/zurb/foundation/blob/master/LICENSE)
+	1. Foundation Framework 6.3 - MIT License (https://github.com/zurb/foundation/blob/master/LICENSE)
 	2. Motion-UI 1.2.2 - MIT License (https://github.com/zurb/motion-ui/blob/master/LICENSE)
 	3. What-Input - MIT License (https://github.com/ten1seven/what-input/blob/master/LICENSE)
 	4. Genericons 3.4.1 - GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-	5. Font-Awesome 4.6.3 - See all license for Font-Awesome https://fortawesome.github.io/Font-Awesome/license/
+	5. Font-Awesome 4.7 - See all license for Font-Awesome https://fortawesome.github.io/Font-Awesome/license/
 
 	*minimized version of font-awesome.css as well as genericons.css is used in fonts.css, full versions are located in /fonts/full
 

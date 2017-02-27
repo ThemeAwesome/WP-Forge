@@ -2,10 +2,10 @@
 /**
  * The template for displaying 404 pages (Not Found).
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.2
+ * @version 6.3.0
  */
 get_header(); ?>
-		<div id="content" class="medium-12 large-12 columns" role="main">
+		<div id="content" class="small-12 large-12 columns" role="main">
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<nav aria-label="You are here:" role="navigation"><ul class="breadcrumbs">','</ul></nav>'); } ?>
 			<article id="post-0" class="post error404 no-results not-found">
 				<header class="entry-header">
@@ -23,22 +23,22 @@ get_header(); ?>
 					<div class="row">
 					<div class="small-12 medium-3 large-3 column">
 						<h4>Recent Posts</h4>
-						<?php
+						<ul><?php
 							$recent_posts = wp_get_recent_posts(array('post_status' => 'publish'));
 							foreach( $recent_posts as $recent ){
 								echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
 							}
-						?>
+						?></ul>
 					</ul>
 					</div>
 					<div class="small-12 medium-3 large-3 column">
 						<h4>Popular Categories</h4>
-						<?php wp_list_categories('number=10&show_count=1&orderby=count&order=DESC&title_li=') ?>
+						<ul><?php wp_list_categories('number=10&show_count=1&orderby=count&order=DESC&title_li=') ?></ul>
 					</div>
 
 					<div class="small-12 medium-3 large-3 column">
 						<h4>Monthly Archives</h4>
-							<?php wp_get_archives( array( 'type' => 'monthly', 'limit' => 12 ) ); ?>
+							<ul><?php wp_get_archives( array( 'type' => 'monthly', 'limit' => 12 ) ); ?></ul>
 					</div>
 					<div class="small-12 medium-3 large-3 column">
 						<h4>Popular Tags</h4>

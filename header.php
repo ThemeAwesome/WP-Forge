@@ -2,7 +2,7 @@
 /**
  * The Header template of our theme.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.2
+ * @version 6.3.0
  */
 ?><!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -15,15 +15,13 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-        <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
-            <?php get_template_part( 'content', 'off_canvas_mobile' ); ?>
+
+        <?php if( get_theme_mod('wpforge_nav_select','topbar') == 'offcanvas' || get_theme_mod('wpforge_mobile_display','no') == 'yes') { ?>
+            <?php get_template_part('content', 'off_canvas'); ?>
         <?php } // end if ?>
-        <?php if( get_theme_mod( 'wpforge_nav_select' ) == 'offcanvas') { ?>
-            <?php get_template_part( 'content', 'off_canvas' ); ?>
-        <?php } // end if ?>
-        <?php if( get_theme_mod( 'wpforge_nav_select','topbar' ) == 'topbar') { ?>
-            <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'scroll' || get_theme_mod( 'wpforge_nav_position' ) == 'fixed') { ?>
-                <?php get_template_part( 'content', 'nav' ); ?>
+        <?php if( get_theme_mod('wpforge_nav_select','topbar') == 'topbar') { ?>
+            <?php if( get_theme_mod('wpforge_nav_position') == 'scroll' || get_theme_mod('wpforge_nav_position') == 'fixed') { ?>
+                <?php get_template_part('content', 'nav'); ?>
             <?php } // end if ?>
         <?php } // end if ?>
         <div class="header_container">
@@ -42,9 +40,9 @@
              </div><!-- .site-header -->
         </header><!-- #header -->
         </div><!-- end .header_container -->
-        <?php if( get_theme_mod( 'wpforge_nav_select','topbar' ) == 'topbar') { ?>
-            <?php if( get_theme_mod( 'wpforge_nav_position','normal' ) == 'normal' || get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
-                <?php get_template_part( 'content', 'nav' ); ?>
+        <?php if( get_theme_mod('wpforge_nav_select','topbar') == 'topbar') { ?>
+            <?php if( get_theme_mod('wpforge_nav_position','normal') == 'normal' || get_theme_mod('wpforge_nav_position') == 'sticky') { ?>
+                <?php get_template_part('content','nav'); ?>
             <?php } // end if ?>
         <?php } // end if ?>
         <div class="content_container">

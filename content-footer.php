@@ -2,7 +2,7 @@
 /**
  * The default template for displaying content in the footer.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.2
+ * @version 6.3.0
  */
 ?>
 <?php //Text and nav centered
@@ -22,7 +22,7 @@
             <?php if( get_theme_mod( 'wpforge_footer_text' ) ) { ?>
                 <p><?php echo wp_kses_post(get_theme_mod( 'wpforge_footer_text')); ?></p>
             <?php } else { ?>
-                 <p><?php _e( 'Powered by', 'wp-forge' ); ?> <a href="<?php echo esc_url(__('http://themeawesome.com/responsive-wordpress-theme/','wp-forge')); ?>" rel="follow" target="_blank" title="<?php _e( 'A Responsive WordPress Theme', 'wp-forge' ); ?>"><?php _e( 'WP-Forge', 'wp-forge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wp-forge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wp-forge' ); ?>"><?php _e( 'WordPress', 'wp-forge' ); ?></a></p>
+                 <p><?php _e( 'Powered by', 'wp-forge' ); ?> <a href="<?php echo esc_url(__('https://themeawesome.com/responsive-wordpress-theme/','wp-forge')); ?>" rel="follow" target="_blank" title="<?php _e( 'A Responsive WordPress Theme', 'wp-forge' ); ?>"><?php _e( 'WP-Forge', 'wp-forge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wp-forge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wp-forge' ); ?>"><?php _e( 'WordPress', 'wp-forge' ); ?></a></p>
             <?php } // end if ?>
         </div><!-- .site-info -->
 <?php } // end if ?>   
@@ -42,7 +42,7 @@
             <?php if( get_theme_mod( 'wpforge_footer_text' ) ) { ?>
                 <p><?php echo wp_kses_post(get_theme_mod( 'wpforge_footer_text')); ?></p>
             <?php } else { ?>
-                 <p><?php _e( 'Powered by', 'wp-forge' ); ?> <a href="<?php echo esc_url(__('http://themeawesome.com/responsive-wordpress-theme/','wp-forge')); ?>" rel="follow" target="_blank" title="<?php _e( 'A Responsive WordPress Theme', 'wp-forge' ); ?>"><?php _e( 'WP-Forge', 'wp-forge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wp-forge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wp-forge' ); ?>"><?php _e( 'WordPress', 'wp-forge' ); ?></a></p>
+                 <p><?php _e( 'Powered by', 'wp-forge' ); ?> <a href="<?php echo esc_url(__('https://themeawesome.com/responsive-wordpress-theme/','wp-forge')); ?>" rel="follow" target="_blank" title="<?php _e( 'A Responsive WordPress Theme', 'wp-forge' ); ?>"><?php _e( 'WP-Forge', 'wp-forge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wp-forge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wp-forge' ); ?>"><?php _e( 'WordPress', 'wp-forge' ); ?></a></p>
             <?php } // end if ?>
         </div><!-- .site-info -->
 <?php } // end if ?>
@@ -52,7 +52,7 @@
             <?php if( get_theme_mod( 'wpforge_footer_text' ) ) { ?>
                 <p><?php echo wp_kses_post(get_theme_mod( 'wpforge_footer_text')); ?></p>
             <?php } else { ?>
-                 <p><?php _e( 'Powered by', 'wp-forge' ); ?> <a href="<?php echo esc_url(__('http://themeawesome.com/responsive-wordpress-theme/','wp-forge')); ?>" rel="follow" target="_blank" title="<?php _e( 'A Responsive WordPress Theme', 'wp-forge' ); ?>"><?php _e( 'WP-Forge', 'wp-forge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wp-forge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wp-forge' ); ?>"><?php _e( 'WordPress', 'wp-forge' ); ?></a></p>
+                 <p><?php _e( 'Powered by', 'wp-forge' ); ?> <a href="<?php echo esc_url(__('https://themeawesome.com/responsive-wordpress-theme/','wp-forge')); ?>" rel="follow" target="_blank" title="<?php _e( 'A Responsive WordPress Theme', 'wp-forge' ); ?>"><?php _e( 'WP-Forge', 'wp-forge' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','wp-forge')); ?>" target="_blank" title="<?php _e( 'WordPress', 'wp-forge' ); ?>"><?php _e( 'WordPress', 'wp-forge' ); ?></a></p>
             <?php } // end if ?>
         </div><!-- .site-info -->
         <div class="medium-7 large-7 columns">

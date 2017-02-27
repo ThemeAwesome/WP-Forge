@@ -1,7 +1,7 @@
 /**
  * Theme Customizer enhancements for a better user experience.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.2
+ * @version 6.3.0
  */
 
 ( function( $ ) {
@@ -97,7 +97,7 @@
 	// Top-Bar Home Link Text
 	wp.customize('wpforge_nav_text', function(value) {
 		value.bind(function(to) {
-			$('.menu-text a').html(to);
+			$('span.tbar-title').html(to);
 		});
 	});
 
@@ -118,7 +118,7 @@
 	// Top-Bar Main Color
 	wp.customize('top_bar_main_color',function( value ) {
         value.bind(function(to) {
-            $('.contain-to-grid .top-bar,.top-bar,.top-bar ul,.top-bar ul li,.contain-to-grid').css('background-color', to ? to : '' );
+            $('.contain-to-grid .top-bar,.top-bar,.top-bar ul,.top-bar ul li,.contain-to-grid,.top-bar.title-bar,.title-bar').css('background-color', to ? to : '' );
         });
     });
 
@@ -129,10 +129,24 @@
 	    });
 	});
 
-	// Top-Bar Active Color
+	// Current Menu Item Background Color
 	wp.customize('top_bar_active_color',function( value ) {
 	    value.bind(function(to) {
-	        $('.top-bar .menu > .active').css('background-color', to ? to : '' );
+	        $('.menu .current-menu-parent,.menu .current-page-parent,.menu .current-page-ancestor,.menu .current_page_item').css('background-color', to ? to : '' );
+	    });
+	});
+
+	// Current Menu Item Link Color
+	wp.customize('current_item_link_color',function( value ) {
+	    value.bind(function(to) {
+	        $('.menu > .current_page_item > a').css('color', to ? to : '' );
+	    });
+	});
+
+	// Current Menu Item Link Hover Color
+	wp.customize('current_item_link_hover_color',function( value ) {
+	    value.bind(function(to) {
+	        $('.menu > .current_page_item > a:hover').css('color', to ? to : '' );
 	    });
 	});
 
@@ -153,7 +167,21 @@
 	// Top-Bar Dropdown Arrow Color
 	wp.customize('top_bar_dropdown_arrow_color',function( value ) {
 	    value.bind(function(to) {
-	        $('.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after, .is-drilldown-submenu-parent > a::after, .js-drilldown-back > a::before').css('border-color', to ? to : '' );
+	        $('.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after,.is-drilldown-submenu-parent > a::after,.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after,.is-dropdown-submenu .is-dropdown-submenu-parent.opens-left > a::after,.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after,.js-drilldown-back > a::before').css('border-color', to ? to : '' );
+	    });
+	});
+
+	// Top-Bar Hamburger Icon Title Color
+	wp.customize('top_bar_hamburger_color',function( value ) {
+	    value.bind(function(to) {
+	        $('.title-bar button,span.tbar-title').css('color', to ? to : '' );
+	    });
+	});
+
+	// Top-Bar Hamburger Icon Title Hover Color
+	wp.customize('top_bar_hamburger_hover_color',function( value ) {
+	    value.bind(function(to) {
+	        $('.title-bar button:hover,span.tbar-title:hover').css('color', to ? to : '' );
 	    });
 	});
 
@@ -164,28 +192,28 @@
 	// Off-Canvas Hamburger Icon Text
 	wp.customize('wpforge_off_canvas_text', function(value) {
 		value.bind(function(to) {
-			$('.title-bar-title a').html(to);
+			$('span.canvas-title').html(to);
 		});
 	});
 
 	// Off-Canvas Main Color
 	wp.customize('wpforge_off_canvas_main_color',function( value ) {
         value.bind(function(to) {
-            $('.off-canvas, .title-bar').css('background', to ? to : '' );
+            $('.off-canvas-absolute,.off-canvas-content .title-bar').css('background-color', to ? to : '' );
         });
     });
 
 	// Off-Canvas Hamburger Icon Color
 	wp.customize('wpforge_hamburger_icon_color',function( value ) {
         value.bind(function(to) {
-            $('.title-bar-left button,.title-bar-right button').css('color', to ? to : '' );
+            $('.off-canvas-content .title-bar-left button,.off-canvas-content .title-bar-right button,.off-canvas-content span.canvas-title').css('color', to ? to : '' );
         });
     });
 
-	// Hamburger Icon Hover Color
+	// Off-Canvas Hamburger Icon Hover Color
 	wp.customize('wpforge_hamburger_icon_hover_color',function( value ) {
 	    value.bind(function(to) {
-	        $('.title-bar-left button:hover,.title-bar-right button:hover').css('color', to ? to : '' );
+	        $('.off-canvas-content .title-bar-left button:hover,.off-canvas-content .title-bar-right button:hover,.off-canvas-content span.canvas-title:hover').css('color', to ? to : '' );
 	    });
 	});
 
@@ -196,52 +224,59 @@
         });
     });
 
-	// Hamburger Icon Title Hover Color
-	wp.customize('wpforge_hamburger_icon_title_hover_color',function( value ) {
-	    value.bind(function(to) {
-	        $('.title-bar-title a:hover').css('color', to ? to : '' );
-	    });
-	});
-
 	// Off-Canvas Link Color
 	wp.customize('wpforge_off_canvas_link_color',function( value ) {
 	    value.bind(function(to) {
-	        $('.off-canvas .menu > li:not(.menu-text) > a').css('color', to ? to : '' );
+	        $('.off-canvas .menu > li:not(.menu-text) > a,.off-canvas-absolute .menu > li:not(.menu-text) > a').css('color', to ? to : '' );
 	    });
 	});
 
 	// Off-Canvas Link Hover Color
 	wp.customize('wpforge_off_canvas_hover_color',function( value ) {
 	    value.bind(function(to) {
-	        $('.off-canvas .menu > li:not(.menu-text) > a:hover').css('color', to ? to : '' );
+	        $('.off-canvas .menu > li:not(.menu-text) > a:hover,.off-canvas-absolute .menu > li:not(.menu-text) > a:hover').css('color', to ? to : '' );
 	    });
 	});
 
 	// Off-Canvas Dropdown Arrow Color
 	wp.customize('wpforge_off_dropdown_arrow_color',function( value ) {
 	    value.bind(function(to) {
-	        $('.is-accordion-submenu-parent > a::after').css('border-top-color', to ? to : '' );
-	    });
-	});
-
-	// Off-Canvas Active Color
-	wp.customize('wpforge_off_canvas_active_color',function( value ) {
-	    value.bind(function(to) {
-	        $('.off-canvas .menu > .active').css('background', to ? to : '' );
+	        $('.off-canvas .is-drilldown-submenu-parent > a::after,.off-canvas-absolute .is-drilldown-submenu-parent > a::after').css('border-color', to ? to : '' );
 	    });
 	});
 
 	// Off-Canvas Title Font Size
 	wp.customize('wpforge_off_canvas_title_font_size',function( value ) {
 	    value.bind(function(to) {
-	        $('.title-bar-title a').css('font-size', to ? to : '' );
+	        $('span.canvas-title').css('font-size', to ? to : '' );
 	    });
 	});
 
 	// Off-Canvas Font Size
 	wp.customize('wpforge_off_canvas_font_size',function( value ) {
 	    value.bind(function(to) {
-	        $('.off-canvas').css('font-size', to ? to : '' );
+	        $('.off-canvas,.off-canvas-absolute').css('font-size', to ? to : '' );
+	    });
+	});
+
+	// Off-Canvas Active Color
+	wp.customize('off_canvas_active_color',function( value ) {
+	    value.bind(function(to) {
+	        $('.off-canvas .menu .menu-item-home,.off-canvas .menu .current-menu-parent,.off-canvas .menu .current-page-parent,.off-canvas .menu .current-page-ancestor,.off-canvas .menu .current_page_item,.off-canvas-absolute .menu .menu-item-home,.off-canvas-absolute .menu .menu-item-home,.off-canvas-absolute .menu .current-menu-parent,.off-canvas-absolute .menu .current-page-parent,.off-canvas-absolute .menu .current-page-ancestor,.off-canvas-absolute .menu .current_page_item').css('background-color', to ? to : '' );
+	    });
+	});
+
+	// Off-Canvas Current Menu Item Link Color
+	wp.customize('off_canvas_current_item_link_color',function( value ) {
+	    value.bind(function(to) {
+	        $('.off-canvas .menu > .current_page_item > a,.off-canvas-absolute .menu > .current_page_item > a').css('color', to ? to : '' );
+	    });
+	});
+
+	// Off-Canvas Current Menu Item Link Hover Color
+	wp.customize('off_canvas_current_item_link_hover_color',function( value ) {
+	    value.bind(function(to) {
+	        $('.off-canvas .menu > .current_page_item > a:hover,.off-canvas-absolute .menu > .current_page_item > a:hover').css('color', to ? to : '' );
 	    });
 	});
 

@@ -1,21 +1,58 @@
 Theme Name: WP-Forge
-File Name: Changelog
-Tested up to: 4.6.1
-Stable tag: 6.2.4.2
+Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
+Requires at least: 4.7.2
+Tested up to: 4.8-alpha-40127
+Stable tag: 6.3.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
 
+= 6.3.0 =
+
+Theme updated 02/27/17
+
+* Updated to Foundation version 6.3.0
+* Updated Font-Awesome to 4.7
+* Removed ap.js - moved the actual call for foundation to theme-functions.js - now there is only one file.
+* Added 'what-input.js' and 'foundation.js' to the 'wpforge_theme_functions' of functions.php - this makes the scripts load closer to the closing body tag as they were meant to be.
+* Moved to one off-canvas file for the theme. There is no need to have two of the same files being called by two different fuinctions, when one file and one function will do.
+* Moved Use Off-Canvas for Mobile? to Top-Bar Settings section.
+* Added options for off-canvas that will appear when Use Off-Canvas for Mobile? is set to 'Yes' in Top-Bar Settings. These settings only affect mobile Off-Canvas (the off-canvas menu used in conjunction with the top-bar)
+* Switched 'data-accordion' to 'data-drilldown' in off-canvas. 'data-accordion' still does not work as of 6.3.0 and is slated to be possibly added to next major release, 6.4. See this thread https://github.com/zurb/foundation-sites/pull/9348 - For now 'data-drilldown' will remain in place until the 'data-accordion' is corrected and functions properly. Thanks to @cbirdsong for asking how this is done, which promted the switch: See https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/
+* Updated 'off-canvas' menu to the latest version. Unfortunately, only two Off-Canvas Directions are available: 'position-left' and 'position-right'. The other positions, 'position-top' and 'position-bottom', are slated for possible inclusion in the next update, keep in mind I make no guarantee that they will. The reason they were not added in this update is due to the fact that currently the menu does not look proper if top or bottom is used.
+* Added the abilty for the user to set the Off-Canvas Transitions to 'push' or 'overlap'.
+* Removed Foundation 'active' class from menus. Switched to'current-menu-item', which is already built into WP core. In my opinion this is a much better option and is easier to style. Thanks @OttoPotto for bringing up this request which gave me the idea to switch. See this thread https://github.com/tsquez/wp-forge/issues/50
+* Removed the title-bar title link from top-bar and off-canvas menus. In my opinion, I feel this is redundant as normally users add a link to the home page in the menu.
+* Switched to 'data-sticky-container' and 'data-sticky' in place of 'fixed' for the main menu when the Top-Bar is set to Top of Browser - Fixed.
+* Moved 'Use Off-Canvas for Mobile?' section into the Top-Bar Settings section after movng towards one off-canvas file. Makes more sense this option should only be available if the top-bar is selected as the primary menu.
+* Modified the js code in contain-to-grid.js, which was eventually moved it to theme-functions.js. See this thread https://github.com/tsquez/wp-forge/issues/51 Thanks to @HenkBarreveld.
+* By modifying and moving the 'contain-to-grid' js this allowed for the removal of the 'wpforge_contain_to_grid' function from functions.php as well as removal of the actual 'contain-to-grid.js' file, as it was no longer needed.
+* Corrected a few issues with all of the different navigation menus regarding colors. Specific issues were how the 'current-menu-item' appeared for the top-bar and off-canvas menus. Typically what would happen is, if the colors for the active or 'current-menu-item' were selected for the top-bar, those color choices were applied to 'off-canvas' as well. What if the user wanted different colors for the 'current-menu-item' in 'off-canvas'? So I added 'current-menu-item' color choices to Off-Canvas Colors section.
+* Wrapped Recent Posts, Popular Categories, Monthly Archives and Popular Tags elements of 404.php in <ul>.
+* Removed references to earlier versions of the theme from CHANGELOG.txt. These references referred to an earlier version of WP-Forge which was built using Foundation 5.
+* Removed the old admin notice. Replaced with a new theme info page located under Apperance called 'WP-Forge Theme'.
+
 = 6.2.4.2 =
+
+ Theme updated 10/31/16
+
 * Wrapped 'wpforge_setup' function in a 'if_function_exists'. This function is located in functions.php.
 * Modified the padding of the next and previous buttons in orbit.
 * Corrected an issue where the sub menu items could not be clicked on touch screens. Thanks to @gsatsan for bringing it to my attention: https://wordpress.org/support/topic/touch-menu-not-working/#post-8376221
 * Updated the .po file
 
 = 6.2.4.1 =
+
+Theme updated 10/27/16
+
 * Removed the "scroll to function" I added in 6.2.4 - This was causing a conflict with tabs.
 
 = 6.2.4 =
-* Updated Foundation to latest version, 6.2.4.2
+
+Theme updated 10/23/16
+
+* Updated Foundation to latest version, 6.3.0
 * Corrected issue with 'active' class css in menu widget. The background was filled the active color.
 * Added '!important' to line 4353 of customizer.php - this portion of the file deals whith the hover color of the active link in the sidebar menu widget. Before adding '!important', when hovering over an active link in the menu widget, the link would disappear.
 * Added Pricing Table css from Foundation 5.
@@ -26,6 +63,9 @@ Stable tag: 6.2.4.2
 * Added a "scroll to" function to 'theme-functions.js' this will allow you to add anchor points to content in your theme and associate links with those anchors. When the link is clicked, the theme will scroll to the anchor point.
 
 = 6.2.3.1 =
+
+Theme updated 06/26/16
+
 * Changed the 'wp_get_attachment_metadata()' function for images in image.php - Seems there was an error being generated about the width and the height. Looked at the snippet in Twenty Sixteen and adjusted the function in WP-Forge.
 * Corrected an issue with the styling of the Sitemap template.
 * Removed sitemap style sheet from css folder as it was not needed.
@@ -33,6 +73,9 @@ Stable tag: 6.2.4.2
 * Added '!important' to line 4369 of customizer.php - this portion of the file deals whith the hover color of the active link in the footer. Before adding '!important', when hovering over an active link in the footer, the link would disappear.
 
 = 6.2.3 =
+
+Theme updated 06/25/16
+
 * Updated to the latest version number of Foundation. No core files were updated. As stated by Zurb: This release builds upon 6.2.2 to improve how the settings file is generated. No changes to the core framework went in here.
 * Added popular categories, monthly archives and tags to 404.php.
 * Added the sitemap template back into the theme.
@@ -40,21 +83,33 @@ Stable tag: 6.2.4.2
 * Corrected an issue where when changing the color of the primary button, the color change would not appear in the preview but would show after the change was applied.
 
 = 6.2.2 =
-* Updated to the latest version of Foundation, 6.2.4.2. (foundation-flex.css was not updated by ZURB so version is still at 6.2.1)
+
+Theme updated 05/29/16
+
+* Updated to the latest version of Foundation, 6.3.0. (foundation-flex.css was not updated by ZURB so version is still at 6.2.1)
 * Changed the name of 'wpforge-functions.js' to 'theme-functions.js'.
 * Added support for selective refresh for widgets. See https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/
 
 = 6.2.1.3 =
+
+Theme updated 05/13/16
+
 * Added a color transition to all links
 * Added additional options to change colors of various elements in posts. You can now change the colors associated with category lists, tag lists, meta information and post title.
 * Corrected an issue with the post formats where the category was displaying at the bottom of the posts.
 * Changed the colors of the aside post format.
 
 = 6.2.1.2 =
+
+Theme update 04/30/16
+
 * Removed the java script from wpforge-functions.php that removed empty p and br tags from the content area. This was causing line breaks not to work.
 * Corrected an issue where changes made to pagination colors in customizer were not being applied in real time.
 
 = 6.2.1.1 =
+
+Theme updated 04/17/16
+
 * Corrected and issue where some of the text in the comment form was not translatable Thanks to @jarnoan (https://github.com/jarnoan) for bringing this to my attention months ago: https://github.com/tsquez/wp-forge/pull/48
 * Adjusted the Off-Canvas menu. 6.2.1 added some additional padding which made the menu look "fatter".
 * Updated Font-Awesome to 4.6.1
@@ -64,6 +119,9 @@ Stable tag: 6.2.4.2
 * Removed the hr from header.php. This only displayed on small mobile devices and after a hard look, I decided to remove it.
 
 = 6.2.1 =
+
+Theme updated 04/09/16
+
 * Updated to Foundation 6.2.1
 * Went back to the accordion style menu for off-canvas.
 * Removed the border around images.
@@ -75,6 +133,9 @@ Stable tag: 6.2.4.2
 * Corrected an issue where the default link color for links within a page were showing up as black. They now show properly as blue, which is the default.
 
 = 6.2 =
+
+Theme updated 03/27/16
+
 * Updated to the latest version of Zurb's Foundation, 6.2
 * Increased the width of the theme from 1024px to 1200px. This is based off the new width of rows which is 1200px.
 * With the increase in width, I decided to add a fourth footer widget.
@@ -114,100 +175,3 @@ Stable tag: 6.2.4.2
 * Added Foundation Buttons Panel and sections for Foundation buttons - Now the end user can change the settings of all the Foundation buttons.
 * Added the option to select between regular Foundation grid or the new Foundation flex grid (this is available under the Content Settings Panel)
 * Left the inline css that is added to the header via the customizer as is. Meaning, each element is on its own line.
-
-= 5.5.3.1 =
-* Added WooCommerce support back into theme.
-* Changed the style for pre code.
-* Removed the Google Analytics code from the header which was accidentally left there when I was updating the child theme I use on the site.
-
-= 5.5.3 =
-* Updated to the latest version of Foundation
-* Added <?php get_template_part( 'content', get_post_format() ); ?> to search.php. originally it was <?php get_template_part( 'content', 'loop' ); ?>. There is no content-loop.php so this needed to be changed accordingly.
-
-= 5.5.2.7 =
-* Corrected an issue with the top-bar displaying alongside the off-canvas menu.
-* Updated Genericons to 3.4.1
-* Removed extra copy of .po file
-
-= 5.5.2.6 =
-* Set the default display of post thumbnails to yes for the customizer view.
-* Corrected the issue with the footer text area. Now users can insert html.
-* Corrected issue with archive, tag and search pages not showing excerpts if Show full post or excerpt? is set to excerpt. Also added post thumbnail display to archive, tag and search pages.
-* Corrected an issue with off-canvas for mobile where the hamburger icon text was not showing.
-* Moved all Off-Canvas settings to Mobile Menu View. This makes it easier to access the off-canvas settings instead of the user having to go back and forth to different sections.
-* Added Font-Awesome back into the mix. I have been receiving a lot of emails asking for this to be brought back, so I decided why not.
-* Moved the Show home page title section into the Static Front Page Section.
-* Renamed the panels in customizer. Instead of sections they are now called options. Also modified some of the descriptions of the panels and sections.
-* Updated README.txt
-* Updated verbiage of style.css
-
-= 5.5.2.5 =
-* Corrected an issue that was caused with the release of WordPress 4.3 - The changes that were made to the customizer in core removed or renamed an area. This change caused an error message to be displayed when viewing the customizer.
-* Removed Site Favicon from the customizer. This is being handled now by Site Identity (a new section of the customizer added in core.)
-* Renamed Navigation Section to Menu Options.
-
-= 5.5.2.4 =
-* Corrected an issue with the top-bar menu in header.php - the default normal position was not displaying once the theme was activated or updated. Adding the default value into header.php seems to have corrected the issue. This is why menus were disappearing after activation and update.
-* Corrected an issue with the title text not showing in the off-canvas menu when set to Off-Canvas in the Menu Selection setting.
-* Reconfigured the Top-Bar Settings and Off-Canvas Settings areas. Thanks to user Geertje König who emailed me suggesting the change. This change not only makes perfect sense, it also makes this area easier to use. Basically I moved a few things around.
-* Added an admin notice that will appear when the theme is first activated. This was initially supposed to be added to 5.5.2.2 but was left out by mistake.
-
-= 5.5.2.3 =
-*cancelled update
-
-= 5.5.2.2 =
-* Fixed the search button issue. This was caused by the Foundation update. Seems they changed something and it was causing the text on the search button to display towards the bottom of the button.
-* Wrapped all functions in customizer.php in "if function_exists" statements. Now the customizer can be overwritten easily with "remove_action".
-* Adjusted the line height of the h1.entry-title element. I felt there was too much space when the line wrapped.
-* Increased the font size for buttons, to me it looks better and is easier to see.
-* Switched where the post thumbnail was being displayed in single post view. I never noticed before but the entry-meta was showing below the post thumbnail. Single post view is supposed to display the same as home (blog) view. Now it does.
-* Added featured images to pages. Seems to make sense to me that if featured images are available in posts they should also be available for pages as well. Thanks to user geotn for pointing it out https://wordpress.org/support/topic/does-featured-image-work-for-this-theme-featured-image-not-working
-* Removed the jQuery function that added "th" to featured images. Adding "th" to featured images added the white border. I received a lot of emails asking how this can be removed.
-* Updated Genericons to 3.3.1
-* Increased the size of the Customizer area. I was seeing the top of the left panels being blocked a little, where some of the information in the panel or section was being blocked. Increasing the size has corrected the issue so far. It has reduced real estate in the customizer preview panel just a little.
-* Added favicon to admin area and login page. This makes the favicon consistent throughout the entire site if a user uploads a custom favicon.
-* Added the top-bar color to the ul when the top-bar is set to the scroll or fixed position. If there is more than one line of links and the links wrapped to  second line, the background was transparent. This looked awkward. This corrects the issue.
-* Fixed an issue with the top-bar displaying along with the off-canvas menu in mobile view.
-* Added the ability to show or hide categories, post meta and post tags in posts. You also have the ability to choose whether or not to show the categories above the post title or above the post tags.
-* Adjusted the font size of the code block displayed at the end of the comments form. It was kind of big and blocky and didn't look right to me.
-* Added a About WP-Forge admin page. This gives users a brief overview of WP-Forge as well as links to the WP-Forge Quick Start Guide, a link to the WP-Forge support forums and a link to download WP-Starter.
-* Added the option to hide the title area of the top-bar. This only affects the top-bar in the normal and contain-to-grid-sticky positions.
-* Added the option to float links in the top-bar to the right (default) or left positions when the top-bar is in the top of browser - scroll and top of browser - fixed positions.
-* Added a hr to the content area. This will only display when off-canvas is used in mobile. I added this because there was no separation of header or main content area in mobile view.
-* Added "hide-for-small hide-for-medium" to the top-bar in content-nav.php. This prevents the top-bar from showing along with the off-canvas menu when "Use Off-Canvas for Mobile?" is set to yes.
-* Added Off-Canvas as a menu option. This means you can use the Off-Canvas menu as your sites menu.
-* Added Off-Canvas color options to the customizer. Now users can change the colors associated with the Off-Canvas menu.
-* Added the ability for users to hide the title of any page set as the Home page. Users must have the front-page template assigned to the page in order for it to work.
-* Corrected issue with the background color of the Nav-Wrapper showing through when Contain-To-Grid-Sticky was selected.
-* Added the ability to change the color and hover color of links in the Social Menu.
-* Removed the different colors from the Social Menu links. All links are one color now.
-* Updated screenshot.png
-
-= 5.5.2 =
-* Updated to the latest version of Foundation 5.5.2
-* Renamed the setting and control for sidebar colors. With the new WP 4.2 update this caused an issue with the way those mods were named. Mods renamed and issue is corrected.
-* Corrected issue with the site title and site description. Any colors assigned being handled by both the customizer as well as the style sheet. Moved all control of these to the customizer.
-* Removed the container colors from the customizer and to the style sheet. No need for these to be in the customizer when all can be controlled in one area. The background color of these containers were preventing any background image to show through. Now these background colors can be set individually in the style sheet.
-* Corrected an issue with the top-bar when placed in Contain-To-Grid-Sticky. This was causing the main Home link to move to the right.
-* Removed html5 support for gallery and caption. See the following as to why this was removed: https://wordpress.org/support/topic/html5-wp-gallery-5518
-* Added the ability to upload a favicon.
-* Adjusted the body class function in functions.php, line 703
-* Updated .po file
-* Corrected an issue with the the footer sidebar class being mislabeled in style.css. https://github.com/tsquez/wp-forge/issues/44
-
-= 5.5.1.8 =
-* Modified the description of WP-Forge in style.css.
-* Removed Font-Awesome icon set. Using nothing but Genericons.
-* Adjusted post thumbnail size from 653 to 685. This coincides with the content width set on line 28 of functions.php
-* Added html 5 support for gallery and caption.
-* Added fix for TinyMCE editor jumping all over the place. Thanks to Matt Van Andel for the fix: https://github.com/zurb/foundation/issues/6380
-* Added editor-style.css - took TinyMCE Editor styles out of style css and put them here. Post and Page editor display exactly like the front end.
-* Added css to hide the smiley face for stats if using Jetpack plugin on line 1299. If using Jetpack and you select the option to hide the smiley face, additional style tags are added to the header. In my opinion this doesn't look very good and adds more bloat.
-* Added the .contain-to-grid element to the top-bar color css in customizer.php. Now when you select a color for the top-bar, the contain-to-grid element will take on the new color. Thanks to BadCat for pointing this out: http://www.badcat.com/
-* Added version to enqueued style sheets for security. I did this to reflect the version of the theme instead of the WordPress version
-* Adjusted an issue with the theme displaying horizontal scrolling when using a header image and hiding the site title and site description. https://github.com/tsquez/wp-forge/issues/40 - Thanks again to BadCat for pointing it out http://www.badcat.com/
-* Added styling for Gravity Forms plugin. In IE submit buttons look squished. Removing the padding makes the submit buttons look normal (line 1306 of style.css)
-* Added back the ability to change the active hover state in top-bar. I had intended to remove it as I thought it redundant, however after user atelier_tsukee brought it to my attention (https://wordpress.org/support/topic/customiser-top_bar_active_hover_color), I decided to add it back.
-* Removed customizer.css from the css folder. This was accidentally left over when I was attempting something with the customizer.
-* Added the .content_container background color to the customizer. Somehow this got taken out at some point.
-* Added the ability to change the font color and hover font color in the top-bar via the customizer.

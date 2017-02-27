@@ -1,9 +1,19 @@
-/*
- * @since WP-Forge 5.5.1.7
- * @version 6.2.4.2
+/**
+ * @since WP-Forge 6.1.1
+ * @version 6.3.0
  */
+jQuery(document).foundation();
 
-jQuery(document).ready(function() {
+	// contain-to-grid functionality
+	jQuery(window).on('load scroll resize orientationChange', function () { 
+		var stickyMenu = jQuery('.header_container').outerHeight(true); 
+		if (jQuery(window).scrollTop() > stickyMenu) { 
+			jQuery('.contain-to-grid').addClass('fixed'); 
+		} 
+		else { 
+			jQuery('.contain-to-grid').removeClass('fixed'); 
+		} 
+	});
 
 	// Add button class submit buttons in the theme
 	jQuery('input[type="submit"]').addClass('button');
@@ -43,5 +53,3 @@ jQuery(document).ready(function() {
 	jQuery('.gallery').addClass('clearfix');
 
 // end loading all functions
-
-});

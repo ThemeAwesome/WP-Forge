@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.2
+ * @version 6.3.0
  */
 ?>
 	</section><!-- end .content-wrap -->
@@ -19,7 +19,6 @@
     </div><!-- end #footer_container -->
 <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes' || get_theme_mod( 'wpforge_nav_select' ) == 'offcanvas') { ?>
         </div><!-- end off-canvas-content -->
-    </div><!-- end off-canvas-wrapper-inner -->
 </div><!-- end off-canvas-wrapper -->
 <?php } // end if ?>
     <div id="backtotop" class="hvr-fade">

@@ -2,11 +2,11 @@
 /**
  * The template that supplies our WordPress Social Menu
  * @since WP-Forge 5.5.1.7
- * @version 6.2.4.2
+ * @version 6.3.0
  */
 ?>
 <?php if ( has_nav_menu( 'social' ) ) : ?>
-	<div class="social_wrap medium-12 large-12 columns">
+	<div class="social_wrap small-12 large-12 columns">
 		<nav id="social-navigation" class="social-navigation" role="navigation">
 			<?php wp_nav_menu( array(
 					'theme_location' => 'social',
