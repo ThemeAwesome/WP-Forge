@@ -3,7 +3,7 @@
 * WP-Forge Theme Customizer
 * A Theme Customizer for WP-Forge. Adds the individual, panels, sections, settings, and controls to the theme customizer
 * @since WP-Forge 5.5.1.7
-* @version 6.3.0.1
+* @version 6.3.0.2
 */
 
 /**
@@ -415,12 +415,11 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'text',
     'active_callback' => 'offcanvas_mobile_callback',
   ));
-
   $wp_customize->add_section('wpforge_off_canvas', array( /* off-canvas section */
     'title' => __('Off-Canvas Settings', 'wp-forge'),
     'active_callback' => 'wpforge_off_canvas_callback',
     'description' => __('Configure the Off-Canvas Navigation area of your theme.', 'wp-forge'),
-    'priority' => 13,
+    'priority' => 45,
     'panel' => 'wpforge_navigation',
   ));
   $wp_customize->add_setting('wpforge_off_canvas_text',array( /* off-canvas hamburger text */

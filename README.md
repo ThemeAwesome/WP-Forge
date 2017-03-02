@@ -1,7 +1,7 @@
-WP-Forge v6.3.0.1
+WP-Forge v6.3.0.2
 ====================
 
-###Last Updated Febuary 27, 2017
+###Last Updated March 02, 2017
 
 A WordPress theme built with Foundation for Sites (Foundation 6.3.0) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
 

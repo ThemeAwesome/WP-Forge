@@ -1,5 +1,5 @@
 /**
- * @version 6.3.0.1
+ * @version 6.3.0.2
  */
 /**
  * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).

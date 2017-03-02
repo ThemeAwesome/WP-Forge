@@ -2,7 +2,7 @@
 /**
  * The Header template of our theme.
  * @since WP-Forge 5.5.1.7
- * @version 6.3.0.1
+ * @version 6.3.0.2
  */
 ?><!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -15,8 +15,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
-        <?php if( get_theme_mod('wpforge_nav_select','topbar') == 'offcanvas' || get_theme_mod('wpforge_mobile_display','no') == 'yes') { ?>
+        <?php if( get_theme_mod('wpforge_nav_select') == 'topbar' || get_theme_mod('wpforge_mobile_display','no') == 'yes') { ?>
             <?php get_template_part('content', 'off_canvas'); ?>
         <?php } // end if ?>
         <?php if( get_theme_mod('wpforge_nav_select','topbar') == 'topbar') { ?>

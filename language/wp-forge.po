@@ -2044,7 +2044,7 @@ msgstr ""
 
 #: inc/theme-dashboard.php:52
 msgid ""
-"A WordPress theme built with Foundation for Sites (6.3.0.1) from Zurb, the "
+"A WordPress theme built with Foundation for Sites (6.3.0.2) from Zurb, the "
 "most advanced responsive front-end framework in the world. By combining "
 "WordPress and Foundation you get a resposive WordPress theme that makes "
 "creating websites fun and exciting again!"
@@ -2117,7 +2117,7 @@ msgstr ""
 #: inc/theme-dashboard.php:306
 msgid ""
 "A one page WordPress theme built with Foundation for Sites (Foundation "
-"6.3.0.1) from Zurb. Built specifically with the LearnDash LMS plugin in mind. "
+"6.3.0.2) from Zurb. Built specifically with the LearnDash LMS plugin in mind. "
 "If creating an educational site is not your goal, you can still use WP-Edify "
 "to create any kind of site you desire. Simple and easy! Keep in mind the "
 "demo is not complete."
@@ -2197,7 +2197,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"A WordPress theme built using Foundation for Sites (Foundation 6.3.0.1) from "
+"A WordPress theme built using Foundation for Sites (Foundation 6.3.0.2) from "
 "Zurb, the most advanced responsive front-end framework in the world. By "
 "combining WordPress and Foundation you get a resposive WordPress theme that "
 "makes creating websites fun and exciting again! Please view the CHANGELOG "

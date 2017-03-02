@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 6.3.0.1.1
+ * @version 6.3.0.2
  */
 // Load CSS
 if ( ! function_exists( 'wpforge_load_admin_scripts' ) ) {
@@ -49,7 +49,7 @@ function wpforge_theme_info_page() {
     <div class="wrap about-wrap theme_info_wrapper">
         <h1><?php printf( esc_html__('Welcome to WP-Forge - Version %1s', 'wp-forge'), $theme_data->Version ); ?></h1>
         <div class="about-text">
-            <?php esc_html_e( 'A WordPress theme built with Foundation for Sites (6.3.0.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again!', 'wp-forge' ); ?>
+            <?php esc_html_e( 'A WordPress theme built with Foundation for Sites (6.3.0) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again!', 'wp-forge' ); ?>
         </div><!-- end about-text -->
 
         <a target="_blank" href="<?php echo esc_url('https://themeawesome.com/'); ?>" class="theme-badge wp-badge"><span>ThemeAwesome.com</span></a>
@@ -110,25 +110,38 @@ function wpforge_theme_info_page() {
          <?php if ( $tab == 'changelog' ) { ?>
                 <div class="row">
                     <div class="changelog small-12 large-12 columns">
-<p>Theme Name: <b>WP-Forge</b><br />
-Tags: <b>light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready</b><br />
-Requires at least: <b>4.7.2</b><br />
-Tested up to: <b>4.8-alpha-40127</b><br />
-Stable tag: <b>6.3.0.1</b><br />
-License: <b>GPLv2 or later</b><br />
-License URI: <b>http://www.gnu.org/licenses/gpl-2.0.html</b></p>
+                        <p>Theme Name: <b>WP-Forge</b><br />
+                        Tags: <b>light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready</b><br />
+                        Requires at least: <b>4.7.2</b><br />
+                        Tested up to: <b>4.8-alpha-40139</b><br />
+                        Stable tag: <b>6.3.0.2</b><br />
+                        License: <b>GPLv2 or later</b><br />
+                        License URI: <b>http://www.gnu.org/licenses/gpl-2.0.html</b></p>
+
+                        <h4>6.3.0.2</h4>
+                        <small>Theme updated 03/02/17</small>
+                        <ul>
+                            <li>Switched code in `content-off_canvas.php` on line 59 from `wpforge_topbar_mobile_display` to `wpforge_mobile_display` - this was causing the off-canvas menu not to appear when "Use Off-Canvas for Mobile?" was set to yes.</li>
+                            <li>Adjusted the priority of the `Off-Canvas Settings`.</li>
+                        </ul>
 
                         <h4>6.3.0.1</h4>
                         <small>Theme updated 02/27/17</small>
                         <ul>
-                            <li>Updated to Foundation version 6.3.0.1</li>
+                            <li>Corrected an issue in the 'theme-dashboard.php' file. I added the version code in the wrong area.</li>
+                        </ul>
+
+                        <h4>6.3.0</h4>
+                        <small>Theme updated 02/27/17</small>
+                        <ul>
+                            <li>Updated to Foundation version 6.3.0.2</li>
                             <li>Updated Font-Awesome to 4.7</li>
                             <li>Removed <code>ap.js</code> - moved the actual call for foundation to theme-functions.js - now there is only one file.</li>
                             <li>Added <code>what-input.js</code> and <code>foundation.js</code> to the <code>wpforge_theme_functions</code> of functions.php - this makes the scripts load closer to the closing body tag as they were meant to be.</li>
                             <li>Moved to one off-canvas file for the theme by removing <code>off-canvas-mobile.php</code>. There is no need to have two of the same files being called by two different fuinctions, when one file and one function will do.</li>
                             <li>Moved Use <code>Off-Canvas for Mobile?</code> to <code>Top-Bar Settings section.</code></li>
                             <li>Added options for off-canvas that will appear when <code>Use Off-Canvas for Mobile?</code> is set to <code>Yes</code> in <code>Top-Bar Settings</code>. These settings only affect mobile Off-Canvas (the off-canvas menu used in conjunction with the top-bar)</li>
-                            <li>Switched <code>data-accordion</code> to <code>data-drilldown</code> in off-canvas. <code>data-accordion</code> still does not work as of 6.3.0.1 and is slated to be possibly added to next major release, 6.4. See this thread <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/pull/9348' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/pull/9348</a> - For now <code>data-drilldown</code> will remain in place until the <code>data-accordion</code> is corrected and functions properly. Thanks to @cbirdsong for asking how this is done, which promted the switch: See <a href="<?php echo esc_url('https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/' ); ?>" target="_blank">https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/</a></li>
+                            <li>Switched <code>data-accordion</code> to <code>data-drilldown</code> in off-canvas. <code>data-accordion</code> still does not work as of 6.3.0.2 and is slated to be possibly added to next major release, 6.4. See this thread <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/pull/9348' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/pull/9348</a> - For now <code>data-drilldown</code> will remain in place until the <code>data-accordion</code> is corrected and functions properly. Thanks to @cbirdsong for asking how this is done, which promted the switch: See <a href="<?php echo esc_url('https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/' ); ?>" target="_blank">https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/</a></li>
                             <li>Updated <code>off-canvas</code> menu to the latest version. Unfortunately, only two Off-Canvas Directions are available: <code>position-left</code> and <code>position-right</code>. The other positions, <code>position-top</code> and <code>position-bottom</code>, are slated for possible inclusion in the next update, keep in mind I make no guarantee that they will. The reason they were not added in this update is due to the fact that currently the menu does not look proper if top or bottom is used.</li>
                             <li>Added the abilty for the user to set the Off-Canvas Transitions to <code>push</code> or <code>overlap</code>.</li>
                             <li>Removed Foundation <code>active</code> class from menus. Switched to <code>current-menu-item</code>, which is already built into WP core. In my opinion this is a much better option and is easier to style. Thanks @OttoPotto for bringing up this request which gave me the idea to switch. See this thread <a href="<?php echo esc_url('https://github.com/tsquez/wp-forge/issues/50' ); ?>" target="_blank">https://github.com/tsquez/wp-forge/issues/50</a></li>
@@ -303,7 +316,7 @@ License URI: <b>http://www.gnu.org/licenses/gpl-2.0.html</b></p>
 
                         <div class="theme_link">
                             <h2><?php esc_html_e( 'WP-Edify', 'wp-forge' ); ?></h2>
-                            <p class="about"><?php printf(esc_html__('A one page WordPress theme built with Foundation for Sites (Foundation 6.3.0.1) from Zurb. Built specifically with the LearnDash LMS plugin in mind. If creating an educational site is not your goal, you can still use WP-Edify to create any kind of site you desire. Simple and easy! Keep in mind the demo is not complete.', 'wp-forge'), $theme_data->Name); ?></p>
+                            <p class="about"><?php printf(esc_html__('A one page WordPress theme built with Foundation for Sites (Foundation 6.3.0.2) from Zurb. Built specifically with the LearnDash LMS plugin in mind. If creating an educational site is not your goal, you can still use WP-Edify to create any kind of site you desire. Simple and easy! Keep in mind the demo is not complete.', 'wp-forge'), $theme_data->Name); ?></p>
                             <p>
                                 <a href="<?php echo esc_url('https://themeawesome.com/wp-edify/'); ?>" class="button button-primary" target="_blank"><?php esc_html_e('Get Notified', 'wp-forge'); ?></a>
                                 <a href="<?php echo esc_url('https://themeawesome.com/themes/wp-edify'); ?>" class="button button-secondary" target="_blank">

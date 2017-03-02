@@ -2,7 +2,7 @@
 /**
  * The template that supplies Off-Canvas and Off-Canvas Mobile support to WP-Forge
  * @since WP-Forge 5.5.1.7
- * @version 6.3.0.1
+ * @version 6.3.0.2
  */
 ?>
 <div class="off-canvas-wrapper">
@@ -56,7 +56,7 @@
 
  <?php } else { ?>
 
- <?php if( get_theme_mod('wpforge_nav_select') == 'topbar' || get_theme_mod('wpforge_topbar_mobile_display') == 'yes') { ?>
+ <?php if( get_theme_mod('wpforge_nav_select') == 'topbar' || get_theme_mod('wpforge_mobile_display') == 'yes') { ?>
 
      <?php if( get_theme_mod( 'offcanvas_mobile_position','left' ) == 'left') { ?>
 	    <?php if( get_theme_mod( 'offcanvas_mobile_transition','push' ) == 'push') { ?>

@@ -1,12 +1,19 @@
 Theme Name: WP-Forge
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
 Requires at least: 4.7.2
-Tested up to: 4.8-alpha-40127
-Stable tag: 6.3.0.1
+Tested up to: 4.8-alpha-40139
+Stable tag: 6.3.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
+
+= 6.3.0.2 =
+
+Theme updated 03/02/17
+
+* Switched code in `content-off_canvas.php` on line 59 from `wpforge_topbar_mobile_display` to `wpforge_mobile_display` - this was causing the off-canvas menu not to appear when "Use Off-Canvas for Mobile?" was set to yes.
+* Adjusted the priority of the `Off-Canvas Settings`.
 
 = 6.3.0.1 =
 
