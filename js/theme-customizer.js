@@ -1,7 +1,7 @@
 /**
  * Theme Customizer enhancements for a better user experience.
  * @since WP-Forge 5.5.1.7
- * @version 6.3.0.2
+ * @version 6.3.1.0
  */
 
 ( function( $ ) {

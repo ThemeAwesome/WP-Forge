@@ -1,12 +1,18 @@
-Theme Name: WP-Forge
-Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
-Requires at least: 4.7.2
-Tested up to: 4.8-alpha-40139
-Stable tag: 6.3.0.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Theme Name: **WP-Forge**<br />
+Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
+Requires at least: **4.7.2**<br />
+Tested up to: **4.8-alpha-40147**<br />
+Stable tag: **6.3.1.0**<br />
+License: **GPLv2 or later**<br />
+License URI: [http://www.gnu.org/licenses/gpl-2.0.html] http://www.gnu.org/licenses/gpl-2.0.html<br />
 
 == Changelog ==
+
+= 6.3.1.0 =
+
+Theme updated 03/04/17
+
+* Updated to the latest version of Foundation 6.3.1 - Please look here [https://github.com/zurb/foundation-sites/releases] (https://github.com/zurb/foundation-sites/releases) for a list of changes.
 
 = 6.3.0.2 =
 
@@ -19,7 +25,7 @@ Theme updated 03/02/17
 
 Theme updated 02/27/17
 
-* Corrected an issue in the 'theme-dashboard.php' file. Seems I added the version code in the wrong area.
+* Corrected an issue in the `theme-dashboard.php` file. Seems I added the version code in the wrong area.
 
 = 6.3.0 =
 
@@ -27,7 +33,7 @@ Theme updated 02/27/17
 
 * Updated to Foundation version 6.3.0
 * Updated Font-Awesome to 4.7
-* Removed ap.js - moved the actual call for foundation to theme-functions.js - now there is only one file.
+* Removed `ap.js` - moved the actual call for foundation to `theme-functions.js` - now there is only one file.
 * Added 'what-input.js' and 'foundation.js' to the 'wpforge_theme_functions' of functions.php - this makes the scripts load closer to the closing body tag as they were meant to be.
 * Moved to one off-canvas file for the theme. There is no need to have two of the same files being called by two different fuinctions, when one file and one function will do.
 * Moved Use Off-Canvas for Mobile? to Top-Bar Settings section.
