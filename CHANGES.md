@@ -8,6 +8,17 @@ License URI: [http://www.gnu.org/licenses/gpl-2.0.html] http://www.gnu.org/licen
 
 == Changelog ==
 
+= 6.3.1.1 =
+
+Theme updated 03/16/17
+
+* Moved all css related to customizer options into `customizer.css`.
+* Reconfigured the inline css of the customizer. The only time an inline style will appear is when a change is made via the customizer and only the css for the elelment that was changed will be displayed inline.
+* Corrected an issue where the links in top-bar were not displaying to the right if `links to the right` was selected for `Top of Browser - Scroll` and `Top of Browser - Fixed`. See https://wordpress.org/support/topic/odd-off-canvas-behaviour-after-update/#post-8910039
+* Removed the second `top-bar-left` div that held the `top-bar-title` from the `top-bar` and replaced with actual `top-bar-title` div. See https://wordpress.org/support/topic/odd-off-canvas-behaviour-after-update/#post-8910039
+* Removed `Welcome to` from `theme-dashboard.php` - This is a little redundant as the user knows the name of the theme they have chosen to use.
+* Changed the name of the first tab in the `theme-dashboard.php` file to `Getting Started` - I believe this provides a better description of this area as the name of the theme is displayed clearly above.
+
 = 6.3.1.0 =
 
 Theme updated 03/04/17
