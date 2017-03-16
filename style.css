@@ -4,7 +4,7 @@ Theme URI: https://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome
 Author URI: https://themeawesome.com/
 Description: A WordPress theme built using Foundation for Sites (Foundation 6.3.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.3.1.0
+Version: 6.3.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
@@ -51,17 +51,13 @@ sup {
 	top: -0.5em;}
 sub {
 	bottom: -0.25em;}
+small {
+	font-size: smaller;}
 img {
 	border: 0;
 	-ms-interpolation-mode: bicubic;}
 blockquote cite {
 	margin-top: 1rem;}
- button, 
- input, 
- optgroup, 
- select, 
- textarea {
- 	font-family: 'Open Sans', sans-serif;}
 .sticky {/* Style not used but left in case you want to style the sticky in some way - use fixed instead see below */}
 
 /**
@@ -1130,6 +1126,10 @@ span.canvas-title, span.tbar-title {
 	line-height: 1.7;}
 .top-bar {
 	padding: 0;}
+.top-bar-title {
+	color: #ffffff;
+    padding: 0.7rem 1rem;
+    line-height: 1.7;}
 .off-canvas .close-button, 
 .off-canvas .close-button.medium,
 .off-canvas-absolute .close-button, 
@@ -1145,7 +1145,6 @@ span.canvas-title, span.tbar-title {
 .off-canvas .menu.nested,
 .off-canvas-absolute .menu.nested {
 	margin-left: 0;}
-
 #footer .menu > .current-menu-parent,
 #footer .menu > .current-page-parent,
 #footer .menu > .current-page-ancestor,
@@ -1162,7 +1161,7 @@ span.canvas-title, span.tbar-title {
 #secondary .menu .current-page-parent li, 
 #secondary .menu .current-page-ancestor li, 
 #secondary .menu .current_page_item li,
-#secondary-sidebaR .menu .current-menu-parent li, 
+#secondary-sidebar .menu .current-menu-parent li, 
 #secondary-sidebar .menu .current-page-parent li, 
 #secondary-sidebar .menu .current-page-ancestor li, 
 #secondary-sidebar .menu .current_page_item li{

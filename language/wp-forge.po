@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 6.3.1.0\n"
+"Project-Id-Version: WP-Forge 6.3.1.1\n"
 "POT-Creation-Date: 2017-03-04 15:51-0700\n"
 "PO-Revision-Date: 2017-03-04 15:50-0700\n"
 "Last-Translator: Thomas E. Vasquez <tsquez@gmail.com>\n"
@@ -2117,7 +2117,7 @@ msgstr ""
 #: inc/theme-dashboard.php:325
 msgid ""
 "A one page WordPress theme built with Foundation for Sites (Foundation "
-"6.3.1.0) from Zurb. Built specifically with the LearnDash LMS plugin in "
+"6.3.1.1) from Zurb. Built specifically with the LearnDash LMS plugin in "
 "mind. If creating an educational site is not your goal, you can still use WP-"
 "Edify to create any kind of site you desire. Simple and easy! Keep in mind "
 "the demo is not complete."

@@ -1,8 +1,7 @@
 <?php
 /**
  * The template for displaying the Top-Bar menu and its different positions.
- * @since WP-Forge 5.5.1.7
- * @version 6.3.1.0
+ * @version 6.3.1.1
  */
 ?>
 <div class="nav_container">
@@ -35,21 +34,15 @@
     </div><!-- end title-bar -->
     <div class="top-bar" id="main-menu">
       <?php if( get_theme_mod( 'wpforge_title_area','yes' ) == 'yes') { ?>
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text name">
-            <?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></a>
-          </li><!-- end menu-text -->
-        </ul>
-      </div><!-- end top-bar-left -->
+      <div class="top-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div><!-- end top-bar-title -->
       <?php } // end if ?>
-        <?php if( get_theme_mod( 'wpforge_link_position','left') == 'left') { ?>
-        <div class="top-bar-left">
-        <?php } else { ?>
-        <div class="top-bar-right">
-        <?php } // end if ?>
+      <?php if( get_theme_mod( 'wpforge_link_position') == 'right') { ?>
+      <div class="top-bar-right">
+      <?php } else { ?>
+      <div class="top-bar-left">
+      <?php } // end if ?>
         <?php wpforge_top_nav(); ?>
-      </div><!-- second end top-bar -->
+      </div><!-- end top-bar-left/right -->
     </div><!-- end top-bar -->
   <?php } // end if ?>
 
@@ -65,21 +58,15 @@
         </div><!-- end title-bar -->
         <div class="top-bar" id="main-menu">
           <?php if( get_theme_mod( 'wpforge_title_area','yes' ) == 'yes') { ?>
-          <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-              <li class="menu-text name">
-                <?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></a>
-              </li><!-- end menu-text -->
-            </ul>
-          </div><!-- end top-bar-left -->
+          <div class="top-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div><!-- end top-bar-title -->
           <?php } // end if ?>
-            <?php if( get_theme_mod( 'wpforge_link_position','left') == 'left') { ?>
-            <div class="top-bar-left">
-            <?php } else { ?>
-            <div class="top-bar-right">
-            <?php } // end if ?>
+          <?php if( get_theme_mod( 'wpforge_link_position') == 'right') { ?>
+          <div class="top-bar-right">
+          <?php } else { ?>
+          <div class="top-bar-left">
+          <?php } // end if ?>
             <?php wpforge_top_nav(); ?>
-          </div><!-- second end top-bar -->
+          </div><!-- end top-bar-left/right -->
         </div><!-- end top-bar -->
       </div><!-- data-sticky -->
     </div><!-- end data-sticky-container -->

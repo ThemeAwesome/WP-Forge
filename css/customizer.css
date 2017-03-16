@@ -1,0 +1,449 @@
+/**
+ * Theme Customizer Defaults - The following elements are customizable via the theme customizer. When a change is made 
+ * to one of the avaiable options in the customizer, the corresponding css below will be overwritten and applied
+ * inline in the header.
+ * @version 6.3.1.1
+ */
+.header_wrap{
+	max-width:75rem;
+	background-color:#ffffff;}
+.site-title{
+	font-size:3rem;}
+.site-title a{
+	color:#444444;}
+.site-title a:hover{
+	color:#0078a0;}
+.site-description{
+	color:#444444;
+	font-size:1.6875rem;}
+.nav_wrap{
+	max-width:75rem;
+	background-color:#333333;}
+.contain-to-grid .top-bar{
+	max-width:75rem;}
+.contain-to-grid .top-bar,
+.top-bar,
+.top-bar ul,
+.top-bar ul li,
+.contain-to-grid,
+.top-bar.title-bar,
+.title-bar {
+	background-color:#333333;}
+.top-bar{
+	font-size:0.825rem;}
+.dropdown.menu .is-dropdown-submenu-parent a::after{
+	margin-top:-0.3125rem;}
+.top-bar-right .menu > li.name:hover,
+.top-bar .menu > li:not(.menu-text) > a:hover,
+.top-bar .menu > .active:hover{
+	background-color:#242424;}
+.top-bar .name a,
+.top-bar ul li a,
+.menu .active > a{
+	color:#ffffff;}
+.top-bar .name a:hover,
+.top-bar ul li a:hover,.menu .active > a:hover{
+	color:#ffffff!important;}
+.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after{
+	border-color:#ffffff transparent transparent;}
+.is-drilldown-submenu-parent > a::after{
+	border-color: transparent transparent transparent #ffffff;}
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after{
+	border-color:transparent transparent transparent #ffffff;}
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-left > a::after{
+	border-color: transparent #ffffff transparent transparent;}
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after{
+	border-color: transparent transparent transparent #ffffff;}
+.is-dropdown-submenu{
+	border:1px solid #333333;}
+.js-drilldown-back > a::before{
+	border-color:transparent #ffffff transparent transparent;}
+.title-bar button,
+span.tbar-title{
+	color:#e6e6e6;}
+.title-bar button:hover,span.tbar-title:hover{
+	color:#ffffff;}
+.off-canvas-content .title-bar-left button,
+.off-canvas-content .title-bar-right button,
+.off-canvas-content span.canvas-title{
+	color:#ffffff;}
+.off-canvas-content .title-bar-left button:hover,
+.off-canvas-content .title-bar-right button:hover,
+.off-canvas-content span.canvas-title:hover{
+	color:#e6e6e6;}
+.off-canvas-content span.canvas-title{
+	font-size:1rem;}
+.off-canvas,
+.off-canvas .is-drilldown-submenu,
+.off-canvas-absolute .is-drilldown-submenu,
+.off-canvas-absolute,
+.off-canvas-absolute .is-drilldown-submenu,
+.off-canvas-content .title-bar{
+	background-color:#333333;}
+.off-canvas, 
+.off-canvas-absolute{
+	font-size:1rem;}
+.off-canvas .menu > li:not(.menu-text) > a, 
+.off-canvas-absolute .menu > li:not(.menu-text) > a {
+	color:#ffffff;}
+.off-canvas .menu > li:not(.menu-text) > a:hover,
+.off-canvas .menu > .active a:hover,
+.off-canvas-absolute .menu > li:not(.menu-text) > a:hover,
+.off-canvas-absolute .menu > .active a:hover{
+	color:#e6e6e6;
+	background-color:#242424;}
+.off-canvas .is-drilldown-submenu-parent > a::after,
+.off-canvas-absolute .is-drilldown-submenu-parent > a::after{
+	border-color: transparent transparent transparent #ffffff;}
+.off-canvas .js-drilldown-back > a::before,
+.off-canvas-absolute .js-drilldown-back > a::before{
+	border-color:transparent #ffffff transparent transparent;}
+.off-canvas .menu .current-menu-parent,
+.off-canvas .menu .current-page-parent,
+.off-canvas .menu .current-page-ancestor,
+.off-canvas .menu .current_page_item,
+.off-canvas-absolute .menu .current-menu-parent,
+.off-canvas-absolute .menu .current-page-parent,
+.off-canvas-absolute .menu .current-page-ancestor,
+.off-canvas-absolute .menu .current_page_item{
+	background-color:#242424;}
+.off-canvas .menu > .current_page_item > a,
+.off-canvas-absolute .menu > .current_page_item > a{
+	color:#ffffff!important;}
+.off-canvas .menu > .current_page_item > a:hover,
+.off-canvas-absolute .menu > .current_page_item > a:hover{
+	color:#ffffff!important;}
+.menu .current-menu-parent,
+.menu .current-page-parent,
+.menu .current-page-ancestor,
+.menu .current_page_item {
+	background-color:#242424;}
+.menu > .current_page_item > a{
+	color:#ffffff;}
+.menu > .current_page_item > a:hover{
+	color:#ffffff!important;}
+.content_wrap{
+	max-width:75rem;
+	background-color:#ffffff;}
+span.categories-links a{
+	color:#008cba;}
+span.categories-links a:hover{
+	color:#0078a0;}
+h1.entry-title-post{
+	color:#444444;
+	font-size:3rem;}
+h1.entry-title-post a{
+	color:#008cba;}
+h1.entry-title-post a:hover{
+	color:#0078a0;}
+.entry-meta-header a{
+	color:#008cba;}
+.entry-meta-header a:hover{
+	color:#0078a0;}
+span.tags-links a{
+	color:#008cba;}
+span.tags-links a:hover{
+	color:#0078a0;}
+.entry-meta-categories{
+	font-size:0.75rem;}
+.entry-meta-header,
+span.edit-link a{
+	font-size:0.75rem;}
+.entry-meta-header .genericon,
+.entry-meta-categories .genericon,
+span.edit-link .genericon{
+	font-size:1rem;}
+.entry-meta-tags{
+	font-size:0.75rem;}
+.entry-meta-tags .genericon{
+	font-size:1rem;}
+.entry-meta-categories_bottom{
+	font-size:0.75rem;}
+.entry-meta-categories_bottom .genericon{
+	font-size:1rem;}
+.entry-content-post p,
+.entry-content-post ul li,
+.entry-content-post ol li,
+.entry-content-post table,
+.comment-content table,
+.entry-content-post address,
+.comment-content address,
+.entry-content-post pre,
+.comment-content pre,
+.comments-area article header cite,#comments,
+.entry-content-post dl,
+.entry-content-post dt{
+	color:#444444;
+	font-size:1rem;}
+.entry-content-post a{
+	color:#008CBA;
+	font-weight:normal;
+	text-decoration:none;}
+.entry-content-post a:hover{
+	color:#0078a0;
+	text-decoration:underline;}
+.entry-content-post h1{
+	color:#444444;
+	font-size:3rem;}
+.entry-content-post h2{
+	color:#444444;
+	font-size:2.5rem;}
+.entry-content-post h3{
+	color:#444444;
+	font-size:1.9375rem;}
+.entry-content-post h4{
+	color:#444444;
+	font-size:1.5625rem;}
+.entry-content-post h5{
+	color:#444444;
+	font-size:1.25rem;}
+.entry-content-post h6{
+	color:#444444;
+	font-size:1rem;}
+h1.entry-title-page{
+	color:#444444;
+	font-size:3rem;}
+.entry-content-page p,
+.entry-content-page ul li,
+.entry-content-page ol li,
+.entry-content-page table,
+.entry-content-page table th,
+.entry-content-page .comment-content table,
+.entry-content-page address,
+.entry-content-page .comment-content address,
+.entry-content-page pre,
+.entry-content-page .comment-content pre,
+.comments-area article header cite,
+.entry-content-page #comments,
+.entry-content-page dl,
+.entry-content-page dt{
+	color:#444444;
+	font-size:1rem;}
+.entry-content-page a{
+	color:#008cba;
+	font-weight:normal;
+	text-decoration:none;}
+.entry-content-page a:hover{
+	color:#0078a0;
+	text-decoration:underline;}
+.entry-content-page h1{
+	color:#444444;
+	font-size:3rem;}
+.entry-content-page h2{
+	color:#444444;
+	font-size:2.5rem;}
+.entry-content-page h3{
+	color:#444444;
+	font-size:1.9375rem;}
+.entry-content-page h4{
+	color:#444444;
+	font-size:1.5625rem;}
+.entry-content-page h5{
+	color:#444444;
+	font-size:1.25rem;}
+.entry-content-page h6{
+	color:#444444;
+	font-size:1rem;}
+#content ul.pagination .current a,
+#content ul.pagination li.current button,
+#content ul.pagination li.current a:hover,
+#content ul.pagination li.current a:focus,
+#content ul.pagination li.current button:hover,
+#content ul.pagination li.current button:focus,
+#content .page-links a{
+	background-color:#008CBA;
+	color:#ffffff;}
+#content ul.pagination li a,
+#content ul.pagination li button{
+	color:#999999;}
+#content ul.pagination li:hover a,
+#content ul.pagination li a:focus,
+#content ul.pagination li:hover button,
+#content ul.pagination li button:focus{
+	color:#999999;
+	background-color:#e6e6e6;}
+#secondary-sidebar{
+	max-width:75rem;
+	background-color:#ffffff;}
+#content.columns{
+	float:left;}
+.widget-title{
+	color:#444444;
+	font-size:0.875rem;
+	font-weight:normal;
+	text-transform:uppercase;}
+#secondary p,
+#secondary li,
+#secondary .widget.widget_text{
+	color:#444444;
+	font-size:0.875rem;}
+#secondary a{
+	color:#008CBA;
+	text-decoration:none;
+	font-weight:normal;}
+#secondary a:hover{
+	color:#0078a0!important;
+	text-decoration:underline;}
+footer[role="contentinfo"]{
+	max-width:75rem;
+	background-color:#ffffff;}
+#secondary-sidebar .widget-title{
+	color:#444444;
+	font-size:0.875rem;
+	font-weight:normal;
+	text-transform:uppercase;}
+#secondary-sidebar p,
+#secondary-sidebar li,
+#secondary-sidebar .widget.widget_text{
+	color:#444444;
+	font-size:0.875rem;}
+#secondary-sidebar a{
+	color:#008CBA;
+	font-weight:normal;
+	text-decoration:none;}
+#secondary-sidebar a:hover{
+	color:#0078a0;
+	text-decoration:underline;}
+footer[role="contentinfo"] p,
+footer[role="contentinfo"]{
+	color:#444444;}
+footer[role="contentinfo"] a,
+#footer .menu > .current_page_item > a{
+	color:#008CBA;}
+footer[role="contentinfo"] a:hover,
+#footer .menu > .current_page_item > a:hover{
+	color:#0078a0!important;}
+.footer_wrap p,
+.footer_wrap a{
+	font-size:1rem;}
+a.button,
+.button{
+	background-color:#008cba;
+	color:#ffffff;
+	font-weight:normal;}
+a.button:hover,
+a.button:focus,
+.button:hover,
+.button:focus{
+	background-color:#007095;
+	color:#ffffff;}
+a.button.secondary{
+	background-color:#777777;
+	color:#ffffff;
+	font-weight:normal;}
+a.button.secondary:hover,
+a.button.secondary:focus{
+	background-color:#5f5f5f;
+	color:#ffffff;}
+a.button.success{
+	background-color:#3adb76;
+	color:#ffffff;
+	font-weight:normal;}
+a.button.success:hover,
+a.button.success:focus{
+	background-color:#22bb5b;
+	color:#ffffff;}
+a.button.warning{
+	background-color:#ffae00;
+	color:#ffffff;
+	font-weight:normal;}
+a.button.warning:hover,
+a.button.warning:focus{
+	background-color:#cc8b00;
+	color:#ffffff;}
+a.button.alert{
+	background-color:#ec5840;
+	color:#ffffff;
+	font-weight:normal;}
+a.button.alert:hover,
+a.button.alert:focus{
+	background-color:#da3116;
+	color:#ffffff;}
+a.button.info{
+	background-color:#a0d3e8;
+	color:#333333;
+	font-weight:normal;}
+a.button.info:hover,
+a.button.info:focus{
+	background-color:#61b6d9;
+	color:#ffffff;}
+.button,
+.button:hover,
+.button:focus,
+a.button,
+a.button:hover,
+a.button:focus,
+a.button.secondary,
+a.button.secondary:hover,
+a.button.secondary:focus,
+a.button.success,
+a.button.success:hover,
+a.button.success:focus,
+a.button.warning,
+a.button.warning:hover,
+a.button.warning:focus,
+a.button.alert,
+a.button.alert:hover,
+a.button.alert:focus,
+a.button.info,
+a.button.info:hover,
+a.button.info:focus {
+	text-decoration: none;}
+#backtotop{
+	background-color:#333333;
+	color:#ffffff;}
+#backtotop:hover,
+#backtotop:focus{
+	background-color:#242424;}
+.social-navigation a[href$="/feed/"]:before,
+.social-navigation a[href*="codepen.io"]:before,
+.social-navigation a[href*="digg.com"]:before,
+.social-navigation a[href*="dribbble.com"]:before,
+.social-navigation a[href*="dropbox.com"]:before,
+.social-navigation a[href*="facebook.com"]:before,
+.social-navigation a[href*="foursquare.com"]:before,
+.social-navigation a[href*="google.com"]:before,
+.social-navigation a[href*="github.com"]:before,
+.social-navigation a[href*="instagram.com"]:before,
+.social-navigation a[href*="linkedin.com"]:before,
+.social-navigation a[href*="pinterest.com"]:before,
+.social-navigation a[href*="getpocket.com"]:before,
+.social-navigation a[href*="polldaddy.com"]:before,
+.social-navigation a[href*="reddit.com"]:before,
+.social-navigation a[href*="stumbleupon.com"]:before,
+.social-navigation a[href*="tumblr.com"]:before,
+.social-navigation a[href*="twitter.com"]:before,
+.social-navigation a[href*="vimeo.com"]:before,
+.social-navigation a[href*="wordpress.com"]:before,
+.social-navigation a[href*="wordpress.org"]:before,
+.social-navigation a[href*="youtube.com"]:before,
+.social-navigation a[href*="mailto:"]:before,
+.social-navigation a[href*="spotify.com"]:before,
+.social-navigation a[href*="twitch.tv"]:before{
+	color:#444444;}
+.social-navigation a:hover[href$="/feed/"]:before,
+.social-navigation a:hover[href*="codepen.io"]:before,
+.social-navigation a:hover[href*="digg.com"]:before,
+.social-navigation a:hover[href*="dribbble.com"]:before,
+.social-navigation a:hover[href*="dropbox.com"]:before,
+.social-navigation a:hover[href*="facebook.com"]:before,
+.social-navigation a:hover[href*="foursquare.com"]:before,
+.social-navigation a:hover[href*="google.com"]:before,
+.social-navigation a:hover[href*="github.com"]:before,
+.social-navigation a:hover[href*="instagram.com"]:before,
+.social-navigation a:hover[href*="linkedin.com"]:before,
+.social-navigation a:hover[href*="pinterest.com"]:before,
+.social-navigation a:hover[href*="getpocket.com"]:before,
+.social-navigation a:hover[href*="polldaddy.com"]:before,
+.social-navigation a:hover[href*="reddit.com"]:before,
+.social-navigation a:hover[href*="stumbleupon.com"]:before,
+.social-navigation a:hover[href*="tumblr.com"]:before,
+.social-navigation a:hover[href*="twitter.com"]:before,
+.social-navigation a:hover[href*="vimeo.com"]:before,
+.social-navigation a:hover[href*="wordpress.com"]:before,
+.social-navigation a:hover[href*="wordpress.org"]:before,
+.social-navigation a:hover[href*="youtube.com"]:before,
+.social-navigation a:hover[href*="mailto:"]:before,
+.social-navigation a:hover[href*="spotify.com"]:before,
+.social-navigation a:hover[href*="twitch.tv"]:before{
+	color:#0078a0;}

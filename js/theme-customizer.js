@@ -1,7 +1,6 @@
 /**
  * Theme Customizer enhancements for a better user experience.
- * @since WP-Forge 5.5.1.7
- * @version 6.3.1.0
+ * @version 6.3.1.1
  */
 
 ( function( $ ) {
@@ -277,6 +276,17 @@
 	wp.customize('off_canvas_current_item_link_hover_color',function( value ) {
 	    value.bind(function(to) {
 	        $('.off-canvas .menu > .current_page_item > a:hover,.off-canvas-absolute .menu > .current_page_item > a:hover').css('color', to ? to : '' );
+	    });
+	});
+
+///////////////////////////////////
+// Content Position Options
+///////////////////////////////////
+
+	// Content Position
+	wp.customize('wpforge_content_position',function( value ) {
+	    value.bind(function(to) {
+	        $('#content.columns').css('float', to ? to : '' );
 	    });
 	});
 

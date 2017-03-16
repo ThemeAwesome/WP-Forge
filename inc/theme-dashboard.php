@@ -1,7 +1,8 @@
 <?php
 /**
- * @version 6.3.1.0
- */
+* The template for displaying the theme information page under Appearance
+* @version 6.3.1.1
+*/
 // Load CSS
 if ( ! function_exists( 'wpforge_load_admin_scripts' ) ) {
     function wpforge_load_admin_scripts() {
@@ -47,7 +48,7 @@ function wpforge_theme_info_page() {
 }
 ?>
     <div class="wrap about-wrap theme_info_wrapper">
-        <h1><?php printf( esc_html__('Welcome to WP-Forge - Version %1s', 'wp-forge'), $theme_data->Version ); ?></h1>
+        <h1><?php printf( esc_html__('%s %1s', 'wp-forge'), $theme_data->Name, $theme_data->Version ); ?></h1>
         <div class="about-text">
             <?php esc_html_e( 'A WordPress theme built with Foundation for Sites (6.3.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again!', 'wp-forge' ); ?>
         </div><!-- end about-text -->
@@ -56,7 +57,7 @@ function wpforge_theme_info_page() {
 
         <h2 class="nav-tab-wrapper">
 
-            <a href="?page=wpforge" class="nav-tab<?php echo is_null($tab) ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'WP-Forge', 'wp-forge' ) ?></a>
+            <a href="?page=wpforge" class="nav-tab<?php echo is_null($tab) ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'Getting Started', 'wp-forge' ) ?></a>
 
             <a href="?page=wpforge&tab=changelog" class="nav-tab<?php echo $tab == 'changelog' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'Changelog', 'wp-forge' ); ?></a>
 
@@ -110,15 +111,19 @@ function wpforge_theme_info_page() {
          <?php if ( $tab == 'changelog' ) { ?>
                 <div class="row">
                     <div class="changelog small-12 large-12 columns">
-                        <p>Theme Name: <b>WP-Forge</b><br />
-                        Tags: <b>light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready</b><br />
-                        Requires at least: <b>4.7.2</b><br />
-                        Tested up to: <b>4.8-alpha-40147</b><br />
-                        Stable tag: <b>6.3.1.0</b><br />
-                        License: <b>GPLv2 or later</b><br />
-                        License URI: <a href="<?php echo esc_url('http://www.gnu.org/licenses/gpl-2.0.html' ); ?>" target="_blank">http://www.gnu.org/licenses/gpl-2.0.html</a></p>
 
-                        <h4>6.3.1.0</h4>
+                        <h4>6.3.1.1</h4>
+
+                        <small>Theme updated 03/04/17</small>
+                        <ul>
+                            <li>Moved all css related to customizer options (the inline css that appeared in the heade portion of the theme) into <code>customizer.css</code>.</li>
+                            <li>Reconfigured the inline css of the customizer. The only time an inline style will appear is when a change is made via the customizer and only the css for the elelment that was changed will be displayed inline.</li>
+                            <li>Corrected an issue where the links in top-bar were not displaying to the right if <code>links to the right</code> was selected for <code>Top of Browser - Scroll</code> and <code>Top of Browser - Fixed</code>. See <a href="<?php echo esc_url('https://wordpress.org/support/topic/odd-off-canvas-behaviour-after-update/#post-8910039' ); ?>" target="_blank">https://wordpress.org/support/topic/odd-off-canvas-behaviour-after-update/#post-8910039</a></li>
+                            <li>Removed the second <code>top-bar-left</code> div that held the <code>top-bar-title</code> from the <code>top-bar</code> and replaced with actual <code>top-bar-title</code> div. See <a href="<?php echo esc_url('https://wordpress.org/support/topic/odd-off-canvas-behaviour-after-update/#post-8910039' ); ?>" target="_blank">https://wordpress.org/support/topic/odd-off-canvas-behaviour-after-update/#post-8910039</a></li>
+                            <li>Changed the name of the first tab in the <code>theme-dashboard.php</code> file to <code>Getting Started</code> - I believe this provides a better description of this area as the name of the theme is displayed clearly above.</li>
+                        </ul>
+
+                        <h4>6.3.1</h4>
                         <small>Theme updated 03/04/17</small>
                         <ul>
                             <li>Updated to the latest version of Foundation 6.3.1 - Please look here <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/releases/tag/6.3.1' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/releases/tag/6.3.1</a> for a list of changes.</li>
@@ -140,14 +145,14 @@ function wpforge_theme_info_page() {
                         <h4>6.3.0</h4>
                         <small>Theme updated 02/27/17</small>
                         <ul>
-                            <li>Updated to Foundation version 6.3.1.0</li>
+                            <li>Updated to Foundation version 6.3.1.1</li>
                             <li>Updated Font-Awesome to 4.7</li>
                             <li>Removed <code>ap.js</code> - moved the actual call for foundation to theme-functions.js - now there is only one file.</li>
                             <li>Added <code>what-input.js</code> and <code>foundation.js</code> to the <code>wpforge_theme_functions</code> of functions.php - this makes the scripts load closer to the closing body tag as they were meant to be.</li>
                             <li>Moved to one off-canvas file for the theme by removing <code>off-canvas-mobile.php</code>. There is no need to have two of the same files being called by two different fuinctions, when one file and one function will do.</li>
                             <li>Moved Use <code>Off-Canvas for Mobile?</code> to <code>Top-Bar Settings section.</code></li>
                             <li>Added options for off-canvas that will appear when <code>Use Off-Canvas for Mobile?</code> is set to <code>Yes</code> in <code>Top-Bar Settings</code>. These settings only affect mobile Off-Canvas (the off-canvas menu used in conjunction with the top-bar)</li>
-                            <li>Switched <code>data-accordion</code> to <code>data-drilldown</code> in off-canvas. <code>data-accordion</code> still does not work as of 6.3.1.0 and is slated to be possibly added to next major release, 6.4. See this thread <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/pull/9348' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/pull/9348</a> - For now <code>data-drilldown</code> will remain in place until the <code>data-accordion</code> is corrected and functions properly. Thanks to @cbirdsong for asking how this is done, which promted the switch: See <a href="<?php echo esc_url('https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/' ); ?>" target="_blank">https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/</a></li>
+                            <li>Switched <code>data-accordion</code> to <code>data-drilldown</code> in off-canvas. <code>data-accordion</code> still does not work as of 6.3.1.1 and is slated to be possibly added to next major release, 6.4. See this thread <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/pull/9348' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/pull/9348</a> - For now <code>data-drilldown</code> will remain in place until the <code>data-accordion</code> is corrected and functions properly. Thanks to @cbirdsong for asking how this is done, which promted the switch: See <a href="<?php echo esc_url('https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/' ); ?>" target="_blank">https://wordpress.org/support/topic/parent-links-of-off-canvas-mobile-menu-not-working/</a></li>
                             <li>Updated <code>off-canvas</code> menu to the latest version. Unfortunately, only two Off-Canvas Directions are available: <code>position-left</code> and <code>position-right</code>. The other positions, <code>position-top</code> and <code>position-bottom</code>, are slated for possible inclusion in the next update, keep in mind I make no guarantee that they will. The reason they were not added in this update is due to the fact that currently the menu does not look proper if top or bottom is used.</li>
                             <li>Added the abilty for the user to set the Off-Canvas Transitions to <code>push</code> or <code>overlap</code>.</li>
                             <li>Removed Foundation <code>active</code> class from menus. Switched to <code>current-menu-item</code>, which is already built into WP core. In my opinion this is a much better option and is easier to style. Thanks @OttoPotto for bringing up this request which gave me the idea to switch. See this thread <a href="<?php echo esc_url('https://github.com/tsquez/wp-forge/issues/50' ); ?>" target="_blank">https://github.com/tsquez/wp-forge/issues/50</a></li>
@@ -270,7 +275,7 @@ function wpforge_theme_info_page() {
                             <li>Added fonts.css to editor. Previously only genericons.css was added. Since this was combined into fonts.css with font-awesome, fonts.css was added. Now genericons and font-awesome are available via the editor.</li>
                             <li>Updated Font-Awesome to latest version, 4.5. font-awesome.min.css was added to fonts.css, the full version of Font-Awesome is located in /fonts/full (per WordPress guidelines).</li>
                             <li>Genericons css was minified and changed in fonts.css - full version of genericon.css is available in /fonts/full (per WordPress guidelines).</li>
-                            <li>Added Motion-UI <a href="<?php echo esc_url('ttps://github.com/zurb/motion-ui'); ?>" target="_blank">https://github.com/zurb/motion-ui</a></li>
+                            <li>Added Motion-UI <a href="<?php echo esc_url('https://github.com/zurb/motion-ui'); ?>" target="_blank">https://github.com/zurb/motion-ui</a></li>
                             <li>Renamed load-foundation.js to app.js.</li>
                             <li>Removed normalize.css as it is now part of foundation.css.</li>
                             <li>Increased thumbnail size to 800px and full width thumbnail to 1200px.</li>
@@ -322,7 +327,7 @@ function wpforge_theme_info_page() {
 
                         <div class="theme_link">
                             <h2><?php esc_html_e( 'WP-Edify', 'wp-forge' ); ?></h2>
-                            <p class="about"><?php printf(esc_html__('A one page WordPress theme built with Foundation for Sites (Foundation 6.3.1.0) from Zurb. Built specifically with the LearnDash LMS plugin in mind. If creating an educational site is not your goal, you can still use WP-Edify to create any kind of site you desire. Simple and easy! Keep in mind the demo is not complete.', 'wp-forge'), $theme_data->Name); ?></p>
+                            <p class="about"><?php printf(esc_html__('A one page WordPress theme built with Foundation for Sites (Foundation 6.3.1.1) from Zurb. Built specifically with the LearnDash LMS plugin in mind. If creating an educational site is not your goal, you can still use WP-Edify to create any kind of site you desire. Simple and easy! Keep in mind the demo is not complete.', 'wp-forge'), $theme_data->Name); ?></p>
                             <p>
                                 <a href="<?php echo esc_url('https://themeawesome.com/wp-edify/'); ?>" class="button button-primary" target="_blank"><?php esc_html_e('Get Notified', 'wp-forge'); ?></a>
                                 <a href="<?php echo esc_url('https://themeawesome.com/themes/wp-edify'); ?>" class="button button-secondary" target="_blank">

@@ -1,16 +1,9 @@
 <?php
 /**
  * Template Name: Sitemap Template
- *
- * Description: Use this page template to add a sitemap page to your site.
- *
- *
- * @package WordPress
- * @subpackage WP_Forge
  * @since WP-Forge 6.2.3
- * @version 6.3.1.0
+ * @version 6.3.1.1
  */
-
 get_header(); ?>
 
 	<div id="content" class="small-12 large-12 columns" role="main">

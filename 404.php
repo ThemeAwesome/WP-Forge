@@ -1,8 +1,7 @@
 <?php
 /**
  * The template for displaying 404 pages (Not Found).
- * @since WP-Forge 5.5.1.7
- * @version 6.3.1.0
+ * @version 6.3.1.1
  */
 get_header(); ?>
 		<div id="content" class="small-12 large-12 columns" role="main">
