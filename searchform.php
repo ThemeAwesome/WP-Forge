@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the search form.
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 ?>
 <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">

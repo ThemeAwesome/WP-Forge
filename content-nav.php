@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the Top-Bar menu and its different positions.
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 ?>
 <div class="nav_container">
@@ -14,7 +14,8 @@
       <div class="nav_wrap row">
       <?php } // end if ?>
         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-          <button type="button" data-toggle><span class="genericon genericon-menu"> <span class="tbar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></span></span></button>
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
         </div><!-- end title-bar -->
         <div class="top-bar" id="main-menu">
           <div class="top-bar-left">
@@ -30,7 +31,8 @@
     <?php } else { ?>
     <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
     <?php } // end if ?>
-      <button type="button" data-toggle><span class="genericon genericon-menu"> <span class="tbar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></span></span></button>
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
     </div><!-- end title-bar -->
     <div class="top-bar" id="main-menu">
       <?php if( get_theme_mod( 'wpforge_title_area','yes' ) == 'yes') { ?>
@@ -54,7 +56,8 @@
       <div data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1">
     <?php } // end if ?>
         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-          <button type="button" data-toggle><span class="genericon genericon-menu"> <span class="tbar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></span></span></button>
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
         </div><!-- end title-bar -->
         <div class="top-bar" id="main-menu">
           <?php if( get_theme_mod( 'wpforge_title_area','yes' ) == 'yes') { ?>
@@ -79,7 +82,8 @@
     <div class="nav_wrap row">
     <?php } // end if ?>
       <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-        <button type="button" data-toggle><span class="genericon genericon-menu"> <span class="tbar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></span></span></button>
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
       </div><!-- end title-bar -->
       <div class="contain-to-grid">
         <div class="top-bar" id="main-menu">

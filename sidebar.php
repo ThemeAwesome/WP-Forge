@@ -1,7 +1,7 @@
 <?php
 /**
  * The sidebar containing the main widget area.
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 ?>
 	<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>

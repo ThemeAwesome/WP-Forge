@@ -1,12 +1,29 @@
 Theme Name: **WP-Forge**<br />
 Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
-Requires at least: **4.7.2**<br />
-Tested up to: **4.8-alpha-40147**<br />
-Stable tag: **6.3.1.0**<br />
+Requires at least: **4.7.3**<br />
+Tested up to: **4.8-alpha-40387**<br />
+Stable tag: **6.3.1.2**<br />
 License: **GPLv2 or later**<br />
-License URI: [http://www.gnu.org/licenses/gpl-2.0.html] http://www.gnu.org/licenses/gpl-2.0.html<br />
+License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)<br />
 
 == Changelog ==
+
+= 6.3.1.2 =
+
+Theme updated 04/07/17
+
+* Adjusted some of the inline css of the cusomizer.
+* Corrected an issue where the customizer section pertaining to the footer was not working properly. See this thread: https://wordpress.org/support/topic/footer-length-not-setting/
+* Added customizer option to change the color of text in pages. See this thread: https://wordpress.org/support/topic/customizer-seems-broken/
+* Went through every setting in customizer. Corrected issues with the customizer where options were not working properly. Everything should be working properly now.
+* Added `Default` values to description of all the customizer options. The only options that do not have a default are the default customizer options.
+* Added new css for pricing tables. Code is smaller. See http://zurb.com/building-blocks/pricing-table-foundation-6
+* Added new css for hollow buttons. Default is that the hollow styles only work for `&lt;button&gt;` elements, which appear to only work in forms.  I added css to cover regular buttons(which are clickable and have links) that have the `hollow` class added, in effect making what are reffered to as `ghost buttons`. See https://www.sitepoint.com/rise-ghost-button/
+* Added customizer option where user can change the hover background color of the active item in off-canvas menu.
+* Added customizer option where user can change the hover background color of the active item in top-bar menu.
+* Removed the genericon from both top-bar and off-canvas menus. Switched to the default `menu-icon`.
+* Divided `customizer.css` into sections.
+* Removed the color option for `Nav Content Background Color` - this option is not relevant as the end user cannot see the nav content area. If you can't see it then there is no reason it should be there. I set the background color for `.nav_wrap` to transparent in `style.css`.
 
 = 6.3.1.1 =
 

@@ -1,9 +1,9 @@
-WP-Forge v6.3.1.1
+WP-Forge v6.3.1.2
 ====================
 
-### Last Updated March 16, 2017
+### Last Updated April 7, 2017
 
-A WordPress theme built with Foundation for Sites (Foundation 6.3.0) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
+A WordPress theme built with Foundation for Sites (Foundation 6.3.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
 
 Demo
 =============
@@ -19,10 +19,10 @@ Support
 
 ### WP-Forge was built with the following tools
 * [WordPress Theme Standards](http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
-* [WordPress Beta Tester](https://make.wordpress.org/core/handbook/testing/beta/) - So I can use the latest bleeding edge nightlies of WordPress. This ensures WP-Forge is future proof.
-* [WP-Test](http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integrity of themes and plugins. Developed by [Michael Novotny] (http://manovotny.com/)
+* [WordPress Beta Tester](https://make.wordpress.org/core/handbook/testing/beta/) - This ensures WP-Forge is future proof. It also ensures that I use the latest bleeding edge nightlies of WordPress. As of this update the latest version is 4.8-alpha-40299.
+* [WP-Test](http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integrity of themes and plugins.
 * [Debug Bar](http://wordpress.org/plugins/debug-bar/) - a debugging menu added to the admin bar that quickly shows query, cache, and other helpful debugging information.
-* [Log Depreceated Notices] (http://wordpress.org/plugins/log-deprecated-notices/) - a plugin that helps you identify old WordPress API functions a theme or plugin is currently using so you can update to the newer methods.
+* [Log Depreceated Notices](http://wordpress.org/plugins/log-deprecated-notices/) - a plugin that helps you identify old WordPress API functions a theme or plugin is currently using so you can update to the newer methods.
 * [Theme Check](http://wordpress.org/plugins/theme-check/) - a simple and easy way to test your theme for all the latest WordPress standards and practices.
 * [Monster Widget](http://wordpress.org/plugins/monster-widget/) - A widget that provides a quick and easy method of adding all core widgets to a sidebar for testing purposes.
 * [Viewport Resizer](http://lab.maltewassermann.com/viewport-resizer/) - a handy bookmarklet that will load your site in a viewport the size of common devices. This is helpful in testing responsive design.
@@ -38,7 +38,7 @@ WordPress introduced the [Theme Customizer](https://codex.wordpress.org/Theme_Cu
 WP-Forge uses the version of jQuery bundled with WordPress and it is loaded in the header. This practice falls within the [WordPress Theme Standards](http://codex.wordpress.org/Theme_Development). You can do a search and find the information you need to use Google's version and load it in the footer if you wish.
 
 ### Child Theme
-I have created a [WordPress child theme](http://themeawesome.com/wordpress-child-theme/) for WP-Forge called WP-Starter. If you prefer, you can also create your own child theme. You can learn how to do this over at the [WordPress Codex] (http://codex.wordpress.org/Child_Themes)
+I have created a [WordPress child theme](http://themeawesome.com/wordpress-child-theme/) for WP-Forge called WP-Starter. If you prefer, you can also create your own child theme. You can learn how to do this over at the [WordPress Codex](http://codex.wordpress.org/Child_Themes)
 
 ### Genericons 3.4.1
 Includes the free WordPress icon set [Genericons](https://genericons.com/) - Soon to be upgraded to **Genericons Neue**
@@ -47,10 +47,10 @@ Includes the free WordPress icon set [Genericons](https://genericons.com/) - Soo
 Includes the free icon set [Font-Awesome](http://fontawesome.io)
 
 ### Yoast SEO Plugin
-Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast] (http://wordpress.org/plugins/wordpress-seo/) plugin.
+Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast](http://wordpress.org/plugins/wordpress-seo/) plugin.
 
 ### Sites Using WP-Forge
-The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter] (https://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
+The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter](https://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
 * [HellYeah](http://hellyeahband.com/)
 * [Motley.com (Motley Crue)](http://www.motley.com/)
 * [SixxamMusic.com](http://sixxammusic.com/)
@@ -72,4 +72,4 @@ This means WP-Forge is completely free to use and modify as you see fit.
 
 ThemeAwesome.com
 =============
-[ThemeAwesome.com](https://themeawesome.com), a site focused on building WordPress themes with both the [Foundation for Sites 6.3](http://foundation.zurb.com/) framework by [Zurb] (http://zurb.com/) and the [Bootstrap](http://getbootstrap.com/) framework.
+[ThemeAwesome.com](https://themeawesome.com), a site focused on building WordPress themes with both the [Foundation for Sites 6.3](http://foundation.zurb.com/) framework by [Zurb](http://zurb.com/) and the [Bootstrap](http://getbootstrap.com/) framework.

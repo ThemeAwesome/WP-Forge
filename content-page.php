@@ -1,7 +1,7 @@
 <?php
 /**
  * The template used for displaying page content in page.php
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

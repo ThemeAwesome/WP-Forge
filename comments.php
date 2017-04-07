@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying Comments
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 
 /* If the current post is protected by a password and the visitor has not yet entered the password we will return early

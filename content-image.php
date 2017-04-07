@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying posts in the Image post format on index and archive pages.
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

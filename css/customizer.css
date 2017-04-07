@@ -2,7 +2,11 @@
  * Theme Customizer Defaults - The following elements are customizable via the theme customizer. When a change is made 
  * to one of the avaiable options in the customizer, the corresponding css below will be overwritten and applied
  * inline in the header.
- * @version 6.3.1.1
+ * @version 6.3.1.2
+ */
+
+/**
+ * Header
  */
 .header_wrap{
 	max-width:75rem;
@@ -16,88 +20,98 @@
 .site-description{
 	color:#444444;
 	font-size:1.6875rem;}
+
+/**
+ * Top-Bar Navigation
+ */
 .nav_wrap{
-	max-width:75rem;
-	background-color:#333333;}
+	max-width:75rem;}
 .contain-to-grid .top-bar{
 	max-width:75rem;}
-.contain-to-grid .top-bar,
+.top-bar{
+	font-size:0.825rem;}
 .top-bar,
+.title-bar,
 .top-bar ul,
 .top-bar ul li,
 .contain-to-grid,
-.top-bar.title-bar,
-.title-bar {
+.contain-to-grid .top-bar{
 	background-color:#333333;}
-.top-bar{
-	font-size:0.825rem;}
-.dropdown.menu .is-dropdown-submenu-parent a::after{
-	margin-top:-0.3125rem;}
-.top-bar-right .menu > li.name:hover,
-.top-bar .menu > li:not(.menu-text) > a:hover,
-.top-bar .menu > .active:hover{
-	background-color:#242424;}
-.top-bar .name a,
-.top-bar ul li a,
-.menu .active > a{
+.top-bar .menu-item a {
 	color:#ffffff;}
-.top-bar .name a:hover,
-.top-bar ul li a:hover,.menu .active > a:hover{
-	color:#ffffff!important;}
+.top-bar .menu-item a:hover{
+	color:#e6e6e6;
+	background-color:#242424;}
+.top-bar .menu .current-menu-parent,
+.top-bar .menu .current-page-parent,
+.top-bar .menu .current-page-ancestor,
+.top-bar .menu .current_page_item{
+	background-color:#242424;}
+.top-bar .menu .current-menu-parent a,
+.top-bar .menu .current-page-parent a,
+.top-bar .menu .current-page-ancestor a,
+.top-bar .menu .current_page_item a{
+	color:#ffffff;}
+.top-bar .menu .current-menu-parent a:hover,
+.top-bar .menu .current-page-parent a:hover,
+.top-bar .menu .current-page-ancestor a:hover,
+.top-bar .menu .current_page_item a:hover{
+	color:#e6e6e6;}
+.top-bar .menu .current_page_item a:hover {
+	background-color: #000000;}
 .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after{
-	border-color:#ffffff transparent transparent;}
+	border-top-color:#ffffff;
+	margin-top:-0.125rem;}
 .is-drilldown-submenu-parent > a::after{
-	border-color: transparent transparent transparent #ffffff;}
+	border-left-color: #ffffff;}
 .is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after{
-	border-color:transparent transparent transparent #ffffff;}
+	border-left-color:#ffffff;}
 .is-dropdown-submenu .is-dropdown-submenu-parent.opens-left > a::after{
-	border-color: transparent #ffffff transparent transparent;}
+	border-right-color: #ffffff;}
 .is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after{
-	border-color: transparent transparent transparent #ffffff;}
+	border-left-color: #ffffff;}
 .is-dropdown-submenu{
 	border:1px solid #333333;}
 .js-drilldown-back > a::before{
-	border-color:transparent #ffffff transparent transparent;}
-.title-bar button,
-span.tbar-title{
-	color:#e6e6e6;}
-.title-bar button:hover,span.tbar-title:hover{
-	color:#ffffff;}
-.off-canvas-content .title-bar-left button,
-.off-canvas-content .title-bar-right button,
-.off-canvas-content span.canvas-title{
-	color:#ffffff;}
-.off-canvas-content .title-bar-left button:hover,
-.off-canvas-content .title-bar-right button:hover,
-.off-canvas-content span.canvas-title:hover{
-	color:#e6e6e6;}
-.off-canvas-content span.canvas-title{
-	font-size:1rem;}
+	border-right-color:#ffffff;}
+.off-canvas-content.mbl .title-bar-title {
+	font-size: 1rem}
+.off-canvas.mbl .menu-item a,
+.off-canvas-absolute.mbl .menu-item a {
+	font-size: 1rem;}
+
+/**
+ * Off-Canvas Navigation
+ */
 .off-canvas,
 .off-canvas .is-drilldown-submenu,
-.off-canvas-absolute .is-drilldown-submenu,
 .off-canvas-absolute,
 .off-canvas-absolute .is-drilldown-submenu,
 .off-canvas-content .title-bar{
 	background-color:#333333;}
-.off-canvas, 
-.off-canvas-absolute{
+.off-canvas-content .menu-icon::after {
+	background: #ffffff;
+	box-shadow: 0 7px 0 #ffffff, 0 14px 0 #ffffff;}
+.off-canvas-content .menu-icon:hover::after {
+    background: #e6e6e6;
+    box-shadow: 0 7px 0 #e6e6e6, 0 14px 0 #e6e6e6; }
+.off-canvas-content .title-bar-title{
 	font-size:1rem;}
-.off-canvas .menu > li:not(.menu-text) > a, 
-.off-canvas-absolute .menu > li:not(.menu-text) > a {
-	color:#ffffff;}
-.off-canvas .menu > li:not(.menu-text) > a:hover,
-.off-canvas .menu > .active a:hover,
-.off-canvas-absolute .menu > li:not(.menu-text) > a:hover,
-.off-canvas-absolute .menu > .active a:hover{
+.off-canvas .menu-item a,
+.off-canvas-absolute .menu-item a {
+	color:#ffffff;
+	font-size: 1rem;}
+.off-canvas .menu-item a:hover,
+.off-canvas-absolute .menu-item a:hover{
 	color:#e6e6e6;
 	background-color:#242424;}
 .off-canvas .is-drilldown-submenu-parent > a::after,
 .off-canvas-absolute .is-drilldown-submenu-parent > a::after{
-	border-color: transparent transparent transparent #ffffff;}
+	border-left-color: #ffffff;}
 .off-canvas .js-drilldown-back > a::before,
 .off-canvas-absolute .js-drilldown-back > a::before{
-	border-color:transparent #ffffff transparent transparent;}
+	border-right-color:#ffffff;}
+.off-canvas .menu .menu-item-home,
 .off-canvas .menu .current-menu-parent,
 .off-canvas .menu .current-page-parent,
 .off-canvas .menu .current-page-ancestor,
@@ -107,21 +121,33 @@ span.tbar-title{
 .off-canvas-absolute .menu .current-page-ancestor,
 .off-canvas-absolute .menu .current_page_item{
 	background-color:#242424;}
-.off-canvas .menu > .current_page_item > a,
-.off-canvas-absolute .menu > .current_page_item > a{
-	color:#ffffff!important;}
-.off-canvas .menu > .current_page_item > a:hover,
-.off-canvas-absolute .menu > .current_page_item > a:hover{
-	color:#ffffff!important;}
-.menu .current-menu-parent,
-.menu .current-page-parent,
-.menu .current-page-ancestor,
-.menu .current_page_item {
-	background-color:#242424;}
-.menu > .current_page_item > a{
+.off-canvas .menu .menu-item-home a,
+.off-canvas .menu .current-menu-parent a,
+.off-canvas .menu .current-page-parent a,
+.off-canvas .menu .current-page-ancestor a,
+.off-canvas .menu .current_page_item a,
+.off-canvas-absolute .menu .current-menu-parent a,
+.off-canvas-absolute .menu .current-page-parent a,
+.off-canvas-absolute .menu .current-page-ancestor a,
+.off-canvas-absolute .menu .current_page_item a{
 	color:#ffffff;}
-.menu > .current_page_item > a:hover{
-	color:#ffffff!important;}
+.off-canvas .menu .menu-item-home a:hover,
+.off-canvas .menu .current-menu-parent a:hover,
+.off-canvas .menu .current-page-parent a:hover,
+.off-canvas .menu .current-page-ancestor a:hover,
+.off-canvas .menu .current_page_item a:hover,
+.off-canvas-absolute .menu .current-menu-parent a:hover,
+.off-canvas-absolute .menu .current-page-parent a:hover,
+.off-canvas-absolute .menu .current-page-ancestor a:hover,
+.off-canvas-absolute .menu .current_page_item a:hover{
+	color:#e6e6e6;}
+.off-canvas .menu .current_page_item a:hover,
+.off-canvas-absolute .menu .current_page_item a:hover {
+	background-color: #000000;}
+
+/**
+ * Post Elements
+ */
 .content_wrap{
 	max-width:75rem;
 	background-color:#ffffff;}
@@ -170,8 +196,8 @@ span.edit-link .genericon{
 .comment-content address,
 .entry-content-post pre,
 .comment-content pre,
-.comments-area article header cite,#comments,
-.entry-content-post dl,
+.comments-area article header cite,
+#comments,.entry-content-post dl,
 .entry-content-post dt{
 	color:#444444;
 	font-size:1rem;}
@@ -200,6 +226,10 @@ span.edit-link .genericon{
 .entry-content-post h6{
 	color:#444444;
 	font-size:1rem;}
+
+/**
+ * Page Elements
+ */
 h1.entry-title-page{
 	color:#444444;
 	font-size:3rem;}
@@ -244,6 +274,10 @@ h1.entry-title-page{
 .entry-content-page h6{
 	color:#444444;
 	font-size:1rem;}
+
+/**
+ * Pagination
+ */
 #content ul.pagination .current a,
 #content ul.pagination li.current button,
 #content ul.pagination li.current a:hover,
@@ -262,9 +296,10 @@ h1.entry-title-page{
 #content ul.pagination li button:focus{
 	color:#999999;
 	background-color:#e6e6e6;}
-#secondary-sidebar{
-	max-width:75rem;
-	background-color:#ffffff;}
+
+/**
+ * Main Sidebar
+ */
 #content.columns{
 	float:left;}
 .widget-title{
@@ -282,9 +317,13 @@ h1.entry-title-page{
 	text-decoration:none;
 	font-weight:normal;}
 #secondary a:hover{
-	color:#0078a0!important;
+	color:#0078a0;
 	text-decoration:underline;}
-footer[role="contentinfo"]{
+
+/**
+ * Footer Sidebar
+ */
+#secondary-sidebar{
 	max-width:75rem;
 	background-color:#ffffff;}
 #secondary-sidebar .widget-title{
@@ -304,18 +343,29 @@ footer[role="contentinfo"]{
 #secondary-sidebar a:hover{
 	color:#0078a0;
 	text-decoration:underline;}
-footer[role="contentinfo"] p,
+
+/**
+ * Footer
+ */
 footer[role="contentinfo"]{
-	color:#444444;}
+	color: #444444;
+	max-width:75rem;
+	background-color:#ffffff;}
 footer[role="contentinfo"] a,
 #footer .menu > .current_page_item > a{
 	color:#008CBA;}
 footer[role="contentinfo"] a:hover,
-#footer .menu > .current_page_item > a:hover{
-	color:#0078a0!important;}
+footer[role="contentinfo"] a:focus,
+#footer .menu > .current_page_item > a:hover,
+#footer .menu > .current_page_item > a:focus{
+	color:#0078a0;}
 .footer_wrap p,
 .footer_wrap a{
 	font-size:1rem;}
+
+/**
+ * Buttons
+ */
 a.button,
 .button{
 	background-color:#008cba;
@@ -389,18 +439,26 @@ a.button.info,
 a.button.info:hover,
 a.button.info:focus {
 	text-decoration: none;}
+
+/**
+ * Back To Top
+ */
 #backtotop{
 	background-color:#333333;
 	color:#ffffff;}
 #backtotop:hover,
 #backtotop:focus{
-	background-color:#242424;}
-.social-navigation a[href$="/feed/"]:before,
-.social-navigation a[href*="codepen.io"]:before,
+	background-color:#242424;
+	color:#ffffff;}
+
+/**
+ * Social Navigation
+ */
 .social-navigation a[href*="digg.com"]:before,
 .social-navigation a[href*="dribbble.com"]:before,
 .social-navigation a[href*="dropbox.com"]:before,
 .social-navigation a[href*="facebook.com"]:before,
+.social-navigation a[href*="flickr.com"]:before,
 .social-navigation a[href*="foursquare.com"]:before,
 .social-navigation a[href*="google.com"]:before,
 .social-navigation a[href*="github.com"]:before,
@@ -410,6 +468,7 @@ a.button.info:focus {
 .social-navigation a[href*="getpocket.com"]:before,
 .social-navigation a[href*="polldaddy.com"]:before,
 .social-navigation a[href*="reddit.com"]:before,
+.social-navigation a[href*="spotify.com"]:before,
 .social-navigation a[href*="stumbleupon.com"]:before,
 .social-navigation a[href*="tumblr.com"]:before,
 .social-navigation a[href*="twitter.com"]:before,
@@ -417,16 +476,16 @@ a.button.info:focus {
 .social-navigation a[href*="wordpress.com"]:before,
 .social-navigation a[href*="wordpress.org"]:before,
 .social-navigation a[href*="youtube.com"]:before,
+.social-navigation a[href$="/feed/"]:before,
+.social-navigation a[href*="codepen.io"]:before,
 .social-navigation a[href*="mailto:"]:before,
-.social-navigation a[href*="spotify.com"]:before,
 .social-navigation a[href*="twitch.tv"]:before{
 	color:#444444;}
-.social-navigation a:hover[href$="/feed/"]:before,
-.social-navigation a:hover[href*="codepen.io"]:before,
 .social-navigation a:hover[href*="digg.com"]:before,
 .social-navigation a:hover[href*="dribbble.com"]:before,
 .social-navigation a:hover[href*="dropbox.com"]:before,
 .social-navigation a:hover[href*="facebook.com"]:before,
+.social-navigation a:hover[href*="flicker.com"]:before,
 .social-navigation a:hover[href*="foursquare.com"]:before,
 .social-navigation a:hover[href*="google.com"]:before,
 .social-navigation a:hover[href*="github.com"]:before,
@@ -436,6 +495,7 @@ a.button.info:focus {
 .social-navigation a:hover[href*="getpocket.com"]:before,
 .social-navigation a:hover[href*="polldaddy.com"]:before,
 .social-navigation a:hover[href*="reddit.com"]:before,
+.social-navigation a:hover[href*="spotify.com"]:before,
 .social-navigation a:hover[href*="stumbleupon.com"]:before,
 .social-navigation a:hover[href*="tumblr.com"]:before,
 .social-navigation a:hover[href*="twitter.com"]:before,
@@ -443,7 +503,8 @@ a.button.info:focus {
 .social-navigation a:hover[href*="wordpress.com"]:before,
 .social-navigation a:hover[href*="wordpress.org"]:before,
 .social-navigation a:hover[href*="youtube.com"]:before,
+.social-navigation a:hover[href$="/feed/"]:before,
+.social-navigation a:hover[href*="codepen.io"]:before,
 .social-navigation a:hover[href*="mailto:"]:before,
-.social-navigation a:hover[href*="spotify.com"]:before,
 .social-navigation a:hover[href*="twitch.tv"]:before{
 	color:#0078a0;}

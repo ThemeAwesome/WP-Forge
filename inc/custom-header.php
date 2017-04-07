@@ -1,7 +1,7 @@
 <?php
 /**
  * Implement an optional custom header for WP-Forge
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 
 if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {

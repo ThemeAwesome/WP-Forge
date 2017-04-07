@@ -1,7 +1,7 @@
 <?php
 /**
  * The Footer Sidebar. This sidebar contains the four footer widget areas.
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 if ( ! is_active_sidebar( 'footer-sidebar-1' )
 	&& ! is_active_sidebar( 'footer-sidebar-2' )

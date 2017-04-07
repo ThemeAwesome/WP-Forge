@@ -1,7 +1,7 @@
 <?php
 /**
  * The template that supplies our WordPress Social Menu
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 ?>
 <?php if ( has_nav_menu( 'social' ) ) : ?>

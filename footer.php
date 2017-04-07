@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the footer.
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 ?>
 	</section><!-- end .content-wrap -->

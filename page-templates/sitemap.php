@@ -2,7 +2,7 @@
 /**
  * Template Name: Sitemap Template
  * @since WP-Forge 6.2.3
- * @version 6.3.1.1
+ * @version 6.3.1.2
  */
 get_header(); ?>
 
