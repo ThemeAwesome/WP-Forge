@@ -1,10 +1,10 @@
-/*
+off-/*
 Theme Name: WP-Forge
 Theme URI: https://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome
 Author URI: https://themeawesome.com/
 Description: A WordPress theme built using Foundation for Sites (Foundation 6.3.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.3.1.2
+Version: 6.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
@@ -308,15 +308,20 @@ a {
 	background: transparent;}
 #header {
 	padding:0.9375rem 0;}
-.header-logo,
-.header-info {
+.header-logo {
 	display:block;
 	float:left;
+	margin-right: 1rem;
 	max-width:100%;}
-.header-info {
-	margin-top: 0.9375rem;}
+.header-info {}
+.no-site-title .site-title {
+	display: none;}
+.no-site-tagline .site-description {
+	display: none;}
 h1.site-title,
-h2 .site-description {
+h2.site-description,
+p.site-title,
+p.site-description {
 	line-height: 1.3;
 	margin: 0}
 h1.site-title a {
@@ -476,16 +481,6 @@ img.aligncenter {
 img.alignnone {
 	margin-bottom: 1.5rem;
 	margin-top: 1.5rem}
-.entry-content-post embed,
-.entry-content-post iframe,
-.entry-content-post object,
-.entry-content-post video,
-.entry-content-page embed,
-.entry-content-page iframe,
-.entry-content-page object,
-.entry-content-page video {
-	margin-bottom: 1.5rem;
-	margin-top: 1.5rem;}
 .entry-content-post dt,
 .entry-content-page dt,
 .comment-content dt {
@@ -991,7 +986,6 @@ p.comment-form-email {
 	content: "\f515";}
 .social-navigation a[href*="twitch.tv"]:before {
 	content: "\f516";}
-
 /**
  * 14.0 - Misc
  */
@@ -1205,6 +1199,8 @@ ul.off-canvas-list li li li li li li {
 	font-weight: normal;}
 .off-canvas-content .title-bar-title{
 	color: #ffffff;}
+.submenu-toggle {
+	top:5px;}
 span.canvas-title, span.tbar-title {
 	display: inline-block;
     vertical-align: middle;
@@ -1224,6 +1220,10 @@ span.tbar-title:hover,
 	background-color: transparent;
 	cursor: pointer;
 	outline:none!important;}
+.accordion-menu li {
+    border:0;}
+.submenu-toggle {
+    border:0;}
 .off-canvas-content,
 .off-canvas-content {
 	background-color: transparent;
@@ -1240,11 +1240,13 @@ span.tbar-title:hover,
 	padding: 0;}
 .top-bar-title {
 	color: #ffffff;
-    padding: 0.7rem 1rem;
+    padding: 0 1rem;
     line-height: 1.7;}
 .top-bar .menu-item-home {
-	background:none!important; 
-}
+	background:none!important; }
+.dropdown.menu.vertical > li.opens-left > a::after {
+	left:auto!important;}
+
 .off-canvas .close-button, 
 .off-canvas .close-button.medium,
 .off-canvas-absolute .close-button, 
@@ -1257,9 +1259,6 @@ span.tbar-title:hover,
 .off-canvas-absolute .close-button:hover, 
 .off-canvas-absolute .close-button.medium:hover {
 	color: #ffffff!important;}
-.off-canvas .menu.nested,
-.off-canvas-absolute .menu.nested {
-	margin-left: 0;}
 #footer .menu > .current-menu-parent,
 #footer .menu > .current-page-parent,
 #footer .menu > .current-page-ancestor,
@@ -1471,7 +1470,8 @@ hr {
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-	.header-info {margin-top: 0;margin-bottom: 0.9375rem;}
+	.header-logo, .header-info {margin-right:0;}
+	.header-info {margin-top: 0;}
 	h1.site-title a {font-size: 1.8rem;}
     .site-description {font-size: 1rem!important;}
 	.content_wrap {padding-top: 1rem;}

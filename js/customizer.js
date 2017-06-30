@@ -1,6 +1,6 @@
 /**
  * Theme Customizer enhancements for a better user experience.
- * @version 6.3.1.2
+ * @version 6.4
  */
 
 ( function( $ ) {
@@ -66,21 +66,25 @@
     });
 
 	// Header Text Display
-	wp.customize( 'header_textcolor', function( value ) {
-		value.bind( function( to ) {
-			if ( 'blank' === to ) {
-				$( '.site-title, .site-title a, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
-				} );
-			} else {
-				$( '.site-title, .site-title a, .site-description' ).css( {
-					'clip': 'auto',
-					'position': 'relative'
-				} );
-			}
-		} );
-	} );
+    wp.customize( 'wpforge_hide_sitetitle', function( value ) {
+        value.bind( function( to ) {
+            if ( to ) {
+                $( 'body' ).addClass( 'no-site-title' ).removeClass('has-site-title');
+            } else {
+                $( 'body' ).removeClass( 'no-site-title' ).addClass('has-site-title');
+            }
+        } );
+    } );
+
+    wp.customize( 'wpforge_hide_tagline', function( value ) {
+        value.bind( function( to ) {
+            if ( to ) {
+                $( 'body' ).addClass( 'no-site-tagline' ).removeClass('has-site-tagline');
+            } else {
+                $( 'body' ).removeClass( 'no-site-tagline' ).addClass('has-site-tagline');
+            }
+        } );
+    } );
 
 	// Nav Wrap Width
 	wp.customize('nav_width',function( value ) {
@@ -96,7 +100,7 @@
 	// Top-Bar Home Link Text
 	wp.customize('wpforge_nav_text', function(value) {
 		value.bind(function(to) {
-			$('.title-bar .title-bar-title').html(to);
+			$('.top-bar .top-bar-title').html(to);
 		});
 	});
 
@@ -131,7 +135,7 @@
 	// Top-Bar Link Color
 	wp.customize('top_bar_font_color',function( value ) {
 	    value.bind(function(to) {
-	    	$('.top-bar .name a,.top-bar ul li a,.menu .active > a').css('color', to ? to : '' );
+	    	$('.top-bar .menu-item a').css('color', to ? to : '' );
 	    });
 	});
 
@@ -152,7 +156,7 @@
 	// Current Menu Item Background Color
 	wp.customize('top_bar_active_color',function( value ) {
 	    value.bind(function(to) {
-	        $('.top-bar .menu .current-menu-parent,.top-bar .menu .current-page-parent,.top-bar .menu .current-page-ancestor,.top-bar .menu .current_page_item').css('background-color', to ? to : '' );
+	        $('.top-bar .menu .current-menu-parent, .top-bar .menu .current-page-parent, .top-bar .menu .current-page-ancestor, .top-bar .menu .current_page_item').css('background-color', to ? to : '' );
 	    });
 	});
 
@@ -219,7 +223,7 @@ wp.customize('wpforge_off_canvas_main_color',function( value ) {
 	// Off-Canvas Dropdown Arrow Color
 	wp.customize('wpforge_off_dropdown_arrow_color',function( value ) {
 	    value.bind(function(to) {
-	        $('.off-canvas .is-drilldown-submenu-parent > a::after,.off-canvas-absolute .is-drilldown-submenu-parent > a::after').css('border-color', to ? to : '' );
+	        $('.submenu-toggle::after').css('border-color', to ? to : '' );
 	    });
 	});
 
@@ -730,14 +734,14 @@ wp.customize('category_link_hover_color',function( value ) {
 // Post Title Link Color
 wp.customize('post_title_link_color',function( value ) {
       value.bind(function(to) {
-          $('h1.entry-title-post a').css('color', to ? to : '' );
+          $('h2.entry-title-post a').css('color', to ? to : '' );
       });
   });
 
 // Post Title Link Hover Color
 wp.customize('post_title_link_hover_color',function( value ) {
     value.bind(function(to) {
-        $('h1.entry-title-post a:hover').css('color', to ? to : '' );
+        $('h2.entry-title-post a:hover').css('color', to ? to : '' );
     });
 });
 

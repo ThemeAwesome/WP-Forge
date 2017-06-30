@@ -1,23 +1,21 @@
 <?php
 /**
  * The template for displaying the Top-Bar menu and its different positions.
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
-<div class="nav_container">
-  <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wp-forge' ); ?></a>
-
+<div itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" class="nav_container">
   <?php if( get_theme_mod( 'wpforge_nav_position','normal' ) == 'normal') { ?> 
       <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
-      <div class="nav_wrap row show-for-large">
+      <div class="nav_wrap grid-container show-for-large">
       <?php } else { ?>
-      <div class="nav_wrap row">
+      <div class="nav_wrap  grid-container">
       <?php } // end if ?>
         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-          <button class="menu-icon" type="button" data-toggle></button>
+          <button class="menu-icon" type="button" data-toggle="main-menu"></button>
           <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
         </div><!-- end title-bar -->
-        <div class="top-bar" id="main-menu">
+        <div class="top-bar" id="main-menu" data-animate="hinge-in-from-top fade-out">
           <div class="top-bar-left">
             <?php wpforge_top_nav(); ?>
           </div><!-- second end top-bar -->
@@ -31,7 +29,7 @@
     <?php } else { ?>
     <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
     <?php } // end if ?>
-          <button class="menu-icon" type="button" data-toggle></button>
+          <button class="menu-icon" type="button" data-toggle="main-menu"></button>
           <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
     </div><!-- end title-bar -->
     <div class="top-bar" id="main-menu">
@@ -56,7 +54,7 @@
       <div data-sticky data-options="marginTop:0;" style="width:100%" data-top-anchor="1">
     <?php } // end if ?>
         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-          <button class="menu-icon" type="button" data-toggle></button>
+          <button class="menu-icon" type="button" data-toggle="main-menu"></button>
           <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
         </div><!-- end title-bar -->
         <div class="top-bar" id="main-menu">
@@ -77,12 +75,12 @@
 
   <?php if( get_theme_mod( 'wpforge_nav_position' ) == 'sticky') { ?>
     <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
-    <div class="nav_wrap row show-for-large">
+    <div class="nav_wrap grid-container show-for-large">
     <?php } else { ?>
-    <div class="nav_wrap row">
+    <div class="nav_wrap grid-container">
     <?php } // end if ?>
       <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-          <button class="menu-icon" type="button" data-toggle></button>
+          <button class="menu-icon" type="button" data-toggle="main-menu"></button>
           <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
       </div><!-- end title-bar -->
       <div class="contain-to-grid">

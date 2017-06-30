@@ -1,14 +1,17 @@
 <?php
 /**
  * The template that supplies our WordPress Social Menu
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
 <?php if ( has_nav_menu( 'social' ) ) : ?>
-	<div class="social_wrap small-12 large-12 columns">
+	<div class="social_wrap small-12 large-12 columns text-center">
 		<nav id="social-navigation" class="social-navigation" role="navigation">
 			<?php wp_nav_menu( array(
 					'theme_location' => 'social',
+                    'container'       => 'div',
+                    'container_class' => 'table mbl',
+                    'menu_class' => 'menu navcntr',
 					'depth'          => 1,
 					'link_before'    => '<span class="screen-reader-text">',
 					'link_after'     => '</span>',

@@ -2,7 +2,7 @@
  * Theme Customizer Defaults - The following elements are customizable via the theme customizer. When a change is made 
  * to one of the avaiable options in the customizer, the corresponding css below will be overwritten and applied
  * inline in the header.
- * @version 6.3.1.2
+ * @version 6.4
  */
 
 /**
@@ -79,7 +79,8 @@
 .off-canvas.mbl .menu-item a,
 .off-canvas-absolute.mbl .menu-item a {
 	font-size: 1rem;}
-
+.submenu-toggle::after {
+    border-color: #ffffff transparent transparent;}
 /**
  * Off-Canvas Navigation
  */
@@ -144,7 +145,6 @@
 .off-canvas .menu .current_page_item a:hover,
 .off-canvas-absolute .menu .current_page_item a:hover {
 	background-color: #000000;}
-
 /**
  * Post Elements
  */
@@ -157,10 +157,10 @@ span.categories-links a:hover{
 	color:#0078a0;}
 h1.entry-title-post{
 	color:#444444;
-	font-size:3rem;}
-h1.entry-title-post a{
+	font-size:2.5rem;}
+h2.entry-title-post a{
 	color:#008cba;}
-h1.entry-title-post a:hover{
+h2.entry-title-post a:hover{
 	color:#0078a0;}
 .entry-meta-header a{
 	color:#008cba;}

@@ -1,16 +1,16 @@
 <?php
 /**
  * The template for displaying image attachments.
- * @version 6.3.1.2
+ * @version 6.4
  */
 get_header(); ?>
-	<div id="primary" class="small-12 large-12 columns site-content">
+	<div id="primary" class="small-12 large-12 cell site-content">
 		<div id="content" role="main">
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<nav aria-label="You are here:" role="navigation"><ul class="breadcrumbs">','</ul></nav>'); } ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'image-attachment' ); ?>>
 					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<?php the_title( '<h1 class="entry-title-post" itemprop="headline">', '</h1>' ); ?>
 						<div class="entry-meta-header">
 							<?php
 								$metadata = wp_get_attachment_metadata();

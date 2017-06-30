@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying posts in the Image post format on index and archive pages.
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -18,7 +18,7 @@
 			<?php endif; // comments_open() ?>
 			<?php edit_post_link( __( 'Edit', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' ); ?>
 		</div><!-- end .entry-meta-header -->
-		<div class="entry-content-post">
+		<div class="entry-content-post" itemprop="text">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'wp-forge' ) ); ?>
 		</div><!-- .entry-content -->
 		<footer class="entry-meta">

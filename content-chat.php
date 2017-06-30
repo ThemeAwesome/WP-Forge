@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying posts in the Chat post format on index and archive pages.
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
 
@@ -12,13 +12,11 @@
 				<?php wpforge_entry_meta_categories(); ?>
 			<?php } // end if ?>
 		<?php } // end if ?>
-		<?php if ( is_single() ) : ?>
-		<h1 class="entry-title-post"><?php the_title(); ?></h1>
-		<?php else : ?>
-		<h1 class="entry-title-post">
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-		</h1>
-		<?php endif; // is_single() ?>
+			<?php if ( is_single() ) : ?>
+				<?php the_title( '<h1 class="entry-title-post" itemprop="headline">', '</h1>' ); ?>
+			<?php else : ?>
+				<?php the_title( sprintf( '<h2 class="entry-title-post" itemprop="headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php endif; // is_single() ?>
 		<div class="entry-meta-header">
 			<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'chat' ) ); ?>" title="View all Chat Posts"><span class="genericon genericon-chat"></span> <?php echo get_post_format_string( 'chat' ); ?></a>
 			<?php wpforge_entry_meta_header(); ?>
@@ -28,7 +26,7 @@
 			<?php edit_post_link( __( 'Edit', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' ); ?>
 		</div><!-- end .entry-meta-header -->
 	</header><!-- .entry-header -->
-	<div class="entry-content-post">
+	<div class="entry-content-post" itemprop="text">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'wp-forge' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div><!-- .entry-content -->

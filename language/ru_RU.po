@@ -1,0 +1,2430 @@
+# Copyright (C) 2017 ThemeAwesome.com
+# This file is distributed under the same license as the PACKAGE package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Forge 6.4\n"
+"POT-Creation-Date: 2017-06-01 17:25+0300\n"
+"PO-Revision-Date: 2017-06-10 18:10+0300\n"
+"Last-Translator: Spartak Klein |sajtprint.ru <sajtprint@gmail.com>\n"
+"Language-Team: ThemeAwesome.com <tsquez@gmail.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:11
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Это несколько неудобно?"
+
+#: 404.php:14
+msgid ""
+"The post, page or whatever it was you were looking for doesn&rsquo;t seem to be here. It could have been moved, deleted or maybe the URL you "
+"typed or the link you clicked was incorrect in some way."
+msgstr "Не нашлось. Возможно страница удалена или адрес изменен после редактирования. Воспользуйтесь формой поиска по сайту."
+
+#: 404.php:15
+msgid "Please try again?"
+msgstr "Попробовать еще раз?"
+
+#: 404.php:16 content-none.php:20
+msgid ""
+"We know this didn&rsquo;t work before but you may want to try another search, only this time make sure the spelling, cApitALiZaTiOn, and "
+"punctuation are correct."
+msgstr "Попробуйте поиск по другой фразе."
+
+#: 404.php:18
+msgid "Contact Us"
+msgstr "Связаться с нами"
+
+#: 404.php:19
+msgid ""
+"If you are absolutely certain it was supposed to be here and just can&rsquo;t seem to find it, please let us know. We would be more than happy "
+"to look into the matter for you and let you know what happened."
+msgstr "Нашли ошибку, сообщите нам."
+
+#: 404.php:20
+msgid "Don&rsquo;t go just yet! We have other great stuff!"
+msgstr "Информация не найдена, посмотрите другие записи !"
+
+#: 404.php:21
+msgid ""
+"Even though you couldn&rsquo;t find what you were looking for, we do have other great content to offer. Use the lists below to find something "
+"new and exciting: "
+msgstr ""
+"Даже если вы не можете найти то, что искали, у нас есть другой отличный контент. Используйте приведенные ниже списки, чтобы найти что-то новое "
+"и захватывающее: "
+
+#: archive.php:13
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Архив за день:%s"
+
+#: archive.php:15
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Архив за месяц: %s"
+
+#: archive.php:15
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:17
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Архив за год: %s"
+
+#: archive.php:17
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:19
+msgid "Asides"
+msgstr "Отступлений"
+
+#: archive.php:21
+msgid "Audio"
+msgstr "Аудио"
+
+#: archive.php:23
+msgid "Chats"
+msgstr "Чаты"
+
+#: archive.php:25
+msgid "Galleries"
+msgstr "Галерея"
+
+#: archive.php:27
+msgid "Images"
+msgstr "Изображения"
+
+#: archive.php:29
+msgid "Links"
+msgstr "Ссылки"
+
+#: archive.php:31
+msgid "Quotes"
+msgstr "Цитаты"
+
+#: archive.php:33
+msgid "Status"
+msgstr "Статусы"
+
+#: archive.php:35
+msgid "Videos"
+msgstr "Видео"
+
+#: archive.php:37
+msgid "Archives"
+msgstr "Архивы"
+
+#: author.php:12
+#, php-format
+msgid "Author: %s"
+msgstr "Автор: %s"
+
+#: author.php:23 content-author.php:14
+#, php-format
+msgid "About %s"
+msgstr "О себе %s"
+
+#: category.php:11
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Архив категорий:%s"
+
+#: comments.php:17
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] " "
+msgstr[1] " "
+msgstr[2] " "
+
+#: comments.php:32
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: comments.php:33
+msgid "&laquo; Older Comments"
+msgstr "&laquo; Старые комментарии"
+
+#: comments.php:34
+msgid "Newer Comments &raquo;"
+msgstr "Новые комментарии &raquo;"
+
+#: comments.php:38
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: comments.php:44
+msgid " Required fields are marked <span class=\"required\">*</span>"
+msgstr " Обязательные поля отмечены<span class=\"required\">*</span>"
+
+#: comments.php:45
+msgid "Your Name <span class=\"required\">*</span>"
+msgstr "Ваше имя <span class=\"required\">*</span>"
+
+#: comments.php:46
+msgid "Your Email <span class=\"required\">*</span>"
+msgstr "Ваш Email <span class=\"required\">*</span>"
+
+#: comments.php:51
+msgid "Leave a Reply"
+msgstr "Оставьте ответ"
+
+#: comments.php:52
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Оставить комментарий %s"
+
+#: comments.php:53
+msgid "Cancel Reply"
+msgstr "Отменить комментарий"
+
+#: comments.php:54
+msgid "Post Comment"
+msgstr "Оставить комментарий"
+
+#: comments.php:55 content-aside.php:17 content-audio.php:18 content-chat.php:26 content-gallery.php:25 content-image.php:17 content-link.php:17
+#: content-quote.php:17 content-status.php:17 content-video.php:18 content.php:26 page-templates/sitemap.php:33
+msgid "Comment"
+msgstr "Комментировать"
+
+#: comments.php:60
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "<a href=\"%s\">Авторизоваться</a> чтобы оставлять комментарии."
+
+#: comments.php:65
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "Войдите в систему как <a href=\"%1$s\">%2$s </a>. <a href=\"%3$s\" title=\"отчет из этой учетной записи\"> Выход из системы? </a>"
+
+#: comments.php:71
+msgid "Your email address will not be published."
+msgstr "Ваш Email не будет опубликован."
+
+#: comments.php:73
+#, php-format
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Можно использовать <abbr title=\"HyperText Markup Language\">HTML</abbr>тэги: %s"
+
+#: comments.php:86
+msgid "Your Website"
+msgstr "Ваш веб сайт"
+
+#: content-aside.php:17 content-audio.php:18 content-chat.php:26 content-gallery.php:25 content-image.php:17 content-link.php:17
+#: content-quote.php:17 content-status.php:17 content-video.php:18 content.php:26 page-templates/sitemap.php:33
+msgid "1 Comment"
+msgstr "1 Коментарий"
+
+#: content-aside.php:17 content-audio.php:18 content-chat.php:26 content-gallery.php:25 content-image.php:17 content-link.php:17
+#: content-quote.php:17 content-status.php:17 content-video.php:18 content.php:26 page-templates/sitemap.php:33
+msgid "% Comments"
+msgstr "% Комментариев"
+
+#: content-aside.php:19 content-audio.php:20 content-chat.php:28 content-gallery.php:27 content-image.php:19 content-link.php:19
+#: content-quote.php:19 content-status.php:19 content-video.php:20 content.php:27 content.php:29 functions.php:312
+msgid "Edit"
+msgstr "Редактировать"
+
+#: content-aside.php:22 content-audio.php:27 content-gallery.php:18 content-video.php:26 content.php:18 page-templates/sitemap.php:28
+#, php-format
+msgid "Permalink to %s"
+msgstr "Постоянная ссылка на %s"
+
+#: content-aside.php:24 content-audio.php:37 content-gallery.php:36 content-image.php:22 content-link.php:22 content-quote.php:22
+#: content-status.php:28 content-video.php:36 content.php:46 content.php:60
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&raquo;</span>"
+
+#: content-audio.php:38 content-chat.php:33 content-gallery.php:37 content-home.php:21 content-page.php:18 content-video.php:37 content.php:47
+#: content.php:61 image.php:69
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: content-author.php:18
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Смотреть все записи  %s <span class=\"meta-nav\">&raquo;</span>"
+
+#: content-footer.php:24 content-footer.php:44 content-footer.php:54
+msgid "Powered by"
+msgstr "Сделано в"
+
+#: content-footer.php:24 content-footer.php:44 content-footer.php:54
+msgid "https://themeawesome.com/responsive-wordpress-theme/"
+msgstr ""
+
+#: content-footer.php:24 content-footer.php:44 content-footer.php:54
+msgid "A Responsive WordPress Theme"
+msgstr "Адаптивная Вордпресс тема"
+
+#. Theme Name of the plugin/theme
+#: content-footer.php:24 content-footer.php:44 content-footer.php:54
+msgid "WP-Forge"
+msgstr "WP-Forge"
+
+#: content-footer.php:24 content-footer.php:44 content-footer.php:54
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: content-footer.php:24 content-footer.php:44 content-footer.php:54
+msgid "WordPress"
+msgstr ""
+
+#: content-home.php:24 content-page.php:21
+msgid "Edit Page"
+msgstr "Редактировать страницу"
+
+#: content-nav.php:8
+msgid "Skip to content"
+msgstr "Перейти к содержанию"
+
+#: content-none.php:10
+msgid "No posts to display"
+msgstr "Нет сообщений для отображения"
+
+#: content-none.php:13
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr "Готовы опубликовать свой первый пост? <a href=\"%s\">Начните здесь</a>."
+
+#: content-none.php:17
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: functions.php:47
+msgid "Main Menu"
+msgstr "Основное меню"
+
+#: functions.php:48
+msgid "Footer Menu"
+msgstr "Меню подвала"
+
+#: functions.php:49
+msgid "Social Menu"
+msgstr "Социальные сети меню"
+
+#: functions.php:150
+msgid "Main Sidebar"
+msgstr "Основная боковая панель"
+
+#: functions.php:152
+msgid "Displays widgets in the blog area as well as pages."
+msgstr "Отображает виджеты в области блога, а также на страницах."
+
+#: functions.php:159
+msgid "First Footer Widget Area"
+msgstr "Область виджета нижнего колонтитула"
+
+#: functions.php:161
+msgid "An optional widget area for your site footer"
+msgstr "Дополнительная область виджета для вашего нижнего колонтитула сайта"
+
+#: functions.php:168
+msgid "Second Footer Widget Area"
+msgstr "Вторая область виджета нижнего колонтитула"
+
+#: functions.php:170
+msgid "An second optional widget area for your site footer"
+msgstr "Вторая дополнительная область виджетов для вашего нижнего колонтитула сайта"
+
+#: functions.php:177
+msgid "Third Footer Widget Area"
+msgstr "Третья область виджета нижнего колонтитула"
+
+#: functions.php:179
+msgid "An third optional widget area for your site footer"
+msgstr "Третья дополнительная область виджета для нижнего колонтитула вашего сайта"
+
+#: functions.php:186
+msgid "Fourth Footer Widget Area"
+msgstr "Четвертая область виджета нижнего колонтитула"
+
+#: functions.php:188
+msgid "An fourth optional widget area for your site footer"
+msgstr "Четвертая дополнительная область виджета для вашего нижнего колонтитула сайта"
+
+#: functions.php:254
+msgid "Post Navigation"
+msgstr "Навигация по комментариям"
+
+#: functions.php:255
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Старые записи"
+
+#: functions.php:256
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Новые записи <span class=\"meta-nav\">&raquo;</span>"
+
+#: functions.php:275
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:275
+msgid "(Edit)"
+msgstr "(Редактировать)"
+
+#: functions.php:290
+msgid "Post Author"
+msgstr "Автор сообщения"
+
+#: functions.php:296
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:302
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации."
+
+#: functions.php:310
+msgid "Reply &raquo;"
+msgstr "Комментарии &raquo;"
+
+#: functions.php:325 functions.php:356 functions.php:450
+msgid ", "
+msgstr ""
+
+#: functions.php:337
+msgid "Sticky"
+msgstr "Липкий"
+
+#: functions.php:403
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Читать далее %s <span class=\"meta-nav\">&raquo;</span>"
+
+#: image.php:18
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\"><span class=\"genericon genericon-time\"></span></span><span class=\"entry-date\"><time class="
+"\"entry-date\" datetime=\"%1$s\">%2$s</time></span><span class=\"genericon genericon-picture\"></span><a class=\"nudge\" href=\"%3$s\" title="
+"\"Link to full-size image\">%4$s &times; %5$s</a><span class=\"genericon genericon-category\"></span><a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: image.php:30
+msgid "Edit Image"
+msgstr "Редактировать изображение"
+
+#: image.php:73
+msgid "&laquo; Previous Image"
+msgstr "&laquo; Предыдущее изображение"
+
+#: image.php:74
+msgid "Next Image &raquo;"
+msgstr "Следующее изображение &raquo;"
+
+#: inc/customizer.php:50
+msgid "Header &amp; Background Colors"
+msgstr "Шапка &amp; Цвет фона"
+
+#: inc/customizer.php:52
+msgid "Set the front page for your theme."
+msgstr "Установить главную страницу для темы \".\"."
+
+#: inc/customizer.php:60
+msgid "Header Settings"
+msgstr "Настройка шапки сайта"
+
+#: inc/customizer.php:61
+msgid "Deals with the header portion of your theme."
+msgstr "Операции с  верхней частью темы."
+
+#: inc/customizer.php:66
+msgid "Background Image Settings"
+msgstr "Настройки фонового изображения"
+
+#: inc/customizer.php:67
+msgid "Deals with the background of your theme."
+msgstr "Изменить фон темы."
+
+#: inc/customizer.php:72
+msgid "Main Menu Settings"
+msgstr "Настройки главного меню"
+
+#: inc/customizer.php:73 inc/customizer.php:208
+msgid "Select the menu type you want to use with your theme."
+msgstr "Выберите тип меню, который вы хотите использовать с вашей темой."
+
+#: inc/customizer.php:78
+msgid "Color Settings"
+msgstr "Настройки цвета"
+
+#: inc/customizer.php:79
+msgid "Deals with the colors of your theme."
+msgstr "Изменить цвет темы."
+
+#: inc/customizer.php:84
+msgid "Front Page Settings"
+msgstr "Настройки главной страницы"
+
+#: inc/customizer.php:85
+msgid "Deals with setting up the front page of your theme."
+msgstr "Изменить настройки главной страницы темы."
+
+#: inc/customizer.php:90
+msgid "Content Settings"
+msgstr "Настройки содержимого"
+
+#: inc/customizer.php:91
+msgid "Deals with the main content area of your theme."
+msgstr "Установите цветовые предпочтения для основной области содержимого вашего сайта."
+
+#: inc/customizer.php:96
+msgid "Main Sidebar Settings"
+msgstr "Настройки основной боковой панели"
+
+#: inc/customizer.php:97
+msgid "Deals with the main sidebar area of your theme."
+msgstr "Установите цветовые предпочтения для основной области содержимого вашего сайта."
+
+#: inc/customizer.php:102
+msgid "Footer Sidebar Settings"
+msgstr "Нижняя боковая панель"
+
+#: inc/customizer.php:103
+msgid "Deals with the footer sidebar area of your theme."
+msgstr "Пользовательские HTML и текст, которые будут отображаться в нижнем колонтитуле вашей темы."
+
+#: inc/customizer.php:108
+msgid "Footer Settings"
+msgstr "Параметры  Нижнего Колонтитула"
+
+#: inc/customizer.php:109
+msgid "Deals with the footer area of your theme."
+msgstr "Настройки подвала вашей темы."
+
+#: inc/customizer.php:114
+msgid "Foundation Buttons"
+msgstr "Foundation кнопки"
+
+#: inc/customizer.php:115
+msgid "Deals with the different Foundation buttons available in your theme."
+msgstr "Настройки кнопок доступных в теме."
+
+#: inc/customizer.php:122
+msgid "Header Content"
+msgstr "Настройки шапки"
+
+#: inc/customizer.php:123
+msgid "Main content area of your header, i.e site title, site description and logo."
+msgstr "Основная область содержимого вашего заголовка, например название сайта, описание сайта и логотип."
+
+#: inc/customizer.php:136
+msgid "Header Content Width"
+msgstr "Ширина шапки"
+
+#: inc/customizer.php:137 inc/customizer.php:200 inc/customizer.php:2250 inc/customizer.php:3114
+msgid "Default: 75rem"
+msgstr "По умолчанию: 75rem"
+
+#: inc/customizer.php:150
+msgid "Header Content Background Color"
+msgstr "Цвет фона шапки"
+
+#: inc/customizer.php:151 inc/customizer.php:582 inc/customizer.php:596 inc/customizer.php:610 inc/customizer.php:638 inc/customizer.php:699
+#: inc/customizer.php:726 inc/customizer.php:754 inc/customizer.php:796 inc/customizer.php:1261 inc/customizer.php:1506 inc/customizer.php:1532
+#: inc/customizer.php:2264 inc/customizer.php:3128 inc/customizer.php:3286 inc/customizer.php:3380 inc/customizer.php:3394
+#: inc/customizer.php:3460 inc/customizer.php:3540 inc/customizer.php:3554 inc/customizer.php:3620 inc/customizer.php:3634
+#: inc/customizer.php:3700 inc/customizer.php:3714 inc/customizer.php:3794
+msgid "Default: #FFFFFF"
+msgstr "По умолчанию: #FFFFFF"
+
+#: inc/customizer.php:164
+msgid "Site Title Font Size"
+msgstr "Размер шрифта заголовка сайта"
+
+#: inc/customizer.php:165 inc/customizer.php:2388 inc/customizer.php:2535 inc/customizer.php:2777 inc/customizer.php:2884
+msgid "Default: 3rem"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "Site Description Font Size"
+msgstr "Размер шрифта для описания сайта"
+
+#: inc/customizer.php:180
+msgid "Default: 1.6875rem"
+msgstr "По умолчанию"
+
+#: inc/customizer.php:185
+msgid "Nav Content Area"
+msgstr "Область содержимого навигации"
+
+#: inc/customizer.php:188
+msgid "Change the width and background color of the navigation area of your theme."
+msgstr "Измените ширину и цвет фона в области навигации вашей темы."
+
+#: inc/customizer.php:199
+msgid "Nav Content Width"
+msgstr "Ширина контента области навигации"
+
+#: inc/customizer.php:205
+msgid "Menu Selection"
+msgstr "Выбор меню"
+
+#: inc/customizer.php:219
+msgid "Select Main Menu Type"
+msgstr "Выбор типа главного меню"
+
+#: inc/customizer.php:220
+msgid "Default: Top-Bar"
+msgstr "По умолчанию: Top-Bar"
+
+#: inc/customizer.php:223 inc/customizer.php:3832
+msgid "Top-Bar"
+msgstr "Top-Bar"
+
+#: inc/customizer.php:224 inc/customizer.php:3833
+msgid "Off-Canvas"
+msgstr ""
+
+#: inc/customizer.php:228
+msgid "Top-Bar Settings"
+msgstr "Top-Bar настройки"
+
+#: inc/customizer.php:230
+msgid "Configure the Top-Bar Navigation area of your theme. Set the position and change the text of the Home link."
+msgstr "Настройте область навигации Top-Bar вашей темы. Установите положение и измените текст ссылки «Главная»."
+
+#: inc/customizer.php:243
+msgid "Top-Bar Position"
+msgstr "Top-Bar позиция"
+
+#: inc/customizer.php:244 inc/customizer.php:2718 inc/customizer.php:2845 inc/customizer.php:3019 inc/customizer.php:3091 inc/customizer.php:3177
+#: inc/customizer.php:3249 inc/customizer.php:3409 inc/customizer.php:3489 inc/customizer.php:3569 inc/customizer.php:3649
+#: inc/customizer.php:3728 inc/customizer.php:3809
+msgid "Default: Normal"
+msgstr ""
+
+#: inc/customizer.php:247 inc/customizer.php:3844
+msgid "Normal Position"
+msgstr ""
+
+#: inc/customizer.php:248 inc/customizer.php:3845
+msgid "Top of Browser - Scroll"
+msgstr "Верх браузера - прокрутка"
+
+#: inc/customizer.php:249 inc/customizer.php:3846
+msgid "Top of Browser - Fixed"
+msgstr "Top of Browser - фиксировать"
+
+#: inc/customizer.php:250 inc/customizer.php:3847
+msgid "Contain-To-Grid-Sticky"
+msgstr "Прилепить"
+
+#: inc/customizer.php:263
+msgid "Show top-bar title area?"
+msgstr "Показать верхнюю область заголовка?"
+
+#: inc/customizer.php:264 inc/customizer.php:2465 inc/customizer.php:2482
+msgid "Default: Yes"
+msgstr "По умолчанию: Да"
+
+#: inc/customizer.php:267
+msgid "Yes, show title area"
+msgstr "Да, показать область заголовка"
+
+#: inc/customizer.php:268
+msgid "No, hide title area"
+msgstr "Скрыть область заголовка"
+
+#: inc/customizer.php:281
+msgid "Top-Bar link position?"
+msgstr "Позиция верхнего меню?"
+
+#: inc/customizer.php:282
+msgid "Default: Right"
+msgstr "По умолчанию: Справа"
+
+#: inc/customizer.php:285 inc/customizer.php:3870
+msgid "Links to the right"
+msgstr "Ссылки справа"
+
+#: inc/customizer.php:286 inc/customizer.php:3871
+msgid "Links to the left"
+msgstr "Ссылки слева"
+
+#: inc/customizer.php:298
+msgid "Top-Bar Font Size"
+msgstr "Top-Bar - размер шрифта"
+
+#: inc/customizer.php:299
+msgid "Default: 0.825rem"
+msgstr ""
+
+#: inc/customizer.php:312
+msgid "Top-Bar Dropdown Arrow Position"
+msgstr "Положение стрелки раскрывающегося списка Top-Bar"
+
+#: inc/customizer.php:313
+msgid "Default: -0.125rem"
+msgstr ""
+
+#: inc/customizer.php:325
+msgid "Change Top-Bar Hamburger Icon Title Text"
+msgstr "Изменить верхний бар Hamburger Icon Title Text"
+
+#: inc/customizer.php:326 inc/customizer.php:392 inc/customizer.php:443
+msgid "Default: Menu"
+msgstr "Меню"
+
+#: inc/customizer.php:340
+msgid "Use Mobile Off-Canvas?"
+msgstr "Использовать мобильный Off-Canvas?"
+
+#: inc/customizer.php:341
+msgid "Default: No"
+msgstr "Нет"
+
+#: inc/customizer.php:344 inc/customizer.php:2469 inc/customizer.php:2486 inc/customizer.php:3858 inc/customizer.php:3882 inc/customizer.php:3894
+#: inc/customizer.php:3979 inc/customizer.php:3991
+msgid "No"
+msgstr "Нет"
+
+#: inc/customizer.php:345 inc/customizer.php:2468 inc/customizer.php:2485 inc/customizer.php:3859 inc/customizer.php:3883 inc/customizer.php:3895
+#: inc/customizer.php:3978 inc/customizer.php:3990
+msgid "Yes"
+msgstr "Да"
+
+#: inc/customizer.php:357
+msgid "Mobile Off-Canvas Icon Left or Right?"
+msgstr "Иконка мобильного меню слева или права?"
+
+#: inc/customizer.php:358 inc/customizer.php:457 inc/customizer.php:2284
+msgid "Default: Left"
+msgstr "Слева"
+
+#: inc/customizer.php:362 inc/customizer.php:460 inc/customizer.php:2287 inc/customizer.php:3906 inc/customizer.php:3918 inc/customizer.php:4178
+msgid "Left"
+msgstr "Слева"
+
+#: inc/customizer.php:363 inc/customizer.php:461 inc/customizer.php:2288 inc/customizer.php:3907 inc/customizer.php:3919 inc/customizer.php:4179
+msgid "Right"
+msgstr "Справа"
+
+#: inc/customizer.php:375
+msgid "Mobile Off-Canvas Transition"
+msgstr "Mobile Off-Canvas переходы"
+
+#: inc/customizer.php:376 inc/customizer.php:474
+msgid "Default: Push"
+msgstr "По умолчанию: толчок"
+
+#: inc/customizer.php:380 inc/customizer.php:477 inc/customizer.php:4166 inc/customizer.php:4190
+msgid "Push"
+msgstr "Толчок"
+
+#: inc/customizer.php:381 inc/customizer.php:478 inc/customizer.php:4167 inc/customizer.php:4191
+msgid "Overlap"
+msgstr "Перекрывающийся"
+
+#: inc/customizer.php:391
+msgid "Mobile Off-Canvas Hamburger Text"
+msgstr "Mobile Off-Canvas переходы"
+
+#: inc/customizer.php:406
+msgid "Mobile Off-Canvas Title Bar Size"
+msgstr "Размер заголовка"
+
+#: inc/customizer.php:407 inc/customizer.php:422 inc/customizer.php:491 inc/customizer.php:505 inc/customizer.php:2374 inc/customizer.php:2435
+#: inc/customizer.php:2500 inc/customizer.php:2615 inc/customizer.php:2664 inc/customizer.php:2791 inc/customizer.php:2963
+#: inc/customizer.php:3332
+msgid "Default: 1rem"
+msgstr "По умолчанию"
+
+#: inc/customizer.php:421
+msgid "Mobile Off-Canvas Link Size"
+msgstr "Mobile Off-Canvas переходы"
+
+#: inc/customizer.php:428
+msgid "Off-Canvas Settings"
+msgstr "Mobile Off-Canvas настройки"
+
+#: inc/customizer.php:430
+msgid "Configure the Off-Canvas menu of your theme. These options affect the normal view and mobile view of the Off-Canvas menu. "
+msgstr "Настройка меню Off-холст вашей темы. Эти параметры влияют на обычный режим и мобильный вид меню Off-холст "
+
+#: inc/customizer.php:442
+msgid "Change Off-Canvas hamburger icon text"
+msgstr "Изменить верхний бар hamburger icon text"
+
+#: inc/customizer.php:456
+msgid "Show hamburger icon left or right?"
+msgstr "Налево или направо?"
+
+#: inc/customizer.php:473
+msgid "Choose Off-Canvas Transition"
+msgstr "Mobile Off-Canvas переходы"
+
+#: inc/customizer.php:490
+msgid "Off-Canvas Title Bar Size"
+msgstr "Размер заголовка"
+
+#: inc/customizer.php:504
+msgid "Off-Canvas Link Font Size"
+msgstr "Размер шрифта ссылок"
+
+#: inc/customizer.php:519
+msgid "Site Title Link Color"
+msgstr "Цвет ссылки заголовка сайта"
+
+#: inc/customizer.php:520 inc/customizer.php:900 inc/customizer.php:942 inc/customizer.php:1012 inc/customizer.php:1026 inc/customizer.php:1040
+#: inc/customizer.php:1054 inc/customizer.php:1068 inc/customizer.php:1082 inc/customizer.php:1115 inc/customizer.php:1157
+#: inc/customizer.php:1171 inc/customizer.php:1185 inc/customizer.php:1199 inc/customizer.php:1213 inc/customizer.php:1227
+#: inc/customizer.php:1323 inc/customizer.php:1337 inc/customizer.php:1384 inc/customizer.php:1398 inc/customizer.php:1445
+#: inc/customizer.php:1551 inc/customizer.php:1577 inc/customizer.php:1603 inc/customizer.php:1629 inc/customizer.php:1655
+#: inc/customizer.php:1681 inc/customizer.php:1707 inc/customizer.php:1733 inc/customizer.php:1759 inc/customizer.php:1785
+#: inc/customizer.php:1811 inc/customizer.php:1837 inc/customizer.php:1863 inc/customizer.php:1889 inc/customizer.php:1915
+#: inc/customizer.php:1941 inc/customizer.php:1967 inc/customizer.php:1993 inc/customizer.php:2019 inc/customizer.php:2045
+#: inc/customizer.php:2071 inc/customizer.php:2097 inc/customizer.php:2123 inc/customizer.php:2149 inc/customizer.php:2175
+msgid "Default: #444444"
+msgstr "По умолчанию: # 444444"
+
+#: inc/customizer.php:533
+msgid "Site Title Hover Color"
+msgstr "Название Блога Наведении Цвет"
+
+#: inc/customizer.php:534 inc/customizer.php:858 inc/customizer.php:886 inc/customizer.php:928 inc/customizer.php:970 inc/customizer.php:998
+#: inc/customizer.php:1143 inc/customizer.php:1364 inc/customizer.php:1425 inc/customizer.php:1472 inc/customizer.php:1564
+#: inc/customizer.php:1590 inc/customizer.php:1616 inc/customizer.php:1642 inc/customizer.php:1668 inc/customizer.php:1694
+#: inc/customizer.php:1720 inc/customizer.php:1746 inc/customizer.php:1772 inc/customizer.php:1798 inc/customizer.php:1824
+#: inc/customizer.php:1850 inc/customizer.php:1876 inc/customizer.php:1902 inc/customizer.php:1928 inc/customizer.php:1954
+#: inc/customizer.php:1980 inc/customizer.php:2006 inc/customizer.php:2032 inc/customizer.php:2058 inc/customizer.php:2084
+#: inc/customizer.php:2110 inc/customizer.php:2136 inc/customizer.php:2162 inc/customizer.php:2188 inc/customizer.php:3366
+msgid "Default: #0078a0"
+msgstr "По умолчанию: #FFFFFF"
+
+#: inc/customizer.php:539
+msgid "Top-Bar Colors"
+msgstr "Top-Bar выбрать цвет"
+
+#: inc/customizer.php:540
+msgid "Change all the colors of the Top-Bar, including the Hamburger icon and title link in mobile view."
+msgstr "Измените все цвета верхнего бара, включая значок гамбургера и название ссылки в мобильном режиме."
+
+#: inc/customizer.php:553
+msgid "Top-Bar Main Color"
+msgstr "Top-Bar выбрать цвет"
+
+#: inc/customizer.php:554 inc/customizer.php:686 inc/customizer.php:1492 inc/customizer.php:3780
+msgid "Default: #333333"
+msgstr "По умолчанию: #FFFFFF"
+
+#: inc/customizer.php:567
+msgid "Top-Bar Link Background Hover Color"
+msgstr "Top Bar Цвет Ссылки При Наведении"
+
+#: inc/customizer.php:568 inc/customizer.php:624 inc/customizer.php:768 inc/customizer.php:782 inc/customizer.php:1519
+msgid "Default: #242424"
+msgstr "По умолчанию: #242424"
+
+#: inc/customizer.php:581
+msgid "Top-Bar Link Color"
+msgstr "Top Bar Цвет Ссылки"
+
+#: inc/customizer.php:595
+msgid "Top-Bar Link Hover Color"
+msgstr "Ссылка - цвет при наведении"
+
+#: inc/customizer.php:609
+msgid "Top-Bar Dropdown Arrow Color"
+msgstr "Положение стрелки раскрывающегося списка Top-Bar"
+
+#: inc/customizer.php:623
+msgid "Top-Bar Active Item Background Color"
+msgstr "Цвет фона активного элемента верхнего бара"
+
+#: inc/customizer.php:637
+msgid "Top-Bar Active Item Link Color"
+msgstr "Top Bar Цвет Ссылки"
+
+#: inc/customizer.php:651
+msgid "Top-Bar Active Item Background Hover Color"
+msgstr "Верхний бар Активный элемент Фоновый цвет наведения"
+
+#: inc/customizer.php:652 inc/customizer.php:810
+msgid "Default: #000000"
+msgstr ""
+
+#: inc/customizer.php:665
+msgid "Top-Bar Active Item Link Hover Color"
+msgstr "Top Bar Цвет Ссылки При Наведении"
+
+#: inc/customizer.php:666 inc/customizer.php:712 inc/customizer.php:740 inc/customizer.php:824 inc/customizer.php:1303
+msgid "Default: #E6E6E6"
+msgstr ""
+
+#: inc/customizer.php:671
+msgid "Off-Canvas Colors"
+msgstr "Off-Canvas  Цвета"
+
+#: inc/customizer.php:672
+msgid ""
+"Change colors of the Off-Canvas Menu. This affects both the mobile Off-Canvas menu (used in conjunction with the Top-Bar) as well as the "
+"regular Off-Canvas menu. "
+msgstr ""
+"Измените цвета меню Off-Canvas. Это влияет как на мобильное меню Off-Canvas (используется вместе с верхним баром), так и на обычное меню Off-"
+"Canvas. "
+
+#: inc/customizer.php:685
+msgid "Off-Canvas Main Menu Color"
+msgstr "Цвета Основного Меню"
+
+#: inc/customizer.php:698
+msgid "Off-Canvas Hamburger Icon Color"
+msgstr "Изменить   hamburger icon цвет"
+
+#: inc/customizer.php:711
+msgid "Off-Canvas Hamburger Icon Hover Color"
+msgstr "Цвет иконки-гамбургера при наведении"
+
+#: inc/customizer.php:725
+msgid "Off-Canvas Link Color"
+msgstr "Off-Canvas цвет ссылки"
+
+#: inc/customizer.php:739
+msgid "Off-Canvas Link Hover Color"
+msgstr "Off-Canvas цвет ссылки при наведении"
+
+#: inc/customizer.php:753
+msgid "Off-Canvas Arrow Color"
+msgstr "Off-Canvas цвет стрелки"
+
+#: inc/customizer.php:767
+msgid "Off-Canvas Link Background Hover Color"
+msgstr "Off-Canvas цвет фона при наведении"
+
+#: inc/customizer.php:781
+msgid "Off-Canvas Current Menu Item Background Color"
+msgstr "Текущий пункт меню Цвет фона"
+
+#: inc/customizer.php:795
+msgid "Off-Canvas Current Menu Item Link Color"
+msgstr "Текущий пункт меню Цвет ссылки"
+
+#: inc/customizer.php:809
+msgid "Off-Canvas Active Item Background Hover Color"
+msgstr "Активный элемент фонового цвета   Off-Canvas"
+
+#: inc/customizer.php:823
+msgid "Off-Canvas Current Menu Item Link Hover Color"
+msgstr "Текущий пункт меню Цвет ссылки при наведении"
+
+#: inc/customizer.php:829
+msgid "Post Colors"
+msgstr "Цвета сообщения"
+
+#: inc/customizer.php:830
+msgid "Change the color of text, links, hover colors and heading tags in the post content of your theme."
+msgstr "Измените цвет текста, ссылок, цветов наведения и заголовков в текстовом сообщении вашей темы."
+
+#: inc/customizer.php:843
+msgid "Category Link Color"
+msgstr "Цвет ссылок для категорий"
+
+#: inc/customizer.php:844 inc/customizer.php:872 inc/customizer.php:914 inc/customizer.php:956 inc/customizer.php:984 inc/customizer.php:1129
+#: inc/customizer.php:1247 inc/customizer.php:1351 inc/customizer.php:1412 inc/customizer.php:3352
+msgid "Default: #008CBA"
+msgstr ""
+
+#: inc/customizer.php:857
+msgid "Category Link Hover Color"
+msgstr "Цвет ссылок для категорий при наведении"
+
+#: inc/customizer.php:871
+msgid "Post Title Link Color"
+msgstr "Цвет заголовка сообщения"
+
+#: inc/customizer.php:885
+msgid "Post Title Link Hover Color"
+msgstr "Цвет заголовка сообщения при наведении"
+
+#: inc/customizer.php:899
+msgid "Single Post View Title Color"
+msgstr "Цвет заголовка статьи"
+
+#: inc/customizer.php:913
+msgid "Post Meta Link Color"
+msgstr "Цвет ссылок Meta"
+
+#: inc/customizer.php:927
+msgid "Post Meta Link Hover Color"
+msgstr "Цвет ссылок Мета при наведении"
+
+#: inc/customizer.php:941
+msgid "Post Text Color"
+msgstr "Цвет текста сообщения"
+
+#: inc/customizer.php:955
+msgid "Post Link Color"
+msgstr "Цвет ссылок в статье"
+
+#: inc/customizer.php:969
+msgid "Post Link Hover Color"
+msgstr "Цвет ссылок в статье при наведении"
+
+#: inc/customizer.php:983
+msgid "Tag Link Color"
+msgstr "Цвет тэгов"
+
+#: inc/customizer.php:997
+msgid "Tag Link Hover Color"
+msgstr "Цвет тега при наведении"
+
+#: inc/customizer.php:1011
+msgid "Post Content H1 Color"
+msgstr "Цвет загловка h1 для поста"
+
+#: inc/customizer.php:1025
+msgid "Post Content H2 Color"
+msgstr "Цвет заголовка h2 для статьи"
+
+#: inc/customizer.php:1039
+msgid "Post Content H3 Color"
+msgstr "Цвет заголовка h3 для статьи"
+
+#: inc/customizer.php:1053
+msgid "Post Content H4 Color"
+msgstr "Цвет заголовка h4 для статьи"
+
+#: inc/customizer.php:1067
+msgid "Post Content H5 Color"
+msgstr "Цвет заголовка h5 для статьи"
+
+#: inc/customizer.php:1081
+msgid "Post Content H6 Color"
+msgstr "Цвет заголовка h6 для статьи"
+
+#: inc/customizer.php:1087
+msgid "Page Colors"
+msgstr "Цвет страницы"
+
+#: inc/customizer.php:1088
+msgid "Change the color of text, links, hover colors and heading tags in the page content of your theme."
+msgstr "Измените цвет текста, ссылок, цветов наведения и заголовков в текстовом сообщении вашей темы."
+
+#: inc/customizer.php:1101
+msgid "Page Title Color"
+msgstr "Цвет заголовка страницы"
+
+#: inc/customizer.php:1114
+msgid "Page Text Color"
+msgstr "Цвет заголовка страницы"
+
+#: inc/customizer.php:1128
+msgid "Page Link Color"
+msgstr "Цвет ссылки для страницы"
+
+#: inc/customizer.php:1142
+msgid "Page Link Hover Color"
+msgstr "Цвет ссылки для страницы при наведении"
+
+#: inc/customizer.php:1156
+msgid "Page H1 Color"
+msgstr "Цвет заголовка H1 для страницы"
+
+#: inc/customizer.php:1170
+msgid "Page H2 Color"
+msgstr "Цвет заголовка H2 для страницы"
+
+#: inc/customizer.php:1184
+msgid "Page H3 Color"
+msgstr "Цвет заголовка H3 для страницы"
+
+#: inc/customizer.php:1198
+msgid "Page H4 Color"
+msgstr "Цвет заголовка H4 для страницы"
+
+#: inc/customizer.php:1212
+msgid "Page H5 Color"
+msgstr "Цвет заголовка H5 для страницы"
+
+#: inc/customizer.php:1226
+msgid "Page H6 Color"
+msgstr "Цвет заголовка H6 для страницы"
+
+#: inc/customizer.php:1232
+msgid "Pagination Colors"
+msgstr "Цвет пагинации"
+
+#: inc/customizer.php:1233
+msgid "Change the colors of the built-in pagination."
+msgstr "Измените цвета встроенной разбивки на страницы."
+
+#: inc/customizer.php:1246
+msgid "Active Link Background Color"
+msgstr "Цвет фона активной ссылки"
+
+#: inc/customizer.php:1260
+msgid "Active Link Font Color"
+msgstr "Цвет шрифта активной ссылки"
+
+#: inc/customizer.php:1274
+msgid "Pagination Link Color"
+msgstr "Цвет ссылки для пагинации"
+
+#: inc/customizer.php:1275 inc/customizer.php:1289
+msgid "Default: #999999"
+msgstr ""
+
+#: inc/customizer.php:1288
+msgid "Pagination Link Hover Color"
+msgstr "Цвет ссылки для пагинации при наведении"
+
+#: inc/customizer.php:1302
+msgid "Pagination Background Hover Color"
+msgstr "Фон для пагинации при наведении"
+
+#: inc/customizer.php:1308
+msgid "Main Sidebar Colors"
+msgstr "Цвет основной боковой панели"
+
+#: inc/customizer.php:1309
+msgid "Change widget title, link and hover colors of main sidebar."
+msgstr "Изменение названия виджета, ссылок и цветов на главной боковой панели."
+
+#: inc/customizer.php:1322
+msgid "Sidebar Widget Title Color"
+msgstr "Цвет виджета боковой панели"
+
+#: inc/customizer.php:1336
+msgid "Sidebar Text Color"
+msgstr "Цвет текста шапки и сайдбара"
+
+#: inc/customizer.php:1350
+msgid "Sidebar Link Color"
+msgstr "Цвет ссылок  боковой панели"
+
+#: inc/customizer.php:1363
+msgid "Sidebar Link Hover Color"
+msgstr "Цвет ссылки для сайдбара при наведении"
+
+#: inc/customizer.php:1369
+msgid "Footer Sidebar Colors"
+msgstr "Нижняя боковая панель цвет"
+
+#: inc/customizer.php:1370
+msgid "Change widget title, link and hover colors in Footer sidebar."
+msgstr "Изменение заголовка виджета, цвета ссылки при наведении в футере."
+
+#: inc/customizer.php:1383
+msgid "Footer Sidebar Widget Title Color"
+msgstr "Цвет заголовка для виджета в сайдбаре футера"
+
+#: inc/customizer.php:1397
+msgid "Footer Sidebar Text Color"
+msgstr "Футер сайдбар, цвет текста"
+
+#: inc/customizer.php:1411
+msgid "Footer Sidebar Link Color"
+msgstr "Футер сайдбар, цвет ссылки"
+
+#: inc/customizer.php:1424
+msgid "Footer Sidebar Link Hover Color"
+msgstr "Футер сайдбар, цвет ссылки при наведении"
+
+#: inc/customizer.php:1430
+msgid "Footer Colors"
+msgstr "Цвет футера"
+
+#: inc/customizer.php:1431
+msgid "Change text, link and hover colors in the Footer."
+msgstr "Изменить цвет текста, ссылки при наведении в футере."
+
+#: inc/customizer.php:1444
+msgid "Footer Text Color"
+msgstr "Цвет текста в футере"
+
+#: inc/customizer.php:1458
+msgid "Footer Link Color"
+msgstr "Цвет ссылки в футере"
+
+#: inc/customizer.php:1459
+msgid "Default: ##008CBA"
+msgstr ""
+
+#: inc/customizer.php:1471
+msgid "Footer Hover Color"
+msgstr "Цвет ссылки при наведении в футере"
+
+#: inc/customizer.php:1477
+msgid "Back To Top Colors"
+msgstr "Кнопка вверх - цвет"
+
+#: inc/customizer.php:1478
+msgid "Change the color and hover colors of the back to top button."
+msgstr "Кнопка вверх, изменить цвет ссылки."
+
+#: inc/customizer.php:1491
+msgid "Back To Top Background Color"
+msgstr "Цвет фона кнопки Наверх"
+
+#: inc/customizer.php:1505
+msgid "Back To Top Font Color"
+msgstr "Кнопка вверх - цвет шрифта"
+
+#: inc/customizer.php:1518
+msgid "Back To Top Background Hover Color"
+msgstr "Кнопка вверх цвет фона при наведении"
+
+#: inc/customizer.php:1531
+msgid "Back To Top Font Hover Color"
+msgstr "Кнопка вверх цвет шрифта при наведении"
+
+#: inc/customizer.php:1537
+msgid "Social Menu Colors"
+msgstr "Меню социальные сети - цвет"
+
+#: inc/customizer.php:1538
+msgid "Change the color and hover colors of the Social Menu icons."
+msgstr "Измените цвет и наведении цвета иконки социального меню."
+
+#: inc/customizer.php:1550
+msgid "Feed Icon Color"
+msgstr "Feed - цвет иконки"
+
+#: inc/customizer.php:1563
+msgid "Feed Icon Hover Color"
+msgstr "Feed - цвет иконки при наведении"
+
+#: inc/customizer.php:1576
+msgid "Codepen Icon Color"
+msgstr "Цвет значка Codepen"
+
+#: inc/customizer.php:1589
+msgid "Codepen Icon Hover Color"
+msgstr "Codepen Iцвет иконки при наведении"
+
+#: inc/customizer.php:1602
+msgid "Digg Icon Color"
+msgstr "Digg цвет иконки"
+
+#: inc/customizer.php:1615
+msgid "Digg Icon Hover Color"
+msgstr "Digg цвет иконки при наведении"
+
+#: inc/customizer.php:1628
+msgid "Dribbble Icon Color"
+msgstr "Dribbble Icon цвет"
+
+#: inc/customizer.php:1641
+msgid "Dribbble Icon Hover Color"
+msgstr "Dribbble Icon цвет при наведени"
+
+#: inc/customizer.php:1654
+msgid "Dropbox Icon Color"
+msgstr "Dropbox Icon цвет"
+
+#: inc/customizer.php:1667
+msgid "Dropbox Icon Hover Color"
+msgstr "Dropbox Icon цвет при наведении"
+
+#: inc/customizer.php:1680
+msgid "Facebook Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1693
+msgid "Facebook Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1706
+msgid "Flickr Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1719
+msgid "Flickr Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1732
+msgid "Foursquare Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1745
+msgid "Foursquare Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1758
+msgid "Google+ Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1771
+msgid "Google+ Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1784
+msgid "GitHub Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1797
+msgid "GitHub Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1810
+msgid "Instagram Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1823
+msgid "Instagram Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1836
+msgid "LinkedIn Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1849
+msgid "LinkedIn Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1862
+msgid "Pinterest Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1875
+msgid "Pinterest Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1888
+msgid "Pocket Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1901
+msgid "Pocket Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1914
+msgid "PollDaddy Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1927
+msgid "PollDaddy Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1940
+msgid "Reddit Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1953
+msgid "Reddit Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1966
+msgid "Stumbleupon Icon Color"
+msgstr ""
+
+#: inc/customizer.php:1979
+msgid "Stumbleupon Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1992
+msgid "Tumblr Icon Color"
+msgstr ""
+
+#: inc/customizer.php:2005
+msgid "Tumblr Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:2018
+msgid "Twitter Icon Color"
+msgstr ""
+
+#: inc/customizer.php:2031
+msgid "Twitter Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:2044
+msgid "Vimeo Icon Color"
+msgstr ""
+
+#: inc/customizer.php:2057
+msgid "Vimeo Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:2070
+msgid "WordPress Icon Color"
+msgstr ""
+
+#: inc/customizer.php:2083
+msgid "WordPress Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:2096
+msgid "YouTube Icon Color"
+msgstr ""
+
+#: inc/customizer.php:2109
+msgid "YouTube Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:2122
+msgid "MailTo Icon Color"
+msgstr ""
+
+#: inc/customizer.php:2135
+msgid "MailTo Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:2148
+msgid "Spotify Icon Color"
+msgstr ""
+
+#: inc/customizer.php:2161
+msgid "Spotify Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:2174
+msgid "Twitch TV Icon Color"
+msgstr ""
+
+#: inc/customizer.php:2187
+msgid "Twitch TV Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:2202
+msgid "Show title on home page?"
+msgstr "Показать заголовок домашней страницы?"
+
+#: inc/customizer.php:2203
+msgid "Default: Yes, show the title"
+msgstr "Да, показать область заголовка"
+
+#: inc/customizer.php:2206 inc/customizer.php:4051
+msgid "Yes, show the title"
+msgstr "Да, показать заголовок"
+
+#: inc/customizer.php:2207 inc/customizer.php:4052
+msgid "No, hide the title"
+msgstr "Нет, скрыть заголовок"
+
+#: inc/customizer.php:2211
+msgid "Foundation CSS Settings"
+msgstr "Foundation CSS настройки"
+
+#: inc/customizer.php:2212
+msgid "This section allows you to choose which Foundation CSS system, float or flex, you want to use."
+msgstr ""
+
+#: inc/customizer.php:2226
+msgid "Which system to use?"
+msgstr "Какую систему использовать?"
+
+#: inc/customizer.php:2227
+msgid "Default: Float"
+msgstr "По умолчанию: Плавающая"
+
+#: inc/customizer.php:2230 inc/customizer.php:4103
+msgid "Float"
+msgstr "Плавающая"
+
+#: inc/customizer.php:2231 inc/customizer.php:4104
+msgid "Flex"
+msgstr "Гибкая"
+
+#: inc/customizer.php:2235
+msgid "Main Content Area"
+msgstr "Основное содержание"
+
+#: inc/customizer.php:2236
+msgid "Change width and background color of main content area."
+msgstr "Изменить ширину и цвет фона основной области содержимого."
+
+#: inc/customizer.php:2249
+msgid "Content Width"
+msgstr "Ширина контента"
+
+#: inc/customizer.php:2263
+msgid "Content Background Color"
+msgstr "Цвет фона содержимого"
+
+#: inc/customizer.php:2269
+msgid "Content Position"
+msgstr "Позиция содержимого"
+
+#: inc/customizer.php:2270
+msgid "Adjust the position of the main content area."
+msgstr "Отрегулируйте положение основной области содержимого."
+
+#: inc/customizer.php:2283
+msgid "Main Content Positon"
+msgstr "Положение основного контента"
+
+#: inc/customizer.php:2292
+msgid "Post Configuration"
+msgstr ""
+
+#: inc/customizer.php:2293
+msgid "Configure the appearance of certain post elements in your theme."
+msgstr "Настройте внешний вид определенных элементов сообщения в своей теме."
+
+#: inc/customizer.php:2306
+msgid "Show or hide categories?"
+msgstr "Показать - скрыть категории?"
+
+#: inc/customizer.php:2307
+msgid "Default: Yes, show categories"
+msgstr "По умолчанию: да, показать категорию"
+
+#: inc/customizer.php:2310 inc/customizer.php:3930
+msgid "Yes, show categories"
+msgstr "Да показывать категории"
+
+#: inc/customizer.php:2311 inc/customizer.php:3931
+msgid "No, hide categories"
+msgstr "Нет, скрыть категори"
+
+#: inc/customizer.php:2324
+msgid "Where to display categories?"
+msgstr "Где показывать категории?"
+
+#: inc/customizer.php:2325
+msgid "Default: Above post title"
+msgstr "По умолчанию: Над заголовком собщения"
+
+#: inc/customizer.php:2328
+msgid "Above post title"
+msgstr "Над заголовком сообщения"
+
+#: inc/customizer.php:2329
+msgid "Above post tags"
+msgstr "Над тегом"
+
+#: inc/customizer.php:2343
+msgid "Categories Above Title Font Size"
+msgstr "Категории  Размер шрифта заголовка"
+
+#: inc/customizer.php:2344 inc/customizer.php:2359 inc/customizer.php:2420 inc/customizer.php:2649
+msgid "Default: 0.75rem"
+msgstr ""
+
+#: inc/customizer.php:2358
+msgid "Categories Above Tags Font Size"
+msgstr "Категории Над тегами Размер шрифта"
+
+#: inc/customizer.php:2373
+msgid "Categories Displayed Above Tags Genericon Font Size"
+msgstr "Категории, отображаемые над тегами Размер шрифта Genericon"
+
+#: inc/customizer.php:2387
+msgid "Post Title Font Size"
+msgstr "Заголовок статьи, размер шрифта"
+
+#: inc/customizer.php:2400
+msgid "Display post meta?"
+msgstr "Показать сообщение meta?"
+
+#: inc/customizer.php:2401
+msgid "Default: Yes, display post meta"
+msgstr "По умолчанию: да, показать мета сообщения"
+
+#: inc/customizer.php:2404 inc/customizer.php:3954
+msgid "Yes, display post meta"
+msgstr "Да, показать мета сообщение"
+
+#: inc/customizer.php:2405 inc/customizer.php:3955
+msgid "No, hide post meta"
+msgstr "Нет, скрыть мета"
+
+#: inc/customizer.php:2419
+msgid "Post Meta Font Size"
+msgstr "Размер шрифта мета данных"
+
+#: inc/customizer.php:2434
+msgid "Post Meta Genericon Size"
+msgstr "Размер иконок мета данных"
+
+#: inc/customizer.php:2447
+msgid "Show full post or excerpt?"
+msgstr ""
+"26/5000\n"
+"Показать полный пост или фрагмент?"
+
+#: inc/customizer.php:2448
+msgid "Default: Full Post"
+msgstr "По умолчанию: Полный пост"
+
+#: inc/customizer.php:2451 inc/customizer.php:3966
+msgid "Full Post"
+msgstr "Полный пост"
+
+#: inc/customizer.php:2452 inc/customizer.php:3967
+msgid "Excerpt"
+msgstr "Фрагмент"
+
+#: inc/customizer.php:2464
+msgid "Display post thumbnails?"
+msgstr "Показать миниатюры статьи?"
+
+#: inc/customizer.php:2481
+msgid "Show single view post thumbnail?"
+msgstr "Показать одиночную миниатюру статьи?"
+
+#: inc/customizer.php:2499
+msgid "Post Font Size"
+msgstr "Размер шрифта сообщения"
+
+#: inc/customizer.php:2512
+msgid "Change Font Size of Content Headings"
+msgstr "Изменить размер шрифта заголовков содержимого"
+
+#: inc/customizer.php:2513
+msgid "Change the font size of H1, H2, H3, H4, H5 and H6 in posts."
+msgstr "Измените размер шрифта H1, H2, H3, H4, H5 и H6 в сообщениях."
+
+#: inc/customizer.php:2516 inc/customizer.php:2865 inc/customizer.php:4115 inc/customizer.php:4132 inc/customizer.php:4149
+msgid "Select a Heading Tag"
+msgstr "Выбрать тип  заголовка"
+
+#: inc/customizer.php:2517 inc/customizer.php:2866 inc/customizer.php:4116 inc/customizer.php:4133
+msgid "H1 Heading Tag"
+msgstr ""
+
+#: inc/customizer.php:2518 inc/customizer.php:2867 inc/customizer.php:4117 inc/customizer.php:4134
+msgid "H2 Heading Tag"
+msgstr ""
+
+#: inc/customizer.php:2519 inc/customizer.php:2868 inc/customizer.php:4118 inc/customizer.php:4135
+msgid "H3 Heading Tag"
+msgstr ""
+
+#: inc/customizer.php:2520 inc/customizer.php:2869 inc/customizer.php:4119 inc/customizer.php:4136
+msgid "H4 Heading Tag"
+msgstr ""
+
+#: inc/customizer.php:2521 inc/customizer.php:2870 inc/customizer.php:4120 inc/customizer.php:4137
+msgid "H5 Heading Tag"
+msgstr ""
+
+#: inc/customizer.php:2522 inc/customizer.php:2871 inc/customizer.php:4121 inc/customizer.php:4138
+msgid "H6 Heading Tag"
+msgstr ""
+
+#: inc/customizer.php:2534
+msgid "Post H1 Font Size"
+msgstr "Размер шрифта h1"
+
+#: inc/customizer.php:2550
+msgid "Post H2 Font Size"
+msgstr "Размер шрифта h2"
+
+#: inc/customizer.php:2551 inc/customizer.php:2900
+msgid "Default: 2.5rem"
+msgstr ""
+
+#: inc/customizer.php:2566
+msgid "Post H3 Font Size"
+msgstr "Размер шрифта h3"
+
+#: inc/customizer.php:2567 inc/customizer.php:2916
+msgid "Default: 1.9375rem"
+msgstr ""
+
+#: inc/customizer.php:2582
+msgid "Post H4 Font Size"
+msgstr "Размер шрифта h4"
+
+#: inc/customizer.php:2583
+msgid "Default: 1.5625rem"
+msgstr ""
+
+#: inc/customizer.php:2598
+msgid "Post H5 Font Size"
+msgstr "Размер шрифта h5"
+
+#: inc/customizer.php:2599 inc/customizer.php:2948
+msgid "Default: 1.25rem"
+msgstr ""
+
+#: inc/customizer.php:2614
+msgid "Post H6 Font Size"
+msgstr "Размер шрифта h6"
+
+#: inc/customizer.php:2629
+msgid "Display post tags?"
+msgstr "Показать теги сообщения?"
+
+#: inc/customizer.php:2630
+msgid "Default: Yes, display post tags"
+msgstr "По умолчанию: Да, показывать"
+
+#: inc/customizer.php:2633 inc/customizer.php:4002
+msgid "Yes, display post tags"
+msgstr "Да, показывать теги"
+
+#: inc/customizer.php:2634 inc/customizer.php:4003
+msgid "No, hide post tags"
+msgstr "Нет, скрыть теги"
+
+#: inc/customizer.php:2648
+msgid "Tag Font Size"
+msgstr "Размер шрифта тегов"
+
+#: inc/customizer.php:2663
+msgid "Tag Genericon Size"
+msgstr "Иконка тегов - размер"
+
+#: inc/customizer.php:2677
+msgid "Post Link Decoration"
+msgstr "Оформление ссылок"
+
+#: inc/customizer.php:2678 inc/customizer.php:2698 inc/customizer.php:2805 inc/customizer.php:3051 inc/customizer.php:3209
+msgid "Default: None"
+msgstr "По умолчанию: нет"
+
+#: inc/customizer.php:2681 inc/customizer.php:2701 inc/customizer.php:2808 inc/customizer.php:2829 inc/customizer.php:3003
+#: inc/customizer.php:3054 inc/customizer.php:3075 inc/customizer.php:3161 inc/customizer.php:3212 inc/customizer.php:3233
+#: inc/customizer.php:4064
+msgid "None"
+msgstr "Нет"
+
+#: inc/customizer.php:2682 inc/customizer.php:2702 inc/customizer.php:2809 inc/customizer.php:2828 inc/customizer.php:3055
+#: inc/customizer.php:3074 inc/customizer.php:3213 inc/customizer.php:3232
+msgid "Underline"
+msgstr "Подчеркивать"
+
+#: inc/customizer.php:2683 inc/customizer.php:2703 inc/customizer.php:2810 inc/customizer.php:2830 inc/customizer.php:3056
+#: inc/customizer.php:3076 inc/customizer.php:3214 inc/customizer.php:3234
+msgid "Overline"
+msgstr "Линия сверху"
+
+#: inc/customizer.php:2684
+msgid "Line-through"
+msgstr "Зачеркнутая"
+
+#: inc/customizer.php:2697
+msgid "Post Link Hover Decoration"
+msgstr "Оформление ссылки при наведении"
+
+#: inc/customizer.php:2704 inc/customizer.php:2811 inc/customizer.php:2831 inc/customizer.php:3057 inc/customizer.php:3077
+#: inc/customizer.php:3215 inc/customizer.php:3235
+msgid "Line-Through"
+msgstr "Зачеркивать"
+
+#: inc/customizer.php:2717
+msgid "Post Link Font Weight"
+msgstr "Ширина шрифта ссылки"
+
+#: inc/customizer.php:2721 inc/customizer.php:2848 inc/customizer.php:3022 inc/customizer.php:3094 inc/customizer.php:3180
+#: inc/customizer.php:3252 inc/customizer.php:3412 inc/customizer.php:3492 inc/customizer.php:3572 inc/customizer.php:3652
+#: inc/customizer.php:3732 inc/customizer.php:3812 inc/customizer.php:4091
+msgid "Normal"
+msgstr "Нормальная"
+
+#: inc/customizer.php:2722 inc/customizer.php:2849 inc/customizer.php:3023 inc/customizer.php:3095 inc/customizer.php:3181
+#: inc/customizer.php:3253 inc/customizer.php:3413 inc/customizer.php:3493 inc/customizer.php:3573 inc/customizer.php:3653
+#: inc/customizer.php:3733 inc/customizer.php:3813 inc/customizer.php:4092
+msgid "Bold"
+msgstr "Жирная"
+
+#: inc/customizer.php:2735
+msgid "Default Post Navigation or Pagination?"
+msgstr "По умолчанию навигация и разбивка на страницы (пагинация)?"
+
+#: inc/customizer.php:2736
+msgid "Default: Default"
+msgstr ""
+
+#: inc/customizer.php:2739 inc/customizer.php:4014
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:2740 inc/customizer.php:4015
+msgid "Pagination"
+msgstr "Пагинация"
+
+#: inc/customizer.php:2752
+msgid "Change Comment Form Layout?"
+msgstr "Изменить вид формы комментариев?"
+
+#: inc/customizer.php:2753
+msgid "Default: New Comment Layout"
+msgstr "По умолчанию: Новая шаблон комментариев"
+
+#: inc/customizer.php:2756 inc/customizer.php:4026
+msgid "New Comment Layout"
+msgstr "Новый шаблон комментариев"
+
+#: inc/customizer.php:2757 inc/customizer.php:4027
+msgid "Old Comment Layout"
+msgstr "Старый шаблон комментариев"
+
+#: inc/customizer.php:2761
+msgid "Page Configuration"
+msgstr "Настройки страниц"
+
+#: inc/customizer.php:2762
+msgid "Configure the appearance of certain page elements in your theme."
+msgstr "Настройте внешний вид определенных элементов сообщения в своей теме."
+
+#: inc/customizer.php:2776
+msgid "Page Title Font Size"
+msgstr "Размер шрифта заголовка страницы"
+
+#: inc/customizer.php:2790
+msgid "Page Content Font Size"
+msgstr "Размер шрифта содержимого страницы"
+
+#: inc/customizer.php:2804
+msgid "Page Link Decoration"
+msgstr "Оформление ссылок на странице"
+
+#: inc/customizer.php:2824
+msgid "Page Link Hover Decoration"
+msgstr "Оформление ссылок на странице при наведении"
+
+#: inc/customizer.php:2825 inc/customizer.php:3071 inc/customizer.php:3229
+msgid "Default: Underline"
+msgstr "По умолчанию: подчеркивание"
+
+#: inc/customizer.php:2844
+msgid "Page Link Font Weight"
+msgstr "Толщина ссылки на странице"
+
+#: inc/customizer.php:2861
+msgid "Change Font Size of Page Headings"
+msgstr "Именить размер шрифта заголовка страниц"
+
+#: inc/customizer.php:2862
+msgid "Change the font size of H1, H2, H3, H4, H5 and H6."
+msgstr "Измените размер шрифта H1, H2, H3, H4, H5 и H6 в сообщениях."
+
+#: inc/customizer.php:2883
+msgid "Page H1 Font Size"
+msgstr "Размер шрифта  h1 для страницы"
+
+#: inc/customizer.php:2899
+msgid "Page H2 Font Size"
+msgstr "Размер шрифта  h2  для страницы"
+
+#: inc/customizer.php:2915
+msgid "Page H3 Font Size"
+msgstr "Размер шрифта  h3  для страницы"
+
+#: inc/customizer.php:2931
+msgid "Page H4 Font Size"
+msgstr "Размер шрифта  h4 для страницы"
+
+#: inc/customizer.php:2932
+msgid "Default: 1.5626rem"
+msgstr ""
+
+#: inc/customizer.php:2947
+msgid "Page H5 Font Size"
+msgstr "Размер шрифта  h5  для страницы"
+
+#: inc/customizer.php:2962
+msgid "Page H6 Font Size"
+msgstr "Размер шрифта  h6  для страницы"
+
+#: inc/customizer.php:2969
+msgid "Main Sidebar Content"
+msgstr "Содержимое главной боковой панели"
+
+#: inc/customizer.php:2970
+msgid "Deals with various settings of the main sidebar of your theme."
+msgstr "Установите цветовые предпочтения для основной области содержимого вашего сайта."
+
+#: inc/customizer.php:2983
+msgid "Sidebar Widget Title Font Size"
+msgstr "Размер шрифта заголовка виджета"
+
+#: inc/customizer.php:2984 inc/customizer.php:3036 inc/customizer.php:3142 inc/customizer.php:3194
+msgid "Default: 0.875rem"
+msgstr ""
+
+#: inc/customizer.php:2998
+msgid "Sidebar Widget Title Text Transform"
+msgstr "Текст заголовка виджета сайдбара"
+
+#: inc/customizer.php:2999 inc/customizer.php:3157
+msgid "Default: Uppercase"
+msgstr "По умолчанию: Подчеркивание"
+
+#: inc/customizer.php:3002 inc/customizer.php:3160 inc/customizer.php:4063
+msgid "Uppercase"
+msgstr "Подчеркивание"
+
+#: inc/customizer.php:3004 inc/customizer.php:3162 inc/customizer.php:4065
+msgid "Capitalize"
+msgstr "Прописными буквамни"
+
+#: inc/customizer.php:3005 inc/customizer.php:3163 inc/customizer.php:4066
+msgid "Lowercase"
+msgstr "Нижний регистр"
+
+#: inc/customizer.php:3018
+msgid "Sidebar Widget Title Weight"
+msgstr "Текст заголовка виджета сайдбара"
+
+#: inc/customizer.php:3035
+msgid "Sidebar Font Size"
+msgstr "Размер шрифта сайдбара"
+
+#: inc/customizer.php:3050
+msgid "Sidebar Link Decoration"
+msgstr "Оформление ссылок сайдбара"
+
+#: inc/customizer.php:3070
+msgid "Sidebar Link Hover Decoration"
+msgstr "Оформление ссылок сайдбара при наведении"
+
+#: inc/customizer.php:3090
+msgid "Sidebar Link Font Weight"
+msgstr "Толщина ссылки садбара"
+
+#: inc/customizer.php:3099
+msgid "Footer Sidebar Content"
+msgstr "Контент сайдбара в подвале"
+
+#: inc/customizer.php:3100
+msgid "Change settings for the Footer Sidebar area of your theme."
+msgstr "Измените настройки сайдбара в подвале."
+
+#: inc/customizer.php:3113
+msgid "Footer Sidebar Content Width"
+msgstr "Ширина конента сайдбара в подвале"
+
+#: inc/customizer.php:3127
+msgid "Footer Sidebar Background Color"
+msgstr "Цвет фона сайдбара футера"
+
+#: inc/customizer.php:3141
+msgid "Footer Sidebar Widget Title Font Size"
+msgstr "Размер заголовка виджета подвала"
+
+#: inc/customizer.php:3156
+msgid "Footer Sidebar Widget Title Transform"
+msgstr "Текст заголовка виджета подвала"
+
+#: inc/customizer.php:3176
+msgid "Footer Sidebar Widget Title Weight"
+msgstr "Толщина заголовка виджета подвала"
+
+#: inc/customizer.php:3193
+msgid "Footer Sidebar Font Size"
+msgstr "Размер шрифта сайдбара в подвале"
+
+#: inc/customizer.php:3208
+msgid "Footer Sidebar Link Decoration"
+msgstr "Оформление ссылки сайдбара в подвале"
+
+#: inc/customizer.php:3228
+msgid "Footer Sidebar Link Hover Decoration"
+msgstr "Оформление ссылки сайдбара в подвале при наведении"
+
+#: inc/customizer.php:3248
+msgid "Footer Sidebar Link Font Weight"
+msgstr "Толщина ссылки сайдбара в подвале"
+
+#: inc/customizer.php:3257
+msgid "Footer Content"
+msgstr "Контент подвала"
+
+#: inc/customizer.php:3258
+msgid "Deals with the content area of the footer."
+msgstr "Настройки контента для подвала."
+
+#: inc/customizer.php:3271
+msgid "Footer Content Width"
+msgstr "Ширина контента подвала"
+
+#: inc/customizer.php:3272
+msgid "Default: 74rem"
+msgstr ""
+
+#: inc/customizer.php:3285
+msgid "Footer Content Background Color"
+msgstr "Цвет фона контента в подвале"
+
+#: inc/customizer.php:3299
+msgid "Footer Text"
+msgstr "Текст футера"
+
+#: inc/customizer.php:3300
+msgid "Change text in the footer area. HTML is allowed."
+msgstr "Изменить текст в области нижнего колонтитула. Допускается HTML."
+
+#: inc/customizer.php:3313
+msgid "Footer Content Position"
+msgstr "Позиция содержимого в футере"
+
+#: inc/customizer.php:3314
+msgid "Default: Text &amp; Nav Centered"
+msgstr ""
+
+#: inc/customizer.php:3317 inc/customizer.php:4038
+msgid "Text &amp; Nav Centered"
+msgstr "Текст &amp; Nav по центру"
+
+#: inc/customizer.php:3318 inc/customizer.php:4039
+msgid "Text Right - Nav Left"
+msgstr "Текст справа - навигация слева"
+
+#: inc/customizer.php:3319 inc/customizer.php:4040
+msgid "Text Left - Nav Right"
+msgstr "Текст слева - навигация справа"
+
+#: inc/customizer.php:3331
+msgid "Footer Font Size"
+msgstr "Размер шрифта в подвале"
+
+#: inc/customizer.php:3337
+msgid "Primary Button Settings"
+msgstr "Настройки главных кнопок"
+
+#: inc/customizer.php:3338
+msgid "This section deals with the settings of Foundations Primary Button."
+msgstr "Настройки  основной кнопки Foundations."
+
+#: inc/customizer.php:3351
+msgid "Primary Button Color"
+msgstr "Цвет главной кнопки"
+
+#: inc/customizer.php:3365
+msgid "Primary Button Hover Color"
+msgstr "Цвет главной кнопки при наведении"
+
+#: inc/customizer.php:3379
+msgid "Primary Button Font Color"
+msgstr "Цвет шрифта главной кнопки"
+
+#: inc/customizer.php:3393
+msgid "Primary Button Font Hover Color"
+msgstr "Цвет шрифта главной кнопки при навдении"
+
+#: inc/customizer.php:3408
+msgid "Primary Button Font Weight"
+msgstr "Толщина шрифта главной кнопки"
+
+#: inc/customizer.php:3417
+msgid "Secondary Button Settings"
+msgstr "Настройки дополнительных кнопок"
+
+#: inc/customizer.php:3418
+msgid "This section deals with the settings of Foundations Secondary Button."
+msgstr "Настройки дополнительных кнопок Foundations."
+
+#: inc/customizer.php:3431
+msgid "Secondary Button Color"
+msgstr "Цвет дополнительных кнопок"
+
+#: inc/customizer.php:3432 inc/customizer.php:3474
+msgid "Default: #777777"
+msgstr ""
+
+#: inc/customizer.php:3445
+msgid "Secondary Button Hover Color"
+msgstr "Цвет доп. кнопки при наведении"
+
+#: inc/customizer.php:3446
+msgid "Default: #5f5f5f"
+msgstr ""
+
+#: inc/customizer.php:3459
+msgid "Secondary Button Font Color"
+msgstr "Цвет шрифта доп. кнопки"
+
+#: inc/customizer.php:3473
+msgid "Secondary Button Font Hover Color"
+msgstr "Цвет шрифта доп. кнопки при наведении"
+
+#: inc/customizer.php:3488
+msgid "Secondary Button Font Weight"
+msgstr "Толщина шрифта доп. кнопки"
+
+#: inc/customizer.php:3497
+msgid "Success Button Settings"
+msgstr "Настройки кнопки успеха"
+
+#: inc/customizer.php:3498
+msgid "This section deals with the settings of Foundations Success Button."
+msgstr "Раздел настроек для кнопки успешно."
+
+#: inc/customizer.php:3511
+msgid "Success Button Color"
+msgstr "Цвет кнопки"
+
+#: inc/customizer.php:3512
+msgid "Default: #3adb76"
+msgstr ""
+
+#: inc/customizer.php:3525
+msgid "Success Button Hover Color"
+msgstr "Цвет кнопки при наведении"
+
+#: inc/customizer.php:3526
+msgid "Default: #22bb5b"
+msgstr ""
+
+#: inc/customizer.php:3539
+msgid "Success Button Font Color"
+msgstr "Цвет шрифта кнопки"
+
+#: inc/customizer.php:3553
+msgid "Success Button Font Hover Color"
+msgstr "Цвет шрифта кнопки при наведении"
+
+#: inc/customizer.php:3568
+msgid "Success Button Font Weight"
+msgstr "Толщина шрифта кнопки"
+
+#: inc/customizer.php:3577
+msgid "Warning Button Settings"
+msgstr "Настройки кнопки Внимание"
+
+#: inc/customizer.php:3578
+msgid "This section deals with the settings of Foundations Warning Button."
+msgstr "Группа настроек кнопки Внимание."
+
+#: inc/customizer.php:3591
+msgid "Warning Button Color"
+msgstr "Цвет кнопки"
+
+#: inc/customizer.php:3592
+msgid "Default: #ffae00"
+msgstr ""
+
+#: inc/customizer.php:3605
+msgid "Warning Button Hover Color"
+msgstr "Цвет кнопки при наведении"
+
+#: inc/customizer.php:3606
+msgid "Default: #cc8b00"
+msgstr ""
+
+#: inc/customizer.php:3619
+msgid "Warning Button Font Color"
+msgstr "Цвет шрифта кнопки"
+
+#: inc/customizer.php:3633
+msgid "Warning Button Font Hover Color"
+msgstr "Цвет шрифта кнопки при наведении"
+
+#: inc/customizer.php:3648
+msgid "Warning Button Font Weight"
+msgstr "Толщина шрифта кнопки"
+
+#: inc/customizer.php:3657
+msgid "Alert Button Settings"
+msgstr "Настройки кнопки оповещения"
+
+#: inc/customizer.php:3658
+msgid "This section deals with the settings of Foundations Alert Button."
+msgstr "Группа настроек кнопки оповещения."
+
+#: inc/customizer.php:3671
+msgid "Alert Button Color"
+msgstr "Цвет кнопки оповещения"
+
+#: inc/customizer.php:3672
+msgid "Default: #ec5840"
+msgstr ""
+
+#: inc/customizer.php:3685
+msgid "Alert Button Hover Color"
+msgstr "Цвет кнопки при наведении"
+
+#: inc/customizer.php:3686
+msgid "Default: #da3116"
+msgstr ""
+
+#: inc/customizer.php:3699
+msgid "Alert Button Font Color"
+msgstr "Цвет шрифта кнопки"
+
+#: inc/customizer.php:3713
+msgid "Alert Button Font Hover Color"
+msgstr "Цвет шрифта кнопки при наведении"
+
+#: inc/customizer.php:3727
+msgid "Alert Button Font Weight"
+msgstr "Толщина шрифта кнопки"
+
+#: inc/customizer.php:3737
+msgid "Info Button Settings"
+msgstr "Настройки кнопки Инфо"
+
+#: inc/customizer.php:3738
+msgid "This section deals with the settings of Foundations Info Button."
+msgstr "Группа настроек  кнопки Информация."
+
+#: inc/customizer.php:3751
+msgid "Info Button Color"
+msgstr "Цвет кнопки"
+
+#: inc/customizer.php:3752
+msgid "Default: #a0d3e8"
+msgstr ""
+
+#: inc/customizer.php:3765
+msgid "Info Button Hover Color"
+msgstr "Цвет кнопки при наведении"
+
+#: inc/customizer.php:3766
+msgid "Default: #61b6d9"
+msgstr ""
+
+#: inc/customizer.php:3779
+msgid "Info Button Font Color"
+msgstr "Цвет шрифта кнопки"
+
+#: inc/customizer.php:3793
+msgid "Info Button Font Hover Color"
+msgstr "Цвет шрифта кнопки при наведении"
+
+#: inc/customizer.php:3808
+msgid "Info Button Font Weight"
+msgstr "Толщина шрифта кнопки"
+
+#: inc/customizer.php:3942
+msgid "Above the post title"
+msgstr "Над заголовком статьи"
+
+#: inc/customizer.php:3943
+msgid "Above the post tags"
+msgstr "Надо тегом статьи"
+
+#: inc/customizer.php:4077
+msgid "none"
+msgstr "отсутствует"
+
+#: inc/customizer.php:4078
+msgid "underline"
+msgstr "подчеркивание"
+
+#: inc/customizer.php:4079
+msgid "overline"
+msgstr "черта сверху"
+
+#: inc/customizer.php:4080
+msgid "line-through"
+msgstr "зачеркнута"
+
+#: inc/customizer.php:4150
+msgid "Post H1 Color"
+msgstr "Цвет заголовка h1 для поста"
+
+#: inc/customizer.php:4151
+msgid "Post H2 Color"
+msgstr "Цвет заголовка h2 для поста"
+
+#: inc/customizer.php:4152
+msgid "Post H3 Color"
+msgstr "Цвет заголовка h3 для поста"
+
+#: inc/customizer.php:4153
+msgid "Post H4 Color"
+msgstr "Цвет заголовка h4 для поста"
+
+#: inc/customizer.php:4154
+msgid "Post H5 Color"
+msgstr "Цвет заголовка h5 для поста"
+
+#: inc/customizer.php:4155
+msgid "Post H6 Color"
+msgstr "Цвет заголовка h6 для поста"
+
+#: inc/theme-dashboard.php:16
+msgid "WP-Forge Theme"
+msgstr ""
+
+#: inc/theme-dashboard.php:17
+msgid "WP-Forge Theme "
+msgstr ""
+
+#: inc/theme-dashboard.php:26
+#, php-format
+msgid "Thank you for choosing %1$s! Please take a minute and visit the %2$s"
+msgstr "Спасибо, что выбрали  %1$s ! Пожалуйста, уделите минуту и посетите %2$s"
+
+#: inc/theme-dashboard.php:26
+msgid "Welcome Page"
+msgstr "Страница приветствия"
+
+#: inc/theme-dashboard.php:51
+#, php-format
+msgid "%s %1s"
+msgstr ""
+
+#: inc/theme-dashboard.php:53
+msgid ""
+"A WordPress theme built with Foundation for Sites (6.3.1) from Zurb, the most advanced responsive front-end framework in the world. By "
+"combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again!"
+msgstr ""
+"Тема WordPress, созданная с помощью Foundation for Sites (6.3.1) из Zurb, самой передовой отзывчивой интерфейсной платформы в мире. Комбинируя "
+"WordPress и Foundation, вы получаете тему WordPress, которая делает создание веб-сайтов веселым и захватывающим!"
+
+#: inc/theme-dashboard.php:60
+msgid "Getting Started"
+msgstr "Начать"
+
+#: inc/theme-dashboard.php:62
+msgid "Changelog"
+msgstr "Изменения"
+
+#: inc/theme-dashboard.php:64
+msgid "Themes"
+msgstr "Тема"
+
+#: inc/theme-dashboard.php:75
+msgid "Theme Customizer"
+msgstr "Настройки темы"
+
+#: inc/theme-dashboard.php:76
+#, php-format
+msgid "%s uses the Theme Customizer for all theme settings. Click \"Customize WP-Forge\" to start personalizing your site."
+msgstr "%s использует Настройщик тем для всех параметров темы. Нажмите «Настроить WP-Forge», чтобы начать персонализацию своего сайта."
+
+#: inc/theme-dashboard.php:78
+msgid "Customize WP-Forge"
+msgstr "Настроит WP-Forge"
+
+#: inc/theme-dashboard.php:83
+msgid "Theme Documentation"
+msgstr "Документация темы"
+
+#: inc/theme-dashboard.php:84
+#, php-format
+msgid "Need any help to setup and configure %s? Please read the theme documentation."
+msgstr "Нужна помощь в  настройке % s ? Пожалуйста, ознакомьтесь с документацией по теме."
+
+#: inc/theme-dashboard.php:86
+msgid "WP-Forge Documentation"
+msgstr "WP-Forge документация"
+
+#: inc/theme-dashboard.php:91
+msgid "Having Trouble, Need some help?"
+msgstr "Возникли проблемы, нужна помощь?"
+
+#: inc/theme-dashboard.php:92
+#, php-format
+msgid "Support for %s is provided through the WordPress Support Forums."
+msgstr "Поддержка % s предоставляется через Форумы поддержки WordPress."
+
+#: inc/theme-dashboard.php:94
+msgid "Visit Support Forums"
+msgstr "Посетить форум поддержки"
+
+#: inc/theme-dashboard.php:102
+msgid "What do you think of WP-Forge?"
+msgstr "Что вы думаете о WP-Forge?"
+
+#: inc/theme-dashboard.php:103
+msgid "Please <a target=\"_blank\" href=\"https://wordpress.org/support/theme/wp-forge/reviews/\">rate and review WP-Forge</a> on WordPress.org."
+msgstr ""
+
+#: inc/theme-dashboard.php:348
+msgid "WP-Edify"
+msgstr "WP-рекомендации"
+
+#: inc/theme-dashboard.php:349
+msgid ""
+"A one page WordPress theme built with Foundation for Sites (Foundation 6.4) from Zurb. Built specifically with the LearnDash LMS plugin in "
+"mind. If creating an educational site is not your goal, you can still use WP-Edify to create any kind of site you desire. Simple and easy! "
+"Keep in mind the demo is not complete."
+msgstr ""
+"Одностраничник на WordPress, созданный с помощью Foundation for Sites (Foundation 6.4) из Zurb. Построен специально с плагином LearnDash "
+"LMS. Если создание образовательного сайта не является вашей целью, вы все равно можете использовать WP-Edify для создания любого желаемого "
+"сайта. Простой и легкий."
+
+#: inc/theme-dashboard.php:351
+msgid "Get Notified"
+msgstr "Получить уведомление"
+
+#: inc/theme-dashboard.php:353
+msgid "Check Out the Demo"
+msgstr "Посмотреть демо версию"
+
+#: inc/theme-dashboard.php:361
+msgid "COMING SOON!"
+msgstr "Скоро!"
+
+#: page-templates/sitemap.php:17
+msgid "All Posts"
+msgstr "Все статьи"
+
+#: page-templates/sitemap.php:48
+msgid "Site Feeds"
+msgstr "Feed лента сайта"
+
+#: page-templates/sitemap.php:50
+msgid "Main RSS Feed"
+msgstr "Моя rss лента"
+
+#: page-templates/sitemap.php:51
+msgid "Comments RSS Feed"
+msgstr "RSS комментариев"
+
+#: page-templates/sitemap.php:54
+msgid "Pages"
+msgstr "Страницы"
+
+#: page-templates/sitemap.php:59
+msgid "Monthly Archives"
+msgstr "Архив за месяц"
+
+#: page-templates/sitemap.php:64
+msgid "Categories"
+msgstr "Категории"
+
+#: page-templates/sitemap.php:69
+msgid "Top 20 Tags"
+msgstr "Топ 20 тэгов"
+
+#: search.php:11
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для:%s"
+
+#: searchform.php:10 searchform.php:13
+msgid "Search"
+msgstr "Поиск"
+
+#: single.php:12
+msgctxt "Previous post link"
+msgid "&laquo;"
+msgstr ""
+
+#: single.php:13
+msgctxt "Next post link"
+msgid "&raquo;"
+msgstr ""
+
+#: tag.php:11
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Архив тэгов: %s"
+
+#. Theme URI of the plugin/theme
+msgid "https://themeawesome.com/responsive-wordpress-theme"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A WordPress theme built using Foundation for Sites (Foundation 6.3.1) from Zurb, the most advanced responsive front-end framework in the "
+"world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please "
+"view the CHANGELOG and README files before/after installation and/or update."
+msgstr ""
+"Тема WordPress, созданная с использованием Foundation for Sites (Foundation 6.3.1) от Zurb, самой передовой отзывчивой интерфейсной структуры "
+"в мире. Комбинируя WordPress и Foundation, вы получаете тему WordPress, которая делает создание веб-сайтов веселым и захватывающим! "
+"Пожалуйста, просмотрите файлы CHANGELOG и README до / после установки и / или обновления."
+
+#. Author of the plugin/theme
+msgid "ThemeAwesome"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://themeawesome.com/"
+msgstr ""

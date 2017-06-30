@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying posts in the Status post format on index and archive pages.
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -24,7 +24,7 @@
 			</header>
 			<?php echo get_avatar( get_the_author_meta( 'ID' ), apply_filters( 'wpforge_status_avatar', '68' ) ); ?>
 		</div><!-- .entry-header -->
-		<div class="entry-content-post">
+		<div class="entry-content-post" itemprop="text">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'wp-forge' ) ); ?>
 		</div><!-- .entry-content -->
 		<footer class="entry-meta">

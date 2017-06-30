@@ -1,9 +1,17 @@
-WP-Forge v6.3.1.2
+WP-Forge v6.4
 ====================
 
-### Last Updated April 7, 2017
+### Updated April 7, 2017
 
-A WordPress theme built with Foundation for Sites (Foundation 6.3.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
+A WordPress theme built with Foundation for Sites (Foundation 6.4) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
+
+Installation
+=============
+* In your admin panel, go to `Appearance > Themes` and click the `Add New` button.
+* Use the Search or Filter options to locate the WP-Forge theme or click `Upload Theme`, then click `Choose File`, then select the WP-Forge's ZIP file. Click Install Now.
+* Click Activate to use your new theme right away.
+* Click Appearance > Customize to start modifying your theme.
+* In order to modify anything related to WordPress, you will need to make adjustments or add your own styles to `style.css`. In order to modify anything regarding Foundation, you need to make adjustments or add your own styles to `foundation.css` located in `/css/foundation.css`.
 
 Demo
 =============
@@ -18,8 +26,8 @@ Support
 [WP-Forge Support Forums](https://wordpress.org/support/theme/wp-forge) - If you if you run into issues, you can post your questions/issues there.
 
 ### WP-Forge was built with the following tools
+* [WordPress Beta Tester](https://make.wordpress.org/core/handbook/testing/beta/) - This ensures WP-Forge is future proof. It also ensures that I use the latest bleeding edge nightlies of WordPress. As of this update the latest version is 4.8-alpha-40555.
 * [WordPress Theme Standards](http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
-* [WordPress Beta Tester](https://make.wordpress.org/core/handbook/testing/beta/) - This ensures WP-Forge is future proof. It also ensures that I use the latest bleeding edge nightlies of WordPress. As of this update the latest version is 4.8-alpha-40299.
 * [WP-Test](http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integrity of themes and plugins.
 * [Debug Bar](http://wordpress.org/plugins/debug-bar/) - a debugging menu added to the admin bar that quickly shows query, cache, and other helpful debugging information.
 * [Log Depreceated Notices](http://wordpress.org/plugins/log-deprecated-notices/) - a plugin that helps you identify old WordPress API functions a theme or plugin is currently using so you can update to the newer methods.
@@ -72,4 +80,4 @@ This means WP-Forge is completely free to use and modify as you see fit.
 
 ThemeAwesome.com
 =============
-[ThemeAwesome.com](https://themeawesome.com), a site focused on building WordPress themes with both the [Foundation for Sites 6.3](http://foundation.zurb.com/) framework by [Zurb](http://zurb.com/) and the [Bootstrap](http://getbootstrap.com/) framework.
+[ThemeAwesome.com](https://themeawesome.com), a site focused on building WordPress themes with both the [Foundation for Sites 6](http://foundation.zurb.com/) framework by and the [Bootstrap](http://getbootstrap.com/) framework.

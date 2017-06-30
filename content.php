@@ -1,10 +1,10 @@
 <?php
 /**
  * The default template for displaying content. Used for both single and index/archive/search.
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>
 		<header class="entry-header">
 			<?php  if( get_theme_mod( 'wpforge_cat_display','yes' ) == 'yes') { ?>
 				<?php  if( get_theme_mod( 'wpforge_cat_position','top' ) == 'top') { ?>
@@ -12,11 +12,9 @@
 				<?php } // end if ?>
 			<?php } // end if ?>
 			<?php if ( is_single() ) : ?>
-				<h1 class="entry-title-post"><?php the_title(); ?></h1>
+				<?php the_title( '<h1 class="entry-title-post" itemprop="headline">', '</h1>' ); ?>
 			<?php else : ?>
-				<h1 class="entry-title-post">
-					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wp-forge' ), the_title_attribute( 'echo=0' ))); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h1>
+				<?php the_title( sprintf( '<h2 class="entry-title-post" itemprop="headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 			<?php endif; // is_single() ?>
 			<div class="entry-meta-header">
 				<?php  if( get_theme_mod( 'wpforge_meta_display','yes' ) == 'yes') { ?>
@@ -42,7 +40,7 @@
 		</header><!-- .entry-header -->
 		<?php if ( get_theme_mod( 'wpforge_post_display','full' ) == 'full' ) : ?>
 			<?php if ( is_front_page() || is_home() || is_archive() || is_search() || is_tag() ) : ?>
-				<div class="entry-content-post">
+				<div class="entry-content-post" itemprop="text">
 					<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'wp-forge' ) ); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __('Pages:','wp-forge'), 'after' => '</div>' )); ?>
 				</div><!-- .entry-content -->
@@ -50,13 +48,13 @@
 		<?php endif; // end if ?>
 		<?php if ( get_theme_mod( 'wpforge_post_display' ) == 'excerpt' ) : ?>
 			<?php if ( is_front_page() || is_home() || is_archive() || is_search() || is_tag() ) : ?>
-				<div class="entry-summary">
+				<div class="entry-summary" itemprop="text">
 				    <?php the_excerpt(); ?>
 				</div><!-- .entry-summary -->
 			<?php endif; // end if ?>
 		<?php endif; // end if ?>
 		<?php if ( is_single() ) : ?>
-		<div class="entry-content-post">
+		<div class="entry-content-post" itemprop="text">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'wp-forge')); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __('Pages:','wp-forge'), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->

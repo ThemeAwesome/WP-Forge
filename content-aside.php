@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying posts in the Aside post format on index and archive pages
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -19,8 +19,8 @@
 			<?php edit_post_link( __( 'Edit', 'wp-forge' ), '<span class="edit-link"><span class="genericon genericon-edit"></span> ', '</span>' ); ?>
 		</div><!-- end .entry-meta-header -->
 		<div class="aside">
-			<h1 class="entry-title-post"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wp-forge' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<div class="entry-content-post">
+			<h2 class="entry-title-post" itemprop="headline"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wp-forge' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<div class="entry-content-post" itemprop="text">
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'wp-forge' ) ); ?>
 			</div><!-- .entry-content -->
 		</div><!-- .aside -->

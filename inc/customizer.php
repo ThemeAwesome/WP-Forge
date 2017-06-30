@@ -1,45 +1,48 @@
 <?php
 /**
 * WP-Forge Theme Customizer
-* A Theme Customizer for WP-Forge. Adds the individual, panels, sections, settings, and controls to the theme customizer
-* @version 6.3.1.2
+* @version 6.4
 */
 
-/**
- * Handles the width and other elements in the Customizer.
- * @see http://ottopress.com/2015/whats-new-with-the-customizer/
- */
+//Handles the width and other elements in the Customizer.
 add_action( 'customize_controls_enqueue_scripts', 'themedemo_customizer_style');
 function themedemo_customizer_style() {
     wp_add_inline_style( 'customize-controls', 
-      '.wp-full-overlay-sidebar{width:300px} 
-      .wp-full-overlay.expanded {margin-left:300px} 
-      .customize-control-title {font-size:12px} 
-      .customize-control-title {line-height:1.3}
-      .customize-control-title {margin-bottom:0}
-      #customize-controls .description{font-size:9px}
+      '#customize-controls .description{font-size:9px}
       li.customize-section-description-container .description {font-size:12px!important}');
 }
-
-/**
- * Table of Contents
- *
- * 1.0 - Defaults
- * 2.0 - Panels
- * 3.0 - Sections and Settings
- * 4.0 - Sanitation
- * 5.0 - Callacks
- * 6.0 - Transport
- * 7.0 - CSS
- *
- */
 
 if ( ! function_exists( 'wpforge_customize_register' ) ) {
   function wpforge_customize_register( $wp_customize ) {
 
-  /**
-   * 1.0 Defaults
-   */
+ // Add selective refresh to site title and description
+  if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'blogname', array(
+          'selector' => '.site-title a',
+          'render_callback' => 'wpforge_customize_partial_blogname',
+      ) );
+      
+      $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+          'selector' => '.site-description',
+          'render_callback' => 'wpforge_customize_partial_blogdescription',
+      ) );
+  }
+
+  // Render the site title for the selective refresh partial.
+  if ( ! function_exists( 'wpforge_customize_partial_blogname' ) ) :
+    function wpforge_customize_partial_blogname() {
+      bloginfo( 'name' );
+    }
+  endif;
+
+  // Render the site tagline for the selective refresh partial.
+  if ( ! function_exists( 'wpforge_customize_partial_blogdescription' ) ) :
+    function wpforge_customize_partial_blogdescription() {
+      bloginfo( 'description' );
+    }
+  endif;
+
+  // 1.0 Defaults
   $wp_customize->get_section('header_image')->panel = 'wpforge_header'; // Add to Header Panel
   $wp_customize->get_section('header_image')->priority = 40; // Shows before site title and tagline
   $wp_customize->get_section('title_tagline')->priority = 50; // Shows after the Header image section
@@ -51,9 +54,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   $wp_customize->get_section('static_front_page')->panel = 'wpforge_front_page'; // Add to Front Panel
   $wp_customize->get_section('static_front_page')->description = __( 'Set the front page for your theme.', 'wp-forge' ); //
 
-  /**
-   * 2.0 Panels
-   */
+  // 2.0 Panels
   $wp_customize->add_panel( 'wpforge_header', array( // Header Panel
       'priority'       => 1,
       'capability'     => 'edit_theme_options',
@@ -115,9 +116,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'description'    => __('Deals with the different Foundation buttons available in your theme.', 'wp-forge'),
   ));
 
-  /**
-   * 3.0 Sections and Settings
-   */
+  //3.0 Sections and Settings
   $wp_customize->add_section('header_content', array( /* header content section */
     'title' => __('Header Content', 'wp-forge'),
     'description' => __('Main content area of your header, i.e site title, site description and logo.', 'wp-forge'),
@@ -181,6 +180,33 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'header_content',
     'type' => 'text',
   ));
+  // remove title
+  $wp_customize->add_setting( 'wpforge_hide_sitetitle',
+      array(
+          'sanitize_callback' => 'wpforge_sanitize_checkbox',
+          'default'           => 0,
+          'transport'         => 'postMessage'
+      ));
+  $wp_customize->add_control('wpforge_hide_sitetitle',
+      array(
+          'label'     => __('Hide site title', 'wp-forge'),
+          'section'   => 'title_tagline',
+          'type'      => 'checkbox',
+      ));
+  // remove tagline
+  $wp_customize->add_setting('wpforge_hide_tagline',
+      array(
+          'sanitize_callback' => 'wpforge_sanitize_checkbox',
+          'default'           => '',
+          'transport'         => 'postMessage'
+      ));
+  $wp_customize->add_control('wpforge_hide_tagline',
+      array(
+          'label'     => __('Hide site tagline', 'wp-forge'),
+          'section'     => 'title_tagline',
+          'type'          => 'checkbox',
+
+      ));
   $wp_customize->add_section('nav_content', array( /* nav wrapper section */
     'title' => __('Nav Content Area', 'wp-forge'),
     'priority' => 30,
@@ -3815,9 +3841,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   ));
 
 
-  /**
-   * 4.0 Sanitation
-   */
+  // 4.0 Sanitation
   function wpforge_sanitize_uri($uri) {
     if('' === $uri){
       return '';
@@ -4197,9 +4221,15 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
           return '';
       }
   }
-  /**
-   * 5.0 - Active Callbacks
-   */
+  function wpforge_sanitize_checkbox( $input ) { // sanitize checkboxes
+      if ( $input == 1 ) {
+          return 1;
+      } else {
+          return 0;
+      }
+  }
+
+  // 5.0 - Active Callbacks
   function wpforge_title_callback( $control ) {
       if ( $control->manager->get_setting('wpforge_nav_position')->value() == 'scroll' || $control->manager->get_setting('wpforge_nav_position')->value() == 'fixed' ) {
           return true;
@@ -4389,9 +4419,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
           return false;
       }
   }
-  /**
-   * 6.0 - Transport
-   */
+  // 6.0 - Transport
     $wp_customize->get_setting( 'header_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -4550,17 +4578,12 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     $wp_customize->get_setting( 'wpforge_page_text_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'off_canvas_active_hover_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'current_item_background_hover_color' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'post_title_link_color' )->transport = 'postMessage';
   }
   add_action( 'customize_register', 'wpforge_customize_register',99 );
 }
 
-/**
- * 7.0 CSS
- *
- * Modifies our styles and writes them in the <head> element of the page based on the WP-Forge Theme Customizer options.
- * @since WP-Forge 6.3.1.2
- */
-
+// 7.0 Modifies our styles and writes them in the <head> element of the page.
 if ( ! function_exists( 'wpforge_customize_css' ) ) {
   function wpforge_customize_css() {
     do_action('wpforge_customize_css');
@@ -4606,13 +4629,13 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . '.top-bar-right .menu > li.name:hover,.top-bar .menu > li:not(.menu-text) > a:hover,.top-bar .menu > .active:hover{background-color:'.esc_attr(get_theme_mod('top_bar_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('top_bar_font_color')) ) {
-        $output .= '' . '.top-bar .name a,.top-bar ul li a,.menu .active > a{color:'.esc_attr(get_theme_mod('top_bar_font_color')).';}';
+        $output .= '' . '.top-bar .menu-item a{color:'.esc_attr(get_theme_mod('top_bar_font_color')).';}';
     }
     if ( esc_attr(get_theme_mod('top_bar_font_hover_color')) ) {
         $output .= '' . '.top-bar .name a:hover,.top-bar ul li a:hover,.menu .active > a:hover{color:'.esc_attr(get_theme_mod('top_bar_font_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('top_bar_dropdown_arrow_color')) ) {
-        $output .= '' . '.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after{border-top-color:'.esc_attr(get_theme_mod('top_bar_dropdown_arrow_color')).';}';
+        $output .= '' . '.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after, .submenu-toggle::after{border-top-color:'.esc_attr(get_theme_mod('top_bar_dropdown_arrow_color')).';}';
     }
     if ( esc_attr(get_theme_mod('top_bar_dropdown_arrow_color')) ) {
         $output .= '' . '.is-drilldown-submenu-parent > a::after{border-left-color: '.esc_attr(get_theme_mod('top_bar_dropdown_arrow_color')).';}';
@@ -4660,7 +4683,7 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . '.off-canvas .menu-item a:hover,.off-canvas-absolute .menu-item a:hover{background-color:'.esc_attr(get_theme_mod('wpforge_off_canvas_background_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('wpforge_off_dropdown_arrow_color')) ) {
-        $output .= '' . '.off-canvas .is-drilldown-submenu-parent > a::after,.off-canvas-absolute .is-drilldown-submenu-parent > a::after{border-left-color: '.esc_attr(get_theme_mod('wpforge_off_dropdown_arrow_color')).';}';
+        $output .= '' . '.submenu-toggle::after{border-color: '.esc_attr(get_theme_mod('wpforge_off_dropdown_arrow_color')).' transparent transparent;}';
     }
     if ( esc_attr(get_theme_mod('wpforge_off_dropdown_arrow_color')) ) {
         $output .= '' . '.off-canvas .js-drilldown-back > a::before,.off-canvas-absolute .js-drilldown-back > a::before{border-right-color:'.esc_attr(get_theme_mod('wpforge_off_dropdown_arrow_color')).';}';
@@ -4678,7 +4701,7 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . '.off-canvas .menu .current_page_item a:hover,.off-canvas-absolute .menu .current_page_item a:hover{color:'.esc_attr(get_theme_mod('off_canvas_current_item_link_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('top_bar_active_color')) ) {
-        $output .= '' . '.top-bar .menu .current-menu-parent,.top-bar .menu .current-page-parent,.top-bar .menu .current-page-ancestor,.top-bar .menu .current_page_item{background-color:'.esc_attr(get_theme_mod('top_bar_active_color')).';}';
+        $output .= '' . '.top-bar .menu .current-menu-parent, .top-bar .menu .current-page-parent, .top-bar .menu .current-page-ancestor, .top-bar .menu .current_page_item{background-color:'.esc_attr(get_theme_mod('top_bar_active_color')).';}';
     }
     if ( esc_attr(get_theme_mod('current_item_link_color')) ) {
         $output .= '' . '.top-bar .menu .current_page_item a{color:'.esc_attr(get_theme_mod('current_item_link_color')).';}';
@@ -4705,10 +4728,10 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . 'h1.entry-title-post{color:'.esc_attr(get_theme_mod('single_post_title_color')).';}';
     }
     if ( esc_attr(get_theme_mod('post_title_link_color')) ) {
-        $output .= '' . 'h1.entry-title-post a{color:'.esc_attr(get_theme_mod('post_title_link_color')).';}';
+        $output .= '' . 'h2.entry-title-post a{color:'.esc_attr(get_theme_mod('post_title_link_color')).';}';
     }
     if ( esc_attr(get_theme_mod('post_title_link_hover_color')) ) {
-        $output .= '' . 'h1.entry-title-post a:hover{color:'.esc_attr(get_theme_mod('post_title_link_hover_color')).';}';
+        $output .= '' . 'h2.entry-title-post a:hover{color:'.esc_attr(get_theme_mod('post_title_link_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('meta_header_link_color')) ) {
         $output .= '' . '.entry-meta-header a{color:'.esc_attr(get_theme_mod('meta_header_link_color')).';}';
@@ -4744,7 +4767,7 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . '.entry-meta-categories_bottom .genericon{font-size:'.esc_attr(get_theme_mod('wpforge_category_gen_font_size')).';}';
     }
     if ( esc_attr(get_theme_mod('wpforge_post_title_font_size')) ) {
-        $output .= '' . 'h1.entry-title-post{font-size:'.esc_attr(get_theme_mod('wpforge_post_title_font_size')).';}';
+        $output .= '' . 'h2.entry-title-post{font-size:'.esc_attr(get_theme_mod('wpforge_post_title_font_size')).';}';
     }
     if ( esc_attr(get_theme_mod('content_font_color')) ) {
         $output .= '' . '.entry-content-post p,.entry-content-post ul li,.entry-content-post ol li,.entry-content-post table,.comment-content table,.entry-content-post address,.comment-content address,.entry-content-post pre,.comment-content pre,.comments-area article header cite,#comments,.entry-content-post dl,.entry-content-post dt{color:'.esc_attr(get_theme_mod('content_font_color')).';}';
@@ -4831,7 +4854,7 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . '.entry-content-page a{text-decoration:'.esc_attr(get_theme_mod('wpforge_page_link_decoration')).';}';
     }
     if ( esc_attr(get_theme_mod('wpforge_page_link_hover_color')) ) {
-        $output .= '' . '.entry-content-page a{color:'.esc_attr(get_theme_mod('wpforge_page_link_hover_color')).';}';
+        $output .= '' . '.entry-content-page a:hover{color:'.esc_attr(get_theme_mod('wpforge_page_link_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('wpforge_page_link_hover_decoration') == 'none') || 
          esc_attr(get_theme_mod('wpforge_page_link_hover_decoration') == 'overline') || 
@@ -5243,12 +5266,10 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
   add_action('wp_head', 'wpforge_customize_css',100);
 }
 
-/**
- * Registers our theme customizer preview with WordPress.
-*/
+// Registers our theme customizer preview with WordPress.
 if ( ! function_exists( 'wpforge_customize_preview_js' ) ) {
   function wpforge_customize_preview_js() {
-    wp_enqueue_script( 'wpforge-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '6.2', true );
+    wp_enqueue_script( 'wpforge-customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'),WPFORGE_VERSION, true );
   }
   add_action( 'customize_preview_init', 'wpforge_customize_preview_js' );
 }

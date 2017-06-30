@@ -1,11 +1,11 @@
 <?php
 /**
  * The sidebar containing the main widget area.
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
 	<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
-		<div id="secondary" class="small-12 large-4 columns widget-area" role="complementary">
+		<div id="secondary" itemtype="http://schema.org/WPSideBar" itemscope="itemscope" class="small-12 large-4 cell widget-area" role="complementary">
 			<?php dynamic_sidebar( 'main-sidebar' ); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>

@@ -1,13 +1,12 @@
 <?php
 /**
  * The template for displaying 404 pages (Not Found).
- * @version 6.3.1.2
+ * @version 6.4
  */
 get_header(); ?>
-		<div id="content" class="small-12 large-12 columns" role="main">
+		<div id="content" class="small-12 large-12 cell" role="main">
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<nav aria-label="You are here:" role="navigation"><ul class="breadcrumbs">','</ul></nav>'); } ?>
 			<article id="post-0" class="post error404 no-results not-found">
-				<header class="entry-header">
 					<h1 class="entry-title"><?php _e('This is somewhat embarrassing, isn&rsquo;t it?', 'wp-forge'); ?></h1>
 				</header>
 				<div class="entry-content">
@@ -19,8 +18,8 @@ get_header(); ?>
 					<p><?php _e( 'If you are absolutely certain it was supposed to be here and just can&rsquo;t seem to find it, please let us know. We would be more than happy to look into the matter for you and let you know what happened.', 'wp-forge' ); ?></p>
 					<h3><?php _e( 'Don&rsquo;t go just yet! We have other great stuff!', 'wp-forge' ); ?></h3>
 					<p><?php _e( 'Even though you couldn&rsquo;t find what you were looking for, we do have other great content to offer. Use the lists below to find something new and exciting: ', 'wp-forge' ); ?></p>
-					<div class="row">
-					<div class="small-12 medium-3 large-3 column">
+					<div class="grid-x grid-padding-x">
+					<div class="small-12 medium-3 large-3 cell">
 						<h4>Recent Posts</h4>
 						<ul><?php
 							$recent_posts = wp_get_recent_posts(array('post_status' => 'publish'));
@@ -30,16 +29,16 @@ get_header(); ?>
 						?></ul>
 					</ul>
 					</div>
-					<div class="small-12 medium-3 large-3 column">
+					<div class="small-12 large-3 cell">
 						<h4>Popular Categories</h4>
 						<ul><?php wp_list_categories('number=10&show_count=1&orderby=count&order=DESC&title_li=') ?></ul>
 					</div>
 
-					<div class="small-12 medium-3 large-3 column">
+					<div class="small-12 large-3 cell">
 						<h4>Monthly Archives</h4>
 							<ul><?php wp_get_archives( array( 'type' => 'monthly', 'limit' => 12 ) ); ?></ul>
 					</div>
-					<div class="small-12 medium-3 large-3 column">
+					<div class="small-12 large-3 cell">
 						<h4>Popular Tags</h4>
 							<?php wp_tag_cloud( 'smallest=10&largest=40&number=50&orderby=count' ); ?>
 					</div>

@@ -1,7 +1,7 @@
 <?php
 /**
  * The default template for displaying content in the footer.
- * @version 6.3.1.2
+ * @version 6.4
  */
 ?>
 <?php //Text and nav centered
@@ -17,7 +17,7 @@
                 ) ); ?>
             <?php endif; ?> 
         </div><!-- .columns -->    
-        <div id="ftxt" class="site-info medium-12 large-12 columns cntr">
+        <div id="ftxt" class="site-info medium-12 large-12 columns text-center">
             <?php if( get_theme_mod( 'wpforge_footer_text' ) ) { ?>
                 <p><?php echo wp_kses_post(get_theme_mod( 'wpforge_footer_text')); ?></p>
             <?php } else { ?>
@@ -37,7 +37,7 @@
                 ) ); ?>
             <?php endif; ?>    
         </div><!-- .columns --> 
-        <div id="ftxt" class="site-info medium-5 large-5 columns rt">
+        <div id="ftxt" class="site-info medium-5 large-5 columns text-right">
             <?php if( get_theme_mod( 'wpforge_footer_text' ) ) { ?>
                 <p><?php echo wp_kses_post(get_theme_mod( 'wpforge_footer_text')); ?></p>
             <?php } else { ?>
@@ -47,7 +47,7 @@
 <?php } // end if ?>
 <?php //Text left with nav right
  if( get_theme_mod( 'wpforge_footer_position' ) == 'left') { ?>
-        <div id="ftxt" class="site-info medium-5 large-5 columns lft">
+        <div id="ftxt" class="site-info medium-5 large-5 columns text-left">
             <?php if( get_theme_mod( 'wpforge_footer_text' ) ) { ?>
                 <p><?php echo wp_kses_post(get_theme_mod( 'wpforge_footer_text')); ?></p>
             <?php } else { ?>

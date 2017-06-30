@@ -1,24 +1,42 @@
 Theme Name: **WP-Forge**<br />
 Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
-Requires at least: **4.7.3**<br />
-Tested up to: **4.8-alpha-40387**<br />
-Stable tag: **6.3.1.2**<br />
+Requires at least: **4.8**<br />
+Tested up to: **4.9-alpha-40964**<br />
+Stable tag: **6.4**<br />
 License: **GPLv2 or later**<br />
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)<br />
 
 == Changelog ==
 
+= 6.4 =
+
+Theme updated 06/30/17
+
+* Updated to the latest version of Foundation for Sites v6.4.
+* Switched the "felx-video" to "Responsive Embed" - This makes sure embedded content, like videos, maintain their aspect ratio as the width of the screen changes.
+* Removed the `margin` from responsive embed (flex video), this was causing the bottom portion of embedded videos to be cut off.
+* Added selective refresh to the site-title and site-description.
+* Added the ability to show or hide the site title and the site description individually.
+* Site-title and site-description are now wrapped in a `p` tag when not on the front page. 
+* Post titles are wrapped in a H2 tag, except when viewing the actual post, then the post title is wrapped in a H1 tag
+* Switched from custom header to custom logo introduced in 4.5
+* Added the new Accordion Menu to Off-Canvas and Top-Bar
+* Added Schema markup to posts and pages.
+* Moved Skip to Content link out of `content-navigation.php` to right after the opening `body` tag.
+* Corrected some issues with the customizer css. When some options were changed, those options were not reflecting in the in-line css or preview.
+* Added Russian translation files - Thanks to Spartak Klain, https://sajtprint.ru, for taking the time to do this.
+
 = 6.3.1.2 =
 
 Theme updated 04/07/17
 
-* Adjusted some of the inline css of the cusomizer.
+* Adjusted some of the inline css of the customizer.
 * Corrected an issue where the customizer section pertaining to the footer was not working properly. See this thread: https://wordpress.org/support/topic/footer-length-not-setting/
 * Added customizer option to change the color of text in pages. See this thread: https://wordpress.org/support/topic/customizer-seems-broken/
 * Went through every setting in customizer. Corrected issues with the customizer where options were not working properly. Everything should be working properly now.
 * Added `Default` values to description of all the customizer options. The only options that do not have a default are the default customizer options.
 * Added new css for pricing tables. Code is smaller. See http://zurb.com/building-blocks/pricing-table-foundation-6
-* Added new css for hollow buttons. Default is that the hollow styles only work for `&lt;button&gt;` elements, which appear to only work in forms.  I added css to cover regular buttons(which are clickable and have links) that have the `hollow` class added, in effect making what are reffered to as `ghost buttons`. See https://www.sitepoint.com/rise-ghost-button/
+* Added new css for hollow buttons. Default is that the hollow styles only work for `<button>` elements, which appear to only work in forms.  I added css to cover regular buttons(which are clickable and have links) that have the `hollow` class added, in effect making what are referred to as `ghost buttons`. See https://www.sitepoint.com/rise-ghost-button/
 * Added customizer option where user can change the hover background color of the active item in off-canvas menu.
 * Added customizer option where user can change the hover background color of the active item in top-bar menu.
 * Removed the genericon from both top-bar and off-canvas menus. Switched to the default `menu-icon`.
