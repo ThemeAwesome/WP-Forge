@@ -1,7 +1,7 @@
 <?php
 /**
  * The default template for displaying content in the footer.
- * @version 6.4
+ * @version 6.4.1
  */
 ?>
 <?php //Text and nav centered

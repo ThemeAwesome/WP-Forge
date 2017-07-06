@@ -1,7 +1,7 @@
 <?php
 /**
  * The main template file.
- * @version 6.4
+ * @version 6.4.1
  */
 get_header(); ?>
 	<div id="content" class="small-12 large-8 cell" role="main">

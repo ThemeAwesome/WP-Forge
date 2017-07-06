@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying image attachments.
- * @version 6.4
+ * @version 6.4.1
  */
 get_header(); ?>
 	<div id="primary" class="small-12 large-12 cell site-content">

@@ -1,7 +1,7 @@
 <?php
 /**
  * WP-Forge functions and definitions.
- * @version 6.4
+ * @version 6.4.1
  */
 define( 'WPFORGE_VERSION', '6.4' );
 define( 'WPFORGE_URI', get_template_directory_uri() );
@@ -94,7 +94,7 @@ add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
 // Enqueue certain scripts with a very low priority so it loads as close to the closing body tag as possible
 if ( ! function_exists( 'wpforge_theme_functions' ) ) {
 	function wpforge_theme_functions() {
-		wp_enqueue_script('wpforge_what_input',WPFORGE_URI.'/js/what-input.js',array('jquery'),'WPFORGE_VERSION',true);
+		wp_enqueue_script('wpforge_what_input',WPFORGE_URI.'/js/what-input.js',array('jquery'),WPFORGE_VERSION,true);
 		wp_enqueue_script('wpforge_foundation',WPFORGE_URI.'/js/foundation.js',array('jquery'),WPFORGE_VERSION,true);
 		wp_enqueue_script ('wpforge_load_foundation', WPFORGE_URI.'/js/theme-functions.js',array('wpforge_foundation'),WPFORGE_VERSION,true);
 	}

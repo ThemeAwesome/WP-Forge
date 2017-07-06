@@ -2,7 +2,7 @@
 /**
  * Template Name: Full-width Page Template, No Sidebar
  * Template Post Type: post, page, aside, audio, chat, gallery, image, link, quote, status, video
- * @version 6.4
+ * @version 6.4.1
  */
 get_header(); ?>
 	<div id="content" class="small-12 large-12 cell" role="main">

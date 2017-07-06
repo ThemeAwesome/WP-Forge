@@ -1,12 +1,20 @@
 Theme Name: **WP-Forge**<br />
 Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
 Requires at least: **4.8**<br />
-Tested up to: **4.9-alpha-40964**<br />
-Stable tag: **6.4**<br />
+Tested up to: **4.9-alpha-41008**<br />
+Stable tag: **6.4.1**<br />
 License: **GPLv2 or later**<br />
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)<br />
 
 == Changelog ==
+
+= 6.4.1 =
+
+Theme updated 07/06/17
+
+* Updated to the latest version of Foundation for Sites v6.4.1 - not really need but I like to on top of things.
+* Corrected the `no-js` in styles.css. There is an issue where the menu was loading after the js was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue https://github.com/zurb/foundation-sites/issues/10339
+* Removed the `Russian.mo` file as it is not needed.
 
 = 6.4 =
 

@@ -1,4 +1,4 @@
-/* @version 6.4 */
+/* @version 6.4.1 */
 jQuery(document).foundation();
 
 	// contain-to-grid functionality

@@ -1,7 +1,7 @@
 <?php
 /**
  * The Header template of our theme.
- * @version 6.4
+ * @version 6.4.1
  */
 ?><!doctype html>
 <html <?php language_attributes(); ?> class="no-js">

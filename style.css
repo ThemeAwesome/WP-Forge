@@ -1,10 +1,10 @@
-off-/*
+/*
 Theme Name: WP-Forge
 Theme URI: https://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome
 Author URI: https://themeawesome.com/
-Description: A WordPress theme built using Foundation for Sites (Foundation 6.3.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.4
+Description: A WordPress theme built using Foundation for Sites (Foundation 6.4.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
+Version: 6.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
@@ -1176,13 +1176,12 @@ margin: 0 0 1.25rem!important; }
 img#wpstats{
 	display:none}
 .no-js [data-responsive-toggle],
-.no-js .top-bar {
+.no-js [data-responsive-menu] ul {
  	display: none!important;}
-[data-responsive-menu] ul {
-	display: none;}
-@media screen and (min-width: 40em) {
-	.no-js .top-bar {display: block; }
-	.no-js .title-bar {display: none;}}
+@media screen and (max-width:39.9em) {
+	.no-js .top-bar {display: none; }
+	.no-js .title-bar {display: flex;}
+}
 [type='text'] {
 	height: 2.5rem;}
 /* off-canvas styles */

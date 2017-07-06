@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying the Top-Bar menu and its different positions.
- * @version 6.4
+ * @version 6.4.1
  */
 ?>
 <div itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" class="nav_container">
@@ -9,13 +9,13 @@
       <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>
       <div class="nav_wrap grid-container show-for-large">
       <?php } else { ?>
-      <div class="nav_wrap  grid-container">
+      <div class="nav_wrap grid-container">
       <?php } // end if ?>
         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
           <button class="menu-icon" type="button" data-toggle="main-menu"></button>
           <div class="title-bar-title"><?php echo esc_attr(get_theme_mod('wpforge_nav_text','Menu')); ?></div>
         </div><!-- end title-bar -->
-        <div class="top-bar" id="main-menu" data-animate="hinge-in-from-top fade-out">
+        <div class="top-bar" id="main-menu">
           <div class="top-bar-left">
             <?php wpforge_top_nav(); ?>
           </div><!-- second end top-bar -->

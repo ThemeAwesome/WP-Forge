@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying a "No posts found" message.
- * @version 6.4
+ * @version 6.4.1
  */
 ?>
 	<article id="post-0" class="post no-results not-found">

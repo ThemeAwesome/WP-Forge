@@ -1,7 +1,7 @@
 <?php
 /**
  * The default template for displaying content. Used for both single and index/archive/search.
- * @version 6.4
+ * @version 6.4.1
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>
