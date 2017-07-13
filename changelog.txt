@@ -1,18 +1,26 @@
 Theme Name: WP-Forge
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
 Requires at least: 4.8
-Tested up to: 4.9-alpha-41008
-Stable tag: 6.4.1
+Tested up to: 4.9-alpha-41035
+Stable tag: 6.4.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
 
+= 6.4.1.1 =
+
+Theme updated 07/12/17
+
+* Corrected issue with footer sidebar area. Switched to `large auto cells` for each sidebar area. This moves towards the new XY grid from foundation. The calculation in `functions.php` is no longer needed to calculate and add the apropriate sizes to the individual sidebars.
+* Added a image size for the custom logo. Logo is set to 1170px wide which is the full length of the theme and the image has auto height. If your image is smaller than the logo area it will shrink accordingly.
+* Added back the custom header feature that the custom logo was supposed to replace, so now users can use either the custom logo or custom header feature, as well as random header images.
+
 = 6.4.1 =
 
 Theme updated 07/06/17
 
-* Updated to the latest version of Foundation for Sites v6.4.1 - not really need but I like to on top of things.
+* Updated to the latest version of Foundation for Sites v6.4.1.1 - not really need but I like to stay on top of things.
 * Corrected the `no-js` in styles.css. There is an issue where the menu was loading after the js was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue https://github.com/zurb/foundation-sites/issues/10339
 * Removed the Russian.mo file as it is not needed.
 

@@ -1,12 +1,20 @@
 Theme Name: **WP-Forge**<br />
 Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
 Requires at least: **4.8**<br />
-Tested up to: **4.9-alpha-41008**<br />
-Stable tag: **6.4.1**<br />
+Tested up to: **4.9-alpha-41035**<br />
+Stable tag: **6.4.1.1**<br />
 License: **GPLv2 or later**<br />
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)<br />
 
 == Changelog ==
+
+= 6.4.1.1 =
+
+Theme updated 07/12/17
+
+* Corrected issue with footer sidebar area. Switched to `large auto cells` for each sidebar area. This moves towards the new XY grid from foundation. The calculation in `functions.php` is no longer needed to calculate and add the apropriate sizes to the individual sidebars.
+* Added a image size for the custom logo. Logo is set to 1170px wide which is the full length of the theme and the image has auto height. If your image is smaller than the logo area it will shrink accordingly.
+* Added back the custom header feature that the custom logo was supposed to replace, so now users can use either the custom logo or custom header feature, as well as random header images.
 
 = 6.4.1 =
 

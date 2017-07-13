@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying posts in the Chat post format on index and archive pages.
- * @version 6.4.1
+ * @version 6.4.1.1
  */
 ?>
 

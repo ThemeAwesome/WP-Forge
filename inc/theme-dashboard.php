@@ -1,7 +1,7 @@
 <?php
 /**
 * The template for displaying the theme information page under Appearance
-* @version 6.4.1
+* @version 6.4.1.1
 */
 // Load CSS
 if ( ! function_exists( 'wpforge_load_admin_scripts' ) ) {
@@ -110,12 +110,22 @@ function wpforge_theme_info_page() {
                 <div class="row">
                     <div class="changelog small-12 large-12 columns">
 
+                        <h4>6.4.1.1</h4>
+
+                        <small>Theme updated 07/12/17</small>
+
+                        <ul>
+                            <li>Corrected issue with footer sidebar area. Switched to <code>large auto cells</code> for each sidebar area. This moves towards the new XY grid from foundation. The calculation in <code>functions.php</code> is no longer needed to calculate and add the apropriate sizes to the individual sidebars.</li>
+                            <li>Added a image size for the custom logo. Logo is set to 1200px wide which is the full length of the theme and the image has auto height. If your image is smaller than the logo area it will shrink accordingly.</li>
+                            <li>Added back the custom header feature that the custom logo was supposed to replace, so now users can use either the custom logo or custom header feature, as well as random header images.</li>
+                        </ul>
+
                         <h4>6.4.1</h4>
 
                         <small>Theme updated 07/06/17</small>
 
                         <ul>
-                            <li>Updated to the latest version of Foundation for Sites v6.4.1 - not really need but I like to on top of things.</li>
+                            <li>Updated to the latest version of Foundation for Sites v6.4.1.1 - not really need but I like to on top of things.</li>
                             <li>Corrected the <code>no-js</code> in styles.css. There is an issue where the menu was loading after the <strong>js</strong> was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/issues/10339' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/issues/10339</a>.</li>
                             <li>Removed the Russian .mo file as it is not needed.</li>
                         </ul>

@@ -1,4 +1,4 @@
-/* @version 6.4.1 */
+/* @version 6.4.1.1 */
 
 /**
  * Header
@@ -6,7 +6,8 @@
 .header_wrap{
 	max-width:75rem;
 	background-color:#ffffff;}
-.site-title{
+.site-title,
+p.site-title {
 	font-size:3rem;}
 .site-title a{
 	color:#444444;}

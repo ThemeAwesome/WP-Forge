@@ -1,7 +1,7 @@
 <?php
 /**
  * The Footer Sidebar. This sidebar contains the four footer widget areas.
- * @version 6.4.1
+ * @version 6.4.1.1
  */
 if ( ! is_active_sidebar( 'footer-sidebar-1' )
 	&& ! is_active_sidebar( 'footer-sidebar-2' )
@@ -14,22 +14,22 @@ if ( ! is_active_sidebar( 'footer-sidebar-1' )
     <div id="secondary-sidebar" itemtype="http://schema.org/WPSideBar" itemscope="itemscope" class="sidebar_wrap grid-container widget-area" role="complementary">
     <div class="grid-x grid-padding-x">
 		<?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) : ?>
-        <div class="<?php wpforge_footer_sidebar_class(); ?> cell">
+        <div class="large-auto cell">
             <?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
         </div><!-- .first -->
         <?php endif; ?>
         <?php if ( is_active_sidebar( 'footer-sidebar-2' ) ) : ?>
-        <div class="<?php wpforge_footer_sidebar_class(); ?> cell">
+        <div class="large-auto cell">
             <?php dynamic_sidebar( 'footer-sidebar-2' ); ?>
         </div><!-- .second -->
         <?php endif; ?>
         <?php if ( is_active_sidebar( 'footer-sidebar-3' ) ) : ?>
-        <div class="<?php wpforge_footer_sidebar_class(); ?> cell">
+        <div class="large-auto cell">
             <?php dynamic_sidebar( 'footer-sidebar-3' ); ?>
         </div><!-- .third -->
         <?php endif; ?>
         <?php if ( is_active_sidebar( 'footer-sidebar-4' ) ) : ?>
-        <div class="<?php wpforge_footer_sidebar_class(); ?> cell">
+        <div class="large-auto cell">
             <?php dynamic_sidebar( 'footer-sidebar-4' ); ?>
         </div><!-- .fourth -->
         <?php endif; ?>

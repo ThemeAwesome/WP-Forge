@@ -1,10 +1,10 @@
 <?php
 /**
  * The Header template of our theme.
- * @version 6.4.1
+ * @version 6.4.1.1
  */
 ?><!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +24,11 @@
     <header id="header" itemtype="http://schema.org/WPHeader" itemscope="itemscope" class="header_wrap grid-container" role="banner">
         <div class="grid-x grid-padding-x">
             <div class="site-header small-12 large-12 cell">
+                <?php if ( get_header_image() ) : ?>
+                <div class="header-logo">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" alt="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>" /></a>
+                </div><!-- /.header-logo -->
+                <?php endif; ?>
                 <?php if ( function_exists( 'the_custom_logo' ) ) : ?>
                 <div class="header-logo">
                     <?php the_custom_logo(); ?>

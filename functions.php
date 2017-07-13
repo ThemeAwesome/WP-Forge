@@ -1,7 +1,7 @@
 <?php
 /**
  * WP-Forge functions and definitions.
- * @version 6.4.1
+ * @version 6.4.1.1
  */
 define( 'WPFORGE_VERSION', '6.4' );
 define( 'WPFORGE_URI', get_template_directory_uri() );
@@ -48,10 +48,11 @@ if ( ! function_exists( 'wpforge_setup' ) ) {
 		set_post_thumbnail_size( 800, 9999 ); // Unlimited height, soft crop
 		// Full width image size added for featured image support in pages
 		add_image_size( 'full-width-thumb', 1200, 9999 ); // Fixed width, Unlimited height, soft crop
+		add_image_size('wpforge-logo', 1200, 9999); // Custom logo fixed width and unlimited height
 		// This theme supports custom background color and image, and here we also set up the default background color.
 		add_theme_support( 'custom-background', array( 'default-color' => 'e6e6e6', ));
 		// add support for custom logo
-		add_theme_support( 'custom-logo', array( 'height' => 150, 'width' => 385, 'flex-width' => true, ));
+		add_theme_support( 'custom-logo', array('size' => 'wpforge-logo' ));
 		// Indicate widget sidebars can use selective refresh in the Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
@@ -68,6 +69,7 @@ if ( ! function_exists( 'wpforge_add_editor_styles' ) ) {
 	add_action( 'after_setup_theme', 'wpforge_add_editor_styles' );
 }
 // Load some files we need
+require WPFORGE_DIR . '/inc/custom-header.php';
 require WPFORGE_DIR . '/inc/customizer.php';
 require WPFORGE_DIR . '/inc/theme-dashboard.php';
 // Load our Google Font

@@ -1,3 +1,4 @@
+/* @version 6.4.1.1 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -4944,7 +4945,7 @@ Abide.defaults = {
 
 
 
-var FOUNDATION_VERSION = '6.4.1';
+var FOUNDATION_VERSION = '6.4.1.1';
 
 // Global Foundation object
 // This is attached to the window, or used as a module for AMD/Browserify
