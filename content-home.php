@@ -1,11 +1,9 @@
 <?php
 /**
- * The template used for displaying page content in front-page.php
- * @since WP-Forge 5.5.2.2
- * @version 6.4.1.1
+ * @version 6.4.2
  */
 ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>
 		<header class="entry-header">
 		<?php if( get_theme_mod( 'wpforge_home_page_title_display' ) == 'yes') { ?>
 			<h1 class="entry-title-page"><?php the_title(); ?></h1>

@@ -1,6 +1,6 @@
 /**
  * Theme Customizer enhancements for a better user experience.
- * @version 6.4.1.1
+ * @version 6.4.2
  */
 
 ( function( $ ) {

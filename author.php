@@ -1,7 +1,6 @@
 <?php
 /**
- * The template for displaying Author Archive pages.
- * @version 6.4.1.1
+ * @version 6.4.2
  */
 get_header(); ?>
 	<div id="content" class="small-12 large-8 cell" role="main">
@@ -15,11 +14,11 @@ get_header(); ?>
 			<?php
 			// If a user has filled out their description, show a bio on their entries.
 			if ( get_the_author_meta( 'description' ) ) : ?>
-				<div class="author-info small-12 medium-12 large-12 columns">
-					<div class="author-avatar small-12 medium-12 large-12 columns">
+				<div class="author-info small-12 large-12 cell">
+					<div class="author-avatar small-12 large-12 cell">
 						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpforge_author_bio_avatar_size', 200 ) ); ?>
 					</div><!-- .author-avatar -->
-					<div class="author-description small-12 medium-12 large-12 columns">
+					<div class="author-description small-12 large-12 cell">
 						<h3><?php printf( __( 'About %s', 'wp-forge' ), get_the_author() ); ?></h3>
 						<p><?php the_author_meta( 'description' ); ?></p>
 					</div><!-- .author-description -->

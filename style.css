@@ -3,8 +3,8 @@ Theme Name: WP-Forge
 Theme URI: https://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome
 Author URI: https://themeawesome.com/
-Description: A WordPress theme built using Foundation for Sites (Foundation 6.4.1.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.4.1.1
+Description: A WordPress theme built using the latest version of Foundation for Sites, from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please make sure you view the CHANGELOG and README files before/after installation and/or update.
+Version: 6.4.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
@@ -12,8 +12,6 @@ Text Domain: wp-forge
 */
 
 /**
- * I update WP-Forge on a regular basis. I highly recommend joining my mailing list as well as using my child theme WP-Starter so
- * you do not lose any edits.
  *
  * Table of Contents
  *
@@ -302,17 +300,21 @@ a {
 	background-color: transparent;
 	max-width: 100%;
 	width: 100%;}
+.header_wrap.grid-container:not(.full) > .grid-padding-x {
+	margin: 0;}
 .content_wrap {
 	padding-top: 1.5rem;}
 .nav_wrap {
-	background: transparent;}
+	background: transparent;
+	padding:0;}
 #header {
 	padding:0.9375rem 0;}
 .header-logo {
 	display:block;
 	float:left;
 	max-width:100%;}
-.header-info {}
+.no-header-info .header-info {
+	display: none;}
 .no-site-title .site-title {
 	display: none;}
 .no-site-tagline .site-description {
@@ -328,6 +330,8 @@ h1.site-title a {
 img.header-image {/* Remove fancy borders */
 	border-radius: 0;
 	box-shadow:none;}
+.site-header {
+	padding: 0;}
 .widget-area .widget {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -791,10 +795,8 @@ p.edit-link .genericon {
 	line-height: 1.714285714;
 	margin:1rem 0;
 	list-style:none;}
-#respond {
-	margin-top: 3rem;
-	max-width: 99%;
-	width: 99%;}
+.comment-respond #respond {
+	margin-top: 3rem;}
 #respond h3#reply-title {
 	font-size: 1.4375rem;
 	line-height: 1.5;}
@@ -1182,7 +1184,7 @@ img#wpstats{
 	.no-js .title-bar {display: flex;}
 }
 [type='text'] {
-	height: 2.5rem;}
+	height: 2.55rem;}
 /* off-canvas styles */
 ul.off-canvas-list li,
 ul.off-canvas-list li li,
@@ -1330,6 +1332,8 @@ textarea {
   float: left !important;}
 .right {
   float: right !important;}
+.pagination {
+	margin-bottom: 35px;}
 .pagination .current {
     padding: 0!important;}
 .pagination-previous a::before,
@@ -1461,6 +1465,80 @@ hr {
 	font-size: 0.625rem;}
 .pricing-table .button {
 	margin: 0;}
+
+/**************************************
+ * WooCommerce
+ *************************************/
+.woocommerce .search-submit {
+  display: none!important;}
+ul.tabs.wc-tabs {
+  border-top:1px solid #e6e6e6;border-right:none;border-left:none;border-bottom:1px solid #e6e6e6;}
+table.variations tbody {
+  border: none;}
+.woocommerce div.product form.cart .variations select {
+  margin: 0;}
+.woocommerce div.product table.variations {
+  margin: 0!important;}
+.woocommerce div.product form.cart .variations td.label {
+  background:transparent;}
+td.value {
+  padding: 0!important;}
+.woocommerce div.product form.cart .variations td.label {
+  margin-top: 5px;}
+.woocommerce .quantity .qty {
+  padding: 6.5px;}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+  color:#b02329;}
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+  padding: 0;margin: 0 0 1.618em;text-align: center;}
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+  border-bottom: none;}
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  border:none;background-color:transparent;position:inherit;border-radius: 0;margin: 0 -5px;}
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+  padding:0;background:transparent;border:none;border-radius: 100%;}
+.woocommerce #reviews #comments h2 {
+  margin-bottom: 25px;}
+.woocommerce div.product .woocommerce-tabs .panel #comments {
+  padding: 0;}
+.woocommerce .star-rating span:before, .woocommerce .star-rating:before {
+    color: #ffa200;}
+.woocommerce p.stars a {
+  color: #ffa200;}
+.woocommerce div.product form.cart {
+  width:60%;}
+.woocommerce div.product form.cart .variations select {
+  max-width: 75%;}
+a.reset_variations {
+  margin-left: 15px;}
+.woocommerce-page .woocommerce-message .button {
+  background: transparent;font-weight: 700;}
+.woocommerce-page .woocommerce-message .button:hover {
+  background: transparent;}
+a.button.wc-forward:after {
+  content: "\f105";font-family: FontAwesome;line-height: 1em;speak: none;padding-left: 10px;}
+.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text {
+    width: 120px;}
+.single_variation_wrap {
+	margin: 15px 0;}
+.archive.woocommerce ul.products li.product .onsale,
+.woocommerce section.related > ul.products li.product .onsale {
+	margin: 0;}
+.archive.woocommerce span.onsale {
+	border-radius: 0;
+	padding: 5px 15px;
+	line-height: normal;
+	min-height:0;
+	min-width: 0;}
+.product-template-default.woocommerce span.onsale {
+	border-radius: 0;
+	padding: 5px 15px;
+	line-height: normal;
+	min-height:0;
+	min-width: 0;
+	text-transform: uppercase;
+	top: 0;
+	left: 0;}
 
 /**
  * 15.0 - Media Queries

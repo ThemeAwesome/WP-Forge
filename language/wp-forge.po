@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP-Forge 6.4.1.1\n"
+"Project-Id-Version: WP-Forge 6.4.2\n"
 "POT-Creation-Date: 2017-06-30 13:17-0700\n"
 "PO-Revision-Date: 2017-06-30 13:16-0700\n"
 "Last-Translator: Thomas E. Vasquez <tsquez@gmail.com>\n"

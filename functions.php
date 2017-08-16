@@ -1,9 +1,8 @@
 <?php
 /**
- * WP-Forge functions and definitions.
- * @version 6.4.1.1
+ * @version 6.4.2
  */
-define( 'WPFORGE_VERSION', '6.4' );
+define( 'WPFORGE_VERSION', '6.4.2' );
 define( 'WPFORGE_URI', get_template_directory_uri() );
 define( 'WPFORGE_DIR', get_template_directory() );
 // Sets up the content width value based on the theme's design and stylesheet.
@@ -92,7 +91,7 @@ function wpforge_scripts() {
 	  	wp_enqueue_style('wpforge', get_stylesheet_uri(),'', WPFORGE_VERSION );
 	  	wp_enqueue_style('customizer', WPFORGE_URI . '/css/customizer.css','', WPFORGE_VERSION);
 }
-add_action( 'wp_enqueue_scripts', 'wpforge_scripts', 0);
+add_action( 'wp_enqueue_scripts', 'wpforge_scripts');
 // Enqueue certain scripts with a very low priority so it loads as close to the closing body tag as possible
 if ( ! function_exists( 'wpforge_theme_functions' ) ) {
 	function wpforge_theme_functions() {
@@ -112,87 +111,30 @@ if ( ! function_exists( 'wpforge_enqueue_comments_reply' ) ) {
 	add_action( 'comment_form_before', 'wpforge_enqueue_comments_reply' );
 }
 // Register our main and footer widget areas.
-if ( ! function_exists( 'wpforge_widgets_init' ) ) {
+if ( ! function_exists( 'wpforge_widgets_init' ) ) :
 	function wpforge_widgets_init() {
-		register_sidebar( array(
-			'name' => __( 'Main Sidebar', 'wp-forge' ),
-			'id' => 'main-sidebar',
-			'description' => __( 'Displays widgets in the blog area as well as pages.', 'wp-forge' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h6 class="widget-title">',
-			'after_title' => '</h6>',
-		) );
-		register_sidebar( array(
-			'name' => __( 'First Footer Widget Area', 'wp-forge' ),
-			'id' => 'footer-sidebar-1',
-			'description' => __( 'An optional widget area for your site footer', 'wp-forge' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h6 class="widget-title">',
-			'after_title' => '</h6>',
-		) );
-		register_sidebar( array(
-			'name' => __( 'Second Footer Widget Area', 'wp-forge' ),
-			'id' => 'footer-sidebar-2',
-			'description' => __( 'An second optional widget area for your site footer', 'wp-forge' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h6 class="widget-title">',
-			'after_title' => '</h6>',
-		) );
-		register_sidebar( array(
-			'name' => __( 'Third Footer Widget Area', 'wp-forge' ),
-			'id' => 'footer-sidebar-3',
-			'description' => __( 'An third optional widget area for your site footer', 'wp-forge' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h6 class="widget-title">',
-			'after_title' => '</h6>',
-		) );
-		register_sidebar( array(
-			'name' => __( 'Fourth Footer Widget Area', 'wp-forge' ),
-			'id' => 'footer-sidebar-4',
-			'description' => __( 'An fourth optional widget area for your site footer', 'wp-forge' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h6 class="widget-title">',
-			'after_title' => '</h6>',
-		) );
+		// Set up our array of widgets	
+		$widgets = array(
+			'main-sidebar' => __('Main Sidebar','wp-forge'),
+			'footer-sidebar-1' => __('First Footer Widget Area','wp-forge'),
+			'footer-sidebar-2' => __('Second Footer Widget Area','wp-forge'),
+			'footer-sidebar-3' => __('Third Footer Widget Area','wp-forge'),
+			'footer-sidebar-4' => __('Fourth Footer Widget Area','wp-forge'),
+		);
+		
+		foreach ( $widgets as $id => $name ) {
+			register_sidebar( array(
+				'name'          => $name,
+				'id'            => $id,
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => apply_filters('wpforge_start_widget_title','<h6 class="widget-title">'),
+				'after_title'   => apply_filters('wpforge_end_widget_title','</h6>'),
+			) );
+		}
 	}
 	add_action( 'widgets_init', 'wpforge_widgets_init' );
-}
-// Footer Sidebars. This will count the number of footer sidebars to enable dynamic classes in the footer area.
-if ( ! function_exists( 'wpforge_footer_sidebar_class' ) ) {
-	function wpforge_footer_sidebar_class() {
-		$count = 0;
-		if ( is_active_sidebar( 'footer-sidebar-1' ) )
-			$count++;
-		if ( is_active_sidebar( 'footer-sidebar-2' ) )
-			$count++;
-		if ( is_active_sidebar( 'footer-sidebar-3' ) )
-			$count++;
-		if ( is_active_sidebar( 'footer-sidebar-4' ) )
-			$count++;
-		$class = '';
-		switch ( $count ) {
-			case '1':
-				$class = 'small-12 large-12';
-				break;
-			case '2':
-				$class = 'small-12 large-6';
-				break;
-			case '3':
-				$class = 'small-12 large-4';
-				break;
-			case '4':
-				$class = 'small-12 large-3';
-				break;
-		}
-		if ( $class )
-			echo '' . $class . '';
-	}
-}
+endif;
 // Displays navigation to next/previous pages when applicable.
 if ( ! function_exists( 'wpforge_content_nav' ) ) :
 
@@ -310,6 +252,11 @@ if ( ! function_exists( 'wpforge_body_class' ) ) {
 	        $classes[] = 'no-site-tagline';
 	    } else {
 	        $classes[] = 'has-site-tagline';
+	    }
+	    if (get_theme_mod('wpforge_hide_sitetitle') || get_theme_mod('wpforge_hide_tagline')) {
+			$classes[] = 'no-header-info';
+	    } else {
+	        $classes[] = 'has-header-info';
 	    }
 		if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'page-templates/full-width.php' ) )
 			$classes[] = 'full-width';
@@ -528,4 +475,40 @@ if ( ! function_exists( 'wpforge_back_to_top' ) ) :
 	}
 	add_action('wp_footer','wpforge_back_to_top');
 endif;
-?>
+function wpforge_setup_woocommerce() {
+	if ( ! class_exists( 'WooCommerce' ) ) {
+		return;
+	}
+	// Add support for WooCommerce features
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+	
+	//Remove default WooCommerce wrappers
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+	remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+}
+add_action( 'after_setup_theme','wpforge_setup_woocommerce' );
+
+// add opening containers
+if ( ! function_exists( 'wpforge_woocommerce_start' ) ) :
+	function wpforge_woocommerce_start() { ?>
+			<div id="content" class="cell" role="main">
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>
+					<div class="entry-content" itemprop="text">
+	<?php 
+	}
+	add_action('woocommerce_before_main_content', 'wpforge_woocommerce_start', 10);
+endif;
+
+// add closing containers
+if ( ! function_exists( 'wpforge_woocommerce_end' ) ) :
+	function wpforge_woocommerce_end() { ?>
+					</div><!-- .entry-content -->
+				</article><!-- article -->
+			</div><!-- .site-main -->
+	<?php
+	}
+	add_action('woocommerce_after_main_content', 'wpforge_woocommerce_end', 10);
+endif;

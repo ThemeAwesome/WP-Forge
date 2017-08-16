@@ -1,14 +1,13 @@
 <?php
 /**
- * The template for displaying image attachments.
- * @version 6.4.1.1
+ * @version 6.4.2
  */
 get_header(); ?>
 	<div id="primary" class="small-12 large-12 cell site-content">
 		<div id="content" role="main">
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<nav aria-label="You are here:" role="navigation"><ul class="breadcrumbs">','</ul></nav>'); } ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'image-attachment' ); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class( 'image-attachment' ); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>
 					<header class="entry-header">
 						<?php the_title( '<h1 class="entry-title-post" itemprop="headline">', '</h1>' ); ?>
 						<div class="entry-meta-header">

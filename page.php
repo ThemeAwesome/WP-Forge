@@ -1,7 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
- * @version 6.4.1.1
+ * @version 6.4.2
  */
 get_header(); ?>
 	<div id="content" class="small-12 large-8 cell" role="main">
@@ -13,6 +12,5 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 	</div><!-- #content -->
-
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

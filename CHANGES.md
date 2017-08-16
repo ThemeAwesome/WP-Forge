@@ -1,12 +1,27 @@
 Theme Name: **WP-Forge**<br />
 Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
 Requires at least: **4.8**<br />
-Tested up to: **4.9-alpha-41035**<br />
-Stable tag: **6.4.1.1**<br />
+Tested up to: **4.9-alpha-41255**<br />
+Stable tag: **6.4.2**<br />
 License: **GPLv2 or later**<br />
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)<br />
 
 == Changelog ==
+
+= 6.4.2 =
+
+Theme updated 07/19/17
+
+* Updated theme to Foundation 6.4.2 - Here is a list of what Zurb changed in this version https://github.com/zurb/foundation-sites/releases/tag/v6.4.2
+* Removed the `wpforge_footer_sidebar_class` function from `functions.php` - before, this function was used to calculate the number of widgets added in the footer sidebar area, and then it would apply the necessary classes to make sure the widget areas appeared properly. With the 6.4 update, this is done automatically so the function is not needed any longer.
+* Rewrote the `wpforge_widgets_init` function in functions.php - its smaller now, means less bloat.
+* Switched some of the html where rows and columns were still being used.
+* Adjusted the comments area.
+* Adjusted the `margin-bottom` of pagination.
+* Added support for WooCommerce. This should correct any layout issues when using the plugin, as well as prevent the end user from having to add it themselves.
+* Adjusted the `.dropdown.menu .is-active > a` color in css as well as the customizer.
+* Reworked the header image portion of `header.php` - if an image is displayed then display the div along with the image. If no image is displayed, do not show the empty div.
+* Changed the priority of all the WP-Forge css scripts and files.
 
 = 6.4.1.1 =
 

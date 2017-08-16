@@ -1,7 +1,6 @@
 <?php
 /**
- * The template for displaying the footer.
- * @version 6.4.1.1
+ * @version 6.4.2
  */
 ?>
             </div><!-- .grid-x .grid-margin-x -->

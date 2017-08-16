@@ -1,7 +1,7 @@
 <?php
 /**
 * The template for displaying the theme information page under Appearance
-* @version 6.4.1.1
+* @version 6.4.2
 */
 // Load CSS
 if ( ! function_exists( 'wpforge_load_admin_scripts' ) ) {
@@ -50,7 +50,7 @@ function wpforge_theme_info_page() {
     <div class="wrap about-wrap theme_info_wrapper">
         <h1><?php printf( esc_html__('%s %1s', 'wp-forge'), $theme_data->Name, $theme_data->Version ); ?></h1>
         <div class="about-text">
-            <?php esc_html_e( 'A WordPress theme built with Foundation for Sites (6.4.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again!', 'wp-forge' ); ?>
+            <?php esc_html_e( 'A WordPress theme built using the latest version of Foundation for Sites, from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again!', 'wp-forge' ); ?>
         </div><!-- end about-text -->
 
         <a target="_blank" href="<?php echo esc_url('https://themeawesome.com/'); ?>" class="theme-badge wp-badge"><span>ThemeAwesome.com</span></a>
@@ -67,7 +67,7 @@ function wpforge_theme_info_page() {
 
             <div class="row rtop">
 
-                    <div class="small-12 large-4 columns">
+                    <div class="small-12 large-4 column">
 
                         <div class="theme_link">
                             <h3><?php esc_html_e( 'Theme Customizer', 'wp-forge' ); ?></h3>
@@ -81,7 +81,7 @@ function wpforge_theme_info_page() {
                             <h3><?php esc_html_e( 'Theme Documentation', 'wp-forge' ); ?></h3>
                             <p class="about"><?php printf(esc_html__('Need any help to setup and configure %s? Please read the theme documentation.', 'wp-forge'), $theme_data->Name); ?></p>
                             <p>
-                                <a href="<?php echo esc_url( 'https://themeawesome.com/docs/wp-forge/' ); ?>" target="_blank" class="button button-primary"><?php esc_html_e('WP-Forge Documentation', 'wp-forge'); ?></a>
+                                <a href="<?php echo esc_url( 'https://themeawesome.com/docs/wp-forge/' ); ?>" target="_blank" class="button button-secondary"><?php esc_html_e('WP-Forge Documentation', 'wp-forge'); ?></a>
                             </p>
                         </div><!-- end theme_link -->
 
@@ -89,13 +89,13 @@ function wpforge_theme_info_page() {
                             <h3><?php esc_html_e( 'Having Trouble, Need some help?', 'wp-forge' ); ?></h3>
                             <p class="about"><?php printf(esc_html__('Support for %s is provided through the WordPress Support Forums.', 'wp-forge'), $theme_data->Name); ?></p>
                             <p>
-                                <a href="<?php echo esc_url('https://wordpress.org/support/theme/wp-forge' ); ?>" target="_blank" class="button button-primary"><?php echo sprintf( esc_html__('Visit Support Forums', 'wp-forge'), $theme_data->Name); ?></a>
+                                <a href="<?php echo esc_url('https://wordpress.org/support/theme/wp-forge' ); ?>" target="_blank" class="button button-secondary"><?php echo sprintf( esc_html__('Visit Support Forums', 'wp-forge'), $theme_data->Name); ?></a>
                             </p>
                         </div><!-- end theme_link -->
 
                     </div><!-- end theme_info_left -->
 
-                    <div class="small-12 large-7 columns">
+                    <div class="small-12 large-7 column">
                         <img src="<?php echo get_template_directory_uri(); ?>/screenshot.png" alt="Theme Screenshot" />
                         <p class="cntr"><strong><?php esc_html_e( 'What do you think of WP-Forge?', 'wp-forge' ); ?></strong><br />
                         <?php _e('Please <a target="_blank" href="https://wordpress.org/support/theme/wp-forge/reviews/">rate and review WP-Forge</a> on WordPress.org.', 'wp-forge'); ?><br />
@@ -108,14 +108,31 @@ function wpforge_theme_info_page() {
 
          <?php if ( $tab == 'changelog' ) { ?>
                 <div class="row">
-                    <div class="changelog small-12 large-12 columns">
+                    <div class="changelog small-12 large-12 column">
+
+                        <h4>6.4.2</h4>
+
+                        <small>Theme updated 08/16/17</small>
+
+                        <ul>
+                            <li>Updated theme to Foundation 6.4.2 - Here is a list of what Zurb changed in this version <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/releases/tag/v6.4.2' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/releases/tag/v6.4.2</a></li>
+                            <li>Removed the <code>wpforge_footer_sidebar_class</code> function from <code>functions.php</code> - before, this function was used to calculate the number of widgets added in the footer sidebar area, and then it would apply the necessary classes to make sure the widget areas appeared properly. With the 6.4 update, this is done automatically so the function is not needed any longer.</li>
+                            <li>Rewrote the <code>wpforge_widgets_init</code> function in functions.php - its smaller now, means less bloat.</li>
+                            <li>Switched some of the html where rows and columns were still being used.</li>
+                            <li>Adjusted the comments area.</li>
+                            <li>Adjusted the <code>margin-bottom</code> of pagination.</li>
+                            <li>Added support for WooCommerce. This should correct any layout issues when using the plugin, as well as prevent the end user from having to add it themselves.</li>
+                            <li>Adjusted the <code>.dropdown.menu .is-active > a</code> color in css as well as the customizer.</li>
+                            <li>Reworked the header image portion of <code>header.php</code> - if an image is displayed then display the div along with the image. If no image is displayed, do not show the empty div.</li>
+                            <li>Changed the priority of all the WP-Forge css scripts and files.</li>
+                        </ul>
 
                         <h4>6.4.1.1</h4>
 
                         <small>Theme updated 07/12/17</small>
 
                         <ul>
-                            <li>Corrected issue with footer sidebar area. Switched to <code>large auto cells</code> for each sidebar area. This moves towards the new XY grid from foundation. The calculation in <code>functions.php</code> is no longer needed to calculate and add the apropriate sizes to the individual sidebars.</li>
+                            <li>Corrected issue with footer sidebar area. Switched to <code>large auto columns</code> for each sidebar area. This moves towards the new XY grid from foundation. The calculation in <code>functions.php</code> is no longer needed to calculate and add the apropriate sizes to the individual sidebars.</li>
                             <li>Added a image size for the custom logo. Logo is set to 1200px wide which is the full length of the theme and the image has auto height. If your image is smaller than the logo area it will shrink accordingly.</li>
                             <li>Added back the custom header feature that the custom logo was supposed to replace, so now users can use either the custom logo or custom header feature, as well as random header images.</li>
                         </ul>
@@ -125,7 +142,7 @@ function wpforge_theme_info_page() {
                         <small>Theme updated 07/06/17</small>
 
                         <ul>
-                            <li>Updated to the latest version of Foundation for Sites v6.4.1.1 - not really need but I like to on top of things.</li>
+                            <li>Updated to the latest version of Foundation for Sites v6.4.2 - not really need but I like to on top of things.</li>
                             <li>Corrected the <code>no-js</code> in styles.css. There is an issue where the menu was loading after the <strong>js</strong> was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/issues/10339' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/issues/10339</a>.</li>
                             <li>Removed the Russian .mo file as it is not needed.</li>
                         </ul>

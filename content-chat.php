@@ -1,11 +1,11 @@
 <?php
 /**
  * The template for displaying posts in the Chat post format on index and archive pages.
- * @version 6.4.1.1
+ * @version 6.4.2
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>
 	<header class="entry-header">
 		<?php  if( get_theme_mod( 'wpforge_cat_display','yes' ) == 'yes') { ?>
 			<?php  if( get_theme_mod( 'wpforge_cat_position','top' ) == 'top') { ?>

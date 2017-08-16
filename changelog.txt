@@ -1,12 +1,27 @@
 Theme Name: WP-Forge
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
-Requires at least: 4.8
-Tested up to: 4.9-alpha-41035
-Stable tag: 6.4.1.1
+Requires at least: 4.8.1
+Tested up to: 4.9-alpha-41255
+Stable tag: 6.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
+
+= 6.4.2 =
+
+Theme updated 07/19/17
+
+* Updated theme to Foundation 6.4.2 - Here is a list of what Zurb changed in this version https://github.com/zurb/foundation-sites/releases/tag/v6.4.2
+* Removed the `wpforge_footer_sidebar_class` function from `functions.php` - before, this function was used to calculate the number of widgets added in the footer sidebar area, and then it would apply the necessary classes to make sure the widget areas appeared properly. With the 6.4 update, this is done automatically so the function is not needed any longer.
+* Rewrote the `wpforge_widgets_init` function in functions.php - its smaller now, means less bloat.
+* Switched some of the html where rows and columns were still being used.
+* Adjusted the comments area.
+* Adjusted the `margin-bottom` of pagination.
+* Added support for WooCommerce. This should correct any layout issues when using the plugin, as well as prevent the end user from having to add it themselves.
+* Adjusted the `.dropdown.menu .is-active > a` color in css as well as the customizer.
+* Reworked the header image portion of `header.php` - if an image is displayed then display the div along with the image. If no image is displayed, do not show the empty div.
+* Changed the priority of all the WP-Forge css scripts and files.
 
 = 6.4.1.1 =
 
@@ -20,8 +35,8 @@ Theme updated 07/12/17
 
 Theme updated 07/06/17
 
-* Updated to the latest version of Foundation for Sites v6.4.1.1 - not really need but I like to stay on top of things.
-* Corrected the `no-js` in styles.css. There is an issue where the menu was loading after the js was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue https://github.com/zurb/foundation-sites/issues/10339
+* Updated to the latest version of Foundation for Sites v6.4.2 - not really needed but I like to stay on top of things.
+* Corrected the `no-js` in styles.css. There was an issue where the menu was loading after the js was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue https://github.com/zurb/foundation-sites/issues/10339
 * Removed the Russian.mo file as it is not needed.
 
 = 6.4 =

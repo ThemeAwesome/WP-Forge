@@ -1,9 +1,9 @@
-WP-Forge v6.4.1.1
+WP-Forge 6.4.2
 ====================
 
-### Updated July 12, 2017
+### Updated August 16, 2017
 
-A WordPress theme built with Foundation for Sites (Foundation 6.4.1) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the CHANGELOG and README files before/after installation and/or update.
+A WordPress theme built with Foundation for Sites (Foundation 6.4.2) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the `CHANGELOG.txt` and `README.txt` files before/after installation and/or update.
 
 Installation
 =============
@@ -26,7 +26,7 @@ Support
 [WP-Forge Support Forums](https://wordpress.org/support/theme/wp-forge) - If you if you run into issues, you can post your questions/issues there.
 
 ### WP-Forge was built with the following tools
-* [WordPress Beta Tester](https://make.wordpress.org/core/handbook/testing/beta/) - This ensures WP-Forge is future proof. It also ensures that I use the latest bleeding edge nightlies of WordPress. As of this update the latest version is **4.9-alpha-41035**.
+* [WordPress Beta Tester](https://make.wordpress.org/core/handbook/testing/beta/) - This ensures WP-Forge is future proof. It also ensures that I use the latest bleeding edge nightlies of WordPress. As of this update the latest version is **4.9-alpha-41255**.
 * [WordPress Theme Standards](http://codex.wordpress.org/Theme_Development) - A list of standards that all themes should be coded with set forth by WordPress.
 * [WP-Test](http://wptest.io/) - An exhaustive set of test data that was developed over three years to measure the integrity of themes and plugins.
 * [Debug Bar](http://wordpress.org/plugins/debug-bar/) - a debugging menu added to the admin bar that quickly shows query, cache, and other helpful debugging information.
@@ -59,12 +59,14 @@ Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. Th
 
 ### Sites Using WP-Forge
 The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter](https://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
+* [AntiqueArchaeology](http://www.antiquearchaeology.com/blog/)
 * [HellYeah](http://hellyeahband.com/)
 * [Motley.com (Motley Crue)](http://www.motley.com/)
 * [SixxamMusic.com](http://sixxammusic.com/)
 * [DrowningPool.com](http://drowningpool.com/)
 * [Metal1.info](http://www.metal1.info/)
 * [National Comedy Theater](http://nationalcomedy.com/)
+* [SampSistemi](https://www.sampsistemi.com/)
 
 License
 =============

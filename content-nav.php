@@ -1,7 +1,6 @@
 <?php
 /**
- * The template for displaying the Top-Bar menu and its different positions.
- * @version 6.4.1.1
+ * @version 6.4.2
  */
 ?>
 <div itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" class="nav_container">

@@ -1,7 +1,7 @@
 <?php
 /**
 * WP-Forge Theme Customizer
-* @version 6.4.1.1
+* @version 6.4.2
 */
 
 //Handles the width and other elements in the Customizer.
@@ -2235,7 +2235,7 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   ));
   $wp_customize->add_section('wpforge_foundation_css_settings', array( /* foundation css settings */
     'title' => __('Foundation CSS Settings', 'wp-forge'),
-    'description' => __('This section allows you to choose which Foundation CSS system, float or flex, you want to use.', 'wp-forge'),
+    'description' => __('This section allows you to choose which Foundation CSS system, float or flex, you want to use.','wp-forge'),
     'priority' => 1,
     'panel' => 'wpforge_content',
   ));
@@ -4710,7 +4710,7 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . '.top-bar .menu .current_page_item a:hover{background-color:'.esc_attr(get_theme_mod('current_item_background_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('current_item_link_hover_color')) ) {
-        $output .= '' . '.top-bar .menu .current_page_item a:hover{color:'.esc_attr(get_theme_mod('current_item_link_hover_color')).';}';
+        $output .= '' . '.top-bar .menu .current_page_item a:hover,.dropdown.menu .is-active > a{color:'.esc_attr(get_theme_mod('current_item_link_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('content_width')) ) {
         $output .= '' . '.content_wrap{max-width:'.esc_attr(get_theme_mod('content_width')).';}';
