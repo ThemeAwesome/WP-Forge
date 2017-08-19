@@ -1,7 +1,7 @@
 <?php
 /**
 * The template for displaying the theme information page under Appearance
-* @version 6.4.2
+* @version 6.4.3
 */
 // Load CSS
 if ( ! function_exists( 'wpforge_load_admin_scripts' ) ) {
@@ -110,6 +110,16 @@ function wpforge_theme_info_page() {
                 <div class="row">
                     <div class="changelog small-12 large-12 column">
 
+                        <h4>6.4.3</h4>
+
+                        <small>Theme updated 08/19/17</small>
+
+                        <ul>
+                            <li>Updated theme to Foundation 6.4.3 - Nothing to really worry about. Just keeping up with the versioning. Mostly updates for scss. Here is a list of what Zurb changed in this version <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/releases/tag/v6.4.3' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/releases/tag/v6.4.3</a></li>
+                            <li>Corrected the css for related products that were on sale. The sale banner was appearing off center.</li>
+                            <li>Also corrected the date of the last update in the changelog.txt file.</li>
+                        </ul>
+
                         <h4>6.4.2</h4>
 
                         <small>Theme updated 08/16/17</small>
@@ -142,7 +152,7 @@ function wpforge_theme_info_page() {
                         <small>Theme updated 07/06/17</small>
 
                         <ul>
-                            <li>Updated to the latest version of Foundation for Sites v6.4.2 - not really need but I like to on top of things.</li>
+                            <li>Updated to the latest version of Foundation for Sites v6.4.3 - not really need but I like to on top of things.</li>
                             <li>Corrected the <code>no-js</code> in styles.css. There is an issue where the menu was loading after the <strong>js</strong> was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue <a href="<?php echo esc_url('https://github.com/zurb/foundation-sites/issues/10339' ); ?>" target="_blank">https://github.com/zurb/foundation-sites/issues/10339</a>.</li>
                             <li>Removed the Russian .mo file as it is not needed.</li>
                         </ul>

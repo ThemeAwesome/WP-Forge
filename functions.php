@@ -1,8 +1,8 @@
 <?php
 /**
- * @version 6.4.2
+ * @version 6.4.3
  */
-define( 'WPFORGE_VERSION', '6.4.2' );
+define( 'WPFORGE_VERSION', '6.4.3' );
 define( 'WPFORGE_URI', get_template_directory_uri() );
 define( 'WPFORGE_DIR', get_template_directory() );
 // Sets up the content width value based on the theme's design and stylesheet.
@@ -74,30 +74,30 @@ require WPFORGE_DIR . '/inc/theme-dashboard.php';
 // Load our Google Font
 if ( ! function_exists( 'wpforge_google_fonts' ) ) {
 	function wpforge_google_fonts() {// register the font styles we want
-	    wp_enqueue_style('wpforge-opensans', '//fonts.googleapis.com/css?family=Open+Sans:300,700','', '6.4');
+	    wp_enqueue_style('opensans', '//fonts.googleapis.com/css?family=Open+Sans:300,700','', '6.4');
 	}
 	add_action( 'wp_enqueue_scripts', 'wpforge_google_fonts', 0);
 }
 //Enqueue our scripts and styles
 function wpforge_scripts() {
 	global $wp_styles;
-	  	wp_enqueue_style('wpforge_fonts', WPFORGE_URI . '/fonts/fonts.css','', WPFORGE_VERSION);
+	  	wp_enqueue_style('fonts', WPFORGE_URI . '/fonts/fonts.css','', WPFORGE_VERSION);
 			if( get_theme_mod( 'wpforge_select_css' ) == 'flex') {
-				wp_enqueue_style('wfoundation', WPFORGE_URI . '/css/foundation-flex.css','', WPFORGE_VERSION);
+				wp_enqueue_style('flex', WPFORGE_URI . '/css/foundation-flex.css','',WPFORGE_VERSION);
 			} else {
-				wp_enqueue_style('foundation', WPFORGE_URI . '/css/foundation.css','', WPFORGE_VERSION);
+				wp_enqueue_style('foundation', WPFORGE_URI . '/css/foundation.css','',WPFORGE_VERSION);
 			}
-	  	wp_enqueue_style('motion_ui', WPFORGE_URI . '/css/motion-ui.css','', WPFORGE_VERSION );
+	  	wp_enqueue_style('motion_ui', WPFORGE_URI . '/css/motion-ui.css','',WPFORGE_VERSION);
 	  	wp_enqueue_style('wpforge', get_stylesheet_uri(),'', WPFORGE_VERSION );
-	  	wp_enqueue_style('customizer', WPFORGE_URI . '/css/customizer.css','', WPFORGE_VERSION);
+	  	wp_enqueue_style('customizer', WPFORGE_URI . '/css/customizer.css','',WPFORGE_VERSION);
 }
 add_action( 'wp_enqueue_scripts', 'wpforge_scripts');
 // Enqueue certain scripts with a very low priority so it loads as close to the closing body tag as possible
 if ( ! function_exists( 'wpforge_theme_functions' ) ) {
 	function wpforge_theme_functions() {
-		wp_enqueue_script('wpforge_what_input',WPFORGE_URI.'/js/what-input.js',array('jquery'),WPFORGE_VERSION,true);
-		wp_enqueue_script('wpforge_foundation',WPFORGE_URI.'/js/foundation.js',array('jquery'),WPFORGE_VERSION,true);
-		wp_enqueue_script ('wpforge_load_foundation', WPFORGE_URI.'/js/theme-functions.js',array('wpforge_foundation'),WPFORGE_VERSION,true);
+		wp_enqueue_script('what_input',WPFORGE_URI.'/js/what-input.js',array('jquery'),WPFORGE_VERSION,true);
+		wp_enqueue_script('foundation',WPFORGE_URI.'/js/foundation.js',array('jquery'),WPFORGE_VERSION,true);
+		wp_enqueue_script ('load_foundation', WPFORGE_URI.'/js/theme-functions.js',array('foundation'),WPFORGE_VERSION,true);
 	}
 	add_action('wp_enqueue_scripts','wpforge_theme_functions',999);
 }

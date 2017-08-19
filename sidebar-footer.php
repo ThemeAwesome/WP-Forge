@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 6.4.2
+ * @version 6.4.3
  */
 if ( ! is_active_sidebar( 'footer-sidebar-1' )
 	&& ! is_active_sidebar( 'footer-sidebar-2' )

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 6.4.2
+ * @version 6.4.3
  */
 ?>
 	<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>

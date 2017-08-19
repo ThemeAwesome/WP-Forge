@@ -2,8 +2,8 @@
 Donate link: https://www.paypal.me/themeawesome
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
 Requires at least: 4.8.1
-Tested up to: 4.9-alpha-41255
-Stable tag: 6.4.2
+Tested up to: 4.9-alpha-41268
+Stable tag: 6.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,14 +24,6 @@ A WordPress theme built using the latest version of Foundation for Sites, from Z
 	5. Font-Awesome 4.7 - See all license for Font-Awesome https://fortawesome.github.io/Font-Awesome/license/
 
 	*minimized version of font-awesome.css as well as genericons.css is used in fonts.css, full versions are located in /fonts/full
-
-Using rem values
-=================
-When you look at the style.css file you will notice that a majority of the values use rem (not em). I used the following tool to help with determining what rem value I needed to add:
-
-https://offroadcode.com/prototypes/rem-calculator/
-
-*When inputting a value for these divs, you can use px if that is what you are comfortable with. I do however recommend you using rem values.
 
 ///////////////////////////////////
 // Installation

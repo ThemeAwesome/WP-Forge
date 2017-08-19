@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 6.4.2
+ * @version 6.4.3
  */
 ?>
 			<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>

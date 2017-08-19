@@ -1,4 +1,4 @@
-/* @version 6.4.2 */
+/* @version 6.4.3 */
 jQuery(document).foundation();
 	// contain-to-grid functionality
 	jQuery(window).on('load scroll resize orientationChange', function () { 

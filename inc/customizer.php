@@ -1,7 +1,7 @@
 <?php
 /**
 * WP-Forge Theme Customizer
-* @version 6.4.2
+* @version 6.4.3
 */
 
 //Handles the width and other elements in the Customizer.

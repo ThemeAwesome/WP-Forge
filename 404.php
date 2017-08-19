@@ -1,7 +1,6 @@
 <?php
 /**
- * The template for displaying 404 pages (Not Found).
- * @version 6.4.2
+ * @version 6.4.3
  */
 get_header(); ?>
 		<div id="content" class="small-12 large-12 cell" role="main">

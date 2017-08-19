@@ -1,12 +1,20 @@
 Theme Name: **WP-Forge**<br />
 Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
 Requires at least: **4.8**<br />
-Tested up to: **4.9-alpha-41255**<br />
-Stable tag: **6.4.2**<br />
+Tested up to: **4.9-alpha-41268**<br />
+Stable tag: **6.4.3**<br />
 License: **GPLv2 or later**<br />
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)<br />
 
 == Changelog ==
+
+= 6.4.3 =
+
+Theme updated 08/19/17
+
+* Updated theme to latest version of Foundation, 6.4.3 - Nothing to really worry about. Mostly updates for scss. Just keeping up with the versioning. Here is a list of what Zurb changed in this version https://github.com/zurb/foundation-sites/releases/tag/v6.4.3
+* Corrected the css for related products that were on sale. The sale banner was appearing off center.
+* Also corrected the date of the last update in the changelog.txt file.
 
 = 6.4.2 =
 

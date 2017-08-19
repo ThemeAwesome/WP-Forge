@@ -1,16 +1,24 @@
 Theme Name: WP-Forge
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
 Requires at least: 4.8.1
-Tested up to: 4.9-alpha-41255
-Stable tag: 6.4.2
+Tested up to: 4.9-alpha-41268
+Stable tag: 6.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
 
+= 6.4.3 =
+
+Theme updated 08/19/17
+
+* Updated theme to latest version of Foundation, 6.4.3 - Nothing to really worry about. Mostly updates for scss. Just keeping up with the versioning. Here is a list of what Zurb changed in this version https://github.com/zurb/foundation-sites/releases/tag/v6.4.3
+* Corrected the css for related products that were on sale. The sale banner was appearing off center.
+* Also corrected the date of the last update in the changelog.txt file.
+
 = 6.4.2 =
 
-Theme updated 07/19/17
+Theme updated 08/16/17
 
 * Updated theme to Foundation 6.4.2 - Here is a list of what Zurb changed in this version https://github.com/zurb/foundation-sites/releases/tag/v6.4.2
 * Removed the `wpforge_footer_sidebar_class` function from `functions.php` - before, this function was used to calculate the number of widgets added in the footer sidebar area, and then it would apply the necessary classes to make sure the widget areas appeared properly. With the 6.4 update, this is done automatically so the function is not needed any longer.
@@ -35,7 +43,7 @@ Theme updated 07/12/17
 
 Theme updated 07/06/17
 
-* Updated to the latest version of Foundation for Sites v6.4.2 - not really needed but I like to stay on top of things.
+* Updated to the latest version of Foundation for Sites v6.4.3 - not really needed but I like to stay on top of things.
 * Corrected the `no-js` in styles.css. There was an issue where the menu was loading after the js was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue https://github.com/zurb/foundation-sites/issues/10339
 * Removed the Russian.mo file as it is not needed.
 

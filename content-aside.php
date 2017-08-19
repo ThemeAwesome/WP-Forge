@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 6.4.2
+ * @version 6.4.3
  */
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>>

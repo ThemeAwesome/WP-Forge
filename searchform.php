@@ -1,6 +1,6 @@
 <?php
 /**
- * @version 6.4.2
+ * @version 6.4.3
  */
 ?>
 <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
