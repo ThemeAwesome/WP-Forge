@@ -1,7 +1,4 @@
 <?php
-/**
- * @version 6.4.3
- */
 get_header(); ?>
 	<div id="content" class="small-12 large-8 cell" role="main">
     	<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<nav aria-label="You are here:" role="navigation"><ul class="breadcrumbs">','</ul></nav>'); } ?>

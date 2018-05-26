@@ -4,7 +4,7 @@ Theme URI: https://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome
 Author URI: https://themeawesome.com/
 Description: A WordPress theme built using the latest version of Foundation for Sites, from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please make sure you view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.4.3
+Version: 6.4.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
@@ -840,6 +840,10 @@ p.comment-form-author, p.comment-form-email {
 	padding-left: 0;}
 p.comment-form-email {
 	padding-right: 0;}
+p.comment-form-cookies-consent label {
+	display:inline-block!important;
+	font-size:12px;
+}
 
 /**
  * 11.0 - Front page template
@@ -1179,6 +1183,7 @@ img#wpstats{
 .no-js [data-responsive-toggle],
 .no-js [data-responsive-menu] ul {
  	display: none!important;}
+.title-bar {display:none}
 @media screen and (max-width:39.9em) {
 	.no-js .top-bar {display: none; }
 	.no-js .title-bar {display: flex;}
@@ -1322,16 +1327,16 @@ textarea {
 }
 /* this allows the menu to stick to the top when scrolled - taken from F5 */
 .contain-to-grid {
-	width: 100%;`}
+	width: 100%;}
 .contain-to-grid .top-bar {
     margin-bottom: 0;}
 .contain-to-grid .top-bar {
     margin: 0 auto;
-    margin-bottom: 0;}}
+    margin-bottom: 0;}
 .left {
-  float: left !important;}
+  float:left!important;}
 .right {
-  float: right !important;}
+  float:right!important;}
 .pagination {
 	margin-bottom: 35px;}
 .pagination .current {

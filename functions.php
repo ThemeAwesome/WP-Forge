@@ -1,7 +1,4 @@
 <?php
-/**
- * @version 6.4.3
- */
 define( 'WPFORGE_VERSION', '6.4.3' );
 define( 'WPFORGE_URI', get_template_directory_uri() );
 define( 'WPFORGE_DIR', get_template_directory() );
@@ -75,6 +72,7 @@ require WPFORGE_DIR . '/inc/theme-dashboard.php';
 if ( ! function_exists( 'wpforge_google_fonts' ) ) {
 	function wpforge_google_fonts() {// register the font styles we want
 	    wp_enqueue_style('opensans', '//fonts.googleapis.com/css?family=Open+Sans:300,700','', '6.4');
+	    wp_enqueue_style('source-sans', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,900','', '6.4');
 	}
 	add_action( 'wp_enqueue_scripts', 'wpforge_google_fonts', 0);
 }
@@ -84,6 +82,8 @@ function wpforge_scripts() {
 	  	wp_enqueue_style('fonts', WPFORGE_URI . '/fonts/fonts.css','', WPFORGE_VERSION);
 			if( get_theme_mod( 'wpforge_select_css' ) == 'flex') {
 				wp_enqueue_style('flex', WPFORGE_URI . '/css/foundation-flex.css','',WPFORGE_VERSION);
+			} elseif ( get_theme_mod( 'wpforge_select_css' ) == 'float') {
+				wp_enqueue_style('float', WPFORGE_URI . '/css/foundation-float.css','',WPFORGE_VERSION);
 			} else {
 				wp_enqueue_style('foundation', WPFORGE_URI . '/css/foundation.css','',WPFORGE_VERSION);
 			}
@@ -429,18 +429,6 @@ if ( ! function_exists( 'wpforge_off_canvas_nav' ) ) {
 	    ));
 	}
 }
-// Allows you to switch the comment form fields back to their original positions.
-if( get_theme_mod( 'wpforge_comment_layout' ) == 'old') {
-	if ( ! function_exists( 'wpforge_move_comment_fields' ) ) {
-		function wpforge_move_comment_fields( $fields ) {
-			$comment_field = $fields['comment'];
-			unset( $fields['comment'] );
-			$fields['comment'] = $comment_field;
-			return $fields;
-		}
-		add_filter( 'comment_form_fields', 'wpforge_move_comment_fields' );
-	}
-}
 // Figure out which schema tags to apply to the <body> element
 if ( ! function_exists( 'wpforge_body_schema' ) ) :
 	function wpforge_body_schema() {
@@ -475,6 +463,7 @@ if ( ! function_exists( 'wpforge_back_to_top' ) ) :
 	}
 	add_action('wp_footer','wpforge_back_to_top');
 endif;
+// set up woocommerce
 function wpforge_setup_woocommerce() {
 	if ( ! class_exists( 'WooCommerce' ) ) {
 		return;
@@ -491,7 +480,7 @@ function wpforge_setup_woocommerce() {
 }
 add_action( 'after_setup_theme','wpforge_setup_woocommerce' );
 
-// add opening containers
+// add opening containers woocommerce
 if ( ! function_exists( 'wpforge_woocommerce_start' ) ) :
 	function wpforge_woocommerce_start() { ?>
 			<div id="content" class="cell" role="main">
@@ -502,7 +491,7 @@ if ( ! function_exists( 'wpforge_woocommerce_start' ) ) :
 	add_action('woocommerce_before_main_content', 'wpforge_woocommerce_start', 10);
 endif;
 
-// add closing containers
+// add closing containers woocommerce
 if ( ! function_exists( 'wpforge_woocommerce_end' ) ) :
 	function wpforge_woocommerce_end() { ?>
 					</div><!-- .entry-content -->

@@ -1,9 +1,9 @@
 === WP-Forge ===
 Donate link: https://www.paypal.me/themeawesome
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
-Requires at least: 4.8.1
-Tested up to: 4.9-alpha-41268
-Stable tag: 6.4.3
+Requires at least: 4.9.6
+Tested up to: 4.9.6
+Stable tag: 6.4.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

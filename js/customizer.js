@@ -1,4 +1,3 @@
-/* @version 6.4.3 */
 
 ( function( $ ) {
 

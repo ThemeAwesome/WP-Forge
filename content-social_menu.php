@@ -1,8 +1,3 @@
-<?php
-/**
- * @version 6.4.3
- */
-?>
 <?php if ( has_nav_menu( 'social' ) ) : ?>
 	<div class="social_wrap small-12 large-12 cell text-center">
 		<nav id="social-navigation" class="social-navigation" role="navigation">

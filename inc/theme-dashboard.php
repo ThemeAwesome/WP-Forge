@@ -1,7 +1,6 @@
 <?php
 /**
 * The template for displaying the theme information page under Appearance
-* @version 6.4.3
 */
 // Load CSS
 if ( ! function_exists( 'wpforge_load_admin_scripts' ) ) {
@@ -53,13 +52,15 @@ function wpforge_theme_info_page() {
             <?php esc_html_e( 'A WordPress theme built using the latest version of Foundation for Sites, from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again!', 'wp-forge' ); ?>
         </div><!-- end about-text -->
 
-        <a target="_blank" href="<?php echo esc_url('https://themeawesome.com/'); ?>" class="theme-badge wp-badge"><span>ThemeAwesome.com</span></a>
+        <a target="_blank" href="<?php echo esc_url('https://themeawesome.com/'); ?>" class="theme-badge wp-badge"><span>ThemeAWESOME</span></a>
 
         <h2 class="nav-tab-wrapper">
 
             <a href="?page=wpforge" class="nav-tab<?php echo is_null($tab) ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'Getting Started', 'wp-forge' ) ?></a>
 
             <a href="?page=wpforge&tab=changelog" class="nav-tab<?php echo $tab == 'changelog' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'Changelog', 'wp-forge' ); ?></a>
+
+            <a href="?page=wpforge&tab=themes" class="nav-tab<?php echo $tab == 'themes' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'New Themes', 'wp-forge' ); ?></span></a>
 
         </h2><!-- end nav-tab-wrapper -->
 
@@ -109,6 +110,26 @@ function wpforge_theme_info_page() {
          <?php if ( $tab == 'changelog' ) { ?>
                 <div class="row">
                     <div class="changelog small-12 large-12 column">
+
+                        <h4>6.4.3.2</h4>
+
+                        <small>Theme updated 05/26/2018</small>
+
+                        <ul>
+                            <li>Added <code>GDPR</code> compliance to the comment form.</li>
+                        </ul>
+
+
+                        <h4>6.4.3.1</h4>
+
+                        <small>Theme updated 01/30/2018</small>
+
+                        <ul>
+                            <li>Removed an extra <code>></code> from <code>content-aside.php</code></li>
+                            <li>Added <code>.title-bar {display:none}</code> to <code>style.css</code>.</li>
+                            <li>Removed <code>CHANGELOG.txt</code> file - Will now be kept in this tab.</li>
+                            <li>Added <code>New Themes</code> tab in the <code>WP-Forge</code> for my new theme <code>Totalpress</code>.</li>
+                        </ul>
 
                         <h4>6.4.3</h4>
 
@@ -400,6 +421,35 @@ function wpforge_theme_info_page() {
 
                 </div><!-- end col -->
 
+        <?php } ?>
+
+        <?php if ( $tab == 'themes' ) { ?>
+            <div class="row rtop">
+
+                <div class="small-12 large-12 columns">
+
+                    <div class="small-12 large-4 columns">
+
+                        <div class="theme_link">
+                            <h2><?php esc_html_e( 'TotalPress', 'wp-forge' ); ?></h2>
+                            <p class="about"><?php printf(__('My name is TotalPress! I&#39;m based off _s (Underscores) and built with Zurb&#39;s Foundation for Sites, so I&#39;m responsive and look good on any device. I&#39;m light weight and super fast <strong>(184kb compressed!)</strong>. I have lots of hooks and filters, 10 widget areas and 6 different sidebar page templates. I use the Kirki plugin for the theme customizer and the Meta Box plugin for metaboxes. Did I mention that I work really well with page builders like Elementor and Header Footer Elementor. Download me today and take me for a spin.', 'wp-forge'), $theme_data->Name); ?></p>
+                            <p>
+                                <a href="<?php echo esc_url('https://wordpress.org/themes/totalpress/'); ?>" class="button button-primary" target="_blank"><?php esc_html_e('Download Today', 'wp-forge'); ?></a>
+                            </p>
+                        </div><!-- end theme_link -->
+
+                    </div><!-- end theme_info_left -->
+
+                    <div class="small-12 large-7 columns">
+                        <img src="<?php echo get_template_directory_uri(); ?>/inc/img/totalpress-screenshot.png" alt="WP-Edify" />
+                        <p class="cntr"><strong><?php esc_html_e( 'What do you think of TotalPress?', 'wp-forge' ); ?></strong><br />
+                        <?php _e('Please <a target="_blank" href="https://wordpress.org/support/theme/totalpress/reviews/">rate and review TotalPress</a> on WordPress.org.', 'wp-forge'); ?><br />
+                        <span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></p>
+                    </div><!-- end theme_info_right -->
+
+                </div><!-- end columns -->
+
+            </div><!-- end row -->
         <?php } ?>
 
         <?php do_action( 'wpforge_more_tabs_details', $tab ); ?>

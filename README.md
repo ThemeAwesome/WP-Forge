@@ -72,7 +72,7 @@ License
 =============
 All of the components used in the creation of WP-Forge are licensed as follows:
 * WordPress is licensed [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)
-* Foundation Framework 6.2.4 is licensed [MIT License](https://github.com/zurb/foundation/blob/master/LICENSE)
+* Foundation Framework is licensed [MIT License](https://github.com/zurb/foundation/blob/master/LICENSE)
 * Motion-UI is licensed [MIT License](https://github.com/zurb/motion-ui/commit/2a6617b9e45eaaa7f8888ba04a811002c5ebff5e)
 * What-Input is licensed [MIT License](https://github.com/ten1seven/what-input/blob/master/LICENSE)
 * Genericons is licensed [GNU General Public License v2 or later](http://www.gnu.org/licenses/gpl-2.0.html)

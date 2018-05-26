@@ -1,8 +1,3 @@
-<?php
-/**
- * @version 6.4.3
- */
-?>
 <?php //Text and nav centered
  if( get_theme_mod( 'wpforge_footer_position','center' ) == 'center') { ?>
         <div class=" small-12 large-12 cell">

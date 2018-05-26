@@ -1,8 +1,3 @@
-<?php
-/**
- * @version 6.4.3
- */
-?>
 <div class="off-canvas-wrapper">
 
 <?php if( get_theme_mod('wpforge_nav_select') == 'offcanvas') { ?>

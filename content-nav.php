@@ -1,8 +1,3 @@
-<?php
-/**
- * @version 6.4.3
- */
-?>
 <div itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" class="nav_container">
   <?php if( get_theme_mod( 'wpforge_nav_position','normal' ) == 'normal') { ?> 
       <?php if( get_theme_mod( 'wpforge_mobile_display' ) == 'yes') { ?>

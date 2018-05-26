@@ -1,8 +1,3 @@
-<?php
-/**
- * @version 6.4.3
- */
-?>
             </div><!-- .grid-x .grid-margin-x -->
 	   </section><!-- end .content-wrap -->
     </div><!-- end .content_container -->

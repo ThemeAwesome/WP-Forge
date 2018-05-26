@@ -1,8 +1,4 @@
-<?php
-/**
- * @version 6.4.3
- */
-?><!doctype html>
+<!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">

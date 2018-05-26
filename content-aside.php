@@ -1,9 +1,4 @@
-<?php
-/**
- * @version 6.4.3
- */
-?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema( 'CreativeWork' ); ?>>
 		<div class="entry-meta-header">
 			<?php  if( get_theme_mod( 'wpforge_cat_display','yes' ) == 'yes') { ?>
 				<?php  if( get_theme_mod( 'wpforge_cat_position','top' ) == 'top') { ?>

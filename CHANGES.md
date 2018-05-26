@@ -1,12 +1,27 @@
 Theme Name: **WP-Forge**<br />
 Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
-Requires at least: **4.8**<br />
-Tested up to: **4.9-alpha-41268**<br />
-Stable tag: **6.4.3**<br />
+Requires at least: **4.9.6**<br />
+Tested up to: **4.9.6**<br />
+Stable tag: **6.4.3.2**<br />
 License: **GPLv2 or later**<br />
 License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)<br />
 
 == Changelog ==
+
+= 6.4.3.2 =
+
+Theme updated 05/26/18
+
+* Added `GDPR` compliance to the comment form.
+* Removed all code from the theme that was not needed. Now the only files that show being changed are the one that have been changed.
+
+= 6.4.3.1 =
+
+Theme updated 01/30/2018
+
+Removed an extra `>` from `content-aside.php`
+Added `.title-bar {display:none}` to `style.css`.
+Added `New Themes` tab in the `WP-Forge` for my new theme `Totalpress`.
 
 = 6.4.3 =
 

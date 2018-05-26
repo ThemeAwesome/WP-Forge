@@ -1,8 +1,7 @@
 <?php
 /**
- * Template Name: Full-width Page Template, No Sidebar
+ * Template Name: Full-Width | No Sidebars
  * Template Post Type: post, page, aside, audio, chat, gallery, image, link, quote, status, video
- * @version 6.4.3
  */
 get_header(); ?>
 	<div id="content" class="small-12 large-12 cell" role="main">

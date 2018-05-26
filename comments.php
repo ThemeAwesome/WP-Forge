@@ -1,7 +1,4 @@
 <?php
-/**
- * @version 6.4.3
- */
 if (post_password_required()) {
 	return;
 }
@@ -67,19 +64,24 @@ if (post_password_required()) {
 			    __( 'Your email address will not be published.', 'wp-forge' ) . ( $req ? $required_text : '' ) . '</p>',
 			  'fields' => apply_filters( 'comment_form_default_fields', array(
 			    'author' =>
-			      '<div class="grid container"><div class="grid-x grid-padding-x"><p class="comment-form-author large-auto cell">' .
-			      '<label for="author">' . ( $req ? $required_name : 'Your Name' ) . '</label> ' .
-			      '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-			      '" size="50"' . $aria_req . ' /></p>',
-			    'email' =>
-			      '<p class="comment-form-email large-auto cell"><label for="email">' . ( $req ? $required_email : 'Your Email' ) . '</label> ' .
-			      '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-			      '" size="50"' . $aria_req . ' /></p>',
-			    'url' =>
-			      '<p class="comment-form-url large-auto cell"><label for="url">' .
-			      __( 'Your Website', 'wp-forge' ) . '</label>' .
-			      '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-			      '" size="50" /></p></div></div>'
+			      '<div class="grid container">
+			       <div class="grid-x grid-padding-x">
+			      	<p class="comment-form-author large-auto cell">' .
+			      	'<label for="author">' . ( $req ? $required_name : 'Your Name' ) . '</label> ' .
+			      	'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+			      	'" size="50"' . $aria_req . ' /></p>',
+			    	'email' =>
+			      	'<p class="comment-form-email large-auto cell"><label for="email">' . ( $req ? $required_email : 'Your Email' ) . '</label> ' .
+			      	'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+			      	'" size="50"' . $aria_req . ' /></p>',
+			    	'url' =>
+			      	'<p class="comment-form-url large-auto cell"><label for="url">' .
+			      	__( 'Your Website', 'wp-forge' ) . '</label>' .
+			      	'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			      	'" size="50" /></p></div></div>',
+					'cookies' => 
+	                	'<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
+	                        '<label for="wp-comment-cookies-consent">' . __( 'Save my name, email, and website in this browser for the next time I comment.' ) . '</label></p>'
 			    )
 			  ),
 			);

@@ -1,7 +1,6 @@
 <?php
 /**
 * WP-Forge Theme Customizer
-* @version 6.4.3
 */
 
 //Handles the width and other elements in the Customizer.
@@ -2235,12 +2234,12 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   ));
   $wp_customize->add_section('wpforge_foundation_css_settings', array( /* foundation css settings */
     'title' => __('Foundation CSS Settings', 'wp-forge'),
-    'description' => __('This section allows you to choose which Foundation CSS system, float or flex, you want to use.','wp-forge'),
+    'description' => __('This section allows you to choose which Foundation CSS system you want to use.','wp-forge'),
     'priority' => 1,
     'panel' => 'wpforge_content',
   ));
   $wp_customize->add_setting('wpforge_select_css',array( /* select the css you want to use */
-    'default' => 'float',
+    'default' => 'xy',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
@@ -2249,12 +2248,13 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   ));
   $wp_customize->add_control('wpforge_select_css',array(
     'type' => 'select',
-    'label' => __('Which system to use?', 'wp-forge'),
-    'description' => __('Default: Float', 'wp-forge'),
+    'label' => __('Which CSS system to use?', 'wp-forge'),
+    'description' => __('Default: XY', 'wp-forge'),
     'section' => 'wpforge_foundation_css_settings',
     'choices' => array(
-      'float'   => __('Float', 'wp-forge'),
-      'flex'    => __('Flex', 'wp-forge'),
+      'xy'   => __('XY Grid', 'wp-forge'),
+      'float'   => __('Float Grid', 'wp-forge'),
+      'flex'    => __('Flex Grid', 'wp-forge'),
     ),
   ));
   $wp_customize->add_section('content_layout', array( /* content section */
@@ -2772,16 +2772,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_wpforge_comment_layout',
     'priority' => 28,
-  ));
-  $wp_customize->add_control('wpforge_comment_layout',array(
-    'type'    => 'select',
-    'label'   => __('Change Comment Form Layout?', 'wp-forge'),
-    'description' => __('Default: New Comment Layout', 'wp-forge'),
-    'section'   => 'post_layout',
-    'choices'   => array(
-      'new'  => __('New Comment Layout', 'wp-forge'),
-      'old'  => __('Old Comment Layout', 'wp-forge'),
-    ),
   ));
   $wp_customize->add_section('page_layout', array( /* page section */
     'title' => __('Page Configuration', 'wp-forge'),
@@ -4124,8 +4114,9 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
   }
   function wpforge_sanitize_css_selection( $input ) { // select the css you want to use
       $valid = array(
-        'float'   => __('Float', 'wp-forge'),
-        'flex'    => __('Flex', 'wp-forge'),
+        'xy'   => __('XY Grid', 'wp-forge'),
+        'float'   => __('Float Grid', 'wp-forge'),
+        'flex'    => __('Flex Grid', 'wp-forge'),
       );
 
       if ( array_key_exists( $input, $valid ) ) {

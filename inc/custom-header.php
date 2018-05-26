@@ -1,8 +1,4 @@
 <?php
-/**
- * @version 6.4.3
- */
-
 if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
 	function wpforge_custom_header_setup() {
 		$args = array(

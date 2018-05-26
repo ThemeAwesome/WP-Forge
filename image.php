@@ -1,7 +1,4 @@
 <?php
-/**
- * @version 6.4.3
- */
 get_header(); ?>
 	<div id="primary" class="small-12 large-12 cell site-content">
 		<div id="content" role="main">
