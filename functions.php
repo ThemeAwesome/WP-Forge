@@ -1,5 +1,5 @@
 <?php
-define( 'WPFORGE_VERSION', '6.4.3' );
+define( 'WPFORGE_VERSION', '6.4.3.3' );
 define( 'WPFORGE_URI', get_template_directory_uri() );
 define( 'WPFORGE_DIR', get_template_directory() );
 // Sets up the content width value based on the theme's design and stylesheet.

@@ -38,14 +38,15 @@ if (post_password_required()) {
 				$required_name = __('Your Name <span class="required">*</span>', 'wp-forge');
 				$required_email = __('Your Email <span class="required">*</span>', 'wp-forge');
 				$aria_req = ( $req ? " aria-required='true'" : '' );
+				$consent  = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 		   		$comments_args = array(
 				  'id_form'           => 'commentform',
 				  'id_submit'         => 'submit',
-				  'title_reply'       => apply_filters( 'wp-forge_leave_comment',__( 'Leave a Comment', 'wp-forge' )),
-				  'title_reply_to'    => apply_filters( 'wp-forge_leave_reply',__( 'Leave a Reply to %s', 'wp-forge' )),
-				  'cancel_reply_link' => apply_filters( 'wp-forge_cancel_reply',__( 'Cancel Reply', 'wp-forge' )),
-				  'label_submit'      => apply_filters( 'wp-forge_post_comment',__( 'Post Comment', 'wp-forge' )),
-			  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'wp-forge' ) .
+				  'title_reply'       => apply_filters( 'wp-forge_leave_comment',__('Leave a Comment','wp-forge')),
+				  'title_reply_to'    => apply_filters( 'wp-forge_leave_reply',__('Leave a Reply to %s','wp-forge')),
+				  'cancel_reply_link' => apply_filters( 'wp-forge_cancel_reply',__('Cancel Reply','wp-forge')),
+				  'label_submit'      => apply_filters( 'wp-forge_post_comment',__('Post Comment','wp-forge')),
+			  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . __('Comment','wp-forge') .
 			    '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
 			    '</textarea></p>',
 			  'must_log_in' => '<p class="must-log-in">' .
@@ -55,14 +56,14 @@ if (post_password_required()) {
 			    ) . '</p>',
 			  'logged_in_as' => '<p class="logged-in-as">' .
 			    sprintf(
-			    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'wp-forge' ),
-			      admin_url( 'profile.php' ),
+			    __('Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','wp-forge'),
+			      admin_url('profile.php'),
 			      $user_identity,
 			      wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
 			    ) . '</p>',
 			  'comment_notes_before' => '<p class="comment-notes">' .
-			    __( 'Your email address will not be published.', 'wp-forge' ) . ( $req ? $required_text : '' ) . '</p>',
-			  'fields' => apply_filters( 'comment_form_default_fields', array(
+			    __('Your email address will not be published.','wp-forge') . ( $req ? $required_text : '' ) . '</p>',
+			  'fields' => apply_filters('comment_form_default_fields', array(
 			    'author' =>
 			      '<div class="grid container">
 			       <div class="grid-x grid-padding-x">
@@ -81,7 +82,7 @@ if (post_password_required()) {
 			      	'" size="50" /></p></div></div>',
 					'cookies' => 
 	                	'<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
-	                        '<label for="wp-comment-cookies-consent">' . __( 'Save my name, email, and website in this browser for the next time I comment.' ) . '</label></p>'
+	                        '<label for="wp-comment-cookies-consent">' . __( 'Save my name, email, and website in this browser for the next time I comment.','wp-forge' ) . '</label></p>'
 			    )
 			  ),
 			);
