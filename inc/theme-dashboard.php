@@ -60,7 +60,7 @@ function wpforge_theme_info_page() {
 
             <a href="?page=wpforge&tab=changelog" class="nav-tab<?php echo $tab == 'changelog' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'Changelog', 'wp-forge' ); ?></a>
 
-            <a href="?page=wpforge&tab=themes" class="nav-tab<?php echo $tab == 'themes' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'New Themes', 'wp-forge' ); ?></span></a>
+            <a href="?page=wpforge&tab=themes" class="nav-tab<?php echo $tab == 'themes' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'TotalPress', 'wp-forge' ); ?></span></a>
 
         </h2><!-- end nav-tab-wrapper -->
 
@@ -110,6 +110,16 @@ function wpforge_theme_info_page() {
          <?php if ( $tab == 'changelog' ) { ?>
                 <div class="row">
                     <div class="changelog small-12 large-12 column">
+
+                        <h4>6.4.3.3</h4>
+
+                        <small>Theme updated 05/27/2018</small>
+
+                        <ul>
+                            <li>Added `$consent` parameter to `comments.php` - this is to avoid a php `Notice` that appears when the user has `WP_DEBUG` set to true.</li>
+                            <li>Changed `CHANGES.md` to `CHANGELOG.md`.</li>
+                        </ul>
+
 
                         <h4>6.4.3.2</h4>
 

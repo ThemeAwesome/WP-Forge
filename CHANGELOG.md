@@ -1,13 +1,3 @@
-Theme Name: **WP-Forge**<br />
-Tags: **light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready**<br />
-Requires at least: **4.9.6**<br />
-Tested up to: **4.9.6**<br />
-Stable tag: **6.4.3.3**<br />
-License: **GPLv2 or later**<br />
-License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)<br />
-
-== Changelog ==
-
 = 6.4.3.3 =
 
 Theme updated 05/27/18

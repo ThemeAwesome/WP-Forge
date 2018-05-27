@@ -1,12 +1,20 @@
-WP-Forge 6.4.3.3
-====================
+![WP-Forge Screenshot](https://raw.githubusercontent.com/ThemeAwesome/wp-forge/master/screenshot.png)
 
-### Updated May 27, 2018
+**Theme Name:** WP-Forge<br />
+**Tags:** blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready<br />
+**Donate:** [WP-Forge Project](https://www.paypal.me/themeawesome)<br />
+**Requires at least:** 4.9.6<br />
+**Tested up to:** 4.9.6<br />
+**Stable tag:** 6.4.3.3<br />
+**License:** GNU General Public License v3.0<br />
+**License URI:** [http://www.gnu.org/licenses/gpl-3.0.html](http://www.gnu.org/licenses/gpl-3.0.html)<br />
 
+Description
+===
 A WordPress theme built with Foundation for Sites (Foundation 6.4.3) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the `CHANGELOG.txt` and `README.txt` files before/after installation and/or update.
 
 Installation
-=============
+===
 * In your admin panel, go to `Appearance > Themes` and click the `Add New` button.
 * Use the Search or Filter options to locate the WP-Forge theme or click `Upload Theme`, then click `Choose File`, then select the WP-Forge's ZIP file. Click Install Now.
 * Click Activate to use your new theme right away.
@@ -14,15 +22,15 @@ Installation
 * In order to modify anything related to WordPress, you will need to make adjustments or add your own styles to `style.css`. In order to modify anything regarding Foundation, you need to make adjustments or add your own styles to `foundation.css` located in `/css/foundation.css`.
 
 Demo
-=============
+===
 [WP-Forge demo](https://themeawesome.com/themes/wpforge/) - Check it out.
 
 Quick Start Guide
-=============
+===
 [WP-Forge Quick Start Guide](https://themeawesome.com/docs/wp-forge/) - A helpful guide to help you get your site up and running as quickly as possible.
 
 Support
-=============
+===
 [WP-Forge Support Forums](https://wordpress.org/support/theme/wp-forge) - If you if you run into issues, you can post your questions/issues there.
 
 ### WP-Forge was built with the following tools
@@ -37,7 +45,7 @@ Support
 * [Screenfly](http://quirktools.com/screenfly/) – Responsive screen testing for monitors, tablets, smart phones, and more (personally one of my favorites).
 
 Features
-=============
+===
 
 ### Theme Customizer
 WordPress introduced the [Theme Customizer](https://codex.wordpress.org/Theme_Customization_API) in 3.4. The customizer allows you to modify certain areas of a theme and preview those changes in real time before publishing. WP-Forge utilizes this built in customizer and allows you to make changes to many areas of the theme. Please read the information under Configuration in the [README.txt](https://github.com/tsquez/wp-forge/blob/master/README.txt) file to learn more about the customizer in WP-Forge.
@@ -69,7 +77,7 @@ The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-
 * [SampSistemi](https://www.sampsistemi.com/)
 
 License
-=============
+===
 All of the components used in the creation of WP-Forge are licensed as follows:
 * WordPress is licensed [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)
 * Foundation Framework is licensed [MIT License](https://github.com/zurb/foundation/blob/master/LICENSE)
@@ -80,6 +88,6 @@ All of the components used in the creation of WP-Forge are licensed as follows:
 
 This means WP-Forge is completely free to use and modify as you see fit.
 
-ThemeAwesome.com
-=============
+About ThemeAWESOME
+===
 [ThemeAwesome.com](https://themeawesome.com), a site focused on building WordPress themes with [Foundation for Sites 6](http://foundation.zurb.com/).
