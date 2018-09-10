@@ -4,7 +4,7 @@ Theme URI: https://themeawesome.com/responsive-wordpress-theme
 Author: ThemeAwesome
 Author URI: https://themeawesome.com/
 Description: A WordPress theme built using the latest version of Foundation for Sites, from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please make sure you view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.4.3.3
+Version: 6.4.3.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
@@ -1183,7 +1183,6 @@ img#wpstats{
 .no-js [data-responsive-toggle],
 .no-js [data-responsive-menu] ul {
  	display: none!important;}
-.title-bar {display:none}
 @media screen and (max-width:39.9em) {
 	.no-js .top-bar {display: none; }
 	.no-js .title-bar {display: flex;}

@@ -1,3 +1,9 @@
+= 6.4.3.4 =
+
+Theme updated 09/10/18
+
+* Corrected an issue where the `Off Canvas` menu was not displaying for mobile view. This was due to some css I added, however I have removed the css and now the `Off Canvas` menu displays as it should in mobile view.
+
 = 6.4.3.3 =
 
 Theme updated 05/27/18
