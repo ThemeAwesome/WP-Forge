@@ -3,7 +3,7 @@
 Theme updated 10/08/2018
 
 * Corrected the following issue described in this support thread: https://wordpress.org/support/topic/footer-menu-issues-when-text-left-nav-right/
-* Changed the `cell` layout to `Text left with nav right` and `Text right with nav left` to `large-auto`.
+* Changed the `cell` layout to `Text left with nav right` and `Text right with nav left` to `large-auto` in `content-footer.php`.
 
 = 6.4.3.4 =
 
