@@ -6,7 +6,7 @@ if ( ! function_exists( 'wpforge_custom_header_setup' ) ) {
 			'default-text-color'     => '',
 			'default-image'          => '',
 			// Set height and width, with a maximum value for the width.
-			'height'                 => 175,
+			'height'                 => 200,
 			'width'                  => 1200,
 			'max-width'              => 1200,
 			// Support flexible height and width.

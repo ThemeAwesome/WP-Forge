@@ -31,7 +31,7 @@
                 ) ); ?>
             <?php endif; ?>    
         </div><!-- .columns --> 
-        <div id="ftxt" class="site-info small-12 large-auto cell text-right">
+        <div id="ftxt" class="site-info small-12 large-auto cell text-right THIS IS THE RIGHT">
             <?php if( get_theme_mod( 'wpforge_footer_text' ) ) { ?>
                 <p><?php echo wp_kses_post(get_theme_mod( 'wpforge_footer_text')); ?></p>
             <?php } else { ?>

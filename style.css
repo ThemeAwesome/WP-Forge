@@ -1,10 +1,10 @@
 /*
 Theme Name: WP-Forge
-Theme URI: https://themeawesome.com/responsive-wordpress-theme
-Author: ThemeAwesome
+Theme URI: https://themeawesome.com/wp-forge-wordpress-foundation-for-sites-theme/
+Author: ThemeAWESOME
 Author URI: https://themeawesome.com/
-Description: A WordPress theme built using the latest version of Foundation for Sites, from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please make sure you view the CHANGELOG and README files before/after installation and/or update.
-Version: 6.4.3.5
+Description: A Foundation for Sites WordPress Theme, that utilizes one of the most advanced responsive front-end frameworks in the world from Zurb. When you combine WordPress and Foundation for Sites you get a Foundation for Sites WordPress theme that makes creating websites fun and exciting again! Please make sure you review the CHANGELOG and README files before/after installation and/or update.
+Version: 6.5.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
@@ -107,6 +107,9 @@ blockquote cite {
 	font-weight:normal;
 	text-transform: uppercase;
 	color: #636363;}
+form#searchform > .grid-container {padding:0!important;}
+form#searchform > .button {width:100%!important;}
+form#commentform > .button.submit {width:auto!important;}
 #secondary .widget-title {
 	font-weight:normal;}
 #secondary .menu .active > a {
@@ -307,8 +310,6 @@ a {
 .nav_wrap {
 	background: transparent;
 	padding:0;}
-#header {
-	padding:0.9375rem 0;}
 .header-logo {
 	display:block;
 	float:left;
@@ -332,44 +333,25 @@ img.header-image {/* Remove fancy borders */
 	box-shadow:none;}
 .site-header {
 	padding: 0;}
-.widget-area .widget {
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
-	margin-bottom: 3rem;}
-.widget-area .widget ul {
-	margin-left:2em;}
-.widget-area .widget h3 {
-	margin-bottom: 5px;}
-.widget-area .textwidget ul {
-	list-style: disc outside;
-	margin: 0 0 1.5rem;}
-.widget-area .textwidget li {
-	margin-left: 36px;}
-.widget-area .textwidget ol {
-	margin: 0 0 1.5rem;}
-.widget-area .widget .menu {
-	margin-left: 0.75rem!important;}
-.widget-area .widget .menu > li {
-	display: block!important;}
-.widget-area .widget .menu > li:not(.menu-text) > a {
-    padding: 0.5rem;
-    line-height: 1;}
-footer[role="contentinfo"] {
-	border-top: 1px solid #ededed;
-	clear: both;
-	line-height: 2;
-	padding: 1.5rem 0;}
-footer[role="contentinfo"].inline-list {
-	margin-bottom: 1rem;}
-footer > .site-info {
-	margin-bottom:0;}
-footer > .site-info.lft {
-	text-align:left;}
-footer > .site-info.rt {
-	text-align:right;}
-footer > .site-info.cntr {
-	text-align:center;}
+.widget-area .widget {-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;margin-bottom:3rem;}
+.widget-area .widget ul {margin-left:2em;}
+.widget-area .widget h3 {margin-bottom:5px;}
+.widget-area .textwidget ul {list-style:disc outside;margin:0 0 1.5rem;}
+.widget-area .textwidget li {margin-left:36px;}
+.widget-area .textwidget ol {margin:0 0 1.5rem;}
+.widget-area .widget .menu {margin-left:0!important;}
+.widget-area .widget .menu > li {display:block!important;}
+.widget-area .widget .menu > li:not(.menu-text) > a {padding:0.5rem;line-height:1;}
+#menu-widget-menu.menu {display:block!important;margin-left:20px!important;}
+.widget.widget_nav_menu a {padding:8px 0!important;}
+.widget.widget_nav_menu ul ul li {margin-left:20px!important;}
+.widget.widget_nav_menu ul ul li a {padding:2px 0!important;}
+footer[role="contentinfo"] {border-top:1px solid #ededed;clear:both;line-height:2;padding:1.5rem 0;}
+footer[role="contentinfo"].inline-list {margin-bottom:1rem;}
+footer > .site-info {margin-bottom:0;}
+footer > .site-info.lft {text-align:left;}
+footer > .site-info.rt {text-align:right;}
+footer > .site-info.cntr {text-align:center;}
 @media print, screen and (min-width: 40em) {
 	#footer.grid-container:not(.full)>.grid-padding-x {
 	    margin-right:0;margin-left:0;}
@@ -452,17 +434,17 @@ article .featured-post {
 .entry-content-post pre,
 .entry-content-page pre,
 .comment-content pre{
-	background: #f9f9f9;
-	border-radius: 3px;
-	color: #000000;
+	background: #3f3f3f;
+	border-radius: 12px;
+	color: #e6e6e6!important;
 	margin: 20px 0;
 	overflow-x: auto;
 	padding: 20px;
 	line-height: 1.3rem;
-	white-space: pre-wrap;       /* css-3 */
-	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-	white-space: -pre-wrap;      /* Opera 4-6 */
-	white-space: -o-pre-wrap;    /* Opera 7 */
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
 	word-wrap: break-word;}
 .entry-content-post pre code,
 .entry-content-page pre code,
@@ -578,7 +560,6 @@ span.entry-date .genericon-month {
 	font-size: 12px;
 	line-height: 2;
 	margin-top: 22px;}
-
 /**
  * 7.0 - Single image attachment view
  */
@@ -595,7 +576,6 @@ span.entry-date .genericon-month {
 	max-width: 100%;}
 .image-attachment .entry-caption {
 	margin-top: 8px;}
-
 /**
  * 8.0 - Post Formats
  */
@@ -998,6 +978,9 @@ p.comment-form-cookies-consent label {
 /**
  * 14.0 - Misc
  */
+.reveal {outline:none!important;}
+.progress-meter-text {color:#fff!important;font-size:12px!important;text-shadow:1px 1px #666666!important;}
+.close-button {font-size:23px!important;}
 section.tab-bar-section.middle a {
 	color:#fff;
 	font-weight:normal;}
@@ -1174,7 +1157,7 @@ button.hollow.info:focus,
 .entry-content-page button.info,
 .entry-content-page button.info:hover,
 .entry-content-page button.info:focus{
-	text-decoration: none!important;}
+	text-decoration: none!important;outline:none!important;}
 .keystroke, kbd, code {
 	padding: 0.125rem 0.25rem 0.125rem;
 	font-size: 0.875rem;}
@@ -1243,7 +1226,7 @@ span.tbar-title:hover,
 .js-off-canvas-exit:hover {
 	background: rgba(254, 254, 254, 0);}
 .menu > li:not(.menu-text) > a {
-	line-height: 1.7;}
+	line-height: 3;}
 .top-bar {
 	padding: 0;}
 .top-bar-title {
@@ -1254,7 +1237,7 @@ span.tbar-title:hover,
 	background:none!important; }
 .dropdown.menu.vertical > li.opens-left > a::after {
 	left:auto!important;}
-
+.dropdown .is-dropdown-submenu a {padding:1rem; line-height:2!important;}
 .off-canvas .close-button, 
 .off-canvas .close-button.medium,
 .off-canvas-absolute .close-button, 
@@ -1425,58 +1408,25 @@ hr {
 	padding: 0.2rem 0.5rem;}
 #footer .menu.right > li:not(.menu-text) > a {
 	padding: 0 1rem 0 0;}
-.top-bar .title-area {
-	margin: 0;
-	width: auto;
-	float: left;
-	line-height: 1.7;}
-.top-bar .title-area ul {
-	list-style: none;}
-.top-bar .title-area li {
-	list-style: none;
-	padding:0;}
-.top-bar .title-area li a {
-	display: block;
-	padding: 0.7rem 1rem;}
-.home .top-bar .menu > .active {
-	background: none!important;}
-.site-map-left article {
-	border-bottom: 1px solid #ededed!important;
-    margin-bottom: 35px!important;
-    padding-bottom: 1.5rem!important;
-    -webkit-hyphens: auto!important;}
+.top-bar .title-area{margin:0;width:auto;float:left;line-height:1.7;}
+.top-bar .title-area ul{list-style:none;}
+.top-bar .title-area li{list-style:none;padding:0;}
+.top-bar .title-area li a{display:block;padding:0.7rem 1rem;}
+.home .top-bar .menu > .active{background:none!important;}
+.site-map-left article{border-bottom:1px solid #ededed!important; margin-bottom:35px!important;padding-bottom:1.5rem!important;
+    -webkit-hyphens:auto!important;}
+input{width:100%;}
+.error404 form#searchform {width:50%;}
+/* Pricing Tables */
+.pricing-table{border:solid 1px #ddd;margin-left:0!important;}
+.pricing-table li{border-bottom:dotted 1px #ddd;font-size:0.75rem;padding:14px 18px;}
+.pricing-table li:last-child{border-bottom:0;}
+.pricing-table .title{background-color:#333;color:#eee;font-size:0.875rem;border-bottom:0;}
+.pricing-table .price{background-color:#F6F6F6;color:#333;font-size:28px;border-bottom:0;}
+.pricing-table .description{color:#777;font-size:10px;}
+.pricing-table .button{margin:0;}
 
-/**
- * Pricing Tables
- */
-.pricing-table {
-  	border: solid 1px #DDDDDD;
-	margin-left:0!important;}
-.pricing-table li {
-	border-bottom: dotted 1px #DDDDDD;
-	font-size: 0.75rem;
-	padding: 0.875rem 1.125rem;}
-.pricing-table li:last-child {
-  	border-bottom: 0;}
-.pricing-table .title {
-	background-color: #333333;
-	color: #EEEEEE;
-	font-size: 0.875rem;
-	border-bottom: 0;}
-.pricing-table .price {
-	background-color: #F6F6F6;
-	color: #333333;
-	font-size: 1.75rem;
-	border-bottom: 0;}
-.pricing-table .description {
-	color: #777777;
-	font-size: 0.625rem;}
-.pricing-table .button {
-	margin: 0;}
-
-/**************************************
- * WooCommerce
- *************************************/
+/* WooCommerce */
 .woocommerce .search-submit {
   display: none!important;}
 ul.tabs.wc-tabs {

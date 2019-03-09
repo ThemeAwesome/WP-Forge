@@ -1,49 +1,65 @@
-= 6.4.3.5 =
+# Changelog
+#### 6.5.3 - 2019-03-09
+###### `Update`
+* Updated theme to latest version of Foundation, 6.5.3
+* Updated `CHANGELOG.md` to reflect a proper changelog going forward.
+###### `Added`
+* Added support for [`Freemius`](https://freemius.com) - This will allow me to gather information on how the theme is being used as well as allow users to give me feedback on how to improve `WP-Forge`. However, adding this to the theme significantly increases the file size of the theme.
+* Added a function to `functions.php` to remove the `jQuery-Migrate`. This is simply not needed so there is no reason to load it.
+* Added option to hide or display `Next and Previous` post links to the customizer. This was added in the `Post Configuration` section. Thanks to `Tom Gamble` for the idea to make this happen.
+###### `Removed`
+* Removed the option to select `Float Grid`, `Flex Grid` or `XY Grid`. The only css supported by `WP-Forge`is the `XY Grid`.
+* Removed `what-input.js` - this is no longer part of `Foundation for Sites`.
+* Removed the TotalPress `screenshot.png` from the theme. This image is being served from `Imgur` now.
+* Removed the `Changelog` tab in the `WP-Forge Theme` section of the theme. The changelog is maintained on `Github` so no need to have a list in the theme.
+* Removed the content position from the preview as the css necessary to make it work could not be added in the `.js` file.
+###### `Fixed`
+* Fixed issue with `Main Content Positon` - When a user selects `Right` the main content area is supposed to move to the right and the sidebar should display on the left side. This used an older version of `Foundation` and the css has been updated and works properly.
+* Fixed an issue with the `Footer Text` area. The message that was being typed was not displaying as the user was writing it. This has been corrected.
+* Fixed issue with `Footer Font Size` - the values being entered were not being updated immediately in the screen on the right of the customizer.
+* Fixed css for the menu widget. The links were displaying all over the place.
+* Fixed the padding from the `grid-container` in the `search form`. This was causing the search form in the sidebar to look `squished`.
+###### `Changed`
+* Changed all the `footer[role="contentinfo"]` to `.footer_wrap grid-container` as its more specific.
+* Changed the `pre` tags - made the background and font darker.
+* Corrected an issue with the `Footer Colors` - some of the controls were not working properly.
+* Changed the deafault size of the header image from `175` to `200` in `custom-header.php`.
+* Changed the padding in the header.
+* Changed the `line-height` of links in the `top-bar` menu. This makes the menu look bigger instead of being so thin.
+* Changed the font size of links in the `Top Bar` to `16px` from `0.825rem`.
 
-Theme updated 10/08/2018
+###### 6.4.3.5 - 10/08/2018
 
 * Corrected the following issue described in this support thread: https://wordpress.org/support/topic/footer-menu-issues-when-text-left-nav-right/
 * Changed the `cell` layout to `Text left with nav right` and `Text right with nav left` to `large-auto` in `content-footer.php`.
 
-= 6.4.3.4 =
-
-Theme updated 09/10/18
+###### 6.4.3.4 - 09/10/18
 
 * Corrected an issue where the `Off Canvas` menu was not displaying for mobile view. This was due to some css I added, however I have removed the css and now the `Off Canvas` menu displays as it should in mobile view.
 
-= 6.4.3.3 =
-
-Theme updated 05/27/18
+###### 6.4.3.3 - 05/27/18
 
 * Added `$consent` parameter to `comments.php` - this is to avoid a php `Notice` that appears when the user has `WP_DEBUG` set to true.
 * Changed `CHANGES.md` to `CHANGELOG.md`.
 
-= 6.4.3.2 =
-
-Theme updated 05/26/18
+###### 6.4.3.2 - 05/26/18
 
 * Added `GDPR` compliance to the comment form.
 * Removed all code from the theme that was not needed. Now the only files that show being changed are the one that have been changed.
 
-= 6.4.3.1 =
-
-Theme updated 01/30/2018
+###### 6.4.3.1 - 01/30/2018
 
 Removed an extra `>` from `content-aside.php`
 Added `.title-bar {display:none}` to `style.css`.
 Added `New Themes` tab in the `WP-Forge` for my new theme `Totalpress`.
 
-= 6.4.3 =
-
-Theme updated 08/19/17
+###### 6.4.3 - 08/19/17
 
 * Updated theme to latest version of Foundation, 6.4.3 - Nothing to really worry about. Mostly updates for scss. Just keeping up with the versioning. Here is a list of what Zurb changed in this version https://github.com/zurb/foundation-sites/releases/tag/v6.4.3
 * Corrected the css for related products that were on sale. The sale banner was appearing off center.
 * Also corrected the date of the last update in the changelog.txt file.
 
-= 6.4.2 =
-
-Theme updated 07/19/17
+###### 6.4.2 - 07/19/17
 
 * Updated theme to Foundation 6.4.2 - Here is a list of what Zurb changed in this version https://github.com/zurb/foundation-sites/releases/tag/v6.4.2
 * Removed the `wpforge_footer_sidebar_class` function from `functions.php` - before, this function was used to calculate the number of widgets added in the footer sidebar area, and then it would apply the necessary classes to make sure the widget areas appeared properly. With the 6.4 update, this is done automatically so the function is not needed any longer.
@@ -56,25 +72,19 @@ Theme updated 07/19/17
 * Reworked the header image portion of `header.php` - if an image is displayed then display the div along with the image. If no image is displayed, do not show the empty div.
 * Changed the priority of all the WP-Forge css scripts and files.
 
-= 6.4.1.1 =
-
-Theme updated 07/12/17
+###### 6.4.1.1 - 07/12/17
 
 * Corrected issue with footer sidebar area. Switched to `large auto cells` for each sidebar area. This moves towards the new XY grid from foundation. The calculation in `functions.php` is no longer needed to calculate and add the apropriate sizes to the individual sidebars.
 * Added a image size for the custom logo. Logo is set to 1170px wide which is the full length of the theme and the image has auto height. If your image is smaller than the logo area it will shrink accordingly.
 * Added back the custom header feature that the custom logo was supposed to replace, so now users can use either the custom logo or custom header feature, as well as random header images.
 
-= 6.4.1 =
-
-Theme updated 07/06/17
+###### 6.4.1 - 07/06/17
 
 * Updated to the latest version of Foundation for Sites v6.4.1 - not really need but I like to on top of things.
 * Corrected the `no-js` in styles.css. There is an issue where the menu was loading after the js was loaded and this caused the menu to kind of flash or delay when it finally loaded. This was bugging me that it was happening. Seems to have gotten corrected. See this issue https://github.com/zurb/foundation-sites/issues/10339
 * Removed the `Russian.mo` file as it is not needed.
 
-= 6.4 =
-
-Theme updated 06/30/17
+###### 6.4 - 06/30/17
 
 * Updated to the latest version of Foundation for Sites v6.4.
 * Switched the "felx-video" to "Responsive Embed" - This makes sure embedded content, like videos, maintain their aspect ratio as the width of the screen changes.
@@ -90,9 +100,7 @@ Theme updated 06/30/17
 * Corrected some issues with the customizer css. When some options were changed, those options were not reflecting in the in-line css or preview.
 * Added Russian translation files - Thanks to Spartak Klain, https://sajtprint.ru, for taking the time to do this.
 
-= 6.3.1.2 =
-
-Theme updated 04/07/17
+###### 6.3.1.2 - 04/07/17
 
 * Adjusted some of the inline css of the customizer.
 * Corrected an issue where the customizer section pertaining to the footer was not working properly. See this thread: https://wordpress.org/support/topic/footer-length-not-setting/
@@ -107,9 +115,7 @@ Theme updated 04/07/17
 * Divided `customizer.css` into sections.
 * Removed the color option for `Nav Content Background Color` - this option is not relevant as the end user cannot see the nav content area. If you can't see it then there is no reason it should be there. I set the background color for `.nav_wrap` to transparent in `style.css`.
 
-= 6.3.1.1 =
-
-Theme updated 03/16/17
+###### 6.3.1.1 - 03/16/17
 
 * Moved all css related to customizer options into `customizer.css`.
 * Reconfigured the inline css of the customizer. The only time an inline style will appear is when a change is made via the customizer and only the css for the elelment that was changed will be displayed inline.
@@ -118,28 +124,20 @@ Theme updated 03/16/17
 * Removed `Welcome to` from `theme-dashboard.php` - This is a little redundant as the user knows the name of the theme they have chosen to use.
 * Changed the name of the first tab in the `theme-dashboard.php` file to `Getting Started` - I believe this provides a better description of this area as the name of the theme is displayed clearly above.
 
-= 6.3.1.0 =
-
-Theme updated 03/04/17
+###### 6.3.1.0 - 03/04/17
 
 * Updated to the latest version of Foundation 6.3.1 - Please look here [https://github.com/zurb/foundation-sites/releases] (https://github.com/zurb/foundation-sites/releases) for a list of changes.
 
-= 6.3.0.2 =
-
-Theme updated 03/02/17
+###### 6.3.0.2 - 03/02/17
 
 * Switched code in `content-off_canvas.php` on line 59 from `wpforge_topbar_mobile_display` to `wpforge_mobile_display` - this was causing the off-canvas menu not to appear when "Use Off-Canvas for Mobile?" was set to yes.
 * Adjusted the priority of the `Off-Canvas Settings`.
 
-= 6.3.0.1 =
-
-Theme updated 02/27/17
+###### 6.3.0.1 - 02/27/17
 
 * Corrected an issue in the `theme-dashboard.php` file. Seems I added the version code in the wrong area.
 
-= 6.3.0 =
-
-Theme updated 02/27/17
+###### 6.3.0 - 02/27/17
 
 * Updated to Foundation version 6.3.0
 * Updated Font-Awesome to 4.7
@@ -162,24 +160,18 @@ Theme updated 02/27/17
 * Removed references to earlier versions of the theme from CHANGELOG.txt. These references referred to an earlier version of WP-Forge which was built using Foundation 5.
 * Removed the old admin notice. Replaced with a new theme info page located under Apperance called 'WP-Forge Theme'.
 
-= 6.2.4.2 =
-
- Theme updated 10/31/16
+###### 6.2.4.2 - 10/31/16
 
 * Wrapped 'wpforge_setup' function in a 'if_function_exists'. This function is located in functions.php.
 * Modified the padding of the next and previous buttons in orbit.
 * Corrected an issue where the sub menu items could not be clicked on touch screens. Thanks to @gsatsan for bringing it to my attention: https://wordpress.org/support/topic/touch-menu-not-working/#post-8376221
 * Updated the .po file
 
-= 6.2.4.1 =
-
-Theme updated 10/27/16
+###### 6.2.4.1 - 10/27/16
 
 * Removed the "scroll to function" I added in 6.2.4 - This was causing a conflict with tabs.
 
-= 6.2.4 =
-
-Theme updated 10/23/16
+###### 6.2.4 - 10/23/16
 
 * Updated Foundation to latest version, 6.3.0
 * Corrected issue with 'active' class css in menu widget. The background was filled the active color.
@@ -191,9 +183,7 @@ Theme updated 10/23/16
 * Corrected issue with the arrow not showing in select boxes.
 * Added a "scroll to" function to 'theme-functions.js' this will allow you to add anchor points to content in your theme and associate links with those anchors. When the link is clicked, the theme will scroll to the anchor point.
 
-= 6.2.3.1 =
-
-Theme updated 06/26/16
+###### 6.2.3.1 - 06/26/16
 
 * Changed the 'wp_get_attachment_metadata()' function for images in image.php - Seems there was an error being generated about the width and the height. Looked at the snippet in Twenty Sixteen and adjusted the function in WP-Forge.
 * Corrected an issue with the styling of the Sitemap template.
@@ -201,9 +191,7 @@ Theme updated 06/26/16
 * Removed the post thumbnail from sitemap.php.
 * Added '!important' to line 4369 of customizer.php - this portion of the file deals whith the hover color of the active link in the footer. Before adding '!important', when hovering over an active link in the footer, the link would disappear.
 
-= 6.2.3 =
-
-Theme updated 06/25/16
+###### 6.2.3 - 06/25/16
 
 * Updated to the latest version number of Foundation. No core files were updated. As stated by Zurb: This release builds upon 6.2.2 to improve how the settings file is generated. No changes to the core framework went in here.
 * Added popular categories, monthly archives and tags to 404.php.
@@ -211,33 +199,25 @@ Theme updated 06/25/16
 * Updated Font-awesome to the latest version, 4.6.3.
 * Corrected an issue where when changing the color of the primary button, the color change would not appear in the preview but would show after the change was applied.
 
-= 6.2.2 =
-
-Theme updated 05/29/16
+###### 6.2.2 - 05/29/16
 
 * Updated to the latest version of Foundation, 6.3.0. (foundation-flex.css was not updated by ZURB so version is still at 6.2.1)
 * Changed the name of 'wpforge-functions.js' to 'theme-functions.js'.
 * Added support for selective refresh for widgets. See https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/
 
-= 6.2.1.3 =
-
-Theme updated 05/13/16
+###### 6.2.1.3 - 05/13/16
 
 * Added a color transition to all links
 * Added additional options to change colors of various elements in posts. You can now change the colors associated with category lists, tag lists, meta information and post title.
 * Corrected an issue with the post formats where the category was displaying at the bottom of the posts.
 * Changed the colors of the aside post format.
 
-= 6.2.1.2 =
-
-Theme update 04/30/16
+###### 6.2.1.2 - 04/30/16
 
 * Removed the java script from wpforge-functions.php that removed empty p and br tags from the content area. This was causing line breaks not to work.
 * Corrected an issue where changes made to pagination colors in customizer were not being applied in real time.
 
-= 6.2.1.1 =
-
-Theme updated 04/17/16
+###### 6.2.1.1 - 04/17/16
 
 * Corrected and issue where some of the text in the comment form was not translatable Thanks to @jarnoan (https://github.com/jarnoan) for bringing this to my attention months ago: https://github.com/tsquez/wp-forge/pull/48
 * Adjusted the Off-Canvas menu. 6.2.1 added some additional padding which made the menu look "fatter".
@@ -247,9 +227,7 @@ Theme updated 04/17/16
 * Added the following classes: secondary label radius, to the comment reply link via js in wpforge-functions.js and I also added the following classes: alert label radius, to the cancel reply link via js in wpforge-functions.js.
 * Removed the hr from header.php. This only displayed on small mobile devices and after a hard look, I decided to remove it.
 
-= 6.2.1 =
-
-Theme updated 04/09/16
+###### 6.2.1 - 04/09/16
 
 * Updated to Foundation 6.2.1
 * Went back to the accordion style menu for off-canvas.
@@ -261,9 +239,7 @@ Theme updated 04/09/16
 * Added the .button class css from foundation.css to the button class in the WP-Forge style sheet. Now buttons built with <button></button> will have the same look and feel as regular foundation buttons and will take on the modification set in the Foundation Buttons section of the customizer.
 * Corrected an issue where the default link color for links within a page were showing up as black. They now show properly as blue, which is the default.
 
-= 6.2 =
-
-Theme updated 03/27/16
+###### 6.2 - 03/27/16
 
 * Updated to the latest version of Zurb's Foundation, 6.2
 * Increased the width of the theme from 1024px to 1200px. This is based off the new width of rows which is 1200px.

@@ -1,8 +1,4 @@
 <?php
-/**
-* WP-Forge Theme Customizer
-*/
-
 //Handles the width and other elements in the Customizer.
 add_action( 'customize_controls_enqueue_scripts', 'themedemo_customizer_style');
 function themedemo_customizer_style() {
@@ -10,37 +6,33 @@ function themedemo_customizer_style() {
       '#customize-controls .description{font-size:9px}
       li.customize-section-description-container .description {font-size:12px!important}');
 }
-
 if ( ! function_exists( 'wpforge_customize_register' ) ) {
   function wpforge_customize_register( $wp_customize ) {
 
  // Add selective refresh to site title and description
   if ( isset( $wp_customize->selective_refresh ) ) {
       $wp_customize->selective_refresh->add_partial( 'blogname', array(
-          'selector' => '.site-title a',
+          'selector' => 'h1.site-title a',
           'render_callback' => 'wpforge_customize_partial_blogname',
       ) );
       
       $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-          'selector' => '.site-description',
+          'selector' => 'p.site-description',
           'render_callback' => 'wpforge_customize_partial_blogdescription',
       ) );
   }
-
   // Render the site title for the selective refresh partial.
   if ( ! function_exists( 'wpforge_customize_partial_blogname' ) ) :
     function wpforge_customize_partial_blogname() {
       bloginfo( 'name' );
     }
   endif;
-
   // Render the site tagline for the selective refresh partial.
   if ( ! function_exists( 'wpforge_customize_partial_blogdescription' ) ) :
     function wpforge_customize_partial_blogdescription() {
       bloginfo( 'description' );
     }
   endif;
-
   // 1.0 Defaults
   $wp_customize->get_section('header_image')->panel = 'wpforge_header'; // Add to Header Panel
   $wp_customize->get_section('header_image')->priority = 40; // Shows before site title and tagline
@@ -114,7 +106,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'title'          => __('Foundation Buttons', 'wp-forge'),
       'description'    => __('Deals with the different Foundation buttons available in your theme.', 'wp-forge'),
   ));
-
   //3.0 Sections and Settings
   $wp_customize->add_section('header_content', array( /* header content section */
     'title' => __('Header Content', 'wp-forge'),
@@ -165,6 +156,26 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'type' => 'text',
     'priority' => 25,
   ));
+
+
+
+  $wp_customize->add_setting('wpforge_header_padding',array( /* change header padding */
+    'default' => '',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'wpforge_sanitize_text',
+    'priority' => 4,
+  ));
+  $wp_customize->add_control('wpforge_header_padding',array(
+    'label' => __('Header Padding','wp-forge'),
+    'description' => __('Default: 45px 0', 'wp-forge'),
+    'section' => 'header_content',
+    'type' => 'text',
+    'priority' => 26,
+  ));
+
+
   $wp_customize->add_setting('wpforge_site_desc_font_size',array( /* site description font size */
     'default' => '',
     'type' => 'theme_mod',
@@ -531,7 +542,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'section' => 'wpforge_off_canvas',
     'type' => 'text',
   ));
-
   $wp_customize->add_setting('site_title_link_color', array( /* site title link color */
     'default' => '',
     'type' => 'theme_mod',
@@ -2232,31 +2242,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'no'  => __('No, hide the title', 'wp-forge'),
     ),
   ));
-  $wp_customize->add_section('wpforge_foundation_css_settings', array( /* foundation css settings */
-    'title' => __('Foundation CSS Settings', 'wp-forge'),
-    'description' => __('This section allows you to choose which Foundation CSS system you want to use.','wp-forge'),
-    'priority' => 1,
-    'panel' => 'wpforge_content',
-  ));
-  $wp_customize->add_setting('wpforge_select_css',array( /* select the css you want to use */
-    'default' => 'xy',
-    'type' => 'theme_mod',
-    'transport' => 'postMessage',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'wpforge_sanitize_css_selection',
-    'priority' => 5,
-  ));
-  $wp_customize->add_control('wpforge_select_css',array(
-    'type' => 'select',
-    'label' => __('Which CSS system to use?', 'wp-forge'),
-    'description' => __('Default: XY', 'wp-forge'),
-    'section' => 'wpforge_foundation_css_settings',
-    'choices' => array(
-      'xy'   => __('XY Grid', 'wp-forge'),
-      'float'   => __('Float Grid', 'wp-forge'),
-      'flex'    => __('Flex Grid', 'wp-forge'),
-    ),
-  ));
   $wp_customize->add_section('content_layout', array( /* content section */
     'title' => __('Main Content Area', 'wp-forge'),
     'description' => __('Change width and background color of main content area.', 'wp-forge'),
@@ -2748,30 +2733,41 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
       'bold'     => __('Bold', 'wp-forge'),
     ),
   ));
+  $wp_customize->add_setting('wpforge_prev_next_post_display',array( /* post navigation */
+    'default' => 'yes',
+    'type' => 'theme_mod',
+    'transport' => 'postMessage',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'wpforge_sanitize_wpforge_prev_next_post_display',
+    'priority' => 27,
+  ));
+  $wp_customize->add_control('wpforge_prev_next_post_display',array(
+    'type' => 'select',
+    'label' => __('Display "Next and Previous Posts"','wp-forge'),
+    'description' => __('Default: Yes, display "Next and Previous Posts"','wp-forge'),
+    'section' => 'post_layout',
+    'choices' => array(
+      'yes' => __('Yes, display "Next and Previous Posts"','wp-forge'),
+      'no'  => __('No, don&#39;t display "Next and Previous Posts"','wp-forge'),
+    ),
+  ));
   $wp_customize->add_setting('wpforge_post_nav_display',array( /* post navigation */
     'default' => 'default',
     'type' => 'theme_mod',
     'transport' => 'postMessage',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'wpforge_sanitize_wpforge_post_nav_display',
-    'priority' => 27,
+    'priority' => 28,
   ));
   $wp_customize->add_control('wpforge_post_nav_display',array(
     'type'    => 'select',
-    'label'   => __('Default Post Navigation or Pagination?', 'wp-forge'),
+    'label'   => __('Post Navigation or Pagination?', 'wp-forge'),
     'description' => __('Default: Default', 'wp-forge'),
     'section'   => 'post_layout',
     'choices'   => array(
       'default'   => __('Default', 'wp-forge'),
       'pagenavi'  => __('Pagination', 'wp-forge'),
     ),
-  ));
-  $wp_customize->add_setting('wpforge_comment_layout',array( /* comment form layout */
-    'default' => 'new',
-    'type' => 'theme_mod',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'wpforge_sanitize_wpforge_comment_layout',
-    'priority' => 28,
   ));
   $wp_customize->add_section('page_layout', array( /* page section */
     'title' => __('Page Configuration', 'wp-forge'),
@@ -3830,7 +3826,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     ),
   ));
 
-
   // 4.0 Sanitation
   function wpforge_sanitize_uri($uri) {
     if('' === $uri){
@@ -3846,7 +3841,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'topbar'    => __('Top-Bar', 'wp-forge'),
         'offcanvas' => __('Off-Canvas', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3860,7 +3854,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'fixed'  => __('Top of Browser - Fixed', 'wp-forge'),
         'sticky' => __('Contain-To-Grid-Sticky', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3872,7 +3865,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'no'  => __('No', 'wp-forge'),
         'yes' => __('Yes', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3884,7 +3876,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'right' => __('Links to the right', 'wp-forge'),
         'left'  => __('Links to the left', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3896,7 +3887,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'no'  => __('No', 'wp-forge'),
         'yes' => __('Yes', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3908,7 +3898,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'no'  => __('No', 'wp-forge'),
         'yes' => __('Yes', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3920,7 +3909,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'left'  => __('Left', 'wp-forge'),
         'right' => __('Right', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3932,7 +3920,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'left'  => __('Left', 'wp-forge'),
         'right' => __('Right', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3944,7 +3931,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes, show categories', 'wp-forge'),
         'no'  => __('No, hide categories', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3956,7 +3942,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'top'     => __('Above the post title', 'wp-forge'),
         'bottom'  => __('Above the post tags', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3968,7 +3953,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes, display post meta', 'wp-forge'),
         'no'  => __('No, hide post meta', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3980,7 +3964,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'full'    => __('Full Post', 'wp-forge'),
         'excerpt' => __('Excerpt', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -3992,7 +3975,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes', 'wp-forge'),
         'no'  => __('No', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4004,7 +3986,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes', 'wp-forge'),
         'no'  => __('No', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4016,7 +3997,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes, display post tags', 'wp-forge'),
         'no'  => __('No, hide post tags', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4028,7 +4008,17 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'default'   => __('Default', 'wp-forge'),
         'pagenavi'  => __('Pagination', 'wp-forge'),
       );
-
+      if ( array_key_exists( $input, $valid ) ) {
+          return $input;
+      } else {
+          return '';
+      }
+  }
+  function wpforge_sanitize_wpforge_prev_next_post_display( $input ) { // Default Post Nav Display
+      $valid = array(
+        'yes' => __('Yes, display "Next and Previous Posts"','wp-forge'),
+        'no'  => __('No, don&#39;t display "Next and Previous Posts"','wp-forge'),
+      );
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4040,7 +4030,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'new'   => __('New Comment Layout', 'wp-forge'),
         'old'  => __('Old Comment Layout', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4053,7 +4042,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'right'   => __('Text Right - Nav Left', 'wp-forge'),
         'left'    => __('Text Left - Nav Right', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4065,7 +4053,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'yes' => __('Yes, show the title', 'wp-forge'),
         'no'  => __('No, hide the title', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4079,7 +4066,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'capitalize'  => __('Capitalize', 'wp-forge'),
         'lowercase'   => __('Lowercase', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4093,7 +4079,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'overline'      => __('overline', 'wp-forge'),
         'line-through'  => __('line-through', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4105,7 +4090,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'normal'   => __('Normal', 'wp-forge'),
         'bold'     => __('Bold', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4118,7 +4102,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'float'   => __('Float Grid', 'wp-forge'),
         'flex'    => __('Flex Grid', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4135,7 +4118,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'change_h5'  => __('H5 Heading Tag', 'wp-forge'),
         'change_h6'  => __('H6 Heading Tag', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4152,7 +4134,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'change_page_h5'  => __('H5 Heading Tag', 'wp-forge'),
         'change_page_h6'  => __('H6 Heading Tag', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4169,7 +4150,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     'post_h5_color'  => __('Post H5 Color', 'wp-forge'),
     'post_h6_color'  => __('Post H6 Color', 'wp-forge'),
     );
-
     if ( array_key_exists( $input, $valid ) ) {
         return $input;
     } else {
@@ -4181,7 +4161,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'push'    => __('Push', 'wp-forge'),
         'overlap' => __('Overlap', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4193,7 +4172,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'left'  => __('Left', 'wp-forge'),
         'right' => __('Right', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4205,7 +4183,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
         'push'    => __('Push', 'wp-forge'),
         'overlap' => __('Overlap', 'wp-forge'),
       );
-
       if ( array_key_exists( $input, $valid ) ) {
           return $input;
       } else {
@@ -4542,7 +4519,6 @@ if ( ! function_exists( 'wpforge_customize_register' ) ) {
     $wp_customize->get_setting( 'info_button_font_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'info_button_font_hover_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'info_button_font_weight' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'wpforge_select_css' )->transport = 'postMessage';
     $wp_customize->get_setting( 'pagination_current_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'pagination_current_font_color' )->transport = 'postMessage';
     $wp_customize->get_setting( 'pagination_link_color' )->transport = 'postMessage';
@@ -4590,10 +4566,10 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . '.site-title{font-size:'.esc_attr(get_theme_mod('wpforge_site_title_font_size')).';}';
     }
     if ( esc_attr(get_theme_mod('site_title_link_color')) ) {
-        $output .= '' . '.site-title a{color:'.esc_attr(get_theme_mod('site_title_link_color')).';}';
+        $output .= '' . 'h1.site-title a{color:'.esc_attr(get_theme_mod('site_title_link_color')).';}';
     }
     if ( esc_attr(get_theme_mod('site_title_hover_color')) ) {
-        $output .= '' . '.site-title a:hover{color:'.esc_attr(get_theme_mod('site_title_hover_color')).';}';
+        $output .= '' . 'h1.site-title a:hover{color:'.esc_attr(get_theme_mod('site_title_hover_color')).';}';
     }
     if ( esc_attr(get_theme_mod('header_textcolor')) ) {
         $output .= '' . '.site-description{color:#'.esc_attr(get_theme_mod('header_textcolor')).';}';
@@ -4601,6 +4577,11 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
     if ( esc_attr(get_theme_mod('wpforge_site_desc_font_size')) ) {
         $output .= '' . '.site-description{font-size:'.esc_attr(get_theme_mod('wpforge_site_desc_font_size')).';}';
     }
+
+    if ( esc_attr(get_theme_mod('wpforge_header_padding')) ) {
+        $output .= '' . '#header{padding:'.esc_attr(get_theme_mod('wpforge_header_padding')).';}';
+    }
+
     if ( esc_attr(get_theme_mod('nav_width')) ) {
         $output .= '' . '.nav_wrap{max-width:'.esc_attr(get_theme_mod('nav_width')).';}';
     }
@@ -4761,10 +4742,10 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . 'h2.entry-title-post{font-size:'.esc_attr(get_theme_mod('wpforge_post_title_font_size')).';}';
     }
     if ( esc_attr(get_theme_mod('content_font_color')) ) {
-        $output .= '' . '.entry-content-post p,.entry-content-post ul li,.entry-content-post ol li,.entry-content-post table,.comment-content table,.entry-content-post address,.comment-content address,.entry-content-post pre,.comment-content pre,.comments-area article header cite,#comments,.entry-content-post dl,.entry-content-post dt{color:'.esc_attr(get_theme_mod('content_font_color')).';}';
+        $output .= '' . '.entry-content-post p,.entry-content-post ul li,.entry-content-post ol li,.entry-content-post table,.comment-content table,.entry-content-post address,.comment-content address,.comments-area article header cite,#comments,.entry-content-post dl,.entry-content-post dt{color:'.esc_attr(get_theme_mod('content_font_color')).';}';
     }
     if ( esc_attr(get_theme_mod('wpforge_post_font_size')) ) {
-        $output .= '' . '.entry-content-post p,.entry-content-post ul li,.entry-content-post ol li,.entry-content-post table,.comment-content table,.entry-content-post address,.comment-content address,.entry-content-post pre,.comment-content pre,.comments-area article header cite,#comments,.entry-content-post dl,.entry-content-post dt{font-size:'.esc_attr(get_theme_mod('wpforge_post_font_size')).';}';
+        $output .= '' . '.entry-content-post p,.entry-content-post ul li,.entry-content-post ol li,.entry-content-post table,.comment-content table,.entry-content-post address,.comment-content address,comments-area article header cite,#comments,.entry-content-post dl,.entry-content-post dt{font-size:'.esc_attr(get_theme_mod('wpforge_post_font_size')).';}';
     }
     if ( esc_attr(get_theme_mod('content_link_color')) ) {
         $output .= '' . '.entry-content-post a{color:'.esc_attr(get_theme_mod('content_link_color')).';}';
@@ -4889,7 +4870,7 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . '.entry-content-page h6{font-size:'.esc_attr(get_theme_mod('wpforge_page_h6_size')).';}';
     }
     if ( esc_attr(get_theme_mod('wpforge_content_position') == 'right') ) {
-        $output .= '' . '#content.columns{float:'.esc_attr(get_theme_mod('wpforge_content_position')).';}';
+        $output .= '' . '#content.cell{order:2;}';
     }
     if ( esc_attr(get_theme_mod('pagination_current_color')) ) {
         $output .= '' . '#content ul.pagination .current a,#content ul.pagination li.current button,#content ul.pagination li.current a:hover,#content ul.pagination li.current a:focus,#content ul.pagination li.current button:hover,#content ul.pagination li.current button:focus,#content .page-links a{background-color:'.esc_attr(get_theme_mod('pagination_current_color')).';}';
@@ -4993,7 +4974,7 @@ if ( ! function_exists( 'wpforge_customize_css' ) ) {
         $output .= '' . 'footer[role="contentinfo"] a,#footer .menu > .current_page_item > a{color:'.esc_attr(get_theme_mod('footer_link_color')).';}';
     }
     if ( esc_attr(get_theme_mod('footer_hover_color')) ) {
-        $output .= '' . 'footer[role="contentinfo"] a,#footer .menu > .current_page_item > a:hover{color:'.esc_attr(get_theme_mod('footer_hover_color')).';!important}';
+        $output .= '' . 'footer[role="contentinfo"] a:hover,#footer .menu > .current_page_item > a:hover{color:'.esc_attr(get_theme_mod('footer_hover_color')).'!important;}';
     }
     if ( esc_attr(get_theme_mod('wpforge_footer_txt_size')) ) {
         $output .= '' . 'footer[role="contentinfo"] p,footer[role="contentinfo"] a{font-size:'.esc_attr(get_theme_mod('wpforge_footer_txt_size')).';}';

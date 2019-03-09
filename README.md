@@ -3,15 +3,15 @@
 **Theme Name:** WP-Forge<br />
 **Tags:** blog, one-column, two-columns, right-sidebar, left-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready<br />
 **Donate:** [WP-Forge Project](https://www.paypal.me/themeawesome)<br />
-**Requires at least:** 4.9.8<br />
-**Tested up to:** 4.9.8<br />
-**Stable tag:** 6.4.3.5<br />
+**Requires at least:** 5.1<br />
+**Tested up to:** 5.1<br />
+**Stable tag:** 6.5.3<br />
 **License:** GNU General Public License v3.0<br />
 **License URI:** [http://www.gnu.org/licenses/gpl-3.0.html](http://www.gnu.org/licenses/gpl-3.0.html)<br />
 
 Description
 ===
-A WordPress theme built with Foundation for Sites (Foundation 6.4.3) from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again! Please view the `CHANGELOG.txt` and `README.txt` files before/after installation and/or update.
+A Foundation for Sites WordPress Theme, that utilizes one of the most advanced responsive front-end frameworks in the world from Zurb. When you combine WordPress and Foundation for Sites you get a Foundation for Sites WordPress theme that makes creating websites fun and exciting again!
 
 Installation
 ===
@@ -65,17 +65,6 @@ Includes the free icon set [Font-Awesome](http://fontawesome.io)
 ### Yoast SEO Plugin
 Has built in support for breadcrumbs using the Wordpress SEO by Yoast plugin. The code is already added to all necessary files for you. Download the [WordPress SEO by Yoast](http://wordpress.org/plugins/wordpress-seo/) plugin.
 
-### Sites Using WP-Forge
-The following sites are using WP-Forge and/or a combination of WP-Forge and [WP-Starter](https://themeawesome.com/wordpress-child-theme/) - Be sure to look at the page source.
-* [AntiqueArchaeology](http://www.antiquearchaeology.com/blog/)
-* [HellYeah](http://hellyeahband.com/)
-* [Motley.com (Motley Crue)](http://www.motley.com/)
-* [SixxamMusic.com](http://sixxammusic.com/)
-* [DrowningPool.com](http://drowningpool.com/)
-* [Metal1.info](http://www.metal1.info/)
-* [National Comedy Theater](http://nationalcomedy.com/)
-* [SampSistemi](https://www.sampsistemi.com/)
-
 License
 ===
 All of the components used in the creation of WP-Forge are licensed as follows:
@@ -90,4 +79,4 @@ This means WP-Forge is completely free to use and modify as you see fit.
 
 About ThemeAWESOME
 ===
-[ThemeAwesome.com](https://themeawesome.com), a site focused on building WordPress themes with [Foundation for Sites 6](http://foundation.zurb.com/).
+[ThemeAwesome.com](https://themeawesome.com), a site focused on building WordPress themes with [Foundation for Sites](http://foundation.zurb.com/).

@@ -5,7 +5,7 @@
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php wpforge_article_schema('CreativeWork'); ?>>
 		<header class="entry-header">
-			<?php the_title('<h1 class="entry-title" itemprop="headline">','</h1>'); ?>
+			<?php the_title('<h1 class="entry-title-page" itemprop="headline">','</h1>'); ?>
 			<?php if (! is_page_template('page-templates/front-page.php') || ! is_page_template( 'page-templates/full-width.php')) : ?>
 				<?php the_post_thumbnail('full-width-thumb'); ?>
 			<?php else : ?>

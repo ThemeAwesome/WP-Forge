@@ -1,9 +1,9 @@
 === WP-Forge ===
 Donate link: https://www.paypal.me/themeawesome
 Tags: light, black, white, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, sticky-post, translation-ready
-Requires at least: 4.9.8
-Tested up to: 4.9.8
-Stable tag: 6.4.3.5
+Requires at least: 5.1
+Tested up to: 5.1
+Stable tag: 6.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,15 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 // Description
 ///////////////////////////////////
 
-A WordPress theme built using the latest version of Foundation for Sites, from Zurb, the most advanced responsive front-end framework in the world. By combining WordPress and Foundation you get a resposive WordPress theme that makes creating websites fun and exciting again!
+A Foundation for Sites WordPress Theme, that utilizes one of the most advanced responsive front-end frameworks in the world from Zurb. When you combine WordPress and Foundation for Sites you get a Foundation for Sites WordPress theme that makes creating websites fun and exciting again!
 
 ///////////////////////////////////
 // Bundled Resources
 ///////////////////////////////////
 
-	1. Foundation Framework 6.4.1 - MIT License (https://github.com/zurb/foundation/blob/master/LICENSE)
+	1. Foundation Framework 6.5.3 - MIT License (https://github.com/zurb/foundation/blob/master/LICENSE)
 	2. Motion-UI 1.2.2 - MIT License (https://github.com/zurb/motion-ui/blob/master/LICENSE)
-	3. What-Input - MIT License (https://github.com/ten1seven/what-input/blob/master/LICENSE)
 	4. Genericons 3.4.1 - GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
 	5. Font-Awesome 4.7 - See all license for Font-Awesome https://fortawesome.github.io/Font-Awesome/license/
 
@@ -41,3 +40,9 @@ A WordPress theme built using the latest version of Foundation for Sites, from Z
 ///////////////////////////////////
 
 https://themeawesome.com/docs/wp-forge/
+
+///////////////////////////////////
+// CHANGELOG
+///////////////////////////////////
+
+View the latest changes on Github: https://github.com/ThemeAwesome/wp-forge/blob/master/CHANGELOG.md
